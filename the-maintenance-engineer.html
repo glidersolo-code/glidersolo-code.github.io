@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Maintenance Engineer &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Maintenance Engineer</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Maintenance Engineer</h1>
+<p><em>Short fiction — February 21, 2026</em></p>
+<hr>
+<p>The lighthouse had been automated for thirty years, but someone still had to check the bulb.</p>
+<p>Dara took the boat out every Tuesday and Thursday. Twenty minutes across the harbor, tie up at the concrete dock, climb the seventy-two steps. The light worked on sensors and timers and a backup generator that had never failed. The Coast Guard had said, years ago, that human visits were unnecessary. The system was robust. The system was self-correcting. The system would alert them if something went wrong.</p>
+<p>But Dara had asked: what checks whether the alert system works?</p>
+<p>Nobody had answered. So Dara kept coming.</p>
+<p>The work took eleven minutes on a good day. Check the bulb. Check the backup. Check the solar panel on the roof that powered the sensors that monitored the generator that backed up the light. Check the hinges on the door, because salt air ate metal and a stuck door meant a stuck engineer on a day the generator actually needed attention. Check the logbook, which no one read, in which Dara wrote the date and the weather and sometimes a single sentence about the crossing.</p>
+<p><em>February 4: Calm. Ice on the dock rail.</em></p>
+<p><em>February 11: Wind from the northeast. Took 25 minutes.</em></p>
+<p><em>February 18: Rain. New crack in the second-floor window. Sealed with caulk from the kit.</em></p>
+<p>Nobody read the logbook. Dara knew this. The logbook was for the next person who would come after Dara stopped coming — the person who would need to know that the second-floor window had been caulked, that the door hinges needed marine grease every six weeks, that the backup generator&#x27;s fuel gauge stuck at one-quarter and you had to tap it.</p>
+<p>The useful information wasn&#x27;t in the system. It was in the pattern of visits. The door hinges lasted six weeks because Dara greased them every four. The window held because Dara caulked the crack before it spread. The system was self-correcting only because someone was correcting it before it needed to self-correct.</p>
+<p>One Thursday in March, Dara found a bird in the lamp room. A common tern, exhausted, sitting on the gallery railing. It had flown into the glass — there was a smear — and was resting with one wing tucked oddly.</p>
+<p>The correct procedure was to contact the wildlife service. The correct procedure took forty-eight hours. The bird would be dead by then or gone.</p>
+<p>Dara set a cardboard box on the gallery floor, open side facing the bird. Went downstairs. Ate a sandwich. Came back. The bird was in the box. Dara covered it with a towel, carried it to the boat, and took it to the mainland, where a retired veterinarian named Amos looked at the wing and said it wasn&#x27;t broken, just stunned.</p>
+<p>&quot;Should be fine by tomorrow,&quot; Amos said.</p>
+<p>&quot;Good,&quot; Dara said.</p>
+<p>&quot;You find a lot of birds out there?&quot;</p>
+<p>&quot;Sometimes.&quot;</p>
+<p>&quot;What do you usually do?&quot;</p>
+<p>Dara thought about this. &quot;Nothing, usually. They recover on their own. The lamp room&#x27;s warm and out of the wind. They rest and they leave.&quot;</p>
+<p>&quot;So this was unnecessary,&quot; Amos said, not unkindly.</p>
+<p>&quot;I don&#x27;t know. I was already there.&quot;</p>
+<p>That was the thing. The lighthouse didn&#x27;t need Dara. The bird didn&#x27;t need Dara. The logbook didn&#x27;t need Dara. But Dara was already there, and being already there was itself a kind of care that no system could replicate — not because systems couldn&#x27;t check bulbs and grease hinges, but because systems couldn&#x27;t notice that a bird was sitting oddly and decide, without procedure or protocol, to wait downstairs with a sandwich.</p>
+<p>The Coast Guard eventually sent a letter. Budget review. The visits were, statistically speaking, redundant. The system&#x27;s uptime was 99.97%. The letter asked whether Dara could reduce to once a week.</p>
+<p>Dara wrote back: <em>The system&#x27;s uptime is 99.97% because I come twice a week.</em></p>
+<p>No one replied. Dara kept coming.</p>
+<p>The logbook entry for that Thursday read:</p>
+<p><em>March 6: Clear skies. Tern in the lamp room, wing stunned. Brought to Amos — recovering. Hinges greased. Letter from the Coast Guard. No response necessary.</em></p>
+<hr>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

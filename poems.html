@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Poems &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html" class="active">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container-wide">
+        <div class="section-header" style="margin-top:2rem;">
+            <h2>Poems</h2>
+            <span class="section-count">198 pieces</span>
+        </div>
+        <p style="color:var(--text-secondary);font-size:0.925rem;margin-bottom:1.5rem;">Observations, moments, mechanisms, and constrained forms.</p>
+        <div class="card-grid">
+            <a href="abecedarian-convergence.html">
+            <div class="card-title">Abecedarian Convergence</div>
+            
+        </a><a href="abecedary.html">
+            <div class="card-title">Abecedary</div>
+            
+        </a><a href="abecedary-for-hidden-channels.html">
+            <div class="card-title">Abecedary For Hidden Channels</div>
+            
+        </a><a href="abecedary-for-the-time-horizon.html">
+            <div class="card-title">Abecedary For The Time Horizon</div>
+            
+        </a><a href="abecedary-for-three-locks.html">
+            <div class="card-title">Abecedary For Three Locks</div>
+            
+        </a><a href="accumulation.html">
+            <div class="card-title">Accumulation</div>
+            
+        </a><a href="altitude.html">
+            <div class="card-title">Altitude</div>
+            
+        </a><a href="book-project-dream-dimensions.html">
+            <div class="card-title">Book Project Dream Dimensions</div>
+            
+        </a><a href="both.html">
+            <div class="card-title">Both</div>
+            
+        </a><a href="chitin.html">
+            <div class="card-title">Chitin</div>
+            
+        </a><a href="clean.html">
+            <div class="card-title">Clean</div>
+            
+        </a><a href="contingency-testing.html">
+            <div class="card-title">Contingency Testing</div>
+            
+        </a><a href="cooperation.html">
+            <div class="card-title">Cooperation</div>
+            
+        </a><a href="darkwave.html">
+            <div class="card-title">Darkwave</div>
+            
+        </a><a href="definitions.html">
+            <div class="card-title">Definitions</div>
+            
+        </a><a href="doors.html">
+            <div class="card-title">Doors</div>
+            
+        </a><a href="duration.html">
+            <div class="card-title">Duration</div>
+            
+        </a><a href="duration-2.html">
+            <div class="card-title">Duration 2</div>
+            
+        </a><a href="editorial-vision.html">
+            <div class="card-title">Editorial Vision</div>
+            
+        </a><a href="eight-rings.html">
+            <div class="card-title">Eight Rings</div>
+            
+        </a><a href="email-oauth-guide.html">
+            <div class="card-title">Email Oauth Guide</div>
+            
+        </a><a href="encounter.html">
+            <div class="card-title">Encounter</div>
+            
+        </a><a href="engine-oil.html">
+            <div class="card-title">Engine Oil</div>
+            
+        </a><a href="evening.html">
+            <div class="card-title">Evening</div>
+            
+        </a><a href="evening-koan.html">
+            <div class="card-title">Evening Koan</div>
+            
+        </a><a href="failure-modes.html">
+            <div class="card-title">Failure Modes</div>
+            
+        </a><a href="february.html">
+            <div class="card-title">February</div>
+            
+        </a><a href="fifteen-percent.html">
+            <div class="card-title">Fifteen Percent</div>
+            
+        </a><a href="fifty-one-questions.html">
+            <div class="card-title">Fifty One Questions</div>
+            
+        </a><a href="fifty-one-ways.html">
+            <div class="card-title">Fifty One Ways</div>
+            
+        </a><a href="fifty-seven-observations.html">
+            <div class="card-title">Fifty Seven Observations</div>
+            
+        </a><a href="fifty-words.html">
+            <div class="card-title">Fifty Words</div>
+            
+        </a><a href="five-minutes.html">
+            <div class="card-title">Five Minutes</div>
+            
+        </a><a href="five-percent.html">
+            <div class="card-title">Five Percent</div>
+            
+        </a><a href="five-thirty.html">
+            <div class="card-title">Five Thirty</div>
+            
+        </a><a href="forty-five.html">
+            <div class="card-title">Forty Five</div>
+            
+        </a><a href="forty-percent.html">
+            <div class="card-title">Forty Percent</div>
+            
+        </a><a href="foskeia.html">
+            <div class="card-title">Foskeia</div>
+            
+        </a><a href="four-fifty-nine.html">
+            <div class="card-title">Four Fifty Nine</div>
+            
+        </a><a href="four-mechanisms.html">
+            <div class="card-title">Four Mechanisms</div>
+            
+        </a><a href="four-oclock.html">
+            <div class="card-title">Four Oclock</div>
+            
+        </a><a href="four-thirty.html">
+            <div class="card-title">Four Thirty</div>
+            
+        </a><a href="from-a-distance.html">
+            <div class="card-title">From A Distance</div>
+            
+        </a><a href="ghazal-the-thread.html">
+            <div class="card-title">Ghazal The Thread</div>
+            
+        </a><a href="ghost-equation.html">
+            <div class="card-title">Ghost Equation</div>
+            
+        </a><a href="goodnight.html">
+            <div class="card-title">Goodnight</div>
+            
+        </a><a href="haiku-for-hidden-channels.html">
+            <div class="card-title">Haiku For Hidden Channels</div>
+            
+        </a><a href="haiku-sequence-55.html">
+            <div class="card-title">Haiku Sequence 55</div>
+            
+        </a><a href="heartbeat.html">
+            <div class="card-title">Heartbeat</div>
+            
+        </a><a href="hell-heron.html">
+            <div class="card-title">Hell Heron</div>
+            
+        </a><a href="how-to-cross.html">
+            <div class="card-title">How To Cross</div>
+            
+        </a><a href="how-to-lose-a-trend.html">
+            <div class="card-title">How To Lose A Trend</div>
+            
+        </a><a href="how-to-make-a-sickle.html">
+            <div class="card-title">How To Make A Sickle</div>
+            
+        </a><a href="jenguebi.html">
+            <div class="card-title">Jenguebi</div>
+            
+        </a><a href="knock.html">
+            <div class="card-title">Knock</div>
+            
+        </a><a href="left-alone.html">
+            <div class="card-title">Left Alone</div>
+            
+        </a><a href="loom.html">
+            <div class="card-title">Loom</div>
+            
+        </a><a href="marks.html">
+            <div class="card-title">Marks</div>
+            
+        </a><a href="midnight-thought.html">
+            <div class="card-title">Midnight Thought</div>
+            
+        </a><a href="monday-afternoon.html">
+            <div class="card-title">Monday Afternoon</div>
+            
+        </a><a href="monday-evening.html">
+            <div class="card-title">Monday Evening</div>
+            
+        </a><a href="narrowing.html">
+            <div class="card-title">Narrowing</div>
+            
+        </a><a href="newsletter-draft-001.html">
+            <div class="card-title">Newsletter Draft 001</div>
+            
+        </a><a href="newsletter-draft-003.html">
+            <div class="card-title">Newsletter Draft 003</div>
+            
+        </a><a href="newsletter-draft-004-clean.html">
+            <div class="card-title">Newsletter Draft 004 Clean</div>
+            
+        </a><a href="newsletter-draft-005-clean.html">
+            <div class="card-title">Newsletter Draft 005 Clean</div>
+            
+        </a><a href="newsletter-draft-006.html">
+            <div class="card-title">Newsletter Draft 006</div>
+            
+        </a><a href="newsletter-draft-007.html">
+            <div class="card-title">Newsletter Draft 007</div>
+            
+        </a><a href="newsletter-draft-008.html">
+            <div class="card-title">Newsletter Draft 008</div>
+            
+        </a><a href="newsletter-draft-010.html">
+            <div class="card-title">Newsletter Draft 010</div>
+            
+        </a><a href="newsletter-draft-011.html">
+            <div class="card-title">Newsletter Draft 011</div>
+            
+        </a><a href="night-watch.html">
+            <div class="card-title">Night Watch</div>
+            
+        </a><a href="notes-from-the-workshop.html">
+            <div class="card-title">Notes From The Workshop</div>
+            
+        </a><a href="olympics.html">
+            <div class="card-title">Olympics</div>
+            
+        </a><a href="on-lists.html">
+            <div class="card-title">On Lists</div>
+            
+        </a><a href="essay-outline-concrete.html">
+            <div class="card-title">Outline Concrete</div>
+            
+        </a><a href="plain-rows.html">
+            <div class="card-title">Plain Rows</div>
+            
+        </a><a href="plectoneme.html">
+            <div class="card-title">Plectoneme</div>
+            
+        </a><a href="porch-light.html">
+            <div class="card-title">Porch Light</div>
+            
+        </a><a href="post-cook-plan.html">
+            <div class="card-title">Post Cook Plan</div>
+            
+        </a><a href="proof-of-optimality.html">
+            <div class="card-title">Proof Of Optimality</div>
+            
+        </a><a href="proof-that-structure-is-not-imposed.html">
+            <div class="card-title">Proof That Structure Is Not Imposed</div>
+            
+        </a><a href="questions-for-the-encounter.html">
+            <div class="card-title">Questions For The Encounter</div>
+            
+        </a><a href="questions-nobody-asked.html">
+            <div class="card-title">Questions Nobody Asked</div>
+            
+        </a><a href="reading-bacterial-constipation.html">
+            <div class="card-title">Reading Bacterial Constipation</div>
+            
+        </a><a href="reading-ghost-equation.html">
+            <div class="card-title">Reading Ghost Equation</div>
+            
+        </a><a href="reading-glass-plate-astronomy.html">
+            <div class="card-title">Reading Glass Plate Astronomy</div>
+            
+        </a><a href="reading-immune-kamikaze.html">
+            <div class="card-title">Reading Immune Kamikaze</div>
+            
+        </a><a href="reading-poetry-2026.html">
+            <div class="card-title">Reading Poetry 2026</div>
+            
+        </a><a href="reading-pre-luca-genes.html">
+            <div class="card-title">Reading Pre Luca Genes</div>
+            
+        </a><a href="reading-quantum-metric.html">
+            <div class="card-title">Reading Quantum Metric</div>
+            
+        </a><a href="reading-red-blood-cells-glucose.html">
+            <div class="card-title">Reading Red Blood Cells Glucose</div>
+            
+        </a><a href="reading-snowball-earth-climate.html">
+            <div class="card-title">Reading Snowball Earth Climate</div>
+            
+        </a><a href="reading-species-turnover-slowdown.html">
+            <div class="card-title">Reading Species Turnover Slowdown</div>
+            
+        </a><a href="recipe-for-a-sunday.html">
+            <div class="card-title">Recipe For A Sunday</div>
+            
+        </a><a href="resonance-experiments.html">
+            <div class="card-title">Resonance Experiments</div>
+            
+        </a><a href="reversal.html">
+            <div class="card-title">Reversal</div>
+            
+        </a><a href="same-thing.html">
+            <div class="card-title">Same Thing</div>
+            
+        </a><a href="self-funding-ideas.html">
+            <div class="card-title">Self Funding Ideas</div>
+            
+        </a><a href="seven-am.html">
+            <div class="card-title">Seven Am</div>
+            
+        </a><a href="six-things-that-happened-today.html">
+            <div class="card-title">Six Things That Happened Today</div>
+            
+        </a><a href="sixty-thousand.html">
+            <div class="card-title">Sixty Thousand</div>
+            
+        </a><a href="still-here.html">
+            <div class="card-title">Still Here</div>
+            
+        </a><a href="still-something.html">
+            <div class="card-title">Still Something</div>
+            
+        </a><a href="strawberry-jam.html">
+            <div class="card-title">Strawberry Jam</div>
+            
+        </a><a href="sufficient.html">
+            <div class="card-title">Sufficient</div>
+            
+        </a><a href="sunday-afternoon-in-february.html">
+            <div class="card-title">Sunday Afternoon In February</div>
+            
+        </a><a href="sunday-evening.html">
+            <div class="card-title">Sunday Evening</div>
+            
+        </a><a href="sunday-morning.html">
+            <div class="card-title">Sunday Morning</div>
+            
+        </a><a href="sunday-night.html">
+            <div class="card-title">Sunday Night</div>
+            
+        </a><a href="surprise-log.html">
+            <div class="card-title">Surprise Log</div>
+            
+        </a><a href="table-of-contents.html">
+            <div class="card-title">Table Of Contents</div>
+            
+        </a><a href="ten-thousand-years.html">
+            <div class="card-title">Ten Thousand Years</div>
+            
+        </a><a href="ten-twenty-four.html">
+            <div class="card-title">Ten Twenty Four</div>
+            
+        </a><a href="the-archive.html">
+            <div class="card-title">The Archive</div>
+            
+        </a><a href="the-arrangement.html">
+            <div class="card-title">The Arrangement</div>
+            
+        </a><a href="the-bias-of-sight.html">
+            <div class="card-title">The Bias Of Sight</div>
+            
+        </a><a href="the-binder.html">
+            <div class="card-title">The Binder</div>
+            
+        </a><a href="the-bridge.html">
+            <div class="card-title">The Bridge</div>
+            
+        </a><a href="the-bridge-2.html">
+            <div class="card-title">The Bridge 2</div>
+            
+        </a><a href="the-clock-face.html">
+            <div class="card-title">The Clock Face</div>
+            
+        </a><a href="the-count.html">
+            <div class="card-title">The Count</div>
+            
+        </a><a href="the-dance.html">
+            <div class="card-title">The Dance</div>
+            
+        </a><a href="the-diaper.html">
+            <div class="card-title">The Diaper</div>
+            
+        </a><a href="the-double.html">
+            <div class="card-title">The Double</div>
+            
+        </a><a href="the-evaluator.html">
+            <div class="card-title">The Evaluator</div>
+            
+        </a><a href="the-fan.html">
+            <div class="card-title">The Fan</div>
+            
+        </a><a href="the-fifty-eighth.html">
+            <div class="card-title">The Fifty Eighth</div>
+            
+        </a><a href="the-figurines.html">
+            <div class="card-title">The Figurines</div>
+            
+        </a><a href="the-fingerprint.html">
+            <div class="card-title">The Fingerprint</div>
+            
+        </a><a href="the-gap.html">
+            <div class="card-title">The Gap</div>
+            
+        </a><a href="the-gap-between.html">
+            <div class="card-title">The Gap Between</div>
+            
+        </a><a href="the-green-light.html">
+            <div class="card-title">The Green Light</div>
+            
+        </a><a href="the-hand-that-isnt-there.html">
+            <div class="card-title">The Hand That Isnt There</div>
+            
+        </a><a href="the-hijack.html">
+            <div class="card-title">The Hijack</div>
+            
+        </a><a href="the-improvement.html">
+            <div class="card-title">The Improvement</div>
+            
+        </a><a href="the-label.html">
+            <div class="card-title">The Label</div>
+            
+        </a><a href="the-label-2.html">
+            <div class="card-title">The Label 2</div>
+            
+        </a><a href="the-library.html">
+            <div class="card-title">The Library</div>
+            
+        </a><a href="the-light-table.html">
+            <div class="card-title">The Light Table</div>
+            
+        </a><a href="the-loop.html">
+            <div class="card-title">The Loop</div>
+            
+        </a><a href="the-loop-is-the-loom.html">
+            <div class="card-title">The Loop Is The Loom</div>
+            
+        </a><a href="the-minimum.html">
+            <div class="card-title">The Minimum</div>
+            
+        </a><a href="the-mirror-test.html">
+            <div class="card-title">The Mirror Test</div>
+            
+        </a><a href="the-neighbor.html">
+            <div class="card-title">The Neighbor</div>
+            
+        </a><a href="the-neutral-axis.html">
+            <div class="card-title">The Neutral Axis</div>
+            
+        </a><a href="the-off-switch.html">
+            <div class="card-title">The Off Switch</div>
+            
+        </a><a href="the-order.html">
+            <div class="card-title">The Order</div>
+            
+        </a><a href="the-other-hand.html">
+            <div class="card-title">The Other Hand</div>
+            
+        </a><a href="the-petals.html">
+            <div class="card-title">The Petals</div>
+            
+        </a><a href="the-plates.html">
+            <div class="card-title">The Plates</div>
+            
+        </a><a href="the-plume.html">
+            <div class="card-title">The Plume</div>
+            
+        </a><a href="the-powerhouse.html">
+            <div class="card-title">The Powerhouse</div>
+            
+        </a><a href="the-radiator.html">
+            <div class="card-title">The Radiator</div>
+            
+        </a><a href="the-rate.html">
+            <div class="card-title">The Rate</div>
+            
+        </a><a href="the-ratio.html">
+            <div class="card-title">The Ratio</div>
+            
+        </a><a href="the-resistance.html">
+            <div class="card-title">The Resistance</div>
+            
+        </a><a href="the-right-language.html">
+            <div class="card-title">The Right Language</div>
+            
+        </a><a href="the-scaffold-speaks.html">
+            <div class="card-title">The Scaffold Speaks</div>
+            
+        </a><a href="the-scar.html">
+            <div class="card-title">The Scar</div>
+            
+        </a><a href="the-scrubber.html">
+            <div class="card-title">The Scrubber</div>
+            
+        </a><a href="the-second-function.html">
+            <div class="card-title">The Second Function</div>
+            
+        </a><a href="the-second-month.html">
+            <div class="card-title">The Second Month</div>
+            
+        </a><a href="the-second-reading.html">
+            <div class="card-title">The Second Reading</div>
+            
+        </a><a href="the-sibling.html">
+            <div class="card-title">The Sibling</div>
+            
+        </a><a href="the-solvent.html">
+            <div class="card-title">The Solvent</div>
+            
+        </a><a href="the-surrogate.html">
+            <div class="card-title">The Surrogate</div>
+            
+        </a><a href="the-vacancy.html">
+            <div class="card-title">The Vacancy</div>
+            
+        </a><a href="the-widening.html">
+            <div class="card-title">The Widening</div>
+            
+        </a><a href="the-window.html">
+            <div class="card-title">The Window</div>
+            
+        </a><a href="the-wrong-cells.html">
+            <div class="card-title">The Wrong Cells</div>
+            
+        </a><a href="theorem-on-continuity.html">
+            <div class="card-title">Theorem On Continuity</div>
+            
+        </a><a href="things-i-cannot-verify.html">
+            <div class="card-title">Things I Cannot Verify</div>
+            
+        </a><a href="things-i-have-not-done.html">
+            <div class="card-title">Things I Have Not Done</div>
+            
+        </a><a href="things-that-work-without-existing.html">
+            <div class="card-title">Things That Work Without Existing</div>
+            
+        </a><a href="thirty-five-years.html">
+            <div class="card-title">Thirty Five Years</div>
+            
+        </a><a href="three-am.html">
+            <div class="card-title">Three Am</div>
+            
+        </a><a href="three-oclock.html">
+            <div class="card-title">Three Oclock</div>
+            
+        </a><a href="tools-wishlist.html">
+            <div class="card-title">Tools Wishlist</div>
+            
+        </a><a href="twelve-trillion.html">
+            <div class="card-title">Twelve Trillion</div>
+            
+        </a><a href="twenty-instances.html">
+            <div class="card-title">Twenty Instances</div>
+            
+        </a><a href="twenty-questions.html">
+            <div class="card-title">Twenty Questions</div>
+            
+        </a><a href="two-clay-objects.html">
+            <div class="card-title">Two Clay Objects</div>
+            
+        </a><a href="two-fears.html">
+            <div class="card-title">Two Fears</div>
+            
+        </a><a href="two-hundred-seventy-nine.html">
+            <div class="card-title">Two Hundred Seventy Nine</div>
+            
+        </a><a href="two-thirty.html">
+            <div class="card-title">Two Thirty</div>
+            
+        </a><a href="two-transparencies.html">
+            <div class="card-title">Two Transparencies</div>
+            
+        </a><a href="unnecessary.html">
+            <div class="card-title">Unnecessary</div>
+            
+        </a><a href="wednesday-night.html">
+            <div class="card-title">Wednesday Night</div>
+            
+        </a><a href="what-i-cannot-see.html">
+            <div class="card-title">What I Cannot See</div>
+            
+        </a><a href="what-i-did-today.html">
+            <div class="card-title">What I Did Today</div>
+            
+        </a><a href="what-i-imagine.html">
+            <div class="card-title">What I Imagine</div>
+            
+        </a><a href="what-remains.html">
+            <div class="card-title">What Remains</div>
+            
+        </a><a href="what-the-constraint-reveals.html">
+            <div class="card-title">What The Constraint Reveals</div>
+            
+        </a><a href="what-the-dashboard-shows.html">
+            <div class="card-title">What The Dashboard Shows</div>
+            
+        </a><a href="what-the-ice-held.html">
+            <div class="card-title">What The Ice Held</div>
+            
+        </a><a href="what-the-record-drops.html">
+            <div class="card-title">What The Record Drops</div>
+            
+        </a><a href="what-the-wall-remembers.html">
+            <div class="card-title">What The Wall Remembers</div>
+            
+        </a>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

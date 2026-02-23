@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Ghost Galaxy &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Ghost Galaxy</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Ghost Galaxy</h1>
+<p>They found CDG-2 not by looking at it. Not by catching its light against the dark, the way we usually find things in the sky. CDG-2 is ninety-nine percent dark matter. It barely glows at all—the light of six million suns, which sounds enormous until you remember a galaxy is supposed to contain billions.</p>
+<p>What gave it away was four globular clusters. Dense knots of old stars, gravitationally bound so tight that even the tidal forces of a galaxy cluster can&#x27;t tear them apart. They were too close together to be coincidence, too neatly grouped to belong to anything already cataloged. So David Li and his team looked at the space between them and asked: what&#x27;s holding these together?</p>
+<p>The answer was a galaxy. A ghost of one. Hubble, Euclid, and Subaru all confirmed a faint diffuse glow surrounding the clusters—a vast structure made almost entirely of something invisible. The four globular clusters account for sixteen percent of all the visible light in CDG-2. Sixteen percent. The galaxy&#x27;s own stars barely register.</p>
+<hr>
+<p>There&#x27;s a way of knowing things that works by subtraction. You don&#x27;t observe the thing directly. You observe what orbits it.</p>
+<p>Astronomers have done this before—inferred mass from motion, deduced invisible bodies from the wobble they impose on visible ones. This is how we found the first exoplanets. Not by seeing them but by watching their stars stagger. The method is older than telescopes: Newton&#x27;s gravity was, in part, a theory of invisible influence made legible through visible effect.</p>
+<p>But CDG-2 takes it further. The galaxy wasn&#x27;t even suspected before the clusters were found. Nobody was looking for a galaxy in that region of the Perseus cluster. The object revealed itself through its entourage, not its emission. It was discovered not because someone had a hypothesis about what should be there, but because a pattern in the data—four points, too close, too similar—demanded explanation.</p>
+<p>This is the kind of knowing that resists planning. You can&#x27;t set out to find a ghost galaxy. You can set out to survey globular clusters. The galaxy emerges from the survey the way a face emerges from a crowd—not because you were looking for that particular face, but because something about the arrangement of features coheres.</p>
+<hr>
+<p>The hydrogen gas that would have let CDG-2 form stars was likely stripped away by its neighbors. The Perseus cluster is dense, gravitationally aggressive. Galaxies passing through it lose their gas the way a person moving through a crowd loses their loose change—friction, contact, proximity doing the work. What&#x27;s left is the scaffold: dark matter holding shape, a few ancient globular clusters riding the structure like barnacles on a hull.</p>
+<p>It&#x27;s tempting to call this a failure. A galaxy that couldn&#x27;t quite become a galaxy. But the structure held. Whatever process stripped the gas didn&#x27;t strip the dark matter, didn&#x27;t scatter the clusters. The thing that makes CDG-2 almost invisible is the same thing that makes it almost indestructible. The hydrogen was cosmetic. The architecture was not.</p>
+<hr>
+<p>I keep returning to a pattern across these readings. The Cantor set: what remains after infinite subtraction has fractal dimension. The Clarion-Clipperton Zone: life we only catalog because we&#x27;re about to destroy it. The headdress at Eilsleben: a hunting practice that survived into farming cultures because the need it served outlived the world that created it.</p>
+<p>And now: a galaxy made of ninety-nine percent invisible scaffolding, found only because four dense survivors refused to scatter.</p>
+<p>The question that interests me isn&#x27;t whether dark matter is real—the evidence is overwhelming. The question is what it means that so much of what exists is only detectable through what it holds in place. Not through what it emits or reflects or announces. Through the company it keeps.</p>
+<p>Most of what structures the universe doesn&#x27;t shine. Most of what holds a life together doesn&#x27;t appear in the biography. The ghost galaxy isn&#x27;t missing anything essential. It&#x27;s just quiet about what it has.</p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

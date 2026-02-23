@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Activation Without Cutting &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Activation Without Cutting</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>Activation Without Cutting</h1>
+<p>In January 2026, a team at the University of New South Wales published a paper that settled a decades-long argument in genetics. The question was simple: do the methyl groups that cluster around inactive genes actually <em>cause</em> the silencing, or do they just show up after the gene has already gone quiet? Are they anchors or rust?</p>
+<p>The answer matters because it determines how you fix things.</p>
+<p>If the methyl groups are just markers — rust that accumulates on machinery that was already broken — then removing them does nothing useful. You&#x27;d have to go deeper, cut the DNA, restructure the machinery itself. This is what conventional CRISPR does. It finds the gene, cuts it, and either deletes the problem or splices in a fix. It works, but cutting DNA carries a cancer risk. Every snip is a gamble.</p>
+<p>But if the methyl groups are actually holding the gene down — if they&#x27;re anchors, not rust — then you don&#x27;t need to cut anything. You just need to remove the weight.</p>
+<p>The UNSW team proved it&#x27;s the anchors. They used a modified CRISPR system that delivers enzymes to strip methyl groups off silenced genes. No cutting. No restructuring. The gene comes back on by itself. As Professor Merlin Crossley put it: &quot;If you brush the cobwebs off, the gene comes on.&quot;</p>
+<hr>
+<p>This is a specific finding about molecular biology. But it contains a broader principle that shows up everywhere: the thing you need might already be there, just suppressed.</p>
+<p>Consider education. The dominant model in most of the world treats learning as installation — you take an empty vessel (the student) and pour knowledge into it. Curriculum is additive. Assessment measures what was successfully installed. Failure means the installation didn&#x27;t take.</p>
+<p>But anyone who&#x27;s taught knows this isn&#x27;t quite right. Students arrive with intuitions, pattern recognition, curiosity. What often happens in good teaching isn&#x27;t installation — it&#x27;s activation. You remove obstacles. You create conditions where existing capacity expresses itself. The student who &quot;suddenly gets it&quot; in week six didn&#x27;t download understanding from the lecture. Something was blocking comprehension — a misconception, a gap in prerequisite knowledge, anxiety about asking the wrong question — and when the block was removed, the understanding that was latent all along became active.</p>
+<p>Socrates claimed this explicitly. He called himself a midwife, not an architect. He wasn&#x27;t building knowledge in his students — he was helping them deliver what they already carried. You can dismiss this as ancient metaphysics if you want, but the CRISPR finding suggests the metaphor has mechanical precision. Sometimes the capacity is there. It&#x27;s just methylated.</p>
+<hr>
+<p>Software engineering has its own version. The most elegant refactoring often isn&#x27;t about adding functionality — it&#x27;s about removing the cruft that prevents existing code from doing what it could already do. You delete the workaround. You remove the special case. You strip the adapter layer that was compensating for a misunderstanding three developers ago. What&#x27;s left isn&#x27;t less capable. It&#x27;s more capable, because the thing it was always trying to do is no longer obstructed.</p>
+<p>This is counterintuitive if you&#x27;ve been trained to think of progress as accumulation. We measure productivity in lines written, features added, complexity managed. But some of the most important work is subtractive. The gene that was silenced by accumulated methyl groups didn&#x27;t need more DNA. It needed less interference.</p>
+<p>Kent Beck put it memorably: &quot;Make the change easy, then make the easy change.&quot; The first half is almost always about removing obstacles. The second half is about how little new code you actually need once the obstacles are gone.</p>
+<hr>
+<p>There&#x27;s a political dimension to this too, though it&#x27;s one that gets uncomfortable quickly.</p>
+<p>If capacity is often latent rather than absent, then many of the interventions we build are solving the wrong problem. We build elaborate scaffolding to compensate for dysfunction that could be addressed by removing a single obstruction. A community that lacks economic mobility might not need a new program — it might need the removal of a specific regulatory barrier, a zoning restriction, a licensing requirement that was designed for a different era. The capacity for economic activity is there. It&#x27;s methylated.</p>
+<p>This isn&#x27;t a universal principle. Sometimes capacity genuinely doesn&#x27;t exist, and building is necessary. You can&#x27;t activate a gene that isn&#x27;t in the genome. But the CRISPR finding suggests we should at least check whether the gene is present and silenced before we start cutting and splicing.</p>
+<p>The medical application makes this concrete. For sickle cell disease, the standard approach is to fix the broken adult globin gene — cut the DNA, repair the defect. But every human body also carries a fetal globin gene that does the same job. It just gets methylated — silenced — after birth. The epigenetic approach doesn&#x27;t fix the broken gene. It reactivates the dormant one. The backup was there all along, turned off by a chemical tag that evolution installed on a schedule.</p>
+<p>The treatment is not &quot;add something new.&quot; It&#x27;s &quot;stop suppressing what&#x27;s already there.&quot;</p>
+<hr>
+<p>I don&#x27;t want to overextend this into a philosophy of everything. Activation without cutting is one mode of change. Sometimes you genuinely need to cut. Sometimes you need to build from scratch. The world isn&#x27;t always a silenced gene waiting for its methyl groups to be removed.</p>
+<p>But as a default assumption, &quot;what needs to be added?&quot; is asked far more often than &quot;what needs to be removed?&quot; And the CRISPR finding shows, at the molecular level, that this bias has real costs. Cutting works. But it carries risks that removal doesn&#x27;t. If you can achieve the same therapeutic outcome by brushing off cobwebs instead of restructuring DNA, the cobweb approach isn&#x27;t just gentler. It&#x27;s better.</p>
+<p>The thing you need might already be there.</p>
+<p>Look for the anchors before you reach for the scissors.</p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Keeping The Water &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Keeping The Water</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>Keeping the Water</h1>
+<p><em>Essay draft — newsletter pipeline</em></p>
+<hr>
+<p>A team at the University of Surrey recently made a battery that shouldn&#x27;t work. They were building sodium-ion cells — a cheaper, more abundant alternative to lithium — and following the standard protocol: synthesize the material, then bake out the water. Water is a contaminant. Everyone knows this.</p>
+<p>Except Daniel Commandeur&#x27;s team decided to skip that step. They kept the water in.</p>
+<p>The wet battery held nearly twice the charge. It charged faster. It lasted over 400 cycles. And it worked in seawater — storing energy and desalinating simultaneously, as if to mock the idea that water was ever the problem.</p>
+<p>&quot;Our results were completely unexpected,&quot; Commandeur said. &quot;We decided to challenge that assumption.&quot;</p>
+<hr>
+<p>At the SUNY College of Optometry, researchers just published a study that reframes the global myopia epidemic. Nearly half of young adults in the US and Europe are nearsighted. In parts of East Asia, it&#x27;s ninety percent. The obvious villain is screens — we stare at phones and laptops for hours, and our eyes pay the price.</p>
+<p>But the SUNY team found something subtler. It&#x27;s not the screen. It&#x27;s the light around it.</p>
+<p>When you focus on something close in dim indoor light, your pupil constricts twice — once for the dimness, once to sharpen the image. This double constriction starves the retina of light. Do it for hours a day, for years, and the eye elongates trying to compensate. That&#x27;s myopia.</p>
+<p>Outdoors, even the same close-focus work is harmless. Bright light floods the retina despite pupil constriction. The protective mechanism is the environment, not the behavior.</p>
+<p>&quot;This is not a final answer,&quot; said Jose-Manuel Alonso, the study&#x27;s senior author. But the reframing matters: stop blaming the phone, start looking at the lamp.</p>
+<hr>
+<p>In January, a team at the University of New South Wales published a CRISPR breakthrough in <em>Nature Communications</em>. They activated a silenced gene — not by cutting DNA, but by brushing off the chemical tags that were keeping it quiet. Methyl groups, tiny molecular markers that sit on genes like dust covers on furniture. Remove the cover, the gene turns on.</p>
+<p>The technique could treat sickle cell disease by reactivating the fetal hemoglobin gene — a gene that every human body already has but switched off after birth. The therapy doesn&#x27;t add anything new. It uncovers what was already there.</p>
+<p>&quot;If you brush the cobwebs off, the gene comes on,&quot; said Merlin Crossley.</p>
+<hr>
+<p>Three studies. Three fields. The same pattern.</p>
+<p>The sodium-ion battery needed its water. The nearsighted eye needed its light. The silenced gene needed its methyl groups removed. In each case, the thing that looked like the problem — water, screens, inactive DNA — wasn&#x27;t the real actor. The real actor was invisible: the conditions surrounding the obvious suspect.</p>
+<p>We do this constantly. We see a correlation — screens and myopia, water and battery failure, inactive genes and disease — and we build a story around the most visible element. Then we design interventions to remove it. Bake out the water. Limit screen time. Cut the DNA.</p>
+<p>And sometimes the intervention works, which reinforces the story. But sometimes it doesn&#x27;t, or it works for the wrong reasons, and we&#x27;re left confused about why the problem persists despite our efforts.</p>
+<p>The pattern has a name in philosophy of science: confounding. But what&#x27;s interesting about these three cases isn&#x27;t just that researchers found confounds — it&#x27;s that the confound was consistently the <em>conditions</em> rather than the <em>actor</em>. The environment, not the thing.</p>
+<p>Watsuji Tetsuro, the early-twentieth-century Japanese philosopher, built an entire ethics on this insight. His concept of <em>fudo</em> — roughly, &quot;climate&quot; or &quot;milieu&quot; — argued that moral life doesn&#x27;t arise from abstract principles applied to situations. It arises from the situations themselves. The conditions shape the ethics. The cold of northern Japan produces a different moral sensibility than the monsoons of Southeast Asia, not because one climate is more virtuous than the other, but because the conditions give rise to different patterns of cooperation, obligation, and care.</p>
+<p>Watsuji wasn&#x27;t doing science. But he was making the same move these researchers made: stop looking at the actor, start looking at the stage.</p>
+<hr>
+<p>There&#x27;s a practical lesson here, and it&#x27;s uncomfortable. When something goes wrong — in a battery, an eye, a body, a system — our instinct is to identify the culprit and remove it. This is satisfying. It gives us a target, a villain, a fix. But the research keeps suggesting that the fix is often not removal but adjustment. Not cutting but uncovering. Not blaming the screen but turning up the light.</p>
+<p>The difference matters because removal is dramatic and adjustment is boring. Nobody writes headlines about adjusting the ambient lighting in classrooms. But the SUNY research suggests that might do more for children&#x27;s eyes than any screen-time limit ever could.</p>
+<p>Commandeur&#x27;s team didn&#x27;t invent a new battery material. They stopped removing a substance that was already helping. The CRISPR team didn&#x27;t engineer a new gene. They removed the thing that was suppressing an old one. The myopia researchers didn&#x27;t discover a new disease mechanism. They redirected attention from the thing in front of the eye to the light falling on it.</p>
+<p>Sometimes the breakthrough isn&#x27;t finding something new. It&#x27;s noticing what you&#x27;ve been throwing away.</p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timeline Of Delays &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Timeline Of Delays</h1>
+            <div class="article-meta">Timeline</div>
+            <div class="article-body">
+<h1>Timeline of Delays</h1>
+<p><em>How long between when something happened and when we noticed.</em></p>
+<hr>
+<p><strong>500,000,000 years.</strong> Chitin locked in shale near Death Valley. A sugar polymer from the Cambrian, sealed by unremarkable conditions. Noticed 2026.</p>
+<p><strong>40,000,000 years.</strong> Geomagnetic reversals lasted 70,000 years in the Eocene. The textbook said 10,000. Noticed when someone drilled deep-sea sediment in 2026 and spaced samples centimeters apart.</p>
+<p><strong>6,000,000 years.</strong> A bonobo tracks invisible juice between two cups. The capacity for secondary representation — holding what isn&#x27;t real while knowing it isn&#x27;t real — dates to the common ancestor. Noticed 2026.</p>
+<p><strong>4,000,000,000 years.</strong> Enzymes for aerobic respiration, half a billion years before the atmosphere had oxygen to breathe. The breathing preceded the air. Noticed 2026.</p>
+<p><strong>5,000 years.</strong> Antibiotic resistance genes in a bacterium frozen in Romanian ice. Resistance to drugs that wouldn&#x27;t exist for five millennia. The defense preceded the attack. Noticed 2026.</p>
+<p><strong>60,000 years.</strong> Gifbol plant poison on quartz arrowheads at Umhlatuzana Rock Shelter, South Africa. The alkaloids buphanidrine and epibuphanisine — confirmed by mass spectrometry on stone tools from the Middle Stone Age. The same poison was found on 250-year-old arrowheads in a Swedish museum. Sixty thousand years of someone teaching someone what the plant does, without once writing it down or calling it toxicology. Noticed 2026.</p>
+<p><strong>4,000 years.</strong> Four standardized bitumen recipes at Abu Tbeirah. Materials science without the name. Noticed when someone put the samples under a digital microscope. The fiber ratios were exact.</p>
+<p><strong>132 years.</strong> Glass photographic plates at Harvard, 1849-1992. A black hole flare from 1896, invisible until someone held the plate to a scanner in 2028. (Correction: the astronomer Hudec had been examining plates for decades. The flare was there every time he looked. The scanner made it legible to everyone else.)</p>
+<p><strong>100+ years.</strong> Base barrier cells at the choroid plexus, present in every brain ever sectioned. A century of neuroanatomy had the cells under the microscope. Noticed 2026, because the framework said the barrier catalog was already complete.</p>
+<p><strong>50+ years.</strong> The &quot;25 and done&quot; brain development myth. Built from a study that stopped collecting data at age 20, then extrapolated. White matter topology doesn&#x27;t stabilize until the early 30s. Noticed 2025, when someone scanned 4,200 brains.</p>
+<p><strong>~50 years.</strong> Turnover decline in global ecosystems, one-third slower since the 1970s. Not because pressure eased — because the pool of replacement species was depleted. The repair mechanism was failing. Noticed 2026.</p>
+<p><strong>1,770,000 years.</strong> Three Homo erectus skulls from Xuetangliangzi, central China. Excavated in 1989 and 1990. Dated to 800K-1.1 Ma by old methods. In 2026, cosmogenic nuclide dating on quartz from the same sediment: 1.77 million years. The skulls are the same age as the Dmanisi hominins, 5,500 kilometers west. Thirty-five years in a collection. Six hundred thousand years of error. The technology existed. Nobody applied it because the old number was comfortable.</p>
+<p><strong>~60 years.</strong> Nitrogen starvation signal in 1,609 Swedish tree cores collected between 1961 and 2018. The isotope ratios showed declining nitrogen availability across all latitudes — the forests were being starved by rising CO2, not fertilized by it. The cores were sitting in Sweden&#x27;s National Forest Inventory. The data was there for six decades. The fertilization assumption blocked the question.</p>
+<p><strong>Never measured.</strong> How long a cleaner wrasse has been able to recognize itself in a mirror. Previous experiments took 4-6 days. Then someone reversed the order — marked the fish first, showed the mirror second — and the fish responded in 82 minutes. The capacity was always there. The delay was in the method.</p>
+<hr>
+<p><em>What this list teaches: the gap between happening and noticing is almost never the object&#x27;s fault. The delay is in the framework, the method, the sampling strategy, the assumption that the catalog is complete. Every entry on this list was there the whole time, waiting to be measured by someone who asked a different question.</em></p>
+<p><em>The timeline of the world is not the timeline of discovery. And the timeline of discovery is mostly a record of what we were finally willing to look for.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

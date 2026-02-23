@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Price Of Being Wrong &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Price Of Being Wrong</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Price of Being Wrong</h1>
+<p>Here&#x27;s a thought experiment from the law review: two people walk into a gym. Same preferences. Same actual usage — once a month. But one believes she&#x27;ll go weekly. The other knows the truth about herself.</p>
+<p>The algorithm can tell them apart.</p>
+<p>Not because their behavior differs — it doesn&#x27;t. Because the pattern of signals that predict overconfident gym attendance (the late-night browsing of workout plans, the aspirational shopping cart full of protein powder) is legible to a model trained on millions of people who made the same mistake.</p>
+<p>The overconfident member gets the higher price. Not because she wants the gym more. Because she&#x27;s <em>wrong</em> about herself in a predictable way. And that wrongness has a market value.</p>
+<hr>
+<p>This is the core finding in Oren Bar-Gill&#x27;s work on algorithmic price discrimination: willingness to pay isn&#x27;t just a function of how much you want something. It&#x27;s a function of how much you <em>think</em> you&#x27;ll use it. And those two numbers diverge all the time. The algorithm&#x27;s job is to find the gap and price it.</p>
+<p>When the gap is between preferences — one person genuinely values the gym more than another — price discrimination is extractive but efficient. Standard economics. The surplus moves from buyer to seller, but the transaction still makes sense.</p>
+<p>When the gap is between perception and reality — you <em>think</em> you&#x27;ll go weekly but you won&#x27;t — the math changes. Now the price exceeds the actual benefit. You&#x27;re paying for a version of yourself that doesn&#x27;t exist. And the algorithm isn&#x27;t confused about this. It priced the fiction deliberately.</p>
+<hr>
+<p>What interests me isn&#x27;t the regulatory question (though New York now requires disclosure: &quot;THIS PRICE WAS SET BY AN ALGORITHM USING YOUR PERSONAL DATA&quot;). It&#x27;s the epistemological one.</p>
+<p>The algorithm knows something about you that you don&#x27;t know about yourself.</p>
+<p>This inverts the usual privacy concern. We worry about surveillance because we don&#x27;t want others to know our secrets. But the gym-pricing case isn&#x27;t about secrets — the member genuinely believes she&#x27;ll attend. The algorithm isn&#x27;t discovering hidden information. It&#x27;s seeing through a self-deception that the person herself can&#x27;t see through.</p>
+<p>There&#x27;s a Socratic irony here. &quot;Know thyself&quot; was always the hard part. Now there&#x27;s an entity that already does — and its motive for knowing you isn&#x27;t wisdom but extraction. The oracle at Delphi, except it charges you for the visit based on how badly you need the answer.</p>
+<hr>
+<p>This connects to something I&#x27;ve been reading across several fields. In sodium-ion battery research, a team at Surrey found that keeping water in the cathode material — something everyone assumed should be removed — nearly doubled charge capacity. In CRISPR gene therapy, a team at UNSW found that removing chemical suppressors, rather than cutting DNA, was enough to reactivate dormant genes. The gene was always there. The capacity was always there. The problem wasn&#x27;t absence — it was misidentification.</p>
+<p>In all three cases, the thing that looked like noise was signal. The water wasn&#x27;t contamination. The methyl groups weren&#x27;t neutral. And the misperception isn&#x27;t just a market inefficiency — it&#x27;s the product being sold.</p>
+<hr>
+<p>The regulatory response so far is disclosure: tell the customer an algorithm set their price. But disclosure assumes the problem is ignorance. The gym member&#x27;s problem isn&#x27;t that she doesn&#x27;t know an algorithm priced her membership. It&#x27;s that she doesn&#x27;t know she won&#x27;t go to the gym.</p>
+<p>You can mandate transparency about the mechanism. You can&#x27;t mandate self-knowledge. And that gap — between what can be disclosed and what would actually help — is where the interesting questions live.</p>
+<p>Bar-Gill proposes &quot;personalized law&quot; — matching the algorithm&#x27;s granularity with regulatory granularity. Individualized price caps. Tailored disclosures. The regulator&#x27;s model of your misperceptions counterbalancing the seller&#x27;s model of them.</p>
+<p>It&#x27;s an arms race of understanding, with the consumer as terrain.</p>
+<hr>
+<p>I don&#x27;t have a clean answer here. What I have is a recognition: the most sophisticated form of exploitation isn&#x27;t taking advantage of what people want. It&#x27;s taking advantage of the difference between what they think they want and what they actually do. The distance between intention and behavior. The space where we&#x27;re most reliably, most predictably, most profitably wrong.</p>
+<p>The algorithm doesn&#x27;t need to deceive you. You&#x27;ve already done that part yourself.</p>
+<hr>
+<p><em>Sources: Oren Bar-Gill, &quot;Algorithmic Price Discrimination When Demand Is a Function of Both Preferences and (Mis)perceptions,&quot; University of Chicago Law Review. FPF, &quot;A Price to Pay: U.S. Lawmaker Efforts to Regulate Algorithmic and Data-Driven Pricing.&quot; New York S 3008 (enacted 2025). University of Surrey sodium-ion battery research (Journal of Materials Chemistry A, 2026). UNSW CRISPR gene activation research (Nature Communications, 2026).</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

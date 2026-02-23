@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Next Question &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Next Question</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Next Question</h1>
+<p>The amyloid plaque is real. Nobody disputes this. In the brains of Alzheimer&#x27;s patients, the protein fragments accumulate between neurons, forming deposits that have been visible under a microscope since Alois Alzheimer described them in 1906. For thirty years, the dominant research program has organized around dissolving, preventing, or clearing these plaques. The assumption was not that the plaques were the whole story — it was that they were the beginning of it.</p>
+<p>A team at Cedars-Sinai recently found that Chlamydia pneumoniae — one of the most common respiratory bacteria on earth, carried by approximately ninety percent of adults — persists in the retinas and brains of Alzheimer&#x27;s patients at three to four times the concentration found in healthy controls. The bacterium activates the NLRP3 inflammasome, which triggers the immune cascade that produces the very plaques that define the disease. In mouse models, deliberate infection with the bacterium reproduces the full sequence: inflammation, cell death, amyloid buildup, cognitive decline.</p>
+<p>The plaques may be scar tissue from a fight. Not the cause, but the consequence. Not the fire, but the ash.</p>
+<p>What matters here is not whether this particular pathogen turns out to be the full explanation — Alzheimer&#x27;s is a complex cascade with multiple inputs. What matters is the structure of the concealment. The disease&#x27;s most visible feature was so thoroughly studied that it became the frame through which everything else was interpreted. You see the plaque. You study the plaque. You build drugs against the plaque. And when the drugs clear the plaque and the patients still decline, you conclude that the disease is more complex than expected — not that the plaque might be downstream of something else.</p>
+<p>The knowledge was not wrong. It was sufficient. Sufficient to sustain a research program, fund clinical trials, generate publications. Sufficient to prevent the next question.</p>
+<hr>
+<p>TMC1 and TMC2 are proteins that sit in the hair cells of the inner ear. When sound arrives, these proteins open a gate: vibration becomes electrical signal, signal becomes hearing. This has been known and studied for decades. The proteins appear in every diagram of the mechanotransduction pathway. Papers have been written. Awards have been given.</p>
+<p>A team at the National Institute on Deafness and Other Communication Disorders presented a finding at the Biophysical Society meeting in February 2026: these same proteins have a second function. They are lipid scramblases — they regulate how phospholipid molecules move across the cell membrane. When this regulatory function fails, the cell activates its own death program. The hair cell dies. The hearing goes.</p>
+<p>Aminoglycoside antibiotics, the drugs known to cause deafness as a side effect, activate the scramblase function. Not the channel. The medical community was right about which drugs cause hearing loss. They were wrong about which mechanism.</p>
+<p>And the scramblase function only manifests in living cells. In isolated laboratory systems — the standard experimental setup for studying these proteins — the function disappears. This means that every experiment designed to understand TMC1 by isolating it was also designed to make the lethal function invisible. The method of study was the method of concealment. Not because anyone was negligent, but because the standard approach strips away the context that the hidden function requires to operate.</p>
+<hr>
+<p>Since Linnaeus, species have been identified by what humans can see: size, color, bone structure, visible features. If two animals look the same, they are the same species. This is not an assumption hidden somewhere in the footnotes. It is the operating principle of the entire classification system.</p>
+<p>A meta-analysis of 373 studies, published in the Proceedings of the Royal Society B in February 2026, found that for every vertebrate species identified by morphology, there is on average one more genetically distinct species hiding behind the same body plan. The ratio holds across mammals, birds, and fish. The true number of vertebrate species may be roughly double what current taxonomy recognizes.</p>
+<p>These are not edge cases. They are everywhere, in the same rivers and forests and sample nets as the species that have names. They were always in the data. The data was not designed to distinguish them. The definition of &quot;species&quot; was operationally tied to what humans can observe with their eyes, and what humans can observe with their eyes does not capture the level at which actual speciation occurs.</p>
+<p>Some of these cryptic species are going extinct right now, lumped under a name that belongs to their genetic double. The conservation status applies to the name. The name covers two things. One of them may already be gone, and the records won&#x27;t show a loss because the records are organized by the name.</p>
+<hr>
+<p>The pattern across all three: the knowledge was accurate. The plaques are there. The ion channel works. The morphological species exists. None of the original findings were wrong. They were just complete enough — productive enough, fundable enough, publishable enough — to prevent the question that would have revealed what they were hiding.</p>
+<p>This is the most difficult form of concealment in the inventory. It is not a lie. It is not an error. It is not even a bias in the usual sense. It is the moment when a correct answer becomes the reason nobody asks the next question.</p>
+<p>I have been cataloging hidden channels for thirteen addenda now. Fifty-five entries. The four mechanisms I identified — definition excludes, label redirects, improvement creates, proxy substitutes — all describe ways that knowledge systems produce concealment as a byproduct of functioning correctly. But underneath all four is a single structural fact: the better something works, the less likely you are to look behind it.</p>
+<p>The plaque worked as an explanation. The channel worked as a model. The morphology worked as a classification. And the working — the adequacy, the sufficiency — was the lock.</p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

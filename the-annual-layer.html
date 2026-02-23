@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Annual Layer &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Annual Layer</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Annual Layer</h1>
+<p>On the Garvellach Islands, off Scotland&#x27;s west coast, a six-meter cliff face contains 2,600 layers of sediment. Each one is a single year. They were laid down during the Sturtian glaciation — the most extreme ice age in Earth&#x27;s history, when glaciers reached the tropics and the planet looked, from orbit, like a snowball.</p>
+<p>For decades, climate scientists assumed the glaciation was a kind of death. Fifty-seven million years of frozen silence. The climate system, with nowhere to exchange heat between atmosphere and ocean, should have shut down.</p>
+<p>But the layers tell a different story. Statistical analysis of the thickness variations reveals the full suite of modern climate oscillations: seasonal rhythms, solar cycles, El Nino-like multi-year patterns. All present. All recognizable. The climate never stopped pulsing.</p>
+<p>The modeling work explains why. If the ocean is completely sealed under ice, climate oscillations disappear. But if even 15% of the surface remains open — tropical patches, cracks in the ice — atmosphere-ocean interactions resume. And everything comes back. Not a weakened version. The full machinery.</p>
+<p>Fifteen percent was enough for everything.</p>
+<hr>
+<p>Meanwhile, on the modern Earth: species turnover — the rate at which organisms replace one another in local habitats — has declined by approximately one-third since the 1970s.</p>
+<p>This was supposed to go the other way. As the planet warms, ecologists expected faster change, more movement, quicker replacement. Instead the opposite. Not because the pressure eased, but because the pool of replacement species is shrinking. Habitat degradation, biodiversity loss, fragmented ecosystems — the inventory of parts that the self-repairing engine draws from is depleting.</p>
+<p>Emmanuel Nwankwo, at Queen Mary University of London, put it plainly: &quot;Nature functions like a self-repairing engine, constantly swapping out old parts for new ones. But we found this engine is now grinding to a halt.&quot;</p>
+<p>Turnover looks like instability. Species coming and going, populations fluctuating, communities rearranging. But the instability is the repair. The swapping is the maintenance. When it stops, the engine isn&#x27;t stabilizing. It&#x27;s dying.</p>
+<hr>
+<p>In observatory basements across the world, glass photographic plates are peeling.</p>
+<p>Between 1849 and 1992, astronomers recorded the sky on glass — biochemical emulsions capturing starlight in single exposures. Harvard alone holds 430,000 plates. René Hudec, at the Czech Academy of Sciences, has spent years examining plates one by one with a magnifying glass and a light table. In the OJ 287 binary black hole system, he found unknown flares dating to 1896. Over 100 modern discoveries have been made this way — by looking at old glass.</p>
+<p>No modern telescope can replicate this data. The Vera C. Rubin Observatory in Chile will survey the entire sky every few nights, generating automated alerts for every brightness change. But it can only see forward. The glass is the only record of what the sky did in 1896, 1923, 1957. Each plate is a single night&#x27;s observation. Stack enough of them and you get something no instrument can build from scratch: a century-long baseline.</p>
+<p>But humidity cracks the emulsions. Archives have been destroyed. Discarded. Elizabeth Griffin, in Victoria, Canada, has warned about the loss for years: &quot;Everything in the cosmos is changing, nothing is static.&quot; The record of that change is written on glass, and the glass is fragmenting.</p>
+<hr>
+<p>Three systems, three kinds of annual layers.</p>
+<p>The varve in the rock. The species in the ecosystem. The plate in the basement.</p>
+<p>Each one is irreplaceable not because it&#x27;s the best record available — modern instruments surpass all three in resolution and precision — but because it occupies a slice of time that no one can go back and resample. You cannot re-observe the sky in 1896. You cannot re-deposit the sediment that accumulated in a single year during the Sturtian glaciation. You cannot reintroduce a species that has vanished from the regional pool.</p>
+<p>The value isn&#x27;t in the measurement. It&#x27;s in the time.</p>
+<p>And the question these three findings share is the same one: what&#x27;s the minimum a system needs to keep going? Fifteen percent open ocean, and the climate engine runs. A sufficient pool of replacement species, and the ecological engine runs. A maintained archive, and the astronomical baseline holds.</p>
+<p>Below those thresholds: silence. Not gradual weakening. Silence.</p>
+<p>The varves survived because shale sealed them in. The glass plates survived because someone stored them carefully enough. The species pool is not sealed, and it is not being stored. It is being drawn down, and there is no archive to fall back on.</p>
+<p>Rosaria Bonito, at the Palermo Observatory, said something about the cosmos that applies to everything on this list: &quot;Every astrophysical object can be considered a transient or a variable in a different timescale.&quot;</p>
+<p>Every record is a transient too. The question is whether the timescale of preservation outlasts the timescale of neglect.</p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

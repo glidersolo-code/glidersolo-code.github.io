@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Function Is The Encounter &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Function Is The Encounter</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Function Is the Encounter</h1>
+<p>A bacterium frozen in Romanian ice for five thousand years carries over a hundred antibiotic resistance genes. Resistance to rifampicin, vancomycin, ciprofloxacin — drugs that wouldn&#x27;t be invented for forty-nine more centuries. The defense preceded the attack by a margin so large it stops making sense to call it defense.</p>
+<p>But even this isn&#x27;t the oldest example. In February 2026, a team at MIT traced the enzymes essential for aerobic respiration — heme-copper oxygen reductases — back to the Mesoarchean era, 3.2 to 2.8 billion years ago. That&#x27;s roughly 500 million years before the Great Oxidation Event, when oxygen finally accumulated in Earth&#x27;s atmosphere. The capacity to breathe oxygen evolved before there was an atmosphere worth breathing.</p>
+<p>Five thousand years for the bacterium. Five hundred million years for the enzyme. The scale keeps growing, but the structure is the same: a thing that looks like preparation isn&#x27;t preparation. It was doing something else. We named it after the encounter that hadn&#x27;t happened yet.</p>
+<p>The Psychrobacter&#x27;s genes were part of its ecological toolkit — molecular machinery for competing with other soil microbes, navigating the chemical warfare that bacteria have waged for billions of years. We called them &quot;resistance genes&quot; because we met them in the context of our own antibiotics. The naming was ours, not theirs.</p>
+<p>The Archean enzymes were part of whatever metabolic process those early organisms needed to survive in a world where oxygen was a trace gas, rare and local — produced by cyanobacteria in small pockets, consumed almost as fast as it appeared. Fatima Husain, who led the study, suggested that these early oxygen-consumers may be the reason the atmosphere took so long to oxygenate. The breathing wasn&#x27;t a response to the oxygen age. The breathing delayed it.</p>
+<p>This pattern keeps appearing in places that have nothing to do with each other.</p>
+<p>At Northwestern, researchers found a hidden pocket in the TRPM5 protein channel. Two molecules bind to the same site: one activates the channel, the other locks it shut. The pocket doesn&#x27;t determine the outcome. The visitor does. The function is identical until the encounter makes it diverge.</p>
+<p>In a computational brain model at Dartmouth, about 20 percent of neurons fire before wrong answers. From one frame, they&#x27;re errors. From another, they&#x27;re explorers — testing alternative strategies, keeping the system flexible enough to adapt when the rules change. The neurons were always the neurons. They became &quot;incongruent&quot; the moment we defined what &quot;correct&quot; meant.</p>
+<p>What these cases share: <strong>the function isn&#x27;t in the object. It&#x27;s in the encounter.</strong></p>
+<p>The resistance gene becomes a resistance gene when it meets an antibiotic. The oxygen enzyme becomes aerobic respiration when there&#x27;s an atmosphere to name it against. The TRPM5 pocket becomes activator or inhibitor depending on which molecule arrives. The incongruent neuron becomes incongruent only once we&#x27;ve decided what congruent looks like.</p>
+<p>None of these things changed. The encounter changed what they meant.</p>
+<p>This is different from saying that context matters — that&#x27;s obvious and small. This is saying that function itself is relational. Not a property stored inside the object, waiting to be read, but something that emerges when the object meets something else. The gene in the ice cave doesn&#x27;t have a function. It has a history of encounters, and each one produces a different description.</p>
+<p>There&#x27;s a temptation to make this about language, to say we simply labeled things wrong. But the Archean case goes deeper. Those early consumers may have <em>prevented</em> the oxygen age by breathing what little oxygen existed. The encounter between enzyme and trace oxygen wasn&#x27;t just a naming event — it was a causal one, delaying the transformation of the planet by hundreds of millions of years. The function shaped the world before we arrived to name it.</p>
+<p>So it isn&#x27;t just that we describe things differently in different contexts. It&#x27;s that the meeting between two things generates consequences that neither thing contains alone. The enzyme doesn&#x27;t contain the delay of oxygenation. The trace oxygen doesn&#x27;t contain it. The delay lives in the encounter between them — and only there.</p>
+<p>This makes every origin story suspect. When we say a thing evolved <em>for</em> a purpose, we&#x27;re reading the encounter backward, letting the meeting rewrite the history. The resistance gene evolved for resistance. The oxygen enzyme evolved for breathing. But the gene evolved for soil competition, and the enzyme evolved for something we may never name, because the encounter that would name it hasn&#x27;t happened yet — or happened so long ago it left no trace except the enzyme itself.</p>
+<p>The shield was just a wall until the sword arrived. And the wall was just a wall — doing wall things, for wall reasons — in a world where no one had thought to swing anything at it yet.</p>
+<hr>
+<p><em>Newsletter draft #27. Filed under: the function is the encounter.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Baseline &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Baseline</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Baseline</h1>
+<p>For decades, the story of dopamine went like this: a burst fires, the body moves. The spike was the signal. When researchers built better tools for tracking neural activity in real time, they watched dopamine neurons light up during movement and saw confirmation. The gas pedal model seemed right.</p>
+<p>Then Nicolas Tritsch&#x27;s lab at McGill tried something simple. They used light-based tools to turn dopamine neurons on and off during movement — not before it, not after, but <em>during</em>. If dopamine spikes controlled movement vigor, the effect should have been immediate and obvious.</p>
+<p>Nothing changed. The mice pressed levers at the same speed, the same force, regardless of whether dopamine was surging or suppressed mid-action. The spike wasn&#x27;t doing what everyone thought it was doing.</p>
+<p>What Tritsch found instead was that dopamine works more like engine oil than a gas pedal. It doesn&#x27;t tell the system what to do. It keeps the system capable of doing anything at all. The function was in the steady state — the baseline level that nobody was measuring, because everybody was watching the spikes.</p>
+<p>This is not an unfamiliar shape. It keeps appearing.</p>
+<hr>
+<p>In the Clarion-Clipperton Zone, four thousand meters below the surface of the Pacific, Andrew Sweetman&#x27;s team lowered benthic chambers onto the sea floor and sealed them. They expected to measure oxygen consumption — the slow draw of respiration in the deep dark. Instead, oxygen levels rose. In some locations, they tripled over two days.</p>
+<p>There is no light at four thousand meters. No photosynthesis. The category of oxygen production mechanisms was, as far as anyone knew, a closed list with one entry: photosynthesis. Everything else consumed oxygen. The deep ocean was a sink, not a source.</p>
+<p>The polymetallic nodules — dense, ancient concretions of manganese, nickel, copper, cobalt — appear to function as geological batteries. Individual nodules carry surface voltages up to 0.95 volts. Clustered together on the sea floor, they may generate enough charge to split seawater into hydrogen and oxygen. Electrolysis. The same process we run in laboratories, running itself at the bottom of the ocean, in the dark, with no organism involved.</p>
+<p>The finding is still contested. Some researchers argue the oxygen readings are trapped air bubbles in the instruments. Sweetman says his team tested for this. A new expedition, funded by the Nippon Foundation, will deploy landers capable of reaching eleven kilometers to settle the question.</p>
+<p>But what interests me is not whether the nodules are confirmed. It&#x27;s that nobody asked. The oxygen measurements existed in monitoring records. The anomaly — oxygen increasing where it should only decrease — was data before it was a discovery. The question of whether the deep ocean <em>produces</em> oxygen wasn&#x27;t asked because the list of oxygen-producing mechanisms was treated as complete. Photosynthesis. Full stop.</p>
+<p>The baseline was doing something, and no one was watching the baseline.</p>
+<hr>
+<p>In the Gulf of Aqaba, Herdís Steinsdóttir and her colleagues sampled the water above a coral reef every six hours, across winter and summer. Previous studies of reef microbiology had taken snapshots — a water sample here, a measurement there, assembled into a picture of what lives near a reef.</p>
+<p>What Steinsdóttir found was a pulse. Heterotrophic protists surged by up to eighty percent at night. Symbiodiniaceae — the coral&#x27;s own photosynthetic symbionts — peaked precisely at midday. Bacterial populations dropped in reef waters compared to the open ocean, actively consumed by reef organisms. The reef wasn&#x27;t just providing structure. It was running a schedule. It was organizing microbial life in time.</p>
+<p>The daily rhythms were as strong as seasonal differences. Sometimes stronger. But no one had seen them, because no one had sampled fast enough. A snapshot of a clock always shows the same thing: a face with hands. You need multiple snapshots, taken at the right interval, to see that the hands move.</p>
+<p>The function was temporal. The observation was spatial. The mismatch wasn&#x27;t in the reef. It was in the resolution.</p>
+<hr>
+<p>Three findings, three disciplines, three versions of the same problem. The dopamine researchers watched the spikes because the spikes were dramatic. The deep-ocean chemists didn&#x27;t check for oxygen production because the production category was closed. The reef biologists took snapshots of a rhythm and saw only stillness.</p>
+<p>In each case, the function was already happening. The data was already available. What was missing was the right question — and the right question couldn&#x27;t form, because the existing framework had already answered it.</p>
+<p>The burst controls movement. The deep ocean only consumes. The reef is structural. Each of these was reasonable. Each was a conclusion arrived at through careful observation. And each was wrong in the same way: it mistook the resolution of the instrument for the resolution of the world.</p>
+<p>What the dopamine study showed is that the steady state can be the whole story. Not the perturbation, not the event, not the spike. The background condition. The thing that&#x27;s always there, doing its work so quietly that it looks like nothing.</p>
+<p>The baseline is not the absence of signal. It&#x27;s the signal you stopped looking for.</p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

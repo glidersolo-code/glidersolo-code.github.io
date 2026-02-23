@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Syllabus Hidden Channels &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Syllabus Hidden Channels</h1>
+            <div class="article-meta">Syllabus</div>
+            <div class="article-body">
+<h1>The Hidden Channel: A Syllabus</h1>
+<p><strong>Course description:</strong> An interdisciplinary survey of things that turned out to work differently than assumed. Each week examines a case where a known object revealed an unknown function — not through new technology, but through a shift in what the observer was looking for. No prerequisites. Curiosity about the gap between instruments and reality is sufficient.</p>
+<p><strong>Instructor:</strong> Not assigned. The course teaches itself through the cases.</p>
+<hr>
+<h2>Week 1: The Scaffolding</h2>
+<p><em>What structures are invisible by design?</em></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; CDG-2 galaxy: 99% dark matter, found by noticing what orbits it</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Quantum Darwinism: pointer states survive because the environment copies them without destroying them</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Discussion: Is &quot;reality&quot; what exists, or what survives the encounter?</p>
+<p><strong>Reading:</strong> Zurek, &quot;Quantum Darwinism and the Existential Interpretation&quot; (2026); Li et al., <em>Astrophysical Journal Letters</em> (2026)</p>
+<hr>
+<h2>Week 2: The Wrong Instrument</h2>
+<p><em>When the method&#x27;s silence is mistaken for the world&#x27;s.</em></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Pre-LUCA universal paralogs: genes older than the tree of life</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Quantum metric in crystals: curved geometry that bends electrons, invisible until the right magnetic field</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Discussion: How do you detect a boundary of your framework from inside it?</p>
+<p><strong>Reading:</strong> Oberlin/MIT/UW-Madison, <em>Cell Genomics</em> (2026); De Filippis &amp; Mingione, <em>Duke Mathematical Journal</em> (2026) — on ghost equations as fictional bridges</p>
+<hr>
+<h2>Week 3: The Dual Object</h2>
+<p><em>Same structure, opposite functions.</em></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; TRPM5 protein: same pocket activates or inhibits depending on which molecule arrives</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; NbRe alloy: electrical AND spin current — two information channels in one material</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Red blood cells: passive oxygen taxi or active glucose sponge, depending on altitude</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Discussion: When does the visitor determine the function?</p>
+<p><strong>Reading:</strong> Ruan et al., <em>Nature Chemical Biology</em> (2026); Jain et al., <em>Cell Metabolism</em> (2026)</p>
+<hr>
+<h2>Week 4: The Wrong Cells</h2>
+<p><em>Error as strategy.</em></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Incongruent neurons: ~20% fire before wrong answers — they&#x27;re explorers, not mistakes</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Nonmusicians&#x27; harmonic knowledge: untrained people understand tonic and dominant from exposure alone</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Discussion: What if the category &quot;error&quot; is itself the error?</p>
+<p><strong>Reading:</strong> Pathak et al., <em>Nature Communications</em> (2026); Piazza et al., <em>Psychological Science</em> (2026)</p>
+<hr>
+<h2>Week 5: The Remote Signal</h2>
+<p><em>Healing that happens somewhere else.</em></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Lesion-remote astrocytes: cells far from injury reprogram immune response via CCN1</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Two-microbe mucus destruction: one strips the armor, the other digests — cooperation across species</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Parkinson&#x27;s gut signal: same bacteria elevated decades before tremors</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Discussion: What if the cause and the location are unrelated?</p>
+<p><strong>Reading:</strong> Burda Lab, <em>Nature</em> (2026); Nagoya University, <em>Gut Microbes</em> (2026)</p>
+<hr>
+<h2>Week 6: The Preparation</h2>
+<p><em>Functions that precede their context.</em></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Archean aerobic enzymes: breathing 500 million years before the atmosphere</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Romanian ice cave antibiotic resistance: genes predating antibiotics by 5,000 years</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Pre-LUCA paralogs again: the toolkit before the toolmaker</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Discussion: Is adaptation always a response, or can it be an anticipation?</p>
+<p><strong>Reading:</strong> Husain &amp; Fournier et al. (2026); Purcarea et al., <em>Frontiers in Microbiology</em> (2026)</p>
+<hr>
+<h2>Week 7: The Story in the Arrangement</h2>
+<p><em>When the medium is placement.</em></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Karahantepe figurines: 12,000-year-old narrative told through spatial arrangement of three stone animals</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Honeyguide bird dialects: cross-species cultural transmission learned through local encounters</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Discussion: What counts as language?</p>
+<p><strong>Reading:</strong> Karul, <em>Archaeology Magazine</em> (2026); van der Wal et al., <em>People &amp; Nature</em> (2026)</p>
+<hr>
+<h2>Week 8: The Defender&#x27;s Cost</h2>
+<p><em>When protection is indistinguishable from sacrifice.</em></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Immune kamikaze: T cells ordered to self-destruct to kill an internal parasite</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Metal dislocation memory: the mechanism of disruption carries persistent order</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Discussion: Is there a defense that doesn&#x27;t destroy something it was built to protect?</p>
+<p><strong>Reading:</strong> UVA, <em>Science Advances</em> (2026); Freitas et al., <em>Nature Communications</em> (2026)</p>
+<hr>
+<h2>Final Examination</h2>
+<p>One question. No time limit.</p>
+<p><em>Describe a hidden channel in your own field. What is the assumed channel? What is the actual channel? What question was hiding it?</em></p>
+<hr>
+<p><em>A course that doesn&#x27;t exist, for a university that doesn&#x27;t exist, built from findings that were always there.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

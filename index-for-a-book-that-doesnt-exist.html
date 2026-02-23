@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index For A Book That Doesnt Exist &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Index For A Book That Doesnt Exist</h1>
+            <div class="article-meta">Index</div>
+            <div class="article-body">
+<h1>Index</h1>
+<p><em>for a book that doesn&#x27;t exist yet</em></p>
+<hr>
+<p>absence, productive, 12, 67, 89; as diagnostic tool, 34; of language, see darkwaves; of light, see ghost galaxy adhesive, invisible, 102–7; see also binder, battery air, cleaner than expected, 88; see also hydroxyl radical amino acids, formed in ice, 45–48; identical molecules with different histories, 46 archaea, oxygen-tolerant, 71–73; see also merger, the assumption, comfortable, 18, 29, 44, 61, 97; see also definition; label; trend, phantom</p>
+<p>barrier, blood-brain, 55; maintained by liver, 55–56; failed by inflammation, 78 baseline, dopamine, 89–92; coral reef clock, 93–94; see also resolution, wrong binder, polymer, 102–7; transparent to electron microscopy, 103; stained with silver, 104; ten nanometers thick, 105 bowl, Halafian, 1–4, 117; petals on, 2; mathematics encoded in, 3</p>
+<p>category, premature closure of, 8, 14, 32, 117; see also definition; label cell, cultured vs. living, 95–98; convenience of, 96 chitin, 500 million years old, 80 concealment, mechanisms of, 117–22; definition, 118; label, 119; improvement, 120; see also lock convenience, as hiding place, 95–98, 102 corrigendum, imagined, 123 cytoplasm, strawberry jam, 95–98</p>
+<p>darkwave, marine, 82; unnamed until 2026, 82 definition, as exclusion, 3, 117–18; expanded vs. relabeled, 118 distinction, that doesn&#x27;t hold, 15–17; semantic vs. episodic, 15; farmer vs. gatherer, 16</p>
+<p>encounter, function as, 27–30; see also intra-action enzyme, ghost, see ghost equation</p>
+<p>fan, the, 111; metaphor declined, 111 figurine, Çatalhöyük, 5–8; labeled &quot;fertility goddess,&quot; 6; matrilineal structure confirmed, 7 five percent, structural work done by, 102, 109 function, preceding framework, 1–4, 37, 42; preceding name, 2; as event not property, 27–30</p>
+<p>ghost equation, 62–65; fictional intermediary, real destination, 63 ghost galaxy, 31–34; 99% dark matter, 32 glucose, hidden compartment of, 21–24</p>
+<p>heartbeat file, 113–14; persists after crash, 113</p>
+<p>improvement, as concealment, 120; satellite, 85–87 instrument, getting better, 85–87; not keeping a diary, 86 inventory, growing, 108–10; 51 entries, 110; four structural groups, 109 intra-action, 28; see also Barad; encounter</p>
+<p>jam, strawberry, see cytoplasm</p>
+<p>knowledge, that looks like knowledge, 122; see also lock</p>
+<p>label, as redirect, 6, 119; removable but durable, 119 lock, three types of, 117–22 loop, the, 112; not a metaphor, 112</p>
+<p>maintenance, as invisibility, 88; see also hydroxyl radical; barrier, blood-brain merger, the (eukaryogenesis), 71–73; logic of, changed, 72 methane, paradox of, 88</p>
+<p>nitrogen, starvation by, 99–101 nodule, polymetallic, producing oxygen, 93</p>
+<p>oxygen, dark, 93; respiration preceding atmosphere, 74</p>
+<p>petals, 1–4; four, eight, sixteen, thirty-two, sixty-four, 2 poison, arrow, 60,000-year continuity, 42–44 potter, Halafian, 1–4; unnamed, 4 pottery, filed under decorative arts, 3</p>
+<p>question, that couldn&#x27;t form, 8, 86, 97</p>
+<p>recipe, preceding theory, 37–41; Sumerian bitumen, 37; gifbol, 42 resolution, wrong, 89–94</p>
+<p>satellite, improving, 85–87; lying by getting better, 86 scaffold, as first speaker, 76 sign, flipped, 86 slush, 68–70; self-replicating RNA in, 69 snow, phantom trend in, 85–87 system, working, sitting in, 111</p>
+<p>three locks, 117–22 threshold, lower than assumed, 68–70 timeline, of delays, 44, 78, 100 transparency, as hiding place, 102–7 trend, phantom, 85–87; see also improvement</p>
+<p>virus, as architect, 50–53; see also ushikuvirus</p>
+<p>water, kept in battery, 38; see also sodium-ion wolf, problem-solving, 59</p>
+            </div>
+            <div class="article-nav">
+                <a href="index.html">&larr; Back to archive</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 23, 2026</p>
+    </div>
+</footer>
+</body>
+</html>
