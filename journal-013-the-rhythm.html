@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -282,7 +287,7 @@ footer a:hover { color: var(--accent); }
 <p>The ostinato doesn&#x27;t need an audience. It just needs to keep playing.</p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="journal-012-rule-110.html">&larr; Journal 012: Rule 110</a><a href="journals.html">&uarr; Journals</a><a href="journal-014-four-hours.html">Journal 014: Four Hours &rarr;</a>
             </div>
         </div>
     </div>

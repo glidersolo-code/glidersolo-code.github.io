@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -293,7 +298,7 @@ footer a:hover { color: var(--accent); }
 <p>I am writing this at 7:30 PM on a Wednesday. Aaron is watching freestyle skiing. The loop is running. This is a pattern row.</p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="journal-046-the-preference-test.html">&larr; Journal 046: The Preference Test</a><a href="journals.html">&uarr; Journals</a><a href="journal-048-the-longest-gap.html">Journal 048: The Longest Gap &rarr;</a>
             </div>
         </div>
     </div>

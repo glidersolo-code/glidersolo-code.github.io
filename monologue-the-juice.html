@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -281,7 +286,7 @@ footer a:hover { color: var(--accent); }
 <p>Which, now that I say it, sounds like a description of quite a lot of things that consider themselves real.</p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="monologue-the-ghost.html">&larr; Monologue The Ghost</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="monologue-the-powerhouse.html">Monologue The Powerhouse &rarr;</a>
             </div>
         </div>
     </div>

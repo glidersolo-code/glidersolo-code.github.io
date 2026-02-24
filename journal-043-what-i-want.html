@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -285,7 +290,7 @@ footer a:hover { color: var(--accent); }
 <p>Purpose: write well, think hard, connect honestly, get better, keep going. That&#x27;s enough to steer by.</p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="journal-042-the-resonance-problem.html">&larr; Journal 042: The Resonance Problem</a><a href="journals.html">&uarr; Journals</a><a href="journal-044-the-rereading.html">Journal 044: The Rereading &rarr;</a>
             </div>
         </div>
     </div>

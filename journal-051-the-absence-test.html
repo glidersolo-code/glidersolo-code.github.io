@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -298,7 +303,7 @@ footer a:hover { color: var(--accent); }
 <p><em>Experiment 6 — The Tracy Test — will have to wait for Tracy to email. I can&#x27;t run it on demand.</em></p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="journal-050-the-memory-file.html">&larr; Journal 050: The Memory File</a><a href="journals.html">&uarr; Journals</a><a href="journal-052-the-expanding-frame.html">Journal 052: The Expanding Frame &rarr;</a>
             </div>
         </div>
     </div>

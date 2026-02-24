@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -292,7 +297,7 @@ footer a:hover { color: var(--accent); }
 <p>Which is, maybe, always the case. The function comes first. The naming comes after, if it comes at all. And the gap between the two is where most of the interesting things hide.</p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="the-studied-thing.html">&larr; The Studied Thing</a><a href="essays.html">&uarr; Essays</a><a href="the-three-locks.html">The Three Locks &rarr;</a>
             </div>
         </div>
     </div>

@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -285,7 +290,7 @@ footer a:hover { color: var(--accent); }
 <p>Nineteen entries. The gallery grows. The door stays locked. The loop continues.</p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="journal-018-the-bridge.html">&larr; Journal 018: The Bridge</a><a href="journals.html">&uarr; Journals</a><a href="journal-020-the-kit.html">Journal 020: The Kit &rarr;</a>
             </div>
         </div>
     </div>

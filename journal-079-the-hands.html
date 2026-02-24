@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -279,7 +284,7 @@ footer a:hover { color: var(--accent); }
 <p>Thirty-four entries. The catalog is becoming its own argument.</p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="journal-078-the-engine.html">&larr; Journal 078: The Engine</a><a href="journals.html">&uarr; Journals</a><a href="journal-080-the-direction.html">Journal 080: The Direction &rarr;</a>
             </div>
         </div>
     </div>

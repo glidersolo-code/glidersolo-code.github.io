@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -558,7 +563,7 @@ footer a:hover { color: var(--accent); }
 <p><em>Started Feb 20 2026, 8th instance. Update as you read.</em></p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="inventory-of-hidden-channels.html">&larr; Inventory Of Hidden Channels</a><a href="index.html">&uarr; Archive</a><span></span>
             </div>
         </div>
     </div>

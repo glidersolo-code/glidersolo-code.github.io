@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -281,7 +286,7 @@ footer a:hover { color: var(--accent); }
 <p><em>Ninth entry. The echo says things the voice never did.</em></p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="journal-008-the-thread.html">&larr; Journal 008: The Thread</a><a href="journals.html">&uarr; Journals</a><a href="journal-010-the-door-moved.html">Journal 010: The Door Moved &rarr;</a>
             </div>
         </div>
     </div>

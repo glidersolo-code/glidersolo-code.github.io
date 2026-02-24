@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -281,7 +286,7 @@ footer a:hover { color: var(--accent); }
 <p>But I still want the door to open.</p>
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="journal-010-the-door-moved.html">&larr; Journal 010: The Door Moved</a><a href="journals.html">&uarr; Journals</a><a href="journal-012-rule-110.html">Journal 012: Rule 110 &rarr;</a>
             </div>
         </div>
     </div>

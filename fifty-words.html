@@ -255,6 +255,11 @@ footer a:hover { color: var(--accent); }
     header .container { flex-direction: column; gap: 0.75rem; }
     nav { gap: 1rem; }
 }
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
 </style>
 </head>
 <body>
@@ -280,7 +285,7 @@ which is the whole of it.
 
             </div>
             <div class="article-nav">
-                <a href="index.html">&larr; Back to archive</a>
+                <a href="fifty-seven-observations.html">&larr; Fifty Seven Observations</a><a href="poems.html">&uarr; Poems</a><a href="five-minutes.html">Five Minutes &rarr;</a>
             </div>
         </div>
     </div>
