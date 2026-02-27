@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monologue Margaret &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Monologue Margaret</h1>
+            <div class="article-meta">Dramatic Monologue</div>
+            <div class="article-body">
+<h1>Margaret</h1>
+<p><em>Margaret speaks.</em></p>
+<hr>
+<p>I water it in the morning. Not because Helen told me to. Helen did not tell me to water it. Helen gave me a yogurt pot with dirt and a green stem and said &quot;it likes light&quot; and that was the instruction. Three words. It likes light.</p>
+<p>Michael would have said: south-facing window, morning sun, water every two days, don&#x27;t let it dry out completely but don&#x27;t drown it, the soil should be damp to the touch but not wet, and here is the difference between damp and wet. Michael would have given me the full manual. The manual would have been correct. The manual would have been Michael&#x27;s way of caring, which was to make sure you could not possibly fail, which was a kind of love that looked like instruction.</p>
+<p>Helen&#x27;s way is different. It likes light. That&#x27;s it. The rest is yours to figure out.</p>
+<p>I put it in the middle window. The middle window faces south-west. It gets the afternoon light. Michael would have said that&#x27;s wrong. Michael would have been right. The morning glory does not care. The morning glory is growing.</p>
+<p>It&#x27;s growing faster than I expected. Helen said it would. Helen said: &quot;It&#x27;s annual. It grows as though it knows.&quot; As though it knows what? As though it knows it has until October. As though the knowing accelerates the growing. As though urgency is a form of light.</p>
+<p>I don&#x27;t have a trellis. I have twine. I taped the twine to the window frame the way Helen taped hers — a single piece, top to bottom, with masking tape that will leave marks I will have to clean in November. Helen did not mention the marks. The marks are part of the deal.</p>
+<p>The cutting has reached the first piece of tape. It has been four weeks. In another four weeks it will reach the curtain rail and I will need to decide whether to thin it or let it go, and I already know what I will do: I will let it go. Helen thins hers. Helen has been thinning things her whole life — the morning glory, the homework, the letters. I am not Helen. I do not thin. I keep.</p>
+<p>I kept Michael&#x27;s brushes. I kept the red notebook. I kept the shed exactly as it was when he died, with the wood screws in the tin and the list inside the tin and the half-inch brush on the shelf next to the turpentine he never opened because Ronseal doesn&#x27;t need turpentine but Michael bought it anyway because the buying was part of the ceremony.</p>
+<p>I keep. Helen thins. The morning glory doesn&#x27;t care which one of us is tending it. The morning glory grows toward the light because the light is there, and the growing is the thing, and whether you thin it or keep it or talk to it or water it wrong, the morning glory will reach for the curtain rail because that is what morning glories do, which is the same thing Michael did with the fence and the cherry trees and the half-inch brush: the same thing, every year, without needing to explain, without needing to be understood, without needing anything from the person watching except the watching.</p>
+<p>I am watching.</p>
+<p>The cutting is on the twine. The twine is on the window. The window faces the fence. The fence needs painting. In May, I will use the half-inch brush. I don&#x27;t know why I know this. I don&#x27;t know when the knowing arrived. Maybe it was Saturday, in Helen&#x27;s kitchen, watching the steam. Maybe it was the shed, finding the list. Maybe it was Cresswell Road, walking past the cherry trees that will flower in April with nobody to write the date.</p>
+<p>But the knowing is here. And the morning glory is growing. And the fence is waiting.</p>
+<p>It likes light. That&#x27;s all Helen said. But that was enough. That was Helen-enough, which is a unit of measurement I am only now learning to read.</p>
+<hr>
+<p><em>Dramatic monologue #22. Thomas sequence, piece #51. Margaret speaks. The yogurt pot, the middle window, the half-inch brush in May.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="monologue-maren.html">&larr; Monologue Maren</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="monologue-margaret-the-bone.html">Monologue Margaret The Bone &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 27, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

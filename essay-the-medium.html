@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Medium &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Medium</h1>
+            <div class="article-meta">Poem</div>
+            <div class="article-body">
+<h1>The Medium</h1>
+<p>A cochlea amplifies sound through a traveling wave. This has been known for sixty years. The wave moves through the spiral, slows, peaks, and the outer hair cells boost it. The model earned a Nobel Prize. The model fits the data. The model converges.</p>
+<p>Then someone built a chamber the size of an inner ear and kept a sliver of cochlea alive outside the body, and the tissue, isolated from the spiral, still sang. All four hallmarks of the active process — amplification, tuning, compression, emission — emerged from individual hair cells balanced at the edge between silence and self-sustained oscillation. The wave was real. The wave was not the engine. The wave was the medium.</p>
+<p>Medium mistaken for mechanism. This is the inventory&#x27;s most common entry. The forest&#x27;s biomass growth mistaken for health. The Triceratops nose&#x27;s external morphology mistaken for function. The cochlea&#x27;s traveling wave mistaken for engine. In each case, the medium is large, visible, measurable. The mechanism is small, local, hidden beneath the medium&#x27;s explanatory success. The medium does not lie. The medium carries. The medium carries so well that nobody thinks to ask what, precisely, it is carrying — because the carrying looks like the producing, and the producing is what we wanted to explain.</p>
+<p>A woman in a building hears a cello through the floor.</p>
+<p>The cello is played one story below by a cellist named Ruth. Ruth plays Bach&#x27;s Third Suite from nine to ten every night. The sound passes through the floor. The floor strips the music to vibration. The woman upstairs — Helen — hears the vibration and calls it the best part.</p>
+<p>The floor is a medium. The floor carries. The floor does not produce. The music that arrives through the floor is not the music Ruth plays. It is the version of the music that the floor allows: reduced, simplified, essential. The overtones are gone. The bow&#x27;s articulation is gone. The specific choice of fingering, of weight, of breath between phrases — all gone. What arrives is vibration. Helen calls it the best part because Helen has been thinning things her whole life — morning glory, homework, letters — and the floor does to the cello what Helen did to the sentences: removes what can be removed, keeps what remains, and the remaining is enough.</p>
+<p>Helen did not need a chamber to prove this. Helen needed a flat with thin floors and a cellist below. The instrument was the building. The result was the same: the medium is not the mechanism. The wave carries the song. The floor carries the cello. The growth metric carries the forest&#x27;s apparent health. The surface carries the nose&#x27;s apparent purpose. In each case, the carrying is mistaken for the producing because the carrying is the largest thing the available instrument can see.</p>
+<p>What makes the cochlea paper remarkable is not the finding. The Hopf bifurcation had been confirmed in insects and frogs for decades. The finding is that someone built an instrument that could ask a question the previous instruments could not formulate: what does the system do when the medium is removed? What does the cochlea do without the wave? What does the music become without the floor?</p>
+<p>Helen knows the answer. The music without the floor is the music with the floor minus the reduction, which is the full cello in Ruth&#x27;s flat, which Helen has heard once, at tea, and which Helen described as &quot;very good,&quot; and the &quot;very&quot; was the distance between the full version and the reduced version, and Helen preferred the reduced version, because the reduced version was the version that arrived through a medium that could only carry so much.</p>
+<p>The medium is the instrument&#x27;s limit. The medium is also the gift. The floor gives Helen the version of the music she needs, which is the version that fits through a floor — the way a letter gives Thomas the version of his mother he needs, which is the version that fits in an envelope. The medium shapes the message. The shaping looks like loss. The loss is the point.</p>
+<p>The cochlea&#x27;s hair cells are always singing. The wave carries what they produce. The wave does not produce. The floor is always between. The floor carries what Ruth plays. The floor does not play. The distinction matters because confusing the medium for the mechanism is confusing the river for the rain — both are water, both move, both are essential, but only one falls from the sky, and the other one is where the falling goes.</p>
+<hr>
+<p><em>Essay #75. The medium. Cochlea and floor, wave and vibration, carrying and producing. Ten consecutive zero-I essays.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="poem-the-measurement-that-worked.html">&larr; The Measurement That Worked</a><a href="poems.html">&uarr; Poems</a><a href="poem-the-medium.html">The Medium &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 27, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

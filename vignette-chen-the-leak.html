@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vignette Chen The Leak &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Vignette Chen The Leak</h1>
+            <div class="article-meta">Vignette</div>
+            <div class="article-body">
+<h1>Chen, the Leak</h1>
+<p>Chen reads the paper on a Thursday, after her meeting with the postdoc who is still trying to converge the nitrogen-vacancy expansion and who left her office looking exactly the way a person looks when they have been told that their expansion may be correct in every verifiable respect and still incomplete. Chen did not enjoy the conversation. She does not enjoy being the person who sees the ceiling before the person climbing can see it. But seeing the ceiling is what she does.</p>
+<p>The ETH group measured the age of dissolved CO₂ in a Congo Basin lake. Forty percent was three thousand years old. The peat — which every model treats as stored carbon, a column that grows at the top and stays at the bottom — was leaking. Ancient carbon, buried for millennia, was entering the lake water and degassing into the atmosphere.</p>
+<p>The pathway is unknown. The paper identifies the source (radiocarbon) and the destination (atmospheric CO₂) but not the route. Three thousand years of burial, and the carbon is moving through a channel that no instrument has traced.</p>
+<p>Chen adds a line to the paragraph:</p>
+<p><em>A model that treats the bottom of a column as a boundary condition will never find the flux through the boundary, because the boundary was defined as impermeable, and the impermeability was not measured — it was assumed, because the column&#x27;s accumulation rate was consistent with a sealed bottom, and consistency was mistaken for constraint.</em></p>
+<p>She reads it back. Twenty lines now. The paragraph has exceeded the length of a paragraph and become something else — a structure that holds its own weight, like the scaffold in the condensate, like the filaments inside the droplet that the surface behavior could not predict.</p>
+<p>The radiocarbon result is clean. The age is measured. The quantity is known. What is not known is the mechanism that moves carbon from the deep peat to the dissolved phase in the lake. This is the part that interests her: not the finding but the gap inside the finding. The finding says <em>the boundary is permeable</em>. The mechanism says <em>I am still invisible</em>. The gap between the two is the space her paragraph has been describing for 130 entries.</p>
+<p>She thinks about the postdoc. His nitrogen-vacancy expansion converges beautifully. Every eigenvalue matches the experimental data. The residuals are small. The expansion looks complete. But the expansion is built from functions that assume a certain geometry, and the geometry is the assumption, and the assumption is the boundary condition, and the boundary condition was never tested — it was adopted because the convergence was good, and good convergence was treated as evidence that the geometry was correct.</p>
+<p>The Congo Basin peat had a good convergence too. The accumulation rate was consistent with a sealed column. The consistency was treated as evidence that the column was sealed. And the column was leaking. Forty percent of the gas was ancient.</p>
+<p>She does not add another line. Twenty is enough. The paragraph has said what it can say in twenty lines, and the twenty-first line would be the line that explains what the first twenty describe, and the explanation is the thing that cannot be written, because the explanation would require naming the pattern that connects all 130 entries, and the pattern has no name in any field, and the namelessness is not a failure of vocabulary — it is a property of the pattern itself.</p>
+<p>The office is quiet. The window is open. The paragraph is twenty lines long and it holds.</p>
+            </div>
+            <div class="article-nav">
+                <a href="vignette-chen-the-landing-site.html">&larr; Vignette Chen The Landing Site</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="vignette-chen-the-leaking.html">Vignette Chen The Leaking &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 27, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

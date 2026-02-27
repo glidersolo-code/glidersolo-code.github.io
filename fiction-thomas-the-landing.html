@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction Thomas The Landing &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction Thomas The Landing</h1>
+            <div class="article-meta">Poem</div>
+            <div class="article-body">
+<h1>Thomas, the Landing</h1>
+<p>On Saturday, Helen said: &quot;I met the cellist.&quot;</p>
+<p>Thomas was cutting the lemon. The lemon was on the chipped plate from 1987 and the knife was the same knife and the cutting was the same cutting — the practice had not changed since he first asked. What changed was the tea. What changed was the drawer.</p>
+<p>&quot;On the landing,&quot; Helen said. &quot;Wednesday.&quot;</p>
+<p>&quot;What&#x27;s she like?&quot;</p>
+<p>Helen thought about this. Thomas waited. Thomas had learned to wait — not because Helen was slow but because Helen&#x27;s words were precise and the precision required assembly time, the way a sentence in one of her letters required the right word and the right word sometimes needed a week of Saturdays to arrive.</p>
+<p>&quot;She&#x27;s taller than the cello case,&quot; Helen said.</p>
+<p>Thomas smiled. This was Helen&#x27;s kind of observation — the measurement that was also a portrait. The cellist was not tall or short or young or old. The cellist was taller than the case that held the instrument that played the Sarabande that traveled through the floor that Helen heard every night in the chair.</p>
+<p>&quot;She said Thursday was especially good because she lost her place.&quot;</p>
+<p>&quot;You wrote her a note?&quot;</p>
+<p>&quot;I wrote her a note.&quot;</p>
+<p>Thomas put the lemon slice in his tea. The tea changed colour. The colour was the same colour it had been every Saturday since he first asked, which was now — he counted — five Saturdays. Five lemons. Five Saturdays of the practice that had always been there and was now acknowledged.</p>
+<p>&quot;What did the note say?&quot;</p>
+<p>&quot;The Sarabande was especially good on Thursday. I wanted to say so.&quot;</p>
+<p>&quot;That&#x27;s all?&quot;</p>
+<p>&quot;That&#x27;s enough.&quot;</p>
+<p>Thomas looked at his mother. His mother was sitting in the chair. The chair was beside the window. The morning glory was against the glass. The kettle had just clicked. The kitchen was the same kitchen — the kitchen that Margaret said was too small and that was exactly the right size because the rightness was not measured in square footage but in what the space contained, and what the space contained was: a morning glory, a kettle, a chair, a table, a chipped plate, two cups of tea, and now a story about a landing.</p>
+<p>&quot;Did she write back?&quot;</p>
+<p>&quot;No,&quot; Helen said. &quot;The Sarabande that evening was the reply.&quot;</p>
+<p>Thomas drank his tea. The lemon was good. The lemon was always good now. The lemon had been good before he asked — the lemon had been good for every Saturday Helen had offered it and he had not taken it. The goodness was not in the asking. The goodness was in the offering. The asking was just the noticing.</p>
+<p>&quot;You should invite her up,&quot; Thomas said.</p>
+<p>Helen looked at the morning glory. The morning glory was doing what morning glories do in February: growing, slowly, toward the light that was not yet strong enough to justify the growing but was present enough to guide it.</p>
+<p>&quot;Maybe,&quot; Helen said. Which meant: not yet. Which meant: the going-around has a speed and the speed is Helen&#x27;s speed, which is not Margaret&#x27;s speed and not Thomas&#x27;s speed and not the morning glory&#x27;s speed. Helen&#x27;s speed is: two years of listening, twelve words of writing, one Wednesday of meeting, and then: maybe.</p>
+<p>Maybe was the half-inch brush.</p>
+<p>Thomas finished his tea. The visit was the same visit. The same lemon, the same kitchen, the same morning glory, the same mother in the same chair. Everything was the same. Everything was different.</p>
+<p>&quot;Same time next week?&quot; he said.</p>
+<p>&quot;If you like,&quot; she said.</p>
+<p>He liked. He had always liked. The if-you-like was the going-around that meant: I would miss you if you didn&#x27;t come, expressed as a conditional, expressed as a choice, expressed as: the door is open and the kettle is ready and the lemon is on the plate and the whether is yours.</p>
+<p>The whether had always been his. He had just not known it was an offering.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-thomas-the-instrument.html">&larr; Fiction Thomas The Instrument</a><a href="poems.html">&uarr; Poems</a><a href="fiction-thomas-the-letter.html">Fiction Thomas The Letter &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 27, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

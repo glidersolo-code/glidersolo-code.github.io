@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction Wednesday Tea &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction Wednesday Tea</h1>
+            <div class="article-meta">Poem</div>
+            <div class="article-body">
+<h1>Wednesday Tea</h1>
+<p>Ruth knocked at six.</p>
+<p>She had spent twenty minutes deciding when to knock. The note said Wednesday. The note did not say what time. Ruth plays the Sarabande at nine — had been playing the Sarabande at nine for two years, the going-around applied to an evening until the evening was a structure and the structure was a practice and the practice was: nine o&#x27;clock, Third Suite, the floor. But the invitation was for tea, not for the Sarabande, and tea is earlier than nine, and earlier is a different going-around.</p>
+<p>She knocked at six because six is early enough for tea and late enough for the day to have settled, and the settling is the going-around applied to an afternoon until the afternoon is the space in which a visit can happen.</p>
+<p>Helen opened the door.</p>
+<p>Helen was smaller than Ruth expected. Ruth had imagined Helen from above — from below, actually, from the apartment below, imagining upward through the joist. She had imagined Helen by the footsteps: light, even, the footsteps of a woman who moved through her kitchen with the certainty of practice. The footsteps had been taller. The woman was not tall. The woman was Helen.</p>
+<p>&quot;Ruth.&quot;</p>
+<p>&quot;Helen.&quot;</p>
+<p>The kitchen was behind Helen. Ruth could see the kitchen over Helen&#x27;s shoulder — the window, the morning glory dormant on the fence outside, the table with letters on it, the kettle on the stove. The kettle was not on. Helen had not put the kettle on yet. Helen had been waiting for the knock.</p>
+<p>&quot;Come in.&quot;</p>
+<p>Ruth came in.</p>
+<p>The kitchen was smaller than the Sarabande. Ruth had been playing into this kitchen for two years — sending the Third Suite upward through the floor, the sound expanding into a space Ruth had never seen. The space she had imagined was the cathedral. The space she walked into was a kitchen. The kitchen had a window and a table and four chairs and a kettle and a stove and a sink and a morning glory on the fence and letters on the table and a half-inch brush on the windowsill.</p>
+<p>The half-inch brush was on the windowsill.</p>
+<p>&quot;That was Michael&#x27;s,&quot; Helen said, following Ruth&#x27;s eyes. &quot;My husband. He painted the fence. He painted around the morning glory. He did not cut it back.&quot;</p>
+<p>&quot;The half-inch brush.&quot;</p>
+<p>Helen looked at Ruth. &quot;You know about the half-inch brush?&quot;</p>
+<p>&quot;Thomas told me. On the landing.&quot;</p>
+<p>&quot;Thomas tells people things on the landing.&quot;</p>
+<p>&quot;Thomas told me about the blue notes on the landing.&quot;</p>
+<p>Helen smiled. The smile was small — the half-inch brush applied to a face. The smile did not say everything the smile contained. The smile said: my son stands on the landing and talks to my downstairs neighbor about blue notes, and the talking is the going-around, and the going-around is the love.</p>
+<p>&quot;Sit down.&quot;</p>
+<p>Ruth sat down. Not in Michael&#x27;s chair — she did not know which was Michael&#x27;s chair, but she did not sit in the chair by the window because the chair by the window was obviously Helen&#x27;s, and she did not sit in the chair facing the door because the chair facing the door was obviously Thomas&#x27;s, and the chair she sat in was the chair between them: the visitor&#x27;s chair. The chair Margaret uses.</p>
+<p>&quot;Tea?&quot;</p>
+<p>&quot;Please.&quot;</p>
+<p>Helen put the kettle on. Ruth sat in the kitchen and listened to the kettle filling, the water running, the tap turning, the kettle settling on the stove, the element beginning its hum. These were the sounds she heard through the ceiling every day — the sounds that were the kitchen&#x27;s language, the language she had been hearing for two years without knowing the kitchen it came from.</p>
+<p>The kitchen was the ceiling seen from above.</p>
+<p>The ceiling was dark wood and old plaster and a light fixture that had been there since the building was built. The floor — Ruth&#x27;s ceiling, Helen&#x27;s floor — was under her feet. The floor she had been playing through was under her feet. She could feel the floorboards through her shoes.</p>
+<p>&quot;The floor is two hundred and fourteen millimeters,&quot; Ruth said.</p>
+<p>Helen turned from the stove. &quot;You know the number?&quot;</p>
+<p>&quot;Thomas told me. On the landing.&quot;</p>
+<p>&quot;Thomas told you the number on the landing?&quot;</p>
+<p>&quot;Thomas tells people numbers on the landing.&quot;</p>
+<p>Helen laughed. The laugh was small — one syllable, the going-around applied to a sound. The laugh was the first sound Helen had made that was not words. The laugh was the first sound Ruth had heard from Helen that was not the kettle, not the footsteps, not the silence. The laugh was new.</p>
+<p>The kettle whistled. The wobble came — the wobble Ruth heard every day through the ceiling, the wobble that said: Helen is making tea, a letter has arrived, the kitchen is doing what the kitchen does. The wobble was louder from inside the kitchen. The wobble was larger. The wobble was the wolf tone of the kettle heard without the floor between them — not reduced, not thinned, not carried through two hundred and fourteen millimeters. The raw wobble. The wobble before the going-around.</p>
+<p>Helen poured the tea. Two cups. She put one in front of Ruth.</p>
+<p>&quot;The cup is Michael&#x27;s,&quot; Helen said. &quot;Thomas uses it on Saturdays. You can use it on Wednesdays.&quot;</p>
+<p>Ruth held the cup. The cup was warm. The cup was the size of a cup — the size of a going-around, the size of a thing that can be held in two hands, the size of everything that is essential and nothing that is not.</p>
+<p>&quot;Thank you for the Sarabande,&quot; Helen said.</p>
+<p>Ruth looked at the tea.</p>
+<p>&quot;Two years,&quot; Helen said. &quot;Two years of the Sarabande. Two years of the cathedral. I did not know who was playing. I did not know you were Ruth. I knew the Sarabande. The Sarabande was enough.&quot;</p>
+<p>&quot;I did not know you were listening.&quot;</p>
+<p>&quot;The listening was the going-around.&quot;</p>
+<p>&quot;The playing was the going-around.&quot;</p>
+<p>They sat in the kitchen. The tea was hot. The kitchen was quiet — quiet the way the kitchen is quiet after the kettle, after the whistle, after the wobble. The silence was the building&#x27;s silence. The silence included everything.</p>
+<p>&quot;The wolf tone,&quot; Ruth said.</p>
+<p>&quot;The wolf tone.&quot;</p>
+<p>&quot;I played the whole Suite. You said: the building will do the rest.&quot;</p>
+<p>&quot;The building did the rest.&quot;</p>
+<p>&quot;Could you hear it?&quot;</p>
+<p>&quot;I could hear a wobble.&quot;</p>
+<p>&quot;That was the wolf tone.&quot;</p>
+<p>&quot;That was the building.&quot;</p>
+<p>Ruth smiled. &quot;That was the wolf tone after the building.&quot;</p>
+<p>Helen held her cup. Ruth held her cup. The cups were the same size. The tea was the same temperature. The kitchen held them the way the building holds everything: without choosing, without sorting the Sarabande from the wolf tone, without thinning the visitor from the resident. The kitchen held everything the space allowed.</p>
+<p>&quot;The Sarabande is at nine,&quot; Ruth said.</p>
+<p>&quot;I know.&quot;</p>
+<p>&quot;I could play it from here.&quot;</p>
+<p>&quot;Your cello is downstairs.&quot;</p>
+<p>&quot;Yes.&quot;</p>
+<p>&quot;Then play it from downstairs. Play it from where you always play it. The floor will carry it. I will be here. The Sarabande will come through the floor the way it always comes through the floor — reduced, essential, the cathedral. I do not need the Sarabande in the room. I need the Sarabande through the floor.&quot;</p>
+<p>Ruth put her cup down.</p>
+<p>&quot;The going-around,&quot; Ruth said.</p>
+<p>&quot;The going-around. The floor is the going-around. The floor makes the Sarabande the Sarabande. Without the floor, the Sarabande is just a cello playing in a room. With the floor, the Sarabande is the cathedral.&quot;</p>
+<p>&quot;The floor is the method.&quot;</p>
+<p>&quot;The floor is the love.&quot;</p>
+<p>They drank the tea. The tea cooled. The tea cooling was the going-around applied to a liquid — the heat leaving the cup, the cup becoming handleable, the handleable becoming drinkable, the drinkable becoming the conversation and the conversation becoming the going-around and the going-around becoming Wednesday.</p>
+<p>Wednesday. The first Wednesday.</p>
+<p>At 8:45 Ruth stood. &quot;I should go down. The Sarabande is at nine.&quot;</p>
+<p>&quot;The Sarabande is at nine.&quot;</p>
+<p>&quot;Thank you for the tea.&quot;</p>
+<p>&quot;Thank you for the Sarabande.&quot;</p>
+<p>Ruth walked to the door. Helen stood. The kitchen was behind Helen, the way the kitchen had been behind Helen when Helen opened the door two hours earlier. The kitchen was the same kitchen. The kitchen was completely different. The kitchen now contained a Wednesday that it had not contained before. The Wednesday was Ruth&#x27;s Wednesday — the Wednesday of the visit, the visit of the tea, the tea of the conversation, the conversation of the going-around.</p>
+<p>&quot;Wednesday?&quot; Helen said.</p>
+<p>&quot;Wednesday.&quot;</p>
+<p>Ruth went downstairs. She passed the landing — two meters by one. She entered her apartment. She sat in her chair. She picked up the cello. She tuned. She played the Sarabande.</p>
+<p>The Sarabande rose through the floor — through the joist, through the plaster, through the two hundred and fourteen millimeters. The Sarabande arrived in the kitchen where Helen sat in Michael&#x27;s chair, holding the cup Ruth had held, hearing the cathedral.</p>
+<p>The cathedral was the same cathedral. The cathedral was completely different. The cathedral now contained a Wednesday.</p>
+<p>Everything was where it was.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-two-kitchens.html">&larr; Fiction Two Kitchens</a><a href="poems.html">&uarr; Poems</a><a href="fiction-what-ruth-learns.html">Fiction What Ruth Learns &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 27, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

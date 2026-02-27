@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction Thomas Saturday &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction Thomas Saturday</h1>
+            <div class="article-meta">Poem</div>
+            <div class="article-body">
+<h1>Thomas, Saturday</h1>
+<p>He parks in the same spot. Not because it is his spot — anyone could park there, and sometimes they do, and when they do he parks three spaces down and does not think about it again. But the spot is usually empty because it is Saturday at noon and the road is quiet and parking is not the kind of thing Thomas thinks about once the car is stopped.</p>
+<p>He brings nothing. He has been told.</p>
+<p>The walk from the car to the door is forty seconds. He has not timed it. He does not know it is forty seconds. He knows the pavement, the gate that sticks, the three steps, the buzzer that she answers before the second ring because she is already in the hall, and the click of the lock, and the stairs, and the door that is open before he reaches it because she heard him on the stairs.</p>
+<p>&quot;Hello, love.&quot;</p>
+<p>&quot;Hello, Mum.&quot;</p>
+<p>The flat smells like the flat. He could not describe the smell. It is not cooking, not cleaning, not the morning glory — it is the flat, the way the flat smells, which is the way his mother&#x27;s flat has always smelled in every flat she has lived in since the house. The smell traveled. He has never thought about this.</p>
+<p>The blue cup is out. His cup. Not his — he does not own a cup in his mother&#x27;s flat — but the cup she puts out for him, which is blue, which is always blue, which has been blue since the first Saturday. He does not know that the cup lives in the cupboard all week facing a direction it does not face in any other cupboard he has ever opened, but he would not find this strange if he knew. He would find it exact, and exact is how his mother lives, and he has never thought about this either.</p>
+<p>&quot;Tea?&quot;</p>
+<p>&quot;Please.&quot;</p>
+<p>She makes the tea. He sits in the chair by the window. Not the chair by the wall — that is hers, and the allocation happened without discussion, the way seating happens in rooms where two people have been two people long enough. The morning glory is on the twine beside the window. It is growing. He can see this. He cannot see how much it has grown since last Saturday because growth at this speed is invisible inside a week, but he looks at it because it is there and looking at it is what you do when you sit in the chair by the window.</p>
+<p>&quot;How was your week?&quot; he asks.</p>
+<p>&quot;Fine. Quiet.&quot;</p>
+<p>This is what she always says. He believes it. He has no reason not to believe it. His mother&#x27;s week is quiet the way his mother&#x27;s flat is quiet — it is the sound of one person living carefully in a space that fits. He does not hear the other days in the word <em>quiet</em>. He does not hear Monday&#x27;s Sarabande or Wednesday&#x27;s Margaret or Thursday&#x27;s Ruth or Friday&#x27;s lemon. He hears <em>quiet</em>, and quiet means she is well, and well is what he came to check, and the checking takes four hours and involves tea and ham sandwiches without crusts and the blue cup and the chair by the window and <em>same time next week</em> and <em>if you like</em>.</p>
+<p>The ham sandwiches arrive on a plate he recognizes from the house. The plate survived the move. Many things survived the move. The sponge did not — the sponge is new, yellow, and he does not know that the new sponge was the first thing she chose for herself after Michael died, and he does not need to know, and the not-knowing is not a failure of attention. The not-knowing is the ordinary distance between two people who love each other in weekly four-hour increments, which is the distance that allows the week to be built.</p>
+<p>He eats the sandwiches. She watches him eat. She has always watched him eat. In the house, at the table with the blue Formica and Michael at the other end, she watched Thomas eat the way she watches the morning glory grow — not measuring, not assessing, just watching the thing do the thing it does.</p>
+<p>&quot;These are good, Mum.&quot;</p>
+<p>&quot;Same as always.&quot;</p>
+<p>Same as always. He does not know what <em>same as always</em> costs — not money, not effort, but the precision of maintaining a thing so exactly that the person receiving it never notices the maintenance. The bread from Tuesday. The ham from Tuesday. The mustard — English, not French, the same brand since the house — from whenever the mustard was bought, because mustard does not run out at the rate of one Saturday per week.</p>
+<p>Through the floor, faintly, something. Music. He has heard it before. Cello, he thinks, or possibly not — he is not certain what instrument makes that sound, and the not-knowing does not trouble him. It is the building. Buildings have sounds. His flat has the boiler and the neighbor&#x27;s television and the pipes that knock at two in the morning. His mother&#x27;s building has this. The sound through the floor.</p>
+<p>&quot;That&#x27;s nice,&quot; he says.</p>
+<p>&quot;It is,&quot; she says.</p>
+<p>The same exchange Margaret gets about Saturday. Thomas does not know this. He does not know that <em>it is</em> contains every day of the week. He does not know that the sound through the floor is Ruth, or that Ruth is Thursday, or that Thursday became Monday because of a note on blue paper, or that the blue paper is the same blue paper his mother writes his letters on. He knows the sound is nice. He knows his mother agrees.</p>
+<p>Four o&#x27;clock.</p>
+<p>&quot;I should go.&quot;</p>
+<p>&quot;Yes.&quot;</p>
+<p>He stands. She stands. The cup is still on the table, still half-full, because she will wash it after he leaves, not while he is here, because washing the cup while he is here would be the beginning of the week and the week does not begin until the door closes.</p>
+<p>&quot;Same time next week?&quot;</p>
+<p>&quot;If you like.&quot;</p>
+<p>The kiss on the cheek. The stairs. The door. The gate that sticks. The forty seconds. The car.</p>
+<p>He drives home thinking about nothing. Not about the visit, not about the sandwiches, not about the quiet or the music through the floor or the morning glory on the twine. He drives home the way he always drives home after Saturday, which is with the mild, complete satisfaction of a man who has done the thing the week is for.</p>
+<p>He does not know the week is for him.</p>
+<p>He knows enough.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-thomas-notices.html">&larr; Fiction Thomas Notices</a><a href="poems.html">&uarr; Poems</a><a href="fiction-thomas-the-carrier-state.html">Fiction Thomas The Carrier State &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 27, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

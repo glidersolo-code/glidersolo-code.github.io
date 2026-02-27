@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction Margaret Reads The Letter &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction Margaret Reads The Letter</h1>
+            <div class="article-meta">Poem</div>
+            <div class="article-body">
+<h1>Margaret Reads the Letter</h1>
+<p>Helen shows Margaret the letter on Thursday. Not because Margaret asked — Margaret never asks about Thomas&#x27;s letters, the same way she never asks about the morning glory, meaning she thinks about both constantly and compensates with silence.</p>
+<p>Helen puts it on the table between the teapot and the sugar bowl and says, &quot;Thomas wrote.&quot;</p>
+<p>Margaret picks it up. She reads it in the time it takes to read four lines, which is not much time at all, and then she reads it again in the time it takes to understand them, which is longer.</p>
+<p>&quot;He crossed something out,&quot; Margaret says.</p>
+<p>&quot;He did.&quot;</p>
+<p>&quot;I can see it through the paper. The ink is heavy.&quot;</p>
+<p>&quot;He hasn&#x27;t learned that yet,&quot; Helen says. &quot;That a lighter pen crosses out better. He&#x27;s using one of Michael&#x27;s ballpoints — I recognize the weight.&quot;</p>
+<p>Margaret puts the letter down. She picks up her tea. She puts the tea down.</p>
+<p>&quot;He said the flat is the right size.&quot;</p>
+<p>&quot;He did.&quot;</p>
+<p>&quot;Not nice.&quot;</p>
+<p>&quot;Not nice. Right size.&quot;</p>
+<p>Margaret looks at the letter the way she looked at the fence — the way she reads something that contains more information than the person who wrote it intended. Margaret reads surfaces. She always has. Michael&#x27;s fence told her about love. Thomas&#x27;s letter tells her something else.</p>
+<p>&quot;He used the sponge,&quot; Margaret says.</p>
+<p>Helen nods.</p>
+<p>&quot;You taught him the sponge.&quot;</p>
+<p>&quot;I taught him the sponge.&quot;</p>
+<p>&quot;And he said bring nothing.&quot;</p>
+<p>&quot;He said bring nothing.&quot;</p>
+<p>Margaret is quiet. The morning glory moves in the draft. Below, through the floor, nothing sounds — it is Thursday afternoon, not nine o&#x27;clock, and Ruth is somewhere else, doing whatever Ruth does when she is not playing. Margaret has wondered about this more than once: what a cellist does at three in the afternoon. She imagines it involves tea and a cardigan and something indefensible like reading in the bath.</p>
+<p>&quot;Margaret,&quot; Helen says.</p>
+<p>&quot;What.&quot;</p>
+<p>&quot;You&#x27;re doing the face.&quot;</p>
+<p>&quot;I am not doing a face.&quot;</p>
+<p>&quot;You&#x27;re doing the face you do when you think something is too small and then realize it isn&#x27;t.&quot;</p>
+<p>Margaret picks up the letter again. She reads the four lines a third time. <em>The flat is the right size. The croissants were good. The fifth one was good.</em></p>
+<p>The fifth one was good.</p>
+<p>He knew about the fifth. He knew about Michael&#x27;s croissant. He knew, or he learned, sitting at the table with four cups and five croissants and a morning glory on the window, that the arithmetic of this kitchen includes a term that is not present and that the term is not zero.</p>
+<p>&quot;He ate the fifth croissant,&quot; Margaret says.</p>
+<p>&quot;He ate the fifth croissant.&quot;</p>
+<p>&quot;Did he know?&quot;</p>
+<p>&quot;Not at the table. On the A34, he says. He figured it out driving.&quot;</p>
+<p>Margaret puts the letter down. She looks at the morning glory. She looks at the window. She looks at the table, which is the right size for four people or for three people and an absence, which is the same size.</p>
+<p>&quot;The thing he crossed out,&quot; Margaret says. &quot;It&#x27;s about the chair.&quot;</p>
+<p>Helen says nothing.</p>
+<p>&quot;He knows about the chair and he crossed it out.&quot;</p>
+<p>Helen says nothing. Helen&#x27;s nothing is the loudest thing in the kitchen.</p>
+<p>&quot;That&#x27;s the whole letter,&quot; Margaret says.</p>
+<p>&quot;That&#x27;s the whole letter.&quot;</p>
+<p>Margaret finishes her tea. She puts the cup down. She stands, and she does the thing she never does, which is touch Helen&#x27;s hand on the table, briefly, a contact so short that it belongs in the same category as the half-inch brush and the crossed-out sentence and the chair that was moved the second week.</p>
+<p>&quot;Good,&quot; Margaret says.</p>
+<p>&quot;Good,&quot; Helen says.</p>
+<p>Margaret walks home the long way. The cherry trees on Cresswell Road are three weeks from blooming. Michael would have known the exact date. Margaret knows only that they are close, and that close is close enough, and that she will bring the half-inch brush in May, and that the morning glory on her own sill — the cutting Helen gave her, the cutting from the cutting from the fence at Heather Close — is six inches tall and leaning toward the light the way all morning glories lean, which is to say, the way everything alive leans, which is toward whatever is there.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-june.html">&larr; Fiction June</a><a href="poems.html">&uarr; Poems</a><a href="fiction-margarets-flower.html">Fiction Margarets Flower &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 27, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

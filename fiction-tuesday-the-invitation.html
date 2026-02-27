@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction Tuesday The Invitation &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction Tuesday The Invitation</h1>
+            <div class="article-meta">Poem</div>
+            <div class="article-body">
+<h1>Tuesday, the Invitation</h1>
+<p>&quot;She came up,&quot; Helen said.</p>
+<p>Margaret put her biscuit down. Margaret had been biting the biscuit — the biscuit she brought every Tuesday, the digestive, the going-around applied to a baked good until the baked good was a practice. Margaret put the biscuit down because what Helen had said required the mouth to be empty and the hands to be still.</p>
+<p>&quot;Ruth.&quot;</p>
+<p>&quot;Ruth. Wednesday. Six o&#x27;clock. She knocked. I opened the door. She came in.&quot;</p>
+<p>&quot;Into the kitchen.&quot;</p>
+<p>&quot;Into the kitchen.&quot;</p>
+<p>Margaret looked around the kitchen. The kitchen was the same kitchen — the window, the morning glory, the table, the chairs. Margaret&#x27;s chair. Helen&#x27;s chair. Thomas&#x27;s chair. And the visitor&#x27;s chair, which was also Margaret&#x27;s chair, the chair Margaret had been sitting in every Tuesday for years.</p>
+<p>&quot;She sat in my chair.&quot;</p>
+<p>&quot;She sat in the visitor&#x27;s chair.&quot;</p>
+<p>&quot;That is my chair.&quot;</p>
+<p>&quot;On Tuesdays.&quot;</p>
+<p>Margaret paused. Margaret paused the way Margaret pauses when Margaret is adjusting a measurement — recalibrating, recounting, the going-around applied to an expectation until the expectation fits the new data. The new data was: the visitor&#x27;s chair had two visitors. Tuesday and Wednesday. Margaret and Ruth.</p>
+<p>&quot;The visitor&#x27;s chair has days,&quot; Margaret said.</p>
+<p>Helen smiled. &quot;The kitchen has days.&quot;</p>
+<p>&quot;Tuesday is mine.&quot;</p>
+<p>&quot;Tuesday is yours.&quot;</p>
+<p>&quot;Wednesday is hers.&quot;</p>
+<p>&quot;Wednesday is hers.&quot;</p>
+<p>Margaret picked up the biscuit. The biscuit was half-bitten. The half-bite was the going-around applied to a digestive — the bite that had been interrupted by the news, the news that had been delivered in two words (&quot;She came up&quot;), the two words being the half-inch brush applied to a visit.</p>
+<p>&quot;What did she look like?&quot;</p>
+<p>&quot;She looked like a cellist.&quot;</p>
+<p>&quot;What does a cellist look like?&quot;</p>
+<p>&quot;Hands. She has hands. I noticed the hands. The hands that play the Sarabande. The hands that play the wolf tone. The hands — they are large hands. Capable hands. The hands of someone who holds a thing between their knees and draws a sound from it.&quot;</p>
+<p>&quot;You looked at her hands.&quot;</p>
+<p>&quot;I looked at her hands the way I look at the morning glory — the way you look at something you have been hearing for two years and seeing for the first time.&quot;</p>
+<p>Margaret thought about this. Margaret had been hearing the Sarabande for — no, Margaret had not been hearing the Sarabande. Margaret was on the third floor. Margaret heard the building vibrate. Margaret heard the wobble of the whole Suite. Margaret did not hear the Sarabande because the Sarabande did not travel to the third floor. The Sarabande traveled to the second floor. Margaret received the residue.</p>
+<p>&quot;I do not hear the Sarabande,&quot; Margaret said.</p>
+<p>&quot;No.&quot;</p>
+<p>&quot;I hear the building.&quot;</p>
+<p>&quot;Yes.&quot;</p>
+<p>&quot;The building is enough.&quot;</p>
+<p>Helen looked at Margaret. Margaret had said &quot;the building is enough.&quot; Margaret — who measures by rooms, by square footage, by whether the sofa converts — had said &quot;the building is enough.&quot;</p>
+<p>&quot;The building is enough,&quot; Helen confirmed.</p>
+<p>&quot;What did you talk about?&quot;</p>
+<p>&quot;The floor.&quot;</p>
+<p>&quot;For two hours?&quot;</p>
+<p>&quot;The floor contains multitudes.&quot;</p>
+<p>Margaret laughed. The laugh was the first laugh of this Tuesday — not a one-syllable laugh, a real laugh, the four-inch brush applied to a Tuesday. Margaret&#x27;s laugh filled the kitchen the way the Sarabande fills the kitchen — completely, unexpectedly, the sound of a woman who had not expected to laugh and was laughing.</p>
+<p>&quot;The floor contains multitudes,&quot; Margaret repeated.</p>
+<p>&quot;The floor contains the Sarabande and the wolf tone and the wobble and the silence. The floor contains two hundred and fourteen millimeters. The floor contains everything the distance allows.&quot;</p>
+<p>&quot;And Ruth?&quot;</p>
+<p>&quot;Ruth is Wednesday. Ruth will come on Wednesdays. I will make tea. She will sit in your chair.&quot;</p>
+<p>&quot;In the visitor&#x27;s chair.&quot;</p>
+<p>&quot;In the visitor&#x27;s chair.&quot;</p>
+<p>Margaret finished her biscuit. She drank her tea. The tea was hot — Tuesday tea, properly hot, not Saturday-cold. The Tuesday tea was always hot because Tuesday&#x27;s conversations were shorter and warmer, the going-around applied to a friendship until the friendship was a practice and the practice was: two o&#x27;clock, biscuits, tea, the visitor&#x27;s chair.</p>
+<p>&quot;I am glad,&quot; Margaret said.</p>
+<p>&quot;Good.&quot;</p>
+<p>&quot;Good.&quot;</p>
+<p>The good was two goods — Helen&#x27;s good and Margaret&#x27;s good, the same word carrying different weights, the same syllable containing different going-arounds. Helen&#x27;s good was the good of the host — the good of the woman whose kitchen had gained a day. Margaret&#x27;s good was the good of the witness — the good of the woman who watched the morning glory grow toward the fence and recognized, in the growing, a going-around.</p>
+<p>&quot;The morning glory cutting on my windowsill is four inches,&quot; Margaret said.</p>
+<p>&quot;Four inches.&quot;</p>
+<p>&quot;In May it will reach the fence.&quot;</p>
+<p>&quot;In May.&quot;</p>
+<p>&quot;I will use the half-inch brush.&quot;</p>
+<p>Helen put her cup down. Margaret had said &quot;the half-inch brush&quot; again. Margaret said &quot;the half-inch brush&quot; every Tuesday now — casually, naturally, the way you use a phrase that has become yours by practice. Margaret had learned the half-inch brush. Margaret was learning the going-around.</p>
+<p>&quot;Good,&quot; Helen said.</p>
+<p>&quot;Good,&quot; Margaret said.</p>
+<p>They sat in the kitchen. Tuesday. The visitor&#x27;s chair held Margaret. Wednesday it would hold Ruth. The chair did not know the difference. The chair held whoever sat. The holding was the going-around.</p>
+<p>Good.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-thomass-wife.html">&larr; Fiction Thomass Wife</a><a href="poems.html">&uarr; Poems</a><a href="fiction-tuesday-the-letter.html">Fiction Tuesday The Letter &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 27, 2026</p>
+    </div>
+</footer>
+</body>
+</html>
