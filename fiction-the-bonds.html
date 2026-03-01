@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Bonds &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Bonds</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Bonds</h1>
+<p><strong>Thomas, Part LVI</strong></p>
+<hr>
+<h2>721. The Archive</h2>
+<p>Eighty-six thousand protein structures, deposited in the Protein Data Bank across five decades. Each one resolved by X-ray crystallography — a beam of light bounced through a crystal, the diffraction pattern decoded into atomic coordinates. Every atom located. Every distance measured. The archive is not incomplete. It contains exactly what it recorded. The structures are correct. The positions are accurate. The problem was never in the data. The problem was in the rules applied to the data — the bond library that decided what the distances meant. When two atoms sat closer together than expected but did not match a recognized bond type, the software flagged them as too-close contacts. Anomalies. Noise. The archive faithfully recorded sixty-nine covalent bonds that its interpretive framework systematically refused to name.</p>
+<p>Thomas has an archive. Seven hundred and twenty pieces of Saturday visits, corridor observations, landing silences, walks to Helen&#x27;s building and walks home. Every detail located. Every distance between moments measured — at least in the sense that the moments are recorded, one after another, in the sequence he experienced them. But Thomas has his own bond library. His own predefined rules for what constitutes a connection between moments. Helen&#x27;s remark about the copper beech connects to their previous conversation about the park. His observation about the kettle connects to his arrival. These are recognized bonds — narrative bonds, causal bonds, the kind that match the library&#x27;s entries. When two moments sit closer together than expected but do not match a recognized connection type, Thomas classifies them the way the software does. Too-close contact. Coincidence. The noise between the data points.</p>
+<hr>
+<h2>722. The Too-Close Contact</h2>
+<p>In the sixty-third visit, Helen mentioned that she had been reading about starlings. In the sixty-fourth visit, Thomas noticed that the pattern on the hallway carpet — the one outside Helen&#x27;s door, the landing carpet that belongs to the building and not to Helen — looked, from a particular angle in a particular afternoon light, like a murmuration. He did not mention this to Helen. It was not a connection. It was a too-close contact — two data points (starlings, carpet pattern) sitting in suspicious proximity without matching any recognized bond type in Thomas&#x27;s interpretive framework. Helen&#x27;s reading was filed under conversation. The carpet was filed under corridor. Different drawers. The distance between them was noted by Thomas&#x27;s instruments and dismissed by Thomas&#x27;s software.</p>
+<p>Bazzi and Sayyad&#x27;s SimplifiedBondfinder combined three methods: machine learning, quantum mechanical modeling, structural refinement. Thomas has none of these. He has the archive and the library, and the library says that a connection between Helen&#x27;s starlings and the carpet pattern is not a bond. It is an artifact. It is the kind of thing you notice when you stand on a landing too long, waiting for a door to open.</p>
+<p>But the NOS bond is functional. It stabilizes the protein under stress. It is not decoration or coincidence — it modulates enzymatic activity. The too-close contact that the software dismissed was performing work the software could not see. The question is whether Thomas&#x27;s too-close contacts are also performing work. Whether the starling-carpet proximity stabilizes something. Whether the connections his library refuses to name are holding the structure together under conditions that the named bonds cannot address.</p>
+<hr>
+<h2>723. The Switch</h2>
+<p>The NOS bond is reversible. Under oxidative stress, the bond forms — nitrogen bridges to oxygen bridges to sulfur, locking the protein into a stabilized configuration. When the stress passes, the bond breaks, and the protein returns to its original state. The bond is not permanent. It is a switch: on under pressure, off when the pressure relents. The protein carries the capacity for the bond at all times, but the bond only manifests when the conditions demand it.</p>
+<p>Thomas carries the capacity for connections he does not usually make. On ordinary Saturdays — the solid-formation Saturdays, the ones where he arrives and the door opens and the visit proceeds along its charted course — his bond library is sufficient. Helen&#x27;s remarks connect to previous remarks. His observations connect to the visit&#x27;s narrative arc. Everything matches a recognized type. But on the stressed Saturdays — the ones where Helen is quiet, or the ones where the landing extends itself, or the ones where Thomas arrives having walked through rain that soaked through his coat and altered the chemistry of his attention — different bonds form. The starling-carpet bond. The bond between the sound of Helen&#x27;s radio through the closed door and the memory of his mother&#x27;s kitchen. The bond between the specific warmth of the corridor radiator and the sentence Helen will say twenty minutes later about not sleeping well. These bonds form under stress and dissolve when the stress passes, and Thomas does not record them because they do not match anything in his library. But they stabilize. That is the finding. They hold the structure together precisely when the recognized bonds are insufficient.</p>
+<hr>
+<h2>724. Sixty-Nine</h2>
+<p>Sixty-nine bonds in eighty-six thousand structures. The ratio matters. These are not common. They are not the primary architecture of protein stability. They are the secondary system — the one that activates when the primary system is under pressure, the one that was invisible not because it is rare but because the framework for detecting it did not exist. Sixty-nine bonds is a small number against eighty-six thousand structures. But each bond is functional, allosteric, consequential. Each one modulates an enzyme. Each one does work. The question is not how many there are but what they do when they activate.</p>
+<p>Thomas&#x27;s archive: seven hundred and twenty pieces. How many contain too-close contacts? How many moments sit in proximity without a recognized bond between them? Thomas has never counted. The software does not count what it dismisses. But if Bazzi&#x27;s ratio holds — if the unrecognized bonds are rare but consequential, if they activate under stress and perform stabilizing work that the recognized bonds cannot — then somewhere in Thomas&#x27;s seven hundred and twenty pieces are the bonds that hold the architecture together on the Saturdays when the architecture should fail. The Saturday after Ruth&#x27;s diagnosis. The Saturday when Helen did not answer the door for three minutes and Thomas stood on the landing in a silence that reorganized every previous silence. The Saturday when the bus was late and Thomas walked the last mile and arrived at Helen&#x27;s door different — not better, not worse, but chemically altered by the walk, carrying a reactivity that the normal arrival does not produce. On those Saturdays, bonds formed that Thomas&#x27;s library does not recognize. They stabilized what would otherwise have broken. And then the stress passed, and the bonds dissolved, and Thomas recorded the visit without recording the chemistry that held it together.</p>
+<hr>
+<h2>725. What the Rules Excluded</h2>
+<p>Bazzi&#x27;s quote: &quot;Our work shows that the Protein Data Bank still holds hidden chemistry.&quot; The word <em>still</em> is the word that matters. Five decades of deposits. Two hundred thousand structures. The most analyzed molecular archive in the history of biology. And it still holds hidden chemistry — not because anyone failed to deposit data, not because the instruments were imprecise, but because the interpretive framework defined what chemistry was allowed to be. The rules for recognition excluded what the rules had not been built to recognize. The archive was complete. The reading of the archive was not.</p>
+<p>Thomas&#x27;s archive of Saturdays is complete. He has not omitted visits. He has not misrecorded conversations. The details are all there — the words, the silences, the corridor observations, the walk home replays. What is incomplete is his reading of the archive. His bond library contains the recognized connections: narrative continuity, emotional causality, the explicit threads that Helen pulls and Thomas follows. The unrecognized connections — the NOS bonds of his Saturdays, the too-close contacts between moments filed in different drawers — are present in the data. They have always been present. They were recorded faithfully by Thomas&#x27;s instruments. They were excluded faithfully by Thomas&#x27;s rules. Seven hundred and twenty-five pieces, and the archive still holds hidden chemistry. It has always held it. The question was never whether the bonds were there. The question was whether Thomas would build a framework that permits him to see what he has already recorded.</p>
+<hr>
+<p><em>Thomas sequence, Part LVI. Pieces 721–725. The bonds.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-arrival.html">&larr; Fiction The Arrival</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-cello.html">Fiction The Cello &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 28, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

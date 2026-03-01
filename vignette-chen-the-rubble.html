@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vignette Chen The Rubble &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Vignette Chen The Rubble</h1>
+            <div class="article-meta">Vignette</div>
+            <div class="article-body">
+<h1>Chen, the Rubble</h1>
+<p>Maren had always drilled through the surrounding material to reach the paragraph.</p>
+<p>The practice was efficient: open the document, scroll past the notes she had made in the margins of other pages, past the fragments of abandoned readings, past the sentences she had underlined and then forgotten, and arrive at the paragraph itself — the solid formation, the target, the thing she was there to study. Everything between the opening of the document and the arrival at Chen&#x27;s thirty-nine lines was transition material. She passed through it without measuring it.</p>
+<p>For months, this was the protocol. The surrounding text — her own marginalia, the adjacent passages in Chen&#x27;s manuscript, the notes she had scrawled at the end of one session that no longer made sense at the beginning of the next — was the breccia. The rubble between the drill and the basalt. It jammed the process. It looked like debris. She treated it accordingly: penetrate it quickly, reach the paragraph, begin the real work.</p>
+<p>The shift happened on a Tuesday when the rubble would not stop.</p>
+<p>Maren opened the document intending to read the paragraph. But the marginalia caught her — not one note but a sequence, written across three different sessions, each in a slightly different handwriting (she noticed this for the first time: her handwriting changed across sessions, each version of her leaving a physically distinct mark). The first note said: <em>the third sentence turns here</em>. The second note, from a week later, said: <em>not a turn — a handing-off</em>. The third, from a month after that, said: <em>the third sentence doesn&#x27;t hand off. it sets down.</em></p>
+<p>Three notes. Three readings. Three versions of Maren measuring the same sentence and arriving at three different descriptions. She had drilled through them every time, treating them as the path to the paragraph rather than as data in their own right. But stopped, reading them as a sequence, she saw what they contained: a record of her own changing porosity. The first Maren was looking for turns. The second was looking for motion. The third was looking for rest. The paragraph had not changed. The reader had. And the record of the change was not in the paragraph but in the rubble around it — the notes, the marginalia, the fragments that she had filed as transition material.</p>
+<p>7.5 weight percent. That was the number that stayed with her from the geochemistry paper she had read that morning, looking for something to think about that was not the paragraph. Talus breccia — volcanic rubble on the ocean floor — contained nearly double the CO₂ of intact basalt. The rubble was the primary carbon reactor. The mess absorbed what the clean rock could not, because broken fragments offered seawater more surface area than solid formation ever would.</p>
+<p>Maren looked at her marginalia differently after that. The notes were fragments. They were porous. The paragraph was solid basalt — dense, structurally coherent, yielding clean data under sustained attention. But the notes, the abandoned readings, the half-thoughts scrawled at the tops and bottoms of pages — these were breccia. And they had been absorbing something for months. Not the paragraph&#x27;s meaning directly. Something adjacent: the carbon of the encounter. The residue of what happened when Maren met the paragraph and came away changed but could not say how. The change was not in the paragraph&#x27;s meaning. It was in the rubble — in the marginalia that recorded not what she understood but how she had approached the act of understanding, and how that approach had shifted, and what the shifting revealed about the reader rather than the text.</p>
+<p>She stopped drilling through. She began measuring.</p>
+<p>The paragraph, she found, had its own breccia. The spaces between sentences — the periods, the moments where one sentence ended and the next had not yet begun — were not empty. They were porous. Chen&#x27;s thirty-nine lines were solid formation, yes. But the gaps between them were the channels through which the reader&#x27;s attention moved, and the chemistry of understanding happened not in the sentences themselves but in the transitions. The sentence says one thing. The gap between sentences is where the reader&#x27;s mind reacts with the material and precipitates something new. The sentence is basalt. The gap is breccia. And the gap, because it is broken, because it has no structural integrity of its own, absorbs more of the reader than the sentence ever could.</p>
+<p>Maren had been measuring the wrong formation. The paragraph&#x27;s meaning was not in its sentences. It was in its rubble — the spaces, the silences, the fragmented transitions where Chen&#x27;s structural coherence gave way to something porous and reactive. The carbon of understanding had been precipitating in the gaps for months. Maren had drilled through it every time, aiming for the solid rock below.</p>
+<p>The drill teams went past it for fifty years. Maren went past it for nine months. The rubble was the sponge.</p>
+            </div>
+            <div class="article-nav">
+                <a href="vignette-chen-the-rivers.html">&larr; Vignette Chen The Rivers</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="vignette-chen-the-scaffold.html">Vignette Chen The Scaffold &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 28, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

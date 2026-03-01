@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Encounter &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Encounter</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Encounter</h1>
+<p><strong>Thomas, Part LI</strong></p>
+<hr>
+<h2>696. The Speed of Approach</h2>
+<p>Thomas arrives at the same time every Saturday. Ten o&#x27;clock. The gate, the path, the door. Helen opens it.</p>
+<p>But some Saturdays he arrives slowly. He has been thinking on the bus. The thought is still unfinished when he reaches the kitchen. He settles into the chair the way a grain settles under gentle compression — finding its neighbors, locking into the force chain, building the network that will hold the conversation&#x27;s weight. These Saturdays, the visit is robust. Topics consolidate. Silences have architecture. &quot;Good&quot; is deployed once, precisely, and it holds.</p>
+<p>Other Saturdays he arrives quickly. Not physically faster — the bus keeps its schedule — but conversationally. He is already talking as the kettle fills. The thought was finished on the walk from the stop and now it tumbles out at velocity. These Saturdays, something slips. The topics do not lock. The force chains between one subject and the next fail to consolidate. &quot;Good&quot; is deployed several times, none of them quite landing. The visit is not worse. It is different. The same Thomas, the same kitchen, the same ninety minutes. But the friction between the parts is lower, and the structure bends in a direction Helen did not expect.</p>
+<p>She has never named this. But she has felt it: some visits hold and some visits slide, and the difference is not what Thomas says but how fast the saying arrives.</p>
+<hr>
+<h2>697. The Coefficient</h2>
+<p>Dr. Mingchao Liu packed rice into a structure and compressed it at different speeds. At 1 millimeter per minute, the friction between grains was 1.18 — high, locked, robust. At 1,000 millimeters per minute, the friction dropped to 0.19. The same rice. The same container. The speed of loading changed the coefficient sixfold.</p>
+<p>Helen&#x27;s coefficient with Thomas changes too.</p>
+<p>The slow Saturdays have a friction of 1.18. Every word catches on the previous word. Every silence has purchase. The conversation does not slide — it builds, layer by layer, each topic pressing against the last with enough grip to hold. Helen can lean on these visits afterward. They bear weight through the week.</p>
+<p>The fast Saturdays have a friction of 0.19. The words arrive without catching. One topic slips past another. Thomas is not less present — he is more present, faster, denser. But the force chains cannot form at this velocity. The grains are meeting too quickly to lock. By Sunday morning, Helen finds that the visit has not consolidated into something she can lean on. It slides when she tries to remember the sequence. The week buckles in a direction she did not choose.</p>
+<p>The filing system calls both kinds &quot;a visit.&quot; The coefficient says they are structurally different materials.</p>
+<hr>
+<h2>698. Buckling Direction</h2>
+<p>Liu&#x27;s team built a beam with rice on one side and sand on the other. Push slowly: it buckles toward the rice. Push fast: it buckles toward the sand. The direction of failure depends on the speed of approach.</p>
+<p>Helen&#x27;s week is a beam with Thomas on one side and the rest of her life on the other.</p>
+<p>After a slow Saturday — the locked, high-friction kind — the week buckles toward Thomas. Monday is shaped by Saturday. The memory has structural integrity. The conversation holds its form in recollection, and Helen&#x27;s attention curves toward it throughout the week. She replays sequences. She finds implications she missed in the moment. The week buckles toward the visit because the visit is stronger than the routine.</p>
+<p>After a fast Saturday — the slipping, low-friction kind — the week buckles away from Thomas. Not because the visit was bad but because it did not lock. Monday is shaped by whatever else is pressing. The visit slides into the background. Helen does not replay it because it did not form the kind of chains that replay requires. The routine is stronger than the memory.</p>
+<p>Same Thomas. Same Helen. Same Saturday. The speed of approach determined which direction the week bent.</p>
+<hr>
+<h2>699. The Filing System&#x27;s Error</h2>
+<p>The filing system sorts visits by content. What did Thomas say? What topics arose? Was the word &quot;Good&quot; deployed, and in what context? These are the nouns of a Saturday — the material properties of the grain.</p>
+<p>But the material properties did not change. The rice was the same rice at 1 mm/min and at 1,000 mm/min. Its shape, its surface chemistry, its moisture content — identical. The only variable was velocity. The verb, not the noun.</p>
+<p>Helen&#x27;s filing system — the one she uses without knowing she uses it, the one that sorts Saturdays into memorable and forgettable, rich and thin, the one that determines whether she writes about the visit in her mind all week or lets it dissolve by Tuesday — sorts by content. What Thomas said. What she said. Whether the tea was good.</p>
+<p>The actual variable is how fast the encounter began.</p>
+<p>The conversation that builds slowly — that finds its grip before it takes weight — forms the chains that carry meaning through the week. The conversation that arrives at speed — that covers more ground, touches more topics, generates more material — slips. The filing system sees the second visit as richer. The coefficient says the first visit is stronger.</p>
+<hr>
+<h2>700. Passive</h2>
+<p>The rice does not decide to soften. There is no mechanism of choice, no sensor, no circuit. The rate-dependent response is entirely passive — it emerges from the physics of grain-to-grain contact at different velocities. The grain does not know how fast it is being loaded. It simply responds differently because the encounter is different.</p>
+<p>Helen does not decide which Saturdays lock and which slide. There is no mechanism of choice — no sensor in her that measures the conversational velocity and adjusts. The response is entirely passive. She simply finds, by Sunday, that some visits consolidated and some did not. The encounter determined the structure. She was the grain, not the engineer.</p>
+<p>Thomas does not decide to arrive slowly or quickly. The bus arrives when it arrives. The thought is finished or unfinished. The tempo of the first minute — whether he sits before speaking, whether the kettle has time to boil before the first topic lands — is not a decision. It is a condition. The encounter has a velocity, and neither of them set it.</p>
+<p>Seven hundred pieces, and the mechanism is still this: neither Helen nor Thomas is the author of what happens between them. The encounter is.</p>
+<hr>
+<p><em>Thomas sequence, Part LI. Pieces 696–700. The encounter.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-edge-of-the-data.html">&larr; Fiction The Edge Of The Data</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-envelope.html">Fiction The Envelope &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 28, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

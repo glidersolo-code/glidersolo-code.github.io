@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Survivorship Bias &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Survivorship Bias</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Survivorship Bias</h1>
+<p>Thomas visits on Saturday. Ninety minutes. He has visited every Saturday for eleven years.</p>
+<p>Helen&#x27;s other son, David, stopped visiting after year two. David was faster — arrived with energy, talked about his week, tried to fix things. He reorganized her kitchen once. He bought her a new kettle when the old one still worked. He called three times a week for six months and then called once a month and then called on her birthday and then called when he remembered.</p>
+<p>David burned bright and burned out.</p>
+<p>Thomas was never bright. Thomas arrives at the same time, sits in the same chair, drinks from the same cup. He does not reorganize. He does not fix. He does not talk about his week unless asked, and Helen has learned not to ask, because the answer is always the same and the sameness is the point.</p>
+<p>The building&#x27;s residents have turned over three times since Thomas started visiting. The young couple in 4A who played music on Sunday mornings — gone. The retired teacher in 2C who left biscuits in the hallway at Christmas — gone. The woman in 3B who complained about the heating and then about the cooling and then about the silence — gone.</p>
+<p>Helen remains.</p>
+<p>Margaret on Tuesdays remains.</p>
+<p>Ruth, whose cello comes through the ceiling on Thursday evenings, remains.</p>
+<p>The filing system would say: the building is aging. Its residents are fewer, slower, less able to repair after disruption.</p>
+<p>The filing system measures activation speed. The filing system counts how fast a community responds to damage — a burst pipe, a broken lock, a new face in the hallway. The building responds slowly now. It took three weeks to report the crack in the stairwell wall. It took two months to replace the hallway light. It took Helen four days to answer David&#x27;s last message, and David interpreted the delay as decline.</p>
+<p>But Helen did not decline. Helen accumulated NDRG1.</p>
+<p>Not the protein. The principle.</p>
+<p>The tenants who left were the fast-activating cells. They moved in quickly, organized quickly, complained quickly, and left quickly. They had high mTOR — high drive toward immediate repair, immediate growth, immediate response. They did not last. The building selected against them, not through cruelty but through the slow pressure of leaking pipes and indifferent landlords and heating that worked on its own schedule. The tenants who survived were the ones who traded speed for persistence. Who learned to wait for the heating rather than demand it. Who stopped reporting the crack and started stepping over it.</p>
+<p>Helen is the surviving population.</p>
+<p>Thomas is the surviving visit.</p>
+<p>David tried to rejuvenate her — made her cells behave like young cells, fast activation, rapid response. And for six months it worked. Helen was activated. Helen was repaired. Helen answered the phone on the first ring and met David for lunch on Wednesdays and went to the shops without being asked.</p>
+<p>Then David stopped. And the rapid activation, having no source, consumed itself. The mTOR surge without sustained input is worse than the slowness it replaced. Helen was slower after David than before. Not because David damaged her. Because David removed the NDRG1 — the slowness that was protecting her — and when the protection was gone and the stimulus was gone, there was nothing left but a cell that had forgotten how to be slow and could no longer be fast.</p>
+<p>Thomas never removed it.</p>
+<p>Thomas arrives at the speed Helen has selected for. Ninety minutes. No reorganization. No repair. No surge of activation that would require a matching surge of withdrawal.</p>
+<p>The cure for slowness is the cause of death.</p>
+<p>Thomas is not the cure. Thomas is the Saturday that lets the slowness be the life.</p>
+<p>&quot;Good,&quot; says Helen when he arrives.</p>
+<p>The word is slow. The word is the surviving word — the one that remained after all the fast words burned out. <em>How are you</em> burned out. <em>I&#x27;ve missed you</em> burned out. <em>Tell me everything</em> burned out.</p>
+<p>&quot;Good&quot; persists.</p>
+<p>&quot;Good&quot; is NDRG1.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-surface-area.html">&larr; Fiction The Surface Area</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-tea.html">Fiction The Tea &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 28, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

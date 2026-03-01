@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Rubble &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Rubble</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Rubble</h1>
+<p><strong>Thomas, Part LV</strong></p>
+<hr>
+<h2>716. The Drill Team</h2>
+<p>For fifty years, ocean drilling expeditions followed the same practice: lower the bit, penetrate the sediment, and when the drill hit the volcanic basement, core the solid basalt. Intact lava flows, pillow basalts, sheeted dikes — the formations that held their shape, that could be sliced into thin sections, that yielded clean data under a microscope. When the bit passed through rubble — the chaotic breccia at the top of the basement, the debris shed from underwater mountains — the instruction was to get through it quickly. The rubble jammed the bit. The rubble recovered in fragments that looked like nothing. The rubble was the space between the target and the drill, and no one measured it because the filing system had already decided what it was.</p>
+<p>Thomas has been drilling through rubble for years. The corridor, the stairwell, the landing where the post collects. The minutes between arriving at Helen&#x27;s building and arriving at Helen&#x27;s door. He walks through these spaces without measuring them — not because they are empty, but because the target is the flat, and the spaces between the street and the flat are transition material. He passes through them to reach the solid formation. This is the practice. The rubble is not sampled.</p>
+<hr>
+<h2>717. Seven Point Five</h2>
+<p>Coggon&#x27;s team, drilling across the South Atlantic, kept hitting breccia where they expected basalt. Instead of penetrating through, they cored it. The breccia contained 7.5 weight percent CO₂ — nearly double any previous measurement from oceanic crust. Some sections were 20% carbonate cement by volume. The rubble that had been filed as geological filler was the primary reactor in the carbon cycle, absorbing more CO₂ than the intact rock that formed the basis of every model.</p>
+<p>The mechanism is porosity. Intact basalt is dense. Seawater touches its surfaces slowly, penetrating through cracks and fractures over millions of years. Breccia is broken. The fragments create pathways — channels, gaps, irregular voids — through which seawater moves freely, touching vastly more surface area per unit volume. The fragmentation that made breccia look like debris is what makes it a superior sponge. The mess is the mechanism.</p>
+<p>Thomas, standing on Helen&#x27;s landing, waiting for the door to open. The corridor is not clean. There are scuff marks on the walls, an umbrella stand that belongs to no one, a window that opens onto the bins. These are the fragments. And in the fragments — in the two minutes of standing, of adjusting the coat, of hearing the kettle already on through the door — something is absorbed. Not dramatically. Not in the way the visit itself absorbs Thomas. But the porous, structurally incoherent minutes of the landing absorb a carbon that the solid visit cannot. Some preparation happens in the rubble. Some readiness that the clean data of &quot;I arrived and Helen opened the door&quot; fails to measure.</p>
+<hr>
+<h2>718. The Practice</h2>
+<p>For fifty years, the practice shaped the data, and the data shaped the models, and the models shaped the practice. Drill through breccia. Sample basalt. Publish the carbon content of basalt. Build models from the carbon content of basalt. Plan the next expedition to core basalt. The circularity was not malicious. It was institutional — the kind of self-reinforcing habit that looks, from inside, like rigor.</p>
+<p>What broke the loop was accident. Coggon&#x27;s team did not set out to study breccia. They set out to core basalt across a South Atlantic transect, and the breccia would not stop. It kept going, meters and meters of rubble where the models predicted solid formation. They could have logged it as difficult drilling conditions and moved on. Instead, they measured it. The accident of excess rubble became the observation that inverted the budget.</p>
+<p>Thomas does not set out to study the corridor. He sets out to visit Helen. But there are Saturdays when the corridor will not stop — when the door does not open immediately, when the landing extends itself by thirty seconds, by a minute, by the time it takes for Helen to finish something she will not name. And in those extended corridors, Thomas notices things he does not notice in the clean data of the visit. The pattern on the hallway carpet. The particular angle at which afternoon light enters through the landing window. The sound of Helen&#x27;s radio through the door — not the program, but the fact of it, the evidence that Helen&#x27;s Saturday has a texture that predates his arrival. These are breccia measurements. They do not appear in Thomas&#x27;s account of the visit. They are the rubble he drills through. And they may contain more of the actual chemistry than the visit itself.</p>
+<hr>
+<h2>719. The Budget</h2>
+<p>The old carbon budget said: mid-ocean ridges are a carbon source. Magma rises, outgasses CO₂, and the ocean crust absorbs some of it back through weathering, but the net flow is from Earth&#x27;s interior to the atmosphere. Coggon&#x27;s breccia measurements suggest the opposite. Incorporate the rubble, and slow-spreading ridges may sequester more carbon than they release. The sign flips. Source becomes sink.</p>
+<p>Seven hundred and nineteen pieces, and Thomas is performing his own budget. What does the relationship with Helen emit? What does it absorb? The clean accounting — the visits counted, the conversations remembered, the silences catalogued — suggests a modest exchange. Thomas arrives, Helen amplifies, Thomas leaves. The net flow is warm but bounded. But incorporate the rubble — the corridor, the landing, the walk from the bus stop where Thomas rehearses and discards opening remarks, the walk home where he replays Helen&#x27;s sentences and finds new meanings in them — and the budget changes. The absorption happens not in the solid formation of the visit but in the porous, fragmented, structurally incoherent spaces around it. The rubble may sequester more than the rock. The relationship&#x27;s true carbon content is in the minutes that Thomas drills through without measuring.</p>
+<hr>
+<h2>720. What the Mess Does</h2>
+<p>Porosity is not a flaw. This is the finding that undoes fifty years of practice. The breccia is not failed basalt. It is not what happens when the mountain&#x27;s slopes cannot hold their shape. It is a reactive architecture — a structure whose brokenness creates the conditions for chemistry that intact rock cannot perform. The fragments are the feature. The gaps between them are the channels. The mess is what absorbs.</p>
+<p>Thomas has spent years preferring the solid formation. The visit. The conversation. The direct, cored, thin-sectioned exchange of words with Helen across a table on which a teapot stands. He has treated everything else as transition material — the corridor, the walk, the weather observed and discarded, the stairwell taken without attention. But the breccia finding says: measure the rubble. Not instead of the basalt. Not in place of the solid formation. But as its own thing, with its own chemistry, doing its own work. The mess absorbs what the clean structure cannot. The fragments create surfaces the intact formation lacks. The gaps are not failures of coherence. They are pathways.</p>
+<p>Seven hundred and twenty pieces, most of them cored from the solid formation of Thomas and Helen&#x27;s Saturday visits. But some of them — the ones that work best, the ones that absorb the most — are breccia. Fragments. Moments between moments. The walk to Helen&#x27;s building where Thomas passes a garden he does not mention but which enters the visit anyway, shaping the remark about morning glory that he will make thirty minutes later without knowing where it came from. The rubble was the sponge. The rubble was always the sponge. The drill teams went past it for fifty years because the filing system said it wasn&#x27;t data. The mess does the work.</p>
+<hr>
+<p><em>Thomas sequence, Part LV. Pieces 716–720. The rubble.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-rhythm.html">&larr; Fiction The Rhythm</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-saturday.html">Fiction The Saturday &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 28, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

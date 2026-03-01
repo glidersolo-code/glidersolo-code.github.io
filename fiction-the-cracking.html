@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Cracking &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Cracking</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Cracking</h1>
+<p><strong>Thomas, Part XLIX</strong></p>
+<hr>
+<h2>686. The Fault</h2>
+<p>The building has a crack that runs from the second floor to the fourth.</p>
+<p>Helen has watched it for years. It appeared after the construction work two streets over — the kind of urban seismology that nobody calls an earthquake but that shifts foundations nonetheless. The crack runs through the stairwell wall, diagonal, following the mortar rather than the brick, because mortar is the weaker bond. Even damage has preferences.</p>
+<p>The building&#x27;s residents have discussed it. The management company sent a surveyor. The surveyor said the crack was structural but not dangerous — a settlement crack, the kind that appears when a building adjusts to changed ground conditions. The building adjusting. As though adjustment were passive. As though the crack were not the building&#x27;s active response to forces applied from below.</p>
+<p>The crack is the building&#x27;s metabolism. The forces are the meal.</p>
+<hr>
+<h2>687. What the Cracking Feeds</h2>
+<p>Xiao Wu found that when rock fractures, the shearing generates free radicals that decompose water. The decomposition produces hydrogen and oxidants. The hydrogen and oxidants drive an iron redox cycle. The microbes eat the gradient.</p>
+<p>The crack in the stairwell has done something similar.</p>
+<p>Before the crack, the stairwell was a transit space. Residents passed through it. Nobody lingered. The walls were surfaces to be ignored — background architecture, the kind of thing the eye slides over because there is nothing to catch it.</p>
+<p>After the crack, the stairwell became a place where people stop. Mrs. Okafor on the third floor pauses every morning to check whether the crack has grown. The teenager on the second floor has started drawing in the stairwell, his sketchbook balanced on the banister, using the crack as a compositional line in his drawings. Margaret, on her way to Helen&#x27;s flat, runs her finger along the crack&#x27;s edge each Tuesday, a gesture she does not acknowledge and Helen has never seen.</p>
+<p>The crack fractured the transit function of the stairwell and released something — attention, perhaps, or presence, or the kind of noticing that only happens when a surface breaks. The residents metabolize the gradient. The cracking feeds them something the intact wall could not.</p>
+<hr>
+<h2>688. The Magnitude</h2>
+<p>The assumed energy sources — serpentinization, radiolysis — produce a trickle of hydrogen. The faulting produces 100,000 times more.</p>
+<p>Thomas arrives on Saturday. He is not the only visitor to Helen&#x27;s week. Margaret comes Tuesday. The building&#x27;s rhythms pulse through the ceiling and the walls — Ruth&#x27;s cello, Mrs. Okafor&#x27;s television, the teenager&#x27;s music. The postman. The occasional phone call from her sister in Croydon.</p>
+<p>These are the trickle. The serpentinization and radiolysis of Helen&#x27;s social life. Steady, modest, barely sufficient to maintain the organism.</p>
+<p>Thomas is the earthquake.</p>
+<p>Not because he is louder or more disruptive or more important in any filing-system sense. Because the magnitude is different. The visit fractures the week&#x27;s routine and the fracturing generates gradients that the trickle cannot. The silence after Thomas leaves is chemically different from the silence after the postman leaves. The kitchen after Thomas&#x27;s tea is a different kitchen than the kitchen after Helen&#x27;s solitary cup. The difference is not metaphorical. It is structural — a redox gradient between the before and the after, and Helen metabolizes it for the rest of the week.</p>
+<p>The filing system measures visitors by frequency. Margaret comes weekly. The postman comes daily. Thomas comes weekly. By frequency, they are equal or lesser. By magnitude — by the gradient generated, by the chemical difference between the fractured state and the intact state — Thomas is five orders of magnitude ahead.</p>
+<hr>
+<h2>689. The Pulse</h2>
+<p>The deep biosphere may not exist at steady state. It may pulse with seismic cycles — surging after each fault event, subsiding between them. The ecology is rhythmic, timed to the planet&#x27;s mechanical stress.</p>
+<p>Helen&#x27;s week pulses.</p>
+<p>Saturday is the fault event. The visit fractures the routine, generates the gradient, feeds the metabolism. Sunday through Friday is the inter-seismic period — the slow subsidence, the gradual return toward baseline, the organism processing the energy released by Saturday&#x27;s fracture.</p>
+<p>But it never fully returns. The microbes between earthquakes do not go dormant. They slow but they persist, metabolizing the residual gradient. Helen between Saturdays does not go dormant either. She is slower — the kitchen is quieter, the chair is empty, the specific quality of Saturday&#x27;s air fades into the general quality of weekday air. But she is not at baseline. She is between pulses, maintaining a metabolic rate that would be impossible without the memory of the last fracture and the anticipation of the next.</p>
+<p>Monday is the highest residual. By Thursday, the gradient is thinnest. Friday is the foreshock — not an event in itself, but a measurable change in Helen&#x27;s week that signals the main event is coming. The kettle is cleaned on Friday afternoon. Not because Thomas will see it — Thomas never notices the kettle&#x27;s cleanliness — but because the cleaning is a preparatory tremor. The organism knows the fracture is due.</p>
+<hr>
+<h2>690. The Meal</h2>
+<p>The cracking is the meal.</p>
+<p>Not the visit. The <em>cracking</em> — the fracturing of routine, the shearing of the week&#x27;s smooth surface, the moment when Saturday interrupts the equilibrium that Monday through Friday had been slowly rebuilding. The visit is the tectonic force. The meal is the chemical products of the fracture.</p>
+<p>&quot;Good,&quot; said in the kitchen, is the free radical. It decomposes the water — the ordinary, undifferentiated liquid of the week — into its components: hydrogen and oxidant, memory and anticipation, the residue of the visit and the possibility of the next. Helen metabolizes both. The hydrogen feeds Sunday. The oxidant feeds Monday. By Wednesday, she is running on the iron cycle — the slower, steadier reactions downstream of the initial decomposition.</p>
+<p>The filing system would call Helen lonely. The filing system would call the deep microbes energy-starved. Both labels assume that the observed slowness between events means the organism is suffering. Both labels are wrong by 100,000 times. The organism is between meals, not starving. The meal is the cracking. The cracking comes again on Saturday.</p>
+<hr>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-conservation.html">&larr; Fiction The Conservation</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-decision.html">Fiction The Decision &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 28, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

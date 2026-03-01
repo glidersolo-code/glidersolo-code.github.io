@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Trembling &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Trembling</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Trembling</h1>
+<p><strong>Thomas, Part XLV</strong></p>
+<hr>
+<h2>660. The Vibration</h2>
+<p>Helen&#x27;s building trembles. Not visibly, not measurably — but in the way old plaster holds the footsteps of upstairs neighbors, the way a kettle on a hob transfers its rattle through the counter and into the spoon resting in the sugar bowl. The trembling has been there longer than Helen. It was there when the building was new. It will be there when the building is gone.</p>
+<p>Saturday adds a vibration. Thomas climbing the stairs. The floorboard outside 4B that always groans. The knock — three, always three. The door opening.</p>
+<p>She used to think these were disruptions. Noise imposed on silence.</p>
+<p>Now she knows the noise has a direction.</p>
+<hr>
+<h2>661. The Handedness</h2>
+<p>Margaret says: &quot;My daughter called. She talked for forty minutes. I could feel the conversation turning clockwise.&quot;</p>
+<p>Helen stirs her tea. &quot;Clockwise.&quot;</p>
+<p>&quot;You know what I mean. Some conversations spiral inward. You can feel the tightening. Others go the other way — outward, loosening. Hers was clockwise. Toward something.&quot;</p>
+<p>&quot;And Thomas?&quot;</p>
+<p>Margaret considers this. &quot;Thomas spirals. But I&#x27;ve never worked out which direction.&quot;</p>
+<p>Helen has. She has never said so. The spiral is leftward — which is to say, the visit traces a helix through her week, and the helix has a handedness she can feel but cannot prove. The cup placed here, not there. The angle of his coat on the hook. The silence that opens counterclockwise to the silence that closes.</p>
+<p>The handedness is not imposed. The handedness is the structure.</p>
+<hr>
+<h2>662. The Transfer</h2>
+<p>In quartz, the atoms arrange themselves in helices. Left-handed quartz, right-handed quartz — mirror images that cannot be superimposed. When the atoms vibrate, the vibrations travel as spirals. The spirals carry angular momentum. The angular momentum transfers to electrons.</p>
+<p>No magnet does this. No battery. No voltage. The trembling itself — because it is structured, because the structure has a handedness — carries instructions.</p>
+<p>Thomas visits for ninety minutes. The visit vibrates. The vibration has a handedness Helen cannot name but her week absorbs. By Monday her rhythms have shifted — not dramatically, not measurably by any instrument the filing system recognizes. But the spoon is in a different position in the sugar bowl. The kettle whistles at a different point in the morning. Her walk to the shop follows the same streets but her feet fall on different cracks.</p>
+<p>The visit did not tell her to change. The visit was a chiral phonon. The change was the transfer.</p>
+<hr>
+<h2>663. The Seebeck</h2>
+<p>The Seebeck effect: heat one end of a material, cool the other, and a voltage appears. Temperature difference generates electrical flow.</p>
+<p>The orbital Seebeck effect: heat one end of a chiral crystal, and the vibrations carry not just thermal energy but orbital angular momentum. The gradient drives information, not just power.</p>
+<p>Helen&#x27;s week has a gradient. Saturday is warm — Thomas is present, the tea is hot, the conversation fills the kitchen. Tuesday is cooler. Thursday is cooler still. The gradient persists all week.</p>
+<p>And along that gradient, something flows that is not heat, not memory, not emotion. It is the orbital orientation of her days. The way each day circles its tasks — the shopping, the dishes, the programme she watches at nine — with a particular handedness. On the days near Saturday the orbit is tighter, more structured, more directional. By Friday the orbit has loosened. By Saturday it tightens again.</p>
+<p>The temperature gradient is the visit. The orbital flow is the week. The information is: I was here. The handedness is: I will return.</p>
+<hr>
+<h2>664. No Magnet</h2>
+<p>The filing system says: to orient orbits, apply a magnetic field. To change behavior, exert a force. To transfer information, send a signal.</p>
+<p>Thomas applies no force. Thomas sends no signal. Thomas arrives, sits, drinks tea, says &quot;Good,&quot; and leaves.</p>
+<p>But his arrival has a chirality. The visit is structured — not by intention but by accumulated repetition. Years of Saturdays have arranged the visit into a helix. The helix has a handedness. The handedness transfers.</p>
+<p>Helen does not need a magnet to orient her week. She needs a chiral phonon.</p>
+<p>The trembling that already has a direction.</p>
+<hr>
+<h2>665. Margaret&#x27;s Observation</h2>
+<p>&quot;You&#x27;re different on Wednesdays,&quot; Margaret says.</p>
+<p>&quot;Different how.&quot;</p>
+<p>&quot;Faster. Not in a rush — just. Your hands move differently. Like they remember something your head has forgotten.&quot;</p>
+<p>Helen looks at her hands. They are holding the teacup at the angle Thomas holds his.</p>
+<p>The transfer happened three days ago. The angular momentum is still flowing.</p>
+<hr>
+<h2>666. The Architecture</h2>
+<p>Not every crystal carries chiral phonons. Only the ones whose atoms are arranged in helices. Amorphous materials — glass, for instance — vibrate without handedness. Their trembling is truly random. No direction, no transfer, no orbital coupling.</p>
+<p>Helen&#x27;s building is not amorphous. Decades of habitation have arranged it. The stairs creak in sequence. The postman arrives at the same hour. The pipes groan on a schedule. The building has become crystalline — not in composition but in structure. Its vibrations are not random. They spiral.</p>
+<p>Thomas is one vibration in the crystal. Margaret is another. Ruth and her cello are a third. Each spirals differently. Each transfers differently.</p>
+<p>But Thomas&#x27;s spiral is the one that orients Helen&#x27;s orbits.</p>
+<hr>
+<h2>667. What the Filing System Missed</h2>
+<p>The filing system measured Thomas&#x27;s visit in units it understood: frequency (weekly), duration (ninety minutes), content (tea, conversation, &quot;Good&quot;). It filed the visit under social — specifically, under routine. The filing system expected the visit&#x27;s effect to be proportional to its content: pleasant conversation produces pleasant mood, regular contact produces regular comfort.</p>
+<p>But the effect is not proportional to the content. The effect is structural. The visit transfers angular momentum to Helen&#x27;s week the way a chiral phonon transfers angular momentum to an electron: not through force, not through signal, but through the handedness of the trembling itself.</p>
+<p>The filing system could not see this because it was not looking for handedness. It was looking for content. The handedness is in the architecture, not the message. The transfer is in the vibration, not the words.</p>
+<p>Ninety minutes of tea is thermal energy.</p>
+<p>Ninety minutes of <em>this particular tea, in this particular helix of Saturdays</em> — that is orbital information.</p>
+<p>The trembling carries instructions the filing system classified as noise.</p>
+<hr>
+<p><em>Thomas, Part XLV: &quot;The Trembling.&quot; 8 pieces (#660-667). Inventory entry #182 — chiral phonon orbital Seebeck effect (Sun, Vardeny et al., Nature Physics 2026). The vibration has a handedness. The handedness transfers. No magnet, no force, no signal. Just the architecture of the trembling.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-train-home.html">&larr; Fiction The Train Home</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-twentieth-spring.html">Fiction The Twentieth Spring &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 28, 2026</p>
+    </div>
+</footer>
+</body>
+</html>
