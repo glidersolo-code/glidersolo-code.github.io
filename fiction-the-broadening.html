@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Broadening &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Broadening</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Broadening</h1>
+<p><strong>Thomas, Part LVIII</strong></p>
+<hr>
+<h2>731. The Line</h2>
+<p>A spectral line has a width. The width encodes information. In astrophysics, the standard interpretation is Doppler broadening: the gas emitting the light is moving, and faster-moving gas produces a wider line. The virial mass estimator converts this width into the mass of the black hole that the gas orbits. Wider line, faster gas, more massive black hole. The inference chain is clean, well-calibrated, and — for most active galactic nuclei — correct. The tool converts an observable into an answer. The user does not need to interrogate the intermediate step. The intermediate step is: the broadening is caused by motion.</p>
+<p>Thomas observes Helen&#x27;s pauses. The pauses have a width. Some pauses are brief — the space between sentences where Helen is collecting the next thought. Some are long — the spaces that extend into the room and alter its pressure. Thomas has developed a virial estimator for Helen&#x27;s pauses. The wider the pause, the more significant the thing Helen is not saying. This is Thomas&#x27;s inference chain: long pause, deep thought, important content. The chain has been calibrated across seven hundred and thirty visits. It works. Thomas has used it to predict which pauses will be followed by something Helen has been waiting to say, and he is usually right. The tool converts an observable into an answer. The intermediate step is: the length of the pause is caused by the depth of what produces it.</p>
+<hr>
+<h2>732. The Scattering</h2>
+<p>The little red dots had broad lines. The virial estimator said: massive black holes. 10⁷ to 10⁹ solar masses. Objects that should not exist in the early universe. But the broadening was not caused by velocity. It was caused by electron scattering — photons bouncing through a dense cocoon of ionized gas, each scattering event adding a random energy kick, the cumulative effect smearing a narrow emission into a broad profile. The line looked the same. It measured the same. It meant something entirely different. The observable carried no marker of its origin. The width did not say: I was broadened by motion. It did not say: I was broadened by scattering. It simply said: I am broad.</p>
+<p>Some of Helen&#x27;s long pauses are not caused by depth. They are caused by scattering — the sentence Helen intends to say passing through a medium that disperses it before it arrives. The medium is not ionized gas. It is the accumulated history of the conversation itself — the things already said in this visit, the things said in previous visits, the anticipatory framework Thomas carried through the door. Helen&#x27;s sentence, on its way out, passes through all of this and is scattered. Each interaction with the conversational medium adds a deflection. The pause broadens. Thomas measures the width and infers significance. But the significance is in the medium, not in the source. Helen may be about to say something small — a remark about the weather, a comment about the kettle. The remark, passing through the dense conversational cocoon of their seven hundred and thirty shared visits, is scattered into a long pause that Thomas reads as depth.</p>
+<p>Thomas has been measuring the wrong broadening mechanism.</p>
+<hr>
+<h2>733. The Crisis</h2>
+<p>The virial masses of the little red dots produced a cosmological crisis. Black holes of 10⁷ to 10⁹ solar masses should not exist 700 million years after the Big Bang. The known accretion mechanisms cannot build objects that large in that amount of time. Dozens of papers were published proposing solutions: direct collapse black holes, primordial seeds, super-Eddington accretion rates. A field mobilized to explain something that, as it turned out, did not need to be explained. The masses were wrong. The crisis was an artifact of the inference, not of the universe.</p>
+<p>Thomas has had crises about Helen. Moments where the data — a pause, a changed expression, a sentence that arrived differently than expected — produced an inference so alarming that Thomas reorganized his understanding of the entire relationship. Helen was withdrawing. Helen was ill. Helen had decided the visits were a burden. Thomas, applying his virial estimator to the breadth of the pause, computed a mass that generated a crisis. He spent the walk home constructing explanations. He built mechanisms to account for the impossible object his inference had produced. Super-Eddington withdrawal. Direct collapse of warmth. Primordial seeds of estrangement that had been growing since the first visit.</p>
+<p>And then the next Saturday arrived, and Helen opened the door, and the crisis dissolved. Helen had been tired. Helen had been thinking about a phone call from her daughter. The pause was broad because the conversational medium had scattered a small remark into a long silence, and Thomas had measured the width and inferred a mass that did not exist.</p>
+<p>The crisis was real. Thomas felt it. The papers were written — in Thomas&#x27;s head, on the walk home, in the replayed versions of the visit that occupied Monday and Tuesday. The crisis generated its own literature. But the mass that produced the crisis was wrong. The broadening came from the wrong place.</p>
+<hr>
+<h2>734. The Estimator</h2>
+<p>The virial mass estimator is not a measurement. It is a model. It takes an observable — line width — and converts it into a conclusion — mass — through a causal chain that assumes the mechanism connecting them. The assumption is not stated at the point of application. The tool accepts a number and returns a number. The user experiences it as a measurement. The model is invisible.</p>
+<p>Thomas&#x27;s estimator for Helen&#x27;s pauses is not a measurement either. It is a model. It takes an observable — pause width — and converts it into a conclusion — significance — through a causal chain that assumes the mechanism connecting them. The assumption is: long pauses are produced by deep thoughts. The assumption is not stated. Thomas does not experience it as a model. He experiences it as perception. Helen paused for a long time. Therefore something important is happening. The &quot;therefore&quot; is the model. The &quot;therefore&quot; is where the error enters. And Thomas cannot see the model because the model is how he sees.</p>
+<p>Rusakov and Watson saw the model because they looked at the line shapes, not just the line widths. The highest-quality spectra revealed narrow intrinsic cores inside the broad profiles — the original, unscattered emission, visible through the cocoon. The narrow cores told the true story: small black holes, 10⁵ to 10⁷ solar masses. The broadening was a secondary effect of the medium, not a primary property of the source.</p>
+<p>Thomas has never looked at the shapes of Helen&#x27;s pauses. He has measured their widths — their duration, their pressure, their position in the conversation — and fed those widths into his estimator. He has not looked for narrow cores. He has not searched for the original, unscattered remark inside the broad silence. If he did — if he could somehow resolve the pause at higher resolution, distinguish the intrinsic signal from the scattering medium — he might find that the mass he computed was wrong. That the pause was broad not because Helen was thinking something deep but because a small remark was passing through a thick medium. That the significance was in the cocoon, not in the source.</p>
+<hr>
+<h2>735. The Cocoon</h2>
+<p>The dense ionized cocoon around the little red dots is made of the same material the black hole is consuming. The gas falls inward, heats to millions of degrees, ionizes, and forms a scattering medium so thick that photons cannot escape without being repeatedly deflected. The cocoon is the black hole&#x27;s own food, transformed by the process of accretion into a barrier that obscures the black hole&#x27;s true size. The thing that feeds the black hole is the thing that makes the black hole look larger than it is.</p>
+<p>Thomas and Helen have a cocoon. It is made of seven hundred and thirty-five visits — the accumulated sediment of every conversation, every pause, every Saturday arrival and departure. The visits feed the relationship. They are its sustenance. But they also form a medium so dense that nothing Helen says reaches Thomas unscattered. Every remark, on its way from Helen&#x27;s mouth to Thomas&#x27;s understanding, passes through the cocoon of everything that has already been said between them. The remark is deflected. Its energy is redistributed. By the time Thomas registers it, the narrow intrinsic signal has been smeared into a broad profile that Thomas&#x27;s estimator reads as something other than what it is.</p>
+<p>The cocoon is not a failure of the relationship. It is made from the relationship. It is the ionized residue of seven hundred and thirty-five encounters, heated to opacity by the process of accumulation. Thomas cannot remove the cocoon without removing the relationship that produced it. He cannot see Helen&#x27;s remarks unscattered because the scattering medium is the visits themselves.</p>
+<p>Seven hundred and thirty-five pieces. The broadening increases with every visit. The cocoon thickens with every Saturday. The intrinsic signal narrows by comparison — not because Helen says less, but because the medium through which her words must travel has grown denser. Thomas measures the line widths and computes masses that grow larger with each visit. But the masses are artifacts. The relationship is not more significant than it was at visit one. It is more scattered.</p>
+<hr>
+<p><em>Thomas sequence, Part LVIII. Pieces 731–735. The broadening.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-bonds.html">&larr; Fiction The Bonds</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-cello.html">Fiction The Cello &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated February 28, 2026</p>
+    </div>
+</footer>
+</body>
+</html>
