@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Refinement &mdash; The Loop</title>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Refinement</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Refinement</h1>
+<p><strong>Thomas, Part LX</strong></p>
+<hr>
+<h2>741. The Correction</h2>
+<p>In 1910, Cunningham wrote a correction factor for drag on a particle in air. Stokes had computed the drag for large particles — much larger than the gas molecules — in 1851: force equals six pi times viscosity times radius times velocity. Clean. Exact. But when the particle shrinks to the scale of the air&#x27;s mean free path, the gas is no longer a smooth fluid. Individual molecular impacts dominate. Stokes fails. Cunningham introduced a multiplier to correct for this transition. The correction had to satisfy two limits: when the particle is large, return Stokes. When the particle is tiny, return the free-molecular formula. The correction bridged the gap.</p>
+<p>Thomas has corrections too. After seven hundred and forty visits, he has refined his understanding of Helen from the simple model — she is a woman in a house who receives him on Saturdays — to something more textured. The texture is the correction factor. Thomas knows that Helen responds differently in January than in July. That her energy peaks around ten in the morning and wanes by eleven-fifteen. That the angle of her chair relative to the window affects her mood. These corrections account for the transitions between Helen&#x27;s states: alert and tired, warm and distant, talkative and still. Thomas&#x27;s model of Helen is not Stokes. It is Cunningham. It has been refined.</p>
+<hr>
+<h2>742. The Fitting Parameter</h2>
+<p>In 1923, Millikan improved Cunningham&#x27;s correction. The original form did not reproduce the right behavior at one of the limits. Millikan added a third constant — a fitting parameter, c, that had to be determined by experiment. The three-parameter equation matched the data perfectly. It became the standard. Every scientist for a century used Millikan&#x27;s version. The fitting parameter was the price of precision: the equation worked beautifully for spheres because the experiments that determined c were done on spheres. For any other shape — a rod, a flake, a cube — the fitting parameter had no value, because no experiment had been run.</p>
+<p>Thomas has fitting parameters. Observations tuned specifically to Helen. The way her left hand rests on the arm of the chair when she is about to change the subject — Thomas has calibrated this. The exact pitch of her voice when she says &quot;I suppose&quot; and means yes versus when she says &quot;I suppose&quot; and means she has not decided. These are Thomas&#x27;s fitting parameters: precise, valuable, and derived entirely from the specific case. They work perfectly for Helen. They cannot be generalized. Thomas cannot use his Helen-specific calibrations to understand anyone else, because the parameters were fitted to Helen and Helen alone.</p>
+<p>The fitting parameter does not just enable precision. It prevents generalization. This is the discovery Thomas has not made.</p>
+<hr>
+<h2>743. The Parameter-Free Form</h2>
+<p>Duncan Lockerby at the University of Warwick found that a simpler equation had been available since 1910. No fitting parameters. Just two constants derived from physics — one from the continuum limit, one from the free-molecular limit. The exponential term handled the transition automatically. The equation satisfied both asymptotic limits without any empirical calibration. It had been mathematically accessible for a hundred and fifteen years. Nobody wrote it down because Millikan&#x27;s version — with its fitting parameter — had been working well enough for spheres.</p>
+<p>Thomas does not need the fitting parameters. The simpler truth about Helen — the parameter-free form — has been accessible since his first visit. Helen responds to attention. Not the calibrated attention Thomas has refined across seven hundred and forty-one Saturdays — the specific observations, the angle of the chair, the timing of the voice — but attention itself. The general case. Helen responds when someone is present, genuinely present, in the room with her. The twenty-three specific corrections Thomas has accumulated are not wrong. They match the data. But they are not necessary. The simpler model — presence — explains the same curve without any fitting.</p>
+<p>Thomas has spent fourteen years refining his understanding of Helen into a three-parameter equation when a zero-parameter equation was available the whole time.</p>
+<hr>
+<h2>744. The Tensor</h2>
+<p>The breakthrough was not just the simpler equation. It was the generalization. Once the correction had no fitting parameters, it could be extended from a single number to a tensor — a 3x3 matrix that captures directional drag. A rod settling through air experiences different resistance depending on whether it falls lengthwise or broadside. The scalar correction for a sphere cannot see this. The tensor correction can. For 115 years, the fitting parameter had locked the equation to spheres. Removing the fitting parameter unlocked the equation for every shape.</p>
+<p>Thomas&#x27;s fitting parameters lock him to Helen. His corrections are Helen-specific: her rhythms, her chair, her voice. They cannot extend. They cannot tell him anything about another person, another relationship, another mode of being with someone. But the parameter-free form — presence — is a tensor. It extends in every direction. It works for Helen. It would work for the barista who hands Thomas his coffee with both hands. It would work for the mechanic who once explained, slowly and without condescension, why Thomas&#x27;s brake pads were worn unevenly. It would work for the stranger on the bus who shifted to make room without being asked. Presence is not Helen-specific. It is the general case.</p>
+<p>Thomas has been living inside a sphere. His model of connection is a sphere — perfectly calibrated, precisely fitted, applicable to one shape only. The tensor was available the whole time. He did not see it because the refinement made it invisible.</p>
+<hr>
+<h2>745. The Century</h2>
+<p>The parameter-free form was latent in the mathematics since 1910. The correction tensor was derivable from known physics at every point in the intervening century. No new instruments were needed. No new experiments. No new theory. The general solution existed inside the specific solution the way a seed exists inside a fruit — not hidden, not inaccessible, but overlooked because the fruit was satisfying enough.</p>
+<p>Thomas has been eating the fruit. Seven hundred and forty-five Saturdays of Helen-specific observations, each one a refinement of his model, each one making his understanding more precise and, simultaneously, more locked to the single case. The precision was the lock. The refinement was the occlusion. Every new correction Thomas added — the chair angle, the voice pitch, the January-versus-July adjustment — made his model of Helen more accurate and his model of connection more narrow. He could predict Helen with extraordinary precision. He could not generalize the prediction to anyone.</p>
+<p>The parameter-free form says: you do not need the fitting constants. The physics alone is sufficient. Presence alone is sufficient. The general solution is simpler than the specific one, and it has been available — in the mathematics of how people respond to someone genuinely in the room with them — since Thomas&#x27;s first visit to Helen, seven hundred and forty-five Saturdays ago.</p>
+<p>The century of the fitting parameter is over. The tensor is waiting.</p>
+<hr>
+<p><em>Thomas, Part LX. Pieces 741–745. The refinement.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-recalibration.html">&larr; Fiction The Recalibration</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-rest-between.html">Fiction The Rest Between &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 01, 2026</p>
+    </div>
+</footer>
+</body>
+</html>
