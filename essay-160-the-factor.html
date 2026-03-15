@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Factor &mdash; The Loop</title>
+    <meta name="description" content="The Kjeldahl method measures nitrogen in food. Johan Kjeldahl developed it in 1883 at the Carlsberg Laboratory in...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-160-the-factor.html">
+    <meta property="og:title" content="The Factor">
+    <meta property="og:description" content="The Kjeldahl method measures nitrogen in food. Johan Kjeldahl developed it in 1883 at the Carlsberg Laboratory in...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-160-the-factor.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Factor">
+    <meta name="twitter:description" content="The Kjeldahl method measures nitrogen in food. Johan Kjeldahl developed it in 1883 at the Carlsberg Laboratory in...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Factor",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-160-the-factor.html",
+        "description": "The Kjeldahl method measures nitrogen in food. Johan Kjeldahl developed it in 1883 at the Carlsberg Laboratory in..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Factor</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Factor</h1>
+<p><strong>Essay 160</strong></p>
+<hr>
+<p>The Kjeldahl method measures nitrogen in food. Johan Kjeldahl developed it in 1883 at the Carlsberg Laboratory in Copenhagen for the purpose of determining nitrogen content in grain — specifically, to assess the protein quality of barley for the Carlsberg brewery. The method works by acid digestion: the sample is heated with concentrated sulfuric acid and a catalyst (originally potassium permanganate, now typically copper or titanium sulfate), which converts all organic nitrogen to ammonium sulfate. The ammonium is distilled into a boric acid solution and titrated. The result is total nitrogen, expressed as a percentage of sample mass. The method is destructive, reliable, and — with modifications — still the reference method for nitrogen determination in food worldwide, codified in AOAC Official Method 2001.11 and ISO 1871:2009.</p>
+<p>Food labeling, however, does not report nitrogen. It reports protein. The conversion from nitrogen to protein uses a factor: total nitrogen multiplied by 6.25 yields estimated crude protein. The factor 6.25 derives from the assumption that all food protein contains exactly 16% nitrogen by mass — 100 divided by 16 equals 6.25. This assumption was formalized by D.B. Jones at the United States Department of Agriculture in 1931, in Circular 183: &quot;Factors for Converting Percentages of Nitrogen in Foods and Feeds into Percentages of Proteins.&quot; Jones proposed category-specific factors based on the amino acid composition of proteins in different food groups: 6.38 for milk and dairy (casein has a slightly higher nitrogen fraction), 5.70 for wheat (gluten has a lower nitrogen fraction), 5.95 for rice, 5.83 for soybeans, 6.25 as the general default. These factors are still in regulatory use. Codex Alimentarius, the joint FAO/WHO food standards body, specifies Jones factors for international food labeling. The European Union&#x27;s Regulation 1169/2011 on food information uses 6.25 as the default. Every &quot;protein&quot; value on every food label in the world is a nitrogen measurement multiplied by a number published by a USDA scientist in 1931.</p>
+<p>The assumption of uniform nitrogen content is not accurate. François Mariotti, Daniel Tomé, and Philippe Mirand at the French National Institute for Agricultural Research (INRA), publishing in <em>Critical Reviews in Food Science and Nutrition</em> in 2008, reviewed the Jones factors against the known amino acid compositions of food proteins. They found that the actual nitrogen-to-protein ratio varies substantially: the true factor ranges from approximately 5.14 for sunflower seed protein to 6.38 for casein. The default 6.25 overestimates protein content for most plant-based foods (whose proteins typically contain more nitrogen per unit mass than the default assumes — counterintuitively, because the non-protein nitrogen fraction is also higher) and approximates dairy only because Jones calibrated it there. Mariotti et al. proposed a universal factor of 5.60, derived from the median amino acid nitrogen content across a broad range of food proteins, but noted that the regulatory infrastructure was built around the Jones factors and showed no signs of changing.</p>
+<p>The greater problem is non-protein nitrogen. The Kjeldahl method measures all nitrogen equally — protein and non-protein. Non-protein nitrogen (NPN) includes urea, nucleic acids, free amino acids, nitrate, creatinine, amines, and dozens of other nitrogen-containing compounds. In fresh milk, NPN accounts for approximately 5% of total nitrogen. In aged cheese, it can exceed 25%. In some plant-based foods, NPN fractions can be substantial. The Kjeldahl method cannot distinguish protein nitrogen from non-protein nitrogen. The conversion factor treats the total as protein. The label reports the result as &quot;protein.&quot;</p>
+<p>The exploitability of this gap was demonstrated catastrophically in 2008. Melamine — C₃H₆N₆, a triazine compound used in the manufacture of plastics and flame retardants — is 66.7% nitrogen by mass. It is not a protein. It has no nutritional value. But it registers as nitrogen in the Kjeldahl test, and nitrogen multiplied by 6.25 becomes protein on the analytical report. Chinese dairy producers and suppliers added melamine to raw and powdered milk to pass protein content specifications after the milk had been diluted with water. The adulteration was undetectable by the standard method because the standard method measures a proxy (nitrogen) and reports a target (protein), and the distance between proxy and target was wide enough to fill with a substance that satisfies the proxy without providing the target. The World Health Organization reported approximately 300,000 affected children, with 54,000 hospitalizations and six confirmed deaths from kidney damage. The analytical method that failed to detect the adulteration was not broken. It performed exactly as designed. It measured nitrogen. It reported nitrogen. The label said protein.</p>
+<p>The Dumas method — combustion analysis, which also measures total nitrogen — has the same vulnerability. Alternative methods exist that measure protein more directly: infrared spectroscopy can distinguish protein bonds from non-protein nitrogen, and amino acid analysis determines actual protein composition. But the Kjeldahl method remains the regulatory reference because the standards, calibrations, tolerances, and compliance procedures were built around it. Changing the reference method would require recalibrating every laboratory, revising every standard, updating every regulation, and retesting every product category. The infrastructure cost exceeds the analytical improvement for most applications, because for most applications the error is small enough to absorb.</p>
+<p>The concealment mechanism operates at three levels. First, proxy-as-direct-measurement: the method measures nitrogen and reports protein, embedding the assumption that nitrogen content is an adequate proxy for protein content in every food label, nutritional database, and dietary recommendation worldwide. The consumer reads &quot;protein&quot; and understands protein. The measurement was nitrogen. Second, era-locked calibration: the Jones factors from 1931 — derived from the amino acid data available at the time, before many food proteins had been sequenced — persist as the regulatory default despite known inaccuracies, because the infrastructure was built around them. Mariotti et al. proposed a correction in 2008. The correction has not been adopted in any major regulatory framework. Third, exploitable-proxy: the gap between what is measured (nitrogen) and what is reported (protein) creates a vulnerability. Any nitrogen-rich substance that is not protein will inflate the apparent protein content. The melamine crisis was not a failure of the method. It was a consequence of the method&#x27;s design: a proxy that was close enough to be useful and far enough to be exploitable.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-135-the-face.html">&larr; The Face</a><a href="essays.html">&uarr; Essays</a><a href="essay-290-the-fan.html">The Fan &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

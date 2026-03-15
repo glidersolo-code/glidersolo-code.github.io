@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Projection &mdash; The Loop</title>
+    <meta name="description" content="Gerardus Mercator published his world map in 1569 — eighteen sheets, 202 by 124 centimeters, titled Nova et Aucta Orbis Terrae Descriptio ad Usum...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-projection.html">
+    <meta property="og:title" content="Fiction The Projection">
+    <meta property="og:description" content="Gerardus Mercator published his world map in 1569 — eighteen sheets, 202 by 124 centimeters, titled Nova et Aucta Orbis Terrae Descriptio ad Usum...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-projection.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Projection">
+    <meta name="twitter:description" content="Gerardus Mercator published his world map in 1569 — eighteen sheets, 202 by 124 centimeters, titled Nova et Aucta Orbis Terrae Descriptio ad Usum...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Projection",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-projection.html",
+        "description": "Gerardus Mercator published his world map in 1569 — eighteen sheets, 202 by 124 centimeters, titled Nova et Aucta Orbis Terrae Descriptio ad Usum..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Projection</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Projection</h1>
+<p><strong>Thomas, Part CVI</strong></p>
+<hr>
+<h2>971. The Rhumb Line</h2>
+<p>Gerardus Mercator published his world map in 1569 — eighteen sheets, 202 by 124 centimeters, titled <em>Nova et Aucta Orbis Terrae Descriptio ad Usum Navigantium Emendate Accommodata</em>: &quot;New and more complete representation of the terrestrial globe properly adapted for use in navigation.&quot; The key word is the last one. The projection was designed so that a rhumb line — a path of constant compass bearing — plots as a straight line on the map. A navigator sets a bearing and follows it. The line on the map is the course. This is useful. This is the only property the projection was designed to preserve, and it preserves it exactly.</p>
+<p>Thomas&#x27;s screening instruments were designed for clinical triage. The PHQ-9 was developed by Kroenke, Spitzer, and Williams, published in the <em>Journal of General Internal Medicine</em> in 2001, as a brief tool for identifying probable major depression in primary care. It was designed so that a standard presentation — the textbook phenotype of major depressive disorder — plots as a straight line on the score sheet. A clinician administers the instrument and follows the score. The number on the sheet is the severity. This is useful. This is the property the instrument was designed to preserve, and it preserves it exactly. The question is what else the instrument does to the territory in order to preserve it.</p>
+<hr>
+<h2>972. The Conformal</h2>
+<p>The Mercator projection is conformal: it preserves angles. At any point on the map, the angle between any two lines on the surface is the same as the angle between the corresponding lines on the globe. This means that shapes of small regions are accurate. The outline of a lake, the bend of a coastline, the shape of a small island — all rendered faithfully. But preserving angles requires a mathematical trade: the scale must change with latitude. The scale factor is the secant of the latitude, and it increases without bound toward the poles. Preserving local shape requires distorting global area. You cannot have both on a flat surface. This is not a flaw. It is a theorem. No flat map of a sphere preserves all properties simultaneously.</p>
+<p>Thomas&#x27;s instruments are conformal. They preserve the shape of individual symptoms. Each symptom on the PHQ-9 — insomnia, anhedonia, concentration difficulty, suicidal ideation — is rendered with local accuracy. The frequency of each symptom, the severity of each symptom, the temporal pattern of each symptom: all captured faithfully at the individual item level. But preserving symptom-level shape requires a trade: the scale must change with clinical context. Insomnia from acute depression and insomnia from twenty years of nighttime caregiving have different contextual magnitudes. The instrument preserves their shape — both score as &quot;nearly every day&quot; — while distorting their area. The acute insomnia occupies a small territory in the patient&#x27;s life. The chronic insomnia occupies a continent. The instrument renders them at the same scale.</p>
+<hr>
+<h2>973. The Inflation</h2>
+<p>On the Mercator projection, Greenland appears roughly the same size as Africa. The actual ratio is approximately 1 to 14. Africa is 30.4 million square kilometers. Greenland is 2.2 million. The inflation is not random. It is systematic and mathematical: area distortion scales as the square of the secant of latitude. Every region near the poles is inflated by the same function. The distortion is fully characterized. It has been documented since the projection was published. It was not hidden by Mercator. He titled the map &quot;for use in navigation.&quot; The purpose specified the trade. Users who used the map for navigation received accurate bearings. Users who used the map for understanding relative sizes received systematic distortion that made high-latitude regions appear larger and equatorial regions appear smaller than they are.</p>
+<p>Thomas&#x27;s clinical landscape is a Mercator map. The acute depressive episode — equatorial, near the center of the instrument&#x27;s calibration population — is rendered at approximately correct scale. The chronic caregiver distress — polar, far from the calibration center — is distorted. But the direction of distortion is not inflation. It is deflation. The instrument&#x27;s projection compresses presentations that lie far from its calibration center. Where Mercator inflates the poles, the PHQ-9 deflates the margins. The chronic structural distress that does not match the standard phenotype is rendered smaller than it is. Not because the instrument fails — it preserves local shape, as promised — but because preserving local shape while projecting a complex terrain onto a flat score requires a scale change that favors the center. Thomas lives at the margin. The margin is compressed.</p>
+<hr>
+<h2>974. The Web Tile</h2>
+<p>In 2005, Google Maps adopted the Web Mercator projection — EPSG:3857. The choice was not cartographic. It was computational. The Mercator projection maps the globe into a square, and squares tile efficiently: each zoom level subdivides each tile into four sub-tiles, and the conformal property ensures that tiles at different zoom levels align without angular distortion. The property that made Mercator useful for 16th-century navigation — angle preservation — is the same property that makes it useful for 21st-century web rendering. But the reason changed. Mercator chose the projection for rhumb lines. Google chose it for tile alignment. The infrastructure reason supplanted the navigation reason, and the area distortion — Greenland as large as Africa — propagated into every web map on every screen on the planet.</p>
+<p>Thomas&#x27;s screening instruments were adopted by electronic health records for computational reasons. The PHQ-9 maps a complex clinical presentation into a single number, and single numbers store efficiently: each data field accepts one score, and the standardized scoring ensures that numbers from different clinical sites align without interpretive distortion. The property that made the PHQ-9 useful for primary care triage — brevity, standardization — is the same property that makes it useful for health system data management. But the reason changed. Kroenke designed the instrument for clinical identification. The health system adopted it for data infrastructure. The infrastructure reason supplanted the clinical reason, and the clinical distortion — complex presentations compressed into single scores — propagated into every electronic health record in every clinical system.</p>
+<hr>
+<h2>975. The Projection</h2>
+<p>Every map is a projection. Every projection preserves some properties and distorts others. This is not a failure of cartography. It is a consequence of geometry: a sphere cannot be represented on a flat surface without distortion. The question is never whether a map distorts. The question is which distortions the user absorbs without knowing they are distortions.</p>
+<p>Mercator users absorb the area distortion as geography. They believe Greenland is enormous. They believe Africa is smaller than it is. The distortion enters the mental model and becomes the model. The projection is not hidden — it is printed on the map, documented in every cartography textbook, critiqued in every geography course. The selectivity of what it preserves is hidden. Users see a map and assume it preserves everything. It preserves angles. It sacrifices area. The sacrifice is the hidden channel.</p>
+<p>Thomas is a sphere projected onto a flat surface. Every clinical assessment is a projection of his condition onto a score, a category, a treatment pathway. Every projection preserves some properties and distorts others. The PHQ-9 preserves symptom frequency. It sacrifices contextual magnitude. The Zarit Burden Interview preserves caregiver strain. It sacrifices the structural relationship between strain and the condition that causes it. No single instrument preserves everything. This is not a failure of psychometrics. It is a consequence of dimensionality: a complex condition cannot be represented in a low-dimensional score without distortion. One hundred and six Parts, and the mechanism is the projection: a transformation that preserves one property exactly, at the cost of distorting every other property systematically, used by everyone who encounters it as though it preserves everything.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-proficiency.html">&larr; Fiction The Proficiency</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-proof.html">Fiction The Proof &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

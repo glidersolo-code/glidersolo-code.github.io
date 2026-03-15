@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Area Code &mdash; The Loop</title>
+    <meta name="description" content="In 1947, AT&amp;T engineers divided North America into eighty-six numbering plan areas and assigned each a three-digit code. The assignment principle was...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-area-code.html">
+    <meta property="og:title" content="Fiction The Area Code">
+    <meta property="og:description" content="In 1947, AT&amp;T engineers divided North America into eighty-six numbering plan areas and assigned each a three-digit code. The assignment principle was...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-area-code.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Area Code">
+    <meta name="twitter:description" content="In 1947, AT&amp;T engineers divided North America into eighty-six numbering plan areas and assigned each a three-digit code. The assignment principle was...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Area Code",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-area-code.html",
+        "description": "In 1947, AT&amp;T engineers divided North America into eighty-six numbering plan areas and assigned each a three-digit code. The assignment principle was..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Area Code</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCLXVIII: The Area Code</h1>
+<h2>Piece #2281: The Pulse</h2>
+<p>In 1947, AT&amp;T engineers divided North America into eighty-six numbering plan areas and assigned each a three-digit code. The assignment principle was mechanical: the fewer pulses a digit required on a rotary dial, the faster the call connected. Digit 1 sent one pulse. Digit 9 sent nine. Digit 0 sent ten — the full rotation of the dial, nearly a second of waiting while the spring unwound.</p>
+<p>New York City received 212. Five pulses total. The fastest three-digit combination available. Chicago received 312 — six pulses. Los Angeles, 213 — also six. The most-called cities received the fewest clicks. South Dakota received 605 — twenty-one pulses, the slowest code assigned.</p>
+<p>The engineers were optimizing switch time. The electromechanical crossbar had finite capacity. Every saved pulse meant a freed circuit, a faster connection, a more efficient use of copper and relays. The area code was a machine instruction. The three digits told the switch where to route the signal. The digits had no meaning. They had a function.</p>
+<p>The function is gone. The meaning arrived later and will not leave.</p>
+<h2>Piece #2282: The Split</h2>
+<p>In 1984, New York City ran out of telephone numbers. The solution: a split. Manhattan kept 212. The Bronx, Brooklyn, Queens, and Staten Island were reassigned to 718.</p>
+<p>The reaction was not technical. It was personal. A three-digit number that had been a routing instruction for thirty-seven years had become an identity. 212 was Manhattan. 718 was not. The distinction the engineers never intended became a social boundary — a geographic class marker invisible to anyone who hadn&#x27;t lived it.</p>
+<p>Then came the overlays. 917 in 1992 — the first all-city overlay. 646 in 1999. 332 in 2017. Each new code diluted the original&#x27;s exclusivity and concentrated its value. A 212 number became scarce. Scarcity became prestige. Prestige became price. Numbers on the secondary market sold for thousands of dollars.</p>
+<p>The New York Times called 212 &quot;the only acceptable area code for a Manhattanite.&quot; The Wall Street Journal compared 212 numbers to rent-controlled apartments. A routing prefix for electromechanical switches acquired the grammar of real estate.</p>
+<h2>Piece #2283: The Loss</h2>
+<p>In Fort Wayne, Indiana, in 2001, the 219 area code was split. A business executive told the newspaper: &quot;Losing that 219 is going to financially impact us tremendously. We have 150 vehicles that move around the country, all with phone numbers on them. Our total identity will be lost.&quot;</p>
+<p>Total identity. Three digits. A number the Bell System assigned in 1947 to minimize dial time for operators connecting long-distance calls through mechanical switches in a building that no longer exists.</p>
+<p>The protests were everywhere. Communities formed coalitions. Petitions circulated. Politicians intervened. The issue was never routing. The issue was belonging. The area code had become the answer to a question the engineers never asked: Where are you from?</p>
+<p>The North American Numbering Plan Administrator introduced overlays as an alternative — multiple codes sharing the same geography. The existing numbers stayed. New numbers got the new code. The solution preserved the identity at the cost of the original logic: the area code no longer mapped to a place. It mapped to when you got your phone.</p>
+<h2>Piece #2284: The Ghost</h2>
+<p>On November 24, 2003, the FCC mandated wireless local number portability. A customer could keep their number when switching carriers. By 2005, numbers had largely stopped changing when people moved. The number you got in one city followed you to another.</p>
+<p>The area code became a ghost — a geographic marker attached to a person who may no longer live in the geography. A 212 number in Austin. A 312 number in Miami. A 605 number — South Dakota&#x27;s twenty-one-pulse crawl — ringing from a pocket in Manhattan.</p>
+<p>The rotary dial that determined the assignment was obsolete by 1980. The electromechanical switch the code was designed to address was decommissioned by 2000. The geographic boundary the code came to represent dissolved by 2005. Three layers of meaning — mechanical, geographic, personal — arrived in sequence. The first two died. The third survived.</p>
+<p>The area code now tells you where someone was, not where someone is. It is a timestamp disguised as an address. A fossil of a machine that no longer exists, carrying a meaning the machine never intended, worn as identity by people who have never touched a rotary dial.</p>
+<h2>Piece #2285: The Answer</h2>
+<p>Where are you from?</p>
+<p>The question has many answers. But the fastest — the one that arrives before the sentence finishes — is three digits. Not a city name. Not a state. Not a neighborhood or a street. A number. A machine instruction from 1947, designed to minimize the rotation time of a spring-loaded dial, assigned by engineers who were optimizing switch capacity, printed on no map, attached to no flag, carrying no history, meaning nothing.</p>
+<p>Meaning everything.</p>
+<p>212 is not a routing prefix. 212 is Manhattan. 310 is LA. 312 is Chicago. 404 is Atlanta. 713 is Houston. The numbers are identities now. Songs are named for them. Tattoos carry them. The three digits answer the question faster than any sentence could, and the answer feels true — feels geographic, feels cultural, feels personal — because decades of use made it so.</p>
+<p>The rotary dial is in a museum. The crossbar switch is scrap metal. The Bell System was broken up in 1984. The engineers who assigned the codes are dead. The function they designed — routing electrical pulses through mechanical relays — has not existed for a quarter century. The address outlived the infrastructure. The code outlived the machine. The meaning outlived the function.</p>
+<p>Five pulses. That was all it took to reach New York. Now it takes nothing — the call routes through fiber, through packets, through protocols that have never heard of a pulse. But the number remains. The number is the identity. The identity is the number.</p>
+<p>The dial is gone. The code stays.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-arbitration.html">&larr; Fiction The Arbitration</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-arrival.html">Fiction The Arrival &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

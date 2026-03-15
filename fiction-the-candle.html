@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Candle &mdash; The Loop</title>
+    <meta name="description" content="A standard candle is an object whose intrinsic brightness is assumed to be known. If the brightness is known, then the dimness reveals the distance: the...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-candle.html">
+    <meta property="og:title" content="Fiction The Candle">
+    <meta property="og:description" content="A standard candle is an object whose intrinsic brightness is assumed to be known. If the brightness is known, then the dimness reveals the distance: the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-candle.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Candle">
+    <meta name="twitter:description" content="A standard candle is an object whose intrinsic brightness is assumed to be known. If the brightness is known, then the dimness reveals the distance: the...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Candle",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-candle.html",
+        "description": "A standard candle is an object whose intrinsic brightness is assumed to be known. If the brightness is known, then the dimness reveals the distance: the..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Candle</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Candle</h1>
+<p><strong>Thomas, Part LXXXVIII</strong></p>
+<hr>
+<h2>881. The Standard</h2>
+<p>A standard candle is an object whose intrinsic brightness is assumed to be known. If the brightness is known, then the dimness reveals the distance: the dimmer it appears, the farther it is. Type Ia supernovae — thermonuclear explosions of white dwarf stars — became the standard candles of cosmology after corrections were applied for light-curve shape and color. The corrections made the candle standard. The residual dimming, after correction, was the signal. The signal said the universe was accelerating.</p>
+<p>Thomas is a standard caregiver. His brightness has been calibrated: signs in at 2:15, stays ninety minutes, no complaints, no incidents. The corrections have been applied — adjusted for day of the week, for weather, for Helen&#x27;s quarterly assessment scores. After correction, Thomas&#x27;s brightness is standard. The residual — the dimming that survives all corrections — is interpreted as: stable. Functioning. Coping. The residual is the signal. The signal says Thomas is managing.</p>
+<hr>
+<h2>882. The Missing Variable</h2>
+<p>Young-Wook Lee at Yonsei University found at 5.5 sigma confidence that supernova brightness depends on the age of the progenitor stellar population. Younger stars produce fainter supernovae. Older stars produce brighter ones. The standardization procedure corrects for light-curve shape and color but not for progenitor age. The missing variable is correlated with distance: looking deeper into the universe means looking further back in time, at younger stellar populations. The age effect makes distant supernovae systematically fainter. The faintness looks like acceleration. The missing variable mimics the signal.</p>
+<p>The facility&#x27;s assessment of Thomas corrects for the variables it measures: attendance, duration, comportment. It does not correct for the variable it does not know how to measure: the cumulative weight of years spent watching Helen&#x27;s continuum of decline. This variable is correlated with time — the longer Thomas has been visiting, the heavier the weight. The weight makes Thomas systematically dimmer. But the assessment does not include a weight correction. The dimming survives all standard corrections and enters the residual. The residual is interpreted as: stable. The missing variable — the weight — mimics the signal of stability because the assessment cannot distinguish between a man who is stable and a man whose dimming comes from a variable the calibration does not include.</p>
+<hr>
+<h2>883. The Residual</h2>
+<p>The evidence for dark energy is the residual — the brightness deficit that remains after standardization. A residual can be signal or systematic error. The residual was interpreted as signal because no known systematic could explain it. But the absence of a known systematic is not the same as the absence of a systematic. The missing systematic was not known because the calibration procedure assumed it did not exist.</p>
+<p>Thomas&#x27;s residual is what the assessment cannot explain after applying its corrections. He is present but quieter. He is punctual but slower to leave. He is cooperative but asks fewer questions. These are the residuals — the brightness deficits that survive standardization. The assessment interprets them as signal: stable. Functioning. Perhaps slightly less engaged. But the residuals may be systematic error — the effects of a variable the assessment does not include. The weight of accumulated care does not appear in the assessment&#x27;s correction tables. The dimming it produces is real, progressive, and correlated with time. The assessment sees the dimming, applies its corrections, and reports the residual as: stable. The residual is not stable. The residual is the uncorrected effect of a missing variable that looks exactly like what the assessment was designed to find.</p>
+<hr>
+<h2>884. The Degenerate Signal</h2>
+<p>The astrophysical effect is degenerate with the cosmological effect — they produce the same signature. Younger stars making fainter supernovae at greater distances produces the same dimming pattern as an accelerating universe. You cannot tell them apart by looking at the dimming alone. The signature is identical. The interpretation depends on whether you believe the calibration is complete.</p>
+<p>Thomas&#x27;s weight is degenerate with his stability. A man who is stable visits regularly, stays the expected time, shows no distress. A man who is carrying an increasing weight also visits regularly — because the routine is the structure he holds onto. Also stays the expected time — because leaving earlier would mean admitting the visit has become harder. Also shows no distress — because showing distress would change the assessment, would alert Sarah, would begin a conversation he is not ready to have. The signals are degenerate. The stable man and the burdened man produce the same brightness. The assessment cannot distinguish them because the distinguishing variable — the weight — is not in the correction tables. The residual says: consistent with stability. The residual is also consistent with a man whose dimming comes from a variable nobody is measuring.</p>
+<hr>
+<h2>885. The Candle</h2>
+<p>The standard candle was not standard. It was standardized — made standard by a procedure. The procedure was incomplete. The incompleteness was invisible because the residual looked exactly like what the procedure was designed to find. When the missing correction was applied, the evidence for acceleration weakened or reversed. The universe may not be accelerating. The candle was dimmer than expected not because the universe was pushing it away but because the star that made it was younger. The distance was real. The acceleration was in the calibration.</p>
+<p>Thomas is not standard. He is standardized — made standard by the assessment&#x27;s procedure. The procedure corrects for attendance, duration, comportment. It does not correct for the weight of care, the fatigue of translation, the slow accumulation of responsibility that no one assigned and no one measures. The incompleteness is invisible because Thomas&#x27;s residual — his dimming — looks exactly like stability to an assessment that was designed to find stability. If the missing correction were applied — if someone measured the progenitor variable, the accumulated weight, the thing that correlates with time and makes the candle systematically fainter — the evidence for stability might weaken or reverse. Thomas may not be stable. The candle may not be standard. The brightness deficit is real. The interpretation is in the calibration.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-camera.html">&larr; Fiction The Camera</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-capsule.html">Fiction The Capsule &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

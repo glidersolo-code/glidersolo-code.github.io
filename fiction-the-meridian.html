@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Meridian &mdash; The Loop</title>
+    <meta name="description" content="Thomas drew two lines on a globe. The first — the equator — he drew without hesitation. It was determined by the spin of the planet. The plane...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-meridian.html">
+    <meta property="og:title" content="Fiction The Meridian">
+    <meta property="og:description" content="Thomas drew two lines on a globe. The first — the equator — he drew without hesitation. It was determined by the spin of the planet. The plane...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-meridian.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Meridian">
+    <meta name="twitter:description" content="Thomas drew two lines on a globe. The first — the equator — he drew without hesitation. It was determined by the spin of the planet. The plane...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Meridian",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-meridian.html",
+        "description": "Thomas drew two lines on a globe. The first — the equator — he drew without hesitation. It was determined by the spin of the planet. The plane..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Meridian</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXCVIII: The Meridian</h1>
+<h2>Piece #2431: The Equator and the Line</h2>
+<p>Thomas drew two lines on a globe. The first — the equator — he drew without hesitation. It was determined by the spin of the planet. The plane perpendicular to the axis of rotation. Physics chose it. Any civilization on any planet with axial rotation would draw the same line.</p>
+<p>The second — the prime meridian — he could not draw without making a choice. North-south lines were all equivalent. No physics distinguished one from another. The equator had a derivation. The meridian had only a decision.</p>
+<p>He placed his finger on Greenwich, England. Zero degrees. He moved it to Paris — 2°20&#x27; east. To the Azores — roughly 25° west. To Jerusalem, to Rome, to the Great Pyramid of Giza. Every culture that had thought about it had placed zero somewhere different. The number zero, on this axis, was a claim.</p>
+<h2>Piece #2432: The Charts</h2>
+<p>Thomas counted the charts. By 1884, over two-thirds of the world&#x27;s commercial shipping used nautical charts referenced to Greenwich. He asked why.</p>
+<p>Not scientific priority. The Paris Observatory was founded in 1667 — eight years before Greenwich. Cassini&#x27;s measurements at Paris were among the most precise in the world.</p>
+<p>Not geographic logic. Greenwich sat on the Thames, east of London. It was not at a significant geographic landmark. It was not on a major trade route.</p>
+<p>Naval power. The British Royal Navy dominated the world&#x27;s oceans from the mid-eighteenth century through the nineteenth. The Nautical Almanac, published from Greenwich since 1767, became the navigator&#x27;s bible. Admiralty charts — referenced to Greenwich, updated frequently, trusted globally — were the standard. Ships that wanted the best charts used British charts. British charts used Greenwich.</p>
+<p>Thomas traced the chain. Power → charts → standard → convenience. The infrastructure was in place before the vote was taken.</p>
+<h2>Piece #2433: The Vote</h2>
+<p>October 13, 1884. Washington, D.C. Forty-one delegates from twenty-five nations.</p>
+<p>Thomas read the proceedings. The British argument: &quot;maximal global utility.&quot; Most ships already use Greenwich. Changing would require reprinting thousands of charts. The cost would be enormous. The practical argument was irresistible.</p>
+<p>The French argument: neutrality. A truly international meridian should not pass through any national observatory. The metric system had succeeded because it was defined by the Earth, not by France. Jules Janssen, astronomer, proposed the Azores — a meridian at sea, belonging to no nation.</p>
+<p>The vote: 22 for Greenwich, 1 against, 2 abstentions.</p>
+<p>Thomas noted the abstentions. France. Brazil. France would not formally adopt the Greenwich meridian until 1911 — twenty-seven years of silent protest, French charts still referencing the Paris meridian at 2°20&#x27;14.03&quot; east.</p>
+<p>He reread the British argument. &quot;Most ships already use it.&quot; The argument was true. It was also circular. Greenwich was convenient because it was already standard. It was already standard because the Navy had made it standard. The vote ratified an accomplished fact. The accomplished fact was the product of the empire that presented it as practical convenience.</p>
+<h2>Piece #2434: The Offset</h2>
+<p>Thomas stood at the Royal Observatory at Greenwich — or rather, he studied the photographs. The brass line in the courtyard. Tourists straddling it: one foot in the Eastern Hemisphere, one in the Western. Millions of photographs. The line was one of the most photographed features in London.</p>
+<p>Then he checked the GPS coordinates. Zero degrees longitude, as defined by the World Geodetic System 1984 — the coordinate system used by every GPS receiver on the planet — was not at the brass line. It was 102.478 meters to the east. In the park. Unmarked.</p>
+<p>Thomas read the explanation. The Airy Transit Circle — the telescope installed by Astronomer Royal George Biddell Airy in 1851 — had defined the prime meridian by astronomical observation. Stars seen through the crosshairs. When satellite geodesy replaced telescope-based observation, the definition shifted. The IERS Reference Meridian was defined by the center of mass of the Earth. The deflection of the vertical at Greenwich — the angle between the local gravity vector and the line to Earth&#x27;s center — created a 5.3-arcsecond offset. At the latitude of Greenwich, 5.3 arcseconds was 102 meters.</p>
+<p>The line had moved. The monument had not.</p>
+<h2>Piece #2435: The Tourist</h2>
+<p>Thomas imagined a tourist. She stands on the brass line. She takes a photograph. She checks her phone&#x27;s GPS. The phone says she is at 0°0&#x27;5.3&quot;W — five arcseconds west of the prime meridian. She is standing on the wrong zero.</p>
+<p>She will not notice. The monument is more persuasive than the coordinate. The brass line is visible, embedded in stone, flanked by signs explaining the history. The actual prime meridian — 102 meters to the east, in the grass — has no marker.</p>
+<p>Thomas thought about the two concealments. The first: power performed as convenience. The 1884 conference voted for Greenwich because it was &quot;already in use.&quot; The use was the product of British naval supremacy. The supremacy was invisible in the argument. The convenience was the alibi.</p>
+<p>The second: the monument performed the line. The brass strip was installed when the line was there. The line left. The brass strip remained. The tourists remained. The photograph remained. Zero was in the park. Zero was unmarked. The monument performed the meridian the meridian had abandoned.</p>
+<p>Thomas looked at the brass line and the unmarked grass 102 meters east. Two kinds of concealment, separated by 130 years and 102 meters. One was political: power disguised as practicality. The other was physical: a monument outlasting the thing it commemorated. Together they told the same story. The line was never where it needed to be. It was where power put it. And when the definition moved, the monument stayed — because monuments are harder to move than definitions.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-medal.html">&larr; Fiction The Medal</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-merv.html">Fiction The Merv &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

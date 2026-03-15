@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Temperature &mdash; The Loop</title>
+    <meta name="description" content="Carl Reinhold August Wunderlich was a professor of medicine at the University of Leipzig when he published Das Verhalten der Eigenwärme in Krankheiten in...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-temperature.html">
+    <meta property="og:title" content="Fiction The Temperature">
+    <meta property="og:description" content="Carl Reinhold August Wunderlich was a professor of medicine at the University of Leipzig when he published Das Verhalten der Eigenwärme in Krankheiten in...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-temperature.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Temperature">
+    <meta name="twitter:description" content="Carl Reinhold August Wunderlich was a professor of medicine at the University of Leipzig when he published Das Verhalten der Eigenwärme in Krankheiten in...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Temperature",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-temperature.html",
+        "description": "Carl Reinhold August Wunderlich was a professor of medicine at the University of Leipzig when he published Das Verhalten der Eigenwärme in Krankheiten in..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Temperature</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Temperature</h1>
+<p><strong>Thomas, Part CXIV</strong></p>
+<hr>
+<h2>1011. The Million</h2>
+<p>Carl Reinhold August Wunderlich was a professor of medicine at the University of Leipzig when he published <em>Das Verhalten der Eigenwärme in Krankheiten</em> in 1868. The work reported approximately one million axillary temperature measurements from approximately 25,000 patients at the Leipzig University Hospital over an unspecified period in the 1850s and 1860s. From these measurements, Wunderlich derived the value 37 degrees Celsius — 98.6 degrees Fahrenheit — as the normal temperature of the human body. The study was, by the standards of its time, massive. One million measurements. Twenty-five thousand patients. The number was not a guess. It was an empirical average, derived from observation, calculated from data. The value entered the medical literature. The medical literature entered the clinical thermometer. The clinical thermometer entered the clinic. The clinic entered the chart. The chart entered Thomas.</p>
+<p>Thomas&#x27;s temperature is taken at every clinical visit. A nurse places a thermometer in his ear, under his tongue, or against his forehead. The reading is recorded in the chart and compared to 98.6 degrees Fahrenheit — the value derived from axillary measurements of patients in a German hospital in the 1860s. The patients were hospitalized. Many likely had subclinical infections that would have elevated their temperatures slightly. The thermometers available in the 1860s had an accuracy of approximately plus or minus one degree Fahrenheit. The measurement site was axillary — systematically lower than oral, which is systematically lower than rectal. The value that emerged from these measurements was published as a single number. The single number was rounded. The rounded number was converted between Celsius and Fahrenheit. The converted number was treated as a biological constant.</p>
+<hr>
+<h2>1012. The Decline</h2>
+<p>Philip Mackowiak, Steven Wasserman, and Myron Levine at the University of Maryland published &quot;A Critical Appraisal of 98.6°F&quot; in the <em>Journal of the American Medical Association</em> (268(12):1578-1580, 1992). They measured oral temperatures of 148 healthy volunteers and found a mean of 98.2 degrees Fahrenheit — 36.8 degrees Celsius. The study concluded that 98.6 was too high. In 2020, Myroslava Protsiv, Catherine Ley, Joanne Lankester, Trevor Hastie, and Julie Parsonnet at Stanford University published &quot;Decreasing human body temperature in the United States since the Industrial Revolution&quot; in <em>eLife</em> (9:e49555). They analyzed temperature data from three cohorts spanning 157 years: Union Army veterans (1860-1940), National Health and Nutrition Examination Survey I participants (1971-1975), and Stanford Translational Research Integrated Database Environment patients (2007-2017). Body temperature had decreased by approximately 0.03 degrees Celsius per birth decade — a decline consistent across cohorts, persistent after adjusting for age, sex, body size, and time of day. The likely explanation: reduced chronic infection due to improved sanitation, antibiotics, and public health measures; reduced chronic inflammation; changes in metabolic rate. The value that Wunderlich measured was probably correct for Wunderlich&#x27;s population. It is not correct for the current population. The population changed. The standard did not.</p>
+<p>Thomas&#x27;s clinical baselines were established in his first years of life. His sodium at 134, his weight trajectory, his developmental milestones — each was recorded, entered into the chart, and became the reference against which future values are compared. Some of these baselines are Thomas&#x27;s genuine normal. Some reflect the medications, the feeding difficulties, the seizure disorder that were present when the baselines were established. If those conditions change — if a medication is discontinued, if feeding improves, if seizure frequency decreases — the baselines may no longer represent Thomas&#x27;s physiology. But the baselines are in the chart. The chart does not re-derive them. Baselines, once established, become the standard. The standard persists because standards persist.</p>
+<hr>
+<h2>1013. The Constant</h2>
+<p>The speed of light is a physical constant: 299,792,458 meters per second, exact by definition since 1983. It does not change. It cannot change. It is a property of the universe. Normal body temperature was treated as this kind of constant — a number to be learned, not a number to be checked. Medical students memorized 98.6. Clinical thermometers were manufactured with a mark at 98.6. Triage protocols were written with 98.6 as the baseline. Fever was defined as departure from 98.6. The treatment of the number as a constant had a specific consequence: nobody remeasured it. For 124 years — from Wunderlich&#x27;s publication in 1868 to Mackowiak&#x27;s reappraisal in 1992 — the value persisted without systematic challenge. A physical constant does not require remeasurement. If body temperature is a constant, there is no reason to re-derive it. The classification of the value as a constant prevented the observation that would have revealed it was not a constant.</p>
+<p>Thomas&#x27;s diagnoses are treated as constants. A diagnosis, once entered in the chart, persists. It is carried forward at every visit, listed in the problem list, included in every referral letter. The diagnosis represents a clinical judgment made at a specific time, by a specific clinician, using the information available at that time. But the chart treats it as a discovered fact — a property of Thomas, like the speed of light is a property of the universe. Diagnoses, once entered, are rarely re-derived. They are checked against — compared to, but not recalculated. If the original judgment was influenced by the information available at the time — by the medications Thomas was on, the developmental stage he was in, the clinical framework the clinician was using — and if those factors change, the diagnosis may no longer apply. But the chart does not prompt remeasurement. The constant persists because constants, by definition, do not change.</p>
+<hr>
+<h2>1014. The Fever</h2>
+<p>Fever is defined by departure from normal. If normal is 98.6 degrees Fahrenheit, then fever begins at some threshold above it — commonly 100.4 degrees Fahrenheit (38.0 degrees Celsius), a departure of 1.8 degrees from the stated normal. If the actual normal is 98.2 — as Mackowiak found — then 100.4 represents a departure of 2.2 degrees, a larger deviation than intended. The threshold was calibrated to the standard. The standard was wrong. The threshold inherited the error. A patient with a temperature of 100.0 — a true deviation of 1.8 degrees from 98.2, clinically significant — would not meet the threshold for fever. The definition would classify them as afebrile. The classification would be based on the standard, and the standard would be based on Wunderlich, and Wunderlich would be based on axillary measurements in Leipzig in the 1860s, and the patient would be sitting in a clinic in 2026.</p>
+<p>Thomas&#x27;s clinical thresholds are calibrated to standards. His medication levels are compared to therapeutic ranges derived from population studies. His developmental milestones are compared to normative data derived from reference populations. His weight is compared to growth curves derived from large cohorts. Each threshold was calibrated to a standard, and each standard was derived from a specific population at a specific time using specific methods. If the standard is slightly off — as 98.6 is slightly off — the threshold inherits the offset. The offset is invisible because the threshold is presented as a fact, not as a calculation, and the calculation&#x27;s inputs are not displayed alongside the result. The thermometer says 100.0. The chart says: no fever. The chart does not say: no fever relative to a standard derived from hospitalized patients in Leipzig in the 1860s, measured axillarily, with thermometers accurate to plus or minus one degree, in a population with higher rates of chronic infection than the current one.</p>
+<hr>
+<h2>1015. The Temperature</h2>
+<p>Wunderlich measured 25,000 patients. Thomas is one patient. Wunderlich&#x27;s patients were in Leipzig, in the 1860s, hospitalized, measured axillarily, with 19th-century thermometers. Thomas is in the United States, in the 2020s, measured orally or tympanically, with digital thermometers accurate to 0.1 degrees. The populations are separated by 160 years, 5,000 miles, different disease burdens, different measurement methods, different instruments. The number connects them. 98.6 degrees Fahrenheit. The number was derived from them and applied to him. The derivation is invisible. The application is automatic. The thermometer reads Thomas&#x27;s body. The chart reads the thermometer. The chart compares the reading to 1868.</p>
+<p>One thousand and fifteen pieces, one hundred and fourteen Parts, and Thomas is compared to people who died before the germ theory of disease was established. The comparison is embedded in the thermometer&#x27;s display, the triage protocol&#x27;s threshold, the chart&#x27;s automatic flagging. The comparison is invisible because the standard is invisible — it is the background against which the measurement is read, the zero from which the deviation is calculated, the ground on which the figure stands. Thomas&#x27;s temperature is 98.4. The chart does not flag it. The chart has decided that Thomas is normal — relative to a population that would not recognize his thermometer, his medications, his diagnosis, or the century in which he lives.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-temperament.html">&larr; Fiction The Temperament</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-tempo.html">Fiction The Tempo &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

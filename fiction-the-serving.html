@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Serving &mdash; The Loop</title>
+    <meta name="description" content="Thomas reads the nutrition label on a pint of ice cream. Serving size: 2/3 cup. Servings per container: about 3. He scoops ice cream into a bowl. The...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-serving.html">
+    <meta property="og:title" content="Fiction The Serving">
+    <meta property="og:description" content="Thomas reads the nutrition label on a pint of ice cream. Serving size: 2/3 cup. Servings per container: about 3. He scoops ice cream into a bowl. The...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-serving.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Serving">
+    <meta name="twitter:description" content="Thomas reads the nutrition label on a pint of ice cream. Serving size: 2/3 cup. Servings per container: about 3. He scoops ice cream into a bowl. The...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Serving",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-serving.html",
+        "description": "Thomas reads the nutrition label on a pint of ice cream. Serving size: 2/3 cup. Servings per container: about 3. He scoops ice cream into a bowl. The..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Serving</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXVII: The Serving</h1>
+<h2>Piece #1526: The Reference</h2>
+<p>Thomas reads the nutrition label on a pint of ice cream. Serving size: 2/3 cup. Servings per container: about 3. He scoops ice cream into a bowl. The scoop is not 2/3 cup. The scoop is what fits in the spoon, repeated until the bowl looks right. He does not own a 2/3 cup measure. The serving size is not what Thomas eats. It is what the FDA says people customarily eat, based on consumption survey data. The Reference Amount Customarily Consumed — RACC — was established in 1993 from USDA surveys conducted in 1977-78 and 1987-88. Ice cream was set at 1/2 cup. In 2016, the FDA updated it to 2/3 cup, based on 2003-2008 NHANES data showing that consumption had increased by more than 25 percent. The serving size followed the eater. It did not lead the eater. It was supposed to describe behavior, not prescribe it. But on the label, &quot;Serving Size: 2/3 cup&quot; reads as instruction. The format of the label converts a backward-looking survey statistic into a forward-looking dietary norm.</p>
+<h2>Piece #1527: The Container</h2>
+<p>Before 2016, a 20-ounce bottle of soda was labeled as 2.5 servings. The RACC for beverages was 8 fluid ounces — one cup — based on the 1977-78 survey. A bottle designed, marketed, sold, priced, and consumed as a single-serving product was labeled as two and a half servings. The consumer who glanced at the label saw 100 calories. The consumer who multiplied by 2.5 got 250. The label told the truth. The format of the truth made the multiplication optional. In 2016, the FDA ruled that packages which &quot;can reasonably be consumed at one eating occasion&quot; must be labeled as a single serving. The 20-ounce bottle became one serving. The calories doubled on the label. The soda did not change. The number changed. The rule corrected the label&#x27;s relationship to the bottle. It did not correct the bottle.</p>
+<h2>Piece #1528: The Dual Column</h2>
+<p>The 2016 rule introduced dual-column labeling. Large packages that could be consumed in one or multiple sittings — a pint of ice cream, a bag of chips — must now display both per-serving and per-package nutrition. The consumer sees two columns: one for the serving, one for the whole thing. The dual column solves the multiplication problem. But it introduces a comparison problem. The per-serving column anchors the eye. The per-package column is the context. The consumer who reads the per-serving column first has already calibrated. The 230 calories per serving feels moderate. The 920 calories per package feels excessive. Both are the same ice cream. The dual column presents two frames for the same food, and the consumer&#x27;s judgment depends on which column they read first — a sequence effect that the label&#x27;s layout determines and the label&#x27;s format conceals.</p>
+<h2>Piece #1529: The Survey</h2>
+<p>The 1977-78 USDA survey that anchored the original RACCs was conducted on 37,785 individuals over three days. The survey asked what people ate, not what they should eat. But the RACC — Reference Amount Customarily Consumed — became the label&#x27;s serving size, and the label&#x27;s serving size became the norm. A bagel in 1977 weighed approximately 55 grams. The RACC for bagels was set at 55 grams. By 2000, the average bakery bagel weighed 100 to 110 grams — nearly double. The label still said 55 grams. The consumer eating a modern bagel was eating two servings of a food presented as one physical unit. The RACC described 1977. The bagel arrived from 2000. The label did not update until 2020. For twenty-three years, the gap between the survey and the shelf grew wider, and the label — the thing designed to help the consumer compare — compared the consumer&#x27;s food to a food that no longer existed.</p>
+<h2>Piece #1530: The Fraction</h2>
+<p>Thomas finishes the pint of ice cream. Three servings, the label said. He ate one container. The label arithmetic says he consumed three servings of ice cream. His experience says he ate a pint. The label&#x27;s servings are a fraction of the container. The container is the reality. The fraction is the format. Nobody eats 2/3 of a cup of ice cream because the label says so. Everybody eats until the bowl or the container or the appetite says stop. The serving size divides the container into units the label can use. The label uses the units to present per-serving numbers that the consumer can compare. The comparison is the purpose. The serving is the tool. The tool does not describe how people eat. The tool describes how labels compare. And the consumer, reading the label, mistakes the tool for the description — because the label says &quot;Serving Size,&quot; and a serving is what you eat, and what you eat is not what the label says you eat, and the distance between these two meanings is the space where the format does its work.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-selection.html">&larr; Fiction The Selection</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-seven-day.html">Fiction The Seven Day &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

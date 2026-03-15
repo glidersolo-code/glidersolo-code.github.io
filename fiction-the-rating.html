@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Rating &mdash; The Loop</title>
+    <meta name="description" content="New York, 1909. John Moody published his first ratings of railroad bonds. A letter: Aaa. Aa. A. Baa. Ba. B. Caa. Ca. C. The letters ranked...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-rating.html">
+    <meta property="og:title" content="Fiction The Rating">
+    <meta property="og:description" content="New York, 1909. John Moody published his first ratings of railroad bonds. A letter: Aaa. Aa. A. Baa. Ba. B. Caa. Ca. C. The letters ranked...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-rating.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Rating">
+    <meta name="twitter:description" content="New York, 1909. John Moody published his first ratings of railroad bonds. A letter: Aaa. Aa. A. Baa. Ba. B. Caa. Ca. C. The letters ranked...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Rating",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-rating.html",
+        "description": "New York, 1909. John Moody published his first ratings of railroad bonds. A letter: Aaa. Aa. A. Baa. Ba. B. Caa. Ca. C. The letters ranked..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Rating</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXIII: The Rating</h1>
+<h2>Piece #1306: The Letter</h2>
+<p>New York, 1909. John Moody published his first ratings of railroad bonds. A letter: Aaa. Aa. A. Baa. Ba. B. Caa. Ca. C. The letters ranked creditworthiness — the likelihood that the borrower would repay. Henry Varnum Poor had been publishing financial analysis of railroads since 1860; Standard Statistics and Poor&#x27;s merged in 1941 to become Standard &amp; Poor&#x27;s. Fitch Ratings joined the business in 1924. Thomas noted: three private companies in one city — New York — assigned letters to the debts of corporations, municipalities, and sovereign nations worldwide. The letters appeared on bond prospectuses, in regulatory filings, in pension fund mandates. AAA meant safety. The letter did not explain its reasoning. The letter did not show its work. The letter spoke.</p>
+<h2>Piece #1307: The Payer</h2>
+<p>Who pays for a bond rating? The issuer. The entity whose debt is being rated pays the agency to rate it. Thomas traced the logic. A corporation wants to sell bonds. To sell bonds at a favorable interest rate, it needs a high rating. It hires a rating agency — Moody&#x27;s, S&amp;P, or Fitch — and pays the agency to evaluate its creditworthiness. The agency produces a letter. The letter is experienced by investors as an independent assessment of the borrower&#x27;s ability to repay. The assessment is produced by a company paid by the borrower to produce it. The &quot;issuer pays&quot; model had existed since the 1970s — before that, investors paid for the ratings. The reversal was complete. The buyer of the product (the investor) reads a rating paid for by the seller of the product (the issuer). The payment is disclosed. The conflict is visible. The conflict persists because the alternative — investor-pays — collapsed when ratings became freely available.</p>
+<h2>Piece #1308: The Triple</h2>
+<p>In 2006 and 2007, the three major rating agencies assigned AAA ratings — the highest — to tranches of collateralized debt obligations backed by subprime mortgages. The mortgages were issued to borrowers with poor credit histories, adjustable rates, and little documentation. The CDO structure was supposed to distribute risk through diversification. The models assumed that housing prices would not decline nationally. The assumption was embedded in the model. The model produced the letter. The letter said AAA. By 2008, the securities were worthless. The AAA rating had migrated from a description of credit quality to a cause of the crisis: investors bought the securities because of the letter, pension funds were mandated to hold AAA-rated paper, regulatory capital requirements treated AAA as risk-free. Thomas wrote: the letter was not wrong about risk. The letter created the conditions under which the risk was taken.</p>
+<h2>Piece #1309: The Sovereign</h2>
+<p>S&amp;P downgraded the United States from AAA to AA+ on August 5, 2011. The announcement cited political brinkmanship over the debt ceiling and the trajectory of fiscal policy. Thomas examined the response. The Treasury Department found a two-trillion-dollar arithmetic error in S&amp;P&#x27;s analysis and notified the agency before publication. S&amp;P acknowledged the error and downgraded anyway. The President called it irresponsible. Congress held hearings. Stock markets fell. Thomas noted: a private company in New York, paid by bond issuers, using a methodology it does not fully disclose, issued a letter about the creditworthiness of the government that regulates it. The government disputed the arithmetic. The letter stood. Markets moved on the letter. The letter was legally classified as an opinion — protected speech, not a warranty, not subject to the same liability as an audit. A letter that moves trillions of dollars in capital allocation is an opinion. The opinion is experienced as a measurement.</p>
+<h2>Piece #1310: The Mandate</h2>
+<p>The Securities and Exchange Commission designates &quot;Nationally Recognized Statistical Rating Organizations&quot; — NRSROs. Bank capital requirements under Basel II and III reference NRSRO ratings. Pension funds are often mandated — by their own charters or by state law — to hold only investment-grade securities (BBB− or above). Money market funds are required to hold only top-rated paper. Thomas recognized the circularity. The government confers recognition on the rating agencies. The rating agencies&#x27; letters then determine what institutions the government regulates can own. An AAA letter from a private company becomes a regulatory gateway — a requirement for market access. The rating is no longer advisory. It is infrastructure. The letter does not simply describe creditworthiness. The letter determines which securities a pension fund is allowed to buy, which banks can count as high-quality capital, which money market funds can hold. The opinion has become a permit.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-rate.html">&larr; Fiction The Rate</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-rating-mpaa.html">Fiction The Rating Mpaa &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

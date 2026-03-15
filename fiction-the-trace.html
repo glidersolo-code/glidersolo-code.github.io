@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Trace &mdash; The Loop</title>
+    <meta name="description" content="Thomas straps the rubber tube around his own chest. Breathes in. Breathes out.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-trace.html">
+    <meta property="og:title" content="Fiction The Trace">
+    <meta property="og:description" content="Thomas straps the rubber tube around his own chest. Breathes in. Breathes out.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-trace.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Trace">
+    <meta name="twitter:description" content="Thomas straps the rubber tube around his own chest. Breathes in. Breathes out.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Trace",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-trace.html",
+        "description": "Thomas straps the rubber tube around his own chest. Breathes in. Breathes out."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Trace</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXXXVII: The Trace</h1>
+<h2>Piece #1876: The Pneumograph</h2>
+<p>Thomas straps the rubber tube around his own chest. Breathes in. Breathes out.</p>
+<p>The tube does not know what the breath is about. Fear of the question, fear of the questioner, fear of the room, fear of the fluorescent light buzzing overhead, fear of the clipboard, fear of the examiner&#x27;s pen, fear of the silence between questions, fear of one&#x27;s own heartbeat being too loud, too fast, too legible.</p>
+<p>The tube records expansion and contraction. Two motions. The tube cannot distinguish between the breath of a guilty man and the breath of an innocent man who understands that he is about to be judged by a rubber tube.</p>
+<p>This is the instrument. Not the machine — the machine is a box with motors and pens. The instrument is the assumption that the rubber tube can sort one fear from another.</p>
+<p>Thomas unstraps the tube. Breathes freely. The breath is identical. The tube is identical. The interpretation is the only thing that changes.</p>
+<h2>Piece #1877: The Comparison Question</h2>
+<p>Thomas plays the examiner.</p>
+<p>&quot;Before the age of twenty-five,&quot; he says to the empty room, &quot;did you ever take something that didn&#x27;t belong to you?&quot;</p>
+<p>The question is designed to make the truthful subject anxious. Everyone has taken something. A pen. A towel. A moment of someone&#x27;s time without asking. The question is vague enough to catch everyone and specific enough to make the catch feel personal.</p>
+<p>Then the relevant question: &quot;Did you sell classified information to a foreign government?&quot;</p>
+<p>The innocent subject, the theory says, will react more to the vague question — the one that touches real guilt. The guilty subject will react more to the specific one — the one that touches active betrayal.</p>
+<p>But Thomas knows the theory requires the innocent subject to feel more afraid of a stolen pen than of a false accusation of treason. It requires the wrongly accused to find espionage charges less threatening than memories of petty childhood theft.</p>
+<p>&quot;The question isn&#x27;t a control,&quot; Thomas says to the room. &quot;It&#x27;s a trap. And the trap works in one direction.&quot;</p>
+<h2>Piece #1878: Ames in the Chair</h2>
+<p>Thomas reads the debrief.</p>
+<p>Aldrich Ames. CIA. Soviet agent from 1985 to 1994. Every name he sold, every network he burned, every colleague he condemned to a bullet in a basement — and twice he sat in the polygraph chair, and twice the pens moved, and twice the examiner said: no significant response.</p>
+<p>1986. Active spy. Passed. The examiner noted one inconclusive response. Never resolved it. Moved on.</p>
+<p>1991. Still spying. Still passing. Ames would later tell the debriefers: &quot;There&#x27;s no special magic. Confidence is what does it. Confidence and a friendly relationship with the examiner.&quot;</p>
+<p>Confidence. Not a technique. Not a countermeasure. Not biofeedback training. Confidence. The belief that the machine could not read him — and the machine, reading only arousal, found none.</p>
+<p>Thomas puts the debrief down. Ten agents executed. The polygraph had certified their betrayer as clean.</p>
+<p>The machine did not fail. The machine was never capable of succeeding. The failure belonged to everyone who believed it was.</p>
+<h2>Piece #1879: The Confession</h2>
+<p>Thomas reads the NSA statistic.</p>
+<p>Ninety-five percent. Of all the information developed on employees who do not meet federal security guidelines — the drug use, the foreign contacts, the financial problems, the sexual vulnerabilities, the undisclosed criminal history — ninety-five percent comes from voluntary admissions during polygraph sessions.</p>
+<p>Not from the chart. Not from the pens. Not from the galvanic skin response or the pneumograph trace or the blood pressure fluctuation.</p>
+<p>From the mouth. The subject&#x27;s mouth. Opened by the subject&#x27;s belief that the machine would find the secret anyway.</p>
+<p>Thomas sits with the number. The machine&#x27;s real output is not the chart. The chart is the scenery. The machine&#x27;s real output is the confession — extracted not by physiological measurement but by the theater of physiological measurement. The sensors create a set. The examiner performs the role. The subject, believing they are in a scientific test, submits to an interrogation they would otherwise resist.</p>
+<p>The instrument does not detect deception. The instrument manufactures the conditions under which deception confesses itself. That is not the same thing. That has never been the same thing.</p>
+<h2>Piece #1880: The Frankenstein</h2>
+<p>Thomas reads John Larson&#x27;s last assessment of his own invention.</p>
+<p>&quot;A Frankenstein&#x27;s monster.&quot; That&#x27;s what Larson called it, near the end of his life. The medical student who had wanted to bring science to policing watched his instrument become something else entirely — a coercive tool dressed in the language of measurement, sold to every police department and government agency that wanted the appearance of certainty without the burden of evidence.</p>
+<p>Keeler took the instrument and made it a product. Backster took the product and made it a system. The government took the system and made it policy. At each step, the gap between what the machine measured and what the machine claimed widened, and at each step, the people in charge of the machine knew the gap was there, and at each step, the confessions the machine produced made the gap irrelevant.</p>
+<p>Thomas writes Larson&#x27;s word on the board. Frankenstein. Not the monster — the doctor. The one who built a thing and then watched it become something he never intended.</p>
+<p>But Larson was wrong about one thing. His invention did not escape his control. It was always this. The measurement was always the costume. The interrogation was always the function. The control question was always the trap. The chart was always the scenery.</p>
+<p>The monster was not the machine. The monster was the belief that a machine could sort truth from fear. Larson built the belief. Everything else followed.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-torch.html">&larr; Fiction The Torch</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-train-home.html">Fiction The Train Home &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

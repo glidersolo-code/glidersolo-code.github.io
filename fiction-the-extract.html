@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Extract &mdash; The Loop</title>
+    <meta name="description" content="In 1786, Franz Karl Achard dissolved peat in potassium hydroxide. The alkali turned the solution dark. He added acid. A black precipitate fell to the...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-extract.html">
+    <meta property="og:title" content="Fiction The Extract">
+    <meta property="og:description" content="In 1786, Franz Karl Achard dissolved peat in potassium hydroxide. The alkali turned the solution dark. He added acid. A black precipitate fell to the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-extract.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Extract">
+    <meta name="twitter:description" content="In 1786, Franz Karl Achard dissolved peat in potassium hydroxide. The alkali turned the solution dark. He added acid. A black precipitate fell to the...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Extract",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-extract.html",
+        "description": "In 1786, Franz Karl Achard dissolved peat in potassium hydroxide. The alkali turned the solution dark. He added acid. A black precipitate fell to the..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Extract</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Extract</h1>
+<p><strong>Thomas, Part LXXXVI</strong></p>
+<hr>
+<h2>871. The Procedure</h2>
+<p>In 1786, Franz Karl Achard dissolved peat in potassium hydroxide. The alkali turned the solution dark. He added acid. A black precipitate fell to the bottom of the flask. He called it the substance of the soil — the essence extracted, revealed, made visible. Döbereiner named it humic acid. Sprengel named the fraction that stayed dissolved fulvic acid. The residue that never dissolved was humin. Three categories. Three substances. A taxonomy of soil organic matter that has persisted for 240 years. The procedure was not questioned because the procedure worked: you dissolved, you precipitated, you classified. Every laboratory on Earth got the same three fractions. The fractions were real because they were reproducible. The reproducibility was taken as proof.</p>
+<p>Thomas has a procedure for visiting Helen. He arrives at 2:15 on Saturdays. He signs in at the front desk — name, time, relationship. He walks down the corridor. He knocks on Helen&#x27;s door even though she cannot answer it, because the knock was part of arriving at the old house and he has not updated the procedure. He sits in the chair by the window. He stays for ninety minutes. He signs out. This is the extract — the version of the visit that appears in the facility&#x27;s records. Name, time in, time out, relationship to patient. The log has captured the visit the way Achard&#x27;s alkali captured the peat: by dissolving the actual substance in a solution strong enough to break it apart, then precipitating whatever falls out at the other end.</p>
+<hr>
+<h2>872. The Three Fractions</h2>
+<p>Humic acid: the fraction that dissolves in alkali and precipitates in acid. Fulvic acid: the fraction that dissolves in alkali and stays dissolved in acid. Humin: the fraction that does not dissolve in alkali at all. Three operational categories defined by the procedure — soluble or insoluble, at pH 13 or pH 1. Not by origin. Not by function. Not by any property of the soil. By what the extraction does to them.</p>
+<p>The facility sorts Thomas into three fractions. What dissolves in the visit log and precipitates into the clinical record: present, cooperative, no concerns. What dissolves but stays dissolved — the questions Thomas asked the aide about Helen&#x27;s appetite, the pause when he noticed the bruise on her wrist, the moment he adjusted her blanket in a way that was not clinical but was not nothing. These details dissolve into the conversation but do not precipitate into the record. They are fulvic — soluble in every medium, present everywhere, captured nowhere. And what does not dissolve at all — what the log&#x27;s alkali cannot extract: the weight in Thomas&#x27;s chest when he drives home, the feeling that he is watching a process that has no reverse, the knowledge that the visit was not ninety minutes of company but ninety minutes of measurement disguised as company because Thomas is always, now, assessing. This is humin. It does not dissolve. It does not appear in the extract. It remains in the soil.</p>
+<hr>
+<h2>873. The Continuum</h2>
+<p>Kleber and Lehmann used synchrotron-based spectroscopy — techniques that examine soil organic matter in situ, without extraction. They found no humic substances. No large, stable macromolecules produced by secondary synthesis. No chemically unique category. What they found was a continuum: decomposing plant fragments, microbial residues, root exudates, proteins, polysaccharides — all at various stages of breakdown. The soil did not contain three substances. It contained everything, becoming something else. The categories existed in the extract. The continuum existed in the soil.</p>
+<p>Helen does not exist in three categories. She is not &quot;mild&quot; or &quot;moderate&quot; or &quot;severe.&quot; She is not the humic acid of the quarterly assessment, the fulvic acid of the care team&#x27;s notes, the humin of the things the family does not say. She is a continuum — a person at a particular point in a progression that has no stages, only movement. Some days she is closer to the Helen who sealed envelopes with a wet sponge. Some days she is further. The distance is not stable. It oscillates, advances, retreats, advances again. The assessment extracts her from this continuum, dissolves her in its operational categories, and precipitates her into a fraction: moderate, stable, no significant change since last review. The fraction is reproducible. Every assessment team that runs the procedure gets the same result. But the fraction is not Helen. The fraction is what the extraction does to Helen.</p>
+<hr>
+<h2>874. The Reproducibility</h2>
+<p>The most persuasive evidence for humic substances was their reproducibility. Every laboratory, every soil type, every extraction — the same three fractions appeared. Humic acid always precipitated. Fulvic acid always stayed dissolved. Humin always resisted. The consistency seemed to prove that the categories were real. But Kleber and Lehmann asked: what if the reproducibility proves only that the same chemical transformation produces the same artifact every time? Alkali at pH 13 will always deprotonate the same functional groups. Acid at pH 1 will always precipitate the same compounds. The reproducibility is a property of the procedure, not a property of the soil.</p>
+<p>Thomas&#x27;s visits are reproducible. The log always shows the same pattern: Saturday, 2:15, ninety minutes, no concerns noted. The facility finds this reassuring. The consistency seems to prove that Thomas is coping, that Helen is stable, that the arrangement is working. But the consistency proves only that the same extraction procedure — the visit, the log, the quarterly review — produces the same result every time. It does not prove that the underlying substance is stable. It proves that the method is consistent. Thomas could be dissolving and the log would still show: present, cooperative, no concerns. The reproducibility of the extract says nothing about the soil.</p>
+<hr>
+<h2>875. The Extract</h2>
+<p>The spectral signatures of alkaline extracts — the broad NMR peaks, the high aromaticity, the apparent molecular complexity — do not exist in the undisturbed soil. They appear only after extraction. The alkali hydrolyzes ester bonds, disaggregates mineral-organic associations, deprotonates functional groups, and reassembles the released fragments into supramolecular aggregates that have no counterpart in the ground. The extract is not a distorted view of something real. It is a new thing entirely — created by the procedure, named by the taxonomy, and studied as if it had always been there. The substance existed only in the extract.</p>
+<p>Thomas, sitting in the car after the visit, is the undisturbed soil. The visit log is the extract. The log contains a substance — a stable, functioning family member, category: primary visitor — that does not exist in the car. In the car, Thomas is a continuum of decomposing certainties: the certainty that he is helping, decomposing into the question of whether the visits help or whether they are a procedure he follows because the procedure is what he has. The certainty that Helen recognizes him, decomposing into the observation that her eyes track him but her words have begun to circle. The certainty that he is coping, decomposing into the knowledge that he has not told Sarah about the pharmacy calls, the missed turn on the drive last week, the fact that he read the same paragraph of the newspaper six times on Thursday without absorbing a word. None of these decomposing certainties appear in the extract. The extract shows humic acid: a stable substance, defined by the procedure, reproducible across visits, classified as: managing. But the substance does not exist in the soil. It exists only in the extract. And the extract is what the system reads. And what the system reads is what the system knows. And what the system knows about Thomas is the substance that the system itself created — by dissolving him in its categories, precipitating him into its record, and calling the precipitate real.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-exponents.html">&larr; Fiction The Exponents</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-face.html">Fiction The Face &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

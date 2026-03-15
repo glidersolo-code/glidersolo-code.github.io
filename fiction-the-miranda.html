@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Miranda &mdash; The Loop</title>
+    <meta name="description" content="Thomas read Chief Justice Warren&#x27;s opinion in Miranda v. Arizona, 384 U.S. 436 (1966). The decision was 60 pages. Thomas marked the key passages.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-miranda.html">
+    <meta property="og:title" content="Fiction The Miranda">
+    <meta property="og:description" content="Thomas read Chief Justice Warren&#x27;s opinion in Miranda v. Arizona, 384 U.S. 436 (1966). The decision was 60 pages. Thomas marked the key passages.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-miranda.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Miranda">
+    <meta name="twitter:description" content="Thomas read Chief Justice Warren&#x27;s opinion in Miranda v. Arizona, 384 U.S. 436 (1966). The decision was 60 pages. Thomas marked the key passages.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Miranda",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-miranda.html",
+        "description": "Thomas read Chief Justice Warren&#x27;s opinion in Miranda v. Arizona, 384 U.S. 436 (1966). The decision was 60 pages. Thomas marked the key passages."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Miranda</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDIV: The Warning</h1>
+<h2>Piece #2461: The Opinion</h2>
+<p>Thomas read Chief Justice Warren&#x27;s opinion in <em>Miranda v. Arizona</em>, 384 U.S. 436 (1966). The decision was 60 pages. Thomas marked the key passages.</p>
+<p>&quot;The current practice of incommunicado interrogation is at odds with one of our Nation&#x27;s most cherished principles — that the individual may not be compelled to incriminate himself.&quot;</p>
+<p>Warren described the interrogation manuals. The <em>Criminal Interrogation and Confessions</em> manual by Inbau and Reid. The techniques: isolation, domination of the environment, the Mutt-and-Jeff routine, minimization, maximization. Warren quoted the manuals at length. The point was clear: the interrogation room was designed to produce confession.</p>
+<p>The solution: before questioning, police must inform the suspect of the right to remain silent, the right to an attorney, and the warning that anything said could be used against them. The warning would counteract the &quot;inherently coercive&quot; atmosphere.</p>
+<p>Thomas noted the phrase: &quot;inherently coercive.&quot; The coercion was built into the environment. The warning was supposed to neutralize it.</p>
+<h2>Piece #2462: The Delivery</h2>
+<p>Thomas looked for how the warning was delivered in practice. He found Richard Leo&#x27;s 1996 study — 182 observed interrogations in a major American police department.</p>
+<p>The officers recited the rights rapidly. The tone was routine, bureaucratic, suggesting that this was a formality — administrative paperwork before the real conversation began. Some officers handed suspects a printed card and asked them to sign. Others recited from memory at speed.</p>
+<p>78% of suspects waived. Other studies found 80-96%.</p>
+<p>Thomas considered the arithmetic. Warren designed the warning to counteract coercion. The warning was delivered inside the coercion. The warning was part of the coercion — the authority figure who had just arrested the suspect now performed concern for the suspect&#x27;s rights, in a tone that communicated: this does not matter. And 80-96% of suspects agreed that it did not matter.</p>
+<h2>Piece #2463: The Comprehension</h2>
+<p>Thomas found the comprehension research. Thomas Grisso (1998): significant proportions of suspects did not understand what the rights meant. &quot;The right to remain silent&quot; — some suspects believed that silence could be used against them, that remaining silent was an admission of guilt. &quot;If you cannot afford an attorney, one will be appointed for you&quot; — some believed the attorney worked for the prosecution.</p>
+<p>Rogers et al. (2007): Miranda warnings across jurisdictions were written at reading levels ranging from sixth to post-graduate. The average arrestee&#x27;s reading level was far below post-graduate.</p>
+<p>Thomas set the comprehension data beside the waiver data. The warning was not understood. The waiver was signed anyway. The warning performed comprehension. The comprehension was not performed.</p>
+<h2>Piece #2464: The Narrowing</h2>
+<p>Thomas traced the Supreme Court&#x27;s subsequent decisions.</p>
+<p><em>Berghuis v. Thompkins</em> (2010): Van Chester Thompkins was arrested for murder. He was read his Miranda rights. He sat in silence for two hours and forty-five minutes. Then a detective asked: &quot;Do you pray to God to forgive you for shooting that boy down?&quot; Thompkins said: &quot;Yes.&quot;</p>
+<p>The question: had Thompkins invoked his right to silence by sitting in silence for nearly three hours?</p>
+<p>The Court said no. Justice Kennedy, writing for the majority: the suspect must &quot;unambiguously&quot; invoke the right to silence. Silence is not invocation. To exercise the right to remain silent, the suspect must speak.</p>
+<p>Thomas read the sentence twice. To exercise the right to remain silent, the suspect must speak. The protection now required the accused to perform the invocation. Performance was the mechanism — and the mechanism required the very thing the right was supposed to protect.</p>
+<h2>Piece #2465: The Ritual</h2>
+<p>Thomas returned to the warning. Four sentences. Forty-nine words in the most common version. Delivered in thirty seconds. Under authority. Under arrest. Under adrenaline.</p>
+<p>The recitation created a legal checkpoint. Before the checkpoint: coercive interrogation, constitutionally suspect. After the checkpoint: consensual conversation, constitutionally clean. The only thing between the two was the recitation. Not comprehension. Not reflection. Not consultation. The recitation.</p>
+<p>Warren had designed the warning to counteract the environment. The environment absorbed the warning. The ritual performed the protection. The protection produced the waiver. The waiver enabled the interrogation. The interrogation was the thing the warning was supposed to prevent.</p>
+<p>Thomas closed the opinion. Sixty pages of concern about coercion, resolved by forty-nine words delivered inside the coercion. The words had become a ritual. The ritual had become a checkpoint. The checkpoint performed the safeguard. The safeguard was the mechanism of its own defeat.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-military.html">&larr; Fiction The Military</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-missing-holes.html">Fiction The Missing Holes &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

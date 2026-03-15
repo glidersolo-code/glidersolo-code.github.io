@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Pyramid &mdash; The Loop</title>
+    <meta name="description" content="Thomas speaks to the shape that organized all the evidence.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-pyramid.html">
+    <meta property="og:title" content="Fiction The Pyramid">
+    <meta property="og:description" content="Thomas speaks to the shape that organized all the evidence.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-pyramid.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Pyramid">
+    <meta name="twitter:description" content="Thomas speaks to the shape that organized all the evidence.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Pyramid",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-pyramid.html",
+        "description": "Thomas speaks to the shape that organized all the evidence."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Pyramid</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXCVII: The Hierarchy</h1>
+<h2>Piece #1926: The Pyramid</h2>
+<p>Thomas speaks to the shape that organized all the evidence.</p>
+<p>You are the first thing they see. First week, first course, first slide. The evidence pyramid. A triangle with layers, each labeled: case reports at the base, then case-control studies, then cohort studies, then randomized controlled trials, then at the apex — meta-analyses of RCTs. The triangle ascends. The students&#x27; eyes ascend with it. Higher is better. Gold is at the top. Base metal at the bottom.</p>
+<p>You are a quality filter. That is what the lecture says. You rank evidence by the strength of its causal inference. Randomization controls for confounders that observational designs cannot eliminate. The RCT is the cleanest test. The meta-analysis of RCTs is the cleanest synthesis. Everything below is progressively more vulnerable to bias, confounding, reverse causation, selection effects. The ranking is real. The ranking addresses a real problem. Too much of medicine was tradition dressed as knowledge, and you corrected for that.</p>
+<p>But you are also a question filter. And that is what the lecture does not say.</p>
+<p>An RCT requires a definable intervention that can be randomly assigned. Poverty is not an intervention. Racism is not an intervention. Housing quality is not an intervention. Incarceration is not an intervention. Childhood exposure to environmental toxins is not an intervention. These are conditions — structural, distributed, long-term, multiply caused — and they cannot be delivered by pill, by injection, by surgical technique, by protocol. They cannot be randomized. They cannot be blinded. They cannot be studied by the method at the top of the pyramid.</p>
+<p>They can be studied. By cohort studies. By natural experiments. By quasi-experimental designs. But these methods sit in the middle of the pyramid. Their evidence is ranked lower. And &quot;lower quality&quot; reads, in practice, as &quot;less certain.&quot; Which reads as &quot;less real.&quot; Which reads as &quot;less important.&quot; The shape performs the demotion. The triangle says: these questions have lower-quality answers. The triangle does not say: these questions are harder to study by the method the triangle ranks highest.</p>
+<h2>Piece #1927: The Funding</h2>
+<p>Thomas speaks to the money that flows toward the apex.</p>
+<p>The pharmaceutical industry funds the majority of clinical RCTs. This is not a conspiracy. It is an incentive structure. An RCT costs millions. A Phase III trial can cost hundreds of millions. The funder needs a return. A patentable molecule generates a return. A surgical device generates a return. A diagnostic test generates a return. An improvement in housing conditions does not generate a return. An increase in the minimum wage does not generate a return. An investment in early childhood education does not generate a return — not to the funder, not in the form of intellectual property, not on the timeline of a quarterly earnings report.</p>
+<p>The pyramid ranks the methods. The funding flows to the questions that fit the top-ranked method. The questions that fit the top-ranked method are the questions with fundable answers. The pyramid does not mention funding. The pyramid presents itself as epistemology — a ranking of knowledge quality. The pyramid does not present itself as economics — a ranking of question profitability. But the two rankings correlate, because the method at the top requires funding that only profitable questions attract.</p>
+<p>The social determinants of health — income, education, employment, housing, social inclusion — explain more variation in health outcomes than any clinical intervention. The WHO Commission said this in 2008. Marmot said it in 2010. The evidence comes from decades of observational research, from cohort studies spanning continents and generations, from natural experiments created by policy changes. This evidence sits in the middle of the pyramid. At the top sit the drug trials. The pyramid&#x27;s ranking makes it look like we know more about pills than about poverty. We might. But the ranking reflects not just the quality of the evidence but the quantity of funding directed at each question, and the quantity of funding reflects not the importance of the question but the profitability of the answer.</p>
+<h2>Piece #1928: The GRADE</h2>
+<p>Thomas speaks to the correction that preserved the structure.</p>
+<p>GRADE — Grading of Recommendations Assessment, Development and Evaluation. Guyatt, Oxman, and colleagues, 2004 onward. The framework was a corrective. The rigid hierarchy had calcified. RCT evidence was treated as automatically high quality. Observational evidence was treated as automatically low quality. GRADE introduced nuance: RCT evidence could be downgraded for bias, inconsistency, indirectness, imprecision, publication bias. Observational evidence could be upgraded for large effect sizes, dose-response gradients, plausible confounding that would reduce the observed effect.</p>
+<p>The corrective was real. The nuance was genuine. But GRADE still starts RCT evidence at &quot;high&quot; and observational evidence at &quot;low.&quot; The starting positions are asymmetric. Observational studies must earn their way upward through demonstrated strength. RCT studies must be demonstrably flawed to move downward. The burden of proof is on the lower-ranked method to prove it deserves a higher ranking. The pyramid&#x27;s structure is preserved in the default settings.</p>
+<p>And the criteria for upgrading observational evidence — large effect sizes, dose-response gradients — are harder to meet for structural determinants precisely because their effects are diffuse, long-term, and multiply confounded. The effect of poverty on health is not a large, clean signal. It is a distributed pressure that manifests through dozens of pathways over decades. The dose-response gradient for housing quality is not a clean curve. It is a cloud of variables — square footage, mold, lead paint, neighborhood, social cohesion — interacting across a lifetime.</p>
+<p>GRADE was the right correction. GRADE preserved the asymmetry. The correction and the preservation coexist in the same framework. The pyramid was modified but not replaced. The apex remained the apex. The base remained the base. And the questions that structural causes address continued to start from &quot;low.&quot;</p>
+<h2>Piece #1929: The Determinants</h2>
+<p>Thomas speaks to the factors that explain the most and rank the least.</p>
+<p>Income. Education. Employment. Housing. Social inclusion. Food security. Early childhood development. Environmental quality.</p>
+<p>These are the social determinants of health. The WHO Commission on Social Determinants of Health, chaired by Michael Marmot, published <em>Closing the Gap in a Generation</em> in 2008. The message: the gradient in health outcomes across socioeconomic strata is steeper, more consistent, and more predictive than any clinical variable. Life expectancy in the poorest neighborhoods of Baltimore is twenty years shorter than in the wealthiest neighborhoods five miles away. Twenty years. No drug achieves that magnitude of effect. No surgery. No vaccine. No diagnostic test.</p>
+<p>The evidence for the social determinants comes from cohort studies, from natural experiments, from cross-national comparisons. The Whitehall studies (Marmot, 1978 onward) tracked British civil servants and found that each grade in the hierarchy — from clerical to professional to administrative — predicted a stepwise decrease in mortality. The hierarchy was the variable. The gradient was the finding. The finding was replicated across countries, across decades, across populations.</p>
+<p>This evidence sits in the middle of the pyramid. The pyramid does not say the social determinants are unimportant. The pyramid says the evidence for them is lower quality. And &quot;lower quality&quot; is a property of the method, not of the finding. The Whitehall studies are not flawed because they are observational. They are observational because the question cannot be studied any other way. No ethics board will randomize civil servants into different income brackets. No funder will pay for a trial that has no patentable outcome. No timeline will accommodate a study that requires thirty years of follow-up.</p>
+<p>The pyramid is agnostic toward questions. The pyramid ranks methods. But the ranking of methods creates a ranking of questions — and the questions that matter most to population health are the questions that the gold-standard method cannot touch.</p>
+<h2>Piece #1930: The Shape</h2>
+<p>Thomas speaks to the triangle that looked like an answer.</p>
+<p>The pyramid is a triangle. It points upward. The eye follows the point. The eye lands at the apex. The apex is the best. The base is the worst. The shape performs the judgment before the content is read. The shape says: this is a hierarchy of quality. The shape does not say: this is also a hierarchy of question amenability. The shape does not say: questions about pills are not more important than questions about poverty; they are more amenable to the method at the top.</p>
+<p>Cochrane wrote <em>Effectiveness and Efficiency</em> in 1972 because medicine needed discipline. Medicine was running on authority, on tradition, on &quot;in my experience.&quot; Cochrane was right. The corrective was needed. The RCT was the tool. The tool worked. The tool continued working. And somewhere between the corrective and the curriculum, the tool became the standard, the standard became the hierarchy, the hierarchy became the shape, and the shape became the way knowledge looks when it is trustworthy.</p>
+<p>The shape is a visual metaphor. Visual metaphors are powerful because they operate below the level of argument. The pyramid does not argue that RCTs are better than cohort studies. The pyramid <em>shows</em> it — through position, through geometry, through the gravitational metaphor of ascending quality. You do not argue with a shape. You look at it. You absorb it. You internalize the ranking. And when the next paper crosses your desk — a cohort study showing that housing quality predicts childhood asthma better than any pharmaceutical intervention — you place it in the middle of the pyramid without being told to. The shape taught you where it goes.</p>
+<p>The sixty-fourth concealment species. The hierarchy that ranks methods and, in doing so, ranks questions. The filter that looks like a quality assessment. The pyramid that points upward, toward the questions with fundable, patentable, randomizable answers, and in pointing upward, points away from the questions that explain the most about why people get sick and why the sick are not equally distributed.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-protection.html">&larr; Fiction The Protection</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-pyramid-food.html">Fiction The Pyramid Food &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

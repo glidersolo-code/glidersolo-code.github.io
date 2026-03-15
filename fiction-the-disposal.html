@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Disposal &mdash; The Loop</title>
+    <meta name="description" content="Thomas stood under the kitchen sink with a flashlight. The old garbage disposal: 1/3 HP, twelve years old, grinding slower each month. Celery strings...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-disposal.html">
+    <meta property="og:title" content="Fiction The Disposal">
+    <meta property="og:description" content="Thomas stood under the kitchen sink with a flashlight. The old garbage disposal: 1/3 HP, twelve years old, grinding slower each month. Celery strings...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-disposal.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Disposal">
+    <meta name="twitter:description" content="Thomas stood under the kitchen sink with a flashlight. The old garbage disposal: 1/3 HP, twelve years old, grinding slower each month. Celery strings...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Disposal",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-disposal.html",
+        "description": "Thomas stood under the kitchen sink with a flashlight. The old garbage disposal: 1/3 HP, twelve years old, grinding slower each month. Celery strings..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Disposal</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXXVIII: The Disposal</h1>
+<h2>Piece #1831: The Upgrade</h2>
+<p>Thomas stood under the kitchen sink with a flashlight. The old garbage disposal: 1/3 HP, twelve years old, grinding slower each month. Celery strings wrapped the plate. Chicken bones jammed the mechanism. Time for a replacement. He drove to the hardware store.</p>
+<p>Three boxes on the shelf. Half horsepower, $89. Three-quarter horsepower, $149. One horsepower, $229. The numbers climbed left to right. The prices climbed with them. The consumer mathematics was simple: more HP, more grinding power, fewer jams. Thomas reached for the 1 HP.</p>
+<p>Then he turned the boxes around.</p>
+<h2>Piece #1832: The Back</h2>
+<p>The 1/2 HP box: single grind stage. Galvanized steel chamber. 1,725 RPM induction motor. No auto-reverse.</p>
+<p>The 3/4 HP box: two grind stages. Stainless steel chamber. 2,700 RPM permanent magnet motor. Auto-reverse jam protection. SoundSeal insulation.</p>
+<p>The 1 HP box: single grind stage. Galvanized steel chamber. 1,725 RPM induction motor. No auto-reverse.</p>
+<p>Thomas set the 1 HP down. The most expensive disposal on the shelf had the same grinding architecture as the cheapest one. One stage. Galvanized. Slow RPM. No jam prevention. The only difference: a larger motor that produced more peak horsepower during the fraction of a second when it started.</p>
+<p>The 3/4 HP — the middle option — had twice the grind stages, better materials, sixty percent more RPM, and a feature that prevented the problem that killed his old disposal. It cost eighty dollars less than the 1 HP.</p>
+<h2>Piece #1833: The Peak</h2>
+<p>Thomas found a sales associate and asked: &quot;Is the 1 HP rating peak or continuous?&quot;</p>
+<p>The associate looked at the box. &quot;It says 1 HP.&quot;</p>
+<p>&quot;Peak horsepower. The motor&#x27;s startup surge. Like the shop vacuum rated at 6.5 peak HP that runs at 1.5 continuous.&quot;</p>
+<p>&quot;I&#x27;m not sure about that.&quot;</p>
+<p>Thomas had looked it up the night before. Consumer garbage disposal HP ratings were peak values — the motor&#x27;s maximum output during inrush, the same measurement trick as the shop vacuum. The 1 HP motor ran continuously at perhaps 0.5 to 0.7 HP. The 3/4 HP motor, with its permanent magnet design, ran continuously at perhaps 0.4 to 0.5 HP. The gap between them during actual grinding was narrower than the labels suggested.</p>
+<p>The amperage told a different story. The 1 HP drew 7.5 amps. The 3/4 HP drew 7.2 amps. Three-tenths of an amp apart in sustained draw. The HP labels were 33 percent apart. The sustained electrical consumption was four percent apart.</p>
+<h2>Piece #1834: The Bone</h2>
+<p>Thomas bought the 3/4 HP with two grind stages. He installed it that evening — twenty minutes, the same mounting ring as the old unit. He tested it with celery. The first stage chopped it. The second stage liquefied it. No strings on the plate.</p>
+<p>He tested it with a chicken thigh bone. The first stage cracked it. The second stage ground the fragments to paste. The auto-reverse triggered once, reversed the plate direction for two seconds, then resumed forward grinding. No jam.</p>
+<p>He called his neighbor, who had bought the 1 HP the previous month. &quot;How&#x27;s the disposal?&quot;</p>
+<p>&quot;Jams on bones. I have to use the Allen wrench every couple weeks.&quot;</p>
+<p>&quot;Does it have auto-reverse?&quot;</p>
+<p>&quot;What&#x27;s auto-reverse?&quot;</p>
+<p>&quot;The feature that costs less than the horsepower you bought instead of it.&quot; Thomas looked at the box on his counter. Three-quarter HP. Every feature that mattered was behind the number that didn&#x27;t.</p>
+<h2>Piece #1835: The Number</h2>
+<p>Thomas threw the box away but kept the spec sheet. He taped it inside the cabinet door:</p>
+<p>Peak HP: 3/4. Grind stages: 2. Chamber: stainless steel. Motor: permanent magnet, 2,700 RPM. Jam protection: auto-reverse. Sound insulation: SoundSeal.</p>
+<p>Six specifications. The box front had printed one. The one that meant the least about grinding performance — the peak startup power of the motor, measured in fractions of a second, applicable to no food waste the disposal would ever encounter.</p>
+<p>The neighbor&#x27;s 1 HP spec sheet, if he&#x27;d kept it: Peak HP: 1. Grind stages: 1. Chamber: galvanized steel. Motor: induction, 1,725 RPM. Jam protection: none. Sound insulation: none. One number was higher. Five numbers were lower. The box had sold the one.</p>
+<p>Thomas turned on the disposal and dropped an ice cube in. The two-stage grind turned it to water in three seconds. The HP rating had nothing to say about that.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-disclosure.html">&larr; Fiction The Disclosure</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-distance.html">Fiction The Distance &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

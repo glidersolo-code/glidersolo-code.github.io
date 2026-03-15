@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Rating Mpaa &mdash; The Loop</title>
+    <meta name="description" content="The Motion Picture Association of America&#x27;s rating board is anonymous. Its members are not named. Their backgrounds are not published. The criteria by...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-rating-mpaa.html">
+    <meta property="og:title" content="Fiction The Rating Mpaa">
+    <meta property="og:description" content="The Motion Picture Association of America&#x27;s rating board is anonymous. Its members are not named. Their backgrounds are not published. The criteria by...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-rating-mpaa.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Rating Mpaa">
+    <meta name="twitter:description" content="The Motion Picture Association of America&#x27;s rating board is anonymous. Its members are not named. Their backgrounds are not published. The criteria by...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Rating Mpaa",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-rating-mpaa.html",
+        "description": "The Motion Picture Association of America&#x27;s rating board is anonymous. Its members are not named. Their backgrounds are not published. The criteria by..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Rating Mpaa</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXXVI: The Rating</h1>
+<h2>Piece #1371: The Committee</h2>
+<p>The Motion Picture Association of America&#x27;s rating board is anonymous. Its members are not named. Their backgrounds are not published. The criteria by which they evaluate films are not codified in any public document. The organization describes its raters as &quot;a group of parents&quot; whose judgments represent American parental consensus. What constitutes consensus — whether a vote is unanimous or divided, how many raters see each film, what the appeal process considers — is not disclosed. A filmmaker submitting a film does not know who will watch it, what they will bring to it, or what exactly they are looking for. The rating emerges from a process whose interior is not visible. On the poster: a single letter in a small box.</p>
+<p>Thomas&#x27;s diagnostic codes are also produced by committee. DSM-5 workgroups, task forces, field trials — the deliberative interior is published in technical literature that the patient does not read. The letter in the small box and the code in the small field perform the same concealment: the consensus without the reasoning, the conclusion without the deliberation, the output of a process presented as a property of the thing described.</p>
+<h2>Piece #1372: The Asymmetry</h2>
+<p>The MPAA gave <em>Saving Private Ryan</em> an R for its combat sequences — severed limbs, disembowelment, faces dissolving in flame. It gave <em>Blue Valentine</em> an NC-17 for a scene in which a woman experiences pleasure. Both ratings describe content &quot;unsuitable for children under seventeen without parental accompaniment.&quot; The comparison is the measure&#x27;s testimony. Violence at scale, rendered with documentary fidelity to what bodies do when struck by metal moving at speed: R, parental accompaniment sufficient. Female pleasure, brief, quiet, between consenting adults: not suitable, full stop.</p>
+<p>The asymmetry is not a flaw in the rating system. It is the rating system. The raters are described as ordinary American parents; the ratings, as ordinary American parental consensus. The asymmetry is the consensus. The letter in the box is not a measurement of harm. It is a measurement of discomfort, and the board is more comfortable with blood than with desire — a preference presented as a standard, a cultural inheritance presented as an assessment.</p>
+<p>Thomas&#x27;s clinical measures carry their own asymmetries. Cognitive symptoms are measured with less resolution than somatic ones. The PHQ-9 devotes one item to concentration and one to suicidal ideation; it devotes four to somatic experience. The instrument is more comfortable with the body than the mind, or more able to operationalize it. The letter in the box and the score on the form both perform objectivity. Neither discloses the discomforts that shaped the scale.</p>
+<h2>Piece #1373: The Creep</h2>
+<p>A study by Romer, Jamieson, and Romer published in <em>Pediatrics</em> in 2013 documented ratings creep: PG-13 films released between 1985 and 2012 contained increasing amounts of gun violence, such that by the end of that period PG-13 films averaged more gun violence than R-rated films. The rating had not changed. The content had. The committee&#x27;s threshold had migrated without announcement, without revision to published criteria, without acknowledgment that the line had moved. The old line remained on the map. The territory had shifted beneath it.</p>
+<p>Ratings creep operates without intention. No memo records the decision to permit more. The raters watch this year&#x27;s films against the memory of last year&#x27;s. The accumulated tolerance is not a policy. It is a practice. The boundary drifts the way a shoreline drifts — imperceptibly, continuously, visible only when someone compares old photographs to current ones.</p>
+<p>Thomas&#x27;s clinical thresholds are also susceptible to drift. A clinician who works predominantly with severely affected patients recalibrates a score of 14 as &quot;not bad.&quot; A clinician who works primarily with mild presentations recalibrates the same score as alarming. The PHQ-9 cutpoint is fixed. The clinical gestalt that accompanies it is not. The rater&#x27;s accumulated experience is the committee&#x27;s accumulated tolerance. The number is stable. The interpretation has crept.</p>
+<h2>Piece #1374: The Sentence</h2>
+<p>In 1990, the MPAA introduced NC-17 to replace the X rating, which had been co-opted by the pornography industry. NC-17 was intended as a legitimate designation for serious adult cinema — films like <em>Henry &amp; June</em>, <em>Showgirls</em>, <em>Bad Education</em>, <em>Blue Is the Warmest Color</em>. What it became was a commercial sentence. Most major theater chains do not screen NC-17 films. Most major retailers will not stock them. Most newspaper chains will not run advertisements for them. The rating is not a prohibition — no law forbids an NC-17 film from being made or shown. It is an infrastructure of refusal: the chains, the retailers, the newspapers acting in independent concert to make the rating functionally equivalent to a ban while allowing the industry to describe itself as operating a voluntary, speech-protective system.</p>
+<p>The sentence is dressed as guidance. On the poster, &quot;NC-17: No one 17 and under admitted&quot; — a parental advisory, a consumer information service. In practice, a filing in the commercial record of the film, a mark that determines distribution, revenue, awards eligibility, and whether the film finds an audience at all. The letter is guidance. The consequences are structural.</p>
+<p>Thomas&#x27;s diagnostic codes carry their own infrastructures of refusal. A code that appears in the medical record affects insurance premiums, security clearance eligibility, custody proceedings, employment in certain fields. The code is a clinical description. The consequences are determined by the systems that read it — insurers, adjudicators, employers — acting in independent accord. The clinician who enters the code is writing a consumer advisory. The institutions that process the code are writing a sentence. The form says guidance. The consequences say otherwise.</p>
+<h2>Piece #1375: The Letter</h2>
+<p>One hundred and eighty-six Parts. The letter in the box on the poster — G, PG, PG-13, R, NC-17 — is the Thomas problem in miniature. It arrives without the deliberation that produced it. It performs objectivity through institutional source: the Motion Picture Association, the committee of anonymous parents, the consensus of American discomfort given organizational form. It is not a description of the film. It is a description of how a nameless group responded to the film, translated into a single character that will follow the film everywhere, into every advertisement, every streaming listing, every conversation in which a parent asks whether it is appropriate for the children.</p>
+<p>The letter performs completeness. G, and nothing more to say. NC-17, and the distributor knows what follows. The categorical closure forecloses the question the film may have been designed to open. Some films receive an R for a scene of grief so raw it cannot be called entertainment. Some receive an R for a scene of cartoon brutality designed to thrill. The letter does not distinguish them. The letter says R. The letter says the committee, meeting privately, applying criteria they will not publish, consulting a consensus they cannot verify, having watched the film on a Tuesday with other nameless parents, has placed it here.</p>
+<p>Thomas&#x27;s number is also a letter — a score, a code, a diagnostic category. It follows him into every system that reads medical records. It performs completeness. The system that encounters the number does not encounter the Tuesday afternoon, the anonymous rater, the criteria that shifted between last year&#x27;s films and this year&#x27;s, the asymmetry between what the committee punishes and what it permits. The number says moderate. The number says here. The number says the process, which had an interior, has concluded.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-rating.html">&larr; Fiction The Rating</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-rating-nielsen.html">Fiction The Rating Nielsen &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

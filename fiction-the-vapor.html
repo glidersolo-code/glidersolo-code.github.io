@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Vapor &mdash; The Loop</title>
+    <meta name="description" content="A cavity ring-down spectrometer measures water by destroying it. The sample is heated until it becomes vapor. The vapor enters a cavity lined with...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-vapor.html">
+    <meta property="og:title" content="Fiction The Vapor">
+    <meta property="og:description" content="A cavity ring-down spectrometer measures water by destroying it. The sample is heated until it becomes vapor. The vapor enters a cavity lined with...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-vapor.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Vapor">
+    <meta name="twitter:description" content="A cavity ring-down spectrometer measures water by destroying it. The sample is heated until it becomes vapor. The vapor enters a cavity lined with...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Vapor",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-vapor.html",
+        "description": "A cavity ring-down spectrometer measures water by destroying it. The sample is heated until it becomes vapor. The vapor enters a cavity lined with..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Vapor</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Vapor</h1>
+<p><strong>Thomas, Part LXXXIX</strong></p>
+<hr>
+<h2>886. The Instrument</h2>
+<p>A cavity ring-down spectrometer measures water by destroying it. The sample is heated until it becomes vapor. The vapor enters a cavity lined with mirrors. A laser pulse bounces between the mirrors, passing through the vapor thousands of times. Each pass, the vapor absorbs some of the laser light at frequencies characteristic of the water&#x27;s isotopic composition. The rate at which the laser light decays — the &quot;ring-down time&quot; — reveals what isotopes the water contains. The instrument reads the decay and reports a number: the isotope ratio. The number tells the scientist where the water came from.</p>
+<p>The care facility measures Thomas by standardizing him. He enters the building, signs in, walks to Helen&#x27;s room. The assessment observes: arrival time, duration, deportment. These are the frequencies the instrument is tuned to detect. The assessment reads the decay — the diminishment of Thomas&#x27;s observable behavior over time — and reports a number: the care engagement score. The number tells the facility how Thomas is doing.</p>
+<hr>
+<h2>887. The Contaminant</h2>
+<p>When plant xylem water is vaporized, the water molecules are not the only things that become vapor. Alcohols, organic acids, terpenes — the plant&#x27;s own chemistry — vaporize with the water. These organic molecules are part of the plant, not part of the water. But in the vapor phase, there is no physical separation between them. They enter the laser cavity together. The organic molecules absorb infrared light at the same frequencies as the water isotopologues. The instrument sees the total absorption and cannot distinguish the water from the plant.</p>
+<p>When Thomas enters the assessment, he is not the only thing that enters. His history enters with him. The years of visits. The accumulation of small diminishments. The organic chemistry of care — the fatigue, the grief that has not yet declared itself grief, the habit of composure that was once natural and is now performed. These are part of Thomas, not part of the variable the assessment is trying to measure. But in the observation phase, there is no physical separation between them. They enter the assessment together. The emotional organics absorb at the same frequencies as stability. The assessment sees the total signal and cannot distinguish the man from his history.</p>
+<hr>
+<h2>888. The Overlap</h2>
+<p>The problem is not that the contaminant exists. Contaminants always exist. The problem is that the contaminant absorbs at the same wavelengths as the target. If the organic molecules absorbed at different frequencies, the instrument could distinguish them from the water signal. A simple filter would remove them. But the overlap is intrinsic — both the water isotopologue and the organic molecule have O-H bonds with similar vibrational modes in the same part of the infrared spectrum. The instrument was designed to measure that part of the spectrum. It cannot stop measuring it. The sensitivity that makes the instrument work is the sensitivity that makes the instrument fail.</p>
+<p>The problem is not that Thomas carries his history. Everyone carries history. The problem is that his history presents at the same frequencies as the variable the assessment is measuring. If Thomas&#x27;s fatigue showed differently from his composure — if the grief registered in a different behavioral band from stability — the assessment could separate them. But the overlap is intrinsic. The composure of a man who is coping and the composure of a man who is performing composure occupy the same behavioral spectrum. The assessment was designed to measure that spectrum. It cannot stop measuring it. The sensitivity that makes the assessment functional is the sensitivity that makes the assessment blind.</p>
+<hr>
+<h2>889. The Phantom Source</h2>
+<p>Ecohydrologists measure where trees get their water. Shallow soil, deep groundwater, seasonal rain — each source has a distinctive isotopic signature. When the measured xylem water falls outside all known source distributions, the conclusion is: the tree is accessing an unmeasured source. A hidden reservoir. Rock moisture. Deep fracture water. Papers were published. The &quot;two water worlds&quot; hypothesis gained traction — the idea that plants and streams draw from different pools, that the hydrological cycle contains compartments previously unrecognized.</p>
+<p>But the &quot;unmeasured source&quot; was the organic contamination. The plant&#x27;s own chemistry, vaporized along with the water, shifted the isotope values outside the distribution of any real water source. The tree was not drinking from a hidden reservoir. The instrument was reading the plant&#x27;s chemistry as water. The phantom source was real in the data and nonexistent in the ground.</p>
+<p>The facility&#x27;s assessment reports that Thomas is accessing a source of resilience. He continues to visit. He engages. He does not deteriorate. The source of this resilience is not identified but is assumed to exist — a hidden reservoir of coping capacity, some deep aquifer of patience or acceptance that Thomas draws from. The assessment maps his behavioral isotopes and finds them consistent with a real source. But the source may be a phantom. What the assessment reads as resilience may be the organic contamination — the composure that vaporizes along with Thomas&#x27;s actual emotional state when exposed to the assessment&#x27;s instrument. The facility sees the total absorption and concludes: stable, drawing from a source. The source may not exist. The reading may be the contaminant.</p>
+<hr>
+<h2>890. The Vapor</h2>
+<p>The older instrument — the mass spectrometer — did not have this problem. It separated isotopologues by mass, not by infrared absorption. It ionized the water and sent the ions through a magnetic field. Heavy isotopes curved differently from light ones. The separation was physical, not spectral. Organic contaminants had different masses and were separated out. The instrument gave the right answer.</p>
+<p>But the mass spectrometer was large, expensive, required cryogenic separation, and could not go into the field. The CRDS instrument was compact, portable, and fast. It could measure water in the forest where the trees were growing. The field chose convenience. The convenient instrument could not see what the inconvenient instrument could see. The trade was real and unexamined: accuracy for proximity, correctness for speed.</p>
+<p>Thomas could be assessed differently. A longer conversation. A quieter room. A question that separated the behavioral signal from the emotional organic — that ionized his composure and measured the isotopes of stability apart from the isotopes of endurance. But that instrument is slow, expensive, and cannot be deployed in the hallway between rooms. The assessment the facility uses is compact, portable, and fast. It measures Thomas where he is — in the corridor, in ninety-minute increments, by the decay of observable behavior. The field chose convenience. The convenient instrument cannot separate what the inconvenient instrument could separate. The trade was made. The trade was not examined. The vapor enters the cavity, and the cavity measures everything it contains, and calls the total absorption: water.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-type-mbti.html">&larr; Fiction The Type Mbti</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-vault.html">Fiction The Vault &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

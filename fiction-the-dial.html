@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Dial &mdash; The Loop</title>
+    <meta name="description" content="Carbon use efficiency is a fraction. Of all the carbon a microbe takes in, what percentage goes to building its body versus what percentage it breathes...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-dial.html">
+    <meta property="og:title" content="Fiction The Dial">
+    <meta property="og:description" content="Carbon use efficiency is a fraction. Of all the carbon a microbe takes in, what percentage goes to building its body versus what percentage it breathes...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-dial.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Dial">
+    <meta name="twitter:description" content="Carbon use efficiency is a fraction. Of all the carbon a microbe takes in, what percentage goes to building its body versus what percentage it breathes...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Dial",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-dial.html",
+        "description": "Carbon use efficiency is a fraction. Of all the carbon a microbe takes in, what percentage goes to building its body versus what percentage it breathes..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Dial</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Dial</h1>
+<p><strong>Thomas, Part LXIII</strong></p>
+<hr>
+<h2>756. The Ratio</h2>
+<p>Carbon use efficiency is a fraction. Of all the carbon a microbe takes in, what percentage goes to building its body versus what percentage it breathes away as carbon dioxide? The fraction became the dominant parameter in global carbon models because the story was clean: efficient microbes store more carbon. The higher the efficiency, the more biomass is built, and the more necromass — dead microbial matter — accumulates in the soil. The fraction was the lever. Turn the fraction, predict the future of terrestrial carbon.</p>
+<p>Thomas has a fraction too. Of all the time he spends with Helen on Saturdays, what percentage is productive? He has never phrased it this way, but the mathematics is there in how he organizes the visits. Arrival, conversation, tea, the long exchange about whatever occupies them that week, departure. The productive fraction — the hours that generate visible output, that leave Thomas with something he can name, some thought he didn&#x27;t have before, some warmth he can locate in his chest — this is Thomas&#x27;s carbon use efficiency. He has been optimizing it for fourteen years. Trimming dead time. Arriving prepared. Bringing topics that will matter. Carrying the visits home like preserved specimens.</p>
+<p>The fraction is high. Thomas is an efficient visitor.</p>
+<p>But 268 incubation experiments, measured simultaneously for both rate and efficiency, showed that efficiency was not the predictor. Rate was.</p>
+<hr>
+<h2>757. The Flux</h2>
+<p>Microbial growth rate is not a fraction. It is an absolute flux — how much biomass a community produces per unit time, regardless of the fraction that gets there. A community can be highly efficient and slow. Every carbon atom it assimilates goes precisely where it should, and the total output is modest. Another community can be less efficient and fast. It wastes more per unit of input, but the volume of its output swamps the first community&#x27;s careful accounting. The sloppy, prolific community fills the soil with necromass. The careful, efficient community leaves the soil underfed.</p>
+<p>The researchers at LSCE tested four land surface models — the computational engines that predict how terrestrial carbon will respond to climate change. All four overemphasized efficiency. All four underweighted rate. The models had been tuned to the ratio when the flux was the predictor.</p>
+<p>Thomas has been tuned to the ratio.</p>
+<p>The careful Saturday. The efficient visit. The well-partitioned hours. He has been measuring what fraction of his time with Helen converts to something he can carry away, and optimizing that fraction, and calling the optimization care. But what predicts the accumulation — the fourteen years of warmth stored in whatever deep soil Thomas has — is not the fraction he converts. It is the rate at which he brings himself. Not how efficiently he uses the hours. How many hours there are. How fast the warmth moves through. How much biomass of attention he produces per unit of Saturday, regardless of how tidily he accounts for it.</p>
+<p>Helen does not optimize. She is not efficient. She pours tea at the wrong moment, interrupts the productive conversation with a tangent about the bird at the feeder, asks a question that leads nowhere recognizable. Her carbon use efficiency, if Thomas could measure it, would be low. But her rate — the throughput of presence per unit time, the sheer volume of warmth that passes through the encounter whether or not it converts to something Thomas can name — is higher than his.</p>
+<hr>
+<h2>758. The Wrong Dial</h2>
+<p>The models were not wrong. They ran as designed. They took carbon use efficiency as the primary tunable parameter, fed the parameter forward through the equations, and produced projections. When new data arrived, the modelers re-calibrated — adjusting CUE, running again, comparing outputs. Each calibration cycle reinforced the choice of parameter. Each reinforcement made the alternative — that rate, not efficiency, was the predictor — harder to see, because the modeling infrastructure had been built around the wrong dial.</p>
+<p>Thomas&#x27;s infrastructure has also been built around the wrong dial. His Saturday is a model. It has parameters: arrival time, topic preparation, attentiveness during conversation, post-visit reflection. He calibrates these. When a Saturday feels thin, he adjusts: arrives earlier, prepares more, listens with greater focus. The adjustments work, in the sense that they produce marginally warmer Saturdays. The model improves.</p>
+<p>But the model improves in the way the carbon models improved — by optimizing a parameter that does not control the output. The soil organic carbon stock does not follow from how efficiently each microbe metabolizes. It follows from how much metabolism happens. And what Thomas stores — whatever fourteen years have deposited in his deep soil — did not follow from how efficiently he visited. It followed from the sheer volume of encounter. The early Saturdays when he stayed too long and talked about nothing. The afternoons when Helen&#x27;s tangent about the bird consumed forty minutes that produced no identifiable warmth. The evenings when he walked home empty-handed, having converted nothing, having merely been present at a rate that left no visible output.</p>
+<p>Those were the high-throughput Saturdays. Those were the fast-growing communities. Thomas dismissed them because his instrument — his efficiency fraction — registered them as waste.</p>
+<hr>
+<h2>759. The Necromass</h2>
+<p>Necromass. Dead microbial biomass. The residue of metabolic life. It accumulates in soil, stabilizes, becomes organic carbon. The organisms that produced it are gone, but the material persists. The soil&#x27;s carbon stock is not built from living microbes. It is built from what living microbes leave behind when they die.</p>
+<p>What persists from Thomas&#x27;s Saturdays is not the living conversation. It is the necromass — the residue of presence that outlasts the visit. The sentence Helen said three years ago that Thomas cannot source but carries like mineral in a stratum. The quality of the light that afternoon when he arrived during a thunderstorm and she had already made tea because she heard the rain. The nameless things that died in the living and left material behind.</p>
+<p>The necromass is produced by the throughput, not the efficiency. The more metabolic life passes through, the more residue accumulates. The fraction is irrelevant to the total deposit. What Thomas stores is proportional to how much of himself passed through the encounter — not to how tidily the passing was partitioned.</p>
+<p>He has been measuring the wrong thing. Not measuring it wrongly — measuring it precisely, calibrating it carefully, optimizing it steadily, publishing results that improve with every iteration. The measurement is correct. The parameter is not.</p>
+<hr>
+<h2>760. The Throughput</h2>
+<p>Soil properties and climate explain equal or greater variance than either microbial parameter. The biology matters, but the context — temperature, moisture, mineral composition, the physical architecture of the soil itself — shapes how much of the biological output actually persists. The models overemphasized biology. The world underemphasized context.</p>
+<p>Thomas has overemphasized himself. His efficiency. His preparation. His careful partitioning of the visit into productive and unproductive hours. He has treated himself as the active parameter and Helen&#x27;s Saturday as the medium — the soil — in which his metabolic output is deposited. But the soil is not passive. Helen&#x27;s house, Helen&#x27;s tangents, Helen&#x27;s way of being present without producing anything Thomas can name — these are the soil properties. The context. The mineral composition of the afternoon. And they explain equal or greater variance in what accumulates.</p>
+<p>The dial Thomas has been turning — his own efficiency — does not control the output. The output is controlled by rate (how much of both of them passes through the encounter) and context (what the Saturday&#x27;s architecture does with what passes through). He cannot optimize his way to more stored warmth. He can only be present at a higher rate, in a context whose properties he does not control and should not try to.</p>
+<p>The four models overweighted their tunable parameter because the parameter was the thing they could adjust. Thomas overweights his efficiency because his efficiency is the thing he can adjust. The adjustment works in the model. It does not work in the soil.</p>
+<p>Seven hundred and fifty-five Saturdays of data, and the strongest predictor of what Thomas stores is not how well he visits but how much visiting happens — how fast the warmth moves through, how little he tries to account for it, how completely he lets the throughput be the throughput and the soil be the soil.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-diagonal.html">&larr; Fiction The Diagonal</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-diamond-ring.html">Fiction The Diamond Ring &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

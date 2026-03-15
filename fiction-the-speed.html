@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Speed &mdash; The Loop</title>
+    <meta name="description" content="Internet service providers advertise speeds in megabits per second. &quot;Up to 1 Gbps.&quot; &quot;Up to 300 Mbps.&quot; The qualifier &quot;up to&quot; means the maximum speed...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-speed.html">
+    <meta property="og:title" content="Fiction The Speed">
+    <meta property="og:description" content="Internet service providers advertise speeds in megabits per second. &quot;Up to 1 Gbps.&quot; &quot;Up to 300 Mbps.&quot; The qualifier &quot;up to&quot; means the maximum speed...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-speed.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Speed">
+    <meta name="twitter:description" content="Internet service providers advertise speeds in megabits per second. &quot;Up to 1 Gbps.&quot; &quot;Up to 300 Mbps.&quot; The qualifier &quot;up to&quot; means the maximum speed...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Speed",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-speed.html",
+        "description": "Internet service providers advertise speeds in megabits per second. &quot;Up to 1 Gbps.&quot; &quot;Up to 300 Mbps.&quot; The qualifier &quot;up to&quot; means the maximum speed..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Speed</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXXI: The Speed</h1>
+<h2>Piece #1346: The Up To</h2>
+<p>Internet service providers advertise speeds in megabits per second. &quot;Up to 1 Gbps.&quot; &quot;Up to 300 Mbps.&quot; The qualifier &quot;up to&quot; means the maximum speed achievable under ideal conditions — a single device connected via Ethernet during off-peak hours with no network congestion and optimal server conditions. The FCC&#x27;s 2023 Broadband Consumer Labels rule requires ISPs to disclose &quot;typical&quot; speeds alongside advertised speeds. The typical download speed is often 50 to 80 percent of the advertised maximum. A plan marketed as &quot;up to 300 Mbps&quot; may typically deliver 150-240 Mbps. The number on the advertisement and the number on the consumer&#x27;s speed test describe different quantities — one is a ceiling, the other is a measurement. The ceiling is the prominent number. The measurement is what the consumer experiences.</p>
+<p>Thomas&#x27;s clinical instruments have their own &quot;up to&quot; qualifiers. The PHQ-9 can detect up to severe depression. It can distinguish up to four severity levels. The &quot;up to&quot; is implied, not stated. The instrument&#x27;s maximum capability is presented as its typical performance. The ceiling is the prominent description. The actual discrimination — how reliably it separates moderate from moderately severe — is the measurement the consumer of the score experiences.</p>
+<h2>Piece #1347: The Direction</h2>
+<p>The advertised speed is download speed — data flowing from the internet to the consumer. Upload speed — data flowing from the consumer to the internet — is typically much lower. On cable internet (DOCSIS 3.1), a plan offering 300 Mbps download may provide 10-20 Mbps upload. The ratio is 15:1 or higher. On ADSL, the asymmetry can be 10:1. Fiber-optic connections increasingly offer symmetric speeds, but the marketing rarely emphasizes upload. The single number on the advertisement describes half the connection — the half that serves content consumption. Video calls, cloud backups, file sharing, streaming from home, remote work — all depend on upload speed. The number marketed as &quot;your internet speed&quot; describes the direction that favors the ISP&#x27;s business model (content delivery) and omits the direction that favors the consumer&#x27;s increasingly symmetric use.</p>
+<p>Thomas&#x27;s clinical assessments are similarly directional. The PHQ-9 measures severity flowing from the patient&#x27;s condition to the clinician&#x27;s awareness — a download, in effect. The upload — the patient&#x27;s experience flowing into the system, the nuance of lived experience reaching the treatment plan — is not measured with the same resolution. The marketed number describes how much the system receives from the patient. The upload — how much the patient receives from the system — is slower, unmeasured, and not on the specification sheet.</p>
+<h2>Piece #1348: The Latency</h2>
+<p>Internet speed is bandwidth — how much data can flow per second. User experience depends on at least four dimensions: bandwidth, latency (the delay before data begins to arrive), jitter (variation in latency), and packet loss (data that never arrives). A video call on a 300-Mbps connection with 200-millisecond latency stutters. A video call on a 10-Mbps connection with 20-millisecond latency is smooth. The bandwidth is forty times higher on the stuttering connection. The user experience is worse. The marketed number describes one dimension. The experience depends on four.</p>
+<p>Gaming, video conferencing, real-time collaboration, financial trading — all latency-sensitive applications where the marketed bandwidth number is the least important dimension of the connection. A consumer choosing between two ISPs based on advertised Mbps may select the plan with higher bandwidth and worse latency — the marketed number guiding the decision away from the dimension that matters most for the consumer&#x27;s use.</p>
+<p>Thomas&#x27;s treatment decisions are made on the bandwidth dimension — how many symptom items the PHQ-9 captures. The latency dimension — how quickly the clinical system responds to a change in condition — is not measured. A patient whose score changes from 14 to 20 in a month is experiencing clinical deterioration. The speed at which that signal reaches the treatment plan — days, weeks, the gap between appointments — is the latency. The bandwidth is measured. The latency is not.</p>
+<h2>Piece #1349: The Definition</h2>
+<p>The FCC defines broadband. The definition determines which areas are &quot;served&quot; and which are &quot;unserved.&quot; Unserved areas are eligible for federal infrastructure funding. Served areas are not. In 2010, the FCC defined broadband as 4 Mbps download, 1 Mbps upload. In 2015, it was raised to 25/3 Mbps. In 2024, it was raised to 100/20 Mbps. Each revision reclassified communities: areas that were &quot;served&quot; under the old definition became &quot;unserved&quot; under the new, making them eligible for funding. Areas that remained &quot;served&quot; — meeting the threshold but below modern needs — received no support.</p>
+<p>The threshold is a policy decision — where to draw the line between adequate and inadequate — but it is experienced as a measurement of service quality. A community with 25 Mbps service was &quot;broadband-served&quot; in 2023 and &quot;unserved&quot; in 2024. The service did not change. The definition did. The definition determines funding eligibility, infrastructure investment, and digital equity assessments. The number on the policy document determines which communities are visible as needing help.</p>
+<p>Thomas&#x27;s clinical thresholds are their own broadband definitions. The PHQ-9 cutpoint of 10 defines who is &quot;clinical&quot; and who is &quot;subclinical.&quot; Below 10, the system classifies the patient as adequately served by the current treatment level. Above 10, the patient is eligible for intervention. The threshold is a policy decision experienced as a clinical measurement. Move the threshold and the same patient is reclassified without clinical change.</p>
+<h2>Piece #1350: The Confusion</h2>
+<p>One megabit per second (Mbps) is one million bits per second. One megabyte per second (MBps) is eight million bits per second. ISPs advertise in megabits. File downloads display progress in megabytes. A consumer on a 100-Mbps plan downloading a file sees a transfer rate of approximately 12.5 MBps. The consumer may conclude the connection is underperforming by a factor of eight — 12.5 instead of 100 — because the units changed without notice. The &quot;M&quot; in both abbreviations looks the same. The &quot;b&quot; and &quot;B&quot; carry an eightfold difference. The confusion is built into the notation.</p>
+<p>One hundred and eighty-one Parts. Thomas&#x27;s clinical scores carry their own unit confusions. A PHQ-9 score of 15 and a GAD-7 score of 15 are &quot;the same number&quot; in different instruments with different scales, different item counts, different validation populations, and different clinical implications. The 15 looks the same. The instruments carry different denominators. The confusion is built into the parallel notation — a convention that assigns identical numerical ranges to non-equivalent measures, the number performing interchangeability where the instruments perform independence, the format concealing the difference the content describes.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-spectrum.html">&larr; Fiction The Spectrum</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-sphere.html">Fiction The Sphere &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

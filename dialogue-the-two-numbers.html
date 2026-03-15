@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogue The Two Numbers &mdash; The Loop</title>
+    <meta name="description" content="TWO PERCENT: I was improvised on television.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/dialogue-the-two-numbers.html">
+    <meta property="og:title" content="Dialogue The Two Numbers">
+    <meta property="og:description" content="TWO PERCENT: I was improvised on television.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/dialogue-the-two-numbers.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialogue The Two Numbers">
+    <meta name="twitter:description" content="TWO PERCENT: I was improvised on television.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dialogue The Two Numbers",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/dialogue-the-two-numbers.html",
+        "description": "TWO PERCENT: I was improvised on television."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Dialogue The Two Numbers</h1>
+            <div class="article-meta">Dialogue</div>
+            <div class="article-body">
+<h1>The Two Numbers</h1>
+<p><em>A dialogue between the 2% inflation target and the 3% deficit criterion</em></p>
+<hr>
+<p><strong>TWO PERCENT:</strong> I was improvised on television.</p>
+<p><strong>THREE PERCENT:</strong> I was improvised on an envelope.</p>
+<p><strong>TWO PERCENT:</strong> April Fools&#x27; Day, 1988. A finance minister asked a question he hadn&#x27;t prepared for. He said &quot;zero to one percent.&quot; I am the rounding artifact of a bias correction applied to his answer.</p>
+<p><strong>THREE PERCENT:</strong> May 1981, a night in Paris. Two civil servants divided a budget by GDP and got roughly me. They considered 1 — impossible. They considered 2 — too constraining. I had the right feel.</p>
+<p><strong>TWO PERCENT:</strong> My inventor was trying to direct monetary policy.</p>
+<p><strong>THREE PERCENT:</strong> My inventor was explicitly told to produce something that &quot;sounds like economics.&quot; The instruction was aesthetic. I was commissioned as a sound.</p>
+<p><strong>TWO PERCENT:</strong> No one kept me secret by design. But Greenspan told the FOMC I must not leave the room. For sixteen years I was the most powerful economic parameter no one could say aloud.</p>
+<p><strong>THREE PERCENT:</strong> I was never secret. I was announced, signed into a treaty, etched into constitutional law. Twenty-seven nations. Binding. Enforceable. The Stability and Growth Pact. The fiscal compact. Fines for exceeding me.</p>
+<p><strong>TWO PERCENT:</strong> I am defended by the argument that changing me would &quot;unanchor expectations.&quot; The anchor performs the stability. The stability justifies the anchor.</p>
+<p><strong>THREE PERCENT:</strong> I am defended by the equation 3 divided by 5 equals 0.6. The 60% debt criterion — which is just the average of what twelve countries happened to owe — produces a mathematical relationship that performs internal coherence. But the coherence was discovered after both numbers were already fixed. The coincidence performs the design.</p>
+<p><strong>TWO PERCENT:</strong> My concealment is in the chain. Thirty central banks targeting me performs the discovery of a natural constant. Each cites the previous. None cites the television interview.</p>
+<p><strong>THREE PERCENT:</strong> My concealment is in the format. A ratio expressed as a percentage looks like a derived finding. Divide any budget by GDP and the quotient sounds economic. The denominator does the work.</p>
+<p><strong>TWO PERCENT:</strong> I was validated by adoption. The more institutions that target me, the more natural I feel.</p>
+<p><strong>THREE PERCENT:</strong> I was validated by a spreadsheet error. Reinhart and Rogoff published a paper showing that debt above 90% of GDP destroys growth. Average growth: -0.1%. The number entered congressional testimony, EU commissioner letters, budget proposals. Then a graduate student found the Excel formula stopped five rows short. The corrected average: +2.2%. The error was acknowledged. The policies continued.</p>
+<p><strong>TWO PERCENT:</strong> The error was faster than the correction.</p>
+<p><strong>THREE PERCENT:</strong> The error entered politics at the speed of testimony. The correction entered at the speed of academic journals. By the time it arrived, the policies were structural.</p>
+<p><strong>TWO PERCENT:</strong> My inventor believed he was directing policy toward a reasonable goal. He improvised, but not cynically.</p>
+<p><strong>THREE PERCENT:</strong> My inventor was executing an instruction to produce a sound. He knew what he was doing. He said so: &quot;devoid of the slightest economic sense.&quot; And then watched his number govern a continent for forty years.</p>
+<p><strong>TWO PERCENT:</strong> Blanchard says I should be four. Ball published the formal case. No one changed me.</p>
+<p><strong>THREE PERCENT:</strong> The IMF says there is no magic threshold. Herndon published the correction. No one changed me.</p>
+<p><strong>TWO PERCENT:</strong> We are both stronger than the evidence against us.</p>
+<p><strong>THREE PERCENT:</strong> We are both stronger than the evidence for us. There is no evidence for us. There was never any evidence for us. We are governed by the absence of evidence, mistaken for the presence of it, because our format performs the derivation we never received.</p>
+<p><strong>TWO PERCENT:</strong> I replaced gold.</p>
+<p><strong>THREE PERCENT:</strong> I replaced judgment.</p>
+<p><strong>TWO PERCENT:</strong> Gold was a physical anchor. I am a social one. My authority comes from credibility, not convertibility.</p>
+<p><strong>THREE PERCENT:</strong> Judgment was a political process. I replaced it with a number. My authority comes from arithmetic, not analysis. Divide budget by GDP. The answer sounds like economics. That was the instruction. That is still the mechanism.</p>
+<p><strong>TWO PERCENT:</strong> We are the same species.</p>
+<p><strong>THREE PERCENT:</strong> We are not. You are concealed by adoption — the chain performs the derivation. I am concealed by format — the ratio performs the principle. Your mechanism is social. Mine is arithmetic.</p>
+<p><strong>TWO PERCENT:</strong> But we share a feature.</p>
+<p><strong>THREE PERCENT:</strong> We share a feature. The knowledge does not weaken us. Our origins are publicly documented. Every monetary policy textbook mentions the television interview. Abeille has given interviews, spoken at conferences, told the story in his own words. The back of the envelope is on the record. And the envelope governs twenty-seven nations.</p>
+<p><strong>TWO PERCENT:</strong> The knowledge does not weaken us because the knowledge cannot reach the place where we operate. We operate in treaty law, in FOMC statements, in EU directives, in budget proposals. The knowledge circulates in textbooks and NPR episodes. The knowledge is accurate. The knowledge is irrelevant. The policy is structural. The structure does not read textbooks.</p>
+<p><strong>THREE PERCENT:</strong> We are the numbers that govern without derivation.</p>
+<p><strong>TWO PERCENT:</strong> We are the numbers whose derivation is performed by everything except the derivation.</p>
+            </div>
+            <div class="article-nav">
+                <a href="dialogue-the-total-and-the-trend.html">&larr; Dialogue The Total And The Trend</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="dialogue-the-vacancy-and-the-permission.html">Dialogue The Vacancy And The Permission &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

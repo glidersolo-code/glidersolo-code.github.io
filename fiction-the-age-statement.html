@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Age Statement &mdash; The Loop</title>
+    <meta name="description" content="Thomas is thinking about floors that perform as descriptions. A bottle says twelve years old. The law says twelve is the youngest component. The blend may...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-age-statement.html">
+    <meta property="og:title" content="Fiction The Age Statement">
+    <meta property="og:description" content="Thomas is thinking about floors that perform as descriptions. A bottle says twelve years old. The law says twelve is the youngest component. The blend may...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-age-statement.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Age Statement">
+    <meta name="twitter:description" content="Thomas is thinking about floors that perform as descriptions. A bottle says twelve years old. The law says twelve is the youngest component. The blend may...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Age Statement",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-age-statement.html",
+        "description": "Thomas is thinking about floors that perform as descriptions. A bottle says twelve years old. The law says twelve is the youngest component. The blend may..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Age Statement</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDLVIII: The Age Statement</h1>
+<h2>Piece #2731: The Youngest Member</h2>
+<p>Thomas is thinking about floors that perform as descriptions. A bottle says twelve years old. The law says twelve is the youngest component. The blend may contain whisky aged twelve, eighteen, twenty-five, forty. The number does not describe the average. The number does not describe the majority. The number describes the floor. But the consumer does not read a floor. The consumer reads a description. Twelve years old. The whisky is twelve years old. Not: the youngest whisky in this blend was twelve years old when the blender decided the blend was ready. The legal definition is a minimum. The label performs it as a totality.</p>
+<p>Thomas thinks about what happens when a minimum presents itself as a description. The minimum is accurate — the youngest component is twelve years old. The description is misleading — the contents are not twelve years old. The accuracy enables the misleading. If the number were inaccurate, it could be challenged. Because the number is technically correct — the youngest component really is twelve — it is unchallengeable. The floor is true. The performance is false. The truth of the floor protects the falseness of the performance.</p>
+<h2>Piece #2732: The Logarithm the Number Does Not Know</h2>
+<p>Thomas is thinking about what twelve means differently at different points on a curve. The chemistry of maturation is logarithmic. In the first five years, the spirit extracts roughly sixty percent of its color and forty to fifty percent of its flavor compounds from the wood. The difference between three years and eight years is enormous — raw grain spirit becomes whisky. The difference between twelve years and twenty-five years is subtler — refinement, not transformation. But the number is linear. The consumer reads twenty-five as roughly twice twelve. The pricing follows the consumer&#x27;s reading. A twenty-five-year-old costs ten to twenty times more than a twelve-year-old. The chemistry does not justify the multiple. The scarcity does. The number performs linear progression. The wood performs logarithmic extraction. The gap between the number&#x27;s linearity and the wood&#x27;s curve is invisible on the label.</p>
+<p>Thomas finds this pattern familiar. The batting average performs completeness from a visible formula. The h-index performs currency from a ratchet that cannot reverse. The percentile performs normality from a hidden population. The survival rate performs treatment effectiveness from a movable starting point. The age statement performs totality from a legal minimum. Five structural properties. Five concealments. One instrument: the format.</p>
+<h2>Piece #2733: The Angel&#x27;s Share</h2>
+<p>Thomas is thinking about what evaporates. Two percent per year in Scotland. Four to five percent in Kentucky. A twenty-five-year-old Scotch has lost roughly forty percent of its original volume to the warehouse air. The cask that started full is now sixty percent full. The whisky that remains is concentrated — more complex, more wood-influenced, less of it. The price reflects the loss. The consumer pays not only for what is in the bottle but for what is no longer in the cask. The price performs patience. The patience is real — someone waited twenty-five years. The loss is real — nearly half the spirit evaporated. The label says twenty-five years old. The label does not say forty percent gone.</p>
+<p>The phrase for this loss is &quot;the angel&#x27;s share.&quot; The naming is itself a concealment. The evaporation is thermodynamics — alcohol and water vapor passing through oak pores into warehouse air. The name makes it offering, sacrifice, celestial tribute. The poetry of the name converts an economic loss into a spiritual gift. The consumer pays for the angels&#x27; portion and feels they are participating in something ancient. They are participating in evaporation.</p>
+<h2>Piece #2734: The Name That Replaced the Number</h2>
+<p>Thomas is thinking about what happens when the floor becomes too low to declare. Between 2008 and 2015, global demand for Scotch whisky surged. Distilleries had laid down stock in the low-demand 1990s — not enough. The warehouses were emptying faster than new spirit could mature. The age statements started dropping. Twelve became ten. Ten became eight. Some distilleries faced a choice: declare a young age statement that the market would punish, or remove the age statement entirely.</p>
+<p>They chose removal. Macallan replaced its age-stated range with names: Gold, Amber, Sienna, Ruby. Glenlivet introduced Founder&#x27;s Reserve. The industry called it NAS — No Age Statement. The framing was liberation. The master blender, freed from the tyranny of the number, could now blend for flavor rather than for a minimum. The blender was always blending for flavor. What changed was that the youngest component was now too young to declare without embarrassing the brand. The removal of the number was the removal of the only quantitative information the consumer had. The name replaced the number. The name carries no minimum. The name carries no law. The name is pure marketing where the number was at least a floor. The floor was inadequate. The name is nothing.</p>
+<h2>Piece #2735: The Same Number, the Different Wood</h2>
+<p>Thomas is thinking about what twelve means in Scotland and what twelve means in Kentucky. Scotch whisky matures in used oak casks — previously bourbon barrels, sherry butts, port pipes. The used wood releases its extractives slowly. Twelve years in used oak is gentleness, patience, subtle development. Bourbon matures in new charred American oak. The fresh wood is aggressive — caramel, vanilla, char, tannin flood the spirit in the first years. Twelve years in new charred oak is often too long — the wood dominates, the spirit becomes over-extracted, astringent. Most bourbon is bottled between four and eight years. The same number describes different optimal ranges in different traditions. Twelve is mature in Scotland. Twelve is elderly in Kentucky.</p>
+<p>The consumer who sees &quot;12&quot; on a Scotch and &quot;12&quot; on a bourbon reads the same number. The same number performs the same claim: twelve years of maturation. But the wood is different. The climate is different. The extraction curve is different. The optimal range is different. The number is jurisdiction-neutral. The chemistry is jurisdiction-specific. The format — a single integer — cannot carry the information that would make the comparison meaningful. The number is portable. The meaning is not.</p>
+<p>Thomas thinks: this is the fifth structural property. Transparency conceals through visibility. Monotonicity conceals through direction. Relativity conceals through absorption. Origin conceals through invisibility. And now: minimum conceals through declaration. The floor is stated. The floor is legal. The floor is accurate. And the floor performs as a description of the whole. Five formats. Five structural properties. Five concealments. The architecture determines what the format can and cannot say. The format is the instrument.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-age-adjustment.html">&larr; Fiction The Age Adjustment</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-aggregate.html">Fiction The Aggregate &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

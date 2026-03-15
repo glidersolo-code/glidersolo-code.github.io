@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Swatch &mdash; The Loop</title>
+    <meta name="description" content="Pantone 186 C is a red. Not just any red — a specific red, reproducible across printing presses, fabric dyes, plastic injection molds, automotive paint...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-swatch.html">
+    <meta property="og:title" content="Fiction The Swatch">
+    <meta property="og:description" content="Pantone 186 C is a red. Not just any red — a specific red, reproducible across printing presses, fabric dyes, plastic injection molds, automotive paint...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-swatch.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Swatch">
+    <meta name="twitter:description" content="Pantone 186 C is a red. Not just any red — a specific red, reproducible across printing presses, fabric dyes, plastic injection molds, automotive paint...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Swatch",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-swatch.html",
+        "description": "Pantone 186 C is a red. Not just any red — a specific red, reproducible across printing presses, fabric dyes, plastic injection molds, automotive paint..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Swatch</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXXXI: The Swatch</h1>
+<h2>Piece #2096: The Name</h2>
+<p>Pantone 186 C is a red. Not just any red — a specific red, reproducible across printing presses, fabric dyes, plastic injection molds, automotive paint booths, and architectural coatings. The name &quot;Pantone 186 C&quot; carries more precision than any description — not &quot;crimson,&quot; not &quot;scarlet,&quot; not &quot;cardinal.&quot; The number is the color. For sixty years, every designer in the world has understood this. The name is the vocabulary. The vocabulary is owned.</p>
+<p>Thomas finds the owner: Danaher Corporation, a $190-billion industrial conglomerate headquartered in Washington, D.C. Danaher owns X-Rite. X-Rite owns Pantone. Pantone owns the names. Not the colors — colors exist in physics, in the electromagnetic spectrum between 380 and 700 nanometers. No one owns a wavelength. But someone owns the words for the wavelengths. &quot;Pantone 186 C&quot; is a brand name performing as a coordinate.</p>
+<h2>Piece #2097: The Disappearance</h2>
+<p>In November 2022, Adobe ended its free Pantone color integration. Files containing Pantone colors — millions of existing designs, decades of archived work, active commercial projects in production — turned black. Not metaphorically black. Literally black. The specified colors were replaced by black rectangles where the design had been. The vocabulary was withdrawn. The designs still existed. The words for their colors did not.</p>
+<p>Thomas imagines a library where the words are owned. One morning the license expires. The nouns disappear. The sentences remain — subjects, verbs, prepositions — but every concrete thing has been replaced by a black rectangle. The books are still there. The books are unreadable. Nothing was destroyed. Everything was withdrawn.</p>
+<p>Adobe directed designers to purchase a Pantone Connect subscription: $15 per month. The colors returned behind a paywall. The standard performed as infrastructure for sixty years, silently, its ownership invisible because its ubiquity made ownership unthinkable. Then ownership thought.</p>
+<h2>Piece #2098: The Lock</h2>
+<p>The switching cost is not technical. Open color systems exist — CIE Lab coordinates, HLC notation, NCS (Natural Color System). Any Pantone color can be measured with a spectrophotometer and expressed in Lab values. The information is public. The name is private. The lock is not in the color. The lock is in the name.</p>
+<p>Thomas lists what references Pantone: print specifications, brand guidelines, manufacturing tolerances, textile contracts, pharmaceutical packaging standards (some FDA references), architectural specifications, fashion color forecasting (Pantone Color of the Year, announced annually since 2000). An entire industry&#x27;s communication protocol is owned by a company. Replacing the protocol requires replacing the vocabulary in every specification document, every contract, every standard operating procedure, every institutional memory. The switching cost is institutional, not technical. The lock is not in physics. The lock is in language.</p>
+<h2>Piece #2099: The Invisible Owner</h2>
+<p>For sixty years, the ownership was invisible. Not hidden — Pantone&#x27;s corporate structure was public information, available in any business database. But invisible in the way that a road&#x27;s ownership is invisible when the road is open. No one asks who owns the highway until the toll booth appears. Pantone&#x27;s toll booth appeared in November 2022. The road had always been owned. The drivers had never noticed.</p>
+<p>Thomas identifies the mechanism: ubiquity conceals proprietariness. The more universal a standard becomes, the more it performs as public infrastructure, the less visible its private ownership. The standard&#x27;s success is the concealment&#x27;s fuel. Every designer who adopted Pantone made the standard more universal and the ownership less visible. The standard grew. The concealment deepened. The crisis was inevitable — not because anyone planned it, but because the gap between private ownership and public performance must eventually be exercised. The owner who never exercises ownership is not distinguishable from a public commons. The moment ownership is exercised, the standard transforms — same colors, same numbers, same fan deck. Now behind a paywall.</p>
+<h2>Piece #2100: The Color</h2>
+<p>Thomas holds a Pantone fan deck. The paper swatches fan out — hundreds of colors, precisely formulated, arranged by hue. Each swatch has a number. Each number is a name owned by a corporation. Each name performs as a coordinate in a public color space. The performance was so complete that for sixty years, no one checked the deed.</p>
+<p>The colors still exist. The electromagnetic spectrum has not changed. Red at 625 nanometers is red at 625 nanometers whether Pantone names it or not. But the industry cannot speak red at 625 nanometers. The industry can only speak &quot;Pantone 186 C.&quot; The language is the lock. The lock is the standard. The standard is owned.</p>
+<p>Thomas closes the fan deck. The colors disappear behind the cover. They are still there — light does not stop existing because the book is closed. But the names are closed with them. The names are the vocabulary. The vocabulary is proprietary. The proprietary performs as public until the moment it remembers that it is not.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-survivorship-bias.html">&larr; Fiction The Survivorship Bias</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-symbol.html">Fiction The Symbol &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

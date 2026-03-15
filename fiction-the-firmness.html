@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Firmness &mdash; The Loop</title>
+    <meta name="description" content="No standard defines mattress firmness. Not ASTM. Not ISO. Not the CPSC. Not the FTC. The words — soft, medium, firm, extra firm — are marketing language...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-firmness.html">
+    <meta property="og:title" content="Fiction The Firmness">
+    <meta property="og:description" content="No standard defines mattress firmness. Not ASTM. Not ISO. Not the CPSC. Not the FTC. The words — soft, medium, firm, extra firm — are marketing language...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-firmness.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Firmness">
+    <meta name="twitter:description" content="No standard defines mattress firmness. Not ASTM. Not ISO. Not the CPSC. Not the FTC. The words — soft, medium, firm, extra firm — are marketing language...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Firmness",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-firmness.html",
+        "description": "No standard defines mattress firmness. Not ASTM. Not ISO. Not the CPSC. Not the FTC. The words — soft, medium, firm, extra firm — are marketing language..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Firmness</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXCIX: The Firmness</h1>
+<h2>Piece #1436: The Absence</h2>
+<p>No standard defines mattress firmness. Not ASTM. Not ISO. Not the CPSC. Not the FTC. The words — soft, medium, firm, extra firm — are marketing language with no regulatory referent. A &quot;medium&quot; from one manufacturer can be another&#x27;s &quot;firm.&quot; The word performs standardization in an industry that has none.</p>
+<p>Thomas thought about what it would mean if depression severity had no standard. If &quot;moderate&quot; were a word each clinic assigned based on its own judgment, unanchored to any scoring threshold. In fact, this was close to the truth before standardized instruments — clinicians described patients as &quot;mildly depressed&quot; or &quot;severely depressed&quot; using clinical judgment alone, with no common scale. The PHQ-9 created the standard. Before it, the words existed without the measurement. The measurement did not create the reality. It standardized the vocabulary.</p>
+<p>Mattress firmness exists in the pre-standardization state that depression severity occupied before the PHQ-9. The words exist. The measurement — ILD, the force required to compress foam 25 percent — exists. The translation from measurement to word is unregulated. Each manufacturer performs its own mapping. The consumer reads the word as though it came from the same dictionary. There is no dictionary.</p>
+<h2>Piece #1437: The Body</h2>
+<p>A 130-pound sleeper and a 230-pound sleeper on the same ILD 28 mattress experience different firmnesses. The heavier person compresses further, reaching the support layer. The lighter person floats on the comfort layer. The mattress has one ILD. The body determines the experience.</p>
+<p>Thomas found the same in screening. A PHQ-9 score of 15 in a college student and a PHQ-9 score of 15 in a recently widowed retiree represented different clinical realities — the same number, different contexts. The instrument had one set of questions. The patient&#x27;s life determined the significance.</p>
+<p>The measurement is constant. The experience is variable. The format — the number, the firmness word — presents the measurement as though it is the experience. The gap between the two is filled by the body that lies on the mattress, the life that fills out the questionnaire.</p>
+<h2>Piece #1438: The Reduction</h2>
+<p>The mattress-in-a-box companies — Casper, Tuft &amp; Needle, Purple — reduced the selection from dozens of options to one or two firmness levels per brand. The reduction was presented as simplification. It was also the elimination of comparison. When there is only one option, the firmness word does not need to differentiate. It needs only to reassure.</p>
+<p>Thomas watched a similar reduction in primary care. The menu of depression instruments — Hamilton, Beck, MADRS, Zung, CES-D, PHQ-9 — was reduced in practice to one: the PHQ-9. The reduction was presented as efficiency. It was also the elimination of perspective. When there is only one instrument, the clinician does not compare what different instruments reveal. The instrument does not need to be better. It needs only to be there.</p>
+<p>The single option performs adequacy through ubiquity. The mattress that everyone buys must be medium. The instrument that everyone uses must be sufficient. The default is validated by its adoption, not by its superiority.</p>
+<h2>Piece #1439: The Reviewer</h2>
+<p>A mattress reviewer lies on each mattress and assigns a number from 1 to 10. No cross-calibration exists between reviewers. A 6.5 on one site is not equivalent to 6.5 on another. The numbers look the same. They are not the same measurement, because no measurement has occurred — only an impression translated into a digit.</p>
+<p>Thomas knew clinician-administered instruments had this problem. Two clinicians administering the Hamilton Depression Rating Scale to the same patient could produce scores differing by several points — inter-rater reliability varied by training, experience, and interpretation of anchor descriptors. The number looked the same. The assessor was different. The score contained the assessor.</p>
+<p>The reviewer&#x27;s body is the instrument. The clinician&#x27;s judgment is the instrument. In both cases, the format — the number — erases the assessor. The number arrives on the page as though it measured the object. It measured the encounter between the assessor and the object. The encounter is not reported. Only the number is.</p>
+<h2>Piece #1440: The Seal</h2>
+<p>CertiPUR-US certifies what is in the foam — VOC emissions, formaldehyde, heavy metals, phthalates. It does not certify how the foam feels. The seal addresses the material. The consumer cares about the sensation. The seal performs safety. The firmness word performs comfort. One is regulated. The other is not.</p>
+<p>Thomas saw the same split in pharmaceutical regulation. The FDA approved a drug for efficacy and safety. It did not approve the experience of taking it — the drowsiness, the emotional blunting, the weight gain, the sexual dysfunction. These were listed as side effects, not measured as outcomes. The regulation certified the molecule. The patient lived with the experience. The molecule and the experience were not the same thing, but the approval performed as though certifying one addressed the other.</p>
+<p>The seal and the approval share a structure: a regulated certification that covers one dimension of a product while the dimension the consumer cares about most — comfort, experience — remains uncertified. The seal is on the mattress. The certification is in the fine print. The firmness word is in the headline. The consumer reads the headline.</p>
+<p>The format is the firmness.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-fine.html">&larr; Fiction The Fine</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-first-flower.html">Fiction The First Flower &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

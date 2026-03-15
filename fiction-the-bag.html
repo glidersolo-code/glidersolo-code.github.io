@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Bag &mdash; The Loop</title>
+    <meta name="description" content="Thomas picks up a bag of 10-10-10 fertilizer. Fifty pounds. The three numbers sit on the label like a mantra — balanced, symmetrical, each digit the same....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-bag.html">
+    <meta property="og:title" content="Fiction The Bag">
+    <meta property="og:description" content="Thomas picks up a bag of 10-10-10 fertilizer. Fifty pounds. The three numbers sit on the label like a mantra — balanced, symmetrical, each digit the same....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-bag.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Bag">
+    <meta name="twitter:description" content="Thomas picks up a bag of 10-10-10 fertilizer. Fifty pounds. The three numbers sit on the label like a mantra — balanced, symmetrical, each digit the same....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Bag",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-bag.html",
+        "description": "Thomas picks up a bag of 10-10-10 fertilizer. Fifty pounds. The three numbers sit on the label like a mantra — balanced, symmetrical, each digit the same...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Bag</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCX: The Bag</h1>
+<h2>Piece #1491: The Three Tens</h2>
+<p>Thomas picks up a bag of 10-10-10 fertilizer. Fifty pounds. The three numbers sit on the label like a mantra — balanced, symmetrical, each digit the same. Ten percent nitrogen. Ten percent phosphorus. Ten percent potassium. Equal parts of the three essential macronutrients. He does the arithmetic: fifty pounds times ten percent equals five pounds of each. Fifteen pounds of nutrition, thirty-five pounds of filler. Except the second ten is not ten. It is ten percent phosphorus pentoxide — P₂O₅ — an oxide form that does not exist as an oxide in the granules in the bag. The actual phosphorus is 4.4 percent. The third ten is ten percent potassium oxide — K₂O — also not present as an oxide. The actual potassium is 8.3 percent. Five pounds of nitrogen, 2.2 pounds of phosphorus, 4.15 pounds of potassium. The three tens deliver three different quantities. Thomas holds the bag and the bag holds a number that holds a convention that holds a century of analytical chemistry that no longer exists in any form but the label.</p>
+<h2>Piece #1492: The Balance</h2>
+<p>Justus von Liebig ignites the sample. 1840. The residue sits in the crucible — white powder, the ash of what the plant ate. He weighs it. The balance tips. The oxide is the product. P₂O₅: what phosphorus becomes when you burn it. K₂O: what potassium becomes when you ash it. He writes down the weight of the oxide because the oxide is what the balance shows. He cannot weigh what is not in the crucible. The element is inside the oxide, locked in a ratio that chemistry knows — multiply by 0.4364 for phosphorus, 0.8302 for potassium — but the balance reads the oxide, and the report carries the reading, and the standard carries the report, and the law carries the standard, and the label carries the law. One hundred and eighty-six years later, the gardener at the home improvement store reads a number that a balance in a German laboratory produced by igniting a sample into a form that the gardener&#x27;s fertilizer has never been in and will never be in.</p>
+<h2>Piece #1493: The Soil Test</h2>
+<p>The extension agent hands Thomas a soil test result. Phosphorus: 35 ppm (Mehlich-3). Potassium: 150 ppm (Mehlich-3). The recommendation: apply 40 lbs P₂O₅ per acre, 60 lbs K₂O per acre. The recommendation is in oxide form. The soil test is in elemental form. The fertilizer label is in oxide form. The consumer must translate between systems that use the same words — &quot;phosphorus,&quot; &quot;potassium&quot; — to mean different things. The soil test says the soil has 35 parts per million of elemental phosphorus. The recommendation says to add 40 pounds of phosphorus pentoxide. The fertilizer bag says it contains 10% phosphorus pentoxide. At no point does anyone say &quot;this number measures elemental and this number measures oxide.&quot; The word &quot;phosphorus&quot; appears in all three documents. The thing it names changes with each document. The word is the bridge. The word is also the gap.</p>
+<h2>Piece #1494: The Conversion</h2>
+<p>A Canadian agronomist visits an American farm supply store. She picks up a bag of 18-46-0 — monoammonium phosphate. In Canada, this would be labeled 18-20-0, because Canada reports elemental phosphorus, not P₂O₅. Forty-six percent P₂O₅ times 0.4364 equals 20.1 percent elemental P. The American bag screams forty-six. The Canadian bag would whisper twenty. Same granules, same chemistry, same phosphorus atoms. Different labels, different numbers, different anxiety. The American gardener comparing 18-46-0 to 10-10-10 sees a massive phosphorus advantage. The Canadian gardener comparing 18-20-0 to 10-4.4-0 sees a modest one. The ratio is identical. The psychological distance is not. The format creates the distance. The distance creates the purchase.</p>
+<h2>Piece #1495: The Filler</h2>
+<p>Thirty-five pounds of filler. Thomas lifts the fifty-pound bag and knows — because the label told him — that fifteen pounds are nutrients and thirty-five pounds are carrier, coating, conditioning agents, inert material. But even the fifteen pounds are not fifteen pounds. The three tens add to thirty, and thirty percent of fifty pounds is fifteen — but only if the three tens are the same kind of measurement. They are not. The actual nutrient weight is 11.35 pounds: five pounds nitrogen, 2.2 pounds phosphorus, 4.15 pounds potassium. The &quot;filler&quot; is not thirty-five pounds. It is 38.65 pounds. The label overstates the nutrition and understates the carrier because the oxide convention inflates the phosphorus and potassium numbers. Thomas carries the bag to his car. The bag carries a number. The number carries a laboratory. The laboratory burned what the bag contains into what the bag does not contain and wrote down the weight of the transformation. The gardener reads the weight of the ash and plans the garden.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-average-dow.html">&larr; Fiction The Average Dow</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-bag-of-soil.html">Fiction The Bag Of Soil &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

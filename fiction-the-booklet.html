@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Booklet &mdash; The Loop</title>
+    <meta name="description" content="Thomas read that most of Western Europe abolished passport requirements in the last third of the nineteenth century. France started it — Napoleon III,...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-booklet.html">
+    <meta property="og:title" content="Fiction The Booklet">
+    <meta property="og:description" content="Thomas read that most of Western Europe abolished passport requirements in the last third of the nineteenth century. France started it — Napoleon III,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-booklet.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Booklet">
+    <meta name="twitter:description" content="Thomas read that most of Western Europe abolished passport requirements in the last third of the nineteenth century. France started it — Napoleon III,...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Booklet",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-booklet.html",
+        "description": "Thomas read that most of Western Europe abolished passport requirements in the last third of the nineteenth century. France started it — Napoleon III,..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Booklet</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCLXXV: The Booklet</h1>
+<h2>Piece #2316: The Abolition</h2>
+<p>Thomas read that most of Western Europe abolished passport requirements in the last third of the nineteenth century. France started it — Napoleon III, initiating abolition for British subjects crossing the Channel. By 1900, the passport was a relic. A traveler with a train ticket and a top hat could cross the continent without producing a single document. The border was a geographic fact, not a bureaucratic checkpoint. Thomas tried to imagine it: walking from Paris to Berlin with nothing but luggage and currency. No booklet. No photograph. No machine-readable zone. The freedom of movement was so unremarkable that no one thought to name it. It was simply how the world worked. Then it stopped working. August 1914. The guns started, and within months every belligerent state reinstated mandatory passports. Britain&#x27;s Defence of the Realm Act, 1915. France, Germany, Italy — all mandatory, all framed as temporary wartime measures. Temporary. Thomas circled the word in his notes. The temporary measure is now 112 years old.</p>
+<h2>Piece #2317: The Committee</h2>
+<p>The League of Nations convened the Paris Conference on Passports &amp; Customs Formalities and Through Tickets in October 1920. Thomas found the specification: a 32-page booklet, 15.5 centimeters by 10.5 centimeters. Information in the national language plus French. A photograph of the bearer. The first four pages designated for facial characteristics, occupation, and residence. A committee in Paris, in the aftermath of a war that had killed seventeen million people, decided the dimensions of a document that every human being on earth would eventually need to carry. The dimensions have not changed. 15.5 by 10.5. Thomas measured his own passport — the exact dimensions the committee specified 106 years ago. The paper stock had changed, the security features had multiplied, the chip had been embedded, the MRZ had been added — but the booklet was still the booklet. The emergency measure&#x27;s form was immortal.</p>
+<h2>Piece #2318: The Zone</h2>
+<p>Two lines. Forty-four characters each. Printed in OCR-B, a typeface Adrian Frutiger designed in 1968 for the European Computer Manufacturers Association. Thomas stared at the bottom of his passport&#x27;s photo page and read the machine-readable zone aloud: letters, numbers, angle brackets, check digits. His name was there, but not exactly his name. Diacritical marks stripped. Hyphens replaced by &lt;. Names exceeding the character limit truncated. The MRZ created a second identity — the version of him that existed in databases, the version that moved through border systems, the version that was checked against watchlists and flight manifests. The photo page was for the officer&#x27;s glance — three seconds, maybe five, a comparison between face and image. The MRZ was for the system&#x27;s decision. The human-readable identity and the machine-readable identity occupied the same page but they were not the same person. Thomas wondered which one was him.</p>
+<h2>Piece #2319: The Gap</h2>
+<p>Singapore: 192 destinations without a prior visa. Afghanistan: 24. Thomas found the Henley Passport Index and stared at the numbers. A gap of 168 destinations between the most and least powerful passports. In 2006, the gap was 118. It was widening. Every passport looked the same — the same dimensions, the same MRZ font, the same biometric chip storing the same ICAO data groups. A Singapore passport and an Afghan passport were visually indistinguishable on a table. Same booklet. Same binding. Same machine-readable zone. But one opened nearly every door in the world and the other opened almost none. The format performed universality. The content executed hierarchy. The identical appearance made the inequality invisible — or rather, made it legible only to the systems that processed the documents, not to the humans who carried them.</p>
+<h2>Piece #2320: The Nansen</h2>
+<p>Fridtjof Nansen — Norwegian polar explorer, League of Nations High Commissioner for Refugees — created a travel document in 1922 for people who had no state. Vladimir Lenin had revoked citizenship from Russian expatriates, leaving 800,000 people without nationality across Eastern Europe. Without a passport, they could not work, could not cross borders, could not prove they existed to any bureaucracy. Nansen created a document that said: this person is stateless, and this organization vouches for their passage. 450,000 were issued. Thomas read the number and thought: the Nansen passport was the system&#x27;s confession. It acknowledged what the ordinary passport concealed — that nationality was not identity. That the connection between person and state was constructed. That when the construction failed, the person remained but the document vanished, and without the document, the person was invisible to every system designed to see them. The 1951 Refugee Convention codified the principle. Convention travel documents exist today, their covers stating which treaty authorizes them. These documents say aloud what the ordinary passport whispers: the booklet is not the person. The booklet is the state&#x27;s claim on the person, bound in 15.5 by 10.5 centimeters of emergency that became permanence.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-bonds.html">&larr; Fiction The Bonds</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-boundary.html">Fiction The Boundary &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

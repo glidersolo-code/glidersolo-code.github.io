@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Gauge &mdash; The Loop</title>
+    <meta name="description" content="A coppersmith in Providence in 1857 holds a rod. The rod is thick — nearly half an inch in diameter. He feeds it through a die, a hardened plate with a...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-gauge.html">
+    <meta property="og:title" content="Fiction The Gauge">
+    <meta property="og:description" content="A coppersmith in Providence in 1857 holds a rod. The rod is thick — nearly half an inch in diameter. He feeds it through a die, a hardened plate with a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-gauge.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Gauge">
+    <meta name="twitter:description" content="A coppersmith in Providence in 1857 holds a rod. The rod is thick — nearly half an inch in diameter. He feeds it through a die, a hardened plate with a...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Gauge",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-gauge.html",
+        "description": "A coppersmith in Providence in 1857 holds a rod. The rod is thick — nearly half an inch in diameter. He feeds it through a die, a hardened plate with a..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Gauge</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCIV: The Gauge</h1>
+<h2>Piece #1461: The Draw</h2>
+<p>A coppersmith in Providence in 1857 holds a rod. The rod is thick — nearly half an inch in diameter. He feeds it through a die, a hardened plate with a hole slightly smaller than the rod. He pulls. The rod emerges thinner. He feeds it through the next die, smaller still. He pulls again. Each pull is a draw. Each draw reduces the diameter. After ten draws, the wire is 10-gauge. After twenty-two draws, it is 22-gauge. The number is the process. The wire is its history.</p>
+<p>Thomas drew patients through instruments. The PHQ-9 was a die — a structured opening that the patient&#x27;s suffering passed through, emerging thinner on the other side. Not reduced in reality, but reduced in dimension. The instrument took the thick rod of experience and pulled it through nine questions, each one narrowing what could pass. The score that emerged was the gauge: a number that counted how many reductions had been applied, not how much material remained.</p>
+<p>The coppersmith&#x27;s rod started thick and true. After enough draws, it was fine as thread. The drawing did not add anything. It only removed.</p>
+<h2>Piece #1462: The Inversion</h2>
+<p>The system runs backwards. In every other consumer context, larger numbers mean more — more weight, more volume, more capacity, more power. In AWG, larger numbers mean less. A 22 is thinner than a 10. A 36 is thinner than a 22. The number increases as the object decreases. The scale inverts the intuition.</p>
+<p>Thomas found inversions in clinical measurement. The Glasgow Coma Scale ran from 3 to 15, where 15 meant fully conscious and 3 meant unresponsive — a higher number meant better. The PHQ-9 ran from 0 to 27, where 0 meant no symptoms and 27 meant severe — a higher number meant worse. Two instruments in the same hospital, one where up was good and one where up was bad. The clinician toggled between them. The patient did not know which direction the numbers ran.</p>
+<p>The inversion in AWG is not perverse. It made perfect sense when the number tracked a physical process — the number of draws. But the process ended. Manufacturing changed. Modern wire is not pulled through numbered dies by hand. The number that once described what happened to the wire now describes nothing that happens to the wire. It is a fossil of a process, embedded in a standard, referenced by a code, enforced by an inspector. The inversion persists because the infrastructure persists.</p>
+<h2>Piece #1463: The Root</h2>
+<p>The mathematical structure is a geometric progression: the 39th root of 92. Between 0000 AWG (0.460 inches) and 36 AWG (0.005 inches), there are 39 steps. The ratio between any two successive gauges is constant — approximately 1.1229. Every three gauge steps doubles the cross-sectional area. Every ten steps multiplies it by ten. The elegance is invisible to the consumer. The consumer sees a number on a spool and does not see the 39th root of anything.</p>
+<p>Thomas appreciated hidden elegance. The PHQ-9&#x27;s scoring — 0, 1, 2, 3 for each of nine items — created a range of 0 to 27 that mapped to severity categories at 5, 10, 15, and 20. The cutpoints were round numbers that divided the range into roughly equal segments. The segments were not derived from clinical evidence. They were derived from the arithmetic. The elegance was in the math, not in the medicine.</p>
+<p>Brown and Sharpe encoded a geometric progression into a numbering system in 1857. The progression is still there. The dies are not. The formula works perfectly. The physical process it described no longer exists. The root of 92 persists in every spool of wire sold in North America, invisible and exact.</p>
+<h2>Piece #1464: The Code</h2>
+<p>The National Electrical Code specifies: 14 AWG for 15-amp circuits, 12 AWG for 20-amp, 10 AWG for 30-amp. The safety threshold — the boundary between safe wiring and fire hazard — is expressed in the inverted system. A homeowner who needs a 20-amp circuit must select 12-gauge wire, not 14-gauge. The number that looks smaller carries more current. The number that looks bigger carries less. The code assumes the reader has already internalized the inversion.</p>
+<p>Thomas found safety thresholds expressed in clinical shorthand. A PHQ-9 of 10 was the treatment threshold — above 10, pharmacotherapy was recommended. But 10 was not a clinical discovery. It was a round number that fell near the median of the instrument&#x27;s range. The threshold assumed the clinician had already internalized what 10 meant — that this particular 10, on this particular scale, from this particular instrument, indicated this particular severity. The code did not explain. The code specified.</p>
+<p>If you install 14-gauge wire on a 20-amp breaker, the wire overheats. The insulation melts. The house catches fire. The number on the spool — 14 — was correct. The reader&#x27;s interpretation was not. The format did not lie. The format assumed competence in a system whose logic runs counter to every other numbering system the reader has encountered.</p>
+<h2>Piece #1465: The Gauge</h2>
+<p>The metric system offers an alternative. IEC 60228 specifies conductor size by cross-sectional area in square millimeters. A 2.5 mm² wire is thicker than a 1.5 mm² wire. Larger numbers mean larger conductors. The inversion disappears. The fossil disappears. The number describes the object, not the process that made it.</p>
+<p>Thomas imagined a clinical measurement system that ran forward — where larger numbers meant more of the thing being measured, where the number described the patient&#x27;s state rather than the instrument&#x27;s history, where a 15 was always worse than a 10 or always better than a 10 but never ambiguous. Such a system would require agreement: agreement on what to measure, agreement on which direction to count, agreement on what the number meant. The agreements would be conventions. The conventions would be arbitrary. But at least the arbitrariness would not also be inverted.</p>
+<p>North America uses AWG. The rest of the world uses metric. The wire in an American wall and the wire in a German wall carry the same current, obey the same physics, serve the same function. One is labeled with a number that counts manufacturing steps from 1857. The other is labeled with a number that describes its cross-section. The format is different. The copper is the same.</p>
+<p>The gauge does not measure the wire. The gauge measures the distance between the wire and the rod it was drawn from — a rod that no longer exists, drawn through dies that no longer turn, by hands that have been still for more than a century. The number on the spool is the memory of a process. The wire in the wall is the product.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-garden.html">&larr; Fiction The Garden</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-gauging-station.html">Fiction The Gauging Station &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

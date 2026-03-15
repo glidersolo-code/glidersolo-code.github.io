@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Pour Pattern &mdash; The Loop</title>
+    <meta name="description" content="Thomas learned the name before he learned the fire.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-pour-pattern.html">
+    <meta property="og:title" content="Fiction The Pour Pattern">
+    <meta property="og:description" content="Thomas learned the name before he learned the fire.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-pour-pattern.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Pour Pattern">
+    <meta name="twitter:description" content="Thomas learned the name before he learned the fire.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Pour Pattern",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-pour-pattern.html",
+        "description": "Thomas learned the name before he learned the fire."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Pour Pattern</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXXIII: The Pour Pattern</h1>
+<h2>Piece #2556: The Name</h2>
+<p>Thomas learned the name before he learned the fire.</p>
+<p>&quot;Pour pattern.&quot; An irregularly shaped burn pattern on a floor — curved, puddle-shaped, trailing. Named not for what it looked like but for what it was believed to prove: someone poured something here. The observation was the conclusion. The description was the verdict. The investigator who testified that he found &quot;pour patterns&quot; was not describing what he saw. He was asserting what he believed happened, in a language that made the assertion sound like a description.</p>
+<p>The vocabulary had other names that worked the same way. &quot;Crazed glass&quot; — web-like cracking in windows — named a normal artifact of firefighting after a pathological state. &quot;Alligator charring&quot; — large blistered char on wood — named a universal phenomenon after an extreme one. &quot;V-pattern&quot; — genuine heat marks on walls — became &quot;multiple origins&quot; in the mouth of an investigator who had never seen a post-flashover room. Every term carried its conclusion inside it like a seed inside a shell. The investigator planted the vocabulary. The verdict grew.</p>
+<h2>Piece #2557: The Test That Wasn&#x27;t</h2>
+<p>For decades, none of it was tested.</p>
+<p>A 1977 report by the Law Enforcement Assistance Administration found that these indicators had &quot;no published material in the scientific literature to substantiate their validity.&quot; Training continued unchanged. The indicators were transmitted from investigator to investigator, generation to generation, by apprenticeship. A firefighter watched an experienced investigator point to the floor and say &quot;pour pattern.&quot; The firefighter became an investigator. He pointed to floors and said &quot;pour pattern.&quot; The knowledge was not knowledge. It was vocabulary. The vocabulary was not tested because it did not present itself as a hypothesis. It presented itself as a fact so obvious it needed no testing — the way &quot;the floor is wet&quot; needs no testing.</p>
+<p>The reasoning method was called &quot;negative corpus.&quot; If the investigator could not find evidence of an accidental or natural cause, the fire was arson. The absence of a known cause was treated as evidence of an unknown one. The vocabulary named what the fire did. The negative corpus convicted what it didn&#x27;t do. Between the names and the absence, no gap remained where doubt could enter.</p>
+<h2>Piece #2558: The House Next Door</h2>
+<p>In 1990, at 527 Lime Street in Jacksonville, Florida, a fire killed six people — two women, one pregnant, four children. Gerald Wayne Lewis, who escaped with his three-year-old son, was charged with arson, six counts of first-degree murder. A potential death sentence.</p>
+<p>John Lentini, a forensic scientist, was called by the prosecution. He obtained permission to burn the condemned house next door. Same builder. Same era. Same floor plan. He recreated the interior: duplicate couch, same sheetrock, same carpet. He set fire to the couch. No accelerant.</p>
+<p>Flashover occurred in under four minutes. Afterward, Lentini and fire scientist John DeHaan found the same burn patterns, &quot;pour patterns,&quot; and floor damage that the entire profession had believed to be exclusive indicators of arson. Everything the vocabulary said could only mean one thing turned out to mean another thing. The charges against Lewis were dropped. The house next door said what the vocabulary could not: the fire does this on its own.</p>
+<h2>Piece #2559: The Execution</h2>
+<p>Thomas found the case that the vocabulary killed.</p>
+<p>December 23, 1991. Corsicana, Texas. A fire killed Cameron Todd Willingham&#x27;s three daughters: two-year-old Amber, one-year-old twins Karmon and Kameron. Deputy State Fire Marshal Manuel Vasquez identified more than twenty &quot;indicators of arson.&quot; Pour patterns. Crazed glass. V-patterns suggesting three separate origins. Low burning. Melted aluminum. Willingham was convicted in a two-day trial and sentenced to death.</p>
+<p>Gerald Hurst — a Cambridge-trained chemist who had spent decades working with fire and explosives — reviewed the evidence before the execution. He rebutted every indicator. The only location where laboratory tests confirmed accelerant was the front porch, where a photograph taken before the fire showed a charcoal grill. Hurst concluded there was &quot;no evidence of arson.&quot;</p>
+<p>His report was faxed to Governor Rick Perry&#x27;s office. Perry declined to stay the execution. Willingham was executed by lethal injection on February 17, 2004. He maintained his innocence until the end. The vocabulary said &quot;pour pattern.&quot; The jury heard a man pouring gasoline. The vocabulary said &quot;crazed glass.&quot; The jury heard abnormal heat. The vocabulary said &quot;multiple origins.&quot; The jury heard intentional setting. The man heard a needle.</p>
+<h2>Piece #2560: The Correction</h2>
+<p>NFPA 921 fixed the vocabulary in 1992. &quot;Pour pattern&quot; became &quot;irregular pattern.&quot; &quot;Crazed glass&quot; became &quot;rapid cooling artifact.&quot; The neutral terms made hypotheses testable. The old terms had made them invisible.</p>
+<p>Since the correction, arson determinations have declined from approximately 15 percent of investigated fires to approximately 6 percent. The difference — roughly 9 percent — represents fires that the vocabulary classified as arson and the science did not. Approximately 40 individuals have been formally exonerated from wrongful arson convictions since 1992. An unknown number remain convicted under the old language.</p>
+<p>Thomas sat with the arithmetic. The vocabulary was corrected. The convictions it produced were not. A man who was executed in 2004 was executed by testimony whose vocabulary was classified as &quot;disparaged&quot; by 1992. The correction preceded the execution by twelve years. The execution used the terms the correction had rejected. The old language was still admissible in court. The new language was a recommendation. The recommendation did not reach the jury. The jury heard &quot;pour pattern.&quot; The floor said nothing. The name said everything.</p>
+<p>The fire investigation vocabulary was not a conspiracy. It was an inheritance. Investigators were trained by investigators. The vocabulary was older than the science. When NFPA 921 introduced the scientific method to fire investigation, its most radical act was not new instruments or new tests. It was renaming what investigators saw. Removing the verdict from the description. Making the name a question instead of an answer. &quot;Irregular pattern&quot; asks: what made this? &quot;Pour pattern&quot; answers: someone poured. The question arrived in 1992. The answer had been testifying since the vocabulary was invented. The answer was still testifying in Corsicana in 1992.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-pour.html">&larr; Fiction The Pour</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-preference.html">Fiction The Preference &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

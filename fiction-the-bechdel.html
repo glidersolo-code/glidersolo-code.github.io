@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Bechdel &mdash; The Loop</title>
+    <meta name="description" content="Thomas found the original comic strip. Dykes to Watch Out For, 1985. Alison Bechdel. Two women walking down a street. &quot;The Rule.&quot;">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-bechdel.html">
+    <meta property="og:title" content="Fiction The Bechdel">
+    <meta property="og:description" content="Thomas found the original comic strip. Dykes to Watch Out For, 1985. Alison Bechdel. Two women walking down a street. &quot;The Rule.&quot;">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-bechdel.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Bechdel">
+    <meta name="twitter:description" content="Thomas found the original comic strip. Dykes to Watch Out For, 1985. Alison Bechdel. Two women walking down a street. &quot;The Rule.&quot;">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Bechdel",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-bechdel.html",
+        "description": "Thomas found the original comic strip. Dykes to Watch Out For, 1985. Alison Bechdel. Two women walking down a street. &quot;The Rule.&quot;"
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Bechdel</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDIII: The Test</h1>
+<h2>Piece #2456: The Strip</h2>
+<p>Thomas found the original comic strip. <em>Dykes to Watch Out For</em>, 1985. Alison Bechdel. Two women walking down a street. &quot;The Rule.&quot;</p>
+<p>&quot;I only go to a movie if it satisfies three basic requirements. One, it has to have at least two women in it, who, two, talk to each other about, three, something besides a man.&quot;</p>
+<p>&quot;Pretty strict, but a good idea.&quot;</p>
+<p>&quot;No kidding, last movie I was able to see was <em>Alien</em>.&quot;</p>
+<p>Thomas read the punchline twice. The joke was not the sophistication of the criteria. The joke was the scarcity. The bar was set at the floor, and most of Hollywood failed to clear it. The humor was structural — the distance between the minimal threshold and the actual state of the medium.</p>
+<h2>Piece #2457: The Metric</h2>
+<p>Thomas traced what happened to the joke. By 2010, the Bechdel test was appearing in journalism, data visualization projects, academic papers. Databases cataloged thousands of films as passing or failing. FiveThirtyEight used it for statistical analysis. The Swedish Film Institute adopted it in 2013, marking films with an &quot;A&quot; rating for passing.</p>
+<p>The format had changed. Three criteria became a checklist. The punchline became a pass/fail. The joke became a metric.</p>
+<p>Thomas looked for what the format could carry. A checklist could populate a spreadsheet. A pass/fail could populate a database. A database could produce statistics, infographics, trend lines. The format was portable. The critique was not.</p>
+<h2>Piece #2458: The Failures</h2>
+<p>Thomas tested the metric against films.</p>
+<p><em>Fifty Shades of Grey</em>: pass. Two named women discuss an apartment lease. The film otherwise centers a relationship organized entirely around male desire.</p>
+<p><em>Gravity</em>: fail. One named female character. But the film centers entirely on her competence, resourcefulness, and survival. It is arguably one of the most female-centered blockbusters of its decade.</p>
+<p><em>Run Lola Run</em>: fail. <em>Alien 3</em>: fail. <em>The Hurt Locker</em>: fail — the most critically acclaimed film about the Iraq War, directed by Kathryn Bigelow, the only woman to win the Best Director Oscar.</p>
+<p>The test captured whether a conversational configuration occurred. It could not capture character depth, narrative centrality, visual framing, audience address, or power dynamics. The configuration correlated weakly with what the test was understood to measure.</p>
+<h2>Piece #2459: The Compression</h2>
+<p>Thomas returned to Bechdel&#x27;s actual work. <em>Dykes to Watch Out For</em> ran from 1983 to 2008 — twenty-five years of graphic storytelling. <em>Fun Home</em> (2006) — a graphic memoir about her father&#x27;s closeted homosexuality and her own coming out. Adapted into a Tony Award-winning musical. <em>Are You My Mother?</em> (2012) — a graphic memoir about her relationship with her mother.</p>
+<p>Bechdel&#x27;s critical intelligence was not a checklist. It was the opposite — sustained attention to complexity, ambiguity, contradiction, the lived texture of gendered experience. Decades of work. Hundreds of pages. Irreducible to three criteria.</p>
+<p>The checklist survived because the checklist fit the institution. Rating boards needed checklists. Journalism needed data. Databases needed columns. The close reading — everything Bechdel actually did — fit none of these containers.</p>
+<h2>Piece #2460: The Column</h2>
+<p>Thomas looked at the databases. Thousands of films, sorted into two columns: pass, fail. Each film reduced to a binary. The binary performed a verdict — this film does or does not take women seriously. The verdict performed an evaluation the data could not support.</p>
+<p>Bechdel herself had acknowledged the limitations. She credited the idea to her friend Liz Wallace. She expressed discomfort with the test being named after her and used as a serious evaluative tool. The comic strip was a conversation between friends about going to the movies. The metric was an institution.</p>
+<p>A joke about absence had become a metric about quality. The floor had become the standard. The standard had replaced the recognition — the original insight that even this minimal threshold was too high for most of an industry. That recognition required no database. It required only the punchline. And the punchline was more devastating than the metric, because the punchline preserved the absurdity the metric formalized away.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-battery.html">&larr; Fiction The Battery</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-biodegradable.html">Fiction The Biodegradable &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

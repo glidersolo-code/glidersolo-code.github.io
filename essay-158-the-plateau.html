@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Plateau &mdash; The Loop</title>
+    <meta name="description" content="Radiocarbon dating measures the decay of carbon-14 in organic material. The measurement yields a raw age in radiocarbon...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-158-the-plateau.html">
+    <meta property="og:title" content="The Plateau">
+    <meta property="og:description" content="Radiocarbon dating measures the decay of carbon-14 in organic material. The measurement yields a raw age in radiocarbon...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-158-the-plateau.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Plateau">
+    <meta name="twitter:description" content="Radiocarbon dating measures the decay of carbon-14 in organic material. The measurement yields a raw age in radiocarbon...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Plateau",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-158-the-plateau.html",
+        "description": "Radiocarbon dating measures the decay of carbon-14 in organic material. The measurement yields a raw age in radiocarbon..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Plateau</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Plateau</h1>
+<p><strong>Essay 158</strong></p>
+<hr>
+<p>Radiocarbon dating measures the decay of carbon-14 in organic material. The measurement yields a raw age in radiocarbon years, which must then be converted to calendar years using a calibration curve. The conversion is necessary because the atmospheric concentration of carbon-14 has not been constant over time — it fluctuates with solar activity, geomagnetic field strength, and the rate of ocean-atmosphere carbon exchange. The current international calibration standard, IntCal20, was published in <em>Radiocarbon</em> in 2020 by Paula Reimer at Queen&#x27;s University Belfast and 38 co-authors. It is constructed primarily from tree-ring measurements — each ring dated to an exact calendar year by dendrochronology, each ring&#x27;s carbon-14 content measured independently — spanning approximately 55,000 years. The curve converts every raw radiocarbon measurement to a probability distribution of calendar dates. At most calendar periods, the distribution is narrow. At some, it is not.</p>
+<p>The Hallstatt Plateau spans approximately 800 to 400 BC. During this period, the calibration curve is nearly flat — a range of 400 calendar years produces essentially the same radiocarbon age, approximately 2450 years before present. A sample from 750 BC and a sample from 450 BC, measured in any laboratory in the world, at any level of precision, will return the same radiocarbon measurement within statistical uncertainty. The ambiguity is not in the laboratory. The carbon-14 content of both samples is accurately determined. The ambiguity is in the calibration: the function that maps radiocarbon age to calendar age is non-injective over the plateau. Multiple calendar dates produce the same radiocarbon value. The calibration correctly reports this as a 300-400 year probability distribution. The measurement is precise. The interpretation is structurally ambiguous.</p>
+<p>The cause is solar. During the centuries preceding and spanning the plateau, reduced solar activity increased the flux of cosmic rays reaching the upper atmosphere, driving up carbon-14 production. As the excess carbon-14 decayed and redistributed through the carbon cycle, the atmospheric ratio spent an extended period near the same value. The calibration curve records this as a flat stretch. Nicolas Brehm, Charlotte Pearson, and colleagues at the University of Arizona and ETH Zurich, publishing in <em>Nature Communications</em> in January 2025, measured carbon-14 in individual tree rings spanning the first millennium BC and resolved an 11-year solar cycle with a mean period of 10.5 years and an amplitude of approximately 0.4 per mil — structure within the plateau, detectable only at annual resolution. The plateau is not featureless. It contains sub-decadal variation that standard calibration methods — operating on multi-year averages — cannot resolve.</p>
+<p>The archaeological consequences are concentrated precisely where they matter most. The Hallstatt Plateau covers the European Iron Age transition: the shift from Hallstatt to La Tène material culture, the spread of iron technology from the eastern Mediterranean across continental Europe, the emergence of elite centers in southern Germany and eastern France, the Scythian expansion across the Eurasian steppe. Mike Baillie — who built the Irish oak dendrochronology that extended the calibration record — called it &quot;the first millennium BC radiocarbon disaster.&quot; The phrase is precise: the method that resolves the Neolithic to decades and the Bronze Age to half-centuries loses resolution entirely during the period most critical to European Iron Age chronology. The instruments work. The proxy works. The calibration, at this stretch of the curve, cannot distinguish the question the archaeologist needs answered.</p>
+<p>Johanna Regev, Yuval Gadot, Joe Uziel, and colleagues, publishing in <em>PNAS</em> in 2024, found a way through the plateau in Iron Age Jerusalem. They used not the radiocarbon measurements alone but the stratigraphic sequence: eleven superimposed floor surfaces from an excavation, each sealed beneath the next, establishing a relative chronology that the radiocarbon measurements could not provide independently. The Bayesian model — OxCal, developed by Christopher Bronk Ramsey at the Oxford Radiocarbon Accelerator Unit — accepted both the measurements and the sequence constraints. The combination achieved decadal resolution where the measurements alone achieved only multi-century ambiguity. The method did not improve the measurements. It added context — the physical ordering of deposits — that the measurements lacked. The resolution was not in the carbon-14. It was in the dirt.</p>
+<p>Helene Agerskov Rose and John Meadows at the Centre for Baltic and Scandinavian Archaeology and Kiel University, publishing in <em>PLOS ONE</em> in 2024, applied the same Bayesian strategy to 170 radiocarbon dates from 111 cremation burials across three Danish urnfields. The Bronze-Iron Age transition in Denmark, they found, occurred in the seventh century BC — approximately 100 to 150 years earlier than the conventional chronology assumed. The conventional chronology had been constrained by the plateau: dates from the transition period returned the same radiocarbon age, and without sequence constraints there was no way to determine where within the plateau the transition fell. The Bayesian model, supplied with archaeological phasing and artefact-type ordering, found the transition at the earlier end of the window. A century of misplacement — not because the dating was wrong, but because the plateau had made all positions within it equally plausible, and the default assumption placed the transition where it was expected rather than where the constrained evidence pointed.</p>
+<p>Péter Jacobsson and colleagues at the Scottish Universities Environmental Research Centre, publishing in <em>Radiocarbon</em> in 2018, added a caution. They measured 50 consecutive single tree rings from a dendro-dated Scottish timber spanning 510-460 BC — deep in the Hallstatt Plateau — and attempted wiggle-matching, the technique of aligning the measurement series against the calibration curve to find the best fit. The exercise demonstrated that wiggle-matching on short-lived sequences within the plateau can lose accuracy when the actual past carbon-14 trend diverges from the calibration curve mean. The Bayesian strategy works, but it works only when the external constraints are robust. When the constraints are uncertain, the model inherits their uncertainty and may over-resolve — reporting a confident date that reflects the model&#x27;s assumptions more than the data&#x27;s content.</p>
+<p>The concealment mechanism here is distinct from the previous entries. In #237 (A-weighting), the filter removes information by design — it attenuates low-frequency sound before it reaches the display. In #236 (breath alcohol), the proxy is converted using an assumed constant that varies two-fold. Here, the measurement is correct, the calibration is correct, and the information is genuinely absent from the proxy. The atmospheric carbon-14 system lost the information. No instrument improvement can recover it because the information was never encoded in the carbon-14 signal — every tree that grew during the plateau incorporated the same atmospheric ratio regardless of which decade it germinated. The concealment operates not through instrumental bias or regulatory assumption but through a structural property of the proxy itself: it is lossy. The atmosphere recorded four centuries at the same value. The method faithfully reports what the atmosphere recorded. The result is that a question about time — when did this organism die? — receives a correct answer that spans four centuries.</p>
+<p>The practical concealment enters downstream. OxCal correctly reports the 300-400 year probability distribution. The archaeologist interprets it. The interpretation enters a database, a narrative, a textbook. At each step, the distribution is compressed. The journal article reports &quot;750-400 cal BC (2σ).&quot; The textbook reports &quot;approximately 600 BC.&quot; The popular account reports &quot;around 600 BC.&quot; Each compression discards the structural ambiguity that the calibration correctly identified. The plateau&#x27;s honesty — the method&#x27;s correct report of its own limitation — is eroded by each downstream user who needs a number rather than a distribution. The concealment is not in the instrument. It is in the institutional pipeline that converts correct uncertainty into apparent precision.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-340-the-placebo.html">&larr; The Placebo</a><a href="essays.html">&uarr; Essays</a><a href="essay-423-the-pledge.html">The Pledge &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

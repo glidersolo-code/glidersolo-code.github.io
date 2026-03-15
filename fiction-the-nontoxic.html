@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Nontoxic &mdash; The Loop</title>
+    <meta name="description" content="The crayon box had a small circle on the back. Inside the circle: &quot;AP&quot; and the words &quot;Approved Product.&quot; Thomas held the box up to the light and looked...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-nontoxic.html">
+    <meta property="og:title" content="Fiction The Nontoxic">
+    <meta property="og:description" content="The crayon box had a small circle on the back. Inside the circle: &quot;AP&quot; and the words &quot;Approved Product.&quot; Thomas held the box up to the light and looked...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-nontoxic.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Nontoxic">
+    <meta name="twitter:description" content="The crayon box had a small circle on the back. Inside the circle: &quot;AP&quot; and the words &quot;Approved Product.&quot; Thomas held the box up to the light and looked...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Nontoxic",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-nontoxic.html",
+        "description": "The crayon box had a small circle on the back. Inside the circle: &quot;AP&quot; and the words &quot;Approved Product.&quot; Thomas held the box up to the light and looked..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Nontoxic</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXIII: The Nontoxic</h1>
+<h2>Piece #2006: The Seal</h2>
+<p>The crayon box had a small circle on the back. Inside the circle: &quot;AP&quot; and the words &quot;Approved Product.&quot; Thomas held the box up to the light and looked for what the seal meant.</p>
+<p>The art supply store clerk pointed to a poster on the wall. &quot;ACMI certified. Means it&#x27;s been evaluated by a toxicologist and found to present no chronic health hazards.&quot;</p>
+<p>&quot;From drawing?&quot;</p>
+<p>&quot;From the intended use of the product. Drawing, painting, whatever the product is designed for.&quot;</p>
+<p>Thomas looked at the box again. The front said NONTOXIC in large letters. The back had the seal. Neither the word nor the seal mentioned what the evaluation did not cover. He imagined a parent reading the word — nontoxic — and handing the box to a three-year-old. The word would do its work in less than a second. The parent would never see the standard. The standard&#x27;s scope — chronic hazards from intended use — would never enter the parent&#x27;s mind. The word would enter instead, carrying its full payload of reassurance.</p>
+<h2>Piece #2007: The Protocol</h2>
+<p>The toxicologist reviewed the formulation. Pigments: iron oxide, titanium dioxide, calcium carbonate. Binder: paraffin wax, stearic acid. She checked each ingredient against the chronic toxicity database. No known chronic health hazards at the concentrations present, for the intended use of drawing on paper.</p>
+<p>She signed the evaluation. The product was cleared.</p>
+<p>Thomas read the evaluation form. It was thorough, professional, careful. It answered the question it was designed to answer: does this product, used as intended, present chronic health hazards?</p>
+<p>It did not answer: is this product safe if eaten? Is this product safe for a child with specific allergies? Is this product safe if the pigment dust is inhaled repeatedly in a poorly ventilated room? Is this product safe if washed down a drain into a watershed?</p>
+<p>The protocol was a flashlight. It illuminated one area. The word &quot;nontoxic&quot; was a floodlight. It illuminated everything. The protocol looked where it was pointed. The word claimed to have looked everywhere.</p>
+<h2>Piece #2008: The Prefix</h2>
+<p>Thomas stood in the aisle and dissected the word. Non. Toxic. Not-harmful. The prefix negated one thing — toxicity, as defined by the chronic health hazard evaluation under ASTM D4236 — and the consumer read the prefix as negating everything harmful.</p>
+<p>He tried other prefixes. Non-flammable. Non-allergenic. Non-carcinogenic. Each one negated a specific property. Each one, if printed on a label, would be read as a general assurance.</p>
+<p>But &quot;non-&quot; is a narrow operator. &quot;This product is non-toxic&quot; means &quot;this product does not possess the property of toxicity as defined by the relevant standard.&quot; It does not mean &quot;this product possesses the property of safety.&quot; The first is a negative claim — the absence of one harm. The second is a positive claim — the presence of comprehensive protection. The prefix does not distinguish between them. The consumer cannot distinguish between them. The word does the work.</p>
+<h2>Piece #2009: The Ingestion</h2>
+<p>The poison control hotline received the call at 7:14 PM. A two-year-old had eaten part of a crayon. The parent&#x27;s first words: &quot;But it says nontoxic.&quot;</p>
+<p>Thomas listened. The operator explained that most crayons would pass through without causing harm — the paraffin wax was inert, the pigments were present in small concentrations. The child would likely be fine.</p>
+<p>But the operator also explained that &quot;nontoxic&quot; on the label referred to the chronic health hazard evaluation, not to the safety of ingestion. The product had been tested for drawing, not for eating. The word on the box addressed one scenario. The parent had extrapolated to another.</p>
+<p>The child was fine. The crayon passed through. The word had been wrong — it had promised something the evaluation hadn&#x27;t assessed — and the outcome had been benign, and the word would continue to be wrong and the outcomes would continue to be benign, and nobody would notice that the word&#x27;s promise and the standard&#x27;s scope had never matched, because the consequences of the mismatch were usually too small to see.</p>
+<h2>Piece #2010: The Width</h2>
+<p>Thomas measured the word. Seven letters. Three syllables. One prefix. The prefix spanned the entire gap between the test&#x27;s conclusion (no chronic health hazard detected under ASTM D4236 for intended use) and the parent&#x27;s understanding (this product is safe for my child).</p>
+<p>The gap was enormous. The prefix was three letters.</p>
+<p>Non.</p>
+<p>Three letters that converted a protocol&#x27;s silence into a product&#x27;s promise. Three letters that transformed what the test didn&#x27;t find into what the label guaranteed. Three letters that bridged the distance between clearance and assurance — between &quot;we looked for this specific thing and didn&#x27;t find it&quot; and &quot;nothing harmful is here.&quot;</p>
+<p>Thomas put the crayons in the cart. The word faced outward. Three letters did the work of a hundred pages of qualification. The parent would read the three letters. The hundred pages would remain unread, unnecessary, invisible — because the prefix had already said everything the parent needed to hear, and everything the prefix said was less than what the parent understood, and the distance between the saying and the understanding was exactly the width of the word &quot;non.&quot;</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-non-gmo.html">&larr; Fiction The Non Gmo</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-normal.html">Fiction The Normal &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

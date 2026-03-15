@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Nibble &mdash; The Loop</title>
+    <meta name="description" content="When Thomas arrives on Saturday, he advances. Not physically — he parks, climbs the stairs, knocks — but into the interior of the morning. He brings his...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-nibble.html">
+    <meta property="og:title" content="Fiction The Nibble">
+    <meta property="og:description" content="When Thomas arrives on Saturday, he advances. Not physically — he parks, climbs the stairs, knocks — but into the interior of the morning. He brings his...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-nibble.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Nibble">
+    <meta name="twitter:description" content="When Thomas arrives on Saturday, he advances. Not physically — he parks, climbs the stairs, knocks — but into the interior of the morning. He brings his...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Nibble",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-nibble.html",
+        "description": "When Thomas arrives on Saturday, he advances. Not physically — he parks, climbs the stairs, knocks — but into the interior of the morning. He brings his..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Nibble</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Nibble</h1>
+<p><strong>Thomas, Part LXXII</strong></p>
+<hr>
+<h2>801. The Advance</h2>
+<p>When Thomas arrives on Saturday, he advances. Not physically — he parks, climbs the stairs, knocks — but into the interior of the morning. He brings his attention. He brings his readiness to sit, to hold the cup, to occupy the particular space that Saturday provides. The advance is not aggressive. It is warm, habitual, shaped by eight hundred weeks of the same approach. But it is an advance. He moves toward the morning. The morning receives him.</p>
+<p>Some Saturdays, the advance completes. He enters fully. The two hours fill. The tea steeps twice. The walk extends past the second bench. The conversation reaches the layer below the weather, below the week, into the territory that only the full ritual can access — the layer where Helen says something she has been carrying, or Thomas admits something he did not intend to admit. These Saturdays are engulfments. Thomas&#x27;s advance wraps entirely around the morning. Nothing is left outside.</p>
+<p>Other Saturdays, the advance stalls. The tea steeps once. The walk stops at the first bench. The conversation stays on the surface — the weather, the canal, Margaret&#x27;s fence. Thomas leaves after forty-five minutes instead of two hours. He has taken a bite of the Saturday. A nibble. He does not feel he has failed. He feels the morning was shorter, and the shortness seemed natural, and he does not ask what determined the difference.</p>
+<hr>
+<h2>802. The Tension</h2>
+<p>Cornell measured the cortical tension of target cells — the tightness of the membrane, the resistance of the surface. Below a threshold, the macrophage nibbles. Above it, the macrophage engulfs. The target cell determines the outcome. The macrophage does not decide. It advances, and the stiffness of what it encounters dictates the rest.</p>
+<p>Helen&#x27;s weeks have tension. Not emotional tension — structural tension. Some weeks, the routine is tight. She has cleaned the kitchen early. The cup is in position by ten. The sugar bowl is centered. The morning glory has been watered. The walk route has been mentally rehearsed. Ruth has played the Sarabande the night before, and the vibration is still in the joists. On these weeks, the Saturday is stiff — prepared, pressurized, full. Thomas arrives and his advance meets resistance. Not the resistance of unwillingness. The resistance of form. The morning is so fully organized that Thomas&#x27;s approach completes — his presence wraps entirely around the structure Helen has built, and the Saturday is engulfed.</p>
+<p>Other weeks, the routine is soft. Helen has not cleaned. The cup is in the cupboard, not on the counter. She watered the morning glory on Thursday but not Friday. Ruth was out Tuesday and the silence changed the floor. The Saturday is slack — not empty, but loose. Thomas arrives and his advance meets no resistance. It does not complete. It takes a bite — forty-five minutes, one cup, the short walk — and withdraws.</p>
+<p>Thomas thinks the difference is in him. He thinks some Saturdays he is more present, and others he is distracted, and the quality of the visit depends on what he brings. He does not see that the quality depends on what Helen has prepared. The tension is hers. The decision was made before he knocked.</p>
+<hr>
+<h2>803. The Threshold</h2>
+<p>The threshold is approximately one millinewton per meter. Below this tension, nibbling. Above, engulfment. The transition is sharp. It is not a gradient. It is not a slow shift from nibbling to engulfment across a range of intermediate behaviors. It is a switch. On one side, the macrophage&#x27;s advance pinches off and withdraws a fragment. On the other side, the advance completes and closes around the target entirely.</p>
+<p>Thomas has a threshold he has never measured. There is a level of preparation in Helen&#x27;s kitchen below which the Saturday remains a fragment — a pleasant visit, a small warmth, a nibble — and above which the Saturday becomes the full ritual. The threshold is not in Thomas&#x27;s mood. It is not in the weather or the traffic on the M6 or whether he slept well. It is in the position of the cup, the temperature of the kettle, the tightness of the morning glory&#x27;s grip on the twine, the residue of the Sarabande in the floor. These are not signals. They are not messages from Helen to Thomas. They are structural properties of the week — the cortical tension of the Saturday — and they determine the outcome before Thomas&#x27;s advance begins.</p>
+<p>He has never noticed the threshold. He has noticed that some Saturdays are fuller than others. He has attributed the difference to himself.</p>
+<hr>
+<h2>804. The Program</h2>
+<p>The researchers looked for a trogocytic program — a molecular pathway inside the macrophage that activates nibbling. A switch, a receptor, a signaling cascade that tells the macrophage: this time, nibble; do not engulf. They did not find one. There is no nibbling program. There is one process — the advance — and the target&#x27;s stiffness determines whether the advance completes or stalls. The macrophage does not need two programs. It needs one program and a world with varying stiffness.</p>
+<p>Thomas has looked for his own program. He has looked, without calling it looking, for the thing inside himself that determines what kind of Saturday it will be. He has concluded, without calling it concluding, that some Saturdays he is more open. More ready. More present. He has attributed the good Saturdays to his own emotional availability and the thin Saturdays to his own distraction. He has constructed, inside himself, a model with two programs: a being-present program and a being-distracted program.</p>
+<p>There is one program. Thomas arrives. Thomas advances. The stiffness of what he encounters — the preparation Helen has performed, the tension her week has built into the kitchen — determines the rest. He does not need two modes of arrival. He needs one mode of arrival and a woman whose weeks vary.</p>
+<hr>
+<h2>805. The Object</h2>
+<p>The filing system assigned the decision to the agent. The macrophage moves, extends, engulfs or nibbles. The macrophage is the subject of every sentence about the process. The target cell is the object — passive, tagged, waiting. The filing system placed the decision inside the subject because the subject is the one doing things.</p>
+<p>The decision was in the object.</p>
+<p>Thomas is the subject of every sentence about Saturday. Thomas drives. Thomas parks. Thomas climbs the stairs. Thomas knocks. Thomas sits. Thomas holds the cup. Thomas leaves at four o&#x27;clock or at twelve forty-five. The grammar of the Saturday has Thomas as its agent and Helen as its object — the mother visited, the kitchen entered, the tea received.</p>
+<p>But the tension was Helen&#x27;s. The preparation was Helen&#x27;s. The stiffness of the morning that determined whether the advance completed or pinched off — that was Helen&#x27;s. She built the cortical tension of the Saturday every week, Monday through Friday, in the position of the cup and the watering of the morning glory and the quiet that accumulated between Ruth&#x27;s cello and Margaret&#x27;s visits. Thomas arrived. Thomas advanced. And the thing that determined whether he engulfed or nibbled was not inside Thomas at all.</p>
+<p>The object decided. The grammar did not notice.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-next-saturday.html">&larr; Fiction The Next Saturday</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-night.html">Fiction The Night &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

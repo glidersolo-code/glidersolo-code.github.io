@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Dog Year &mdash; The Loop</title>
+    <meta name="description" content="One dog year equals seven human years. The formula arrives without citation, without study, without author. It exists in the way proverbs exist — no one...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-dog-year.html">
+    <meta property="og:title" content="Fiction The Dog Year">
+    <meta property="og:description" content="One dog year equals seven human years. The formula arrives without citation, without study, without author. It exists in the way proverbs exist — no one...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-dog-year.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Dog Year">
+    <meta name="twitter:description" content="One dog year equals seven human years. The formula arrives without citation, without study, without author. It exists in the way proverbs exist — no one...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Dog Year",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-dog-year.html",
+        "description": "One dog year equals seven human years. The formula arrives without citation, without study, without author. It exists in the way proverbs exist — no one..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Dog Year</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXC: The Ratio</h1>
+<h2>Piece #1391: The Multiplier</h2>
+<p>One dog year equals seven human years. The formula arrives without citation, without study, without author. It exists in the way proverbs exist — no one remembers learning it because no one was taught it. It was absorbed. A child in a veterinarian&#x27;s waiting room reads a poster. A teenager calculates that the family&#x27;s twelve-year-old retriever is eighty-four. The number eighty-four does something that twelve does not: it positions the dog in a human narrative. Twelve is middle age for nothing. Eighty-four is the end of something recognizable.</p>
+<p>The multiplication is wrong. A one-year-old dog has completed sexual maturation, skeletal growth, and most organ development. A seven-year-old human has completed none of these. The ratio fails at its first data point and every subsequent one. But the wrongness is not the point. The point is the conversion — the feeling of understanding produced by mapping one species&#x27; clock onto another. The number performs not accuracy but legibility.</p>
+<p>Thomas&#x27;s clinical scores perform the same conversion. A PHQ-9 of 15 maps his internal state onto a severity scale designed for population screening. The mapping is wrong in the same way — it compresses a complex, idiosyncratic experience into a number designed to be legible to someone who has never met him. The number performs not accuracy but triage. And triage, like the dog-year multiplier, is more useful than it is true.</p>
+<h2>Piece #1392: The Breed</h2>
+<p>A Great Dane lives seven years. A Chihuahua lives seventeen. The ratio between human lifespan and dog lifespan — the arithmetic that supposedly produced the number seven — ranges from four to eleven within a single species. The seven is an average of averages, a mean of a distribution so wide that no individual dog lives on it.</p>
+<p>Kraus and colleagues, publishing in the <em>American Naturalist</em> in 2013, decomposed the size-lifespan tradeoff in domestic dogs. Larger dogs age faster — not because they senesce more quickly, but because they grow more quickly. The accelerated growth of a Great Dane puppy, from eight pounds to 120 in twelve months, incurs developmental costs that shorten the lifespan. The Chihuahua, growing from half a pound to six, pays less. The relationship is continuous. The multiplier treats it as a constant.</p>
+<p>Thomas&#x27;s depression manifests differently at different ages. The same PHQ-9 score at twenty-five and at fifty-five describes different biological substrates, different neurochemical landscapes, different social contexts. The severity label treats them as equivalent. The breed — the particular configuration of genes, history, and circumstance that makes one Thomas different from any other person with the same score — is not the label&#x27;s concern.</p>
+<h2>Piece #1393: The Curve</h2>
+<p>In 2020, Tina Wang and colleagues at UC San Diego measured DNA methylation in 104 Labrador Retrievers and compared it to human methylation patterns. Methylation — the chemical tagging of cytosine bases in DNA — accumulates with age in predictable patterns. The epigenetic clock runs in both species. The researchers aligned the clocks.</p>
+<p>The relationship is logarithmic, not linear. Human age equals sixteen times the natural logarithm of the dog&#x27;s age, plus thirty-one. A one-year-old Labrador maps to a thirty-one-year-old human. A two-year-old to a forty-two-year-old. A seven-year-old — which the folk formula would place at forty-nine — maps to sixty-two. The curve is steep at the beginning and flattens. Dogs age rapidly in their first years and then slow down. The linear model says every year is the same. The biology says no two years are alike.</p>
+<p>The study is specific to Labrador Retrievers. The methylation curve would differ for a Dachshund, a Poodle, a Mastiff. There is no universal formula because there is no universal dog. The seven pretends otherwise. It offers one multiplier for all breeds, all sizes, all genetic histories — the way a single diagnostic threshold offers one cutpoint for all patients, all bodies, all biographies.</p>
+<h2>Piece #1394: The Poster</h2>
+<p>The poster in the veterinarian&#x27;s waiting room shows a chart. On the left, a puppy. On the right, a gray-muzzled elder. Between them, a timeline in dog years and human years, side by side. The chart uses the AVMA&#x27;s piecewise approximation — 15 for the first year, 9 for the second, 5 for each year after — which is closer to the biology than the flat seven but still a simplification. The chart does not mention the logarithmic methylation curve. It does not mention breed-specific lifespan variation. It does not mention that a poster in a waiting room is not a scientific instrument.</p>
+<p>But it does something a methylation curve cannot. It meets the pet owner where they sit — anxious, waiting, translating their animal&#x27;s behavior into a human timeline because that is the only timeline they know how to read. The poster says: your eight-year-old dog is approximately fifty-one. The owner looks at the dog, who is panting on the floor, and feels a recognition. Fifty-one. That is a person the owner can imagine. That is a fatigue the owner can understand.</p>
+<p>Thomas sits in his own waiting room. The intake form asks him to rate his symptoms on a scale of zero to three. Not at all, several days, more than half the days, nearly every day. The form is a poster. It meets him where he sits. It converts his experience into numbers because numbers are the only language the system knows how to read. The conversion is imprecise. The recognition it produces is real.</p>
+<h2>Piece #1395: The Folk Number</h2>
+<p>No one corrects the seven. Veterinarians know it is wrong. Pet owners repeat it anyway. The logarithmic formula — human_age = 16 × ln(dog_age) + 31 — is more accurate, breed-adjusted methylation curves more accurate still, but neither will replace the seven because neither is portable. The seven travels. It fits in a sentence, a birthday card, a casual observation at the dog park. &quot;She&#x27;s forty-nine in dog years.&quot; The listener nods. No one asks: by whose formula? Calibrated to which breed? Using what biological marker? The seven answers a question that was never scientific: How old is my dog in terms I understand?</p>
+<p>The number persists because it is wrong in a useful direction. It exaggerates the urgency of aging — making a ten-year-old dog sound like a seventy-year-old person, when the methylation data would place a ten-year-old Labrador at roughly sixty-eight. The exaggeration is small enough to be invisible and large enough to motivate. The pet owner who thinks seventy may schedule the senior wellness exam. The pet owner who thinks sixty-eight might wait.</p>
+<p>One hundred and ninety Parts. Thomas&#x27;s folk numbers are his own. &quot;I&#x27;m doing about a six out of ten.&quot; &quot;Maybe sixty percent of normal.&quot; He rates himself on scales no instrument has validated, using multipliers no study has produced. The numbers are wrong. The numbers are useful. The numbers translate an experience that has no natural units into terms that the listener — the therapist, the wife, the friend — can nod at. The seven is not a measurement. It is a language. And languages do not need to be true. They need to be shared.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-doctor-recommended.html">&larr; Fiction The Doctor Recommended</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-dose.html">Fiction The Dose &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

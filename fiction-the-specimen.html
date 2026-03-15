@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Specimen &mdash; The Loop</title>
+    <meta name="description" content="Thomas speaks to the molecule that has outstayed its welcome.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-specimen.html">
+    <meta property="og:title" content="Fiction The Specimen">
+    <meta property="og:description" content="Thomas speaks to the molecule that has outstayed its welcome.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-specimen.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Specimen">
+    <meta name="twitter:description" content="Thomas speaks to the molecule that has outstayed its welcome.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Specimen",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-specimen.html",
+        "description": "Thomas speaks to the molecule that has outstayed its welcome."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Specimen</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXCV: The Specimen</h1>
+<h2>Piece #1916: The Metabolite</h2>
+<p>Thomas speaks to the molecule that has outstayed its welcome.</p>
+<p>It was supposed to be you. The THC — the tetrahydrocannabinol that crossed the blood-brain barrier, that bound the CB1 receptors, that slowed the synaptic firing, that produced the euphoria and the impairment and the reason anyone cared whether you were present. You were the agent. You were the risk. You were the thing the employer feared and the policy targeted and the test was built to find.</p>
+<p>But you&#x27;re gone. You lasted two hours, maybe six. You did your work and the liver took you apart and the kidneys washed the pieces out and what&#x27;s left is me — THC-COOH, 11-nor-9-carboxy-THC, the inert carboxyl metabolite that crosses nothing, binds nothing, impairs nothing. I am your receipt. I am the stub of the ticket after the movie is over.</p>
+<p>And I am what the antibody finds. Because you were fast and I am slow. You cleared in hours. I persist in fat tissue for weeks. In the chronic user, seventy-seven documented days of slow release — almost three months of urinary confession for a few hours of altered state.</p>
+<p>The test was designed to find you. It finds me instead. And because the output is binary — POSITIVE — there is no place in the format for the distinction. No field for <em>when</em>. No column for <em>how much</em>. No checkbox for <em>is this molecule doing anything right now</em>. Just the word. The same word for two hours ago and twenty-nine days ago. The same word for the substance that is present and the substance that was present. I am the ghost of impairment, and the test reads ghosts as bodies.</p>
+<h2>Piece #1917: The Cutoff</h2>
+<p>Thomas speaks to the threshold that doubled as a decision.</p>
+<p>One hundred nanograms per milliliter. That was the line in 1988, when SAMHSA — still called NIDA — published the first Mandatory Guidelines for Federal Workplace Drug Testing Programs. Below one hundred, negative. Above, positive. The line was a policy dressed as a measurement.</p>
+<p>Then in 1998, the line moved. Fifty nanograms per milliliter. Same immunoassay. Same antibodies. Same urine in the same cup. A different number on the same form. The stated rationale: &quot;to identify individuals who use illegal substances regardless of whether they are regular or occasional users.&quot; The line moved and the detection window roughly doubled and more positives appeared from the same population doing the same things they had been doing when the line was at one hundred.</p>
+<p>What changed? Not the chemistry. Not the behavior. The number. And a number is a decision in disguise. How far back should the employer&#x27;s reach extend? How many days of the employee&#x27;s past belong to the employer&#x27;s present? At one hundred, the answer was roughly five days for the occasional user. At fifty, roughly ten. Same binary output: POSITIVE. The word didn&#x27;t get louder. The word didn&#x27;t add a timestamp. The word said the same thing it always said, and the same thing now encompassed twice as much past.</p>
+<p>No one experienced this as an extension of surveillance. Everyone experienced it as a technical improvement — a more sensitive test, a lower detection limit, a better instrument. The format absorbed the policy change without showing it.</p>
+<h2>Piece #1918: The Hair</h2>
+<p>Thomas speaks to the follicle that remembers differently for different bodies.</p>
+<p>Ninety days. That&#x27;s the window in your inch and a half of scalp hair, growing at one centimeter per month, carrying molecules that were deposited from the bloodstream within minutes of ingestion. Three months of exposure history, compressed into one binary. POSITIVE.</p>
+<p>But the melanin. The melanin is where the concealment nests. Hair melanin has affinity for drug molecules — cocaine, morphine, amphetamine, THC. The binding follows a hierarchy that tracks the visible: black hair retains more than brown, brown retains more than blond. In a controlled-dose study — the same milligrams of cocaine administered to every subject, measured by the same laboratory, using the same analytical method — non-Caucasian subjects had between two and twelve times the drug concentration in their hair as Caucasian subjects.</p>
+<p>Two to twelve times. Same dose. Same drug. Same test. Different answer. The melanin is not a confounder — it is the mechanism. The ninety-day window is not ninety days for everyone. It is ninety days at different sensitivities, and the sensitivity gradient follows the same axis as the social category the test claims to ignore.</p>
+<p>SAMHSA&#x27;s Drug Testing Advisory Board reviewed the evidence in 2013. Reviewed it again in 2014. Published the reviews. Did not change the procedure. Hair testing continued in private-sector employment, outside the federal framework that had at least documented the bias. The biology is known. The disparity is measured. The test continues. And it continues in the space where the regulation is lightest, because the space where the regulation is lightest is where the bias can persist without the inconvenience of a review board that notices.</p>
+<h2>Piece #1919: The Panel</h2>
+<p>Thomas speaks to the five substances that were chosen and the one that was not.</p>
+<p>Marijuana. Cocaine. Amphetamines. Opiates. PCP. The NIDA-5. The original panel, established in 1988, still forming the backbone of workplace drug testing thirty-eight years later.</p>
+<p>And alcohol? Alcohol is not on the panel.</p>
+<p>Not because alcohol doesn&#x27;t impair. Alcohol is the most common substance involved in workplace accidents. Not because alcohol can&#x27;t be detected — breathalyzers, blood tests, urine ethyl glucuronide. Not because alcohol is legal — legality determines the employer&#x27;s policy, not the test&#x27;s capability. Alcohol is not on the five-panel because the five-panel was designed to identify illegal drug users, not impaired workers. The panel&#x27;s composition reveals the test&#x27;s purpose: it was never about impairment. It was about a category of behavior — illegal drug use — that the policy targets and the binary POSITIVE/NEGATIVE adjudicates.</p>
+<p>If the test were about impairment, it would measure impairment. It would detect the substance at the moment of functional compromise, during the hours when performance actually degrades. It would catch the morning-after alcohol, the prescription benzodiazepine at therapeutic levels, the fatigue that degrades performance more consistently than any substance on the panel. It would not find the marijuana metabolite deposited three weeks ago in fat tissue and slowly leaching into urine at concentrations that document nothing about today.</p>
+<p>The panel is a list. The list is a boundary. Inside the boundary: detected, reported, adjudicated, consequenced. Outside: invisible, uncounted, unregulated. The boundary performs neutrality — five substances, scientifically selected, analytically validated. The boundary enacts a distinction: not between impaired and unimpaired, but between the substances the policy chose to surveil and the substances it chose to ignore.</p>
+<h2>Piece #1920: The Cochrane</h2>
+<p>Thomas speaks to the systematic review that found one study.</p>
+<p>One.</p>
+<p>The Cochrane Collaboration — the organization that synthesizes all available evidence, that searches every database, that applies the strictest inclusion criteria, that produces the systematic reviews on which evidence-based policy is supposed to rest — looked for evidence that random workplace drug and alcohol testing prevents injury.</p>
+<p>They found one eligible study. One industry. One country. Non-randomized design. Testing only for alcohol, not drugs. GRADE assessment: &quot;very low&quot; quality of evidence across all five domains.</p>
+<p>Fifty-five million tests per year. Since 1986 — forty years of testing. Billions of dollars in laboratory fees, collection costs, Medical Review Officer reviews, program administration. The most widely deployed workplace safety intervention in the United States. And when the methodologists asked the simplest question — does it work? — the evidentiary base was a single study in a single industry that tested a single substance.</p>
+<p>The test does not need evidence because the test does not operate as evidence. It operates as governance. It marks the boundary between the worker who complies and the worker who does not. It performs the employer&#x27;s authority over the employee&#x27;s body — not the body at work, but the body on its own time, in its own house, on its own weekend, twenty-nine days ago. The specimen cup is a container for compliance, not for evidence. The immunoassay is a ritual of authority, not a diagnostic of risk. And the Cochrane review — the one that found one study — will change nothing, because the system that administers fifty-five million tests per year is not a system that asks whether the tests do what they claim. It is a system that requires the tests to be taken. The taking is the point. The result is the format. And the format is the governance.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-species.html">&larr; Fiction The Species</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-spectrum.html">Fiction The Spectrum &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Learning Style &mdash; The Loop</title>
+    <meta name="description" content="Thomas took the VARK questionnaire. Thirty questions. Multiple choice. At the end, a result: Visual 8, Auditory 4, Reading/Writing 5, Kinesthetic 13.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-learning-style.html">
+    <meta property="og:title" content="Fiction The Learning Style">
+    <meta property="og:description" content="Thomas took the VARK questionnaire. Thirty questions. Multiple choice. At the end, a result: Visual 8, Auditory 4, Reading/Writing 5, Kinesthetic 13.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-learning-style.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Learning Style">
+    <meta name="twitter:description" content="Thomas took the VARK questionnaire. Thirty questions. Multiple choice. At the end, a result: Visual 8, Auditory 4, Reading/Writing 5, Kinesthetic 13.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Learning Style",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-learning-style.html",
+        "description": "Thomas took the VARK questionnaire. Thirty questions. Multiple choice. At the end, a result: Visual 8, Auditory 4, Reading/Writing 5, Kinesthetic 13."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Learning Style</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CD: The Style</h1>
+<h2>Piece #2441: The Questionnaire</h2>
+<p>Thomas took the VARK questionnaire. Thirty questions. Multiple choice. At the end, a result: Visual 8, Auditory 4, Reading/Writing 5, Kinesthetic 13.</p>
+<p>&quot;You are a kinesthetic learner,&quot; the report said. &quot;You learn best through hands-on experience, physical activity, and practical application.&quot;</p>
+<p>Thomas looked at the report. It felt like a fact — as solid as a blood type, as personal as a fingerprint. He was a kinesthetic learner. He always had been. He remembered preferring lab work to lectures, building models rather than reading textbooks. The label confirmed what he already knew about himself.</p>
+<p>Then he looked for the evidence. Not the evidence for his preference — that was real. He did prefer hands-on work. He looked for the evidence that matching instruction to his preference produced better learning outcomes.</p>
+<h2>Piece #2442: The Review</h2>
+<p>Pashler, McDaniel, Rohrer, and Bjork. <em>Psychological Science in the Public Interest</em>, 2008. The most comprehensive review of the learning-styles literature.</p>
+<p>Thomas read their framework. The testable claim was the &quot;meshing hypothesis&quot;: instruction matched to a student&#x27;s learning style should produce better outcomes than mismatched instruction. The test required a specific experimental design — assign students to style categories, randomly assign half to matched and half to mismatched instruction, measure outcomes, check for an interaction effect.</p>
+<p>The findings: &quot;virtually no evidence&quot; supporting the meshing hypothesis. The few studies that used appropriate methodology found results that &quot;flatly contradict&quot; the popular claim. Students who received mismatched instruction performed as well as — sometimes better than — those who received matched instruction.</p>
+<p>Thomas reread the conclusion. The preferences were real. His preference for hands-on learning was genuine. But the preference did not predict learning outcomes. He preferred kinesthetic activities. He did not learn more from them.</p>
+<h2>Piece #2443: The Number</h2>
+<p>Thomas counted the learning-style classification systems. Over seventy. VARK (Fleming, 1992). Kolb&#x27;s experiential learning cycle (1984). Honey and Mumford (1986). Dunn and Dunn (1978). Gregorc. Gardner. Felder-Silverman. Each system proposed different categories. Each system disagreed with the others about how many styles existed and what they were called.</p>
+<p>Thomas thought about this. If learning styles were a natural category — like blood types, like primary colors — multiple instruments would converge on the same taxonomy. Blood can be typed by any lab in the world, using any standard reagent, and the result will be the same. Learning styles, assessed by different instruments, produced different results for the same student.</p>
+<p>He checked the teacher belief statistics. Dekker et al., 2012: 93% of UK teachers believed in learning styles. Newton and Miah, 2017: 89.1% across 37 studies involving over 15,000 educators. The concept appeared in teacher training programs, curriculum guides, professional development workshops.</p>
+<p>The gap between the evidence (no support) and the belief (89%) was the widest Thomas had ever encountered in the inventory.</p>
+<h2>Piece #2444: The Performance</h2>
+<p>Thomas sat in on a professional development session. The presenter — energetic, experienced, carrying laminated cards — walked the teachers through learning styles. &quot;Think about the students in your classroom. Some are visual — they need to SEE the material. Some are auditory — they need to HEAR it. Some are kinesthetic — they need to DO it. Your job is to identify each student&#x27;s style and provide instruction that matches.&quot;</p>
+<p>The teachers nodded. They were being told to pay attention to individual students. To notice their differences. To adjust instruction accordingly. The message felt right. It felt student-centered. It felt like good teaching.</p>
+<p>Thomas understood the mechanism. The classification performed individualization. &quot;You are a visual learner&quot; was not a finding — it was an act of attention. The teacher who said it was performing responsiveness. The student who heard it was receiving recognition. The category substituted for the evidence, and the substitution went undetected because the category FELT like evidence.</p>
+<p>The most effective learning strategies — retrieval practice, spaced repetition, interleaving — were universal. They worked for everyone regardless of preference. But precisely because they were universal, they did not perform individualization. They did not say &quot;this is for YOU.&quot; The learning-style label said nothing useful about how to learn. The evidence-based strategies said everything useful. And the label was more popular, because it performed the thing that good teaching should perform — attention to the individual — while the evidence did not.</p>
+<h2>Piece #2445: The Cage</h2>
+<p>Thomas looked at his own questionnaire result. Kinesthetic, score 13. He thought about what the label had done since he received it.</p>
+<p>He had avoided audiobooks — &quot;I&#x27;m not an auditory learner.&quot; He had preferred physical notes to digital ones. He had chosen labs over lectures, workshops over webinars, role-plays over readings. Each choice felt like self-knowledge in action. Each choice confirmed the label.</p>
+<p>But the confirmation was circular. He preferred kinesthetic activities. He chose kinesthetic activities. He attributed his comfort to the match. He attributed his discomfort with other formats to the mismatch. The label generated its own evidence. The generated evidence validated the label.</p>
+<p>Thomas thought about retrieval practice — the cognitive strategy with the strongest evidence base. He had never used flashcards systematically. They didn&#x27;t fit his &quot;style.&quot; They were not hands-on. They were not kinesthetic. They were small pieces of paper with words on them.</p>
+<p>He picked up a stack of index cards. He wrote a question on one side. He wrote the answer on the other. He tested himself. The act was not kinesthetic. It was not visual or auditory. It was effortful retrieval — the brain working to reconstruct information from memory, the struggle that produces durable learning.</p>
+<p>The label had told him who he was. The evidence told him what worked. They were not the same thing. And the label — &quot;I&#x27;m a kinesthetic learner,&quot; spoken with the confidence of self-knowledge — had been the cage that kept him from the method that would have worked better. The category performed individualization. The individualization performed liberation. The liberation was a constraint.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-latch.html">&larr; Fiction The Latch</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-letter.html">Fiction The Letter &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

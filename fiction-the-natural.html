@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Natural &mdash; The Loop</title>
+    <meta name="description" content="The word appeared on the package between the ingredient list and the barcode. It was printed in green — the same green as the trees on the illustration,...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-natural.html">
+    <meta property="og:title" content="Fiction The Natural">
+    <meta property="og:description" content="The word appeared on the package between the ingredient list and the barcode. It was printed in green — the same green as the trees on the illustration,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-natural.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Natural">
+    <meta name="twitter:description" content="The word appeared on the package between the ingredient list and the barcode. It was printed in green — the same green as the trees on the illustration,...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Natural",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-natural.html",
+        "description": "The word appeared on the package between the ingredient list and the barcode. It was printed in green — the same green as the trees on the illustration,..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Natural</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXI: The Natural</h1>
+<h2>Piece #1996: The Label</h2>
+<p>The word appeared on the package between the ingredient list and the barcode. It was printed in green — the same green as the trees on the illustration, the same green as the word &quot;organic&quot; on the product beside it.</p>
+<p>The word was &quot;natural.&quot;</p>
+<p>Thomas picked up the package and read the back. Ingredients: enriched flour, sugar, palm oil, natural flavors, soy lecithin. He looked at the word &quot;natural&quot; on the front. He looked at the ingredient list on the back. He tried to find which ingredient the word was describing.</p>
+<p>He couldn&#x27;t. The word didn&#x27;t point to any ingredient. It pointed to the whole package. It described nothing in particular. It described everything.</p>
+<p>&quot;What does it mean?&quot; Thomas asked the clerk.</p>
+<p>&quot;It means it&#x27;s natural,&quot; the clerk said.</p>
+<p>Thomas waited for more. Nothing came. The definition was the word. The word was the definition.</p>
+<h2>Piece #1997: The Vacancy</h2>
+<p>In 1991, the FDA wrote a sentence: nothing artificial or synthetic has been added to a food that would not normally be expected to be in that food.</p>
+<p>Thomas found the sentence on a website. It was not a regulation. It was not a law. It was not codified in the Federal Register. It was a policy statement — a description of what the agency would generally not object to. The sentence had no enforcement mechanism. No inspector visited a factory to verify &quot;natural.&quot; No certificate was issued. No penalty was assessed for misuse.</p>
+<p>In 2015, the agency asked the public what the word should mean. Seven thousand people responded. The agency read the responses. The agency did nothing.</p>
+<p>Thomas stared at the timeline. Twenty-four years between the informal sentence and the public comment request. Eleven years between the public comment request and the present. Thirty-five years of a word on every shelf in every grocery store in America, performing the function of a regulation without being one.</p>
+<p>The vacancy was not an oversight. The vacancy was the product.</p>
+<h2>Piece #1998: The Flavoring</h2>
+<p>The lab where the natural strawberry flavor was made looked identical to the lab where the artificial strawberry flavor was made. The same equipment. The same white coats. The same gas chromatographs analyzing the same molecular structures.</p>
+<p>Thomas watched the chemist work. The natural flavor began with a strawberry — an actual fruit, crushed, heated, distilled, fractionated, recombined. The artificial flavor began with petroleum derivatives — synthesized, purified, blended. Both processes ended with the same molecule: ethyl methylphenylglycidate.</p>
+<p>&quot;The molecules are identical?&quot; Thomas asked.</p>
+<p>&quot;Often,&quot; the chemist said. &quot;The distinction is origin, not composition.&quot;</p>
+<p>&quot;But the label says one is natural and the other isn&#x27;t.&quot;</p>
+<p>&quot;The label says where the molecule came from. It doesn&#x27;t say what the molecule is.&quot;</p>
+<p>Thomas held two vials. One was labeled &quot;Natural Strawberry Flavor.&quot; The other was labeled &quot;Artificial Strawberry Flavor.&quot; He couldn&#x27;t tell them apart by smell, by taste, by color, by molecular weight. The difference was a word. The word was worth the price difference on the shelf. The word performed a distinction the molecules did not contain.</p>
+<h2>Piece #1999: The Fifty Billion</h2>
+<p>The market research report said fifty billion dollars. That was the annual value of food products labeled &quot;natural&quot; in the United States.</p>
+<p>Thomas divided the number. Fifty billion divided by three hundred and thirty million people. About one hundred and fifty dollars per person per year, spent on a word that had no legal definition.</p>
+<p>He tried to calculate the cost of the word. Not the cost of the food — the cost of the word itself. If the same product, without the word &quot;natural,&quot; sold for fifteen percent less, then the word was worth seven and a half billion dollars per year. If ten percent less, five billion. The word had a price, but Thomas couldn&#x27;t determine it precisely, because the word&#x27;s value lay in its imprecision.</p>
+<p>A defined word has a fixed value — it delivers exactly what it promises. An undefined word has a variable value — it delivers whatever the buyer believes it promises. Each buyer fills the word with their own meaning. No pesticides. No GMOs. No artificial anything. Healthier. Simpler. Safer. The word accepts every deposit and guarantees no withdrawal.</p>
+<h2>Piece #2000: The Plenitude</h2>
+<p>Thomas stood in the grocery aisle and counted the word. It appeared on the cereal. On the chips. On the juice. On the crackers. On the yogurt. On the soup. On the bread. On the frozen dinners. On the baby food. On the dog food.</p>
+<p>The word appeared more often than any regulated term. More often than &quot;organic.&quot; More often than any specific health claim. It was the most common promise on the most regulated surface in consumer commerce, and it was the only promise that had never been defined.</p>
+<p>He understood now why no definition had been finalized. A definition would limit the word. A definition would say what &quot;natural&quot; meant, and by saying what it meant, would also say what it didn&#x27;t mean. The consumer who believed &quot;natural&quot; meant &quot;no pesticides&quot; might learn that the definition permitted pesticides. The consumer who believed it meant &quot;no GMOs&quot; might learn that the definition permitted GMOs. Any definition would disappoint someone. The current arrangement disappointed no one — because every consumer&#x27;s definition was, for that consumer, correct.</p>
+<p>The vacancy was the plenitude. The less the word contained, the more it held. The absence of a definition was not a regulatory failure. It was a semantic achievement. The word performed a property that no regulation could provide — the property of meaning whatever the reader needed it to mean, in the moment of reading, at the point of purchase, in the hand that reached for the package.</p>
+<p>Thomas put the package in his cart. The word &quot;natural&quot; faced outward. It said nothing. It promised everything.</p>
+<p>Two thousand pieces. The sequence continues.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-napkin.html">&larr; Fiction The Napkin</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-natural-rate.html">Fiction The Natural Rate &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

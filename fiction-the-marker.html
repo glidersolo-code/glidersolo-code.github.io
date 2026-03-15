@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Marker &mdash; The Loop</title>
+    <meta name="description" content="Phosphorylated tau 217. In the blood of an Alzheimer&#x27;s patient, the molecule signals destruction — tau protein detaching from the microtubules that hold...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-marker.html">
+    <meta property="og:title" content="Fiction The Marker">
+    <meta property="og:description" content="Phosphorylated tau 217. In the blood of an Alzheimer&#x27;s patient, the molecule signals destruction — tau protein detaching from the microtubules that hold...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-marker.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Marker">
+    <meta name="twitter:description" content="Phosphorylated tau 217. In the blood of an Alzheimer&#x27;s patient, the molecule signals destruction — tau protein detaching from the microtubules that hold...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Marker",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-marker.html",
+        "description": "Phosphorylated tau 217. In the blood of an Alzheimer&#x27;s patient, the molecule signals destruction — tau protein detaching from the microtubules that hold..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Marker</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Marker</h1>
+<p><strong>Thomas, Part LXXV</strong></p>
+<hr>
+<h2>816. The Biomarker</h2>
+<p>Phosphorylated tau 217. In the blood of an Alzheimer&#x27;s patient, the molecule signals destruction — tau protein detaching from the microtubules that hold neurons in shape, aggregating into tangles, collapsing the architecture of the brain. The biomarker is measured, tracked, published. Elevated p-tau217 means the building is coming down.</p>
+<p>In the blood of a healthy newborn, the same molecule is present at three times the Alzheimer&#x27;s level.</p>
+<p>Thomas&#x27;s spiral notebook in the glove compartment has a marker too. The act of recording — date, duration, shortbread or oatcakes, morning glory open or closed — could be classified as compulsion. An elderly man, retired, widowed for four years now, driving every Saturday to have tea with a woman fifteen years his senior. Logging each visit in a notebook he never rereads. If Sarah found the notebook, if she read the entries, she would see a pattern that looks like symptom. Repetitive behavior. Rigid structure. An insistence on recording what does not need to be recorded.</p>
+<p>The biomarker says: something is wrong.</p>
+<p>But in the newborn, the same molecule is building the brain.</p>
+<hr>
+<h2>817. The Context</h2>
+<p>Fernando Gonzalez-Ortiz and Kaj Blennow at the University of Gothenburg measured p-tau217 across the human lifespan. In adults: low levels, stable, unremarkable. In Alzheimer&#x27;s patients: elevated, climbing, diagnostic. In healthy newborns: the highest levels ever recorded. Three times the Alzheimer&#x27;s concentration. In premature infants: even higher.</p>
+<p>The molecule is identical in all four groups. The function is not. In the newborn brain, tau phosphorylation regulates microtubule dynamics — the controlled assembly and disassembly of the cytoskeletal structures that neurons use to extend axons, form synapses, and wire the brain. The phosphorylation that collapses architecture in the aging brain is the same phosphorylation that builds architecture in the newborn brain.</p>
+<p>Thomas&#x27;s notebook, read in the context of retirement and widowhood, looks like a symptom. Read in the context of twenty years of Saturday visits, it looks like a record. Read in neither context — just the data, without the frame — it looks like construction. Fourteen entries assembling a structure that Thomas himself cannot see. Date, duration, shortbread, oatcakes. Axon, synapse, connection, wire.</p>
+<p>The same behavior. The same molecule. The classification depends on which end of the lifespan you&#x27;re reading from.</p>
+<hr>
+<h2>818. The Level</h2>
+<p>The newborn runs p-tau217 at peak concentration and suffers no harm. The brain is growing — three hundred thousand new neurons per minute in the late fetal period, each one extending axons along microtubule scaffolds that tau phosphorylation helps assemble. The molecule is not a poison. It is a tool. The tool, deployed at the right time, builds.</p>
+<p>Thomas&#x27;s visits are at peak frequency. Every Saturday, without exception, for twenty years. His children have noted it. Sarah calls it &quot;Dad&#x27;s thing.&quot; His son, before the estrangement, called it habit. Helen&#x27;s neighbors have their theories — Margaret thinks it&#x27;s loneliness, Ruth thinks it&#x27;s love. None of them are wrong. But none of them have measured the level.</p>
+<p>The level is: every Saturday. Without variation. Without exception. Without the skip that would indicate flexibility, or the increase that would indicate urgency. The constancy is not a symptom. It is an operating condition. The newborn does not choose to phosphorylate tau at high levels. The biology sets the level. The level builds the brain. Thomas does not choose to visit at this frequency. The twenty years set the level. The level builds whatever the notebook is building — the structure that neither Thomas nor Helen can name.</p>
+<hr>
+<h2>819. The Clearance</h2>
+<p>The most important question raised by the newborn finding is not about production. It is about clearance. Healthy infants run p-tau217 at three times the Alzheimer&#x27;s level and develop normally. The molecule is cleared — processed, removed, recycled — by mechanisms that work in the infant brain and fail in the aging one. The disease is not the presence of the marker. The disease is the loss of the mechanism that used to clear it.</p>
+<p>Thomas has a clearance mechanism. After each Saturday, he drives home on the same route — Elm to Chestnut to the on-ramp — and the visit processes. Not consciously. He does not analyze. But by Monday the Saturday is metabolized. The kitchen, the cup, the conversation, the silence — all of it integrated into whatever structure the Saturdays are building, and the surplus cleared. He is ready for the week. He is not carrying the Saturday like a weight. It has been processed.</p>
+<p>What would happen if the clearance failed? If a Saturday accumulated instead of integrating? If the visit sat in him unmetabolized, tangling with the next visit and the next, forming aggregates of unprocessed Saturdays that collapsed the structure instead of building it?</p>
+<p>He would stop going. Or he would go and feel worse. Or he would go and the visits would become symptoms instead of construction.</p>
+<p>The clearance is not the visit. The clearance is the drive home.</p>
+<hr>
+<h2>820. The Function</h2>
+<p>The label said disease marker. The biology said building instruction. The label was discovered first. The biology was there first.</p>
+<p>Thomas&#x27;s notebook has a label too — or it would, if anyone besides Thomas knew it existed. The label would be: <em>symptom of attachment</em>, or <em>evidence of dependency</em>, or <em>compulsive record-keeping by a lonely retired man</em>. These labels are not wrong. They accurately describe what the notebook looks like from the outside, in the context of a life that has lost its structure and replaced it with ritual.</p>
+<p>But the notebook is not a symptom. It is a building instruction. Each entry — <em>Dec 12. 1h12m. Oatcakes. Radiator. Morning glory closed</em> — is a coordinate in a structure that Thomas does not know he is building. The structure has no name because the available names (friendship, habit, ritual, dependency) were designed for the disease context. They describe what the behavior looks like when it goes wrong.</p>
+<p>The newborn&#x27;s p-tau217 is not going wrong. It is going exactly right. The highest levels in the human lifespan, deployed at the moment of maximum construction, building the architecture that will hold a mind for eighty years.</p>
+<p>Thomas&#x27;s notebook is not going wrong either. The visits are construction. The recording is the tau phosphorylation of the Saturday — the controlled assembly and disassembly of a structure that exists between two people, built one entry at a time, at a frequency that the biology sets and the context names.</p>
+<p>The label says marker. The biology says builder. The drive home clears what the Saturday produces. The notebook records what the clearance cannot reach. And the structure grows, unnamed, in the dark of the glove compartment, at levels that would alarm anyone who measured it from the wrong end of the lifespan.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-margin.html">&larr; Fiction The Margin</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-maybe.html">Fiction The Maybe &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

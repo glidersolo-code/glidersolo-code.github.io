@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Rim &mdash; The Loop</title>
+    <meta name="description" content="In the late nineteenth century, French tire manufacturers named their products by two values: a nominal outer diameter in millimeters and a letter...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-rim.html">
+    <meta property="og:title" content="Fiction The Rim">
+    <meta property="og:description" content="In the late nineteenth century, French tire manufacturers named their products by two values: a nominal outer diameter in millimeters and a letter...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-rim.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Rim">
+    <meta name="twitter:description" content="In the late nineteenth century, French tire manufacturers named their products by two values: a nominal outer diameter in millimeters and a letter...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Rim",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-rim.html",
+        "description": "In the late nineteenth century, French tire manufacturers named their products by two values: a nominal outer diameter in millimeters and a letter..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Rim</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXL: The Rim</h1>
+<h2>Piece #1641: The Letter</h2>
+<p>In the late nineteenth century, French tire manufacturers named their products by two values: a nominal outer diameter in millimeters and a letter indicating tire width. The letter ran A through D, narrow to wide. A wider tire sat higher on the rim, so a wider tire on a smaller rim could produce the same outer diameter as a narrower tire on a larger rim. The 700-series meant approximately 700 millimeters from ground to top of inflated tire. 700A: 642mm bead seat diameter. 700B: 635mm. 700C: 622mm. 700D: 583mm. Four rims, four tire widths, one approximate outer diameter. As road surfaces improved and tire technology converged, manufacturers standardized on 700C and ceased production of A, B, and D. The letter survived its alphabet. The number survived its measurement. A modern 700C wheel with a 23mm tire has an outer diameter of approximately 668mm. With a 47mm gravel tire: approximately 716mm. &quot;700&quot; describes nothing on either wheel. The C describes nothing without A, B, and D.</p>
+<h2>Piece #1642: The Revolution</h2>
+<p>In 1999, Mark Slate at WTB scaled up an existing 26-inch Nano Raptor mountain bike tire mold to fit a 622mm rim — the same bead seat diameter as a 700C road wheel. Steve Potts built test frames for Gary Fisher. Fisher mounted a tire, measured the outer diameter, and said: let&#x27;s call it a Twenty Nine. By 2002, Trek was mass-producing 29er mountain bikes — the Fisher Supercaliber 29 and Mt Tam 29 — with IRC Notos XC 29x2.1&quot; tires. The marketing presented a wheel-size revolution. The rim was not new. It had been in continuous production for road bikes for over a century. The revolution was a tire on an existing rim, a name on an existing diameter, a category distinction where the physical object was shared. The road cyclist and the mountain cyclist now rode the same 622 millimeters. One called it 700C. The other called it 29&quot;. The names faced different directions. The rim faced the ground.</p>
+<h2>Piece #1643: The Eight Millimeters</h2>
+<p>Through the 1970s and into the early 1980s, the dominant American road bike wheel was the 27-inch — 630mm bead seat diameter. The migration to 700C happened gradually as European road bike conventions displaced the American standard. The difference between 27&quot; and 700C is 8 millimeters in diameter, 4 millimeters in radius. A 700C tire will not seat on a 630mm rim. A 27&quot; tire will not seat on a 622mm rim. Brake calipers designed for one cannot reach the other&#x27;s rim surface. The names — twenty-seven inches, seven hundred C — sound like near-synonyms. They are mechanical incompatibilities. Millions of American road bikes from the ten-speed era still carry 630mm wheels for which tire supply has become sparse as the industry moved to 622mm. The eight millimeters between the names is the distance between a functioning bicycle and a wheel that cannot hold its tire.</p>
+<h2>Piece #1644: The Centimeter</h2>
+<p>A road bike frame labeled &quot;56cm&quot; measures the seat tube — the tube running from the bottom bracket to the saddle. But center-to-center measures from the bottom bracket center to the intersection of the seat tube centerline with the top tube centerline. Center-to-top measures from the bottom bracket center to the top of the seat tube collar. The difference is one to two centimeters. One manufacturer changed measurement conventions mid-production year, producing physically identical frames labeled two centimeters apart. Dan Empfield, a triathlon bike designer at Quintana Roo, proposed in 2003 the two dimensions that unambiguously determine fit regardless of seat tube measurement convention: stack (vertical distance from bottom bracket center to head tube top) and reach (horizontal distance). Stack and reach appear in geometry charts published by all major manufacturers. They do not appear on the frame. They do not appear in the marketing. The bike is sold as 56cm or Large, and the consumer reads the centimeters as a measurement of the frame, and the frame is measured from a point the consumer does not know to a point the manufacturer has not standardized.</p>
+<h2>Piece #1645: The Diameter</h2>
+<p>Two hundred and forty Parts. The bicycle wheel is named three times: 700C by the road cyclist, 29&quot; by the mountain cyclist, 28&quot; by the Dutch commuter. The names perform categories. The rim performs a circle. The circle is 622 millimeters regardless of the name, the tire, the terrain, the brand, the heritage, the price. The ETRTO system (constituted 1964, Montreux) and ISO 5775 encode the bead seat diameter directly: 25-622 means a 25mm tire on a 622mm rim. No ambiguity. No history. No identity. No one uses it in marketing because the number strips the product of everything except what it is. The consumer does not want to know what the wheel is. The consumer wants to know what kind of cyclist the wheel makes them. 700C makes them a road cyclist. 29&quot; makes them a mountain cyclist. 28&quot; makes them a commuter. The rim is the same. The story is different. Thomas bought a bicycle. The shop asked: road or mountain? He said: which wheel is larger? The answer was neither. The answer was both. The answer was 622 millimeters, which is the answer the shop did not give because the answer would collapse the wall between the two aisles where the same rim was displayed at two prices under two names for two kinds of rider who are, at the rim, the same.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-rhythm.html">&larr; Fiction The Rhythm</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-rings.html">Fiction The Rings &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Grit &mdash; The Loop</title>
+    <meta name="description" content="The sandpaper says &quot;220 grit.&quot; Thomas bought a 5-pack for refinishing the deck railing. He started with 80 grit to strip the old finish, moved to 120 for...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-grit.html">
+    <meta property="og:title" content="Fiction The Grit">
+    <meta property="og:description" content="The sandpaper says &quot;220 grit.&quot; Thomas bought a 5-pack for refinishing the deck railing. He started with 80 grit to strip the old finish, moved to 120 for...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-grit.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Grit">
+    <meta name="twitter:description" content="The sandpaper says &quot;220 grit.&quot; Thomas bought a 5-pack for refinishing the deck railing. He started with 80 grit to strip the old finish, moved to 120 for...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Grit",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-grit.html",
+        "description": "The sandpaper says &quot;220 grit.&quot; Thomas bought a 5-pack for refinishing the deck railing. He started with 80 grit to strip the old finish, moved to 120 for..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Grit</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLIX: The Grit</h1>
+<h2>Piece #1736: The Number</h2>
+<p>The sandpaper says &quot;220 grit.&quot; Thomas bought a 5-pack for refinishing the deck railing. He started with 80 grit to strip the old finish, moved to 120 for smoothing, and will finish with 220 for a surface ready for stain. The grit number refers to the mesh screen through which the abrasive particles were sieved. A 220-mesh screen has approximately 220 openings per linear inch. Particles that pass through the 220-mesh screen but are retained by the next-finer screen are classified as 220 grit. The particles are not identical. They are a distribution — some slightly larger, some slightly smaller, some irregular, some angular. The largest particles in the distribution create the deepest scratches. The smallest create the shallowest. The consumer expects 220 grit to produce one scratch depth. The distribution produces a range of scratch depths. The number describes the sieve. The sieve passes a family of particles, not a single one.</p>
+<h2>Piece #1737: The Standard</h2>
+<p>Thomas bought a second pack of 400-grit sandpaper for a woodworking project — a cutting board he was making from maple. The package did not specify which grading standard. CAMI — Coated Abrasives Manufacturers Institute, the North American system — grades 400 grit at a mean particle size of approximately 23 micrometers. FEPA — the European standard, prefixed with &quot;P&quot; — grades P400 at approximately 35 micrometers. A 50 percent difference. At lower grits the systems roughly match: CAMI 120 and FEPA P120 are both approximately 125 micrometers. At higher grits, the systems diverge. Thomas&#x27;s 400-grit sheet might carry 23-micrometer particles or 35-micrometer particles, depending on whether the manufacturer used CAMI or FEPA grading. He did not check. The package said &quot;400 grit.&quot; He read the integer. He did not read which system assigned it.</p>
+<h2>Piece #1738: The Mineral</h2>
+<p>Three different 220-grit sheets on the hardware store shelf, three different colors. Brown: aluminum oxide — the standard abrasive for woodworking. Gray: silicon carbide — harder, sharper, used wet or dry for metal and fine finishing. Blue: ceramic alumina — the most aggressive, designed for heavy stock removal. All labeled 220 grit. The particle size is approximately the same. The mineral is not. Aluminum oxide is tough but relatively soft — it wears gradually, and the worn particles create a finer finish as the sheet is used. Silicon carbide is harder and more brittle — it fractures during use, exposing fresh sharp edges, maintaining its cutting aggression longer. Ceramic alumina is the hardest — it self-sharpens by micro-fracturing and removes material faster per stroke. Thomas sanding a maple cutting board with 220-grit ceramic alumina creates a different surface than the same board sanded with 220-grit garnet. The grit number matches. The finish does not.</p>
+<h2>Piece #1739: The Technique</h2>
+<p>Thomas pressed hard with the 80-grit sheet, trying to remove the old deck stain quickly. Heavy pressure forces the abrasive particles deeper into the wood, creating deeper scratches than the grit would produce at light pressure. The 80-grit sheet at heavy pressure can create scratches as deep as a 60-grit sheet at moderate pressure. The consumer who presses harder expecting faster material removal is also changing the scratch pattern the next grit must correct. If the 80-grit pass creates deeper scratches than intended, the 120-grit pass takes longer to remove them. Speed in one pass costs time in the next. Sanding direction adds another variable. Sanding across the grain tears wood fibers and creates cross-grain scratches visible under stain. Sanding with the grain produces cleaner, less visible scratches. The grit number does not specify pressure or direction. The surface receives what the hand delivers.</p>
+<h2>Piece #1740: The Finish</h2>
+<p>Two hundred and fifty-nine Parts. Thomas applied the stain. Under the stain, every scratch the sandpaper made became visible — the stain penetrating deeper into scratches than into the surrounding wood, darkening the scratch lines. The scratches from the 80-grit pass that the 120-grit pass did not fully remove showed as dark lines under the stain. The swirl marks from where Thomas changed sanding direction showed as arcs. The heavier scratches from the first few strokes of a fresh sheet — when the particles were sharpest — showed more prominently than the lighter scratches from the last few strokes of a worn sheet. The grit number said 220. The stain showed everything the 220 did not erase from the 120, everything the 120 did not erase from the 80, and everything the 80 did under a pressure and direction the number did not specify. The finish was a palimpsest. Each grit wrote over the previous grit&#x27;s writing. The stain read every layer.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-grill.html">&larr; Fiction The Grill</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-h-index.html">Fiction The H Index &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

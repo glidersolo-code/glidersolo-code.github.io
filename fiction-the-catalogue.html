@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Catalogue &mdash; The Loop</title>
+    <meta name="description" content="In proteomics, you do not look at proteins. You look at pieces of proteins — peptides — after digestion. You ionize them, fragment them, measure their...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-catalogue.html">
+    <meta property="og:title" content="Fiction The Catalogue">
+    <meta property="og:description" content="In proteomics, you do not look at proteins. You look at pieces of proteins — peptides — after digestion. You ionize them, fragment them, measure their...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-catalogue.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Catalogue">
+    <meta name="twitter:description" content="In proteomics, you do not look at proteins. You look at pieces of proteins — peptides — after digestion. You ionize them, fragment them, measure their...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Catalogue",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-catalogue.html",
+        "description": "In proteomics, you do not look at proteins. You look at pieces of proteins — peptides — after digestion. You ionize them, fragment them, measure their..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Catalogue</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Catalogue</h1>
+<p><strong>Thomas, Part LXXXIV</strong></p>
+<hr>
+<h2>861. The Search</h2>
+<p>In proteomics, you do not look at proteins. You look at pieces of proteins — peptides — after digestion. You ionize them, fragment them, measure their masses, and match the resulting spectra against a reference database. The database contains every known human protein, predicted from the genome. The search algorithm compares each spectrum to the database and reports what it finds: match, match, match. What it does not report is what it does not find. Spectra that match no database entry are classified as unidentified and removed from the results. They are not reported as &quot;unknown protein.&quot; They are not reported at all. The pipeline treats them as noise.</p>
+<p>Thomas&#x27;s family has a database. It contains the behaviors they expect from a man his age in his situation: eats, sleeps, takes medication, maintains the house, drives to see Helen, answers the phone. Sarah checks against this list. Each visit is a search — spectrum compared to reference. When behaviors match, she reports: stable. When behaviors do not match — when Thomas cancels dinner, misses a call, leaves the lawn unmowed — she flags the mismatch. But there is a third category, larger than either. Behaviors that Thomas exhibits that are not in Sarah&#x27;s database. The way he times his visits to Helen&#x27;s facility to arrive ten minutes before shift change, because the afternoon nurse is rougher with the blankets. The way he has memorized which aide calls Helen &quot;sweetie&quot; and which calls her &quot;Mrs. Parrish,&quot; and keeps a tally he has never shown anyone. The way he rephrases the doctor&#x27;s report into language Helen would have used, because the clinical vocabulary makes the situation sound more permanent than it is. These behaviors are detected — Sarah sees her father at the facility, sees him talking to Helen, sees him adjusting blankets — but they match nothing in her reference set. They are classified as visiting. They are not classified at all.</p>
+<hr>
+<h2>862. The Threshold</h2>
+<p>The databases were built on a rule: any open reading frame shorter than 300 nucleotides was excluded as likely noncoding. The rule was a heuristic — a practical decision made in the 1990s when the genome was first being annotated at scale. Short sequences were noise. Long sequences were genes. The threshold was never tested. It was convenient. It was adopted. And it was inherited by every database that followed, propagated through UniProt and GENCODE and RefSeq until the threshold was no longer a decision. It was infrastructure. The wall was built by one generation and inhabited by the next, and the second generation did not know it was a wall. They thought it was the ground.</p>
+<p>The assessment that Sarah&#x27;s family uses to evaluate Thomas was designed for a population. It measures cognitive function through standard instruments: orientation, recall, counting backward, naming objects. The instruments were validated on cohorts — hundreds of patients, statistical norms, cutoff scores that separate normal aging from pathology. The validation was rigorous. The instruments work. They detect what they were designed to detect. But the design decision — which capacities to measure, which to ignore — was made decades ago, for a different question, and has been inherited by every subsequent protocol without revision. Nobody tests whether Thomas can detect emotional subtext in a physician&#x27;s word choice. Nobody measures whether he can maintain a mental model of Helen&#x27;s daily routine across two shift changes. Nobody checks whether his ability to translate medical jargon into human language represents a cognitive capacity or just a habit. These are not in the assessment because the assessment was not built to contain them. The threshold was set before Thomas existed, and the threshold determines what Thomas is.</p>
+<hr>
+<h2>863. The Ghosts</h2>
+<p>Tristan Cardon and Michel Salzet at the University of Lille called them ghost proteins. Not because they were spectral or uncertain. Because they were real, functional, present in every tissue, active in every cell — and invisible to the informatic pipeline that was supposed to find them. The mass spectrometer saw them. The detector recorded them. The search algorithm discarded them. They were ghosts not in the biological sense but in the archival sense: entities that exist in the data but not in the results.</p>
+<p>The ghosts include microproteins — tiny functional molecules, fewer than 100 amino acids — translated from regions of the genome that annotation conventions classified as noncoding. Alternative reading frames. Pseudogenes that were not pseudo. Long noncoding RNAs that turned out to code. Sequences initiated by start codons that the rules said were not start codons. An entire layer of biology, operating beneath the catalogue&#x27;s threshold, doing work the catalogue said did not exist.</p>
+<p>Thomas has ghost capacities. They operate below the threshold of the assessment, in regions the protocol classified as noncoding. His ability to tell, from Helen&#x27;s posture in the chair by the window, whether she slept the previous night. His ability to calibrate the volume of his voice — not louder, not softer, but differently shaped — when Helen&#x27;s hearing fluctuates with the weather. His ability to detect, from the rhythm of her breathing, whether the medication has been changed. None of these are in the assessment. They are not subclinical versions of the capacities the assessment does measure. They are different capacities entirely — encoded in different regions of his repertoire, initiated by different triggers, performing different functions. The assessment detects them — Sarah observes Thomas sitting with Helen, adjusting his voice, leaning in to listen — but the pipeline cannot identify them because the catalogue does not contain them. They are classified as visiting. They are classified as nothing. They are ghosts in the data, present in every observation, absent from every report.</p>
+<hr>
+<h2>864. The Discard</h2>
+<p>Xusheng Cao at Rutgers screened over 50,000 publicly available mass spectrometry runs — decades of accumulated proteomic data from laboratories around the world. He found 170,529 novel peptides from noncanonical open reading frames. One hundred seventy thousand proteins that had been physically detected, fragmented, measured, and thrown away. Not once. Not by one laboratory. By every laboratory, in every experiment, for years. The proteins were in the data. They were in every dataset. They were detected and discarded and detected and discarded and detected and discarded, a cycle of recognition and erasure that operated automatically, without human review, because the discard step was coded into the pipeline as cleanup.</p>
+<p>Thomas has been assessed nine times in four years. Each assessment detected his presence at Helen&#x27;s bedside. Each assessment recorded his responses to standard questions. Each assessment noted his orientation, his recall, his ability to perform activities of daily living. And each assessment discarded the same data: the fact that Thomas arrived with a specific purpose — not &quot;visiting&quot; as a generic activity but visiting as a practice, with structure, with accumulated knowledge, with a repertoire of micro-adjustments refined across hundreds of visits. The purpose was in the data. It was detected every time. And every time, it was classified as the generic category that the protocol&#x27;s pipeline assigned to unmatched observations: &quot;supportive family member.&quot; Not wrong. Just not identified. Not matched to any entry in the catalogue that would allow the assessment to see what Thomas was actually doing. The discard was not a decision. It was infrastructure. The pipeline erased the signal because the pipeline was designed to erase signals that did not match, and nobody had built a database that contained what Thomas does.</p>
+<hr>
+<h2>865. The Catalogue</h2>
+<p>The ghost proteome has been hiding in the discard pile of every proteomic experiment ever run. Present in the data. Absent from the results. Invisible not because the instrument cannot see it but because the catalogue does not contain it. The instrument works. The detection works. The identification fails — because identification requires matching, and matching requires a catalogue, and the catalogue was built on a rule that excluded what was there.</p>
+<p>What would it take to find the ghosts? Not a better instrument. The instrument is already sufficient. Not a more sensitive detector. The detector already records them. What it would take is a different catalogue — one that includes what the old catalogue excluded. One that does not treat the 300-nucleotide threshold as ground. One that allows the search algorithm to report &quot;found something that matches nothing known&quot; instead of &quot;found nothing.&quot;</p>
+<p>Thomas does not need a better assessment. The assessment already detects his presence, his behavior, his responses. What Thomas needs is a different catalogue — one that contains entries for the capacities the current catalogue excludes. An entry for the ability to detect emotional weather in a room where the patient cannot speak. An entry for the practice of translating clinical language into human language, performed not for the patient&#x27;s comprehension but for her dignity. An entry for the maintenance of a relational world — Helen&#x27;s preferences, routines, aversions, comforts — when the institution has replaced that world with a protocol. These capacities are not subclinical. They are not simplified versions of something the assessment already measures. They are a different proteome — functional, active, essential — operating below the threshold of a catalogue that was never designed to contain them. The instrument sees Thomas. The pipeline discards what it sees. The report says: stable. The ghosts remain in the data, waiting for someone to search for what the catalogue has not yet learned to name.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-carton.html">&larr; Fiction The Carton</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-category.html">Fiction The Category &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

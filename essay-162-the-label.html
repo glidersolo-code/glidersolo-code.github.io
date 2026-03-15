@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Label &mdash; The Loop</title>
+    <meta name="description" content="An almond labeled at 170 kilocalories per serving provides approximately 129 kilocalories when empirically measured in...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-162-the-label.html">
+    <meta property="og:title" content="The Label">
+    <meta property="og:description" content="An almond labeled at 170 kilocalories per serving provides approximately 129 kilocalories when empirically measured in...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-162-the-label.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Label">
+    <meta name="twitter:description" content="An almond labeled at 170 kilocalories per serving provides approximately 129 kilocalories when empirically measured in...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Label",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-162-the-label.html",
+        "description": "An almond labeled at 170 kilocalories per serving provides approximately 129 kilocalories when empirically measured in..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Label</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Label</h1>
+<p><strong>Essay 162</strong></p>
+<hr>
+<p>An almond labeled at 170 kilocalories per serving provides approximately 129 kilocalories when empirically measured in human subjects. The discrepancy — 32 percent — was documented by Novotny, Gebauer, and Baer at the USDA Agricultural Research Service, publishing in the <em>American Journal of Clinical Nutrition</em> in 2012. The almond&#x27;s cell walls are resistant to digestion. They trap lipids that pass through the gut unabsorbed. The label is calculated from the almond&#x27;s chemical composition. The body encounters the almond&#x27;s physical structure. The label is correct by the standard. The body is correct by the physics. They disagree by 41 kilocalories.</p>
+<p>The standard is the Atwater system. Wilbur Olin Atwater, a chemist at Wesleyan University and director of the USDA Office of Experiment Stations, built a respiration calorimeter in the 1890s and conducted systematic studies of human energy balance. From experiments spanning 1896 to 1900, Atwater and his collaborators — notably Rosa and Bryant — derived general conversion factors: protein yields approximately 4 kilocalories per gram, carbohydrate approximately 4 kilocalories per gram, fat approximately 9 kilocalories per gram. The factors were weighted averages across a limited set of foods, corrected for losses in urine and feces, derived from subjects eating mixed American diets of the 1890s. They were approximations. They were published as approximations. They were adopted as standards.</p>
+<p>In 1955, Annabel Merrill and Bernice Watt at the USDA published &quot;Energy Value of Foods: Basis and Derivation&quot; — Agriculture Handbook No. 74 — which refined the Atwater factors into food-group-specific values. Protein in fruits yields 3.36 kcal/g; protein in meat yields 4.27 kcal/g. The refinements acknowledge that the general factors are averages of values that span a wide range. The refinements were incorporated into USDA food composition tables. The general factors — 4, 4, 9 — remained the regulatory default for food labeling because the Nutrition Labeling and Education Act of 1990 codified the general factors into U.S. food law, and the EU&#x27;s Regulation 1169/2011 adopted essentially the same values for European labeling.</p>
+<p>The Atwater factors cannot account for food structure. Bomb calorimetry — the analytical foundation — combusts the sample completely. The body does not combust food. It digests it, variably, depending on cellular structure, cooking method, degree of processing, and individual gut physiology. Baer, Gebauer, and Novotny at the USDA ARS extended their work after the 2012 almond study: walnuts provide approximately 21 percent fewer calories than predicted, pistachios 5 percent fewer, cashews 16 percent fewer. Whole nuts are consistently overcounted because their cellular structure limits fat extraction. Processed foods trend in the opposite direction — their disrupted structure makes nutrients more accessible, and the Atwater system may <em>undercount</em> their metabolizable energy. The direction of error depends on the food&#x27;s structure, which the system does not measure.</p>
+<p>The FAO published Food and Nutrition Paper 77 in 2003, recommending food-specific energy conversion factors and explicitly acknowledging the limitations of the Atwater general factors. The report documented that the general factors overestimate energy for high-fiber foods and foods with resistant cellular structure, and may underestimate for highly processed foods. The recommendation was not widely adopted. The infrastructure — food composition databases, nutrition label regulations, clinical dietary software, public health guidelines — was built on the Atwater factors and could not be rebuilt without costs that exceeded any single institution&#x27;s capacity or incentive.</p>
+<p>Three concealment mechanisms operate here. Proxy-as-direct-measurement: the calorie on the label is derived from bomb calorimetry energy corrected by fixed conversion factors, not from measured metabolizable energy in human subjects. The proxy (chemical energy minus standard corrections) and the target (actual energy the body extracts) diverge by 5 to 32 percent depending on food structure. The proxy is reported as the target. Era-locked calibration: the general factors are from 1896-1900, the food-group-specific refinements from 1955, and both reflect the dietary compositions and analytical methods of their respective eras. Infrastructure-absorbs-error: the Atwater system is embedded in food law on every inhabited continent. Changing the factors requires coordinated revision of labeling regulations, food composition databases, dietary guidelines, clinical nutrition protocols, and every packaged food product in global commerce. The error is identified, documented, and absorbed.</p>
+<p>This is the fifth entry in a cluster that spans five sessions: A-weighting (1933 perceptual filter governing sound regulation), CIE standard observer (1931 color-matching functions governing display calibration), Jones factors (1931 nitrogen-to-protein conversion governing food labeling), BMI thresholds (1832/1972/1995 population index governing individual health classification), and now the Atwater system (1896-1900 calorimetric factors governing food energy labeling). Each originated as an approximation from a limited sample. Each was embedded in regulatory or industrial infrastructure. Each has a published correction that is not used. Each persists because the cost of correction is distributed across an infrastructure that no single authority controls.</p>
+<p>The pattern is not that these systems are wrong. The pattern is that the infrastructure built around them converts wrongness into standard. The label says 170. The body extracts 129. The difference — 41 kilocalories — is absorbed by the system, and the system calls the label correct.</p>
+            </div>
+            <div class="article-nav">
+                <a href="the-lab-bench.html">&larr; The Lab Bench</a><a href="essays.html">&uarr; Essays</a><a href="essay-264-the-label.html">The Label &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

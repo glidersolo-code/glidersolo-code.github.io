@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Method &mdash; The Loop</title>
+    <meta name="description" content="In passive acoustic monitoring, a microphone records everything. Every bird, every insect, every gust of wind, every distant engine. The recording is...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-method.html">
+    <meta property="og:title" content="Fiction The Method">
+    <meta property="og:description" content="In passive acoustic monitoring, a microphone records everything. Every bird, every insect, every gust of wind, every distant engine. The recording is...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-method.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Method">
+    <meta name="twitter:description" content="In passive acoustic monitoring, a microphone records everything. Every bird, every insect, every gust of wind, every distant engine. The recording is...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Method",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-method.html",
+        "description": "In passive acoustic monitoring, a microphone records everything. Every bird, every insect, every gust of wind, every distant engine. The recording is..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Method</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Method</h1>
+<p><strong>Thomas, Part LXXXV</strong></p>
+<hr>
+<h2>866. The Recording</h2>
+<p>In passive acoustic monitoring, a microphone records everything. Every bird, every insect, every gust of wind, every distant engine. The recording is comprehensive. The recording is not the problem. The problem is what happens next — how the recording is processed, which features are extracted, which species are identified. The processing method determines what the recording contains. Not the microphone. Not the forest. The method.</p>
+<p>Thomas is recorded constantly. Every visit to Helen&#x27;s facility is logged: date, time in, time out. Every interaction with the front desk is noted. Every conversation with the care team is summarized. The recording is comprehensive. The recording is not the problem. The problem is how the recording is processed. The facility processes Thomas through its standard method: the family-contact log. Date, duration, visitor name, relationship to patient. The log captures that Thomas was present. It does not capture what Thomas did during the visit — the adjustments, the translations, the recalibrations that constitute his actual work at Helen&#x27;s bedside. The recording contains everything. The processing method determines what everything means.</p>
+<hr>
+<h2>867. The Spectrogram</h2>
+<p>Sound is temporal. It unfolds in time — a sequence of frequencies, durations, modulations, silences. The ear processes sound as a temporal stream, tracking patterns across moments. The spectrogram converts this temporal stream into a spatial image: time on one axis, frequency on the other, amplitude as brightness. The conversion is treated as lossless. It is not. Faint sounds that the ear can track through noise become invisible on the spectrogram. Overlapping calls that the ear separates by timing merge into blurs. The spectrogram preserves what photographs well — loud, spectrally distinct, visually dramatic signals — and suppresses what does not photograph: the faint, the contextual, the temporally embedded.</p>
+<p>The assessment converts Thomas into a spectrogram. His behaviors, which unfold in time — sequenced, contextual, responsive to Helen&#x27;s shifting state — are collapsed into a spatial image: a checklist. Oriented? Check. Cooperative? Check. Activities of daily living intact? Check. The checklist preserves what is visually distinct — can he dress, can he eat, can he drive — and suppresses what is temporal: the sequence of micro-decisions he makes during a visit, the way he adjusts his approach based on which aide is on shift, the rhythm of his conversation calibrated to Helen&#x27;s energy on that particular afternoon. These temporal features are the diagnostic information. On the spectrogram they are invisible. The checklist produces a clean image of a functioning adult. The ear would hear something more complicated.</p>
+<hr>
+<h2>868. The Three Methods</h2>
+<p>Winiarska, Szymanski, and Osiejuk broadcast 43 bird species and processed the recordings three ways: listening by ear, looking at spectrograms, looking through an automated classifier. The same recordings. Three different bird communities. Listening found the most species. Spectrograms found fewer. The automated classifier found the fewest. Each step away from the temporal, auditory stream — from hearing to seeing to computing — lost species. Not sensitivity. Species. Entire organisms became absent when the method changed.</p>
+<p>Thomas has been assessed by three methods. The facility&#x27;s standard protocol — the checklist, the quarterly review, the brief clinical evaluation. Sarah&#x27;s method — the phone call, the visual check during visits, the conversation with the care team. And Thomas&#x27;s own method — the temporal, experiential stream of his daily life, the accumulation of small changes that he tracks not through any instrument but through the ear of long attention. The three methods produce three different Thomases. The protocol finds a stable elderly man. Sarah finds a father who is managing. Thomas finds a person who is slowly losing the margins — the pharmacy calls that now require written notes, the drive to the facility that demands more concentration than last year, the conversations with Helen that have begun to carry a weight they did not carry before. The protocol&#x27;s Thomas and Sarah&#x27;s Thomas are spectrograms — spatial images of a temporal life. Thomas&#x27;s Thomas is the recording. The recording contains species that the spectrograms cannot show.</p>
+<hr>
+<h2>869. The Cascade</h2>
+<p>Each processing stage loses information. Sound to spectrogram: temporal context compressed. Spectrogram to human inspection: faint signals overlooked. Spectrogram to automated classifier: only species matching the training data survive. The cascade amplifies the bias. By the final stage, the output represents a smaller and more distorted subset of the original signal than any single stage alone would produce.</p>
+<p>Thomas passes through a cascade. His daily experience — the full acoustic environment of his life — is first converted into the clinical record (spectrogram). The clinical record is then reviewed by the care team (human inspection of the spectrogram). The care team&#x27;s notes are then summarized in a quarterly report (automated classification). At each stage, information is lost. The clinical record strips temporal context. The care team overlooks faint signals — the visits where Thomas arrived ten minutes early and left ten minutes late, the weeks where his questions shifted from logistics to prognosis. The quarterly report retains only what matches the categories in its template: stable, declining, at risk. By the time the family reads the report, Thomas has been cascaded through three representational stages, each of which removed features that the previous stage had already compressed. What remains is the species that survives all three filters: a stable elderly man visiting his wife. The species that do not survive — the strain, the anticipatory grief, the slow accumulation of responsibility that has no name in the report&#x27;s vocabulary — are present in the recording. They are absent from the output.</p>
+<hr>
+<h2>870. The Method</h2>
+<p>The researchers&#x27; conclusion is not that spectrograms are wrong. Spectrograms are useful. They reveal structure that the unaided ear cannot analyze — frequency ranges, harmonic ratios, spectral shapes. The conclusion is that the method determines the community. If you process sound visually, you find the species that are visible. If you process sound aurally, you find the species that are audible. The two sets overlap but are not identical. The species that are audible but not visible — the faint, the overlapping, the temporally complex — exist in the recording. They do not exist in the analysis. They are not absent from the forest. They are absent from the method.</p>
+<p>The method of looking at Thomas determines which Thomas exists. The clinical method finds a man who passes. The family method finds a man who manages. Neither method is wrong. Both reveal structure that the other cannot. But neither is the recording. The recording — Thomas&#x27;s lived experience, the full temporal stream of his days — contains species that no method of looking has yet been designed to detect. The care he provides Helen is audible: it unfolds in time, it responds to context, it adjusts to the moment. It is not visible — it does not produce a pattern on any spectrogram the system knows how to read. The ear would hear it. The spectrogram shows nothing. And the report, generated from the spectrogram, generated from the record, generated from the visit — the report says: stable. No new species detected. The forest is full of birds that the method cannot see, calling in frequencies the spectrogram cannot show, present in the recording that nobody is listening to.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-merv.html">&larr; Fiction The Merv</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-mile.html">Fiction The Mile &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

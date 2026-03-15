@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Date &mdash; The Loop</title>
+    <meta name="description" content="Franz Karl Naegele was a professor of obstetrics at the University of Heidelberg when he published his rule in 1812 in his textbook Lehrbuch der...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-date.html">
+    <meta property="og:title" content="Fiction The Date">
+    <meta property="og:description" content="Franz Karl Naegele was a professor of obstetrics at the University of Heidelberg when he published his rule in 1812 in his textbook Lehrbuch der...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-date.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Date">
+    <meta name="twitter:description" content="Franz Karl Naegele was a professor of obstetrics at the University of Heidelberg when he published his rule in 1812 in his textbook Lehrbuch der...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Date",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-date.html",
+        "description": "Franz Karl Naegele was a professor of obstetrics at the University of Heidelberg when he published his rule in 1812 in his textbook Lehrbuch der..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Date</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Date</h1>
+<p><strong>Thomas, Part CXVIII</strong></p>
+<hr>
+<h2>1031. The Rule</h2>
+<p>Franz Karl Naegele was a professor of obstetrics at the University of Heidelberg when he published his rule in 1812 in his textbook <em>Lehrbuch der Geburtshülfe</em>. The rule calculated the estimated date of delivery: take the first day of the last menstrual period, add one year, subtract three months, add seven days. The calculation assumed a regular 28-day menstrual cycle, ovulation at day 14, and a gestation of 266 days from conception — 280 days from the first day of the last period. The first day of the last period was the reference point. Not conception. Not implantation. Not the first heartbeat. The first day of the last menstrual period — an event that occurs approximately two weeks before the pregnancy begins.</p>
+<p>Thomas has a date of birth. The date is in his chart. From the date, his age is calculated. From his age, his developmental milestones are assessed — what he should be doing at this age, what he is doing, the gap between them. The reference point is the date of birth. But the clinical system that tracked his gestation did not count from the date his life began. It counted from a date approximately two weeks before that — the first day of Helen&#x27;s last menstrual period. Thomas&#x27;s gestational age was defined by a reference point that preceded him. His age after birth is defined by a reference point that followed the reference point that preceded him. Every medical system measures Thomas against a timeline, and the timeline&#x27;s origin is a choice, and the choice shapes what the measurement finds.</p>
+<hr>
+<h2>1032. The Offset</h2>
+<p>Gestational age is counted from the first day of the last menstrual period. Conception occurs approximately 14 days later, at ovulation. A pregnancy that is &quot;40 weeks gestational age&quot; is approximately 38 weeks from conception. The 2-week offset is known to every obstetrician, every midwife, every medical student who takes a rotation. It is not a secret. It is not controversial. It is simply there — a systematic discrepancy between the dating system and the biological event, embedded in every protocol, every chart, every growth curve, every threshold.</p>
+<p>Thomas&#x27;s medical records contain systematic offsets. His developmental assessments compare him to norms derived from populations of typically developing children — norms that do not account for his prematurity, his medications, his seizure disorder. The offset between the population the norm was derived from and the population Thomas belongs to is known. It is discussed in clinical notes. It is acknowledged in parenthetical caveats. It is not corrected in the chart&#x27;s automated comparisons. The automated system compares Thomas to the norm. The norm contains the offset. The comparison inherits the offset. The offset is invisible in the result.</p>
+<hr>
+<h2>1033. The Curve</h2>
+<p>Ultrasound dating measures the embryo&#x27;s crown-rump length and plots it against a growth curve to estimate gestational age. The growth curve was derived from pregnancies whose gestational age was established by — the last menstrual period. The curve was calibrated against LMP-dated pregnancies. When ultrasound is used to &quot;correct&quot; LMP dating — to determine whether the pregnancy is measuring ahead or behind — it is comparing one LMP-derived measurement (the crown-rump length plotted on an LMP-calibrated curve) against another (the LMP date itself). The correction is circular. The reference was derived from the very system it is supposed to validate.</p>
+<p>Thomas&#x27;s clinical assessments are calibrated against references that were derived from clinical assessments. The PHQ-9&#x27;s validity was established by comparing it to clinical interviews — interviews conducted by clinicians trained on the criteria the PHQ-9 encodes. The screening instrument was validated against the system that created the screening instrument. When the PHQ-9 &quot;identifies&quot; depression, it identifies the thing the clinical system defined as depression and then built an instrument to detect. The detection validates the definition. The definition validates the detection. The circle is the calibration.</p>
+<hr>
+<h2>1034. The Threshold</h2>
+<p>Preterm birth is defined as delivery before 37 weeks gestational age. At 36 weeks and 6 days, a baby is preterm. At 37 weeks and 0 days, a baby is term. The boundary determines clinical protocols: at 36 weeks 6 days, the baby may receive corticosteroids, surfactant, extended NICU monitoring. At 37 weeks 0 days, the baby may be treated as term — different monitoring, different interventions, different documentation. The boundary is at 37 weeks because the clinical community placed it there — a threshold on a continuous developmental process, creating two categories from a gradient. The gestational age on which this boundary depends is counted from the LMP, which precedes conception by approximately two weeks, which means the boundary is placed at approximately 35 weeks of actual fetal development. But the system says 37. The system&#x27;s 37 is the system&#x27;s language. The fetus&#x27;s development does not use the system&#x27;s language.</p>
+<p>Thomas&#x27;s clinical thresholds are boundaries placed on continua. His developmental age — the age at which he is performing — is compared to his chronological age. The gap between them is the &quot;delay.&quot; The delay is counted in months. At 11 months of delay, he is tracked. At 12 months, he qualifies for a different service. The boundary between 11 and 12 determines access. The development is a gradient. The access is binary. The boundary converts the gradient into the binary, and the binary converts into the service, and the service converts into the chart entry, and the chart entry records: qualified, date. Not: the gradient crossed the boundary the system placed, and the system&#x27;s boundary, measured in months counted from a birth date measured from an LMP measured from an event that preceded Thomas by two weeks.</p>
+<hr>
+<h2>1035. The Date</h2>
+<p>Naegele published his rule in 1812. The rule assumed a regular cycle, ovulation at day 14, and a gestation counted from a point two weeks before conception. The assumptions became the system. The system became the dating. The dating became the curves. The curves became the thresholds. The thresholds became the protocols. The protocols became the care. The care became the chart. And the chart recorded a date — the estimated date of delivery — that was calculated from a rule published in 1812, based on assumptions about cycle regularity that apply to approximately 30% of women, counting from a reference point that precedes the pregnancy by two weeks, calibrated against itself, and producing a threshold that determines whether a baby is preterm or term, with clinical consequences that depend on which side of the threshold the baby falls, measured in weeks counted from a day that has nothing to do with the baby.</p>
+<p>One thousand and thirty-five pieces, one hundred and eighteen Parts. Thomas was dated before he existed — his gestational age counted from before his conception, his due date calculated from a rule older than the stethoscope, his growth plotted on curves calibrated against the system that plotted him. Every date in his chart rests on a prior date, and the prior date rests on a prior date, and the chain of dates extends backward to a reference point that was chosen because it was knowable, not because it was the beginning. The beginning was approximately two weeks later. But the system needed a number, and the number needed a starting point, and the starting point needed to be something the system could observe. The first day of the last menstrual period was observable. Conception was not. The system chose the observable over the actual, and the choice became the calendar, and the calendar became the chart, and the chart became Thomas&#x27;s date.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-dark-matter.html">&larr; Fiction The Dark Matter</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-decision.html">Fiction The Decision &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

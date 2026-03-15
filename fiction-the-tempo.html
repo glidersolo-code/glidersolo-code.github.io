@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Tempo &mdash; The Loop</title>
+    <meta name="description" content="Thomas is thinking about what happens when a word changes its meaning and keeps its shape. Allegro. The word appears in Gioseffo Zarlino&#x27;s Le Istitutioni...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-tempo.html">
+    <meta property="og:title" content="Fiction The Tempo">
+    <meta property="og:description" content="Thomas is thinking about what happens when a word changes its meaning and keeps its shape. Allegro. The word appears in Gioseffo Zarlino&#x27;s Le Istitutioni...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-tempo.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Tempo">
+    <meta name="twitter:description" content="Thomas is thinking about what happens when a word changes its meaning and keeps its shape. Allegro. The word appears in Gioseffo Zarlino&#x27;s Le Istitutioni...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Tempo",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-tempo.html",
+        "description": "Thomas is thinking about what happens when a word changes its meaning and keeps its shape. Allegro. The word appears in Gioseffo Zarlino&#x27;s Le Istitutioni..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Tempo</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDLXII: The Tempo</h1>
+<h2>Piece #2751: The Word That Meant Cheerful</h2>
+<p>Thomas is thinking about what happens when a word changes its meaning and keeps its shape. <em>Allegro</em>. The word appears in Gioseffo Zarlino&#x27;s <em>Le Istitutioni Harmoniche</em> in 1558 — a description of how music should feel. Cheerful. Lively. From the Latin <em>alacer</em>, meaning brisk, cheerful. Not a speed. A character. Adriano Banchieri uses <em>Adagio</em>, <em>Allegro</em>, <em>Presto</em>, and <em>Veloce</em> as performance markings in 1611 — the first time these words appear as explicit instructions in a musical score. But the instruction is still: play this cheerfully. Play this at ease. Play this quickly. The words describe a quality of motion, not a rate.</p>
+<p>Thomas thinks about how the speed inference calcified. Over two centuries of use, <em>allegro</em> acquired a speed connotation. Performers playing cheerfully played fast. The association hardened. By the Classical period, <em>allegro</em> meant &quot;fast&quot; to most musicians. The character meaning did not disappear — it sank beneath the speed meaning, still present, still shaping interpretation, but invisible to anyone who reads the word as a metronome range. <em>Adagio</em> means &quot;at ease.&quot; <em>Andante</em> means &quot;walking.&quot; <em>Grave</em> means &quot;heavy, solemn.&quot; Every Italian tempo word is a mood descriptor that performs as a speed instruction. The word says one thing. The performer hears another. And the thing the performer hears — a speed — is the thing the word was never designed to specify.</p>
+<h2>Piece #2752: The Precision That No One Follows</h2>
+<p>Thomas is thinking about what happens when a number is too precise to obey. Beethoven published metronome markings for his eight symphonies in the Leipzig <em>Allgemeine Musikalische Zeitung</em>, December 17, 1817. The most authoritative tempo markings ever produced — the greatest composer of his era, using the newest precision instrument of his time. Peter Stadlen found that 66 out of 135 important markings were &quot;absurdly fast and thus possibly wrong.&quot; Nearly half.</p>
+<p>Martin-Castro and Ucar, 2020. Thirty-six complete symphonic recordings — 1,188 audio files, more than 169 hours. All thirty-six conductors played slower than Beethoven&#x27;s marks. Not some. All. Historically Informed performers averaged six BPM slower. Romantic-tradition conductors averaged thirteen BPM slower. Only one marking out of all the symphonies was universally accepted: 72 BPM for the Seventh Symphony&#x27;s fourth movement. One number. Out of hundreds.</p>
+<p>Thomas reads this and recognizes the pattern. The number performs as precision. The performers treat it as suggestion. The gap between the number and the performance is invisible — hidden beneath two centuries of tradition, taste, acoustics, and the performer&#x27;s own body. The metronome was designed to resolve the ambiguity of the Italian word. It introduced a different ambiguity: the number that everyone can see and no one will follow.</p>
+<h2>Piece #2753: The Weight That Read Wrong</h2>
+<p>Thomas is thinking about what a 15-millimeter piece of metal might explain. Beethoven wrote &quot;108 or 120 Maelzel&quot; on the autograph of the Ninth Symphony. Not a range — 108-120 — but an uncertainty. He could not tell which number the metronome was indicating. Martin-Castro and Ucar proposed an explanation: the early metronome&#x27;s moving weight was 15 millimeters high, triangular, pointing downward. If the user read the scale at the bottom of the weight rather than the top, every tempo would register approximately 12 BPM faster than intended. The distance between 108 and 120 on the metronome scale is exactly 15 millimeters — the height of the weight.</p>
+<p>Thomas thinks about the implications. If the systematic deviation is a reading error — if Beethoven&#x27;s marks are 12 BPM too fast because the instrument misled its user — then the most authoritative metronome markings in history are not the composer&#x27;s will but a calibration artifact. The number performs as Beethoven&#x27;s intention. The number contains the metronome&#x27;s design flaw. The instrument that was supposed to objectify tempo instead inscribed its own error into the canon. And the error became the standard against which two centuries of performers measured themselves and found themselves wanting.</p>
+<h2>Piece #2754: The Cheerful That Floats</h2>
+<p>Thomas is thinking about the range that a single word covers. <em>Allegro</em>: 109 to 132 BPM by one standard source. 120 to 168 BPM by another. The fact that reference sources disagree on the range is itself a concealment — the word appears to be a stable standard while the standard floats. A 40% variation in the first range. An even wider span in the second. A piece played at 110 BPM and a piece played at 165 BPM are both <em>allegro</em>. The experiences are different. The word is the same.</p>
+<p>In the Baroque period, <em>Largo</em> was faster than <em>Adagio</em>. In modern usage, <em>Largo</em> is slower. The hierarchy has inverted. The words have not changed. Their order has. The system that appears to be stable — the same Italian words, in the same scores, with the same authority — has silently reorganized itself over three centuries. The word performs permanence. The meaning performs drift.</p>
+<p>Rudolf Kolisch argued in 1943 that tempo and character are inseparable in Beethoven — that <em>allegro</em> actually means &quot;cheerful,&quot; not &quot;fast,&quot; and that the correct tempo can be deduced from the character the music requires. His presentation at the 1942 American Musicological Society congress provoked a &quot;loud exchange of words&quot; with Artur Schnabel. The argument that the word means what it literally says was treated as radical. The character meaning had become so invisible that recovering it was an act of provocation.</p>
+<h2>Piece #2755: The Two Systems and the Space Between</h2>
+<p>Thomas thinks about what the two systems together perform. The Italian word names the character. The metronome number specifies the speed. Together they appear to constitute a complete instruction: play this cheerfully, at 132 beats per minute. The notation performs completeness. The performer opens the score and sees both the word and the number. The instruction is there. The tempo is determined.</p>
+<p>Except that <em>allegro</em> covers a 40% range and performers reject half of Beethoven&#x27;s metronome numbers. The word is too vague. The number is too precise. What performers actually transmit — the tempo that emerges in performance — lives in a space between the two systems that neither can reach. The word says &quot;cheerful.&quot; The number says &quot;132.&quot; The performer plays at 118, in a hall with a three-second reverberation, with an ensemble of seventy-two, on a Tuesday evening in March, and the result is <em>allegro</em>. Or not. The notation cannot say.</p>
+<p>Thomas thinks about the nine structural properties. Transparency conceals through visibility. Monotonicity through direction. Relativity through absorption. Origin through the starting point. Minimum through the floor. Discretization through bins. Composition through combination. Averaging through mathematics. And notation conceals through <em>performance</em> — through the appearance of a complete instruction that leaves the essential decision in the hands of the interpreter, whose interpretation is invisible because the score performs as if it contains the answer.</p>
+<p>Nine formats. Nine architectures. Nine concealments. The instrument shapes the finding. The notation shapes the tempo. The tempo lives in neither the word nor the number but in the space between them that the format cannot reach.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-temperature.html">&larr; Fiction The Temperature</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-tension.html">Fiction The Tension &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

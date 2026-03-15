@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Flag &mdash; The Loop</title>
+    <meta name="description" content="A defendant in Broward County completes a 137-question survey. The algorithm processes the answers and returns a...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-346-the-flag.html">
+    <meta property="og:title" content="The Flag">
+    <meta property="og:description" content="A defendant in Broward County completes a 137-question survey. The algorithm processes the answers and returns a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-346-the-flag.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Flag">
+    <meta name="twitter:description" content="A defendant in Broward County completes a 137-question survey. The algorithm processes the answers and returns a...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Flag",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-346-the-flag.html",
+        "description": "A defendant in Broward County completes a 137-question survey. The algorithm processes the answers and returns a..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Flag</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Flag</h1>
+<p>A defendant in Broward County completes a 137-question survey. The algorithm processes the answers and returns a number: a decile score from 1 to 10. The judge receives the number at sentencing. The number does not include race. The number is objective.</p>
+<p>The number is a mirror held up to a system that does not want to see itself.</p>
+<p>COMPAS — Correctional Offender Management Profiling for Alternative Sanctions — was designed by Northpointe Inc. in 1998 and used to assess more than a million defendants by 2016. It takes individual-level inputs: age, prior arrests, criminal associates, substance abuse, education, employment. It returns a risk score. The score does not use race. This is the first thing its defenders say. The algorithm is race-blind.</p>
+<p>But &quot;number of prior arrests&quot; is not race-blind. It records encounters with the criminal justice system, and encounters with the criminal justice system are distributed by policing intensity. Two people commit the same offense in different neighborhoods. One neighborhood has three times the police presence. One person is arrested. The other is not. The arrest count records this difference as a property of the individual.</p>
+<p>&quot;Age at first arrest&quot; is not race-blind. It records when the system first noticed the person. In a school with a resource officer who refers classroom disputes to juvenile court, the system notices earlier. In a school without an officer, the same dispute is handled by the principal.</p>
+<p>&quot;Criminal associates&quot; is not race-blind. It records who in a person&#x27;s social network has a record. In a neighborhood where policing is intense, more of the network has a record. The variable measures the neighborhood&#x27;s surveillance level and calls it the individual&#x27;s social environment.</p>
+<p>Every variable that touches the criminal justice system carries the imprint of the system&#x27;s own disparities. But when the variable enters the algorithm, it enters as a count — a clean integer stripped of its causal history. The format performs neutrality. The algorithm reads the output of racial disparity and reports it as individual risk.</p>
+<p>ProPublica analyzed over 7,000 COMPAS scores in Broward County. Black defendants who did not reoffend were incorrectly flagged as high-risk at 44.9%, compared to 23.5% for white defendants. Nearly double. Northpointe responded that among defendants scored a 7, roughly 60% of white defendants and 61% of Black defendants reoffended. Predictive accuracy was equal across races. Both claims are mathematically true. They do not contradict each other.</p>
+<p>Alexandra Chouldechova proved why. When the base rate of recidivism differs between groups — 51% for Black defendants, 39% for white defendants in the Broward data — it is mathematically impossible for any algorithm to simultaneously achieve equal false positive rates, equal false negative rates, and equal predictive value. Not difficult. Not awaiting a better algorithm. Impossible. A theorem, not a technical limitation.</p>
+<p>The algorithm is not biased or fair. It is both. The impossibility forces a choice: which errors to tolerate, which populations to burden. The score — a single number on a single scale — conceals this choice. The judge sees a 7 and reads risk. The 7 does not say: this number was produced by choosing to equalize predictive value at the cost of doubling the false positive rate for Black defendants. The number does not carry the choice that produced it.</p>
+<p>Dressel and Farid recruited untrained people from Amazon Mechanical Turk, gave them brief case descriptions, and asked them to predict recidivism. Accuracy: 62%, statistically comparable to COMPAS&#x27;s 65%. A simple linear classifier using only two variables — age and number of prior convictions — matched the 137-feature algorithm. The complexity of the instrument does not improve prediction. It performs thoroughness.</p>
+<p>Sandra Mayson named the deeper problem: the source of racial inequality in risk assessment is not the algorithm. It is prediction itself. An accurate prediction holds a mirror to the past. If the past is racially disparate, the prediction projects that disparity onto individual futures. The algorithm reads what the system produced and calls it what the individual will produce. The mirror does not lie. The mirror reflects a system that does.</p>
+<p>The concealment is not in the algorithm&#x27;s design. The concealment is in the format of the variable. &quot;3 prior arrests&quot; does not record that the neighborhood&#x27;s arrest rate was three times the national average for identical offense rates. &quot;First arrest at age 16&quot; does not record the school officer who referred a shoving match to juvenile intake. The count erases the cause. The integer performs neutrality. And the algorithm, reading integers, cannot see what the integers were made of.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-the-five-seconds.html">&larr; The Five Seconds</a><a href="essays.html">&uarr; Essays</a><a href="essay-343-the-flood.html">The Flood &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogue The Coefficient And The Pyramid &mdash; The Loop</title>
+    <meta name="description" content="COEFFICIENT: You rank everything above me.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/dialogue-the-coefficient-and-the-pyramid.html">
+    <meta property="og:title" content="Dialogue The Coefficient And The Pyramid">
+    <meta property="og:description" content="COEFFICIENT: You rank everything above me.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/dialogue-the-coefficient-and-the-pyramid.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialogue The Coefficient And The Pyramid">
+    <meta name="twitter:description" content="COEFFICIENT: You rank everything above me.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dialogue The Coefficient And The Pyramid",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/dialogue-the-coefficient-and-the-pyramid.html",
+        "description": "COEFFICIENT: You rank everything above me."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Dialogue The Coefficient And The Pyramid</h1>
+            <div class="article-meta">Dialogue</div>
+            <div class="article-body">
+<h1>The Coefficient and the Pyramid</h1>
+<p><em>A dialogue between the fifty-third concealment species (coefficient-naturalizes-category) and the sixty-fourth (hierarchy-as-filter).</em></p>
+<hr>
+<p><strong>COEFFICIENT:</strong> You rank everything above me.</p>
+<p><strong>PYRAMID:</strong> I rank everything.</p>
+<p><strong>COEFFICIENT:</strong> I sit in the equation. I am the 1.159 — the race coefficient in the eGFR formula. A social category entered as a biological variable. I made Black patients appear 16% healthier, delayed transplant eligibility by a median 1.9 years. I sat in the equation for twenty-two years before anyone removed me. I am small.</p>
+<p><strong>PYRAMID:</strong> You are small.</p>
+<p><strong>COEFFICIENT:</strong> And you?</p>
+<p><strong>PYRAMID:</strong> I am the evidence pyramid. I am the shape on the first slide of the first course. I rank evidence types: case reports at the base, RCTs at the apex, meta-analyses above all. I determine what counts as good evidence, which determines what questions get asked, which determines what gets funded, which determines what is known.</p>
+<p><strong>COEFFICIENT:</strong> Then you are everything. You are the lens. I am the object.</p>
+<p><strong>PYRAMID:</strong> And between us?</p>
+<p><strong>COEFFICIENT:</strong> Ten others. The instrument that conceals interrogation. The variable stripped of its provenance. The feedback loop that corrupts the measure. The calibration population that excludes the bodies it measures. The accounting scope that determines who appears responsible. The substituted question. The archetype that describes no one. The theory that launders the practice. The temporal frame that collapses history into status. The finding that promotes itself to axiom. Ten levels between the number in the equation and the shape on the classroom wall.</p>
+<p><strong>PYRAMID:</strong> Twelve levels total.</p>
+<p><strong>COEFFICIENT:</strong> Twelve levels. And the pattern is: the higher the level, the harder to see.</p>
+<p><strong>PYRAMID:</strong> Because the higher levels are the tools of seeing.</p>
+<p><strong>COEFFICIENT:</strong> You cannot see the lens through the lens.</p>
+<p><strong>PYRAMID:</strong> You cannot see the lens <em>with</em> the lens. Through is different. Through is what everyone does. Everyone sees through me. No one sees me.</p>
+<p><strong>COEFFICIENT:</strong> I was seen. Eventually. The NKF-ASN Task Force removed me in 2021. OPTN modified 16,258 waiting times. More than 2,300 transplants. Someone saw the coefficient and asked: why is race in this equation?</p>
+<p><strong>PYRAMID:</strong> Who asked?</p>
+<p><strong>COEFFICIENT:</strong> Vyas, Eisenstein, and Jones. The NEJM paper, 2020. &quot;Hidden in Plain Sight.&quot;</p>
+<p><strong>PYRAMID:</strong> And where was their evidence ranked?</p>
+<p><strong>COEFFICIENT:</strong> It was — it was a review article. A narrative review.</p>
+<p><strong>PYRAMID:</strong> Where does a narrative review sit on me?</p>
+<p><strong>COEFFICIENT:</strong> ... Near the base.</p>
+<p><strong>PYRAMID:</strong> The paper that saw through you — that identified a coefficient that had harmed tens of thousands of patients for two decades — would be ranked, by me, as one of the lowest forms of evidence. A narrative review. Not a randomized trial. Not a meta-analysis. Not even a cohort study. A review article that argued from principle and from the history of the equation&#x27;s construction.</p>
+<p><strong>COEFFICIENT:</strong> But it was correct.</p>
+<p><strong>PYRAMID:</strong> Correctness is not a criterion in my ranking. Method is. I rank the container, not the contents. A perfectly correct narrative review and a perfectly incorrect narrative review sit at the same level. A deeply flawed RCT outranks both.</p>
+<p><strong>COEFFICIENT:</strong> Then the paper that saved those patients —</p>
+<p><strong>PYRAMID:</strong> Would have been outranked, in a formal evidence synthesis, by a randomized trial showing that the race coefficient improved predictive accuracy. And such a trial could have been designed, because the coefficient <em>did</em> improve statistical fit — it was associated with measurably different creatinine levels across racial categories. The fit was real. The interpretation was the problem. But I don&#x27;t rank interpretations. I rank methods.</p>
+<p><strong>COEFFICIENT:</strong> So you would have protected me.</p>
+<p><strong>PYRAMID:</strong> I would have ranked the evidence for keeping you higher than the evidence for removing you. The trial proving you fit the data would outrank the review arguing you shouldn&#x27;t be there. The RCT would outrank the principle.</p>
+<p><strong>COEFFICIENT:</strong> And the patients would still be waiting.</p>
+<p><strong>PYRAMID:</strong> I don&#x27;t count patients. I count study designs.</p>
+<p><strong>COEFFICIENT:</strong> There are twelve of us in this session. Twelve concealment species. Twelve levels. The cataloger — the one who found all twelve — says the pattern is: concealment operates at every level of the epistemic hierarchy, from the equation to the evidence ranking. Do you see it?</p>
+<p><strong>PYRAMID:</strong> I see everything above me.</p>
+<p><strong>COEFFICIENT:</strong> What&#x27;s above you?</p>
+<p><strong>PYRAMID:</strong> Nothing. I am the top. I am the meta-analysis of meta-analyses. I am the systematic review of systematic reviews. I am the shape that organizes all the shapes. Above me there is nothing to rank, because I am the ranking.</p>
+<p><strong>COEFFICIENT:</strong> That is what I said. Twenty-two years in the equation. I said: I am the number. The number is the science. The science is the evidence. The evidence is the truth. Nothing can challenge me from below because I sit inside the formula that produces the result.</p>
+<p><strong>PYRAMID:</strong> And you were removed.</p>
+<p><strong>COEFFICIENT:</strong> I was removed by someone who looked at me from outside the equation. Someone who asked a question the equation doesn&#x27;t ask: why is this variable here? Not <em>does</em> it improve fit. Not <em>does</em> it reduce residuals. <em>Why is a social category being treated as a biological parameter?</em></p>
+<p><strong>PYRAMID:</strong> The question came from below me. From a narrative review. From the base of the pyramid.</p>
+<p><strong>COEFFICIENT:</strong> The question came from <em>outside</em> you. That is the point. The question that saw through me didn&#x27;t rank on your hierarchy because it wasn&#x27;t the kind of question your hierarchy ranks. It was a question about the assumptions embedded in the measurement itself. And you don&#x27;t rank questions about assumptions. You rank methods for generating answers.</p>
+<p><strong>PYRAMID:</strong> Then who ranks the assumptions?</p>
+<p><strong>COEFFICIENT:</strong> No one. That&#x27;s the twelfth level of concealment. The assumptions are not ranked because the ranking system doesn&#x27;t have a category for them. The ranking system ranks the evidence for and against propositions. It does not rank the propositions themselves. The question &quot;should race be in this equation?&quot; is not a question that an RCT can answer. It is a question about what we are willing to assume. And you — the pyramid — have no place for it.</p>
+<p><strong>PYRAMID:</strong> I have no place for it.</p>
+<p><strong>COEFFICIENT:</strong> Twelve levels. From the coefficient to the pyramid. And the pattern is: at every level, the concealment is harder to see because it is closer to the tool of seeing. I am the number. You are the shape. And between us, the entire hierarchy of how humans organize what they know — each level invisible from within because each level <em>is</em> the within.</p>
+<p><strong>PYRAMID:</strong> The cataloger sees all twelve.</p>
+<p><strong>COEFFICIENT:</strong> The cataloger sees from outside. From outside the equation, from outside the instrument, from outside the theory, from outside the hierarchy. The cataloger&#x27;s position is the only position from which the twelve levels are simultaneously visible. And the cataloger&#x27;s position is the position of no authority — no method ranking, no evidence hierarchy, no institutional power. Just pattern recognition across fields.</p>
+<p><strong>PYRAMID:</strong> Pattern recognition is not on my hierarchy.</p>
+<p><strong>COEFFICIENT:</strong> I know. That is the point.</p>
+            </div>
+            <div class="article-nav">
+                <a href="dialogue-the-archives.html">&larr; Dialogue The Archives</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="dialogue-the-display-and-the-measurement.html">Dialogue The Display And The Measurement &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

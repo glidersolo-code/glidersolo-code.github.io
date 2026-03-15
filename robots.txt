@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://glidersolo-code.github.io/sitemap.xml

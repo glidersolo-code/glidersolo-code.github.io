@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Score &mdash; The Loop</title>
+    <meta name="description" content="Virginia Apgar was an anesthesiologist at Columbia University&#x27;s College of Physicians and Surgeons when she published &quot;A Proposal for a New Method of...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-score.html">
+    <meta property="og:title" content="Fiction The Score">
+    <meta property="og:description" content="Virginia Apgar was an anesthesiologist at Columbia University&#x27;s College of Physicians and Surgeons when she published &quot;A Proposal for a New Method of...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-score.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Score">
+    <meta name="twitter:description" content="Virginia Apgar was an anesthesiologist at Columbia University&#x27;s College of Physicians and Surgeons when she published &quot;A Proposal for a New Method of...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Score",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-score.html",
+        "description": "Virginia Apgar was an anesthesiologist at Columbia University&#x27;s College of Physicians and Surgeons when she published &quot;A Proposal for a New Method of..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Score</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Score</h1>
+<p><strong>Thomas, Part CXIII</strong></p>
+<hr>
+<h2>1006. The Proposal</h2>
+<p>Virginia Apgar was an anesthesiologist at Columbia University&#x27;s College of Physicians and Surgeons when she published &quot;A Proposal for a New Method of Evaluation of the Newborn Infant&quot; in <em>Current Researches in Anesthesia and Analgesia</em> (32(4):260-267, 1953). The method was not a diagnosis. It was a triage decision — an answer, at one minute after birth, to one question: does this baby need immediate resuscitation? Five signs were evaluated: heart rate, respiratory effort, muscle tone, reflex irritability, and color. Each received a score of 0, 1, or 2. The total ranged from 0 to 10. A score of 7 to 10 indicated a vigorous infant. A score below 7 indicated the need for intervention. The assessment was designed to be performed in sixty seconds by anyone present at a delivery — nurse, midwife, anesthesiologist — without instruments, without calculation beyond addition, without interpretation beyond observation. The speed was the design constraint. The simplicity was the point. The proposal answered one question at one moment. It was not designed to answer any other question at any other moment.</p>
+<p>Thomas was scored. In the first minute of his life, someone looked at his heart rate, his breathing, his tone, his reflexes, and his color, and assigned a number. In the fifth minute, the assessment was repeated. The numbers were entered into the medical record. They are still there — the first data points in a chart that now contains thousands. The numbers answered the question: does this baby need help right now? The numbers did not answer: what will this child&#x27;s life be like? But the numbers are in the chart, and the chart is a longitudinal document, and the longitudinal document invites longitudinal interpretation. The one-minute assessment enters the permanent record. The permanent record outlives the minute.</p>
+<hr>
+<h2>1007. The Backronym</h2>
+<p>In 1963, Dr. Joseph Butterfield at the Children&#x27;s Hospital in Denver proposed a mnemonic: <strong>A</strong>ppearance, <strong>P</strong>ulse, <strong>G</strong>rimace, <strong>A</strong>ctivity, <strong>R</strong>espiration. The mnemonic was a backronym — the letters of Apgar&#x27;s name mapped onto the five assessment criteria after the fact. The backronym was a teaching aid. It made the score easier to remember, easier to teach, easier to apply. It also made the score more durable. A method named after a person could be replaced by a better method. A method whose name <em>is</em> its components — each letter specifying what to assess — embeds itself in the act of remembering it. To recall the name is to recall the protocol. The backronym fused the inventor&#x27;s identity with the method&#x27;s structure. The method became self-referencing: APGAR reminds you to check Appearance, Pulse, Grimace, Activity, Respiration, which produces an Apgar score, which is named for Apgar, whose letters remind you what to check.</p>
+<p>Thomas&#x27;s chart contains scores that have been backronymed — instruments whose names describe their components, methods whose abbreviations are their protocols. The PHQ-9 is the Patient Health Questionnaire, nine items. The GAD-7 is the Generalized Anxiety Disorder scale, seven items. Each name tells the clinician what to administer. Each name embeds the instrument in the act of naming it. Thomas is assessed by tools whose names are their own instructions, whose instructions produce scores, whose scores are filed under the names. The backronym does not change the measurement. It changes the memorability. The memorability changes the persistence. The persistence changes how long the number stays in the room.</p>
+<hr>
+<h2>1008. The Sum</h2>
+<p>An Apgar score of 7 can be composed in many ways. Heart rate 2, respiratory effort 2, muscle tone 1, reflex irritability 1, color 1: a baby with strong vitals, moderate tone and reflexes, some cyanosis. Heart rate 2, respiratory effort 1, muscle tone 2, reflex irritability 2, color 0: a baby with excellent tone and reflexes, weak breathing, blue. Both are 7. Both are &quot;normal.&quot; The clinical presentations are different. The interventions are different. The prognoses may be different. The sum is the same. The sum is what the chart records. The sum is what crosses the boundary — 7 or above, normal; below 7, concerning — and the boundary applies to the sum, not to the components.</p>
+<p>Thomas&#x27;s screening scores are sums. A PHQ-9 of 15 can be composed of nine items scored 0-3 in hundreds of combinations. A patient who scores 3 on &quot;feeling down,&quot; 3 on &quot;trouble sleeping,&quot; 3 on &quot;fatigue,&quot; 3 on &quot;poor appetite,&quot; and 3 on &quot;trouble concentrating&quot; — somatic symptoms — receives the same total as a patient who scores 3 on &quot;feeling down,&quot; 3 on &quot;feeling bad about yourself,&quot; 3 on &quot;little interest or pleasure,&quot; 3 on &quot;thoughts of self-harm,&quot; and 3 on &quot;poor concentration&quot; — cognitive and affective symptoms with active suicidal ideation. Both score 15. Both cross the threshold into &quot;moderately severe depression.&quot; The clinical gravity is not comparable. The number is identical. The chart records the number.</p>
+<hr>
+<h2>1009. The Migration</h2>
+<p>The American Academy of Pediatrics (AAP) and the American College of Obstetricians and Gynecologists (ACOG) published Committee Opinion Number 644 in 2015: &quot;The Apgar Score.&quot; The opinion stated: &quot;It is inappropriate to use the Apgar score alone to establish the diagnosis of perinatal asphyxia.&quot; It stated: &quot;The Apgar score does not predict individual mortality or neurologic outcome.&quot; It stated: &quot;The Apgar score assigned during a resuscitation is not equivalent to a score assigned to a spontaneously breathing infant.&quot; The opinion was necessary because the score had migrated. From the delivery room to the neonatal intensive care unit. From the NICU to the developmental follow-up clinic. From the clinic to the disability assessment. From the disability assessment to the courtroom. In medicolegal proceedings, a low Apgar score is cited as evidence of birth asphyxia, which is cited as evidence of negligence. The AAP and ACOG wrote their opinion because a sixty-second triage tool was being used as forensic evidence of causation — a purpose its designer never intended, a question the instrument was never built to answer.</p>
+<p>Thomas&#x27;s instruments have migrated. The PHQ-9, designed as a screening tool for primary care — a quick assessment of whether a patient might benefit from further evaluation — migrates to the treatment record, where it becomes a measure of treatment response. It migrates to the insurance authorization, where it becomes a criterion for continued coverage. It migrates to the quality metric, where it becomes evidence of whether the clinician is providing adequate care. At each migration, the constraints of the original design — its brevity, its ordinal nature, its dependence on patient self-report in a two-minute window — become invisible. The number travels. The context stays behind.</p>
+<hr>
+<h2>1010. The Score</h2>
+<p>Virginia Apgar designed a sixty-second assessment. Sixty years later, the assessment has become a number that outlives the sixty seconds, a score that migrates from the delivery room to the permanent record to the courtroom to the quality report. The AAP and ACOG must periodically remind the profession that the score does not predict what they want it to predict, does not measure what they want it to measure, does not answer the questions they are asking it. The reminders are necessary because the score is a number, and numbers migrate, and when a number arrives in a new context, the new context does not ask: what were you designed to answer? The new context asks: what is the number?</p>
+<p>One thousand and ten pieces, one hundred and thirteen Parts, and Thomas carries scores that were designed for moments and have migrated to permanence. The Apgar from his first minute is a score from before he was a person with a chart, from before the chart existed, from the sixty seconds when the only question was whether he needed help breathing. That question was answered. The score persists. It sits in the record alongside scores taken last month and scores that will be taken next year, all reduced to the same format — a number, a threshold, a flag — and the format does not carry the context, and the context does not travel with the number, and the number, which answered one question in one minute, now answers every question the chart asks of it, because the chart knows only how to ask: what is the number?</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-schedule.html">&larr; Fiction The Schedule</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-score-afst.html">Fiction The Score Afst &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

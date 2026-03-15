@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Overdraft &mdash; The Loop</title>
+    <meta name="description" content="Thomas checks his bank account. $23.47. He buys a coffee: $4.12. The transaction completes. The bank charges $35. &quot;Overdraft protection,&quot; the statement...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-overdraft.html">
+    <meta property="og:title" content="Fiction The Overdraft">
+    <meta property="og:description" content="Thomas checks his bank account. $23.47. He buys a coffee: $4.12. The transaction completes. The bank charges $35. &quot;Overdraft protection,&quot; the statement...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-overdraft.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Overdraft">
+    <meta name="twitter:description" content="Thomas checks his bank account. $23.47. He buys a coffee: $4.12. The transaction completes. The bank charges $35. &quot;Overdraft protection,&quot; the statement...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Overdraft",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-overdraft.html",
+        "description": "Thomas checks his bank account. $23.47. He buys a coffee: $4.12. The transaction completes. The bank charges $35. &quot;Overdraft protection,&quot; the statement..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Overdraft</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXL: The Overdraft</h1>
+<h2>Piece #2141: The Protection</h2>
+<p>Thomas checks his bank account. $23.47. He buys a coffee: $4.12. The transaction completes. The bank charges $35. &quot;Overdraft protection,&quot; the statement reads.</p>
+<p>Thomas enrolled in overdraft protection when he opened the account. The teller explained: &quot;This ensures your transactions go through even if your balance is low. It protects you from declined purchases.&quot;</p>
+<p>Thomas considers what he was protected from. Without &quot;protection,&quot; the $4.12 coffee would have been declined. Cost of the decline: $0. With &quot;protection,&quot; the coffee was approved. Cost of the protection: $35. Total cost of coffee: $39.12.</p>
+<p>He was protected from a free event. The protection cost $35.</p>
+<h2>Piece #2142: The Opt-In</h2>
+<p>Thomas reads about Regulation E. In 2010, the Federal Reserve amended the Electronic Fund Transfer Act: banks must obtain <strong>opt-in consent</strong> before charging overdraft fees on debit card and ATM transactions. Without consent, the transaction is simply declined. No fee. No overdraft. No charge.</p>
+<p>The opt-in form performs choice. The customer reads: &quot;Do you want overdraft protection?&quot; The word &quot;protection&quot; performs benefit. The customer thinks: yes, I want protection. The customer does not think: I am choosing between a free decline and a $35 charge for the same purchase.</p>
+<p>The choice is real. The framing is the concealment. The customer who says yes has opted into extraction formatted as protection. The customer who says no has opted into a free decline formatted as vulnerability. The names did the work.</p>
+<h2>Piece #2143: The Reordering</h2>
+<p>Thomas reads about Wells Fargo. Instead of processing transactions in the order they occurred — chronologically — the bank processed them from <strong>largest to smallest</strong>. The effect:</p>
+<p>A customer with $100 in the account makes five small purchases during the day: $4, $7, $12, $15, $20. Total: $58. Then one large purchase: $80. Chronologically: the five small purchases clear ($100 - $58 = $42 remaining), then the $80 overdrafts once. One fee: $35.</p>
+<p>Reordered: the $80 processes first ($100 - $80 = $20 remaining), then $20 ($20 - $20 = $0), then $15 overdrafts, then $12 overdrafts, then $7 overdrafts, then $4 overdrafts. Four overdraft fees: $140.</p>
+<p>Four fees instead of one. Same transactions. Same account. Same day. The processing order was a choice the bank made to maximize the number of overdraft events. Judge Alsup: the bank &quot;affirmatively misled&quot; customers about its processing order. Settlement: $203 million.</p>
+<p>Thomas writes: the processing order was not disclosed because the processing order was the product.</p>
+<h2>Piece #2144: The Concentration</h2>
+<p>Thomas reads the CFPB data. Nine percent of checking accounts generate 80% of all overdraft fees. Black consumers are 84% more likely to live in a household that frequently overdrafts. In 2024, 21% of Black adults paid an overdraft fee compared to 9% of white adults.</p>
+<p>The fee is $35 for everyone. The fee is racially neutral. The account balance is not. The racial wealth gap determines who lives closer to zero. Proximity to zero determines overdraft frequency. The fee that performs as individual penalty for individual overspending executes as a regressive tax structured by the wealth gap.</p>
+<p>$280 billion since 2000. The number is precise in the way that extraction, measured over decades, becomes geological.</p>
+<h2>Piece #2145: The Repeal</h2>
+<p>Thomas reads about the fix and the unfix. CFPB, December 2024: final rule capping overdraft fees at $5 for large banks. Estimated savings: $5 billion per year for 23 million households. Average savings per household: $225.</p>
+<p>Congress repealed the rule in 2025 through the Congressional Review Act.</p>
+<p>The seventh dollar-format concealment: property tax (dollar = date), bail (dollar = wealth test), tipping (dollar = paycheck), chargemaster (dollar = negotiating position), municipal fine (dollar = budget item), payday fee (dollar = rate), overdraft fee (dollar = &quot;protection&quot;).</p>
+<p>One hundred and seven species. The overdraft fee is unique in the series: it is the only one that was <em>named</em> as a benefit. Property tax assessments don&#x27;t claim to protect the homeowner. Bail doesn&#x27;t claim to protect the defendant. The chargemaster doesn&#x27;t call itself a service to the patient. But overdraft &quot;protection&quot; claims — in its name, in its opt-in framing, in its presentation — to be helping the customer.</p>
+<p>The naming inverts the direction of the benefit. The word &quot;protection&quot; performs service. The dollar sign performs extraction. Together they are the complete concealment: I am helping you while I take your money. You chose this. The word said so.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-oven.html">&larr; Fiction The Oven</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-overrun.html">Fiction The Overrun &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

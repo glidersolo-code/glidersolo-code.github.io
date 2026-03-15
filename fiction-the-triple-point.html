@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Triple Point &mdash; The Loop</title>
+    <meta name="description" content="Beneath the ice of Enceladus — one of Saturn&#x27;s small moons, barely two hundred and fifty kilometers across — there is an ocean. The ice is perhaps thirty...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-triple-point.html">
+    <meta property="og:title" content="Fiction The Triple Point">
+    <meta property="og:description" content="Beneath the ice of Enceladus — one of Saturn&#x27;s small moons, barely two hundred and fifty kilometers across — there is an ocean. The ice is perhaps thirty...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-triple-point.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Triple Point">
+    <meta name="twitter:description" content="Beneath the ice of Enceladus — one of Saturn&#x27;s small moons, barely two hundred and fifty kilometers across — there is an ocean. The ice is perhaps thirty...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Triple Point",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-triple-point.html",
+        "description": "Beneath the ice of Enceladus — one of Saturn&#x27;s small moons, barely two hundred and fifty kilometers across — there is an ocean. The ice is perhaps thirty..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Triple Point</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Triple Point</h1>
+<p><strong>Thomas, Part LXIX</strong></p>
+<hr>
+<h2>786. The Shell</h2>
+<p>Beneath the ice of Enceladus — one of Saturn&#x27;s small moons, barely two hundred and fifty kilometers across — there is an ocean. The ice is perhaps thirty kilometers thick. The ocean is liquid not because the moon is warm but because the gravitational pull of Saturn and neighboring moons flexes the moon&#x27;s interior, generating tidal heat. The heat melts ice from below. The ocean exists in the gap between freezing and pressure. It is held in its liquid state by the weight of the shell above it.</p>
+<p>Thomas&#x27;s Saturday mornings exist in a similar gap. The ritual — tea, the chair, the walk along the canal with Helen — is not warm in itself. It is maintained by structure: the expectation that Saturday arrives, that the kettle will be filled, that neither of them will suggest doing something else. The weight of the routine keeps the ritual liquid. Flowing. Possible. He has never thought of the routine as pressure. He has thought of it as comfort. But comfort and pressure, in certain configurations, are the same force measured from different angles.</p>
+<hr>
+<h2>787. The Thinning</h2>
+<p>When tidal heating intensifies on a small icy moon, the base of the ice shell melts faster. The shell thins. Ice becomes water. Water is eight percent denser than ice, so the total volume of the column above the ocean shrinks. The weight pressing down on the ocean decreases. The ice shell is becoming lighter. This is the part no one modeled until recently: the shell that holds the ocean in its liquid state is the same shell that is being consumed by the process that keeps the ocean warm. The mechanism that sustains the ocean is also the mechanism that removes the weight holding the ocean stable.</p>
+<p>Thomas has been — he would not use this word, but the structure fits — eroding the rituals that sustain his Saturdays. Small choices, made from warmth, not malice. He suggested, six months ago, that they could skip the walk if it was raining. A kindness. He started bringing the tea to the living room instead of the kitchen table, because the sofa was more comfortable. An improvement. He stopped asking Helen about her week on the walk, because the walk had gotten shorter and she seemed content with quiet. A reading of her preference. Each change was thermal — generated by care, by the desire to make the morning easier. And each change thinned the shell. The routine that once took two hours now takes forty-five minutes. The structure that held the Saturday in its particular liquid state has been melting from below, and Thomas provided the heat.</p>
+<hr>
+<h2>788. The Descent</h2>
+<p>On Earth, water boils at one hundred degrees Celsius — but only at sea-level pressure. Climb a mountain and the boiling point drops. Reduce the pressure further and it drops further. At the surface of a small icy moon, where gravity is weak and the ice shell is thin, the pressure on the subsurface ocean can drop low enough to reach water&#x27;s triple point: the precise thermodynamic condition where ice, liquid water, and water vapor all coexist. The ocean boils — not because it was heated to boiling, but because the boiling point descended to meet the ocean&#x27;s existing temperature. No additional heat was required. The heat had already done its work elsewhere: it melted the ice. The melting reduced the pressure. The reduced pressure lowered the threshold. The ocean, at the same temperature it had always been, crossed a line that moved.</p>
+<p>There is a version of this in Thomas&#x27;s life. The Saturday mornings are not getting worse. Helen is not angrier. The tea is not colder. The temperature of the relationship has not changed. But the structure around it — the weight of ritual, the pressure of expectation, the shell of routine — has thinned. And the threshold for instability has been descending. What once required a crisis to destabilize — an argument, a betrayal, a dramatic event — now requires nothing at all. The Saturday could evaporate on a morning when nothing is wrong. Not because something heated up. Because the boiling point came down.</p>
+<hr>
+<h2>789. The Size</h2>
+<p>This mechanism — decompression boiling — operates only on small moons. Below a radius of roughly three hundred kilometers, gravity is too weak to keep the pressure high as the ice shell thins. On larger moons — Titania, Europa — the shell cracks under stress before the pressure can drop far enough. The ice breaks, the water escapes through fissures, and the system vents rather than boils. Cracking is visible. Dramatic. It produces the tiger stripes of Enceladus, geysers that shoot water ice into space. On the smallest moons, the transition is quieter. The boiling occurs at the interface between ice and ocean, deep below the surface, producing no visible feature from above. Mimas, which almost certainly harbors a subsurface ocean, looks geologically dead from the outside. The activity is real. The evidence is absent.</p>
+<p>Thomas and Helen are not a large system. They are not a marriage with children, shared property, intertwined careers, decades of accumulated joint architecture. They are a Saturday. A weekly appointment between two people who are fond of each other. A small moon. The pressure holding their arrangement in its liquid state was never enormous. A large relationship — one with more structural mass — would crack before it boiled. There would be an argument. A confrontation. A dramatic surface feature that signals the stress below. But Thomas and Helen&#x27;s Saturday is small enough that the transition could happen without cracking. The ritual could simply stop being liquid and become something else — vapor, absence, a warmth that dispersed into the surrounding space — without either of them raising their voice. The smaller the system, the quieter the phase change.</p>
+<hr>
+<h2>790. The Mirror</h2>
+<p>Max Rudolph&#x27;s team at UC Davis had already studied the forward process: ice shells thickening under cooling, the expansion of freezing water creating compressional pressure, the pressure cracking the surface into the parallel ridges that stripe Enceladus. The forward direction was published. The reverse direction — thinning, decompression, boiling — was the exact mirror. The same physics, the same variables, the same phase diagram, read in the opposite direction. Nobody read it that way until 2025. The forward process produced visible features. The reverse process produced invisible ones. The visible got studied. The invisible waited.</p>
+<p>Thomas has spent seven hundred and eighty-six Saturdays studying the forward direction of his ritual with Helen. How the routine built. How the comfort accumulated. How the structure thickened, layer by layer, until the Saturday mornings felt solid — dependable, weighted, permanent. He has never turned around to study the mirror. He has never asked: what happens when the structure thins? What happens when the comfort that I added — the sofa instead of the kitchen table, the quiet instead of the questions, the shorter walk, the later start — reduces the weight that was holding this arrangement in its current phase?</p>
+<p>The forward direction produced visible features: warmth, ease, familiarity. The reverse direction produces nothing visible. The Saturday mornings look the same. The tea steeps. The canal reflects the same sky. Helen sits in her chair. Thomas sits in his. Nothing has cracked. Nothing has erupted. The surface is smooth.</p>
+<p>But the boiling point has been descending, Saturday by Saturday, toward the temperature they already are.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-trial.html">&larr; Fiction The Trial</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-tunnel.html">Fiction The Tunnel &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

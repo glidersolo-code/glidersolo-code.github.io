@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Hardness &mdash; The Loop</title>
+    <meta name="description" content="Thomas fills a glass from the kitchen tap. His wife complains the soap doesn&#x27;t lather. He runs his finger along the inside of the showerhead — white...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-hardness.html">
+    <meta property="og:title" content="Fiction The Hardness">
+    <meta property="og:description" content="Thomas fills a glass from the kitchen tap. His wife complains the soap doesn&#x27;t lather. He runs his finger along the inside of the showerhead — white...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-hardness.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Hardness">
+    <meta name="twitter:description" content="Thomas fills a glass from the kitchen tap. His wife complains the soap doesn&#x27;t lather. He runs his finger along the inside of the showerhead — white...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Hardness",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-hardness.html",
+        "description": "Thomas fills a glass from the kitchen tap. His wife complains the soap doesn&#x27;t lather. He runs his finger along the inside of the showerhead — white..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Hardness</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXV: The Hardness</h1>
+<h2>Piece #1516: The Soap</h2>
+<p>Thomas fills a glass from the kitchen tap. His wife complains the soap doesn&#x27;t lather. He runs his finger along the inside of the showerhead — white crust, calcium buildup, mineral deposit. &quot;We have hard water,&quot; he says, the way someone says &quot;we have termites&quot; or &quot;we have mold.&quot; A condition. A problem. Something to fix. But the word &quot;hard&quot; didn&#x27;t come from chemistry. It came from soap. In 1841, Thomas Clark — a Scottish chemist, not a plumber — tested water by adding a standard soap solution and measuring how much it took before the lather lasted five minutes. Water that resisted soap was &quot;hard.&quot; Water that lathered easily was &quot;soft.&quot; The word entered municipal vocabulary through a soap experiment. Thomas fills his glass and drinks water whose name is a complaint about soap.</p>
+<h2>Piece #1517: The Equivalent</h2>
+<p>The water utility report says 210 ppm. Parts per million of what? Calcium carbonate. But when Thomas&#x27;s wife opens the showerhead, the deposits are not calcium carbonate. They are a mixture of calcium sulfate, magnesium hydroxide, and silicates that precipitated when the hot water lost dissolved CO₂. The &quot;210 ppm as CaCO₃&quot; does not mean there are 210 milligrams of calcium carbonate in each liter. It means the total divalent cation concentration — calcium, magnesium, strontium, barium, whatever the geology provides — has been converted to the calcium carbonate equivalent. The actual minerals are different. The proportions are different. The behavior is different. But the report says 210, and 210 is a number, and numbers perform measurement even when what they measure is a translation from what&#x27;s actually there into what the reference compound would be if the reference compound were what was actually there.</p>
+<h2>Piece #1518: The Scale</h2>
+<p>Thomas calls a water softener company. The salesman says their water is 12.3 grains per gallon. The utility report said 210 ppm. &quot;Same water,&quot; the salesman says, &quot;different units.&quot; But the scale does more than convert. A grain per gallon is 17.118 parts per million — a conversion ratio that nobody remembers. The USGS classifies 210 ppm as &quot;very hard.&quot; The water softener industry classifies 12.3 gpg as &quot;very hard.&quot; They agree on the word. They do not agree on the threshold. The USGS says &quot;hard&quot; begins at 121 ppm. The softener industry says &quot;moderately hard&quot; begins at 3.5 gpg — approximately 60 ppm. Water that the USGS would call &quot;moderately hard,&quot; the softener industry has already named &quot;hard.&quot; The two industries measure the same water with different rulers and arrive at the same conclusion for different reasons: one because the geology says so, the other because the business model says so.</p>
+<h2>Piece #1519: The Halves</h2>
+<p>The water report says 210 ppm total hardness. Thomas&#x27;s wife asks: can we boil it out? The answer is: some. Temporary hardness — calcium and magnesium bicarbonates — decomposes when boiled. The bicarbonate releases CO₂, and the insoluble carbonate precipitates. That&#x27;s the scale in the kettle. That&#x27;s the crust on the element. Permanent hardness — calcium and magnesium sulfates and chlorides — does not decompose when boiled. It requires ion exchange, reverse osmosis, or chelation. The water report does not distinguish. The 210 ppm contains both. The consumer sees one number and assumes one condition. The plumber who boils a sample and weighs the precipitate learns that their 210 includes 130 temporary and 80 permanent. Two different problems. Two different solutions. One number. The number performs unity. The water contains a mixture.</p>
+<h2>Piece #1520: The Softening</h2>
+<p>The water softener removes the calcium and magnesium and replaces them with sodium. Ion for ion. Charge for charge. The resin beads swap Na⁺ for Ca²⁺ and Mg²⁺. The water goes from 210 ppm hard to near zero. The soap lathers now. The showerhead stays clean. Thomas&#x27;s wife is happy. But the WHO sets no guideline for water hardness because the evidence does not support one. A meta-analysis by Catling et al. found possible cardiovascular benefit from hard water — the magnesium in particular may reduce stroke and heart disease risk. The water softener took out the magnesium. It put in sodium. The original complaint was soap. The treatment was ion exchange. The solved problem is lathering. The unsolved question is whether the minerals the softener removed were doing something the softener salesman never mentioned, because the salesman measures hardness and the cardiologist measures magnesium and the two numbers live in different vocabularies for the same glass of water.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-half-inch-brush.html">&larr; Fiction The Half Inch Brush</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-hawthorne.html">Fiction The Hawthorne &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Point &mdash; The Loop</title>
+    <meta name="description" content="A typecaster in Paris in 1737 pours molten lead into a mold. The mold produces a rectangular block — the body — with a raised letter on its face. The body...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-point.html">
+    <meta property="og:title" content="Fiction The Point">
+    <meta property="og:description" content="A typecaster in Paris in 1737 pours molten lead into a mold. The mold produces a rectangular block — the body — with a raised letter on its face. The body...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-point.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Point">
+    <meta name="twitter:description" content="A typecaster in Paris in 1737 pours molten lead into a mold. The mold produces a rectangular block — the body — with a raised letter on its face. The body...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Point",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-point.html",
+        "description": "A typecaster in Paris in 1737 pours molten lead into a mold. The mold produces a rectangular block — the body — with a raised letter on its face. The body..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Point</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCVII: The Point</h1>
+<h2>Piece #1476: The Body</h2>
+<p>A typecaster in Paris in 1737 pours molten lead into a mold. The mold produces a rectangular block — the body — with a raised letter on its face. The body is the unit. The letter rides on top of it. The space above and below the letter — the internal leading — is part of the body. The point measures the body, not the letter.</p>
+<p>Thomas&#x27;s instruments measured bodies. The PHQ-9 measured the total score — the body — which included the nine symptoms and the space between them. The score was the block. The patient&#x27;s experience rode on top of it. The proportion of the score that corresponded to what the patient actually felt varied by person — some patients occupied most of their score, suffering in all nine dimensions, while others scored the same but concentrated their suffering in two or three items and felt nothing in the rest. The body was the same. The letter was different.</p>
+<p>Fournier&#x27;s point was 1/72 of the French royal inch. The inch was the king&#x27;s. The point was the printer&#x27;s. The measurement descended from authority into craft.</p>
+<h2>Piece #1477: The Revision</h2>
+<p>Didot revised Fournier&#x27;s point in 1783. The American type industry created its own point in 1886. Adobe created a third in 1985. Three systems called &quot;point,&quot; three slightly different measurements, each superseding the last without replacing it. The Didot point persists in European typography. The American foundry point persists in specialized contexts. The PostScript point dominates digital typesetting. The consumer encounters only one — the PostScript point — and calls it simply &quot;point,&quot; unaware that the word names three things.</p>
+<p>Thomas watched instruments revise. The BDI became the BDI-II. The DSM-III became the DSM-IV became the DSM-5. Each revision changed the underlying system while keeping the name. A PHQ-9 score of 15 meant one thing when the instrument was introduced and something slightly different as clinical norms shifted and the population being screened changed. The number stayed. The reference frame rotated beneath it.</p>
+<p>The point that Fournier proposed, the point that Didot refined, and the point that Adobe adopted are three different lengths sharing one name. The name performs continuity. The measurements perform divergence.</p>
+<h2>Piece #1478: The Height</h2>
+<p>The x-height — the height of a lowercase letter without ascenders or descenders — varies from roughly 40% to 70% of the body size across common typefaces. At 12 point, Verdana&#x27;s x-height is visibly larger than Garamond&#x27;s. Both are &quot;12 point.&quot; The consumer reads the number and expects the same size. The consumer sees different sizes.</p>
+<p>Thomas noticed that instruments with the same scale produced different clinical impressions. The PHQ-9 and the GAD-7 both ran from 0 to 21 (or 27 and 21 respectively). A score of 12 on the PHQ-9 and a score of 12 on the GAD-7 were the same number measuring different constructs with different internal proportions. The 12 looked the same on paper. It felt different in practice — the x-height of each instrument varied.</p>
+<p>The designer who chooses a typeface chooses an x-height. The reader who reads the text does not know they are reading an x-height. They see letters. The letters appear larger or smaller. The point size on the menu did not change. The proportions inside the body changed everything.</p>
+<h2>Piece #1479: The Drop</h2>
+<p>The word processor dropdown offers: 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72. The progression is not linear — it jumps from 12 to 14, skipping 13. It jumps from 28 to 36, skipping seven sizes. The available options are inherited from the standard sizes of metal type bodies that foundries produced in bulk. Thirteen-point type existed but was uncommon. The dropdown in a 2026 word processor reflects the inventory decisions of nineteenth-century type foundries.</p>
+<p>Thomas&#x27;s instruments offered fixed increments. The PHQ-9: 0, 1, 2, 3 per item. Not 0 to 10. Not a continuous scale. The available responses were preset — not because the patient&#x27;s experience came in four levels, but because the instrument&#x27;s format required discrete categories. The dropdown of possible answers was the instrument&#x27;s inventory. The patient selected from what was available.</p>
+<p>The dropdown is the format&#x27;s final form: a list of acceptable values, inherited from a previous era, presenting itself as a complete set of options.</p>
+<h2>Piece #1480: The Point</h2>
+<p>The consumer selects 12 point. The software applies a bounding box 12/72 of an inch tall — one-sixth of an inch, approximately 4.23 mm. Inside this box, the typeface engine draws a letter whose visible height depends on the typeface&#x27;s internal metrics. The letter may be 2.5 mm tall or 3.5 mm tall. Both are 12 point. The point measures the box. The letter fills whatever portion of the box the designer specified.</p>
+<p>Thomas selected instruments. The PHQ-9 applied a bounding box — nine questions, four response levels, a score from 0 to 27. Inside this box, the patient&#x27;s experience was drawn. The visible contour of the suffering depended on which items the patient endorsed and how intensely. The score was the box. The suffering filled whatever portion the patient&#x27;s particular condition occupied. Two patients at PHQ-9 15 were the same score and different shapes — one concentrated in insomnia and fatigue, the other in anhedonia and guilt. The point was the same. The letter was different.</p>
+<p>The point measures the body that held the letter in an era when letters were physical objects cast in metal. The body is gone. The point persists. The number on the screen describes a dimension the user cannot see — the ghost of a metal block, now a virtual bounding box, inherited from Fournier through Didot through Hawks through Adobe, each revision refining a unit that describes less and less of what the user actually perceives.</p>
+<p>The format is the point.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-pledge.html">&larr; Fiction The Pledge</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-port.html">Fiction The Port &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

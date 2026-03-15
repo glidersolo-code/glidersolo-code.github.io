@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Credible Fear &mdash; The Loop</title>
+    <meta name="description" content="Thomas listens to a telephone call.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-credible-fear.html">
+    <meta property="og:title" content="Fiction The Credible Fear">
+    <meta property="og:description" content="Thomas listens to a telephone call.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-credible-fear.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Credible Fear">
+    <meta name="twitter:description" content="Thomas listens to a telephone call.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Credible Fear",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-credible-fear.html",
+        "description": "Thomas listens to a telephone call."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Credible Fear</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXCIX: The Interview</h1>
+<h2>Piece #2936: The Telephone</h2>
+<p>Thomas listens to a telephone call.</p>
+<p>On one end: a woman detained in an ICE facility in South Texas. On the other: an asylum officer at a desk in Virginia. On a third line: an interpreter who speaks a language the woman barely understands, because her first language is Mam and the interpreter speaks Spanish.</p>
+<p>The interview lasts two hours. The format is nonadversarial. The woman has no lawyer — only about one percent do. She arrived twenty-six hours ago. She has slept on a concrete floor. She is expected to produce a detailed, consistent, chronological account of the worst thing that ever happened to her.</p>
+<p>Thomas notes that the telephone flattens everything. The officer cannot see the woman&#x27;s posture. The interpreter cannot see the officer&#x27;s face. The woman cannot see either of them. Three people in three locations, conducting a life-or-death evaluation through a medium that removes everything the evaluation claims to assess.</p>
+<hr>
+<h2>Piece #2937: The Demeanor</h2>
+<p>Thomas reads the REAL ID Act of 2005. Demeanor is a credibility factor. The officer may assess &quot;the demeanor, candor, or responsiveness of the applicant.&quot;</p>
+<p>Eye contact. Emotional display. Narrative consistency. The officer has been trained in what truthfulness looks like.</p>
+<p>But truthfulness looks different in different places. In much of East Asia, avoiding the eyes of an authority figure is respect. In parts of West Africa, direct gaze during an account of suffering is inappropriate. In indigenous communities throughout the Americas, composure in formal settings is expected.</p>
+<p>The officer reads gaze aversion as evasion. The culture reads it as deference. The Act codified one culture&#x27;s norms and called them universal indicators.</p>
+<p>Thomas notes that the Act does not say &quot;Western norms.&quot; The Act says &quot;demeanor.&quot; The word performs neutrality. The application performs specificity.</p>
+<hr>
+<h2>Piece #2938: The Symptom</h2>
+<p>Thomas reads the research.</p>
+<p>Herlihy and Turner studied thirty-nine Kosovan and Bosnian refugees. Every participant changed some responses between interviews. Those with higher PTSD scores were more inconsistent the longer they waited. Sixty-nine percent of asylum seekers evaluated received PTSD diagnoses. Individuals with PTSD had three-fold higher odds of memory issues.</p>
+<p>The interview demands linear chronology. PTSD fragments chronology. The interview demands consistent detail. Trauma degrades consistency. The interview demands emotional congruence — tears for sad events, fear for frightening ones. Emotional numbing is a core PTSD symptom.</p>
+<p>The format treats the neurological consequences of trauma as evidence against the claim that trauma occurred. The person who presents as traumatized is judged not credible because they present as traumatized. The instrument constitutes the credibility it claims to assess.</p>
+<p>Thomas writes: the symptom is the disqualification. The evidence of persecution is the obstacle to the claim of persecution.</p>
+<hr>
+<h2>Piece #2939: The Geography</h2>
+<p>Thomas plots the numbers on a map.</p>
+<p>Lumpkin, Georgia: one percent positive. Arlington, Virginia: sixty percent positive. A sixty-fold difference. Same statute. Same standard. Same words: &quot;significant possibility.&quot;</p>
+<p>Within San Francisco: denial rates from 1.3% to 91.6% across judges. A ninety-point spread in a single courthouse. One judge grants nearly everything. Another denies nearly everything. Same cases. Same law. Same building.</p>
+<p>Pass rates shifted from eighty-three percent positive under one administration to fourteen percent at the review stage under another. No amendment. No new legislation. The same words producing different outcomes depending on who reads them and when.</p>
+<p>Thomas notes that the map is the strongest predictor. Not the facts. Not the testimony. Not the evidence of scars or the documentation of persecution. The location of the interview predicts the outcome of the interview more reliably than anything the applicant says.</p>
+<p>The instrument does not measure a property of the applicant. The instrument generates an output determined by the instrument&#x27;s own coordinates.</p>
+<hr>
+<h2>Piece #2940: The Clock</h2>
+<p>Thomas watches the clock.</p>
+<p>One year from arrival. That is the deadline to file for asylum. Miss it — because of trauma, because of language barriers, because no one told you, because you didn&#x27;t know what asylum was — and the claim is barred regardless of its merit.</p>
+<p>More than 15,000 applications involving over 21,000 refugees were rejected on deadline grounds that would otherwise have been granted. The clock does not observe lateness. The clock constitutes the bar. The deadline punishes exactly the delays that trauma, lack of counsel, and lack of information predictably produce.</p>
+<p>Thomas notes the structure: the system creates conditions (detention, no counsel, telephonic interpretation, trauma-incompatible format) that make the deadline harder to meet, then treats the missed deadline as the applicant&#x27;s failure. The instrument generates the obstacle. The obstacle disqualifies the applicant. The disqualification validates the instrument.</p>
+<p>The interview does not observe credibility. The interview constitutes it. The person&#x27;s credibility is partly what happened to them and partly what the format permits them to say about it. The format is the filter. The filter is the finding. The finding is the person&#x27;s life.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-cracking.html">&larr; Fiction The Cracking</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-credit.html">Fiction The Credit &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

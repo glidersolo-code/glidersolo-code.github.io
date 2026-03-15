@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Torch &mdash; The Loop</title>
+    <meta name="description" content="The first forty years of the modern Olympics — 1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932 — had no torch relay. No flame carried from Olympia....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-torch.html">
+    <meta property="og:title" content="Fiction The Torch">
+    <meta property="og:description" content="The first forty years of the modern Olympics — 1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932 — had no torch relay. No flame carried from Olympia....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-torch.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Torch">
+    <meta name="twitter:description" content="The first forty years of the modern Olympics — 1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932 — had no torch relay. No flame carried from Olympia....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Torch",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-torch.html",
+        "description": "The first forty years of the modern Olympics — 1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932 — had no torch relay. No flame carried from Olympia...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Torch</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCLXIII: The Torch</h1>
+<h2>Piece #2256: The Relay</h2>
+<p>The first forty years of the modern Olympics — 1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932 — had no torch relay. No flame carried from Olympia. No runners passing fire through nations. The ancient Olympics at Olympia had a sacred fire on the altar of Zeus but no relay to other cities. The lampadedromia — a torch race in Athens during other festivals — was local, urban, and unrelated to the Olympic Games. No precedent existed for transporting a flame across borders as a herald of competition. The torch relay was invented in 1936, for the Berlin Olympics, by Carl Diem, chief organizer, under the direction of Joseph Goebbels&#x27;s propaganda ministry. Krupp manufactured the torches. Zeiss made the parabolic mirror. Leni Riefenstahl filmed it. The relay ran 3,075 kilometers from Olympia through Greece, Bulgaria, Yugoslavia, Hungary, Austria, Czechoslovakia, and Germany. Onlookers were encouraged to shout &quot;Heil Hitler&quot; as the flame passed. The final runner — Fritz Schilgen, chosen for his &quot;youthful Aryan appearance and graceful gait&quot; — entered the Berlin Olympic Stadium before a hundred thousand spectators and lit the cauldron.</p>
+<h2>Piece #2257: The Priestess</h2>
+<p>At the Archaeological Site of Olympia, eleven women in white tunics perform a choreographed ceremony. They are called priestesses. A parabolic mirror focuses the sun&#x27;s rays to kindle the flame. The high priestess invokes Apollo. The ceremony was created in 1936 as a Greek-German collaboration. It is not a revival. No ancient ceremony involved women in white tunics lighting fire with parabolic mirrors at the Temple of Hera. The theatrical elements — the ruins, the costumes, the natural fire — perform the antiquity. The spectacle is so visually convincing that it overwrites the historical record. The IOC&#x27;s official language is careful: the relay was &quot;introduced&quot; in 1936, and the flame &quot;makes the link between the ancient and the modern Games.&quot; The word &quot;link&quot; avoids &quot;continuation.&quot; But the priestesses in white, the sun-kindled flame, the ancient ruins, the solemn relay — the visual language asserts unbroken continuity. The fine print is invisible beneath the spectacle.</p>
+<h2>Piece #2258: The Stone</h2>
+<p>In 1936, Carl Diem staged a ceremony at the ancient stadium at Delphi. For the occasion, a crude three-foot-tall stone block was inscribed with the five Olympic rings and placed in the stadium as a film prop. After the ceremony, no one removed it. In the late 1950s, American authors Lynn and Gray Poole, visiting Delphi, found the stone and reported in their book that the Olympic rings design originated in ancient Greece. The stone became known as the Carl Diem Stone. The myth — that the five rings were an ancient symbol — persisted for decades. The prop became the evidence. The manufactured artifact was mistaken for an ancient one. Coubertin had designed the five rings in 1913. They first appeared on his letterhead in July of that year. They are entirely modern. The six colors were chosen because at least one appears in every national flag. No ancient precedent exists. The prop at Delphi wrote the antiquity the symbol never had.</p>
+<h2>Piece #2259: The Purchase</h2>
+<p>In 1984, the Los Angeles organizing committee charged three thousand dollars per kilometer for the right to carry the torch. The Hellenic Olympic Committee threatened to withhold the flame, calling it commercialization. In 1996, Coca-Cola paid twelve million dollars as presenting sponsor. Torchbearers could purchase their torch for $275. Ninety-eight percent did. On eBay, London 2012 torches sold for five thousand to ten thousand dollars. A 2024 Paris torch and uniform sold at auction for $45,549. Samsung has been presenting partner since 2004. Coca-Cola since 1992. The relay that was Nazi propaganda became a peace symbol. The peace symbol became a commercial platform. The commercial platform sells the torches to the runners. The ceremony at Olympia — priestesses, ruins, sun — performs the antiquity that authorizes the price.</p>
+<h2>Piece #2260: The Route</h2>
+<p>Three hundred and sixty-three Parts. Thomas read that the 1936 relay route from Olympia to Berlin passed through Greece, Bulgaria, Yugoslavia, Hungary, Austria, Czechoslovakia, and Germany. The Wehrmacht would march through the same territories within a few years. The route was later used for military logistics planning. In 1948, London revived the relay as a &quot;symbol of peace.&quot; The Nazi origin was not discussed. The relay proved enormously popular. People turned out to see it at two and three in the morning. Every Summer Olympics since 1936 has included a relay. The 2004 Athens relay was marketed as the flame &quot;returning home.&quot; Thomas understood: the spectacle wrote a new origin. The priestesses at Olympia overwrote the propagandists at Berlin. The ruins overwrote the regime. The sun-kindled fire overwrote the Krupp-manufactured torches. The relay&#x27;s antiquity was performed so convincingly, so repeatedly, for so many decades, that the 1936 origin became a footnote — something you could look up but could not see. The spectacle was the concealment. The ceremony was the forgetting.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-top-of-the-glass.html">&larr; Fiction The Top Of The Glass</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-trace.html">Fiction The Trace &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

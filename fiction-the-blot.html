@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Blot &mdash; The Loop</title>
+    <meta name="description" content="Thomas learned how the test was made.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-blot.html">
+    <meta property="og:title" content="Fiction The Blot">
+    <meta property="og:description" content="Thomas learned how the test was made.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-blot.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Blot">
+    <meta name="twitter:description" content="Thomas learned how the test was made.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Blot",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-blot.html",
+        "description": "Thomas learned how the test was made."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Blot</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXXII: The Blot</h1>
+<h2>Piece #2551: The Fold</h2>
+<p>Thomas learned how the test was made.</p>
+<p>Hermann Rorschach — a Swiss psychiatrist nicknamed &quot;Klecks&quot; (&quot;inkblot&quot;) as a child because he played klecksography, the parlor game of dripping ink onto paper and folding it in half — dripped ink onto paper and folded it in half.</p>
+<p>He created several hundred blots. He selected fifteen. His publisher, Ernst Bircher in Berne, would print only ten. The printing process introduced accidental shading that had not been in Rorschach&#x27;s originals — textural gradations, tonal variations the ink had not produced. Rorschach accepted the accident. The shading became a scoring category. The test that was published in June 1921 was not the test Rorschach designed. It was the test the printer made.</p>
+<p>Rorschach died of peritonitis on April 2, 1922, at thirty-seven. Nine months after publication. He left a wife, two children, and ten inkblots whose future development he would have no part in shaping.</p>
+<h2>Piece #2552: The Five</h2>
+<p>Five scoring systems grew in the vacuum.</p>
+<p>Samuel Beck at Columbia, 1930s: empirical, actuarial. Marguerite Hertz, same decade: frequency tables, personal history. Bruno Klopfer, a Jungian: location, shading, published 1954. Zygmunt Piotrowski, 1957: global personality. Rapaport, Gill, and Schafer, 1946: the psychoanalytic reading, content and verbalization.</p>
+<p>John Exner reviewed all five in the late 1960s. His conclusion: &quot;The Rorschach was more myth than reality. In effect, five uniquely different Rorschach tests had been created.&quot; A sizeable minority of practitioners used no recognized system at all. A patient could take &quot;the same test&quot; from five clinicians and receive five different diagnoses. The test was one test the way five different languages are one sentence.</p>
+<p>Exner published the Comprehensive System in 1974: a synthesis of the most defensible elements from all five. It became the dominant scoring system worldwide for thirty years. It coded responses across seven dimensions: location, determinants, form quality, contents, popular responses, organizational activity, special scores. It computed composite indices: Schizophrenia Index, Depression Index, Suicide Constellation. The scores were specific. The norms were published. The numbers felt like science.</p>
+<h2>Piece #2553: The Seventy-Five</h2>
+<p>Thomas found the number that mattered.</p>
+<p>Wood, Nezworski, Garb, and Lilienfeld, 2001: Exner&#x27;s normative values overpathologized normal individuals. Approximately 75% of nonpatient adults received elevated scores on clinical indices. The Shaffer, Erdberg, and Haroian norms classified 16% of normal adults as possibly schizophrenic. Twenty-nine percent as probably narcissistic. The test did not sort the sick from the well. It sorted everyone into sick.</p>
+<p>Exner initially dismissed the findings. His own research council confirmed them. The norms were &quot;substantially different for many important scores.&quot; The instrument behind the prop had been miscalibrated for a generation. The blots — the ten images the patient looked at — remained unchanged since the Bircher printing accident of 1921. The scoring system — the invisible apparatus the clinician used — was in crisis. The patient saw stability. The literature saw collapse.</p>
+<p>Thomas noted: the prop was unchanged. The apparatus was rebuilt. The patient did not know which was which.</p>
+<h2>Piece #2554: The Exposure</h2>
+<p>In June 2009, James Heilman — an emergency medicine physician in Moose Jaw, Saskatchewan, and a Wikipedia editor — posted all ten Rorschach inkblot plates on the Wikipedia article, along with the most common interpretations for each card.</p>
+<p>The psychological community called it unbelievably reckless. Two psychologists filed a formal complaint with the Saskatchewan medical licensing board. The Canadian Psychological Association stated that publishing questions and answers compromises a test&#x27;s usefulness. Hogrefe &amp; Huber, which held the publishing rights since acquiring them from Bircher&#x27;s inventory, investigated legal action.</p>
+<p>Heilman compared it to publishing an eye chart. The complaints were denied. The images stayed.</p>
+<p>Thomas sat with what the controversy revealed. The psychologists&#x27; argument was explicitly about &quot;test security&quot; — that the test only works if the patient does not know the expected responses. But the test claimed to measure projection of unconscious content onto ambiguous stimuli. If it measured what it claimed to measure, prior knowledge should not matter. An unconscious does not consult a Wikipedia article.</p>
+<p>The defenders&#x27; argument was an argument against the projective hypothesis by the test&#x27;s own defenders. They were saying: the test measures naivete, not projection. The secrecy requirement was the admission the test was not what it performed.</p>
+<h2>Piece #2555: The Instrument</h2>
+<p>Four hundred and twenty-two Parts. Two concealment layers.</p>
+<p>The first layer: the inkblot performs the role of instrument. The patient sits before the blot. &quot;What might this be?&quot; The blot appears to be the test. But the blot measures nothing. It is a stimulus — ink folded, printed with accidental shading, unchanged since 1921. The actual instrument is the scoring system: seven coding dimensions, composite indices, normative comparisons, all invisible to the patient. The patient engages with the prop. The clinician engages with the apparatus. The two never meet.</p>
+<p>The second layer: the prop is stable while the apparatus is in crisis. The ten blots have not changed in a century. The scoring system has been rebuilt five times — Beck, Klopfer, Piotrowski, Rapaport, Exner — and then replaced by a sixth (R-PAS, 2011) after Exner&#x27;s death, when his family forbade revisions to his system. The visible part performs permanence. The invisible part is in perpetual revision. The permanence of the blot performs the permanence of the test. The patient sees the blot. The patient does not see the scoring. The patient does not know that the part they see has never been the test.</p>
+<p>The blot is the prop. The scoring is the instrument. The prop conceals the apparatus. The apparatus was wrong for thirty years. The prop was right all along — but &quot;right&quot; means nothing for a folded piece of ink. The ink has no content. The content was always somewhere else.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-bite-mark.html">&larr; Fiction The Bite Mark</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-blower.html">Fiction The Blower &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

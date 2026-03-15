@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Single &mdash; The Loop</title>
+    <meta name="description" content="Thomas held a 78 RPM record. The shellac was heavy, brittle, thick — nothing like the vinyl that came later. The grooves were wide enough to see. He...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-single.html">
+    <meta property="og:title" content="Fiction The Single">
+    <meta property="og:description" content="Thomas held a 78 RPM record. The shellac was heavy, brittle, thick — nothing like the vinyl that came later. The grooves were wide enough to see. He...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-single.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Single">
+    <meta name="twitter:description" content="Thomas held a 78 RPM record. The shellac was heavy, brittle, thick — nothing like the vinyl that came later. The grooves were wide enough to see. He...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Single",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-single.html",
+        "description": "Thomas held a 78 RPM record. The shellac was heavy, brittle, thick — nothing like the vinyl that came later. The grooves were wide enough to see. He..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Single</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXCV: The Single</h1>
+<h2>Piece #2416: The Groove</h2>
+<p>Thomas held a 78 RPM record. The shellac was heavy, brittle, thick — nothing like the vinyl that came later. The grooves were wide enough to see. He counted them: roughly 96 per inch of radial distance. The disc rotated at 78.26 RPM — a speed that no musician had requested, no acoustician had recommended. A 3,600 RPM motor. A 46:1 gear ratio. The speed was an engineering coincidence.</p>
+<p>The playable area of the 10-inch disc yielded a groove spiral approximately 270 feet long. At 78.26 RPM, the stylus traversed that spiral in about three minutes. Then the music stopped. Not because the song was finished. Because the disc was.</p>
+<h2>Piece #2417: The Compression</h2>
+<p>King Oliver&#x27;s Creole Jazz Band walked into Gennett Records in Richmond, Indiana, in 1923. Louis Armstrong was there — his first recordings. In the clubs, their sets ran open-ended. Solos stretched for as long as the crowd demanded. The music breathed.</p>
+<p>In the studio, the music held its breath. Thirteen sides recorded. The longest: 2:59. Every solo compressed, every improvisation truncated, every musician aware that the shellac was turning and the groove was running out. The constraint was not artistic. It was physical. The disc had three minutes. The music had to fit.</p>
+<p>Beethoven&#x27;s Ninth Symphony — one hour of continuous music — required seven discs. Fourteen sides. The listener stacked them in a bound book of sleeves that looked like a photograph album. The book was called an album. The word survived the format by seventy years.</p>
+<h2>Piece #2418: The Replacement</h2>
+<p>In June 1948, Columbia Records unveiled the long-playing record at the Waldorf Astoria. Peter Goldmark&#x27;s microgroove technology: 250-400 grooves per inch instead of 96. Speed reduced to 33⅓ RPM. A 12-inch LP held twenty-two minutes per side. The three-minute constraint was abolished.</p>
+<p>Pop songs stayed at three minutes.</p>
+<p>Thomas studied the timeline. The physical constraint vanished in 1948. The songs did not expand. Instead, a new constraint arrived: the Top 40 radio format, created by Todd Storz at KOWH-AM Omaha in the early 1950s. Shorter songs meant more plays per hour. More plays meant more advertising slots. More slots meant more revenue. The broadcast schedule replaced the groove spiral, producing the same duration through entirely different mechanics.</p>
+<h2>Piece #2419: The Punishment</h2>
+<p>Songs that exceeded three minutes were disciplined.</p>
+<p>The Animals recorded &quot;The House of the Rising Sun&quot; in 1964 at 4:29. For the American single, it was cut to 2:59. Ninety seconds removed — the organ solo compressed, the guitar break trimmed. The song fit the format.</p>
+<p>Bob Dylan recorded &quot;Like a Rolling Stone&quot; in 1965 at 6:34. Columbia Records initially shelved it. Then they split it across two sides of a 45 — Part One and Part Two, like an old symphony spread across 78 RPM sides. The technology had changed. The constraint had not.</p>
+<p>Thomas noted the irony: the LP existed. Dylan could have released the song on an LP without cutting. But the single was the commercial unit, and the single was three minutes, and three minutes was what radio would play.</p>
+<h2>Piece #2420: The Attractor</h2>
+<p>Thomas plotted the data. Average song length by decade: 1950s, 2:36. 1960s, 2:59. 1970s, 3:55. 1980s, 4:08. Peak in 1992: 4:21. Then the decline. 2020: 3:17. 2024: half of all Spotify hits under three minutes.</p>
+<p>The average song in 2020 matched the average song in 1930.</p>
+<p>The mechanism had changed a third time. Spotify counted 30 seconds of listening as a full play that triggered a royalty payment. Shorter songs meant more replays. More replays meant more revenue per minute of attention. TikTok compressed further: 15 seconds was the hook, and the hook was the commercial unit.</p>
+<p>Three constraining systems. Shellac physics: the groove ran out at three minutes. Broadcast economics: the ad break arrived at three minutes. Payment algorithms: the revenue per listen peaked at three minutes.</p>
+<p>Three unrelated constraints. The same number.</p>
+<p>Thomas set down the 78 RPM record. The grooves looked like contour lines on a map — ridges circling inward toward the label, each one carrying three minutes of sound. The shellac hadn&#x27;t known it was setting a standard. It had simply run out of space. And everything after — the radio format, the streaming algorithm, the TikTok hook — had independently run out of space in exactly the same place.</p>
+<p>The duration was not a fossil. It was an attractor. Three minutes was not where the music had been frozen. It was where the music kept arriving.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-silence.html">&larr; Fiction The Silence</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-size.html">Fiction The Size &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

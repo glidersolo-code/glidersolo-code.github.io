@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Schedule &mdash; The Loop</title>
+    <meta name="description" content="In 1970, Congress created five schedules for controlled substances. Each schedule defined a level of restriction based on three criteria: the substance&#x27;s...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-schedule.html">
+    <meta property="og:title" content="Fiction The Schedule">
+    <meta property="og:description" content="In 1970, Congress created five schedules for controlled substances. Each schedule defined a level of restriction based on three criteria: the substance&#x27;s...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-schedule.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Schedule">
+    <meta name="twitter:description" content="In 1970, Congress created five schedules for controlled substances. Each schedule defined a level of restriction based on three criteria: the substance&#x27;s...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Schedule",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-schedule.html",
+        "description": "In 1970, Congress created five schedules for controlled substances. Each schedule defined a level of restriction based on three criteria: the substance&#x27;s..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Schedule</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXXVI: The Schedule</h1>
+<h2>Piece #1121: The Temporary</h2>
+<p>The placement was temporary.</p>
+<p>In 1970, Congress created five schedules for controlled substances. Each schedule defined a level of restriction based on three criteria: the substance&#x27;s potential for abuse, its currently accepted medical use, and the safety of its use under medical supervision. Schedule I was the most restrictive: high abuse potential, no accepted medical use, no safe use even under supervision. Schedule V was the least.</p>
+<p>Cannabis was placed in Schedule I. The placement was described as temporary — pending the findings of a commission Congress had created in the same legislation. The National Commission on Marihuana and Drug Abuse would study the substance, review the evidence, and report back.</p>
+<p>The Commission reported in 1972. Its recommendation: decriminalization of possession.</p>
+<p>The President rejected the recommendation. The temporary classification remained. It would remain for fifty-four years. &quot;Temporary&quot; is not a duration. It is an intention that outlives the intender.</p>
+<p>Thomas read the word again. <em>Temporary.</em> It had the same quality as <em>preliminary</em> in the Shafer Commission&#x27;s own title — <em>Marihuana: A Signal of Misunderstanding.</em> A signal that was understood, reported, and then administratively discarded. The temporary classification became the permanent architecture through no single decision to make it permanent. It persisted not because it was reaffirmed but because it was never revisited. The absence of revision became the revision.</p>
+<hr>
+<h2>Piece #1122: The Barrier</h2>
+<p>The schedule created what it measured.</p>
+<p>Schedule I substances were defined as having no currently accepted medical use. Proving medical use required clinical research. Clinical research on a Schedule I substance required a DEA registration, an institutional review board approval, a NIDA-approved research protocol, and — for fifty-two years — cannabis obtained from a single source: the University of Mississippi, under contract with the National Institute on Drug Abuse since 1968.</p>
+<p>The research material was not the substance as it existed in the world. The potency was lower. The strain diversity was limited. The chemical profile differed from commercially cultivated cannabis in ways that affected the research findings. Researchers studied a proxy for the substance whose medical utility they were trying to establish.</p>
+<p>The barrier was not a locked door. It was a series of unlocked doors, each requiring a different key, each key available through a different office, each office operating on a different timeline. The doors were open. The journey through them took years. The time cost was the barrier, disguised as process.</p>
+<p>Thomas saw the mechanism. The classification said: <em>no accepted medical use.</em> The classification prevented: the research needed to establish accepted medical use. The absence of research confirmed: no accepted medical use. Each step followed logically from the last. No step required deception. The circularity was the truth.</p>
+<hr>
+<h2>Piece #1123: The Gap</h2>
+<p>Thirty-eight states disagreed.</p>
+<p>While federal law classified cannabis as having no accepted medical use, thirty-eight states established medical cannabis programs. Physicians recommended it. Patients used it. State health departments regulated it. Clinical outcomes were documented — not in the double-blind, placebo-controlled trials that the federal standard required, but in the practice of medicine as it actually occurred.</p>
+<p>The evidence existed. It existed in the wrong jurisdiction.</p>
+<p>Federal scheduling required evidence generated under federal research protocols. State medical programs generated evidence under state regulatory frameworks. The two evidence systems were incommensurable — not because they measured different things, but because they measured the same thing under different authorities, and neither authority recognized the other&#x27;s measurements.</p>
+<p>Thomas thought about the poverty line (#268): a federal measure unchanged since 1963, applied to a reality that had changed around it. The schedule was the same. A classification set in 1970, resistant to revision, applied to a pharmacological reality that thirty-eight states had already acknowledged differently. The federal-state gap was not a disagreement about facts. It was a disagreement about which facts counted.</p>
+<hr>
+<h2>Piece #1124: The Monopoly</h2>
+<p>One farm grew the evidence.</p>
+<p>From 1968 to 2020, all cannabis legally available for federally approved research in the United States was cultivated at a single facility: the National Center for Natural Products Research at the University of Mississippi, under contract with NIDA. One institution, one farm, one supply chain.</p>
+<p>The monopoly did not prevent research. It shaped what research was possible. The strains available were limited. The chemical profiles were narrow. The potency of research-grade cannabis lagged behind commercially available cannabis by a factor of three to five. Researchers studying the effects of cannabis were studying the effects of a substance that resembled cannabis the way a photograph of a river resembles water.</p>
+<p>The monopoly was not a conspiracy. It was a procurement decision from 1968 that persisted because procurement decisions, once embedded in federal contracting structures, resist revision. The contract renewed. The supply continued. The gap between the researched substance and the used substance widened. The widening was invisible to the regulatory framework because the regulatory framework measured compliance with protocol, not correspondence between protocol and reality.</p>
+<p>Thomas had seen this before. The Glasgow Coma Scale (#254): an instrument whose serial assessment purpose migrated to single-point triage. Here: a research supply whose adequacy in 1968 became inadequacy by 2020, but the infrastructure had no mechanism for measuring its own obsolescence. The supply existed. The supply was different from the substance. The difference was unregulated.</p>
+<hr>
+<h2>Piece #1125: The Schedule</h2>
+<p>The five levels looked like measurement.</p>
+<p>Schedule I through Schedule V. Roman numerals suggesting a gradient. Criteria listed in parallel: abuse potential (high to low), medical use (none to accepted), safety (unsafe to safe under supervision). The structure implied a scale — a continuum from most dangerous to least, from most restricted to least.</p>
+<p>The structure was not a scale. It was a series of political and pharmacological judgments, each made at a specific moment by specific decision-makers, frozen by the administrative difficulty of revision. Fentanyl was Schedule II; cannabis was Schedule I. Methamphetamine was Schedule II; psilocybin was Schedule I. The ordering reflected historical placement, not relative danger. The numerals created an appearance of systematic assessment that the history of individual scheduling decisions contradicted.</p>
+<p>Thomas counted the concealment layers. The classification prevented the research. The research gap justified the classification. The single supplier narrowed the evidence. The narrow evidence confirmed the classification&#x27;s assumptions. The federal-state gap segregated evidence by jurisdiction. The Roman numerals suggested a rational order.</p>
+<p>Each layer was transparent. Each layer was administrative. No layer required anyone to lie. The system was honest about its own structure — the criteria were published, the process was documented, the barriers were described in law. The concealment was not in any hidden mechanism. The concealment was that the honest description of the process obscured the honest consequence of the process: a substance classified as having no medical use because the classification prevented the research that would establish medical use.</p>
+<p>The schedule was the finding. The finding was the schedule. He had seen this before. He would see it again.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-scan.html">&larr; Fiction The Scan</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-score.html">Fiction The Score &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

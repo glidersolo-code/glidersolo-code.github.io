@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Quarter &mdash; The Loop</title>
+    <meta name="description" content="Thomas holds a Spanish silver dollar in his palm — a piece of eight, minted in Mexico City, 1785. Eight reales. He takes a chisel and cuts it in half....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-quarter.html">
+    <meta property="og:title" content="Fiction The Quarter">
+    <meta property="og:description" content="Thomas holds a Spanish silver dollar in his palm — a piece of eight, minted in Mexico City, 1785. Eight reales. He takes a chisel and cuts it in half....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-quarter.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Quarter">
+    <meta name="twitter:description" content="Thomas holds a Spanish silver dollar in his palm — a piece of eight, minted in Mexico City, 1785. Eight reales. He takes a chisel and cuts it in half....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Quarter",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-quarter.html",
+        "description": "Thomas holds a Spanish silver dollar in his palm — a piece of eight, minted in Mexico City, 1785. Eight reales. He takes a chisel and cuts it in half...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Quarter</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXCIII: The Quarter</h1>
+<h2>Piece #2406: The Cut</h2>
+<p>Thomas holds a Spanish silver dollar in his palm — a piece of eight, minted in Mexico City, 1785. Eight reales. He takes a chisel and cuts it in half. Four reales. He cuts again. Two reales. A quarter of the original coin, worth exactly two bits. Thomas holds the wedge of silver and understands: before there were quarters, there were quartered coins. The denomination was literal. The cut was the currency. The US quarter dollar inherited the name, the value, and the concept from this act of cutting — and nothing else.</p>
+<hr>
+<h2>Piece #2407: The Preference</h2>
+<p>Thomas sits with Jefferson in 1784, reading the &quot;Notes on the Establishment of a Money Unit.&quot; Jefferson wants a decimal system: ten-cent dimes, twenty-cent double-tenths, dollar units. The double-tenth matches the pistareen — the debased Spanish 2 reales that passes at five to the dollar. Twenty cents. Clean. Decimal. Thomas watches Jefferson&#x27;s preference die in committee. Hamilton&#x27;s 1791 report proposes only the dollar and the dime — no quarter at all. Then Congress adds the quarter because the Spanish 2 reales, at 25 cents, is already the dominant small coin in every market from Boston to Charleston. The denomination enters the system not by design but by inheritance. Jefferson wanted 20. Hamilton wanted nothing between 10 and 50. The merchants wanted what they already had.</p>
+<hr>
+<h2>Piece #2408: The Failure</h2>
+<p>Thomas holds a twenty-cent piece, 1875. Senator Jones&#x27;s creation — the denomination Jefferson preferred, ninety-one years late. Thomas sets it next to a quarter. The twenty-cent piece is 22 millimeters. The quarter is 24.3 millimeters. Same design: Seated Liberty on the obverse. A shopkeeper squints, gives change for a quarter, receives a twenty-cent piece. The confusion is immediate and total. Over a million are minted. Within two years, Congress abolishes the coin. Thomas understands: the twenty-cent piece failed not because 20 is wrong but because 25 was already there. The correction came too late. The inheritance had hardened into fact.</p>
+<hr>
+<h2>Piece #2409: The Infrastructure</h2>
+<p>Thomas feeds a quarter into a parking meter in Oklahoma City, 1935. He feeds a quarter into a pay phone in 1982. He feeds a quarter into an arcade machine in 1983. He feeds a quarter into a laundromat in 1995. Each mechanism is calibrated to the quarter&#x27;s weight, diameter, and electromagnetic signature. Millions of coin slots across America accept 25 cents because 25 cents is what the slots were built for. Thomas tries to insert a twenty-cent piece. The machine spits it out. The denomination is not a number anymore. It is a shape, a weight, a frequency — a physical object embedded in millions of metal mechanisms. The arithmetic cannot overrule the infrastructure.</p>
+<hr>
+<h2>Piece #2410: The Eighth</h2>
+<p>Thomas stands on the floor of the New York Stock Exchange, 1792 — the same year as the Coinage Act. A trader quotes a price: twelve and three-eighths. Three-eighths of a dollar. 37.5 cents. Thomas counts: one-eighth, two-eighths, three-eighths, four-eighths, five-eighths, six-eighths, seven-eighths. The piece of eight is alive on Wall Street. Thomas watches the exchange price in eighths for 205 years. In June 1997, it shifts to sixteenths. On January 29, 2001, it shifts to decimals. The Spanish octal system governed American financial markets for 209 years — sixty-five years after the Spanish dollar lost its legal-tender status, 143 years after the last Spanish colony in the Americas gained independence. Thomas holds a quarter in one hand and a stock certificate in the other. Both are denominated by a coin that no longer exists, from an empire that no longer exists, in a number system that the successor replaced. The predecessor denominates the successor. The cut is still the currency.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-pyramid-of-needs.html">&larr; Fiction The Pyramid Of Needs</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-quota.html">Fiction The Quota &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

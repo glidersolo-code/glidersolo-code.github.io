@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Checklist &mdash; The Loop</title>
+    <meta name="description" content="The criteria were listed in a manual — the Diagnostic and Statistical Manual of Mental Disorders, published by the American Psychiatric Association. The...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-checklist.html">
+    <meta property="og:title" content="Fiction The Checklist">
+    <meta property="og:description" content="The criteria were listed in a manual — the Diagnostic and Statistical Manual of Mental Disorders, published by the American Psychiatric Association. The...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-checklist.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Checklist">
+    <meta name="twitter:description" content="The criteria were listed in a manual — the Diagnostic and Statistical Manual of Mental Disorders, published by the American Psychiatric Association. The...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Checklist",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-checklist.html",
+        "description": "The criteria were listed in a manual — the Diagnostic and Statistical Manual of Mental Disorders, published by the American Psychiatric Association. The..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Checklist</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXI: The Checklist</h1>
+<h2>Piece #1046: The Criteria</h2>
+<p>Thomas met criteria.</p>
+<p>The criteria were listed in a manual — the Diagnostic and Statistical Manual of Mental Disorders, published by the American Psychiatric Association. The edition in use was the fifth, published in 2013, descended from a third edition published in 1980 that had changed everything. Before 1980, psychiatric diagnosis was narrative — a clinician&#x27;s description, shaped by training, theory, and institution. Two clinicians examining the same patient could produce different diagnoses, and the difference was not considered a problem but a feature of clinical judgment.</p>
+<p>Robert Spitzer, a psychiatrist at Columbia University, considered the difference a problem. Not a clinical problem — a scientific one. If two clinicians could not agree on whether a patient had depression, then the diagnosis of depression was unreliable. If the diagnosis was unreliable, research built on it was meaningless. Spitzer&#x27;s solution was the checklist. Diagnostic criteria: numbered, specific, countable. Major Depressive Disorder: five or more of the following nine symptoms, present during the same two-week period, representing a change from previous functioning.</p>
+<p>Five, not four. Two weeks, not ten days. Nine symptoms, not twelve. Each number was a decision made by a committee in a conference room. The decisions were published in a manual that was filed alongside anatomy textbooks, and the manual&#x27;s placement — its physical proximity to biology — embedded the committee&#x27;s decisions in the infrastructure of medicine.</p>
+<p>Thomas met criteria. His chart checked boxes. The boxes had been designed by a committee to produce agreement between clinicians, and they worked — two clinicians reading his chart would check the same boxes. The agreement was real. What it agreed upon was a question the system was not designed to answer.</p>
+<hr>
+<h2>Piece #1047: The Reliability</h2>
+<p>Spitzer chose reliability over validity.</p>
+<p>Reliability: two clinicians, same patient, same diagnosis. Validity: the diagnosis corresponds to a real entity in nature — a disease with a mechanism, a boundary, a cause. Spitzer chose reliability because reliability could be measured. Administer the checklist to a hundred patients. Have two clinicians score each one independently. Calculate the kappa statistic — the degree of agreement beyond chance. If kappa was high, the diagnosis was reliable. If kappa was low, revise the criteria until kappa improved.</p>
+<p>Validity could not be measured the same way. To measure validity, you needed to know the truth — whether the entity the diagnosis named was real. But the truth was what the diagnosis was supposed to discover. The circularity was acknowledged by Spitzer and accepted as the cost of progress. Reliability first. Validity would follow.</p>
+<p>It did not follow. Four decades after DSM-III, the reliability of major diagnostic categories was established and their validity was not. Thomas Insel, director of the National Institute of Mental Health, announced in 2010 that NIMH would no longer fund research organized by DSM categories. The categories, Insel argued, were conventions — agreements between clinicians — not discoveries about nature. He proposed the Research Domain Criteria: dimensions, not categories. Circuits, not diagnoses.</p>
+<p>Thomas&#x27;s chart was organized by DSM categories. The categories were reliable. The chart recorded them. The insurance codes required them. The treatment guidelines referenced them. The infrastructure that processed Thomas ran on categories whose reliability had been engineered and whose validity had been deferred, and the deferral was now forty years old, and the categories were still in the chart, and the chart was still in the infrastructure, and the infrastructure still ran.</p>
+<hr>
+<h2>Piece #1048: The Threshold</h2>
+<p>Five of nine.</p>
+<p>A patient with four symptoms of Major Depressive Disorder was not depressed. A patient with five symptoms was depressed. The difference between four and five was the difference between no diagnosis and a diagnosis — between a chart that said &quot;adjustment disorder&quot; or &quot;subthreshold symptoms&quot; and a chart that said &quot;Major Depressive Disorder, single episode, moderate.&quot; The difference determined treatment access, insurance coverage, disability eligibility, medication authorization.</p>
+<p>The threshold was chosen. Not discovered — chosen. The committee could have set it at four, which would have included more people. It could have set it at six, which would have included fewer. The choice of five was based on field trials conducted during DSM-III development — trials designed to optimize reliability. Five produced the best kappa. The threshold was set where agreement was highest, not where nature drew a line.</p>
+<p>Thomas&#x27;s thresholds were the same. Birth weight at 2500 grams. Gestational age at 37 weeks. Apgar at 7. Each threshold was set where a committee determined that clinical utility was maximized — where the binary distinction between categories produced the most useful treatment differentiation. The thresholds were not wrong. They were chosen. And the choice, once made, became the infrastructure, and the infrastructure became the boundary, and the boundary became the disease.</p>
+<p>The committee that set the threshold at five met in a conference room. The conference room had fluorescent lights, a whiteboard, notepads. The decision was recorded in meeting minutes. The meeting minutes were filed. The filing was the beginning of the infrastructure. Forty years later, the threshold was embedded in every electronic health record system, every insurance billing code, every treatment algorithm. The conference room was gone. The threshold remained.</p>
+<hr>
+<h2>Piece #1049: The Agreement</h2>
+<p>Kendell and Jablensky asked the question in 2003.</p>
+<p>&quot;Distinguishing Between the Validity and Utility of Psychiatric Diagnoses&quot; — published in the American Journal of Psychiatry. The argument was precise: a diagnostic category could be useful (clinically, administratively, communicatively) without being valid (corresponding to a discrete entity in nature). The DSM&#x27;s categories were useful. They enabled communication. They organized billing. They structured research funding. The question was whether they were also valid — whether the boundaries between diagnoses corresponded to boundaries in the brain.</p>
+<p>The answer, Kendell and Jablensky concluded, was: we do not know. The boundaries between DSM categories were &quot;zones of rarity&quot; in some cases (schizophrenia, bipolar disorder) and continuous gradients in others (anxiety, depression). The system treated both the same — as categories with thresholds. The treatment was useful. Whether it was true was a different question, and the usefulness had made the question increasingly difficult to ask.</p>
+<p>Thomas&#x27;s chart did not distinguish between validity and utility. The diagnoses in his chart were useful — they organized his care, structured his medications, determined his insurance codes. Whether the diagnoses corresponded to discrete entities in Thomas&#x27;s body or brain was a question the chart was not designed to ask and the infrastructure was not designed to support. The agreement between clinicians was real. The agreement was the system working exactly as designed. What the system was designed to produce — agreement — was not what it was assumed to produce — truth.</p>
+<hr>
+<h2>Piece #1050: The Checklist</h2>
+<p>The checklist was the infrastructure.</p>
+<p>Not the manual — the manual was published, revised, replaced. The checklist was the form that survived the manual. DSM-III became DSM-III-R became DSM-IV became DSM-IV-TR became DSM-5 became DSM-5-TR. The criteria changed. The names changed. The thresholds shifted. But the format — the checklist, the numbered criteria, the threshold count — survived every revision. The format was the deeper structure. The categories were arguments. The format was the infrastructure in which the arguments were made.</p>
+<p>Thomas&#x27;s chart was a checklist. Not literally — the chart was a database, a timeline, a collection of measurements and observations. But the format was the same: discrete entries, countable criteria, threshold decisions. The format preceded the content. The chart existed before Thomas was born, waiting to receive his data, structured to organize it, designed to produce the agreement between clinicians that Spitzer had sought and achieved.</p>
+<p>The checklist was the concealment. Not the criteria — the criteria could be debated, revised, overturned. The format could not. The format was invisible because it was everywhere. Every diagnosis, every assessment, every threshold decision was made within the checklist format, and the format determined what counted as a symptom, and what counted as a symptom determined what was diagnosed, and what was diagnosed determined what was treated, and what was treated determined what was real.</p>
+<p>Thomas was a checklist. His chart was a checklist. The distance between the patient and the chart was the distance between a person and a format — 1050 pieces long and still being measured in the format that structured the measurement.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-checkbox.html">&larr; Fiction The Checkbox</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-chill.html">Fiction The Chill &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

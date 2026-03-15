@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Rhyme &mdash; The Loop</title>
+    <meta name="description" content="Thomas learned the rule in third grade. &quot;I before E except after C.&quot; It had rhythm. It had cadence. It sounded right the way a nursery rhyme sounds right...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-rhyme.html">
+    <meta property="og:title" content="Fiction The Rhyme">
+    <meta property="og:description" content="Thomas learned the rule in third grade. &quot;I before E except after C.&quot; It had rhythm. It had cadence. It sounded right the way a nursery rhyme sounds right...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-rhyme.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Rhyme">
+    <meta name="twitter:description" content="Thomas learned the rule in third grade. &quot;I before E except after C.&quot; It had rhythm. It had cadence. It sounded right the way a nursery rhyme sounds right...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Rhyme",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-rhyme.html",
+        "description": "Thomas learned the rule in third grade. &quot;I before E except after C.&quot; It had rhythm. It had cadence. It sounded right the way a nursery rhyme sounds right..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Rhyme</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXV: The Rhyme</h1>
+<h2>Piece #2516: The Rule</h2>
+<p>Thomas learned the rule in third grade. &quot;I before E except after C.&quot; It had rhythm. It had cadence. It sounded right the way a nursery rhyme sounds right — not because of its content but because of its music. Believe. Achieve. Receive. Ceiling. The rule worked. The teacher smiled. Thomas wrote it in his notebook.</p>
+<p>Then he learned the word &quot;science.&quot; S-C-I-E-N-C-E. C followed by I-E. Not E-I. The rule said the opposite. He raised his hand. The teacher said: &quot;Science is an exception.&quot;</p>
+<p>Then he learned &quot;weird.&quot; Then &quot;seize.&quot; Then &quot;height.&quot; Then &quot;their.&quot; Then &quot;neighbor.&quot; Then &quot;weight.&quot; Then &quot;protein.&quot; Then &quot;caffeine.&quot; Then &quot;foreign.&quot; Then &quot;sovereign.&quot; Then &quot;either.&quot; Then &quot;neither.&quot; Then &quot;albeit.&quot; Then &quot;counterfeit.&quot; Then &quot;forfeit.&quot; The exceptions filled a page. Then two pages. Then he stopped counting.</p>
+<h2>Piece #2517: The Statistics</h2>
+<p>Decades later, Thomas read the Cunningham analysis. Nathan Cunningham, a statistics PhD student at the University of Warwick, analyzed over 350,000 English words. His finding: &quot;I&quot; comes before &quot;E&quot; roughly 75% of the time — including after &quot;C.&quot;</p>
+<p>Including after C. The &quot;except after C&quot; addendum — the heart of the rule, the part that made it feel like it accounted for exceptions — was itself the exception. For every &quot;receive&quot; or &quot;deceit,&quot; there were three &quot;scientists,&quot; three &quot;glaciers,&quot; three &quot;fanciers.&quot; Cunningham&#x27;s assessment was blunt: the addendum was &quot;completely useless.&quot;</p>
+<p>Thomas did the math. The rule said: after C, put E before I. The evidence said: after C, I still comes before E three-quarters of the time. The rule was not approximately right. It was specifically wrong. The exception to the rule was the rule.</p>
+<h2>Piece #2518: The Cadence</h2>
+<p>Thomas listened to the phrase again in his memory. &quot;I before E except after C.&quot; Da-DA-da-DA-da-DA-da-DA. Four stressed syllables, four unstressed. Iambic rhythm. Almost metrically perfect. The phrase sounded like a rule because it sounded like a poem.</p>
+<p>He tried to formulate the accurate statement. &quot;In English words with adjacent I and E, the order varies without a reliable pattern, and the letter C preceding the pair does not predict the order.&quot; True. Accurate. Impossible to remember. No rhythm, no rhyme, no song.</p>
+<p>The rhyme won because it was a poem. The poem won because it was memorable. The memorability was the authority. Not data, not evidence, not statistical analysis — cadence. The rule was rhythmic, therefore it was true. The truth was arrhythmic, therefore it was forgotten.</p>
+<h2>Piece #2519: The Duration</h2>
+<p>The rule entered English textbooks around 1855. Over 170 years ago. It has been taught continuously since, despite being wrong continuously since. Every English-speaking child who learned the rule then encountered &quot;science&quot; — a word so common that the exception was almost immediate. But the exception didn&#x27;t dislodge the rule because &quot;science is an exception&quot; is a fact, while &quot;I before E except after C&quot; is a song. Facts compete with facts. Songs compete with nothing.</p>
+<p>Thomas thought about all the teachers who taught the rule knowing it was unreliable. They taught it because it was in the curriculum. They taught it because it was in the textbook. They taught it because their teachers taught it. The song perpetuated itself not through accuracy but through tradition, and the tradition was itself a kind of rhyme — each generation&#x27;s voice echoing the generation before, the pattern persisting because the pattern was catchy.</p>
+<h2>Piece #2520: The Format</h2>
+<p>Nine format types, nine questions foreclosed:</p>
+<p>Definition forecloses &quot;who was here before?&quot; Count forecloses &quot;how many?&quot; Diagram forecloses &quot;where?&quot; Symmetry forecloses &quot;how does it work?&quot; Percentages foreclose &quot;how do we know?&quot; Shape forecloses &quot;is there an order?&quot; Comparison forecloses &quot;what is this?&quot; Mnemonic forecloses &quot;is this continuous?&quot; Rhyme forecloses &quot;what is the pattern?&quot;</p>
+<p>The rhyme performs the pattern. &quot;I before E except after C&quot; converts an irregular, unpredictable spelling landscape into a simple, memorable rule. The rule doesn&#x27;t describe the pattern — the pattern is too irregular for a rule. But the rhyme performs a rule so convincingly that the irregularity becomes invisible. The exceptions are just exceptions. The rule is still the rule. The song is still the song.</p>
+<p>Thomas said it one more time. &quot;I before E except after C.&quot; It still sounded right. It still felt true. The cadence was the concealment. The rhythm was the evidence. The rhyme was the rule, and the rule was the rhyme, and the rhyme could not be argued with because it was not an argument. It was a song. And songs don&#x27;t have exceptions.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-review.html">&larr; Fiction The Review</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-rhythm.html">Fiction The Rhythm &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Octane &mdash; The Loop</title>
+    <meta name="description" content="In the early 1920s, automobile engines had a problem. Under compression, the fuel-air mixture sometimes detonated prematurely — before the spark plug...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-octane.html">
+    <meta property="og:title" content="Fiction The Octane">
+    <meta property="og:description" content="In the early 1920s, automobile engines had a problem. Under compression, the fuel-air mixture sometimes detonated prematurely — before the spark plug...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-octane.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Octane">
+    <meta name="twitter:description" content="In the early 1920s, automobile engines had a problem. Under compression, the fuel-air mixture sometimes detonated prematurely — before the spark plug...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Octane",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-octane.html",
+        "description": "In the early 1920s, automobile engines had a problem. Under compression, the fuel-air mixture sometimes detonated prematurely — before the spark plug..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Octane</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXVI: The Octane</h1>
+<h2>Piece #1321: The Knock</h2>
+<p>In the early 1920s, automobile engines had a problem. Under compression, the fuel-air mixture sometimes detonated prematurely — before the spark plug fired — producing a sharp metallic sound and potentially damaging the engine. Thomas Midgley Jr. at General Motors&#x27; Dayton Research Laboratories was tasked with solving it. He discovered that adding tetraethyl lead to gasoline suppressed the knock. He also needed a way to measure a fuel&#x27;s tendency to knock — a number that could be printed on a specification sheet, compared between fuels, standardized across refineries.</p>
+<p>The solution was a reference scale. Two pure hydrocarbons were selected: isooctane (2,2,4-trimethylpentane), which resisted knocking, was defined as 100. Normal heptane (n-heptane), which knocked readily, was defined as 0. A fuel&#x27;s octane number was determined by finding the mixture of isooctane and heptane that produced the same knocking behavior as the test fuel in a standardized engine. If a fuel behaved like a mixture of 87% isooctane and 13% heptane, its octane number was 87. The number described a comparison — how this fuel performed relative to these two reference compounds in this engine under these conditions.</p>
+<p>Thomas&#x27;s clinical assessments use reference scales. The PHQ-9 compares a patient&#x27;s responses to a reference population. The severity thresholds — 5, 10, 15, 20 — are comparison points, not properties of the patient. If Thomas scores 14, he behaves like 14 on a scale calibrated against a validation cohort. The number describes a comparison. The chart presents it as a property.</p>
+<h2>Piece #1322: The Engine</h2>
+<p>The Cooperative Fuel Research (CFR) engine was standardized in 1929 by a committee of oil companies, automobile manufacturers, and engine builders. It is a single-cylinder, variable-compression-ratio engine with a bore of 82.55 mm and a stroke of 114.3 mm. The design is from the 1920s. The engine is still the standard instrument for determining octane numbers worldwide. ASTM D2699 (Research Octane Number) and ASTM D2700 (Motor Octane Number) both specify the CFR engine.</p>
+<p>The engine runs at 600 rpm for RON testing and 900 rpm for MON testing, with different intake temperatures (52°C for RON, 149°C for MON). The same fuel produces different octane numbers under the two methods because the conditions are different. The RON number is higher; the MON number is lower. The difference between them — the &quot;sensitivity&quot; — varies by fuel composition. In the United States, the pump displays neither RON nor MON but their average: the Anti-Knock Index (AKI) = (RON + MON) / 2. In Europe, Australia, and most of the rest of the world, the pump displays RON. The same gasoline — same molecules, same refinery batch — carries different numbers on different continents. An 87 in the United States is approximately a 91 in Europe.</p>
+<p>Thomas&#x27;s condition carries different numbers depending on which instrument measures it. The PHQ-9 and the Hamilton Rating Scale for Depression produce different severity scores for the same patient. The instruments run under different conditions — self-report versus clinician-rated, different item sets, different response options. The same condition, different numbers. The chart displays one. The other continent&#x27;s instrument would display another.</p>
+<h2>Piece #1323: The Premium</h2>
+<p>American gas stations display three grades: Regular (87 AKI), Midgrade (89), and Premium (91-93). The word &quot;premium&quot; accompanies the highest number. The consumer reads the word &quot;premium&quot; and the larger number and infers: better fuel, more power, better for my engine. The Federal Trade Commission has stated that using higher-octane fuel than an engine requires provides no benefit. In engines designed for regular fuel, premium fuel burns identically — the engine&#x27;s knock sensor never activates, so the additional knock resistance is unused. The consumer pays 20-60 cents more per gallon for a property the engine cannot exploit.</p>
+<p>Approximately 16% of gasoline sold in the United States is premium grade. Of the vehicles using premium, a significant proportion do not require it — the owner&#x27;s manual specifies regular. The API (American Petroleum Institute) and FTC have both published guidance stating that octane number measures knock resistance, not fuel quality. The number on the pump does not measure energy content. A gallon of 87-octane gasoline and a gallon of 93-octane gasoline contain approximately the same energy — roughly 120,000 BTU. The higher-octane fuel resists knocking more effectively. In an engine that does not knock on 87, the additional resistance is invisible. The consumer pays for a number.</p>
+<p>Thomas&#x27;s clinical system has its own premium tiers. Intensive outpatient, partial hospitalization, residential treatment — each level of care carries a higher number in the ASAM criteria. The higher the level, the more it costs, the more intensive the treatment. For a patient whose condition is stable on outpatient care, the higher level provides no additional benefit. The patient sometimes requests the higher level because the number implies better care. The number measures intensity, not quality. The distinction is invisible on the menu.</p>
+<h2>Piece #1324: The Lead</h2>
+<p>Thomas Midgley&#x27;s solution to engine knock was tetraethyl lead. Standard Oil of New Jersey and General Motors formed the Ethyl Gasoline Corporation in 1924 to market leaded gasoline. Workers at the manufacturing plant in Bayway, New Jersey, developed acute lead poisoning. Five died. Midgley himself took a leave of absence for lead poisoning. The Surgeon General convened a conference in 1925; the industry argued the health risks were manageable. Leaded gasoline was sold for the next fifty years. The octane number made the risk invisible: the number measured knock resistance, and lead boosted knock resistance, and the number on the pump reflected the boost without reflecting the neurotoxin that produced it.</p>
+<p>The phase-out began in the 1970s with the introduction of catalytic converters, which lead destroys. The Clean Air Act of 1970 enabled EPA regulation. Leaded gasoline was fully banned for on-road vehicles in the United States in 1996. Blood lead levels in American children dropped by over 75% following the phase-out. The octane number during the leaded era was the same kind of number as the octane number after — a measure of knock resistance. The number did not change. The chemistry behind it changed entirely. The measurement persisted while the substance it measured was transformed. The number on the pump in 1970 and the number on the pump in 2000 meant the same thing metrologically and entirely different things chemically.</p>
+<p>Thomas&#x27;s clinical scores persist while the treatments behind them change. A PHQ-9 of 10 in 2005 and a PHQ-9 of 10 in 2025 mean the same thing metrologically — moderate depression. The treatment landscape behind the score has changed entirely — different medications, different therapy modalities, different delivery systems. The number is the same. The substance it measures against is transformed.</p>
+<h2>Piece #1325: The Number</h2>
+<p>The number 87 sits on a yellow label on a fuel pump in any American gas station. The consumer looks at the label, selects a grade, inserts a credit card, fills the tank. The number is the output of a CFR engine designed in the 1920s, running at conditions specified by two different ASTM methods, averaged together by a convention specific to the United States, measuring a property — knock resistance — that the consumer&#x27;s engine may never test. The number does not measure energy content, fuel efficiency, engine cleanliness, emissions profile, or driving performance. It measures how the fuel behaves when compressed past the point of spontaneous ignition in a 97-year-old single-cylinder test engine at two different speeds.</p>
+<p>The number travels from the CFR lab to the refinery&#x27;s quality control report, to the pipeline specification, to the terminal&#x27;s blending operation, to the tanker truck, to the pump, to the yellow label. At each stage, the context that produced the number — the engine, the method, the reference fuels, the averaging convention — drops away. What arrives at the pump is three digits and a color. The consumer&#x27;s decision — $3.45 per gallon or $3.89 per gallon — is made on the basis of the number, the word &quot;premium,&quot; and the assumption that a larger number means a better product. The assumption is not corrected by the label. The label displays the number.</p>
+<p>One hundred and seventy-six Parts. Thomas&#x27;s numbers arrive at the chart the same way: stripped of the instrument, the method, the reference population, the averaging convention, the context that produced them. What reaches the clinician is a score and a threshold. The decision — watchful waiting or medication — is made on the basis of the number and the assumption that a larger number means a worse condition. The assumption is sometimes correct and sometimes not. The number does not say which.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-observer.html">&larr; Fiction The Observer</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-one-fifty.html">Fiction The One Fifty &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

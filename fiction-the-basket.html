@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Basket &mdash; The Loop</title>
+    <meta name="description" content="In 1917 the Bureau sent enumerators to ninety-two cities. They visited families of wage earners and clerical workers. They asked: What do you buy? How...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-basket.html">
+    <meta property="og:title" content="Fiction The Basket">
+    <meta property="og:description" content="In 1917 the Bureau sent enumerators to ninety-two cities. They visited families of wage earners and clerical workers. They asked: What do you buy? How...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-basket.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Basket">
+    <meta name="twitter:description" content="In 1917 the Bureau sent enumerators to ninety-two cities. They visited families of wage earners and clerical workers. They asked: What do you buy? How...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Basket",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-basket.html",
+        "description": "In 1917 the Bureau sent enumerators to ninety-two cities. They visited families of wage earners and clerical workers. They asked: What do you buy? How..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Basket</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXLVIII: The Basket</h1>
+<h2>Piece #1181: The Survey</h2>
+<p>In 1917 the Bureau sent enumerators to ninety-two cities. They visited families of wage earners and clerical workers. They asked: What do you buy? How much do you spend? On food, on rent, on coal, on shoes? The families answered. The answers became weights. The weights became a basket. The basket became the index. The index became the number. The number became the economy. The families — specific people in specific cities in a specific year during a specific war — disappeared into the abstraction. Their consumption patterns, frozen in 1919, determined how inflation was measured for decades. They never knew.</p>
+<h2>Piece #1182: The Formula</h2>
+<p>Étienne Laspeyres, a German economist, proposed the index in 1871: weight current prices by base-period quantities. The formula was elegant. The formula had a bias. When prices rise, people substitute. They buy chicken instead of beef. They shop at discount stores. They switch brands. The formula does not know this. The formula weights beef at its old importance, as though behavior never changed. The formula overstates inflation. The overstatement is structural — built into the mathematics, not correctable by better data. The formula can only be corrected by a different formula. For eighty years, no one changed the formula. The overstatement compounded.</p>
+<h2>Piece #1183: The Commission</h2>
+<p>Five economists in a Senate hearing room. Michael Boskin from Stanford, chair. December 1996. The finding: the CPI overstated the cost of living by 1.1 percentage points per year. Four biases, each pointing in the same direction. The fiscal implication: if the CPI was 1.1 points too high, then Social Security COLAs had been 1.1 points too generous, and tax brackets had been 1.1 points too slow to adjust, and the cumulative effect over decades was hundreds of billions of dollars. The commission said: the measurement is wrong. The retiree heard: the check will shrink. Both were correct. The measurement and the check were the same thing.</p>
+<h2>Piece #1184: The Quality</h2>
+<p>A computer in 1999 cost $1,500 and ran at 500 megahertz. A computer in 2005 cost $1,500 and ran at 3 gigahertz. The BLS said: the price fell. Not the sticker price — the quality-adjusted price. The hedonic regression estimated the value of each characteristic: speed, memory, storage, screen resolution. The regression said: the 2005 computer, adjusted for quality, cost roughly 80% less than the 1999 computer. The sticker price was the same. The CPI recorded a decline. The consumer paid the same amount and received more. The CPI said: the consumer paid less. Both statements were defensible. Neither was simply true. The regression decided what counted as quality. The regression decided how much each quality was worth. The decisions were embedded in the number. The number was published without the decisions.</p>
+<h2>Piece #1185: The Check</h2>
+<p>Sixty-seven million people receive Social Security. Each January, the benefit adjusts by the COLA — the cost-of-living adjustment, calculated from CPI-W, the Consumer Price Index for Urban Wage Earners and Clerical Workers. CPI-W measures the consumption of 29% of the population. The 67 million receiving Social Security are mostly retirees — not urban wage earners, not clerical workers. Their spending is weighted toward medical care and housing, which rise faster than the CPI-W basket. The experimental CPI-E, designed for the elderly, shows higher inflation. The CPI-E has never been adopted. The check is calibrated to the wrong thermometer. The thermometer is not wrong — it measures what it measures. The check is indexed to it. The indexation is the decision. The decision determines the check. The check determines whether the retiree can afford the medication whose price is rising faster than the basket that determines the adjustment.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-basement.html">&larr; Fiction The Basement</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-bathroom-scale.html">Fiction The Bathroom Scale &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

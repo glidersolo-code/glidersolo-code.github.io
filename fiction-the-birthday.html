@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Birthday &mdash; The Loop</title>
+    <meta name="description" content="Thomas draws a line on paper. To the left: not responsible. To the right: responsible. The line is vertical. The line is at age ten.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-birthday.html">
+    <meta property="og:title" content="Fiction The Birthday">
+    <meta property="og:description" content="Thomas draws a line on paper. To the left: not responsible. To the right: responsible. The line is vertical. The line is at age ten.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-birthday.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Birthday">
+    <meta name="twitter:description" content="Thomas draws a line on paper. To the left: not responsible. To the right: responsible. The line is vertical. The line is at age ten.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Birthday",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-birthday.html",
+        "description": "Thomas draws a line on paper. To the left: not responsible. To the right: responsible. The line is vertical. The line is at age ten."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Birthday</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXXIX: The Birthday</h1>
+<h2>Piece #2586: The Line</h2>
+<p>Thomas draws a line on paper. To the left: not responsible. To the right: responsible. The line is vertical. The line is at age ten.</p>
+<p>Below the line, Thomas writes: the child who shoplifted candy at 9 years and 364 days. The child goes home. The system does not prosecute. The system cannot prosecute. The child is incapable of forming criminal intent. The child is incapable because the child is 9 years and 364 days old.</p>
+<p>Above the line, Thomas writes: the same child, the next morning. The child is now 10. The child is now capable of forming criminal intent. The child is capable because the child is 10. Nothing happened overnight. No circuit completed. No synapse fired differently. No myelin sheath reached completion. The brain is the same brain. The child is the same child. The age is different.</p>
+<p>The line is the difference. The line is the capacity. The line is the verdict&#x27;s foundation.</p>
+<p>Thomas looks at the line. The line is political. The line was drawn by a legislature. The line was drawn after two ten-year-olds killed a two-year-old in Liverpool. The line was drawn because the nation wanted the ten-year-olds punished. The line was drawn to enable the punishment. The line performs the capacity the punishment requires.</p>
+<h2>Piece #2587: The Range</h2>
+<p>Thomas makes a table.</p>
+<p>| Country | Age | |---------|-----| | Belgium | 18 | | Portugal | 16 | | Japan | 14 | | France | 13 | | Scotland | 12 | | England | 10 | | India | 7 | | North Carolina | 6 |</p>
+<p>Thomas reads the table. If the age reflected a developmental fact — a capacity that crystallizes at a specific point in the brain&#x27;s maturation — the table would converge. Different cultures examining the same brain would find the same threshold.</p>
+<p>The table does not converge. The table ranges from 6 to 18. The distance between North Carolina and Belgium is twelve years. Twelve years of brain development. Twelve years in which the child is simultaneously capable (in North Carolina) and incapable (in Belgium) of forming criminal intent.</p>
+<p>The child&#x27;s brain does not change when the child crosses a border. The law changes. The capacity changes. The punishment changes. The brain stays the same.</p>
+<p>The table is the evidence. The divergence is the proof. The age of criminal responsibility is not a developmental finding. It is a political position. The position is dressed as neuroscience. The dressing is the concealment.</p>
+<h2>Piece #2588: The Cortex</h2>
+<p>The prefrontal cortex. The last region of the brain to mature. The region most associated with executive function: impulse control, future orientation, risk assessment, planning, abstract moral reasoning. The capacities the law calls <em>mens rea</em>.</p>
+<p>Giedd et al. (1999): longitudinal MRI study. Gray matter volume peaks at different ages in different regions. Prefrontal cortex: latest to peak, latest to thin, latest to complete myelination. The process is not complete until approximately age 25.</p>
+<p>Thomas is ten. Thomas&#x27;s prefrontal cortex is approximately 40% of the way through its maturational trajectory. Thomas can form plans. Thomas can imagine consequences. Thomas can feel guilt. Thomas cannot do these things the way a 25-year-old can. Thomas&#x27;s brain is under construction. The construction site is open for business. The business is criminal prosecution.</p>
+<p>The law does not wait for the cortex. The law sets a line. The line is at ten. The cortex is at 40%. The law says: 40% is enough. The law does not say 40%. The law does not reference percentages or trajectories or myelination schedules. The law says: ten. Ten is a number. The number is the line. The line is the capacity.</p>
+<p>The cortex does not know about the line. The cortex does not know it is 40% complete. The cortex is building itself. The law is using it.</p>
+<h2>Piece #2589: The Abolition</h2>
+<p><em>Doli incapax.</em> Latin: incapable of wrong. The common law presumption that a child between seven and fourteen lacks the capacity to form criminal intent unless the prosecution proves otherwise.</p>
+<p>The presumption was a gradient. Not a line but a zone. Not binary but probabilistic. The prosecution had to show, for each child, that this child understood the wrongfulness of this act. The assessment was individual. The capacity was evaluated, not assumed.</p>
+<p>In 1998, England abolished the presumption. The Crime and Disorder Act, Section 34: &quot;The rebuttable presumption of criminal law that a child aged 10 or over is incapable of committing an offence is hereby abolished.&quot;</p>
+<p>One sentence. The gradient became a line. The zone became a boundary. The individual assessment became a birthday check. The question shifted from &quot;did this child understand?&quot; to &quot;is this child ten?&quot;</p>
+<p>The abolition was not based on developmental evidence that ten-year-olds have the capacity the presumption denied them. The abolition was based on the political demand that ten-year-olds face the consequences the presumption protected them from. The evidence did not change. The politics changed.</p>
+<p>Thomas reads Section 34. Twenty-two words. Twenty-two words that converted a developmental question into an administrative one. The question &quot;can this child form intent?&quot; was replaced by the question &quot;how old is this child?&quot; The second question is easier to answer. The second question requires no expert testimony, no psychological evaluation, no assessment of the individual child&#x27;s cognitive development. The second question requires a birth certificate.</p>
+<p>The birth certificate is the capacity now.</p>
+<h2>Piece #2590: The Gradient</h2>
+<p>Steinberg and Scott, 2003. The argument: &quot;Less Guilty by Reason of Adolescence.&quot;</p>
+<p>The argument is not that adolescents should bear no responsibility. The argument is that the developmental gradient — reduced impulse control, heightened peer susceptibility, underdeveloped future orientation, ongoing neural maturation — should inform the degree of responsibility, not be ignored by a birthday.</p>
+<p>The legal system heard the argument. The Supreme Court heard the argument. <em>Roper v. Simmons</em> (2005) abolished the juvenile death penalty, citing developmental evidence. <em>Graham v. Florida</em> (2010) abolished life without parole for non-homicide juvenile offenses. <em>Miller v. Alabama</em> (2012) abolished mandatory life without parole for juveniles.</p>
+<p>The Supreme Court acknowledged the gradient. The Supreme Court used the gradient to limit punishment at the top. The Supreme Court did not use the gradient to question the line at the bottom. The line at the bottom — the age of criminal responsibility — remains. The birthday still performs the capacity. The gradient is acknowledged above the line and ignored below it.</p>
+<p>Thomas thinks about what it means to acknowledge that a seventeen-year-old&#x27;s brain is immature enough to prohibit execution but maintain that a ten-year-old&#x27;s brain is mature enough to permit prosecution. The same developmental evidence. The same gradient. Applied in one direction. Ignored in the other.</p>
+<p>The gradient is the truth. The line is the fiction. The system needs the fiction. The system operates on the fiction. The fiction is the birthday. The birthday is today.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-biodegradable.html">&larr; Fiction The Biodegradable</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-bite-mark.html">Fiction The Bite Mark &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

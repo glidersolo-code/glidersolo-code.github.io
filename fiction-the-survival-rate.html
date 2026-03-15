@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Survival Rate &mdash; The Loop</title>
+    <meta name="description" content="Thomas learns about lead-time bias and understands something he did not know he did not know. A man develops lung cancer. Without screening, symptoms...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-survival-rate.html">
+    <meta property="og:title" content="Fiction The Survival Rate">
+    <meta property="og:description" content="Thomas learns about lead-time bias and understands something he did not know he did not know. A man develops lung cancer. Without screening, symptoms...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-survival-rate.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Survival Rate">
+    <meta name="twitter:description" content="Thomas learns about lead-time bias and understands something he did not know he did not know. A man develops lung cancer. Without screening, symptoms...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Survival Rate",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-survival-rate.html",
+        "description": "Thomas learns about lead-time bias and understands something he did not know he did not know. A man develops lung cancer. Without screening, symptoms..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Survival Rate</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDLVII: The Survival Rate</h1>
+<h2>Piece #2726: The Clock That Moved</h2>
+<p>Thomas learns about lead-time bias and understands something he did not know he did not know. A man develops lung cancer. Without screening, symptoms appear at age 67. He dies at age 70. His five-year survival: zero. With screening, the same cancer is detected at age 60. He still dies at age 70. His five-year survival: 100%. Thomas reads the NCI&#x27;s own words: &quot;the man does not live even a second longer.&quot; The survival rate went from zero to perfect. The outcome did not change. The starting point changed. The clock moved. The metric measured the clock, not the life. The format — a percentage, clean and final — does not reveal that it has a starting point, or that the starting point is a variable.</p>
+<h2>Piece #2727: The Correlation That Was Zero</h2>
+<p>Welch, Schwartz, and Woloshin examined the twenty most common solid tumors across forty-five years of data. Five-year survival improved for all twenty. Mortality declined for twelve and increased for eight. Thomas reads the correlation between change in survival and change in mortality: Pearson r = 0.00. Zero. Not weak. Not modest. Zero. Then the correlation between change in survival and change in incidence: r = +0.49. The survival rate tracked diagnosis, not death. The metric that looked like it measured treatment measured detection. Thomas wonders how many headlines he has read — &quot;five-year survival rates improving&quot; — and interpreted them as &quot;people are living longer.&quot; The percentage performed the interpretation. The percentage measured something else.</p>
+<h2>Piece #2728: The Will Rogers Phenomenon</h2>
+<p>Thomas learns about stage migration. As imaging technology improves, cancers that were invisible to old scanners become visible to new ones. A patient who would have been Stage I in 1960 — because the metastases were undetectable — is now Stage II. The removal of this patient from Stage I makes Stage I&#x27;s survival rate look better. The addition of this patient to Stage II — where they have better prognosis than the pre-existing Stage II patients — makes Stage II&#x27;s survival rate look better. Both stages improve. No patient lives longer. Alvan Feinstein named this in 1985 after Will Rogers: &quot;When the Okies left Oklahoma and moved to California, they raised the average intelligence level in both states.&quot; Thomas realizes: the survival rate can improve in every stage without improving overall survival. The parts get better. The whole stays the same. The parts are what gets reported.</p>
+<h2>Piece #2729: The Ninety Percent</h2>
+<p>Thomas hears: &quot;The five-year survival rate for breast cancer is ninety percent.&quot; He feels reassured. Then he reads the stage-specific data. Localized: 99%. Regional: 86%. Distant: 29%. The ninety percent is a weighted average dominated by the localized cases, which make up 64% of diagnoses. A patient with Stage IV breast cancer hearing &quot;ninety percent&quot; is hearing a number that belongs to a different disease. The format — a single percentage — dissolves the stages into one residue. The dissolution is performed by the average. The average is performed by the format. The format is the percentage. The percentage has no subscript for stage, no asterisk for distribution. The ninety percent is a room with many doors, each opening into a different reality. The patient enters one door. The percentage describes the room.</p>
+<h2>Piece #2730: The Line That Cancer Does Not Know About</h2>
+<p>The five-year mark was introduced in the 1930s, when surviving cancer for five years was exceptional. For some cancers, the line is medically meaningful — the disease is unlikely to return after five years. For estrogen receptor-positive breast cancer, it is not. Pan and colleagues found in 2017 that approximately half of recurrences happen after year five. The risk persists at one percent per year for at least twenty years. Recurrences have been documented at thirty-two years. The format creates a binary: survived, didn&#x27;t survive. The cancer is continuous. The binary imposes a finish line on a process that has no finish. Thomas thinks about the patient who crosses the five-year mark and exhales. The exhale is real. The finish line is not. The format created the relief. The cancer does not know about the format.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-surrogate.html">&larr; Fiction The Surrogate</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-survivorship-bias.html">Fiction The Survivorship Bias &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

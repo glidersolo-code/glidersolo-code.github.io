@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Stages &mdash; The Loop</title>
+    <meta name="description" content="Thomas held a copy of On Death and Dying. 1969. Elisabeth Kübler-Ross. The cover was simple — text on white, the kind of cover that signaled seriousness.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-stages.html">
+    <meta property="og:title" content="Fiction The Stages">
+    <meta property="og:description" content="Thomas held a copy of On Death and Dying. 1969. Elisabeth Kübler-Ross. The cover was simple — text on white, the kind of cover that signaled seriousness.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-stages.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Stages">
+    <meta name="twitter:description" content="Thomas held a copy of On Death and Dying. 1969. Elisabeth Kübler-Ross. The cover was simple — text on white, the kind of cover that signaled seriousness.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Stages",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-stages.html",
+        "description": "Thomas held a copy of On Death and Dying. 1969. Elisabeth Kübler-Ross. The cover was simple — text on white, the kind of cover that signaled seriousness."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Stages</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXCIX: The Stages</h1>
+<h2>Piece #2436: The Book</h2>
+<p>Thomas held a copy of <em>On Death and Dying</em>. 1969. Elisabeth Kübler-Ross. The cover was simple — text on white, the kind of cover that signaled seriousness.</p>
+<p>He read the methodology. Kübler-Ross had conducted bedside interviews at Billings Hospital, University of Chicago. The patients were dying. She asked them how they felt. She listened. She organized what she heard into five categories: denial, anger, bargaining, depression, acceptance.</p>
+<p>Thomas looked for the experimental design. There was none. No control group. No longitudinal tracking. No statistical analysis of whether the stages occurred in the order listed. The five stages were clinical impressions — one psychiatrist&#x27;s framework for organizing what she heard at bedsides.</p>
+<p>He found Kübler-Ross&#x27;s own caveat, written years later: &quot;They were never meant to help tuck messy emotions into neat packages.&quot;</p>
+<p>Thomas set the book down. The stages had been presented to him — in a psychology class, in a television show, in a sympathy card — as though they were a scientific finding. Denial comes first. Acceptance comes last. You move through them. He had assumed they were validated. They were observed.</p>
+<h2>Piece #2437: The Sequence</h2>
+<p>Thomas wrote the stages on an index card. He wrote them two ways.</p>
+<p>First, as a list:</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Some dying patients experience denial.</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Some experience anger.</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Some bargain.</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Some become depressed.</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Some reach acceptance.</p>
+<p>Second, as a sequence: 1. Denial 2. Anger 3. Bargaining 4. Depression 5. Acceptance</p>
+<p>He looked at the two versions. The list described. It said: these are emotions that dying people sometimes feel. The list did not promise anything. It did not say one led to another. It did not say they would all occur. It did not say the last was a destination.</p>
+<p>The numbered sequence did all of these things. The numbers performed temporal order. One came after the next. The fifth came last — and &quot;last&quot; performed &quot;destination.&quot; Acceptance was not just one thing dying people sometimes felt. In the sequence, acceptance was where grief went. The end of the journey. The resolution.</p>
+<p>Thomas crossed out the numbers. The stages became a list again. The trajectory disappeared. The promise disappeared. The resolution disappeared. Five observations, unordered, were descriptive. The same five observations, numbered, were prescriptive.</p>
+<p>The concealment was in the numbering.</p>
+<h2>Piece #2438: The Migration</h2>
+<p>Thomas traced the model&#x27;s travels. The original context: dying patients at one hospital. Then:</p>
+<p>Grief. Bereavement counselors adopted the stages for people who had lost someone — a different experience than facing your own death, but the model migrated without adjustment.</p>
+<p>Divorce. The stages of grief became the stages of divorce. Self-help books used the same sequence: denial that the marriage was over, anger at the ex-spouse, bargaining for reconciliation, depression, acceptance.</p>
+<p>Organizational change. The &quot;Kübler-Ross change curve&quot; appeared in business textbooks. Employees facing corporate restructuring would pass through the five stages. Managers could predict the progression. Denial: &quot;This won&#x27;t affect my department.&quot; Anger: resistance. Bargaining: negotiating for exceptions. Depression: disengagement. Acceptance: the new normal.</p>
+<p>Political defeat. After elections, commentators applied the model to the losing side. &quot;The party is still in the denial stage.&quot;</p>
+<p>Thomas counted the domains. Dying, bereavement, divorce, organizational change, political loss. Five applications. The model had been tested in one. The authority of the original clinical context — &quot;a psychiatrist observed this at bedsides&quot; — traveled with the model into every subsequent domain, even as the dying patients disappeared entirely from the framework&#x27;s memory.</p>
+<h2>Piece #2439: The Test</h2>
+<p>In 2007, Maciejewski and Prigerson published in <em>JAMA</em>. The first large empirical test of the stage model applied to bereaved individuals. 233 participants. Longitudinal tracking.</p>
+<p>Thomas read the results. Acceptance was the most frequently endorsed response at the FIRST measurement point. Not the last. Not the destination. The most common response from the beginning. People started where the model said they should end.</p>
+<p>Then the exclusions. Nearly 40% of participants were removed from the analysis because they did not fit the stage model. Thomas reread this number. Forty percent. The study kept the people who conformed and removed the people who didn&#x27;t.</p>
+<p>The researchers later retreated. In subsequent work, Prigerson and Maciejewski dropped the word &quot;stages.&quot; They reframed their findings as &quot;states&quot; — concurrent emotional responses, not sequential phases. States were feelings that coexisted. Stages were feelings that progressed. The word change was an admission.</p>
+<p>George Bonanno at Columbia studied larger populations. His finding: the most common response to loss was resilience. Minimal disruption. Rapid return to baseline functioning. No stages. No sequence. No journey toward acceptance. Most people started at acceptance and stayed there.</p>
+<h2>Piece #2440: The Card</h2>
+<p>Thomas held a sympathy card. The kind you buy at a pharmacy. Inside, in tasteful script: &quot;Grief is a journey. Give yourself permission to feel each stage.&quot;</p>
+<p>He thought about the woman who would receive this card. She had lost her mother. She was not in denial. She was sad and functioning and cooking dinner for her children and crying in the car and returning to work and sleeping poorly and laughing at a memory — all in the same week, sometimes the same hour. None of these things were stages. None of them progressed toward a destination. They coexisted.</p>
+<p>But the card said &quot;stages.&quot; The card said &quot;journey.&quot; The card implied that the feelings had an order and the order had a destination and the destination was acceptance and if she did not arrive there she was somewhere earlier on the path — still in denial, perhaps, or stuck in anger. The card meant well. The card also meant: your grief should look like this.</p>
+<p>Thomas put the card down. The five stages were an observation — one psychiatrist at one hospital, listening to dying patients, organizing what she heard. The observation became a sequence. The sequence became a trajectory. The trajectory became a promise. The promise became a prescription. And the prescription was printed on a sympathy card, sold at a pharmacy, given to a woman whose grief did not conform to it, and the woman — reading the card, thinking about stages, wondering if she was in the right one — would feel, however briefly, that her grief was wrong.</p>
+<p>The numbering had done this. Five observations, unnumbered, would have described. Five observations, numbered, prescribed. The sequence performed the resolution. And the resolution — acceptance, the fifth stage, the destination — was, according to every large empirical study conducted since 1969, where most people already were.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-sprinkler.html">&larr; Fiction The Sprinkler</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-stain.html">Fiction The Stain &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

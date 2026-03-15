@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Proof &mdash; The Loop</title>
+    <meta name="description" content="The test, if it happened, was this: spirit was poured over gunpowder. A flame was touched to the mixture. If the gunpowder burned, the spirit was proof —...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-proof.html">
+    <meta property="og:title" content="Fiction The Proof">
+    <meta property="og:description" content="The test, if it happened, was this: spirit was poured over gunpowder. A flame was touched to the mixture. If the gunpowder burned, the spirit was proof —...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-proof.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Proof">
+    <meta name="twitter:description" content="The test, if it happened, was this: spirit was poured over gunpowder. A flame was touched to the mixture. If the gunpowder burned, the spirit was proof —...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Proof",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-proof.html",
+        "description": "The test, if it happened, was this: spirit was poured over gunpowder. A flame was touched to the mixture. If the gunpowder burned, the spirit was proof —..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Proof</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXXVIII: The Proof</h1>
+<h2>Piece #1381: The Gunpowder</h2>
+<p>The test, if it happened, was this: spirit was poured over gunpowder. A flame was touched to the mixture. If the gunpowder burned, the spirit was proof — strong enough to sustain ignition despite the water in it. If the gunpowder fizzled, the spirit was under proof — too much water, dissolving the potassium nitrate, killing the reaction. The threshold between burning and not burning was the threshold between two tax rates. The flame was a fiscal instrument.</p>
+<p>The test may be apocryphal. Matt Pietrek, searching original Royal Navy documents from the 1700s and 1800s, found no primary source describing the gunpowder test aboard a ship. Clarke&#x27;s hydrometer was in use by the 1730s. But the story persists because it is satisfying — a physical demonstration, fire itself, declaring whether a liquid is strong enough. The word &quot;proof&quot; carries the resonance of that fire regardless of whether the fire was ever lit. The word sounds like certainty. The word sounds like evidence.</p>
+<p>Thomas&#x27;s diagnoses carry the same resonance. The word &quot;clinical&quot; sounds like proof — a white coat, an instrument, a result. The assessment was a questionnaire. The diagnosis was a threshold on a scale. But the word sounds like a test was passed, and the word is what remains.</p>
+<h2>Piece #1382: The Hydrometer</h2>
+<p>Bartholomew Sikes was a British excise officer. He entered a government competition in 1802 — nineteen submissions, all attempting to improve on Clarke&#x27;s hydrometer for measuring the strength of spirits. He won. He died in 1803, before seeing his instrument legislated. The Hydrometer Act of 1816 made his design the standard of the British Empire. The definition of proof spirit that accompanied it was precise: the concentration at which a specific volume has the weight of thirteen twenty-thirds of the same volume of distilled water at 51 degrees Fahrenheit. This works out to approximately 57.15 percent alcohol by volume.</p>
+<p>Fifty-seven point one five. Not fifty. Not sixty. Not a round number that might suggest arbitrary choice. A number emerging from a ratio of weights, which emerged from the physics of floatation, which emerged from the decision to define strength by density rather than by taste or by fire. The precision of the number — four significant figures — performs objectivity. It implies that nature dictated 57.15 the way nature dictated the boiling point of water. Nature dictated nothing. A committee chose a ratio. A hydrometer measured it. A parliament legislated it.</p>
+<p>Thomas&#x27;s diagnostic thresholds — a PHQ-9 of 10 for moderate depression, a GAD-7 of 10 for moderate anxiety — carry the same architecture. Precise numbers performing the authority of discovery rather than the contingency of decision. The threshold was chosen. The number makes it look like it was found.</p>
+<h2>Piece #1383: The Conversion</h2>
+<p>The same bottle of whisky, forty percent alcohol by volume, wears different numbers in different jurisdictions. In the United States: 80 proof. In Britain before 1980: approximately 70 degrees proof. In France: 40°GL. In the European Union after 1980: 40% vol. Four numbers for one liquid. The same ethanol molecules, the same water molecules, the same proportion — and the label changes when you cross a border.</p>
+<p>The conversions are not intuitive. British proof divides by 0.5715 — or multiplies, depending on direction. American proof multiplies by two. Gay-Lussac&#x27;s centesimal system, introduced in France in 1824, is simply the percentage itself, requiring no conversion at all. The systems do not translate by round factors. Seventy degrees British proof is not seventy percent or seventy halves. It is seventy hundredths of 57.15, which is 40.005. The decimal precision masks the fact that the consumer would have to know three things to decode the label: which country&#x27;s proof system, the reference concentration for that system, and the arithmetic to convert. Most consumers know none.</p>
+<p>Thomas has been assessed by three different scales in three different offices. The scores do not translate by round factors. A PHQ-9 of 14 is not the same severity as a BDI-II of 14. The numbers share a name — &quot;moderate&quot; — but mean different things in different systems, calibrated against different populations, with different threshold decisions embedded. The liquid is the same. The number depends on who measures it and where.</p>
+<h2>Piece #1384: The Gallon</h2>
+<p>The unit of federal excise tax on distilled spirits in the United States is the proof gallon. One proof gallon equals one liquid gallon of spirits at 100 proof — fifty percent alcohol by volume. A gallon of 80-proof whisky contains 0.8 proof gallons. A gallon of 151-proof rum contains 1.51 proof gallons. The tax, currently $13.50 per proof gallon at the standard rate, multiplies accordingly.</p>
+<p>The proof gallon is an abstraction. No one pours a proof gallon. No one drinks a proof gallon. It is a unit of revenue extraction — a way to ensure that a gallon of strong liquor pays more tax than a gallon of weak liquor without requiring different tax schedules for different products. The number on the bottle determines the tax on the bottle. The proof system was designed to make this calculation possible. The consumer-facing number — &quot;80 proof&quot; printed large on the label — is a tax-calculation input presented as a product attribute.</p>
+<p>Thomas&#x27;s billing codes work the same way. The CPT code for a 60-minute psychotherapy session — 90837 — determines the reimbursement. The code was designed to make payment calculation possible. The clinical encounter is fitted into a unit of revenue extraction: the billable hour, the diagnostic category, the procedure code. The treatment is what happens in the room. The number is what happens in the system.</p>
+<h2>Piece #1385: The Persistence</h2>
+<p>Britain abandoned proof in 1980. EU Directive 76/766/EEC harmonized the measurement of alcoholic strength across member states in percentage by volume. The Sikes hydrometer, standard for 164 years, was retired. The word &quot;proof&quot; disappeared from British labels. The percentage remained, stripped of its doubling, its fractional reference concentration, its conversion tables. The number on the bottle became what it measured: the fraction of the volume that is ethanol. Nothing more.</p>
+<p>The United States kept proof. The percentage is printed on every American bottle — &quot;40% alc/vol,&quot; usually in smaller type beneath the proof number. The proof number carries no additional information. It is the percentage, multiplied by two, printed larger. The consumer sees 90 PROOF and parses intensity. The consumer does not see 45% and divide. The bigger number is the one that registers. The word &quot;proof&quot; is the one that sounds authoritative. The system persists not because it communicates anything the percentage doesn&#x27;t, but because the infrastructure — federal tax code, TTB regulations, label templates, marketing convention, consumer expectation — has crystallized around it. To remove proof from American labels would require changing the law, the regulations, the expectations, and the feeling that &quot;80 proof&quot; means something that &quot;40%&quot; does not.</p>
+<p>One hundred and eighty-eight Parts. Thomas&#x27;s clinical labels persist the same way. The diagnostic codes, the severity categories, the treatment protocols — they carry no information that the direct description of his experience doesn&#x27;t. But the infrastructure has crystallized. The number is bigger than the thing it measures. And the word sounds like proof.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-projection.html">&larr; Fiction The Projection</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-prophecy.html">Fiction The Prophecy &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

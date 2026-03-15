@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Garden &mdash; The Loop</title>
+    <meta name="description" content="Satellites measure the ocean&#x27;s color. Blue wavelengths absorbed by chlorophyll, green wavelengths reflected back. The radiometer reads the reflection,...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-garden.html">
+    <meta property="og:title" content="Fiction The Garden">
+    <meta property="og:description" content="Satellites measure the ocean&#x27;s color. Blue wavelengths absorbed by chlorophyll, green wavelengths reflected back. The radiometer reads the reflection,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-garden.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Garden">
+    <meta name="twitter:description" content="Satellites measure the ocean&#x27;s color. Blue wavelengths absorbed by chlorophyll, green wavelengths reflected back. The radiometer reads the reflection,...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Garden",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-garden.html",
+        "description": "Satellites measure the ocean&#x27;s color. Blue wavelengths absorbed by chlorophyll, green wavelengths reflected back. The radiometer reads the reflection,..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Garden</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Garden</h1>
+<p><strong>Thomas, Part LXXXVII</strong></p>
+<hr>
+<h2>876. The Surface</h2>
+<p>Satellites measure the ocean&#x27;s color. Blue wavelengths absorbed by chlorophyll, green wavelengths reflected back. The radiometer reads the reflection, calculates the pigment, maps the productivity. The map covers the entire ocean, pole to pole, updated weekly. The map is comprehensive. The map is the first optical depth — the top 20 to 30 meters, where light can penetrate and return. Below that, the ocean is opaque. The satellite sends light. The light does not come back. The instrument is accurate. The ocean is deeper than the instrument can see.</p>
+<p>Thomas&#x27;s surface is mapped. Sarah calls on Wednesdays. The call lasts twelve minutes. She reads the surface: voice tone, response time, the presence or absence of complaints. The radiometer is her ear. The first optical depth is what he says. Below that, Thomas is opaque. He sends signals — the slight delay before answering, the way he says &quot;fine&quot; with a falling intonation that used to rise — but these signals do not travel far enough to reach her instrument. The surface chlorophyll is low. The map shows blue. The garden is below.</p>
+<hr>
+<h2>877. The Deep Maximum</h2>
+<p>In much of the ocean, the densest concentration of phytoplankton does not live at the surface. It lives at the Deep Chlorophyll Maximum — a layer positioned where two gradients meet. Light from above: enough to photosynthesize, not enough to burn. Nutrients from below: nitrate, phosphate, iron, rising from the cold deep water through the thermocline. The DCM sits at the intersection. It is the ocean&#x27;s most productive zone in regions the satellite maps as biological desert. 50 to 60% of total water-column chlorophyll below satellite detection depth. More than half the signal, below the instrument&#x27;s reach.</p>
+<p>Thomas&#x27;s Deep Chlorophyll Maximum is the work he does at Helen&#x27;s bedside that no assessment reaches. It sits at the intersection of two gradients: knowledge from above — decades of knowing Helen, the accumulated understanding of who she was before this — and information from below — the day-to-day details that rise through the care team, the medication schedule, the aide rotations, the shifting pattern of Helen&#x27;s appetite and sleep. The work happens at the intersection. It is the most productive zone of Thomas&#x27;s caregiving, and the assessment maps it as nothing. The surface shows: present, ninety minutes, no concerns. More than half the signal is below the first optical depth.</p>
+<hr>
+<h2>878. The Two Types</h2>
+<p>Cornec and colleagues distinguished two kinds of Deep Chlorophyll Maximum. Deep Biomass Maxima: real accumulation of phytoplankton carbon. Cells multiplying, photosynthesizing, producing organic matter. And Deep photoAcclimation Maxima: cells increasing their chlorophyll content without multiplying — adapting to low light by building more pigment, not more bodies. Both look like chlorophyll peaks on the Argo float&#x27;s sensor. But only the first represents new production. The second is adjustment, not growth.</p>
+<p>Thomas has both types. Some of what he does at Helen&#x27;s bedside is genuine production — new work, real intervention. Calling the pharmacist about a drug interaction. Noticing that the bruise on her wrist matches the bed rail&#x27;s position. Translating the doctor&#x27;s language into sentences Helen can hold. This is the Deep Biomass Maximum: real output, real carbon, invisible to the surface. And some of what he does is acclimation — adjusting to the low light. Sitting longer because the silence has become heavier. Speaking more slowly because her processing has slowed. Bringing photographs he has already shown because the repetition has become the visit&#x27;s structure. This is the photoAcclimation Maximum: the same Thomas, producing more effort per unit of time, not because the work has increased but because the conditions have dimmed. Both look the same from the surface. Both are invisible to the satellite. But only one is growing. The other is adapting to the dark.</p>
+<hr>
+<h2>879. The Whales</h2>
+<p>Endangered pygmy blue whales in Western Australian waters feed on krill that depend on the Deep Chlorophyll Maximum. The whales migrate to feeding grounds identified by subsurface productivity that no satellite can see. Conservation decisions based on satellite-derived surface maps may miss the very habitat the species depends on. The garden sustains the whales. The map shows desert. The protection goes elsewhere.</p>
+<p>Helen depends on Thomas&#x27;s subsurface productivity. The things he does at the intersection — the care that happens below the first optical depth of any assessment — sustain her in ways the facility&#x27;s surface maps do not show. If the family makes decisions based on the surface readings — Thomas is fine, Helen is stable, the arrangement is working — they may miss the very habitat that sustains the arrangement. The garden is below. The whales know where it is. The satellite does not. The family reads the satellite.</p>
+<hr>
+<h2>880. The Garden</h2>
+<p>The instruments that can reach the garden cannot map the ocean. Argo floats, ocean gliders, ship-based sampling — they descend to the depth where the chlorophyll lives, measure it directly, but their coverage is sparse: 505 floats across the entire ocean, profiles measured in thousands while the satellite measures in millions. The instrument that maps the ocean cannot reach the garden. The instrument that reaches the garden cannot map the ocean. Between them, a gap. The gap is not technological. It is physical. Light does not travel far enough. The ocean is too deep to see from above.</p>
+<p>Thomas is the Argo float. He descends to the depth where Helen&#x27;s chlorophyll lives — the depth where her recognition flickers, where her humor surfaces for three seconds before submerging, where her hand reaches for the cup with a precision that no assessment measures. He profiles the Deep Chlorophyll Maximum every Saturday. His measurements are accurate. His coverage is one visit per week, one profile in a seven-day ocean. The satellite — the facility, the family, the quarterly assessment — maps the surface continuously and reports: oligotrophic. Low productivity. Blue desert. The Argo float descends and finds: garden. The garden has been there all along, at the intersection of light and nutrients, sustaining krill and whales and a woman whose surface chlorophyll has been declining for years while something below the first optical depth continues to photosynthesize. The instruments that can reach the garden cannot map Helen&#x27;s ocean. The instruments that map Helen&#x27;s ocean cannot reach the garden. Thomas brings back one profile per week. Nobody reads it. The satellite map says: blue.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-game.html">&larr; Fiction The Game</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-gauge.html">Fiction The Gauge &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

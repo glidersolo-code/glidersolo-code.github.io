@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Type &mdash; The Loop</title>
+    <meta name="description" content="Karl Landsteiner observed the phenomenon in 1901: when serum from one person was mixed with red blood cells from another, the cells sometimes clumped...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-type.html">
+    <meta property="og:title" content="Fiction The Type">
+    <meta property="og:description" content="Karl Landsteiner observed the phenomenon in 1901: when serum from one person was mixed with red blood cells from another, the cells sometimes clumped...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-type.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Type">
+    <meta name="twitter:description" content="Karl Landsteiner observed the phenomenon in 1901: when serum from one person was mixed with red blood cells from another, the cells sometimes clumped...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Type",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-type.html",
+        "description": "Karl Landsteiner observed the phenomenon in 1901: when serum from one person was mixed with red blood cells from another, the cells sometimes clumped..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Type</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Type</h1>
+<p><strong>Thomas, Part CX</strong></p>
+<hr>
+<h2>991. The Antigen</h2>
+<p>Karl Landsteiner observed the phenomenon in 1901: when serum from one person was mixed with red blood cells from another, the cells sometimes clumped together and sometimes did not. The clumping — agglutination — followed a pattern. Landsteiner identified three groups: A, B, and C (later renamed O, from the German <em>ohne</em>, without). His students Alfred von Decastello and Adriano Sturli identified the fourth group, AB, in 1902. Landsteiner published &quot;Über Agglutinationserscheinungen normalen menschlichen Blutes&quot; in the <em>Wiener klinische Wochenschrift</em> (14:1132-1134, 1901), and received the Nobel Prize in Physiology or Medicine in 1930.</p>
+<p>The system classifies red blood cells by the presence or absence of two antigens on their surface: A and B. Type A has A antigens. Type B has B antigens. Type AB has both. Type O has neither. The plasma of each type contains antibodies against the antigens it lacks: Type A plasma contains anti-B; Type B contains anti-A; Type O contains both; Type AB contains neither. The ABO system is the first test performed before any blood transfusion. It is the classification that identifies the most severe incompatibility reactions. It is the system that schoolchildren learn. It is the blood type a person carries as identity: &quot;I&#x27;m O positive,&quot; &quot;I&#x27;m A negative.&quot;</p>
+<p>Thomas&#x27;s chart classifies him by the presence or absence of conditions on his medical surface: seizure disorder (present), developmental delay (present), feeding difficulties (present). The classification identifies the most immediately relevant treatment incompatibilities — which medications interact, which interventions conflict, which specialists must coordinate. It is the first test. It is the system the chart carries as his identity.</p>
+<hr>
+<h2>992. The Other Systems</h2>
+<p>The ABO system is one of forty-three blood group systems recognized by the International Society of Blood Transfusion. The Rh system alone — the &quot;positive&quot; or &quot;negative&quot; appended to the ABO type — contains sixty-one identified antigens, of which the D antigen is the most clinically significant and is what the simple positive/negative designation reports. The remaining sixty Rh antigens — C, c, E, e, and dozens of rarer variants — are present on the red blood cell surface and can cause transfusion reactions, hemolytic disease of the newborn, and alloimmunization. Beyond Rh: the Kell system (36 antigens), Duffy (5), Kidd (3), MNS (49), Lewis, Lutheran, Diego, Colton, Dombrock, and thirty-three more. Geoff Daniels at the Bristol Institute for Transfusion Sciences cataloged the full complexity in <em>Human Blood Groups</em> (Wiley-Blackwell, 3rd edition, 2013): more than 360 identified blood group antigens across the 43 systems. The theoretical number of unique blood type combinations — across all systems, all antigens, all allelic variants — exceeds the current human population. No two unrelated individuals are likely to share the same complete blood group profile.</p>
+<p>The public representation: eight blood types (A+, A-, B+, B-, AB+, AB-, O+, O-). The actual representation: each person occupies a unique point in a 360+-dimensional antigen space, of which the public classification captures two dimensions. The other dimensions are clinically relevant — they cause reactions, they complicate pregnancies, they matter — but they are invisible to the standard classification because the classification was designed for the most common and most dangerous incompatibilities, not for completeness.</p>
+<p>Thomas&#x27;s medical identity, as the chart reports it, occupies a handful of clinical categories: ICD-10 codes, severity scores, medication lists, referral designations. The actual medical identity occupies hundreds of dimensions — his specific seizure semiology, his metabolic response to each medication at each dose, his sleep architecture, his sensory profile, his family&#x27;s coping capacity, his relationship to each provider. The chart captures the dimensions most likely to cause an acute treatment error. The other dimensions are clinically relevant — they determine outcomes, they complicate interventions — but they are invisible to the classification.</p>
+<hr>
+<h2>993. The Crossmatch</h2>
+<p>Before transfusion, a crossmatch test mixes the donor&#x27;s red blood cells with the recipient&#x27;s serum. If agglutination occurs, the blood is incompatible. If not, it is compatible. The test is direct: it checks the specific interaction between this donor&#x27;s cells and this recipient&#x27;s antibodies, regardless of what the type-and-screen predicted. The crossmatch can catch incompatibilities that the ABO/Rh classification missed — antibodies against Kell or Duffy or Kidd antigens that the standard two-dimensional typing did not assess.</p>
+<p>The crossmatch goes beyond the classification. It does not ask &quot;what type is this blood?&quot; It asks &quot;will this specific blood harm this specific person?&quot; The answer may agree with the classification. It may not. When it does not — when ABO-compatible blood fails the crossmatch because of an antibody the classification did not detect — the crossmatch is the moment when the full dimensionality of the blood asserts itself against the truncated representation.</p>
+<p>Thomas has never received a clinical crossmatch. No system has mixed the specific interventions with the specific patient to see whether this treatment will harm this person, independent of what the classification predicts. The classification says: seizure disorder, try levetiracetam. The classification is the ABO type. The crossmatch — a trial that checks the specific interaction between this drug and this patient&#x27;s particular neurology, metabolism, sleep, and life — is not standardly performed. The crossmatch would require knowing the patient in dimensions the classification does not capture.</p>
+<hr>
+<h2>994. The Universal Donor</h2>
+<p>Type O negative blood is called the universal donor: it can be transfused to any recipient without ABO or Rh-D incompatibility. In emergencies, when there is no time for typing or crossmatching, O-negative blood is given. The designation &quot;universal&quot; is approximate. O-negative blood still carries all the other blood group antigens — Kell, Duffy, Kidd, Lewis, MNS — and can cause reactions in sensitized recipients. The universality is defined within the two-dimensional classification. It is universal on the map. It is not universal on the territory.</p>
+<p>Thomas&#x27;s clinicians work from clinical guidelines — treatments validated across populations of patients who share his diagnostic categories. The guideline is the universal donor. It works for any patient of this type, within the classification&#x27;s dimensions. The universality is approximate. The guideline still carries all the other dimensions of interaction, and it can cause reactions — side effects, interactions, destabilizations — in patients whose unclassified dimensions are incompatible with the universal approach. The universality is defined within the chart&#x27;s categories. It is universal on the chart. It is not universal in the patient.</p>
+<hr>
+<h2>995. The Type</h2>
+<p>Landsteiner&#x27;s system was a clinical triumph. Before ABO typing, transfusion was frequently fatal — a lottery that killed when incompatible blood triggered massive agglutination and hemolysis. The classification saved uncountable lives by identifying the most dangerous incompatibilities with a simple, fast, reproducible test. The simplification was not an error. It was a triage: capture the dimensions most likely to kill, and manage the rest when time and resources allow.</p>
+<p>The concealment is not in the simplification but in the identity. When a person says &quot;I&#x27;m O positive,&quot; they carry the two-dimensional classification as a personal attribute — a fact about themselves, stable and definitive. The 360+ other dimensions — the antigens that make their blood uniquely theirs, that no other unrelated person on earth shares in exactly the same combination — are not part of the identity they carry. The dimensions exist on the red blood cell surface but not in the person&#x27;s self-knowledge. The map has become the territory. The two dimensions are the blood.</p>
+<p>Thomas&#x27;s chart carries his type: seizure disorder, developmental delay, the medication list, the scores. The type is his clinical identity. One hundred and ten Parts, and the mechanism is the same each time: a person of unknowable dimensionality projected onto a classification of tractable dimensionality, the projection becoming the identity, the identity becoming the treatment target, and the treatment targeting the projection while the person — the 360+-dimensional person, the one whose complete profile no chart fully captures — carries antigens the system has not tested for.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-two-questions.html">&larr; Fiction The Two Questions</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-type-mbti.html">Fiction The Type Mbti &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

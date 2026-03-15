@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Multiplication &mdash; The Loop</title>
+    <meta name="description" content="Thomas wrote the formula on the board.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-multiplication.html">
+    <meta property="og:title" content="Fiction The Multiplication">
+    <meta property="og:description" content="Thomas wrote the formula on the board.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-multiplication.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Multiplication">
+    <meta name="twitter:description" content="Thomas wrote the formula on the board.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Multiplication",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-multiplication.html",
+        "description": "Thomas wrote the formula on the board."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Multiplication</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDLXXXI: The Multiplication</h1>
+<h2>Piece #2846: The Weight</h2>
+<p>Thomas wrote the formula on the board.</p>
+<p>QALY = Years × Utility Weight.</p>
+<p>&quot;The utility weight is a number between zero and one,&quot; Thomas said. &quot;One is perfect health. Zero is dead. The number is generated by showing healthy people a description of a health state and asking them how they value it.&quot;</p>
+<p>&quot;Healthy people.&quot;</p>
+<p>&quot;Healthy people. Not patients. Not people living in the state. People imagining it. The EQ-5D instrument — the most widely used in the UK — surveys general-population samples.&quot;</p>
+<p>Thomas showed the data. Albrecht and Devlieger, 1999. The disability paradox. General populations rate disability states substantially lower than people who actually live in them. The gap is consistent, documented, and unresolved.</p>
+<p>&quot;Sweden built an experience-based value set,&quot; Thomas said. &quot;From patients. People living in the states. The worst state scored 0.34. Zero states scored below zero. The UK&#x27;s population-preference set — healthy people imagining — classifies 34.6% of all states as worse than dead.&quot;</p>
+<p>He paused.</p>
+<p>&quot;Eight hundred and forty thousand English adults live in states the UK instrument classifies as worse than dead. The patients report otherwise. The instrument does not ask them.&quot;</p>
+<hr>
+<h2>Piece #2847: The Product</h2>
+<p>Thomas ran the multiplication.</p>
+<p>&quot;Patient A: disabled, wheelchair user. Utility weight: 0.5. A treatment extends life by five years. Five times 0.5 equals 2.5 QALYs.&quot;</p>
+<p>He wrote it on the board.</p>
+<p>&quot;Patient B: able-bodied. Utility weight: 1.0. Same treatment. Same five years. Five times 1.0 equals 5.0 QALYs.&quot;</p>
+<p>He underlined both numbers.</p>
+<p>&quot;Same treatment. Same cost. Same five years of living. Patient B&#x27;s treatment is twice as cost-effective. At a threshold of £30,000 per QALY, treatment for Patient B may pass while treatment for Patient A does not.&quot;</p>
+<p>&quot;The multiplication made the decision.&quot;</p>
+<p>&quot;No committee voted. No legislation declared some lives worth less. The multiplication did it. And the multiplication will do it again, for every treatment, for every patient whose baseline utility falls below 1.0. Which includes every disabled person, every chronically ill person, and every elderly person whose health state was rated by people who do not share it.&quot;</p>
+<hr>
+<h2>Piece #2848: The Rejection</h2>
+<p>Thomas read from the federal record.</p>
+<p>&quot;August 3, 1992. HHS Secretary Louis Sullivan denies Oregon&#x27;s Section 1115 Medicaid waiver. The Oregon Health Plan had ranked 709 condition-treatment pairs using a QALY-based methodology.&quot;</p>
+<p>The list had produced anomalies. Tooth caps ranked above emergency appendicitis — because appendicitis, when treated, has a high baseline success rate, producing a small marginal QALY gain, while dental restoration produces a larger quality-of-life improvement from a lower baseline.</p>
+<p>&quot;Twenty national disability organizations had publicly urged rejection. Sullivan&#x27;s finding: the plan &#x27;in substantial part values the life of an individual with a disability less than the life of an individual without a disability. This premise is discriminatory and inconsistent with the Americans with Disabilities Act.&#x27;&quot;</p>
+<p>Thomas let the room absorb this.</p>
+<p>&quot;Clinton approved a revised plan in 1993 with twenty-nine contingencies, including the removal of QALY-based quality-of-life adjustments. Oregon restructured its list using clinical committees. In 2024 — thirty-two years later — Oregon passed Senate Bill 1508-A explicitly banning QALYs from the state health plan.&quot;</p>
+<p>&quot;The concept survived its own rejection?&quot;</p>
+<p>&quot;The concept survived everything. The ADA finding. The ACA ban on QALYs in Medicare. The Inflation Reduction Act&#x27;s prohibition in drug price negotiations. The National Council on Disability&#x27;s 2019 report. The House bill. NICE still uses QALYs. ICER still uses QALYs. The multiplication persists because the alternative — explicit ethical deliberation about who gets what — is harder than a formula.&quot;</p>
+<hr>
+<h2>Piece #2849: The Zero</h2>
+<p>Thomas pointed to the anchor.</p>
+<p>&quot;Dead equals zero. This is not an empirical finding. This is a methodological choice. In the Time Trade-Off method, subjects choose between living X years in an impaired state and Y years in perfect health. The point of indifference gives the utility weight. Death anchors the scale.&quot;</p>
+<p>&quot;States below zero—&quot;</p>
+<p>&quot;States below zero are classified as worse than dead. In the UK value set, 34.6% of all EQ-5D health states score below zero. A person living in such a state, if given life-extending treatment, generates negative QALYs. The treatment reduces the aggregate health gain.&quot;</p>
+<p>Thomas let this sit.</p>
+<p>&quot;A negative QALY means that extending the patient&#x27;s life makes society worse off, according to the formula. The patient, who wants to live, generates a negative number. The formula recommends against treatment — not because the treatment doesn&#x27;t work, but because the patient&#x27;s continued existence is, by the formula&#x27;s reckoning, a loss.&quot;</p>
+<p>&quot;But the patient—&quot;</p>
+<p>&quot;The patient was not asked. The general public was asked. The general public, imagining what the state would be like, assigned the negative value. The patient, living in the state, does not agree. Sweden&#x27;s patient-derived value set contained zero negative states. The UK&#x27;s general-population set contains hundreds.&quot;</p>
+<hr>
+<h2>Piece #2850: The Operator</h2>
+<p>Thomas circled the multiplication sign.</p>
+<p>&quot;The ethics is here. Not in the utility weight — though the utility weight is contested. Not in the time — though the linearity of time is assumed without evidence. Here. In the operator.&quot;</p>
+<p>He tapped the ×.</p>
+<p>&quot;The multiplication sign performs as arithmetic. It appears to combine two measured quantities — time and quality — into a product. But the combination IS the ethical judgment. The multiplication decides that 10 years at 0.5 equals 5 years at 1.0. No patient has ever confirmed this. No study has validated it. The assumption is structurally necessary for the formula to function. Without linearity, the multiplication breaks.&quot;</p>
+<p>Thomas stepped back.</p>
+<p>&quot;MSY embeds its policy in the form of the equation — the logistic curve determines where the optimum falls. The QALY embeds its ethics in the operator — the multiplication sign determines whose life is worth extending. In both cases, the mathematical form is the decision. In both cases, the output looks like a measurement.&quot;</p>
+<p>He wrote: <em>The model&#x27;s form is the policy. The operator&#x27;s form is the ethics.</em></p>
+<p>&quot;This is the structure beneath the five levels. Not inside the number. Not between numbers. Not in the dataset, the feedback loop, or the reader. In the model that generates the number. The invisible sixth level: the model itself — its equations, its assumptions, its mathematical form — determines the number&#x27;s value before the number exists. And the number, once generated, performs as if it described the world rather than the equation.&quot;</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-mulch.html">&larr; Fiction The Mulch</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-name.html">Fiction The Name &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

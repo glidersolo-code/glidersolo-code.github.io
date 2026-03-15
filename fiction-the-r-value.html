@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The R Value &mdash; The Loop</title>
+    <meta name="description" content="A technician places a square of fiberglass insulation between two plates. The hot plate on one side, the cold plate on the other. The temperature...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-r-value.html">
+    <meta property="og:title" content="Fiction The R Value">
+    <meta property="og:description" content="A technician places a square of fiberglass insulation between two plates. The hot plate on one side, the cold plate on the other. The temperature...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-r-value.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The R Value">
+    <meta name="twitter:description" content="A technician places a square of fiberglass insulation between two plates. The hot plate on one side, the cold plate on the other. The temperature...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The R Value",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-r-value.html",
+        "description": "A technician places a square of fiberglass insulation between two plates. The hot plate on one side, the cold plate on the other. The temperature..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The R Value</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCV: The Wall</h1>
+<h2>Piece #1466: The Sample</h2>
+<p>A technician places a square of fiberglass insulation between two plates. The hot plate on one side, the cold plate on the other. The temperature difference is 40 degrees. The heat flow meter records how much energy passes through the sample per unit time per unit area. The inverse is the R-value. R-19. The measurement is exact. The measurement describes the sample, not the wall.</p>
+<p>Thomas tested patients the same way — in controlled conditions, in an office, at a specific time, with specific questions. The PHQ-9 measured the patient between two plates: the nine questions on one side, the scoring algorithm on the other. The measurement was exact. It described the patient in that room at that moment. It did not describe the patient in their life — in their kitchen at midnight, in their car at rush hour, in their bed unable to sleep. The instrument measured a sample. The clinician treated a person.</p>
+<p>The technician records R-19 on the data sheet. The marketing team prints R-19 on the bag. The homeowner reads R-19 and believes the wall will perform at R-19. The sample has become the system.</p>
+<h2>Piece #1467: The Bridge</h2>
+<p>Wood conducts heat. A 2x6 stud — the vertical framing member in a wall — has an R-value of approximately R-1.25 per inch, or about R-6.9 across its 5.5-inch depth. The fiberglass between the studs is R-19. The studs are R-6.9. Heat flows through both, but it flows preferentially through the studs because they offer less resistance. This is thermal bridging: the structure that holds the wall up is the structure that lets the heat through.</p>
+<p>Thomas understood structural bridges. The clinical infrastructure that delivered the PHQ-9 — the electronic health record, the billing system, the appointment schedule — was not the assessment itself. But it shaped the assessment. A 15-minute appointment bridge could not support a 45-minute conversation. The infrastructure conducted its own logic through the clinical encounter, and the logic was time: how quickly can this patient be assessed and documented? The structure that held the practice up was the structure that limited what the practice could contain.</p>
+<p>The whole-wall R-value — accounting for studs, headers, plates, and all the wood — drops from the labeled R-19 to approximately R-15 or less. The insulation works. The wall does not equal the insulation. The bridge is always there.</p>
+<h2>Piece #1468: The Drift</h2>
+<p>Polyisocyanurate foam leaves the factory at R-7 per inch. The blowing agent — pentane, trapped in closed cells — provides the high initial performance. Over months and years, the pentane diffuses through the cell walls and is replaced by air. Air insulates less. The R-value drops. This is thermal drift: the slow, irreversible escape of the property the label claimed.</p>
+<p>Thomas saw drift in longitudinal studies. A patient&#x27;s PHQ-9 score at baseline was 18. At three months, 12. At six months, 9. At twelve months, 11. The trajectory was not linear improvement. It was improvement followed by partial regression — a drift back toward a resting state that the intervention had temporarily displaced. The instrument captured each point. The trajectory was not in any single measurement. The trajectory was in the space between them, and no single label could hold it.</p>
+<p>Oak Ridge National Laboratory developed the LTTR methodology to capture the drift — to require manufacturers to report the aged R-value rather than the initial. The label became a prediction rather than a measurement: what the foam would perform at after five years, not what it performed at on the day it was made. The number on the bag described a future state. The foam in the wall described a present one. They were never the same.</p>
+<h2>Piece #1469: The Reciprocal</h2>
+<p>Europe measures thermal performance with U-value: watts per square meter per degree Kelvin. Lower is better. The U-value is the reciprocal of the R-value — they describe the same physics in opposite terms. R-value measures resistance. U-value measures loss. One tells the consumer what the wall keeps out. The other tells the consumer what the wall lets through.</p>
+<p>Thomas thought about reciprocals. The PHQ-9 measured the presence of symptoms — a score of 15 meant many symptoms present. The absence of symptoms was not separately measured. It was inferred from the score: a low score meant few symptoms, which the clinician interpreted as wellness. But wellness is not the reciprocal of illness. A person can have few symptoms on the PHQ-9 and still not be well. The reciprocal relationship assumed by the format — low score equals good, high score equals bad — was an arithmetic convenience, not a clinical truth.</p>
+<p>The consumer reading R-19 thinks: this wall resists heat well. The consumer reading U-0.30 thinks: this wall loses some heat. Same wall. Same physics. Different number, different feeling, different action. The format determines whether the consumer feels protected or exposed.</p>
+<h2>Piece #1470: The Wall</h2>
+<p>The wall is not the insulation. The wall is studs and cavities and sheathing and cladding and air films and fasteners and moisture and wind and time. The R-value on the bag describes one component — the insulation material — tested in conditions the wall will never replicate. The consumer buys R-19 and installs R-19 and believes the wall is R-19. The wall is less. It was always going to be less.</p>
+<p>Thomas understood the gap between the instrument and the patient. The PHQ-9 was the insulation. The patient was the wall. The instrument measured what it was designed to measure, accurately and reproducibly, under controlled conditions. The patient lived in uncontrolled conditions — in a wall full of thermal bridges, air gaps, and structural members that conducted stresses the instrument could not see. The score was real. The patient was more real.</p>
+<p>The number on the bag is the truth about the insulation. It is not the truth about the wall. The gap between the two — between what the label measures and what the consumer builds — is filled with studs, with bridging, with drift, with the difference between a sample and a system. The consumer reads the number and sees a wall. The number sees a sample. The wall is everything the sample is not.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-qwerty.html">&larr; Fiction The Qwerty</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-rail-gauge.html">Fiction The Rail Gauge &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

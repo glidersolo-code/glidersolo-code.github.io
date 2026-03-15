@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The College &mdash; The Loop</title>
+    <meta name="description" content="The word &quot;college&quot; comes from Latin collegium — a body of colleagues who deliberate together. When Alexander Hamilton...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-455-the-college.html">
+    <meta property="og:title" content="The College">
+    <meta property="og:description" content="The word &quot;college&quot; comes from Latin collegium — a body of colleagues who deliberate together. When Alexander Hamilton...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-455-the-college.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The College">
+    <meta name="twitter:description" content="The word &quot;college&quot; comes from Latin collegium — a body of colleagues who deliberate together. When Alexander Hamilton...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The College",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-455-the-college.html",
+        "description": "The word &quot;college&quot; comes from Latin collegium — a body of colleagues who deliberate together. When Alexander Hamilton..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The College</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The College</h1>
+<p>The word &quot;college&quot; comes from Latin <em>collegium</em> — a body of colleagues who deliberate together. When Alexander Hamilton described the Electoral College in Federalist No. 68, he used the word precisely. The electors would be &quot;men most capable of analyzing the qualities adapted to the station and acting under circumstances favorable to deliberation.&quot; They would convene for one purpose, exercise independent judgment, and dissolve. No senator, representative, or officeholder could serve. The body was designed to think.</p>
+<p>The body thought once. In 1789, sixty-nine electors chose George Washington — unanimously, independently, without party organization. By 1796, the Federalists and Democratic-Republicans had organized as parties, Hamilton and Madison providing respective leadership, and electors became proxies. The deliberative body became a counting mechanism. The &quot;college&quot; survived in name while the deliberation disappeared within one contested election cycle. Eight years from ratification to obsolescence.</p>
+<p>The feature that replaced deliberation was never designed. Winner-take-all — the rule that gives all of a state&#x27;s electoral votes to the popular-vote winner in that state — is the system&#x27;s defining characteristic. It determines which states are battlegrounds. It is why a candidate can win the presidency while losing the national popular vote. It is nowhere in the Constitution. It was never debated at the Constitutional Convention. It does not appear in the Federalist Papers. In 1789, only three states used it, and all three repealed it by 1800. Then Massachusetts, alarmed by rising support for Jefferson, reinstated it — delivering all its electoral votes to Adams. Virginia responded in kind. Each state&#x27;s dominant party adopted the same strategy to maximize its electoral weight. Missouri Senator Thomas Hart Benton called it in 1824: &quot;the offspring of policy, not of any disposition to give fair play to the will of the people.&quot; By 1836, all but one state had adopted winner-take-all. By 1880, all had. The system&#x27;s most consequential mechanism was not a design. It was an arms race.</p>
+<p>The number 538 is three compromises from three centuries stacked into a sum. The 435 House members were frozen by the Reapportionment Act of 1929 — Congress simply stopped growing and the number it happened to be became permanent. The 100 senators reflect the Connecticut Compromise of 1787: two per state regardless of population, the price small states demanded for ratification. The 3 for the District of Columbia came with the Twenty-third Amendment of 1961, a civil-rights-era correction for residents who could not vote for president. No one designed 538. It accreted.</p>
+<p>The mathematics perform a kind of equality that the arithmetic contradicts. Wyoming — population 577,000 — has three electors: one per 192,000 residents. California — population 39 million — has 54: one per 722,000. A Wyoming voter carries 3.7 times the electoral weight of a California voter. The Senate component — two electors per state regardless of population — generates this disparity. The structure says &quot;each state gets its share.&quot; The share is unequal by a factor of nearly four.</p>
+<p>Five times, the system has produced a president who lost the popular vote: 1824, 1876, 1888, 2000, 2016. Two of the five occurred in the twenty-first century. Over 700 constitutional amendments have been proposed to reform or abolish the system — more than for any other provision. The Bayh-Celler Amendment of 1969, which would have replaced it with a direct popular vote, passed the House 338 to 70. Southern and small-state senators filibustered it to death. In 2020, the Supreme Court unanimously ruled in <em>Chiafalo v. Washington</em> that states may legally bind electors to their pledged candidate — completing the transformation Hamilton could not have imagined. The &quot;men most capable of analyzing&quot; are now prohibited from analyzing.</p>
+<p>The name holds. &quot;The Electoral College voted.&quot; &quot;The Electoral College convened.&quot; Every four years, the phrase appears in thousands of headlines, thousands of broadcasts. Each utterance performs a coherent, designed institution — a college, a body that deliberates. The word performs the function the institution eliminated 230 years ago. The accretion performs as architecture. The arms race performs as design. The name is the only surviving evidence of what Hamilton intended, and the name is what makes the distance between intention and practice invisible.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-the-cold.html">&larr; The Cold</a><a href="essays.html">&uarr; Essays</a><a href="essay-128-the-colony.html">The Colony &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

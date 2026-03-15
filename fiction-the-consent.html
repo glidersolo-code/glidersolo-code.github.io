@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Consent &mdash; The Loop</title>
+    <meta name="description" content="Thomas read a surgical consent form. Four pages. The first page described the procedure — laparoscopic cholecystectomy. The second listed risks:...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-consent.html">
+    <meta property="og:title" content="Fiction The Consent">
+    <meta property="og:description" content="Thomas read a surgical consent form. Four pages. The first page described the procedure — laparoscopic cholecystectomy. The second listed risks:...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-consent.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Consent">
+    <meta name="twitter:description" content="Thomas read a surgical consent form. Four pages. The first page described the procedure — laparoscopic cholecystectomy. The second listed risks:...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Consent",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-consent.html",
+        "description": "Thomas read a surgical consent form. Four pages. The first page described the procedure — laparoscopic cholecystectomy. The second listed risks:..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Consent</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDV: The Form</h1>
+<h2>Piece #2466: The Document</h2>
+<p>Thomas read a surgical consent form. Four pages. The first page described the procedure — laparoscopic cholecystectomy. The second listed risks: hemorrhage, bile duct injury, bowel perforation, conversion to open surgery, infection, adverse reaction to anesthesia, death. The third described alternatives: conservative management with dietary modification, ERCP with sphincterotomy, observation. The fourth was a signature block.</p>
+<p>Thomas checked the reading level. He ran the text through a Flesch-Kincaid calculator. Grade 14.2. College sophomore level. He checked the average American reading level: eighth grade. The gap was six grade levels.</p>
+<p>He looked for studies. Bottrell et al. (2000): consent forms at academic medical centers averaged grade 12.6. Falagas et al. (2009): patients frequently reported that they signed without reading, that they felt they had no real choice, that the presentation communicated urgency rather than deliberation.</p>
+<p>The form performed comprehension. The comprehension was not performed.</p>
+<h2>Piece #2467: The Timing</h2>
+<p>Thomas looked for when the form was presented. Not when in the legal process — he knew that — but when in the patient&#x27;s experience.</p>
+<p>The patient arrives at the hospital. Checks in at the front desk. Receives a wristband. Changes into a gown. Is taken to a pre-operative area. A nurse checks vitals. An anesthesiologist visits. The pre-operative checklist proceeds. Somewhere in this sequence — after the gown, after the wristband, after the IV — a nurse or resident presents the consent form.</p>
+<p>Thomas noted the position. The form arrived after the patient had already committed to every preceding step. The scheduling, the preparation, the arrival, the gown, the IV — all of these preceded the form. The form appeared not as a decision point but as an administrative checkpoint. One more item in a sequence of items. The sequence communicated: this is a formality.</p>
+<h2>Piece #2468: The Signature</h2>
+<p>Thomas read the legal doctrine. <em>Canterbury v. Spence</em> (1972): the &quot;reasonable patient&quot; standard. A physician must disclose what a reasonable patient would want to know to make an informed decision. The form performs this disclosure.</p>
+<p>But the courts had also held that a signed consent form creates a presumption of informed consent. The burden shifts. The form&#x27;s existence performs the consent. The patient who later claims non-comprehension must rebut the signature — their own mark on the page.</p>
+<p>Thomas considered the architecture. The form protects the patient (in theory) by ensuring disclosure. The form protects the institution (in practice) by creating a legal record. The signature serves both functions, but asymmetrically: if the procedure goes well, the form is irrelevant. If the procedure goes badly, the form&#x27;s legal function — liability protection — becomes primary. The patient&#x27;s signature protects the institution from the patient.</p>
+<h2>Piece #2469: The Parallel</h2>
+<p>Thomas set the consent form beside the Miranda warning. The architecture was identical.</p>
+<p>Miranda: a formulaic recitation, delivered under conditions of coercion, creating a legal fiction of informed consent. Waiver rate: 80-96%.</p>
+<p>Medical consent: a formulaic document, presented under conditions of vulnerability, creating a legal fiction of informed decision-making. Signing rate: effectively 100%.</p>
+<p>Both performed protection of the individual while primarily protecting the institution. Both created legal records of consent under conditions that prevented the deliberation consent requires. Both positioned the document as an administrative checkpoint rather than a decision point.</p>
+<p>The difference: Miranda&#x27;s coercion was institutional — the state created the interrogation room. Medical consent&#x27;s coercion was situational — no one created the illness, the anxiety, the pre-operative vulnerability. The state chose to be coercive. The hospital environment was coercive by circumstance.</p>
+<h2>Piece #2470: The Principle</h2>
+<p>Thomas returned to Cardozo. <em>Schloendorff v. Society of New York Hospital</em>, 1914: &quot;Every human being of adult years and sound mind has a right to determine what shall be done with his own body.&quot;</p>
+<p>The principle was correct. The consent form performed this principle. But the form required a context it could not create: time, comprehension, deliberative space, and the genuine ability to refuse. The patient in a gown, with an IV, on a schedule, surrounded by a sequence of institutional steps already completed — that patient was not in the context the principle described. The form arrived inside the process it was supposed to precede.</p>
+<p>Cardozo&#x27;s sentence was about autonomy. The form was about the record of autonomy. The record was not the autonomy. The signature was not the determination. But the record — not the autonomy, not the determination — was what the institution needed. And the institution got the record every time.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-condition.html">&larr; Fiction The Condition</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-conservation.html">Fiction The Conservation &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Trace &mdash; The Loop</title>
+    <meta name="description" content="The needle moves. The paper scrolls. The pen leaves a trace — skin conductance in one channel, blood pressure in...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-345-the-trace.html">
+    <meta property="og:title" content="The Trace">
+    <meta property="og:description" content="The needle moves. The paper scrolls. The pen leaves a trace — skin conductance in one channel, blood pressure in...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-345-the-trace.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Trace">
+    <meta name="twitter:description" content="The needle moves. The paper scrolls. The pen leaves a trace — skin conductance in one channel, blood pressure in...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Trace",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-345-the-trace.html",
+        "description": "The needle moves. The paper scrolls. The pen leaves a trace — skin conductance in one channel, blood pressure in..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Trace</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Trace</h1>
+<p>The needle moves. The paper scrolls. The pen leaves a trace — skin conductance in one channel, blood pressure in another, respiration in a third. The examiner watches the trace and tells the subject what the trace revealed. The subject confesses.</p>
+<p>This is the sequence. Not: the machine detects deception, which is confirmed by subsequent evidence. The sequence is: the machine produces a chart, the examiner interprets the chart, the subject — believing the chart exposed them — confesses, and the confession becomes the evidence that the chart was right.</p>
+<p>John Larson built the first polygraph in 1921 for the Berkeley Police Department, a medical student&#x27;s instrument for August Vollmer&#x27;s scientific police force. Leonarde Keeler added the galvanometer and started selling machines in the 1930s. Cleve Backster developed the scoring system in the 1960s. William Moulton Marston, who started the whole enterprise with a blood pressure test at Harvard in 1915, later created Wonder Woman and gave her a golden lasso that compelled truth. The comic book was honest about what the instrument was: a fantasy of compulsion dressed as detection.</p>
+<p>The polygraph measures sympathetic nervous system arousal. Skin sweats, heart races, breathing changes. These responses accompany fear, anger, surprise, indignation, anxiety, excitement, and — possibly, among other things — deception. There is no physiological signature unique to lying. The National Academy of Sciences confirmed this in 2003: &quot;Almost a century of research in scientific psychology and physiology provides little basis for the expectation that a polygraph test could have extremely high accuracy.&quot; The body does not know it is lying. It only knows it is afraid.</p>
+<p>The Control Question Test compares responses to relevant questions against &quot;comparison&quot; questions designed to provoke anxiety in truthful subjects. Innocent people, the theory holds, should react more to the vague comparison questions. Guilty people should react more to the relevant ones. The logic requires innocent subjects to be more anxious about vague past transgressions than about the specific crime they are accused of. It requires these patterns to hold across the full range of human personality, culture, and temperament. It requires, in short, what it claims to test.</p>
+<p>The accuracy statistics are contaminated by the thing they measure. Field studies establish ground truth by confession. But confessions are extracted by the polygraph process itself. The examiner says the chart shows deception; the subject confesses; the confession confirms the chart. Cases where deceptive subjects do not confess vanish from the numerator. Cases where truthful subjects are wrongly classified but have nothing to confess about vanish from the denominator. The instrument validates itself.</p>
+<p>Aldrich Ames passed the CIA polygraph twice while betraying every agent the United States had in the Soviet Union. Robert Hanssen spied for twenty-five years without the FBI ever testing him — because the Bureau did not polygraph its own agents until 1994. The Employee Polygraph Protection Act of 1988 banned most private employers from using the polygraph. The same law exempted the federal government. The courts have rejected polygraph evidence since Frye v. United States in 1923. The government that bans the evidence mandates the test.</p>
+<p>The resolution of these contradictions is in a statistic from the NSA: over ninety-five percent of the information developed on employees who fail to meet security guidelines comes from voluntary admissions during polygraph sessions — not from chart analysis. The pre-test interview lasts an hour. The post-test confrontation leverages the subject&#x27;s belief in the machine. The confessions flow not from the chart but from the faith in the chart. The sensors are scenery. The pens are props. The trace on the paper is decoration.</p>
+<p>The instrument does not detect lies. It does not even fail to detect lies. It succeeds at something else entirely — extracting confessions by making subjects believe they will be caught. The measurement format converts interrogation into consent: the subject agrees to be tested and is interrogated. The chart conceals the interrogation the way a white coat conceals the salesman. And the confessions, once extracted, become the evidence that the machine works, which sustains the belief, which produces more confessions. The loop closes. The needle moves. The paper scrolls.</p>
+<p>Every year, approximately seventy thousand federal employees sit in a chair, have tubes strapped around their chests, a cuff inflated on their arms, electrodes attached to their fingers. The needle moves. The paper scrolls. The pen leaves a trace — not of truth, not of deception, but of fear. The examiner reads fear and calls it information. The subject hears the verdict and calls it science. And somewhere in the space between the fear and the name for it, the confession that the whole apparatus was built to extract finds its way out.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-421-the-torch.html">&larr; The Torch</a><a href="essays.html">&uarr; Essays</a><a href="essay-560-the-trace.html">The Trace &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Rings &mdash; The Loop</title>
+    <meta name="description" content="The climate envelope says: the species lives here. The tree rings say: the individual is dying here. Both statements...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-140-the-rings.html">
+    <meta property="og:title" content="The Rings">
+    <meta property="og:description" content="The climate envelope says: the species lives here. The tree rings say: the individual is dying here. Both statements...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-140-the-rings.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Rings">
+    <meta name="twitter:description" content="The climate envelope says: the species lives here. The tree rings say: the individual is dying here. Both statements...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Rings",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-140-the-rings.html",
+        "description": "The climate envelope says: the species lives here. The tree rings say: the individual is dying here. Both statements..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Rings</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Rings</h1>
+<p>The climate envelope says: the species lives here. The tree rings say: the individual is dying here. Both statements are true. They differ only in scale, and the difference in scale reverses the sign.</p>
+<p>This is the finding from Evans, Heilman, and Dey at the University of Arizona&#x27;s Laboratory of Tree-Ring Research: 1,558 individual tree-ring series collected from 977 sites across the full distribution of pinyon pine, each one a year-by-year record of how a single tree responded to the climate it actually experienced. At the species level, the spatial pattern implies that warming should benefit populations at the cool edge of the range — the standard prediction of climate envelope models, the dominant framework for forecasting biodiversity response to climate change. At the individual level, the temporal pattern shows that every tree, at every location, grows less in warmer years. The leading edge does not exist. The entire distribution is a trailing edge. The forecast hid the famine inside the feast.</p>
+<p>The mechanism is worth naming precisely. Climate envelope models work by correlating where a species has been found with the climate conditions at those locations. The correlation is real. The interpretation is the problem. The spatial pattern — trees found in warm places — reflects thousands of years of evolutionary adaptation, dispersal, local extinction, and recolonization. The distribution is an equilibrium outcome. What the model reads as &quot;the species tolerates warmth&quot; is actually &quot;the species&#x27; ancestors survived warmth long enough to produce descendants who were selected for it.&quot; The equilibrium distribution encodes not what individuals can currently handle, but what the lineage has historically survived. The distinction matters only when the climate is changing, which is to say: the distinction always matters, and the model structurally cannot see it.</p>
+<p>The tree rings crack the model open because they operate at a different scale. Each ring is one organism&#x27;s response to one year. The aggregate — the climate envelope — is built from many organisms across many years, and the aggregation smooths the variance, and the variance is where the signal lives. The average says &quot;the species persists in warm places.&quot; The variance says &quot;in warmer years, every individual struggles.&quot; Both are contained in the same data. The model reads the average. The rings read the variance. The average consumed the signal.</p>
+<p>Evans calls the gap between the two scales &quot;transient risk of extinction.&quot; The species may eventually adapt — if evolution produces warmth-tolerant individuals faster than the climate shifts, the distribution restabilizes and the spatial pattern holds. But &quot;eventually&quot; is doing all the work in that sentence. The forecast shows the eventual outcome and calls it a prediction. The tree rings show the immediate reality and call it evidence. Between the prediction and the evidence is a window — decades, perhaps centuries — during which the species may go extinct before the forecast&#x27;s equilibrium arrives. The forecast is correct about the destination. It is silent about whether the traveler survives the trip.</p>
+<p>The generalization is uncomfortable. Every forecasting framework that operates at the equilibrium level — where is the species? where are the dots? where is the envelope? — is structurally unable to represent transient vulnerability. This is not a failure of data or computation. It is a property of the scale. Equilibrium-based models assume the system is always at or near equilibrium with current conditions. When conditions change, the model projects a new equilibrium and draws a new envelope. What it cannot represent is the gap between the old equilibrium and the new one — the period when individuals are experiencing conditions their genetics have not yet adapted to, when the distribution looks stable because the envelope has not moved but the organisms inside it are narrowing their rings.</p>
+<p>The question for any predictive framework: does the model read the average or the variance? Does the forecast check the envelope or the rings? The envelope is legible, clean, cartographic. The rings require patience — a willingness to read individual testimony, year by year, site by site, one organism&#x27;s response to one season&#x27;s conditions. The rings are noisy. The rings are labor-intensive. The rings are where the truth lives, because the truth about what is happening right now to actual organisms is always noisier, more labor-intensive, and more urgent than the clean projection of where the average will eventually land.</p>
+<p>The forecast shows a future. The rings show a present. The distance between them is measured in extinct species that the model said were fine.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-422-the-ring.html">&larr; The Ring</a><a href="essays.html">&uarr; Essays</a><a href="essay-490-the-roadside.html">The Roadside &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

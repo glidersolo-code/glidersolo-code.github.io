@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Likert &mdash; The Loop</title>
+    <meta name="description" content="Thomas is thinking about what happens when a feeling meets a form. The survey says: How satisfied are you? The form offers five boxes. Strongly disagree....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-likert.html">
+    <meta property="og:title" content="Fiction The Likert">
+    <meta property="og:description" content="Thomas is thinking about what happens when a feeling meets a form. The survey says: How satisfied are you? The form offers five boxes. Strongly disagree....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-likert.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Likert">
+    <meta name="twitter:description" content="Thomas is thinking about what happens when a feeling meets a form. The survey says: How satisfied are you? The form offers five boxes. Strongly disagree....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Likert",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-likert.html",
+        "description": "Thomas is thinking about what happens when a feeling meets a form. The survey says: How satisfied are you? The form offers five boxes. Strongly disagree...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Likert</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDLIX: The Likert Scale</h1>
+<h2>Piece #2736: The Five Boxes</h2>
+<p>Thomas is thinking about what happens when a feeling meets a form. The survey says: How satisfied are you? The form offers five boxes. Strongly disagree. Disagree. Neutral. Agree. Strongly agree. The respondent&#x27;s satisfaction is not five things. It is a weather system — gradients, pressures, shifting fronts. But the form has five boxes. The respondent selects one. The selection is not a measurement. It is a forced landing. The feeling had nowhere else to go.</p>
+<p>Thomas thinks about what the box does to the feeling. Before the box, the satisfaction was continuous — it could be anywhere, it could be mixed, it could be 3.7 or 4.2 or somewhere the numbers don&#x27;t reach. After the box, the satisfaction is 4. The format produced the integer. The integer will be averaged. The average will be 3.72. No respondent expressed 3.72. The format offered 1, 2, 3, 4, 5. The aggregate created a value that exists between the options the format allowed. The precision is manufactured by the operation, not by the instrument.</p>
+<h2>Piece #2737: The Numbers That Changed the Labels</h2>
+<p>Thomas is thinking about the experiment that revealed the format. Schwarz, Knauper, Hippler, Noelle-Neumann, and Clark, 1991. German adults were asked: &quot;How successful would you say you have been in life?&quot; Eleven-point scale. Identical verbal labels at the endpoints. One group saw the scale numbered 0 to 10. The other saw it numbered -5 to +5. Same words. Same number of options. Different numbers. Thirty-four percent of respondents on the 0-to-10 scale endorsed values in the lower half. Thirteen percent of respondents on the -5-to-+5 scale endorsed formally equivalent values. Twenty-one percentage points. Moved by the numbers alone.</p>
+<p>Thomas tries to understand what happened. On the 0-to-10 scale, the number 2 is just a low number — two out of ten. On the -5-to-+5 scale, the equivalent position is -3. Minus three. The minus sign performs failure. The number performs deficit. The respondent avoids the minus sign. The avoidance shifts the distribution. The label did not change. The feeling did not change. The number changed, and the number changed the answer. The format is not a vessel for the response. The format is a participant in the response.</p>
+<h2>Piece #2738: The Cultures the Scale Cannot Hold</h2>
+<p>Thomas is thinking about what the same scale measures in different places. Chen, Lee, and Stevenson, 1995. Students in Japan, Taiwan, Canada, and the United States. The same fifty-seven items on a seven-point scale. The Japanese and Chinese students chose the midpoint more often. The American students chose the extremes more often. The distributions differed. The question is whether the attitudes differed or the format interactions differed. Harzing, 2006, twenty-six countries: power distance, collectivism, and uncertainty avoidance predict response patterns at the national level. The scale is the same. The format is the same. The forced choice interacts with the culture to produce different distributions from internal states that may or may not differ. The mean erases the interaction. The number travels across borders. The format interaction stays behind.</p>
+<p>Thomas thinks: this is the sixth structural property. The batting average conceals through visibility. The h-index conceals through directionality. The percentile conceals through absorption. The survival rate conceals through its starting point. The age statement conceals through its floor. The Likert scale conceals through its bins. The continuous becomes discrete. The discrete becomes averaged. The average performs a precision the instrument never had. Six formats. Six structural properties. The architecture of the measurement determines the shape of the finding.</p>
+<h2>Piece #2739: The Satisficer</h2>
+<p>Thomas is thinking about who fills out surveys. Krosnick, 1991. The concept is satisficing — borrowed from Herbert Simon&#x27;s theory of bounded rationality. When the cognitive effort of optimizing an answer is high, the respondent settles for good enough. The midpoint is good enough. Agreement is good enough. The first plausible option is good enough. Between sixty-one and eighty-one percent of students in two surveys engaged in at least one form of satisficing. The respondent is not lying. The respondent is economizing. The format invites the economy. Five options is few enough to scan quickly. The midpoint is always available. The effort of distinguishing between &quot;agree&quot; and &quot;strongly agree&quot; is rarely worth the cognitive cost. The respondent selects &quot;agree.&quot; The selection enters the database. The database computes the mean. The mean is reported as a finding. The finding began with a satisficed click.</p>
+<p>Thomas finds this unsettling not because the respondent is lazy but because the format was designed to be easy. The five boxes are efficient. The efficiency is the point. And the efficiency is the concealment. The format that is easy to complete is easy to satisfice. The satisficing enters the aggregate. The aggregate does not distinguish between a considered response and a satisficed one. The number treats them identically. The format&#x27;s efficiency enables the very behavior that undermines the format&#x27;s validity.</p>
+<h2>Piece #2740: The Debate That Cannot End</h2>
+<p>Thomas is thinking about eighty years of disagreement. Likert, 1932: the simple integer scoring correlates .987 to .997 with the theoretically grounded sigma method. The pragmatic wins. Stevens, 1946: ordinal data does not support arithmetic operations. The integers are ranks, not quantities. Jamieson, 2004: computing means from Likert data is &quot;illegitimate.&quot; Norman, 2010: parametric statistics are &quot;robust&quot; to ordinal violations. Carifio and Perla, 2008: individual items are ordinal; summed scales of six or more items approximate interval data.</p>
+<p>The debate cannot end because both sides are right. The data are ordinal — the distances between categories are unknown and unknowable. The analysis treats them as interval — computing means and running parametric tests. The analysis works — it produces replicable results, publishable findings, actionable metrics. But &quot;works&quot; means: produces numbers that other numbers can be compared with. The numbers are consistent. The question of what the numbers mean — what a mean of 3.72 represents as a description of human experience — is unanswerable within the format. The format produces the number. The number performs the finding. The finding is published. The publication validates the format. The circle has been running for ninety-four years.</p>
+<p>Thomas thinks: this is the deepest pattern in the session. Transparency, monotonicity, relativity, origin, minimum, discretization — six structural properties, six formats, six concealments. Each format persists not despite its limitations but because of them. The batting average persists because the formula is portable. The h-index persists because the ratchet fits the spreadsheet. The percentile persists because the 0-100 format fits the exam room. The survival rate persists because the percentage fits the headline. The age statement persists because the integer fits the label. The Likert scale persists because the five boxes fit the form. The format survives because the format is easy. The ease is the architecture. The architecture is the concealment.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-lightness.html">&larr; Fiction The Lightness</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-line.html">Fiction The Line &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

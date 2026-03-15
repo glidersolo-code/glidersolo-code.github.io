@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Sprinkler &mdash; The Loop</title>
+    <meta name="description" content="Thomas set the oscillating sprinkler at the center of his backyard and turned the spigot. The box said 3,600 square feet. His yard was 3,200. The math...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-sprinkler.html">
+    <meta property="og:title" content="Fiction The Sprinkler">
+    <meta property="og:description" content="Thomas set the oscillating sprinkler at the center of his backyard and turned the spigot. The box said 3,600 square feet. His yard was 3,200. The math...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-sprinkler.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Sprinkler">
+    <meta name="twitter:description" content="Thomas set the oscillating sprinkler at the center of his backyard and turned the spigot. The box said 3,600 square feet. His yard was 3,200. The math...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Sprinkler",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-sprinkler.html",
+        "description": "Thomas set the oscillating sprinkler at the center of his backyard and turned the spigot. The box said 3,600 square feet. His yard was 3,200. The math..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Sprinkler</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXXVII: The Sprinkler</h1>
+<h2>Piece #1826: The Rectangle</h2>
+<p>Thomas set the oscillating sprinkler at the center of his backyard and turned the spigot. The box said 3,600 square feet. His yard was 3,200. The math said one sprinkler, centered, should cover the lawn with room to spare.</p>
+<p>The sprinkler oscillated. Water arced left, then right, the familiar fan pattern drawing a rectangle of wet grass. Thomas walked the edges. The wet rectangle ended twenty-two feet from the sprinkler in each direction. He paced it: roughly 44 feet by 30 feet. Thirteen hundred square feet. Thirty-six percent of the box.</p>
+<p>The edges of the yard were dry. The far corners had not been touched. One sprinkler for 3,200 square feet was supposed to work. It watered a patch in the middle.</p>
+<p>Thomas turned the sprinkler off and read the box again. &quot;Covers up to 3,600 sq ft.&quot; He found the fine print on the back: &quot;Coverage at 80 PSI.&quot;</p>
+<p>He went inside and checked his water pressure gauge on the hose bib. Forty-two PSI.</p>
+<h2>Piece #1827: The Hose</h2>
+<p>Thomas disconnected the hundred-foot hose and attached a six-foot section directly from the spigot. Turned it on. The sprinkler&#x27;s throw distance extended immediately — twenty-eight feet in each direction. Two thousand three hundred square feet. Still not 3,600, but 77 percent better than with the long hose.</p>
+<p>A hundred feet of 5/8-inch garden hose at 42 PSI. Every foot of hose added friction loss. Every fitting added turbulence. The water arrived at the sprinkler at perhaps 30 PSI — maybe less. The sprinkler&#x27;s nozzles needed pressure to throw distance. Pressure it wasn&#x27;t getting.</p>
+<p>He measured the hose diameter. Five-eighths of an inch. The box recommended a 3/4-inch hose for optimal performance — a detail buried in the setup instructions the consumer reads after the purchase, after the lawn stays dry.</p>
+<p>The sprinkler worked. It just didn&#x27;t work at the end of the infrastructure the consumer already owned.</p>
+<h2>Piece #1828: The Calculation</h2>
+<p>Thomas sat on the patio with his phone and worked the numbers. The box claimed 3,600 square feet at 80 PSI. His spigot delivered 42 PSI. Through a hundred feet of 5/8-inch hose, approximately 30 PSI reached the sprinkler. Pressure loss: 29 percent before the water left the nozzle.</p>
+<p>Coverage area scaled roughly with the square of the throw distance. Throw distance scaled with the square root of pressure. Half the pressure didn&#x27;t mean half the throw — it meant about 71 percent of the throw. But 71 percent of the throw in both directions meant 50 percent of the area.</p>
+<p>The math: sqrt(30/80) = 0.61. Squared for area: 0.37. Thirty-seven percent of 3,600 = 1,332 square feet. Almost exactly what he&#x27;d measured.</p>
+<p>The box hadn&#x27;t lied. The box had described the sprinkler at a pressure his house couldn&#x27;t reach through a hose his garage already owned. The &quot;up to&quot; carried the entire qualification. Two words doing the work of four variables: pressure, hose length, hose diameter, and flow rate. The consumer read the number. The &quot;up to&quot; was present but weightless.</p>
+<h2>Piece #1829: The Neighbor</h2>
+<p>Thomas&#x27;s neighbor had the same sprinkler, same box, same 3,600 square feet. She&#x27;d bought three — one for each third of her half-acre yard, doing the math from the box numbers. Thomas watched her set them up. All three connected by daisy-chaining hose sections: spigot to 50-foot hose to first sprinkler, 50-foot hose to second, 50-foot hose to third.</p>
+<p>The first sprinkler threw well. The second less. The third barely oscillated — a weak, slow fan that wet a circle eight feet in radius. Two hundred square feet. Five percent of the box.</p>
+<p>Each sprinkler drew water from the same supply. Each hose section added friction loss. By the third sprinkler, the pressure was perhaps 15 PSI. The oscillation mechanism needed a minimum pressure to function. Below that threshold, the sprinkler didn&#x27;t shrink its rectangle — it stopped making a rectangle at all.</p>
+<p>She turned all three off. &quot;These don&#x27;t work.&quot;</p>
+<p>They worked. They worked at 80 PSI through a short hose. The box described that configuration. She had purchased a different configuration entirely — three sprinklers in series on 150 feet of hose at suburban pressure. The box&#x27;s number lived in a house the infrastructure didn&#x27;t contain.</p>
+<h2>Piece #1830: The Dry Corner</h2>
+<p>Thomas bought a second sprinkler and a pressure gauge that attached between the hose and the sprinkler. He positioned one sprinkler at each end of the yard, each on a 50-foot run of 5/8-inch hose. Thirty-four PSI at the first, twenty-eight at the second. Overlapping in the middle. The edges finally wet.</p>
+<p>Two sprinklers to cover what one was supposed to. The actual cost of 3,200 square feet: two sprinklers, two hose runs, and the time to learn that the box&#x27;s rectangle existed only at a pressure his house didn&#x27;t deliver.</p>
+<p>He left the pressure gauge attached. Twenty-eight PSI. The box at the hardware store still said 3,600 square feet. Somewhere a consumer was buying one sprinkler for a 3,500-square-foot yard, doing the arithmetic from the label, and expecting the lawn to be green edge to edge.</p>
+<p>The box was technically correct. The lawn would be technically brown.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-sprayer.html">&larr; Fiction The Sprayer</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-stages.html">Fiction The Stages &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

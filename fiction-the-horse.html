@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Horse &mdash; The Loop</title>
+    <meta name="description" content="James Watt needed to sell steam engines. In the 1780s, his potential customers were mine operators who used horses to lift water and ore. Watt needed a...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-horse.html">
+    <meta property="og:title" content="Fiction The Horse">
+    <meta property="og:description" content="James Watt needed to sell steam engines. In the 1780s, his potential customers were mine operators who used horses to lift water and ore. Watt needed a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-horse.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Horse">
+    <meta name="twitter:description" content="James Watt needed to sell steam engines. In the 1780s, his potential customers were mine operators who used horses to lift water and ore. Watt needed a...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Horse",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-horse.html",
+        "description": "James Watt needed to sell steam engines. In the 1780s, his potential customers were mine operators who used horses to lift water and ore. Watt needed a..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Horse</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXX: The Horse</h1>
+<h2>Piece #1341: The Estimate</h2>
+<p>James Watt needed to sell steam engines. In the 1780s, his potential customers were mine operators who used horses to lift water and ore. Watt needed a comparison: how many horses does my engine replace? He measured the work output of horses at a London brewery — probably Barclay&#x27;s — turning a mill wheel. His measurement: a horse could lift 33,000 pounds one foot in one minute. One horsepower. 33,000 foot-pounds per minute. 550 foot-pounds per second. 745.7 watts.</p>
+<p>The number was a sales tool. Watt reportedly overestimated the sustained work output of an average horse to make his engines compare favorably — if the rated &quot;horsepower&quot; exceeded what a real horse could sustain, the engine would appear to deliver more than advertised. The horse that defined the unit was stronger than a typical horse. The comparison animal was inflated. The customer received more than the number promised. The unit was designed to undersell the product.</p>
+<p>Thomas&#x27;s clinical baselines are their own inflated comparison animals. The PHQ-9&#x27;s severity thresholds were set against a validation population&#x27;s outcomes. The population is the reference horse — the comparison against which Thomas&#x27;s score is evaluated. If the reference population&#x27;s severity was overestimated, Thomas appears better than the comparison. If underestimated, Thomas appears worse. The reference is a horse at a London brewery. Thomas is a patient in a clinic. The comparison was never designed to describe him.</p>
+<h2>Piece #1342: The Standard</h2>
+<p>Horsepower is not one unit. It is several. Mechanical horsepower (hp): 745.7 watts, Watt&#x27;s original definition. Metric horsepower (PS, from German <em>Pferdestärke</em>): 735.5 watts, defined as the power to raise 75 kilograms one meter in one second. Electrical horsepower: 746 watts. Boiler horsepower: 9,810 watts — approximately 13 times the mechanical horsepower. Each is called &quot;horsepower.&quot; Each describes a different quantity.</p>
+<p>The International System of Units uses the watt — named, ironically, after the man who invented the unit it was designed to replace. The kilowatt is precise, unambiguous, internationally standardized. One kilowatt means the same thing everywhere. It has not replaced horsepower in consumer contexts. Automobile manufacturers report engine output in horsepower (or PS) because consumers understand the word, because the comparison to an animal is intuitive, because the number is always larger than its kilowatt equivalent — 300 hp sounds more impressive than 224 kW, though they describe the same engine. The larger number sells the car.</p>
+<p>Thomas&#x27;s clinical measures have their own competing standards. The PHQ-9 (self-report, nine items) and the Hamilton Depression Rating Scale (clinician-rated, seventeen items) are both called &quot;depression scales.&quot; Both produce severity numbers. The numbers are not equivalent. A PHQ-9 score of 15 and a Hamilton score of 15 describe different quantities. The word &quot;depression scale&quot; is their shared &quot;horsepower&quot; — a label applied to different definitions that the consumer of the number treats as interchangeable.</p>
+<h2>Piece #1343: The Measurement</h2>
+<p>In the United States, the Society of Automotive Engineers (SAE) defines testing standards for engine power. SAE J1349 specifies &quot;net&quot; horsepower: measured at the crankshaft with all standard accessories attached — alternator, water pump, power steering pump, exhaust system, air filter. Before 1972, American automakers reported &quot;gross&quot; horsepower: measured at the crankshaft with accessories removed, no air filter, open exhaust headers. The same engine could produce 300 gross horsepower and 230 net horsepower. In 1971, a Chevrolet Corvette was rated at 365 gross hp. In 1972, the same engine in the same car was rated at 255 net hp. The number dropped 110 points. The engine did not change. The measurement method changed.</p>
+<p>European manufacturers use DIN 70020 or its successor ECE R85. Japanese manufacturers use JIS. The standards differ in testing conditions — temperature, atmospheric pressure, humidity corrections, accessory load. The same engine can produce different numbers under different standards. The label says &quot;horsepower.&quot; It does not say which standard produced the number.</p>
+<p>Thomas&#x27;s severity scores shift with measurement method. A clinician-administered PHQ-9 may yield different scores than a self-administered one for the same patient. The label says &quot;PHQ-9 score.&quot; It does not specify the method of administration that produced the number.</p>
+<h2>Piece #1344: The Wheel</h2>
+<p>Engine horsepower is measured at the crankshaft — &quot;brake horsepower&quot; (bhp). The power that reaches the wheels is lower, reduced by drivetrain losses: transmission, differential, axle friction. A car rated at 300 bhp might deliver 250-270 horsepower at the wheels — a loss of 10-17%, depending on drivetrain type (manual, automatic, all-wheel-drive). The consumer test-drives the car using wheel horsepower. The specification sheet reports crankshaft horsepower. The two numbers describe different locations in the same system.</p>
+<p>Aftermarket dynamometers measure wheel horsepower directly. Enthusiasts discover that their &quot;300 hp&quot; car delivers 250 hp at the wheels. The difference is known, expected, and not corrected on the label. The specification always reports the higher number — the crankshaft measurement — because it is the industry convention and because the higher number describes the engine&#x27;s output, which is what the manufacturer designed and built.</p>
+<p>Thomas&#x27;s treatment outcomes are measured at different points in the system. The clinical trial measures efficacy at the therapy session — the crankshaft. The patient experiences improvement at the level of daily function — the wheels. The drivetrain losses — life stressors, medication side effects, sleep disruption, comorbidities — reduce the delivered improvement. The trial reports the crankshaft number. The patient receives the wheel number.</p>
+<h2>Piece #1345: The Word</h2>
+<p>The word &quot;horsepower&quot; contains a horse. There is no horse. The unit was derived from a horse at a brewery in the 1780s, possibly overestimated, formalized into a constant that no longer references any animal. A Tesla Model S Plaid produces 1,020 horsepower from electric motors. There is no horse. There is no combustion. There is no crankshaft. The unit invented to compare steam engines to horses is now used to describe machines that share no mechanical principle with either. The word persists because the word is understood. The word is understood because it has always been used. The circularity sustains the unit.</p>
+<p>One hundred and eighty Parts. Thomas exists in a language of clinical terms whose referents have dissolved. &quot;Depression&quot; — from Latin <em>deprimere</em>, to press down — contains a mechanical metaphor. There is no pressing. There is no down. The word was chosen in the nineteenth century because the condition felt like pressure. The word persists because it is understood. The clinical infrastructure was built on the word. The word is the horse — the animal that was never quite what the number said, that was overestimated to make the comparison favorable, that dissolved into a constant while the word that named it continued to be spoken by people who had never seen the animal, driving machines the animal could never have powered, the measurement a property of the marketing dressed as a property of the engine.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-hold.html">&larr; Fiction The Hold</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-hose.html">Fiction The Hose &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

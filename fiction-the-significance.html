@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Significance &mdash; The Loop</title>
+    <meta name="description" content="Not derived — chosen. In Statistical Methods for Research Workers (1925), Ronald Fisher suggested that a probability of one in twenty was a &quot;convenient&quot;...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-significance.html">
+    <meta property="og:title" content="Fiction The Significance">
+    <meta property="og:description" content="Not derived — chosen. In Statistical Methods for Research Workers (1925), Ronald Fisher suggested that a probability of one in twenty was a &quot;convenient&quot;...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-significance.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Significance">
+    <meta name="twitter:description" content="Not derived — chosen. In Statistical Methods for Research Workers (1925), Ronald Fisher suggested that a probability of one in twenty was a &quot;convenient&quot;...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Significance",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-significance.html",
+        "description": "Not derived — chosen. In Statistical Methods for Research Workers (1925), Ronald Fisher suggested that a probability of one in twenty was a &quot;convenient&quot;..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Significance</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXVIII: The Significance</h1>
+<h2>Piece #1081: The Convention</h2>
+<p>Fisher chose 0.05.</p>
+<p>Not derived — chosen. In <em>Statistical Methods for Research Workers</em> (1925), Ronald Fisher suggested that a probability of one in twenty was a &quot;convenient&quot; level at which to consider a result noteworthy. Convenient. The word meant: useful for the researcher who needed to decide whether to pursue a finding further. The word did not mean: this is the probability at which truth begins.</p>
+<p>The convention traveled. From Fisher&#x27;s suggestion to journal requirements. From journal requirements to funding decisions. From funding decisions to regulatory thresholds. From regulatory thresholds to clinical practice. At each stage the convention hardened. By the time it reached Thomas&#x27;s monitors — the firmware that decided which readings triggered alarms and which did not — the number 0.05 had been so thoroughly absorbed into statistical infrastructure that questioning it felt like questioning arithmetic.</p>
+<p>The monitors in Thomas&#x27;s room did not use p-values directly. They used alarm thresholds. But the alarm thresholds had been validated in studies that used p &lt; 0.05 as their criterion for significance. The threshold that triggered the alarm had been determined by a threshold that determined significance. Convention resting on convention. Neither arbitrary in isolation — both reasonable, even useful. Arbitrary only in the sense that both could have been otherwise, and the choice of one had constrained the choice of the other, and neither choice had been derived from the patient.</p>
+<p>Fisher had meant: convenient. The infrastructure heard: mandatory.</p>
+<h2>Piece #1082: The Transposition</h2>
+<p>The p-value measured the wrong direction.</p>
+<p>P(data | H₀): the probability of observing data this extreme, given that the null hypothesis is true. This is what the p-value calculates. P(H₀ | data): the probability that the null hypothesis is true, given the observed data. This is what researchers want. These are not the same quantity. They are not interchangeable. The transposition — treating one as the other — is a logical error with a name: the prosecutor&#x27;s fallacy, the base rate fallacy, the confusion of the inverse.</p>
+<p>The error is not subtle. It is taught in every introductory statistics course. It is committed in the majority of published papers that report p-values. The teaching and the committing coexist. The researchers who misinterpret p-values have, in most cases, been taught the correct interpretation. The knowledge does not prevent the error. The infrastructure rewards the error — a &quot;significant&quot; p-value is publishable; a correctly interpreted one that merely says &quot;these data would be unusual under the null&quot; is less compelling. The incentive is to transpose.</p>
+<p>Thomas&#x27;s monitors transposed continuously. The alarm was triggered when a reading exceeded a threshold. The threshold had been set because studies showed that readings beyond it were associated with adverse outcomes — p &lt; 0.05. The association was statistical: in populations, at frequencies. The alarm applied it to an individual: this patient, this moment. The population-level probability became an individual-level alarm. The transposition was built into the circuitry.</p>
+<p>The nurse heard the alarm. The alarm said: this reading is significant. The nurse heard: this patient is in danger. These are not the same statement.</p>
+<h2>Piece #1083: The Binary</h2>
+<p>The continuous became categorical.</p>
+<p>A p-value of 0.049 was significant. A p-value of 0.051 was not. The difference between them — 0.002 in a probability — was the difference between publication and file drawer, between treatment adoption and treatment abandonment, between alarm and silence. The continuous probability had been sliced at 0.05 and the two sides of the cut were treated as categorically different: real versus not-real, true versus not-true, significant versus not-significant.</p>
+<p>The word itself performed the concealment. &quot;Significant&quot; in statistics meant: unlikely under the null hypothesis. &quot;Significant&quot; in English meant: important, meaningful, consequential. The technical term and the common word shared a spelling and occupied different universes. Every time a researcher wrote &quot;the result was significant,&quot; the sentence was true in the technical sense and heard in the common sense. The conflation was not accidental — Fisher chose the word because it already carried weight. The weight was the problem.</p>
+<p>Thomas&#x27;s chart recorded vital signs as continuous numbers — heart rate 142, respiratory rate 38, SpO2 94. The monitors converted these continuous numbers to categorical states: normal, warning, alarm. The conversion required thresholds. The thresholds required someone to decide where the continuous became categorical. The decision was informed by evidence but was not itself evidence. It was a cut — a line drawn through a continuum, turning the world into two kinds.</p>
+<p>On one side of the cut, the monitor was silent. On the other, it screamed. The patient was the same on both sides.</p>
+<h2>Piece #1084: The Publication</h2>
+<p>What was found depended on what was reported.</p>
+<p>Ioannidis (2005): most published research findings are false. The argument was mathematical. If the prior probability of a hypothesis is low — most hypotheses are wrong — and the significance threshold is 0.05, and studies are underpowered, and there is publication bias toward positive results, then the majority of statistically significant findings in the literature will be false positives. The math was not controversial. The conclusion was devastating: the infrastructure that selected findings for publication was systematically selecting for error.</p>
+<p>Publication bias was the filter. Studies with p &lt; 0.05 were published. Studies with p ≥ 0.05 were filed away. The literature therefore contained a biased sample of all studies conducted — enriched for significant results, which meant enriched for the proportion of those results that were false positives. The file drawer was full of true negatives that no one would read. The journals were full of false positives that everyone would cite.</p>
+<p>Thomas existed in the downstream of this filter. The protocols that governed his care had been derived from published evidence. The published evidence had been filtered by significance thresholds. The significance thresholds had selected for results that cleared 0.05, which included an unknown but calculable proportion of false positives. The treatment that the nurse administered had been validated by an evidence base that was structurally biased toward finding effects, including effects that did not exist.</p>
+<p>The nurse did not know which findings in Thomas&#x27;s protocol were true and which were artifacts of the filter. No one knew. The filter had destroyed the information needed to distinguish them.</p>
+<h2>Piece #1085: The Significance</h2>
+<p>The American Statistical Association published a statement.</p>
+<p>2016: &quot;Informally, a p-value is the probability under a specified statistical model that a statistical summary of the data would be equal to or more extreme than its observed value.&quot; Six principles followed. Principle 2: &quot;P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.&quot; Principle 5: &quot;A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.&quot;</p>
+<p>The statement was remarkable not for what it said — every statistician already knew it — but for the fact that it needed to be said. The ASA had never before issued a statement on a matter of statistical practice. The misinterpretation was so widespread, so entrenched, so consequential that the professional organization felt compelled to state formally what its members had been teaching for decades without effect. The teaching had failed. The infrastructure was stronger than the pedagogy.</p>
+<p>Thomas&#x27;s chart did not contain p-values. It contained measurements, thresholds, alarms, protocols — the downstream infrastructure of a century of significance testing. The .05 was invisible, embedded so deep in the evidence base that no individual clinician could trace any particular decision back to any particular p-value. The convention had become geology — layered into the bedrock of practice, no longer visible as convention, no longer available for question.</p>
+<p>The nurse checked the monitor. The monitor was silent. Silence meant: no alarm threshold had been crossed. The nurse charted: patient stable. The word &quot;stable&quot; meant: the conventions that governed the thresholds that governed the alarms that governed the assessment had not been triggered. The patient was elsewhere — in the bed, in the body, in the space between measurements that the conventions could not reach. The significance was statistical. The patient was not.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-signature.html">&larr; Fiction The Signature</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-silence.html">Fiction The Silence &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

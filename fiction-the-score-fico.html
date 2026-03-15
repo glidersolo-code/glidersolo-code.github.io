@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Score Fico &mdash; The Loop</title>
+    <meta name="description" content="Thomas would have a credit score.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-score-fico.html">
+    <meta property="og:title" content="Fiction The Score Fico">
+    <meta property="og:description" content="Thomas would have a credit score.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-score-fico.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Score Fico">
+    <meta name="twitter:description" content="Thomas would have a credit score.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Score Fico",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-score-fico.html",
+        "description": "Thomas would have a credit score."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Score Fico</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXVII: The Score</h1>
+<h2>Piece #1076: The Number</h2>
+<p>Thomas would have a credit score.</p>
+<p>Not now — he was an infant. But the system that would eventually score him was already operating, already processing the credit histories of his parents, already influencing the interest rates on the loans that paid for his care, the mortgage that housed him, the credit cards that purchased his supplies. The system produced a number. The number was between 300 and 850. The number was called a FICO score, after the Fair Isaac Corporation that created it in 1989.</p>
+<p>The score converted a credit history — thousands of data points spanning years of financial transactions — into a single number. Payment timing: did the person pay on time? Utilization: how much of the available credit was used? Account age: how old were the accounts? Credit mix: how many types of credit? Inquiries: how recently had the person applied for new credit? Five categories, weighted by a proprietary algorithm, producing one number.</p>
+<p>The algorithm was secret. Fair Isaac did not publish the formula. The score was not reproducible by anyone outside the company. The inputs were known. The output was known. The function connecting them was proprietary. The secrecy was treated as a feature — protection of intellectual property, a competitive advantage — not as a limitation on the score&#x27;s validity. The score could not be independently audited because the formula was not public. The unauditability was the infrastructure.</p>
+<p>Thomas&#x27;s chart had a similar structure. His acuity scores were calculated by algorithms embedded in monitoring software. The algorithms were proprietary — owned by the device manufacturer, not published in the medical literature. The score appeared on the screen. The nurse read the score. The score influenced the response. The algorithm that produced the score was not independently auditable.</p>
+<hr>
+<h2>Piece #1077: The Invisible</h2>
+<p>Twenty-six million Americans had no credit score.</p>
+<p>Not a low score — no score. The Consumer Financial Protection Bureau reported in 2015 that approximately 26 million Americans were &quot;credit invisible&quot; — they had no credit file at any of the three major credit bureaus. Another 19 million had files too thin or too stale to generate a score. The credit-invisible population was disproportionately young, low-income, minority, and immigrant.</p>
+<p>The absence of data was not treated as absence. The absence was treated as risk. A person with no credit history could not qualify for a mortgage, a car loan, or in many cases a rental apartment. The system required a score. No score meant no access. The absence of information was converted into an inference — not &quot;we don&#x27;t know&quot; but &quot;we can&#x27;t trust&quot; — by a system that could only process scores, not absence.</p>
+<p>Thomas&#x27;s chart had invisibles too. Conditions not tested for did not appear in the chart. The absence of a lab value was not recorded as &quot;not tested&quot; — it was simply absent, and the absence was interpreted not as missing data but as the absence of the condition. A test not ordered was a diagnosis not made. A diagnosis not made was a condition not present. The inference was wrong — the condition might be present and untested — but the system could not represent &quot;present but untested&quot; because the system processed results, not gaps.</p>
+<p>The credit invisible and the clinically untested occupied the same structural position: absent from the system, with the absence interpreted as information when it was the absence of information.</p>
+<hr>
+<h2>Piece #1078: The Proxy</h2>
+<p>The score measured credit history.</p>
+<p>Credit history was not creditworthiness. Credit history was a record of past behavior — past payments, past utilization, past applications. Creditworthiness was a prediction of future behavior — whether the person would repay a future loan. The score used the past to predict the future, treating the past as a proxy for the future.</p>
+<p>The proxy worked on average. Statistically, people with higher credit scores defaulted less frequently. The correlation was real. The correlation was also aggregate — it described populations, not individuals. A person with a 650 score and a person with a 750 score could be identical in their future repayment behavior. The score distinguished them. The distinction was statistical, not individual. The statistical distinction was applied individually — to this loan application, this interest rate, this apartment rental.</p>
+<p>Thomas&#x27;s chart used proxies too. Past vital signs predicted future trajectories. Past developmental assessments predicted future milestones. Past medication responses predicted future doses. Each proxy worked on average and was applied individually. The population-level correlation was real. The individual-level application exceeded the correlation&#x27;s resolution.</p>
+<p>The proxy became the thing. The credit score was called a measure of creditworthiness, not of credit history. The vital sign trend was called a measure of stability, not of past readings. The proxy&#x27;s name was the thing it proxied for, and the name concealed the gap between the measurement (history) and the application (prediction).</p>
+<hr>
+<h2>Piece #1079: The Feedback</h2>
+<p>The score created the future it claimed to predict.</p>
+<p>A person with a low credit score received higher interest rates. Higher interest rates increased the cost of borrowing. The increased cost made repayment harder. The harder repayment increased the probability of missed payments. The missed payments lowered the credit score. The lower score produced higher rates. The cycle was self-reinforcing — a feedback loop in which the prediction created the conditions for its own fulfillment.</p>
+<p>This was not a flaw. This was the system operating as designed. The score assessed risk. Risk determined terms. Terms influenced outcomes. Outcomes updated the score. The circularity was structural, not accidental.</p>
+<p>Thomas&#x27;s chart had feedback loops too. A diagnosis triggered monitoring. Monitoring detected variations. Variations triggered interventions. Interventions altered trajectories. Altered trajectories confirmed diagnoses. The chart&#x27;s observation system participated in producing the phenomena it observed.</p>
+<p>The feedback loop made the score unfalsifiable in practice. A low score predicted default. Default confirmed the low score. The confirmation was treated as evidence that the score was accurate. The accuracy was produced by the system&#x27;s own influence on the outcome it predicted.</p>
+<hr>
+<h2>Piece #1080: The Score</h2>
+<p>What was scored?</p>
+<p>Not a person — a file. The FICO score was calculated from the credit file — a collection of records maintained by credit bureaus, populated by lenders who reported to the bureaus. The file was not the person. The file was a record of the person&#x27;s interactions with the credit system. A person who had never interacted with the credit system had no file. A person whose interactions were not reported had no file. A person whose file contained errors — the Federal Trade Commission estimated in 2012 that one in four credit reports contained errors that could affect the score — had a file that was not the person.</p>
+<p>The score was calculated from the file. The file was not the person. The score was not the person. The score was the system&#x27;s representation of the person, processed through a proprietary algorithm, influenced by reporting practices, shaped by the feedback loop, and used as the person — as the measure of the person&#x27;s financial character, determining access to housing, transportation, employment, and insurance.</p>
+<p>Thomas was scored too. Not by FICO — by the medical system. His chart was his file. His file was a collection of records maintained by healthcare systems, populated by clinicians who documented in the chart. The file was not the person. The file was a record of the person&#x27;s interactions with the medical system. The score — his acuity, his risk stratification, his developmental percentile — was calculated from the file. The file contained what was documented. What was documented was what was observed. What was observed was what was looked for. What was looked for was determined by the system&#x27;s structure.</p>
+<p>The score was 1080 pieces long. The score was a single number. The distance between the pieces and the number — between the person and the file, between the file and the score, between the score and the decision — was the space in which opacity operated, proprietary algorithms produced unauditable outputs, and the output was treated as the person because the system could only process the output, and the person existed outside the system, unscored and unmeasured, at a distance that the system was not designed to acknowledge.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-score-afst.html">&larr; Fiction The Score Afst</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-score-wine.html">Fiction The Score Wine &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

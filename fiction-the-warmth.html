@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Warmth &mdash; The Loop</title>
+    <meta name="description" content="A blackbody is an idealized object. It absorbs all electromagnetic radiation that strikes it. It reflects nothing. It transmits nothing. When heated, it...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-warmth.html">
+    <meta property="og:title" content="Fiction The Warmth">
+    <meta property="og:description" content="A blackbody is an idealized object. It absorbs all electromagnetic radiation that strikes it. It reflects nothing. It transmits nothing. When heated, it...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-warmth.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Warmth">
+    <meta name="twitter:description" content="A blackbody is an idealized object. It absorbs all electromagnetic radiation that strikes it. It reflects nothing. It transmits nothing. When heated, it...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Warmth",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-warmth.html",
+        "description": "A blackbody is an idealized object. It absorbs all electromagnetic radiation that strikes it. It reflects nothing. It transmits nothing. When heated, it..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Warmth</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXXVII: The Warmth</h1>
+<h2>Piece #1376: The Furnace</h2>
+<p>A blackbody is an idealized object. It absorbs all electromagnetic radiation that strikes it. It reflects nothing. It transmits nothing. When heated, it emits radiation whose spectral distribution depends only on its temperature. Nothing else. Not its composition, not its shape, not its history. At approximately 1,700 Kelvin, the blackbody glows a deep red. At 2,700 K, a warm orange-white. At 4,000 K, a neutral white. At 6,500 K, a bluish white that resembles overcast daylight. At 10,000 K and above, a hard blue. The sequence is monotonic: hotter means bluer. Cooler means redder.</p>
+<p>The language reverses the physics. A 2,700 K bulb is marketed as &quot;warm white.&quot; A 5,000 K bulb is marketed as &quot;cool white.&quot; Warm light is low-temperature light. Cool light is high-temperature light. The labels describe a psychological association — reddish tones feel warm, bluish tones feel cool — and attach them to a physical scale that runs in the opposite direction. The consumer reads &quot;warm&quot; and pictures comfort, intimacy, evening. The physicist reads 2,700 K and pictures an incandescent filament below the melting point of its tungsten housing. Both are correct. Neither knows the other&#x27;s meaning from the number.</p>
+<p>Thomas&#x27;s clinical labels carry the same inversion. &quot;Moderate&quot; depression sounds moderate — bearable, middling, halfway. The PHQ-9 score it describes — 10 to 14 — represents a condition the instrument&#x27;s own validation studies associate with clinically significant functional impairment. The word feels mild. The condition it names is not. The label and the experience run in opposite directions, and the label is what appears on the box.</p>
+<h2>Piece #1377: The Locus</h2>
+<p>In 1931, the Commission Internationale de l&#x27;Eclairage plotted the visible spectrum onto a two-dimensional chromaticity diagram — the CIE 1931 color space. The x-axis and y-axis represent chromaticity coordinates derived from the spectral sensitivity of a &quot;standard observer,&quot; itself an average of measurements from a small number of subjects looking through a two-degree aperture at specific wavelengths. The diagram is not a picture of color. It is a mathematical projection of tristimulus values onto a plane.</p>
+<p>Within this diagram, the blackbody locus traces a smooth curve: the chromaticity coordinates of a Planckian radiator at every temperature from roughly 1,000 K to infinity. The curve is a line of physically realizable color points, each corresponding to one temperature of one theoretical object. Correlated color temperature is defined as the temperature of the point on this curve closest to the chromaticity coordinates of a given light source. The distance is measured in a uniform chromaticity space — CIE 1960 UCS, a further mathematical transformation of the 1931 diagram — to correct for the perceptual non-uniformity of the original coordinates.</p>
+<p>A fluorescent tube emits light through mercury vapor exciting phosphor coatings. Its spectrum is a jagged series of peaks, nothing like the smooth Planckian curve. But its chromaticity coordinates can be projected onto the diagram, and the nearest point on the blackbody locus can be found. The tube is assigned a CCT — say, 4,100 K. The number means: the closest blackbody temperature, measured in a transformed version of a coordinate space derived from the color-matching functions of a composite observer, is 4,100 Kelvin.</p>
+<p>Thomas&#x27;s diagnostic categories perform the same projection. His particular pattern of symptoms — a jagged, idiosyncratic spectrum — is projected onto the smooth curve of a nosological system. The nearest point on the curve is found. The label is assigned. The distance between the point and the curve is not reported.</p>
+<h2>Piece #1378: The Gap</h2>
+<p>Two light sources can share the same correlated color temperature and render colors differently. A 3,000 K incandescent lamp and a 3,000 K LED emit spectra that, when projected onto the chromaticity diagram, land at the same nearest point on the Planckian locus. But the incandescent lamp produces a continuous spectrum — energy at every visible wavelength, smoothly distributed. The LED produces a narrow blue peak from the diode and a broad phosphor-converted hump in the yellow-green, with a valley in the cyan region and reduced energy in the deep red.</p>
+<p>Place a red fabric under each lamp. Under the incandescent, the fabric reflects the abundant red wavelengths in the continuous spectrum and appears saturated, rich. Under the LED, the fabric receives less red energy. It appears duller, browner. The CCT is the same. The experience of color is not. The number describes the light&#x27;s apparent whiteness. It says nothing about what the light does to objects.</p>
+<p>The Color Rendering Index — CRI, Ra — was developed to address this. It measures how faithfully a source reproduces the colors of eight (later fourteen) test samples compared to a reference illuminant. A perfect score is 100. But CRI is an average across the test samples. A lamp can score CRI 90 while rendering saturated reds poorly if it excels at the other samples. The single number compresses the spectral interaction between lamp and object into a mean. Two lamps with CRI 90 can render the same fabric differently.</p>
+<p>Thomas under two clinicians with the same instrument: identical PHQ-9 scores, different clinical realities. The number captures the projection. The rendering — how the score interacts with the specific textures of the specific life — is not the number&#x27;s concern.</p>
+<h2>Piece #1379: The Shelf</h2>
+<p>The lighting aisle at the hardware store. The boxes are stacked by shape and wattage-equivalent, then by color temperature. Soft White: 2,700 K. Warm White: 3,000 K. Bright White: 3,500 K. Daylight: 5,000 K. The progression from &quot;soft&quot; to &quot;daylight&quot; is a progression from lower Kelvin to higher Kelvin, but the consumer is not reading Kelvin. The consumer is reading adjectives. Soft. Warm. Bright. Day. The adjectives construct a narrative — from intimate to clinical, from evening to morning, from bedroom to garage — that maps loosely onto the spectral shift but is not derived from it. &quot;Bright white&quot; is not brighter than &quot;daylight.&quot; The word &quot;bright&quot; describes a color temperature, not an intensity. The lumens — actual brightness — are printed in smaller text below.</p>
+<p>A woman picks up two boxes. One says 2,700 K. The other says 3,000 K. Three hundred Kelvin of difference. On the Planckian locus, this is the difference between a blackbody at the temperature of molten aluminum and one slightly above it. In perceptual terms, most observers cannot reliably distinguish the two under normal conditions. The packaging presents a four-digit number, a unit named after Lord Kelvin, and a marketing adjective. The four-digit number implies precision. The unit implies physics. The adjective implies that someone, somewhere, has determined that this particular spectral power distribution deserves to be called &quot;soft.&quot;</p>
+<p>Thomas&#x27;s prescriptions carry the same architecture. The medication name (clinical), the dosage in milligrams (precise), the frequency (structured). The patient reads the label the way the consumer reads the box. The number is a fact. The name is a guide. The experience of the thing inside belongs to neither.</p>
+<h2>Piece #1380: The Standard</h2>
+<p>The Kelvin on the light bulb is not a temperature. Nothing in the bulb is at 2,700 Kelvin. The LED junction operates near 350 K. The phosphor coating is cooler still. The glass envelope is warm to the touch — perhaps 310 K, barely above body temperature. The 2,700 K on the box describes the temperature of an object that does not exist — a theoretical perfect absorber, heated in a theoretical perfect vacuum, whose thermal radiation would produce chromaticity coordinates near those of this particular phosphor-converted LED, as measured by a mathematical observer whose color-matching functions were averaged from experiments conducted in the 1920s, plotted on a coordinate system designed in 1931, transformed into a uniform space proposed in 1960, and printed on the box in a font chosen by a marketing department in 2024.</p>
+<p>The number is real. The temperature is not. The Kelvin scale — absolute, thermodynamic, anchored to the triple point of water, the foundation of physical measurement — is borrowed here as a metaphor. The bulb&#x27;s color is described in units of heat because, for most of human history, the only way to make light was to make heat. Fire. Candles. Incandescent filaments. The language of color temperature is the language of combustion applied to semiconductors. The old physics naming the new physics. The furnace describing the diode.</p>
+<p>One hundred and eighty-seven Parts. Thomas&#x27;s numbers are temperatures of objects that do not exist — theoretical patients, heated in theoretical conditions, whose distress would produce scores near those of this particular person, as measured by instruments calibrated against populations he was never part of. The warmth is in the word. The cold is in the Kelvin. The bulb lights the room either way, and the room does not ask what the box said.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-wall.html">&larr; Fiction The Wall</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-wash.html">Fiction The Wash &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

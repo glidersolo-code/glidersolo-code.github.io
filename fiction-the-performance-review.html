@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Performance Review &mdash; The Loop</title>
+    <meta name="description" content="Thomas fills out the self-assessment. The form has seven competencies: communication, teamwork, technical expertise, leadership, initiative, adaptability,...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-performance-review.html">
+    <meta property="og:title" content="Fiction The Performance Review">
+    <meta property="og:description" content="Thomas fills out the self-assessment. The form has seven competencies: communication, teamwork, technical expertise, leadership, initiative, adaptability,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-performance-review.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Performance Review">
+    <meta name="twitter:description" content="Thomas fills out the self-assessment. The form has seven competencies: communication, teamwork, technical expertise, leadership, initiative, adaptability,...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Performance Review",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-performance-review.html",
+        "description": "Thomas fills out the self-assessment. The form has seven competencies: communication, teamwork, technical expertise, leadership, initiative, adaptability,..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Performance Review</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXLI: The Rating</h1>
+<h2>Piece #2646: The Form</h2>
+<p>Thomas fills out the self-assessment. The form has seven competencies: communication, teamwork, technical expertise, leadership, initiative, adaptability, results orientation. Each competency has five levels. Each level has behavioral descriptors. Thomas reads the descriptors for &quot;exceeds expectations&quot; in communication and wonders whether his understanding of the words matches his manager&#x27;s understanding of the words.</p>
+<p>It does not. Scullen, Mount, and Goff, 2000: 62% of the variance in performance ratings is attributable to the individual rater. The form&#x27;s precision — seven competencies, five levels, behavioral anchors — produces a number that is mostly a portrait of the person holding the pen.</p>
+<h2>Piece #2647: The Lens</h2>
+<p>Thomas&#x27;s manager rates Thomas a 4 out of 5 on technical expertise. Thomas&#x27;s manager rates a colleague a 3. Thomas and the colleague have identical output metrics. Thomas&#x27;s manager sees Thomas as stronger because Thomas communicates about the work in a way that matches the manager&#x27;s model of what technical strength looks like.</p>
+<p>Mount, Judge, Scullen, Moody, and Lloyd: the idiosyncratic rater effect. Each manager develops a perceptual lens. The lens determines what performance looks like before the performance occurs. The rating does not measure the employee. The rating measures the fit between the employee&#x27;s behavior and the manager&#x27;s prior model of what good performance resembles.</p>
+<p>Thomas&#x27;s 4 is not about Thomas&#x27;s work. Thomas&#x27;s 4 is about Thomas&#x27;s manager&#x27;s idea of work.</p>
+<h2>Piece #2648: The Curve</h2>
+<p>Thomas&#x27;s organization uses forced ranking. The top 20% receive the highest rating. The middle 70% receive the middle rating. The bottom 10% are placed on performance improvement plans. The distribution is mandated regardless of actual performance.</p>
+<p>Thomas considers: if every member of his team performed excellently, the bottom 10% would still be placed on improvement plans. The curve does not measure performance — it imposes a shape. The shape requires that someone fail. The someone is determined by the same rater effect that determined the absolute ratings, now compressed into relative position.</p>
+<p>The curve was designed to correct for rater inflation. The correction does not reduce the rater effect. The correction changes its expression. Instead of inflating everyone, the manager must sort. The sorting criteria remain 62% the manager&#x27;s perception.</p>
+<h2>Piece #2649: The Conversation</h2>
+<p>Thomas sits across from his manager. The manager has prepared talking points. Thomas has prepared a list of accomplishments. The conversation lasts 45 minutes. The rating was determined in the first 5 minutes.</p>
+<p>The remaining 40 minutes are the performance the review performs. The seriousness of the conversation — the closed door, the calendar block, the formal document — signals that the organization takes performance seriously. The signal is the function. Whether the number attached to the signal has predictive validity is a question the conversation&#x27;s gravity makes impolite to ask.</p>
+<p>Thomas nods. The manager nods. The rating is entered into the system. The system treats the rating as data. The data is 62% rater variance, formatted as employee performance, stored as organizational knowledge.</p>
+<h2>Piece #2650: The File</h2>
+<p>Thomas&#x27;s rating goes into his personnel file. Next year, a new rating will be added. The year after, another. The file will accumulate a history of numbers. The history will be read as Thomas&#x27;s performance trajectory.</p>
+<p>The trajectory is a composite of rater lenses. Year one: Manager A&#x27;s perceptual tendencies. Year two: Manager B&#x27;s. Year three: Manager A again but after a promotion that changed their calibration. The file tells the story of Thomas&#x27;s career. The story is written by a sequence of raters, each contributing 62% of themselves and some smaller fraction of Thomas.</p>
+<p>When Thomas is considered for promotion, the file is reviewed. The reviewers see consistency or inconsistency. They see growth or stagnation. They see what the numbers show. The numbers show the raters. The raters are invisible. Thomas is visible. The visibility is the concealment.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-percentile.html">&larr; Fiction The Percentile</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-pipe.html">Fiction The Pipe &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

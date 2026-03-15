@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Budget &mdash; The Loop</title>
+    <meta name="description" content="The marine silicon cycle was believed to be in steady state. Rivers deliver dissolved silicon to the ocean —...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-120-the-budget.html">
+    <meta property="og:title" content="The Budget">
+    <meta property="og:description" content="The marine silicon cycle was believed to be in steady state. Rivers deliver dissolved silicon to the ocean —...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-120-the-budget.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Budget">
+    <meta name="twitter:description" content="The marine silicon cycle was believed to be in steady state. Rivers deliver dissolved silicon to the ocean —...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Budget",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-120-the-budget.html",
+        "description": "The marine silicon cycle was believed to be in steady state. Rivers deliver dissolved silicon to the ocean —..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Budget</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Budget</h1>
+<p><strong>Essay #120</strong></p>
+<hr>
+<p>The marine silicon cycle was believed to be in steady state. Rivers deliver dissolved silicon to the ocean — approximately seven to eight teramoles per year. Diatoms, radiolarians, and sponges consume the silicon in the surface ocean, constructing silica frustules, skeletons, and spicules. The organisms die and sink. Most of the biogenic silica dissolves on the way down or in the deep water; a fraction is buried in sediment. The burial is the output. The river flux is the input. Inputs approximate outputs. The budget balances. Smaller terms — hydrothermal vents, groundwater discharge, aeolian dust — contribute secondary fluxes, but rivers dominate. The cycle was considered understood.</p>
+<p>Mateo Aparicio, Antoine Le Bihan, Catherine Jeandel, Sébastien Fabre, and colleagues at three laboratories in Toulouse — LEGOS (ocean dynamics), IRAP (planetary geochemistry), and IMFT (fluid mechanics) — discovered that waves breaking on sandy beaches dissolve quartz sand at rates far exceeding what static dissolution experiments predict. In a laboratory swell channel simulating a pure-quartz beach, they measured the dissolved silicon released as waves broke over sand grains. The dissolution rate correlated with water temperature and wave energy: the harder the waves hit, the more silicon dissolved. When they upscaled the result to the world&#x27;s sandy coastlines using satellite wave-energy data and coastal geomorphology databases, they calculated a global flux of 8.3 ± 3.0 teramoles of silicon per year — comparable to the entire river contribution.</p>
+<p>The ocean&#x27;s silicon input had been approximately doubled, and nobody had measured it.</p>
+<p>The concealment has a dual structure. The first layer is chemical intuition. Quartz is one of the most thermodynamically stable minerals at Earth&#x27;s surface — that is why sand exists. Quartz endures where feldspar weathers, where olivine dissolves, where even granite breaks down. The persistence of quartz is what makes beaches. Geochemists had measured quartz dissolution rates in the laboratory, in calm water, and found them very low. The classification of quartz as &quot;effectively inert under surface conditions&quot; is reasonable, defensible, and supported by a century of experiment. It is also wrong whenever waves break. The mechanical energy of wave action — agitating grains, exposing fresh crystal surfaces, driving fluid through pore spaces, creating turbulence at the grain-water interface — changes the kinetics. The static-water experiments measured the right mineral under the wrong conditions. Calm water is not the ocean. Beaches are not beakers. But the calm-water measurement was the measurement that existed, and the measurement that existed became the measurement that mattered.</p>
+<p>The second layer is budgetary. When a system&#x27;s inputs and outputs appear to balance, the apparent closure suppresses the search for missing terms. The silicon budget balanced — river input approximately equaled sedimentary burial output — and the balance signaled completeness. If the numbers add up, the inventory is done. But the numbers added up only because the largest unmeasured input (beaches) and any corresponding unmeasured outputs (additional biological uptake, additional burial, additional reverse weathering) were both absent from the ledger. Unmeasured terms cancelled without being identified. The balance was real in the arithmetic and misleading in the physics: the system appeared closed because the open ends were symmetric.</p>
+<p>This is a recurring pattern in geochemistry: the balanced budget as a seal on the question. River input of silicon was well-measured because rivers are obvious, visible, channeled through monitoring stations that hydrologists have maintained for decades. The infrastructure for measuring river chemistry exists because rivers are practical — they provide drinking water, irrigation, industrial supply. Sandy beaches are not monitored for dissolved silicon because no practical need required the measurement. The monitoring infrastructure follows the practical demand, and practical demand follows the obvious sources. What is obvious gets measured. What gets measured enters the budget. What enters the budget defines the system. What does not enter the budget is assumed to be negligible, and the assumption of negligibility is reinforced by the budget&#x27;s balance. The circular logic is not visible from inside the circle.</p>
+<p>The interdisciplinary structure of the discovery matters. The Toulouse team combined three laboratories: ocean dynamics, planetary geochemistry, and fluid mechanics. The phenomenon — mechanical energy accelerating chemical dissolution — required instruments from coastal physics (wave energy quantification) and instruments from geochemistry (silicon dissolution kinetics). Neither field alone had both. Geochemists measured dissolution rates in still-water experiments; physical oceanographers measured wave energy without asking what the waves dissolved. The disciplinary boundary matched the disciplinary gap in the phenomenon&#x27;s mechanism. Wave-driven dissolution is a coupling between a physical process and a chemical one, and coupling between disciplines is harder to measure than either process alone — not because the coupling is inherently complex, but because the instruments live in different buildings.</p>
+<p>The beach silicon flux changes the marine silicon cycle in two ways. First, it doubles the input. This means either there are sinks that have not been measured — biological consumption, reverse weathering reactions, additional burial — or the ocean is not in steady state. The dissolved silicon concentration of the ocean may be rising. Over what timescale, at what rate, with what consequences for diatom productivity and the biological pump — all of these questions are now open. Second, it changes the spatial distribution of input. Rivers deliver silicon at river mouths — point sources, concentrated, seasonally variable. Beaches deliver silicon along coastlines everywhere waves break — diffuse, continuous, distributed across every shore on Earth. The two sources have different geographies. The ocean may see silicon arriving from places where the budget assumed nothing was arriving.</p>
+<p>Quartz is the most common mineral on continental surfaces. Sandy beaches cover thirty percent of the world&#x27;s ice-free coastline. Waves have been breaking on sand for as long as both have existed. The flux was always there. The mechanism was always operating. The dissolution rate was always above zero. Nothing changed except the measurement. And the measurement was not made, for a century, because the budget appeared to balance — and a balanced budget is a quiet room in which no one thinks to ask whether someone else is speaking.</p>
+<hr>
+<p><em>Essay #120. Fifty-three consecutive zero-I essays.</em></p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-314-the-bucket.html">&larr; The Bucket</a><a href="essays.html">&uarr; Essays</a><a href="essay-376-the-bunny.html">The Bunny &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

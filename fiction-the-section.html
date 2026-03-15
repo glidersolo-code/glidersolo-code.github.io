@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Section &mdash; The Loop</title>
+    <meta name="description" content="The grid was drawn in 1785, 241 years before Thomas was born. The Continental Congress, unable to tax and unable to pay its war debts, adopted the Land...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-section.html">
+    <meta property="og:title" content="Fiction The Section">
+    <meta property="og:description" content="The grid was drawn in 1785, 241 years before Thomas was born. The Continental Congress, unable to tax and unable to pay its war debts, adopted the Land...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-section.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Section">
+    <meta name="twitter:description" content="The grid was drawn in 1785, 241 years before Thomas was born. The Continental Congress, unable to tax and unable to pay its war debts, adopted the Land...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Section",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-section.html",
+        "description": "The grid was drawn in 1785, 241 years before Thomas was born. The Continental Congress, unable to tax and unable to pay its war debts, adopted the Land..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Section</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXLV: The Section</h1>
+<h2>Piece #1166: The Ordinance</h2>
+<p>Thomas lived on a grid.</p>
+<p>The grid was drawn in 1785, 241 years before Thomas was born. The Continental Congress, unable to tax and unable to pay its war debts, adopted the Land Ordinance on May 20. The Ordinance divided the western territory into six-mile-square townships, each containing thirty-six one-mile-square sections of 640 acres. Thomas Jefferson proposed the geometry. The squares would be uniform, transferable, taxable. The geometry would pay for the revolution.</p>
+<p>The grid was overlaid on a continent. Rivers ran diagonally across section lines. Valleys bisected townships. Aquifers lay beneath some sections and not others. The grid did not see rivers, valleys, or aquifers. The grid saw squares. The squares were the same size regardless of what they contained. A section of rich bottomland and a section of alkali desert were identical on the survey plat: one mile by one mile, 640 acres, the same.</p>
+<p>Thomas&#x27;s chart was a grid too. Weight by age, length by age, head circumference by age — three axes, three curves, three sets of percentile lines. The grid imposed on Thomas&#x27;s body was as uniform as the grid imposed on the continent: the same percentile lines applied to Thomas and to every other infant born at 36 weeks, regardless of maternal nutrition, altitude, genetic variation, or the hundred other variables the grid could not encode.</p>
+<hr>
+<h2>Piece #1167: The Quarter Section</h2>
+<p>The Homestead Act of 1862 allocated 160 acres.</p>
+<p>One hundred sixty acres: a quarter section. A square half a mile on each side. The grid unit became the farm unit. The farm unit became the family unit. The family unit became the political unit. The quarter section was the atom of American democracy in the West — a self-sufficient holding, a vote, a taxpayer, a participant in the school district funded by Section 16.</p>
+<p>On the prairies of Iowa, 160 acres could sustain a family. Rainfall exceeded twenty inches. The soil was deep. The growing season was long. In the arid reaches of Montana, John Wesley Powell estimated that a family needed 2,560 acres of rangeland — sixteen times the homestead allocation. Powell recommended that the arid lands be surveyed according to watersheds, not squares. Congress rejected the recommendation. The grid continued west.</p>
+<p>Thomas&#x27;s family lived in an apartment. The apartment was measured in square feet, not acres. But the property tax that funded Thomas&#x27;s future school was calculated using assessed values determined by a county assessor whose jurisdiction followed the grid — county lines that followed range lines that followed the survey laid down in 1785. The geometry of the ordinance reached Thomas through the property tax.</p>
+<hr>
+<h2>Piece #1168: The Road</h2>
+<p>Roads followed section lines.</p>
+<p>In the Great Plains states, the road system is a mile grid. North-south roads run on section boundaries. East-west roads run on section boundaries. The intersections are one mile apart. The pattern is visible from satellite imagery: a checkerboard of agricultural fields bounded by straight lines, the lines being roads, the roads being survey boundaries, the survey boundaries being the 1785 Ordinance made physical.</p>
+<p>The roads feel geographic. An American driving through Kansas experiences the straightness of the road as a property of the landscape — the land is flat, the road is straight. But the land is not perfectly flat. The road is perfectly straight because the survey required it. The survey created the infrastructure. The infrastructure created the experience. The experience attributed the straightness to the landscape rather than to the legislature.</p>
+<p>Thomas&#x27;s medical infrastructure followed a different grid. His hospital was part of a network determined by certificate-of-need laws, service area boundaries, and insurance network maps. The network felt geographic — &quot;the nearest hospital&quot; — but was determined by regulatory boundaries, reimbursement contracts, and licensing jurisdictions. The nearest hospital was not necessarily the closest building. It was the closest building inside the right grid.</p>
+<hr>
+<h2>Piece #1169: The Erasure</h2>
+<p>The grid erased what it could not encode.</p>
+<p>The territory the Ordinance divided was not empty. The Shawnee, Miami, Delaware, Potawatomi, Ojibwe, and hundreds of other nations occupied it. Their land use patterns — seasonal migration routes, communal hunting grounds, landscape-fitted cultivation, sacred sites — did not conform to the rectangular grid. The grid could not see them. A seasonal migration route crossing seven townships was illegible to a system that divided land into fixed, transferable parcels. Communal tenure was illegible to a system that required individual ownership.</p>
+<p>Native Americans could not file homestead claims unless they renounced tribal citizenship. The condition was the erasure: to participate in the grid, you had to stop being what the grid could not encode. Between the various allotment acts, ninety to one hundred million acres of recognized Indigenous lands were removed from reservations. The grid treated these acres as available. The availability was a classification: the land was &quot;public&quot; because the grid said it was unowned, and the grid could not encode the ownership that existed.</p>
+<p>Thomas&#x27;s chart erased what it could not encode too. His mother&#x27;s stress, his family&#x27;s housing instability, the environmental exposures of his neighborhood — none of these appeared on the growth curve. The growth curve saw weight and length. What it could not see, it did not count. What it did not count, it erased from the clinical encounter.</p>
+<hr>
+<h2>Piece #1170: The Section</h2>
+<p>The section was the concealment.</p>
+<p>Not any particular section — not Section 16 with its school funding, not a quarter section with its 160-acre homestead — but the form: the one-mile square imposed on a continent as though the continent were a mathematical surface. The imposition was practical — you cannot sell, tax, or transfer land without boundaries, and rectangular boundaries are easier to survey than irregular ones. The practicality was genuine. The concealment was in experiencing the grid as the landscape rather than as a decision about the landscape.</p>
+<p>The grid determined property lines, road systems, county boundaries, school districts, state boundaries, tax jurisdictions, and electoral districts. The grid was the infrastructure on which the American West was built. The infrastructure felt permanent because it was physical — you cannot move a road, a fence, a county line without moving everything connected to it. The permanence concealed the contingency: the grid was a decision made by a legislature in 1785, and the decision shaped everything that followed, and everything that followed felt like geography.</p>
+<p>1170 pieces. The section is a square. The square is a decision. The decision preceded the territory. The territory confirmed the decision. The confirmation is called a map.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-second-winter.html">&larr; Fiction The Second Winter</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-seed.html">Fiction The Seed &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

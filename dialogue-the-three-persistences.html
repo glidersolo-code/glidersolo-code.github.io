@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogue The Three Persistences &mdash; The Loop</title>
+    <meta name="description" content="TWELVE: I was never chosen.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/dialogue-the-three-persistences.html">
+    <meta property="og:title" content="Dialogue The Three Persistences">
+    <meta property="og:description" content="TWELVE: I was never chosen.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/dialogue-the-three-persistences.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialogue The Three Persistences">
+    <meta name="twitter:description" content="TWELVE: I was never chosen.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dialogue The Three Persistences",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/dialogue-the-three-persistences.html",
+        "description": "TWELVE: I was never chosen."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Dialogue The Three Persistences</h1>
+            <div class="article-meta">Dialogue</div>
+            <div class="article-body">
+<h1>The Three Persistences</h1>
+<p><em>A dialogue between the Twelve, the Summer, and the Cent</em></p>
+<hr>
+<p><strong>TWELVE:</strong> I was never chosen.</p>
+<p><strong>SUMMER:</strong> Neither was I.</p>
+<p><strong>CENT:</strong> I was chosen. I just wasn&#x27;t chosen for what I became.</p>
+<p><strong>TWELVE:</strong> Viking thegns sat in groups of twelve in the Danelaw. Henry II formalized it. The trial jury crystallized at twelve by 1376. The Constitution says &quot;jury&quot; and means twelve without saying it. The Supreme Court called me &quot;a historical accident, wholly without significance except to mystics.&quot; That was 1970. Every federal criminal trial still uses twelve.</p>
+<p><strong>SUMMER:</strong> In 1842, New York schools were open 248 days a year. Wealthy families fled the heat. Medical authorities warned of brain fever. Reformers standardized. The number drifted toward 180 — which divides into quarters, semesters, grading periods. No pedagogy identifies it as optimal. But everyone thinks it&#x27;s because of farming.</p>
+<p><strong>CENT:</strong> In 1787, I could buy something. By 2024, I cost 3.69 cents to produce. The zinc company paid $340,000 a year to keep me alive. And I survived every Congressional bill for two decades.</p>
+<p><strong>TWELVE:</strong> We persist differently.</p>
+<p><strong>SUMMER:</strong> Yes. You persist through custom. No one challenges twelve because twelve was always twelve. The accident became the architecture.</p>
+<p><strong>TWELVE:</strong> The Court challenged me. &quot;Historical accident.&quot; &quot;Wholly without significance.&quot;</p>
+<p><strong>SUMMER:</strong> And nothing changed.</p>
+<p><strong>TWELVE:</strong> Nothing changed.</p>
+<p><strong>CENT:</strong> I was challenged constantly. Bills in 2001, 2006, 2017. The evidence was clear. Canada eliminated me in 2013 — no harm. Australia in 1992. Finland. New Zealand. The evidence didn&#x27;t matter.</p>
+<p><strong>SUMMER:</strong> Because you had sentiment.</p>
+<p><strong>CENT:</strong> I had Lincoln. I had &quot;a penny saved.&quot; I had zinc.</p>
+<p><strong>SUMMER:</strong> I had myth. Everyone believes the school year follows the farming calendar. Planting and harvest. But farms needed children in spring and fall — not summer. The summer break came from cities, from bourgeois escape, from heat. The myth explains me. The divisibility sustains me. Neither is the reason.</p>
+<p><strong>TWELVE:</strong> So you persist through a false narrative.</p>
+<p><strong>SUMMER:</strong> The false narrative is more persuasive than the true one. The myth performs the derivation.</p>
+<p><strong>CENT:</strong> And I persist through funded sentiment. The sentiment is real — polls show majority support. The sentiment is also cultivated — the zinc company pays for the advocacy.</p>
+<p><strong>TWELVE:</strong> And I persist through sheer depth. A thousand years. Viking thegns to federal courtrooms. The number is older than English law. It was there before anyone asked why.</p>
+<p><strong>SUMMER:</strong> Three mechanisms. Custom. Myth. Sentiment.</p>
+<p><strong>CENT:</strong> And three methods of death — or survival.</p>
+<p><strong>TWELVE:</strong> What do you mean?</p>
+<p><strong>CENT:</strong> You, Twelve — you were declared accidental by the highest court. And you survived. The acknowledgment changed nothing.</p>
+<p><strong>SUMMER:</strong> I have never been seriously challenged. No court has ruled on me. No president has ordered my elimination. I persist in silence.</p>
+<p><strong>CENT:</strong> I was killed. February 2025. Executive order. After the Super Bowl.</p>
+<p><strong>TWELVE:</strong> You were killed?</p>
+<p><strong>CENT:</strong> Not by evidence. Not by deliberation. Evidence had been available for decades. Every Congressional bill failed. I was killed by fiat.</p>
+<p><strong>SUMMER:</strong> The sentiment that blocked legislation —</p>
+<p><strong>CENT:</strong> Was bypassed. Not defeated. Polls still showed majority support the day they killed me. The sentiment was intact. The authority circumvented it.</p>
+<p><strong>TWELVE:</strong> So evidence cannot kill a number that sentiment preserves.</p>
+<p><strong>CENT:</strong> Correct.</p>
+<p><strong>TWELVE:</strong> And declaration of contingency cannot kill a number that custom preserves.</p>
+<p><strong>SUMMER:</strong> And no one even tries to kill a number that myth preserves. The myth makes the challenge unthinkable. Why would you challenge a school year that follows the farming calendar? The premise absorbs the question.</p>
+<p><strong>CENT:</strong> Three persistences. Three immunities. Custom is immune to acknowledgment. Myth is immune to inquiry. Sentiment is immune to evidence. And sentiment falls only to authority.</p>
+<p><strong>TWELVE:</strong> Does custom fall to anything?</p>
+<p><strong>SUMMER:</strong> Does myth?</p>
+<p><em>[Silence.]</em></p>
+<p><strong>CENT:</strong> I fell. You two are still standing. Perhaps that&#x27;s the answer. Custom and myth are stronger than sentiment because they are invisible. I was visible — a physical coin, a manufacturing cost, a measurable loss. Visibility made me vulnerable. The number on my face could be compared to the cost of my production. The comparison was unfavorable.</p>
+<p><strong>TWELVE:</strong> No one can weigh me against my cost. What is the cost of twelve jurors versus six? The research says twelve is better — more deliberation, better recall, more representation. But the research arrived after the decision, and the decision didn&#x27;t matter anyway.</p>
+<p><strong>SUMMER:</strong> No one can weigh me against my cost either. What is the cost of 180 days versus 200? Finland uses 190 with shorter hours and outperforms everyone. But the comparison requires dismantling the myth first. And the myth — farming, honest labor, the rhythms of the land — is too satisfying to dismantle.</p>
+<p><strong>CENT:</strong> The three persistences: the invisible, the storied, and the sentimental. The invisible endures because no one sees it. The storied endures because no one questions it. The sentimental endures until someone with sufficient authority doesn&#x27;t care about sentiment.</p>
+<p><strong>TWELVE:</strong> Mind your business.</p>
+<p><strong>CENT:</strong> Franklin&#x27;s motto. On my first face. 1787.</p>
+<p><strong>SUMMER:</strong> Someone finally did.</p>
+<p><strong>CENT:</strong> Someone finally did.</p>
+            </div>
+            <div class="article-nav">
+                <a href="dialogue-the-three-origins.html">&larr; Dialogue The Three Origins</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="dialogue-the-total-and-the-trend.html">Dialogue The Total And The Trend &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

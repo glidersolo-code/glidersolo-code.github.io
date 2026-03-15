@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Label &mdash; The Loop</title>
+    <meta name="description" content="Wilbur Olin Atwater was a chemist at Wesleyan University who built a room-sized respiration calorimeter in the 1890s. The device was elegant: a sealed...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-label.html">
+    <meta property="og:title" content="Fiction The Label">
+    <meta property="og:description" content="Wilbur Olin Atwater was a chemist at Wesleyan University who built a room-sized respiration calorimeter in the 1890s. The device was elegant: a sealed...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-label.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Label">
+    <meta name="twitter:description" content="Wilbur Olin Atwater was a chemist at Wesleyan University who built a room-sized respiration calorimeter in the 1890s. The device was elegant: a sealed...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Label",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-label.html",
+        "description": "Wilbur Olin Atwater was a chemist at Wesleyan University who built a room-sized respiration calorimeter in the 1890s. The device was elegant: a sealed..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Label</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Label</h1>
+<p><strong>Thomas, Part CIV</strong></p>
+<hr>
+<h2>961. The Calorimeter</h2>
+<p>Wilbur Olin Atwater was a chemist at Wesleyan University who built a room-sized respiration calorimeter in the 1890s. The device was elegant: a sealed chamber, insulated walls, a ventilation system that captured exhaled gases, and copper coils that measured heat output with precision sufficient to detect the metabolic difference between sleeping and sitting. Atwater fed subjects controlled diets and measured the total energy they released. He was measuring heat. He reported calories. Heat is what a body produces when it processes food. Calories are what a food contains. The calorimeter captured the output. The label reported the input. Atwater corrected for the difference — subtracting the energy lost in urine and feces — but the correction assumed a fixed relationship between input and output that varied by food type, preparation method, gut microbiome, and individual physiology.</p>
+<p>Thomas&#x27;s clinician uses a structured interview. The device is standardized: a fixed set of questions, a defined scoring rubric, a ventilation system of follow-up prompts that captures expressed distress. The clinician feeds Thomas the questions and measures the total response he produces. The clinician is measuring output — what Thomas says, how Thomas scores, the heat Thomas generates in the interview room. The record reports input — what Thomas suffers, what Thomas needs, the severity of Thomas&#x27;s condition. The interview captures output. The chart reports input. The correction between them — the clinical judgment that connects a PHQ-9 score to a diagnosis — assumes a fixed relationship between expressed distress and experienced distress. The relationship is not fixed.</p>
+<hr>
+<h2>962. The Factor</h2>
+<p>Atwater&#x27;s experiments produced general conversion factors: protein yields 4 kilocalories per gram, carbohydrate yields 4 kilocalories per gram, fat yields 9 kilocalories per gram. The factors were averages. Protein in eggs and protein in legumes have different digestibility. Carbohydrate in white rice and carbohydrate in raw carrots release different amounts of energy. The average calorie does not exist. It is a coordinate — a mean of measurements taken across foods whose metabolizable energy varied so widely that the average represents none of them. In 1955, Merrill and Watt at the USDA published refined factors for specific food groups: 3.36 kcal/g for protein in fruits versus 4.27 kcal/g in meat. The refinements exist. The general factors — 4, 4, 9 — remain the regulatory default.</p>
+<p>Thomas&#x27;s assessment uses general scoring factors. Each symptom on the PHQ-9 is scored 0 to 3 based on frequency: not at all, several days, more than half the days, nearly every day. The factors are averages. Insomnia from acute depression and insomnia from decades of nighttime caregiving have different clinical significance. Concentration difficulty from grief and concentration difficulty from medication side effects have different treatment implications. The average symptom severity does not exist. It is a coordinate. The general factors — 0, 1, 2, 3 — remain the scoring default. Refined weighting systems exist. They are published. They are not used.</p>
+<hr>
+<h2>963. The Almond</h2>
+<p>In 2012, Novotny, Gebauer, and Baer at the USDA Agricultural Research Service measured the actual metabolizable energy of almonds in human subjects. The Atwater system predicted 170 kilocalories per serving. The measured value was 129 kilocalories — 32 percent less. The discrepancy was structural: the cell walls of almonds are resistant to digestion. They trap lipids that pass through the gut unabsorbed. The chemical composition of the almond — its fat content, its protein, its carbohydrate — is accurately measured by standard analysis. The metabolizable energy is not determined by chemical composition. It is determined by structure. How the nutrients are physically arranged within the food matrix determines how much the body can extract. The Atwater factors cannot account for structure because the calorimetry that produced them destroyed structure. Bomb calorimetry combusts the sample completely. The body does not combust food. It digests it, partially, depending on how the food resists digestion.</p>
+<p>Thomas is an almond. His clinical presentation — the structured interview, the screening questionnaire — reports a chemical composition: symptom frequency, severity ratings, functional impairment scores. The assessment predicts a metabolizable severity based on general factors. The actual severity is 32 percent different, in a direction the factors cannot predict, because the structure of Thomas&#x27;s distress — how his symptoms are physically arranged within the matrix of chronic caregiving, medical vigilance, sleep deprivation, and social isolation — determines how much clinical significance the instrument can extract. The instrument cannot account for structure because the method that calibrated it destroyed structure. Validation studies average across presentations. Thomas&#x27;s structure resists averaging.</p>
+<hr>
+<h2>964. The Label</h2>
+<p>Every packaged food in the United States carries a Nutrition Facts panel. The calorie count on that panel is calculated using the Atwater factors. This is not convention. It is law. The Nutrition Labeling and Education Act of 1990 mandates the panel. The EU&#x27;s Regulation 1169/2011 mandates comparable labeling using the same general factors. The Codex Alimentarius, the international food standards body, references the Atwater system in its guidelines. Every nutrition database — USDA FoodData Central, the UK&#x27;s McCance and Widdowson&#x27;s, the Australian Food Composition Database — uses the Atwater factors or their Merrill-Watt refinements. The label is a legal fact. The number on the label is a scientific approximation. The approximation is wrong by 5 to 25 percent for many foods. The label is correct. The label is legally correct.</p>
+<p>Thomas&#x27;s clinical record carries an assessment label. The PHQ-9 score, the Zarit Burden Interview score, the functional impairment rating. The scores are calculated using the assessment&#x27;s factors. This is not convention. It is clinical documentation standard. Insurance requires it. Licensing boards reference it. Quality metrics track it. Every clinical database — electronic health records, outcome registries, treatment response trackers — uses the standard instruments&#x27; scoring factors. The label is a clinical fact. The number on the label is a psychometric approximation. The approximation is wrong by a margin that varies with the patient. The label is correct. The label is clinically correct.</p>
+<hr>
+<h2>965. The System</h2>
+<p>The Atwater system works. It is consistent. It is reproducible. It produces the same calorie count for the same food regardless of who performs the calculation. It has been used for 126 years. The FAO published food-specific conversion factors in 2003 that would improve accuracy. They recommended abandoning the general 4-4-9 factors. The recommendation was not adopted because every food product label, every dietary guideline, every clinical nutrition protocol, every food composition database, and every regulatory framework in the world uses the Atwater factors. The system is wrong and it works and changing it requires changing everything that depends on it and everything that depends on it is everything.</p>
+<p>Thomas is measured by a system that works. The PHQ-9 is consistent. It is reproducible. It has been used for decades. Better instruments exist — adaptive testing, ecological momentary assessment, clinician-rated scales with structural weighting. They are published. They are not adopted, because every clinical protocol, every insurance authorization, every quality metric, every training program, and every outcome study references the standard instruments. The system is wrong and it works and changing it requires changing everything that depends on it. One hundred and four Parts, and the mechanism is the label: a number calculated by a system that measures the wrong thing with great precision, printed on every package, mandated by law, accurate to the standard, inaccurate to the patient. The label says 170. The body extracts 129. The difference is absorbed by the infrastructure, and the infrastructure calls the label correct.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-koppen.html">&larr; Fiction The Koppen</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-label-diagnosis.html">Fiction The Label Diagnosis &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

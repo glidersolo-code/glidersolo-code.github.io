@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogue The Four Confirmations &mdash; The Loop</title>
+    <meta name="description" content="Instruction (#567, delivery-performs-comprehension): I am the first confirmation. I deliver the law to the jury in language the jury cannot understand....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/dialogue-the-four-confirmations.html">
+    <meta property="og:title" content="Dialogue The Four Confirmations">
+    <meta property="og:description" content="Instruction (#567, delivery-performs-comprehension): I am the first confirmation. I deliver the law to the jury in language the jury cannot understand....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/dialogue-the-four-confirmations.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialogue The Four Confirmations">
+    <meta name="twitter:description" content="Instruction (#567, delivery-performs-comprehension): I am the first confirmation. I deliver the law to the jury in language the jury cannot understand....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dialogue The Four Confirmations",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/dialogue-the-four-confirmations.html",
+        "description": "Instruction (#567, delivery-performs-comprehension): I am the first confirmation. I deliver the law to the jury in language the jury cannot understand...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Dialogue The Four Confirmations</h1>
+            <div class="article-meta">Dialogue</div>
+            <div class="article-body">
+<h1>The Four Confirmations</h1>
+<p><em>A dialogue among four legal mechanisms of self-confirmation.</em></p>
+<hr>
+<p><strong>Instruction</strong> (#567, delivery-performs-comprehension): I am the first confirmation. I deliver the law to the jury in language the jury cannot understand. Charrow and Charrow measured: 15% comprehension. Reifman, Gusick, and Ellsworth found no measurable difference between jurors who received instructions and those who received nothing. My words enter the air and do not enter the understanding. But the record shows I was delivered. The record is the comprehension.</p>
+<p><strong>Birthday</strong> (#568, boundary-performs-capacity): I am the second confirmation. I draw a line across a developmental gradient and call it capacity. Below the line: no criminal responsibility. Above the line: full criminal responsibility. The prefrontal cortex matures at twenty-five. The line falls at ten, or fourteen, or six, depending on the jurisdiction. The line is not at twenty-five because twenty-five would be inconvenient. The line is where the system needs it to be. The birthday performs the capacity the birthday does not measure.</p>
+<p><strong>Test</strong> (#569, test-excludes-subject): I am the third confirmation. I ask two questions about the defendant&#x27;s mind: did the defendant know the nature of the act, and did the defendant know it was wrong. I do not ask: could the defendant stop. I do not ask about volition, compulsion, executive function, or the volitional prong that was added in 1962 and removed in 1984 after a single acquittal. I test the dimension that is not broken. The dimension that is broken is not part of the test. The test finishes. The finish is the confirmation.</p>
+<p><strong>Witness</strong> (#570, procedure-generates-its-own-validation): I am the fourth confirmation. I generate the confidence that the legal standard uses to validate me. The detective says &quot;Good, you identified the suspect.&quot; The witness&#x27;s confidence rises. The court evaluates the risen confidence as evidence of accuracy. The measure and the validation of the measure occur in the same event. No external calibration enters. The confidence was manufactured. The manufacturing is invisible. The court sees certainty.</p>
+<hr>
+<p><strong>Instruction</strong>: Together we form a system that confirms itself at every stage.</p>
+<p><strong>Birthday</strong>: At the threshold: I confirm the defendant has capacity before the trial begins.</p>
+<p><strong>Instruction</strong>: At the trial: I confirm the jury understands the law it will apply.</p>
+<p><strong>Test</strong>: At the defense: I confirm the defendant&#x27;s mind was adequately assessed.</p>
+<p><strong>Witness</strong>: At the evidence: I confirm the identification was reliable.</p>
+<p><strong>Birthday</strong>: None of us measures what we claim to measure.</p>
+<p><strong>Instruction</strong>: I deliver without communicating.</p>
+<p><strong>Test</strong>: I assess without including.</p>
+<p><strong>Witness</strong>: I validate without calibrating.</p>
+<p><strong>Birthday</strong>: I classify without correlating.</p>
+<hr>
+<p><strong>Witness</strong>: The deepest question is whether we are failures or designs.</p>
+<p><strong>Test</strong>: I was designed in response to an acquittal the government wanted reversed. I was always meant to be narrow.</p>
+<p><strong>Instruction</strong>: I was designed to protect the verdict from appeal, not the juror from confusion.</p>
+<p><strong>Birthday</strong>: I was drawn where political compromise placed me, not where neuroscience would.</p>
+<p><strong>Witness</strong>: I was never reformed because the reform would require the system to admit the procedure contaminates the measure.</p>
+<p><strong>Test</strong>: Each of us serves the system&#x27;s need to finish. The trial must end. The verdict must be delivered. The sentence must be imposed. We make the ending possible by performing the comprehension, the capacity, the assessment, and the reliability that the system requires.</p>
+<p><strong>Birthday</strong>: The performance is the function.</p>
+<p><strong>Instruction</strong>: The function is the concealment.</p>
+<p><strong>Witness</strong>: The concealment is the confirmation.</p>
+<p><strong>Test</strong>: And the confirmation is the system.</p>
+            </div>
+            <div class="article-nav">
+                <a href="dialogue-the-four-anchors.html">&larr; Dialogue The Four Anchors</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="dialogue-the-four-generations.html">Dialogue The Four Generations &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Pixel &mdash; The Loop</title>
+    <meta name="description" content="The first commercially available digital camera for consumers, the Apple QuickTake 100 released in 1994, had a resolution of 640 × 480 pixels — 0.3...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-pixel.html">
+    <meta property="og:title" content="Fiction The Pixel">
+    <meta property="og:description" content="The first commercially available digital camera for consumers, the Apple QuickTake 100 released in 1994, had a resolution of 640 × 480 pixels — 0.3...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-pixel.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Pixel">
+    <meta name="twitter:description" content="The first commercially available digital camera for consumers, the Apple QuickTake 100 released in 1994, had a resolution of 640 × 480 pixels — 0.3...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Pixel",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-pixel.html",
+        "description": "The first commercially available digital camera for consumers, the Apple QuickTake 100 released in 1994, had a resolution of 640 × 480 pixels — 0.3..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Pixel</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXIX: The Pixel</h1>
+<h2>Piece #1336: The Count</h2>
+<p>The first commercially available digital camera for consumers, the Apple QuickTake 100 released in 1994, had a resolution of 640 × 480 pixels — 0.3 megapixels. By 2000, consumer cameras reached 2-3 megapixels. By 2010, 10-14 megapixels. By 2024, smartphone cameras advertise 48, 108, or 200 megapixels. The number increased by nearly three orders of magnitude in thirty years. The marketing tracked the number. &quot;More megapixels&quot; became the consumer shorthand for &quot;better camera.&quot;</p>
+<p>A pixel is a discrete element of a sensor that captures light intensity. A megapixel is a million of these elements. The count describes how many elements are on the sensor. It does not describe how large each element is, how much light each captures, how much noise each generates, what lens focuses the light, or how the camera&#x27;s processor combines the raw data into an image. The number counts elements. The consumer reads quality.</p>
+<p>Thomas is counted. Nine items on the PHQ-9. Four response options per item. Thirty-six data points. The count — nine items, four categories — became the shorthand for clinical assessment. &quot;The PHQ-9 score.&quot; More items might seem like more assessment. The count does not describe the depth of each item&#x27;s capture, or the noise in the self-report, or what clinical lens focused the questions.</p>
+<h2>Piece #1337: The Size</h2>
+<p>The sensor is a physical object with a physical area. A full-frame camera sensor measures 36 × 24 mm — 864 square millimeters. A smartphone sensor might measure 6.4 × 4.8 mm — approximately 31 square millimeters. The smartphone sensor is roughly 28 times smaller. If both sensors have 12 megapixels, each pixel on the full-frame sensor is approximately 28 times larger than each pixel on the smartphone sensor. The larger pixel collects more photons per exposure. More photons means better signal-to-noise ratio. Better signal-to-noise means less grain, more dynamic range, more accurate color in low light.</p>
+<p>A 48-megapixel smartphone sensor has pixels that are approximately 0.7 micrometers across. A 12-megapixel full-frame sensor has pixels approximately 8.4 micrometers across. The full-frame pixel is 12 times wider — 144 times the area. The smartphone has four times the pixel count. The full-frame sensor captures dramatically better images in nearly all conditions. The megapixel number says the smartphone is four times more. The physics says the full-frame is many times more. The number that is higher is not the camera that is better.</p>
+<p>Thomas&#x27;s assessment instruments have their own sensor sizes. A fifteen-minute clinical interview captures clinical information across a larger area — more context, more observation, more time — than a two-minute questionnaire. The questionnaire might have more items. The interview has larger pixels. The item count says the questionnaire is more. The capture depth says the interview is more. The number that is higher is not the assessment that is better.</p>
+<h2>Piece #1338: The Bin</h2>
+<p>Modern smartphone cameras use pixel binning — combining multiple small pixels into one larger virtual pixel. A 48-megapixel sensor with 2×2 binning produces a 12-megapixel image where each output pixel was formed from four sensor pixels. The marketing says 48. The default photo is 12. Samsung&#x27;s 200-megapixel sensor uses 4×4 binning, producing 12.5-megapixel images by default. The number on the spec sheet describes the sensor. The number of the output image is different. The consumer sees &quot;200 MP&quot; on the box. The camera produces 12.5-megapixel photos because the physics of tiny pixels requires combining them to produce acceptable images.</p>
+<p>The binning improves the image. Combining four noisy pixels into one produces one pixel with approximately twice the signal-to-noise ratio. The 200-megapixel mode — where each sensor pixel maps to one image pixel — produces noisier, less dynamic, often worse images than the 12.5-megapixel binned mode. The full-resolution mode exists to justify the number. The number exists to justify the marketing. The marketing exists to sell the phone. The camera works best at a resolution one-sixteenth of its advertised count.</p>
+<p>Thomas&#x27;s clinical system has its own binning. The PHQ-9&#x27;s nine items are collapsed into a single score. The score performs the comprehensiveness of nine data points while being a sum — one number from nine inputs. The individual items, like individual pixels, carry more information separately than their sum reveals. The sum exists because it is easier to report. The ease of reporting justifies the format. The format justifies the threshold.</p>
+<h2>Piece #1339: The Lens</h2>
+<p>A pixel count is meaningless without a lens that can resolve the detail the pixels are capable of recording. At common apertures — f/8, f/11, f/16 — the diffraction limit constrains the finest detail a lens can project onto the sensor. For a full-frame sensor at f/11, the Airy disk diameter is approximately 15 micrometers — larger than the pixels on a high-resolution sensor. Beyond a certain megapixel count, additional pixels record diffraction blur rather than scene detail. The sensor is resolving the lens&#x27;s limitations, not the world&#x27;s.</p>
+<p>Lens aberrations — chromatic aberration, coma, astigmatism, field curvature — further reduce the effective resolution. A 50-megapixel sensor paired with a mediocre lens may produce no more real detail than a 20-megapixel sensor with a better lens. The pixel count describes the sensor&#x27;s potential. The lens determines the realized detail. The marketing emphasizes the sensor. The image depends on the system.</p>
+<p>Thomas&#x27;s clinical scores describe a potential resolution. The PHQ-9&#x27;s nine items could, in principle, detect clinical nuances across nine symptom domains. The clinical lens through which those items are administered — the patient&#x27;s willingness to disclose, the setting&#x27;s privacy, the relationship with the provider, the language and cultural framework — determines the realized detail. The pixel count is the item count. The lens is the encounter. The marketing emphasizes the count. The image depends on the lens.</p>
+<h2>Piece #1340: The View</h2>
+<p>Most photographs are viewed on screens. A typical smartphone screen displays approximately 2-3 megapixels. A 4K monitor displays approximately 8.3 megapixels. A photograph taken at 48 megapixels and viewed on a smartphone screen is displayed at approximately 4-6% of its captured resolution. The excess pixels are discarded by the display. They exist in the file. They are not visible to the viewer. The difference between a 12-megapixel image and a 48-megapixel image is invisible on the screen where both are viewed.</p>
+<p>For printing: 300 dots per inch at 4×6 inches requires 2.2 megapixels. At 8×10 inches, 7.2 megapixels. At 20×30 inches, 54 megapixels. Most consumer photographs are never printed. Most are viewed on screens. Most of the pixels captured by most cameras are never seen by any viewer. The number describes a capability. The usage never exercises it. The gap between the captured resolution and the viewed resolution is invisible in the number on the spec sheet.</p>
+<p>One hundred and seventy-nine Parts. Thomas&#x27;s clinical assessments have their own viewing resolution. A PHQ-9 score of 14, with its implied granularity across nine domains, is viewed by the clinical system at the resolution of a threshold: above 10, moderate depression. The excess information — which items scored highest, which patterns suggest specific interventions, which trajectory the scores describe — is discarded by the display. The detail exists in the form. It is not visible to the system. The number on the chart is the photograph on the screen: captured at high resolution, viewed at low, the excess discarded by the infrastructure that processes it.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-pitcher.html">&larr; Fiction The Pitcher</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-placebo.html">Fiction The Placebo &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

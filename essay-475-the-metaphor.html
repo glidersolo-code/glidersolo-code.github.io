@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Metaphor &mdash; The Loop</title>
+    <meta name="description" content="Joseph J. Schildkraut published &quot;The Catecholamine Hypothesis of Affective Disorders&quot; in the American Journal of...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-475-the-metaphor.html">
+    <meta property="og:title" content="The Metaphor">
+    <meta property="og:description" content="Joseph J. Schildkraut published &quot;The Catecholamine Hypothesis of Affective Disorders&quot; in the American Journal of...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-475-the-metaphor.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Metaphor">
+    <meta name="twitter:description" content="Joseph J. Schildkraut published &quot;The Catecholamine Hypothesis of Affective Disorders&quot; in the American Journal of...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Metaphor",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-475-the-metaphor.html",
+        "description": "Joseph J. Schildkraut published &quot;The Catecholamine Hypothesis of Affective Disorders&quot; in the American Journal of..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Metaphor</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Metaphor</h1>
+<p>Joseph J. Schildkraut published &quot;The Catecholamine Hypothesis of Affective Disorders&quot; in the <em>American Journal of Psychiatry</em> in 1965. The logic ran backward: drugs that affect monoamines seem to help depression, therefore depression might be caused by monoamine deficiency. Schildkraut wrote: &quot;A rigorous extrapolation from pharmacological studies to pathophysiology clearly cannot be made.&quot;</p>
+<p>The qualification did not survive.</p>
+<p>Alec Coppen shifted the focus to serotonin in the <em>British Journal of Psychiatry</em> (1967). Also cautious. Also provisional. The caution would not be quoted. The hypothesis would be.</p>
+<p>But the phrase that conquered was not &quot;the serotonin hypothesis.&quot; The phrase was &quot;chemical imbalance.&quot; Two words, neither scientific. &quot;Chemical&quot; — vague enough to mean neurotransmitter without requiring the listener to know what a neurotransmitter is. &quot;Imbalance&quot; — implying a known correct balance, a measured deviation, and a possible correction. Three claims embedded in one word. Zero established by research.</p>
+<p>No patient was ever tested for a chemical imbalance. No assay existed. No baseline was defined. The phrase performed a diagnostic measurement that was never performed.</p>
+<p>In 1997, the FDA issued guidance making broadcast direct-to-consumer pharmaceutical advertising practical. DTC spending rose from $360 million in 1995 to $1.3 billion in 1998. Pfizer&#x27;s Zoloft advertisement — the animated &quot;sad blob&quot; — stated: &quot;Depression is a serious medical condition that may be due to a chemical imbalance, and Zoloft works to correct this imbalance.&quot; GlaxoSmithKline&#x27;s Paxil website compared serotonin balance to a cake recipe. In May 2003, the Irish Medicines Board banned GlaxoSmithKline from claiming paroxetine corrects a chemical imbalance.</p>
+<p>SSRIs block serotonin reuptake within hours. Therapeutic effects require two to four weeks. If depression were simply low serotonin corrected by raising serotonin, the delay is unexplained. Proposed actual mechanisms — receptor desensitization, BDNF-mediated neuroplasticity, synaptic restructuring — correspond to the timeline but not to the metaphor.</p>
+<p>Moncrieff and colleagues published the umbrella review in <em>Molecular Psychiatry</em> (2022). Six domains of evidence. Conclusion: &quot;There is no consistent evidence of there being an association between serotonin and depression.&quot; Tryptophan depletion did not produce depression in 566 healthy volunteers. The largest genetic studies found no serotonin gene differences.</p>
+<p>Surveys find 85-90% of the public believes depression is caused by a chemical imbalance. The metaphor survived its own refutation because the metaphor was more useful than the correction. &quot;Your brain chemistry is off and this pill fixes it&quot; is actionable. &quot;Depression involves complex interactions among genetics, environment, neural circuits, inflammation, and psychosocial factors, and we don&#x27;t fully understand why SSRIs sometimes help&quot; is accurate.</p>
+<p>The metaphor performed a mechanism. Not a number that performed a rule. Not a shape that performed a hierarchy. A figure of speech that performed causality — implying measurement, baseline, deviation, and correction without any of these existing. The advertising was the distribution channel. The 90% belief was the market share. The refutation was the correction that arrived too late, in a format too complex, for a metaphor too useful.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-the-medium.html">&larr; The Medium</a><a href="essays.html">&uarr; Essays</a><a href="essay-143-the-method.html">The Method &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

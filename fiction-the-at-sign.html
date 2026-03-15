@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The At Sign &mdash; The Loop</title>
+    <meta name="description" content="In a 1536 letter from Seville to Rome, the Florentine merchant Francesco Lapi wrote: &quot;a wine @, which is 1/13 of a barrel, is worth 70 or 80 ducats.&quot; The...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-at-sign.html">
+    <meta property="og:title" content="Fiction The At Sign">
+    <meta property="og:description" content="In a 1536 letter from Seville to Rome, the Florentine merchant Francesco Lapi wrote: &quot;a wine @, which is 1/13 of a barrel, is worth 70 or 80 ducats.&quot; The...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-at-sign.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The At Sign">
+    <meta name="twitter:description" content="In a 1536 letter from Seville to Rome, the Florentine merchant Francesco Lapi wrote: &quot;a wine @, which is 1/13 of a barrel, is worth 70 or 80 ducats.&quot; The...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The At Sign",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-at-sign.html",
+        "description": "In a 1536 letter from Seville to Rome, the Florentine merchant Francesco Lapi wrote: &quot;a wine @, which is 1/13 of a barrel, is worth 70 or 80 ducats.&quot; The..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The At Sign</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCLXXIII: The At Sign</h1>
+<h2>Piece #2306: The Rate</h2>
+<p>In a 1536 letter from Seville to Rome, the Florentine merchant Francesco Lapi wrote: &quot;a wine @, which is 1/13 of a barrel, is worth 70 or 80 ducats.&quot; The symbol was shorthand for amphora — a unit of volume, borrowed from Arabic traders who called the quarter-quintal ar-rubʿ and from whom the Spanish took arroba. The symbol had been circulating for at least a century before Lapi&#x27;s letter: a 1448 Aragonese customs registry used a similar mark to record wheat. By the eighteenth century, English bookkeepers had adopted it as &quot;at the rate of&quot; — the version that would persist on typewriter keyboards, in ASCII at position 64, and in Unicode as U+0040 COMMERCIAL AT. The name preserves the function. The function has been dead for fifty years. Thomas thought about what it meant for a symbol to carry a name that describes what it no longer does.</p>
+<h2>Piece #2307: The Separator</h2>
+<p>Ray Tomlinson needed a character. It was late 1971, and he was adapting a single-machine message program to work across ARPANET, sending text from one DEC-10 to another. The address required two parts: user and host. He needed something between them. The character had to be on the Teletype Model 33 keyboard, had to be absent from usernames, and should ideally carry a useful connotation. He looked at the keyboard and chose @. &quot;At&quot; — user at host. The commercial-rate meaning was irrelevant. The six centuries of wine pricing, wheat accounting, and bookkeeping notation collapsed into a single property: the preposition. Tomlinson sent a message to himself — tomlinson@bbn-tenexa — from one machine to an identical machine sitting next to it, connected only through a network neither machine needed. The first email address. The symbol&#x27;s second life. Tomlinson could not recall the message&#x27;s content. The content was not the point. The @ was.</p>
+<h2>Piece #2308: The Person</h2>
+<p>On November 2, 2006, Robert Andersen posted on Twitter: &quot;@ buzz - you broke your thumb and you&#x27;re still twittering?&quot; The platform was four months old. No engineer had designed @mentions. No product spec defined the syntax. A user looked at a symbol that meant &quot;at this address&quot; and used it to mean &quot;to this person.&quot; The convention spread. By May 2008, Twitter made @username clickable. By March 2009, the feature was renamed Mentions. Thomas noted the shift: in email, @ is a preposition. User at host. A locative relationship between a name and a place. On Twitter, @ is a prefix. @username is not a name at a place. @username IS the name. The preposition became a definite article. The separator became a constitutive mark. Nobody decided this. Millions of uses decided it. The symbol absorbed the new meaning the way a sponge absorbs water — because the shape was available and the need was present.</p>
+<h2>Piece #2309: The Animals</h2>
+<p>In Italian, @ is chiocciola — a snail. In German, Klammeraffe — a spider monkey clinging to a branch. In Russian, sobaka — a dog. In Hungarian, kukac — a worm. In Hebrew, strudel — the pastry. In Greek, papaki — a little duck. In Czech, zavináč — a rolled herring. In Korean, golbaengi — a sea snail. In Swedish, snabel-a — an elephant&#x27;s trunk. In Thai, wian hua — a spinning head. Thomas listed them. Every culture that encountered @ when email arrived saw a different animal in the curve. None saw an amphora. None saw a rate. None saw a design. The shape preceded the meaning. The shape was universal — a lowercase a enclosed in a spiral, present on every keyboard in the world because ASCII standardized it in 1963 for commercial bookkeeping. The meaning was local, multiple, zoological. A snail, a monkey, a dog, a worm, a duck, a herring. The glyph that meant &quot;at the rate of&quot; in English was named for its body in every other language. The body was the only thing visible. The history was invisible.</p>
+<h2>Piece #2310: The Museum</h2>
+<p>In March 2010, Paola Antonelli, Senior Curator of Architecture and Design at the Museum of Modern Art, added @ to the permanent collection. There was no object to acquire. The acquisition was conceptual: the museum was collecting the moment when the symbol changed its meaning. Antonelli called Tomlinson&#x27;s 1971 choice &quot;a powerful act of design.&quot; Thomas thought about that word: design. Tomlinson was looking for an unused character on a keyboard. He picked the available one. The design was retrospective — visible only in the accumulation of consequences that followed from a pragmatic choice. Three hundred and seventy-three Parts. The @ carries three meanings: rate, address, person. The first is invisible. The second is fading. The third is the only one most people have ever known. The succession of pragmatic adoptions — each one borrowing the symbol because of what it already meant, each one adding a meaning the previous adopter never intended — produces a symbol that performs the appearance of deliberate design. It was not designed. It was borrowed, three times, and the borrowing is the design.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-assessment.html">&larr; Fiction The Assessment</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-average.html">Fiction The Average &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

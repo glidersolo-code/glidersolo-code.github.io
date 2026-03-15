@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Balance &mdash; The Loop</title>
+    <meta name="description" content="Thomas reads Herodotus, Book III, Section 108. Providence balances predator and prey. Lions bear one cub in a lifetime; hares breed endlessly. The balance...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-balance.html">
+    <meta property="og:title" content="Fiction The Balance">
+    <meta property="og:description" content="Thomas reads Herodotus, Book III, Section 108. Providence balances predator and prey. Lions bear one cub in a lifetime; hares breed endlessly. The balance...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-balance.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Balance">
+    <meta name="twitter:description" content="Thomas reads Herodotus, Book III, Section 108. Providence balances predator and prey. Lions bear one cub in a lifetime; hares breed endlessly. The balance...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Balance",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-balance.html",
+        "description": "Thomas reads Herodotus, Book III, Section 108. Providence balances predator and prey. Lions bear one cub in a lifetime; hares breed endlessly. The balance..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Balance</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDLXXXVII: The Balance</h1>
+<h2>Piece #2876: The Metaphor Before the Model</h2>
+<p>Thomas reads Herodotus, Book III, Section 108. Providence balances predator and prey. Lions bear one cub in a lifetime; hares breed endlessly. The balance is maintained. Thomas notes: Herodotus is wrong about lion reproduction. He is wrong about hare reproduction. The factual claims are incorrect. But the metaphor — nature keeps accounts, nature balances its books — is now twenty-four hundred years old. It survived the correction of every fact it was built on. Thomas understands: the metaphor does not need the facts. The facts needed the metaphor.</p>
+<h2>Piece #2877: The Household</h2>
+<p>Thomas reads Linnaeus. <em>Oeconomia Naturae</em>, 1749. The economy of nature. Not economy in the modern sense — <em>oeconomia</em>, from <em>oikos</em>: household. Nature runs a household. Income and expenditure. Births and deaths. Resources allocated, waste recycled, accounts balanced. Linnaeus applies double-entry bookkeeping to the living world. Thomas looks at the word. <em>Economy</em>. The same word will later name the study of markets. Before it named markets, it named nature. Before it named nature, it named a household. The household is the root metaphor. Everything that follows — equilibrium ecology, carrying capacity, steady-state management — is the household metaphor speaking through equations.</p>
+<h2>Piece #2878: The Number</h2>
+<p>Thomas reads about carrying capacity. The letter K. Verhulst&#x27;s logistic equation, 1838: dN/dt = rN(1 − N/K). Population grows, approaches an asymptote, levels off. K is the ceiling. Leopold applies it to wildlife in 1933. Odum puts it in the textbook in 1953. Wildlife agencies use it to set quotas. Thomas reads Nathan Sayre: &quot;If carrying capacity is conceived as static, it is theoretically elegant but empirically vacuous; but if it is conceived as variable, it is theoretically incoherent or at best question-begging.&quot; Thomas holds this sentence. The number is elegant when it holds still and incoherent when it moves. Real landscapes move. The elegance is for the equation, not the elk.</p>
+<h2>Piece #2879: The Dissent</h2>
+<p>Thomas reads Gleason. &quot;The Individualistic Concept of the Plant Association,&quot; 1926. Plant communities are not organisms developing toward a climax. They are individualistic assemblages — each species responding independently to local conditions. There is no predetermined destination. There is no balance to restore. Clements never responds. The paper is ignored for thirty years. Thomas reads Botkin, <em>Discordant Harmonies</em>, 1990: &quot;Our environmental policies are limited not by scientific knowledge but by age-old myths and metaphors.&quot; The myth: nature in balance. The metaphor: the household that keeps its books. The policy: K as the number the landscape &quot;wants.&quot; Thomas counts: sixty-four years from Gleason&#x27;s dissent to Botkin&#x27;s restatement. In those sixty-four years, K governed fisheries, wildlife, range management, and conservation policy worldwide. The metaphor held. The dissenters published. The metaphor held.</p>
+<h2>Piece #2880: The Cascade</h2>
+<p>Thomas draws the sequence. Metaphor (nature in balance) → model (logistic growth) → parameter (K) → policy (harvest quota). Each step appears to follow from the step before. The quota follows from K. K follows from the model. The model follows from the data. But the data were collected because the model seemed natural. The model seemed natural because the metaphor made it so. The metaphor is older than ecology. It is older than biology. It is older than science. Herodotus: Providence balances. Linnaeus: nature keeps house. Clements: communities reach climax. Odum: K is the ceiling. Thomas traces the cascade backward. The harvest quota is twenty-four hundred years old. It was decided by a metaphor about lions and hares. The lions and hares were wrong, but the metaphor was patient. It waited for an equation.</p>
+<hr>
+<h1>Part CDLXXXVIII: The Rate</h1>
+<h2>Piece #2881: The Question</h2>
+<p>Thomas looks at a census form. The question: &quot;Can you read and write?&quot; The answer: yes or no. Thomas counts the boxes. Two. He looks at the phenomenon the question claims to measure. A woman reads a recipe but cannot compare insurance plans. A man signs his name but cannot follow written workplace instructions. A teenager texts fluently but cannot evaluate a news article&#x27;s sources. Thomas looks at the boxes again. Two. The question is a mold. The answer takes its shape.</p>
+<h2>Piece #2882: The Switch</h2>
+<p>Thomas reads UNESCO&#x27;s definition. A person is literate who can &quot;with understanding, both read and write a short simple statement on his everyday life.&quot; This is the threshold. Above: literate. Below: illiterate. The literacy rate counts heads above the line. Thomas looks at the metaphor embedded in the definition. Literacy as possession. You either have it or you don&#x27;t — like eyesight, like the ability to walk. The metaphor is a switch: on or off. But reading is not a switch. It is a spectrum as wide as the uses it serves. The switch metaphor produces the rate. The rate approaches 100%. At 99%, the problem appears solved. The switch is on.</p>
+<h2>Piece #2883: The Spectrum</h2>
+<p>Thomas reads the NAAL, 2003. The United States reports approximately 99% literacy. The NAAL tested actual performance. Finding: 14% of U.S. adults — approximately 30 million people — at &quot;Below Basic&quot; prose literacy. Unable to compare information across two simple paragraphs. Unable to make low-level inferences from written material. Thomas reads PIAAC, the OECD&#x27;s assessment. Italy: 27.9% of adults at Level 1 or below. Even Japan, the highest performer: 10% at Level 1 or below. Across 31 developed countries: 18% of adults lacked the most basic proficiency levels. Thomas puts the numbers side by side. The literacy rate says 99%. The performance assessment says 14% cannot compare two paragraphs. Both are measuring literacy. They disagree because they are measuring different things — one measures the metaphor (do you possess the switch?), the other measures the spectrum (what can you actually do?).</p>
+<h2>Piece #2884: The Invisible</h2>
+<p>Thomas thinks about the 30 million. They are invisible within the 99%. The rate is the ceiling. The spectrum is below it. A policy built on the rate says: problem solved. A policy built on the spectrum says: 30 million people need accessible documents, plain-language forms, institutional accommodation. The threshold metaphor makes the second policy invisible. The switch is on. The lights are on. The rooms are dark. The metaphor cannot see the rooms because it can only see the switch.</p>
+<h2>Piece #2885: The Binary Before the Number</h2>
+<p>Thomas draws the sequence. Metaphor (literacy as possession) → question (can you read and write? yes/no) → metric (percentage answering yes) → narrative (progress toward 100%) → policy (threshold interventions: teach them to cross the line). Each step follows from the metaphor. The binary question follows from the switch metaphor. The rate follows from the binary question. The narrative follows from the rate. The policy follows from the narrative. Nowhere in this sequence does anyone measure what a person can actually do with written text. The spectrum lives outside the sequence. The metaphor determined the sequence. The sequence excluded the spectrum. Thomas holds the structure: the figure of speech chose the question before the question was asked.</p>
+<hr>
+<h1>Part CDLXXXIX: The Tonnage</h1>
+<h2>Piece #2886: The Declaration</h2>
+<p>Thomas reads the declaration. June 17, 1971. Nixon: &quot;America&#x27;s public enemy number one in the United States is drug abuse.&quot; Thomas notes the word. <em>Enemy</em>. Not <em>problem</em>. Not <em>crisis</em>. Not <em>illness</em>. Enemy. In a sentence, the metaphor is set. If drugs are the enemy, then enforcement is war. If enforcement is war, then success is destruction. If success is destruction, then the metric is how much you destroyed. Thomas reads the DEA&#x27;s 2022 report. The first page: 50.6 million fentanyl-laced pills seized. 131,000 pounds of methamphetamine. 444,000 pounds of cocaine. The numbers are large. They are meant to be large. In a war, you report your kills.</p>
+<h2>Piece #2887: The Inversion</h2>
+<p>Thomas reads Peter Reuter. As seizures increased over decades, retail drug prices <em>fell</em>. Cocaine: $433 per pure gram in 1982, $175 by 1996, settling at $100-$150 thereafter. Purity rose. Thomas reads the GAO. Department of Defense interdiction spending: $212 million in 1989 to $900 million by 1993. Cocaine flow into the United States: no measurable reduction. Transit zone interception rate: 6% of known drug movements. Thomas puts the numbers together. The war spent more. The war seized more. The war intercepted less. The drug cost less. The drug was purer. Every metric of effort increased. Every metric of effect deteriorated. Thomas looks at the seizure report again. It is not a progress report. It is a war diary. It records what the army did. It does not record what happened.</p>
+<h2>Piece #2888: The Count</h2>
+<p>Thomas thinks about body counts. Vietnam: the body count was the metric. More enemy killed meant progress. McNamara&#x27;s war. The body count incentivized counting — not winning. Soldiers counted. Officers reported. Reports were aggregated. The aggregate was progress. The war was lost. Thomas reads about seizure reporting. Multiple agencies sometimes report the same seizure. There are no reliable procedures to prevent double-counting. A seizure involving DEA, CBP, and a state task force may appear in three reports. Thomas recognizes the structure. The metric counts the counting. The counting is the war&#x27;s evidence of itself.</p>
+<h2>Piece #2889: The Alternative</h2>
+<p>Thomas imagines the alternative metric. Drug availability: are drugs harder to get? Price: are drugs more expensive? Purity: are drugs weaker? Prevalence: are fewer people using? Overdose rate: are fewer people dying? Treatment access: can people who want help get it? These are the metrics that would measure the war&#x27;s effect. They are slow. They are ambiguous. They are often unflattering. The seizure number is immediate, always positive (every seizure is a success), and always growing (because the supply is not diminishing). Thomas understands: the war&#x27;s metric measures the war&#x27;s effort because the war&#x27;s effect cannot be measured without questioning the war.</p>
+<h2>Piece #2890: The Metaphor&#x27;s Demand</h2>
+<p>Thomas draws the sequence. Metaphor (war on drugs) → success definition (enemy destroyed) → metric (tonnage seized) → report (annual threat assessment) → budget (justified by tonnage) → enforcement (generating more tonnage). The loop is closed. The metric justifies the budget that produces the metric. Thomas notes what the metaphor excludes: treatment, harm reduction, public health, decriminalization, demand-side intervention. These are not metrics of war. They are metrics of something else — something the metaphor cannot name without ceasing to be a war. Thomas holds the structure: the figure of speech chose the metric before the data were collected. The data confirmed the metaphor. The metaphor was a war. The data were a body count.</p>
+<hr>
+<h1>Part CDXC: The Pipe</h1>
+<h2>Piece #2891: The Shape</h2>
+<p>Thomas looks at a diagram in a policy report. A long tube. Students enter at one end — elementary school. They flow through: middle school, high school, college, graduate school. They emerge at the other end: STEM professionals. Along the tube, arrows point outward — leaks. Women leak. Minorities leak. First-generation students leak. Thomas looks at the shape. A pipe. One inlet. One outlet. One direction. Everything inside the pipe that does not reach the outlet is lost. Thomas thinks: the word for what leaves a pipe is <em>waste</em>.</p>
+<h2>Piece #2892: The Projection</h2>
+<p>Thomas reads the history. The NSF, late 1980s: a projected shortage of 675,000 PhD scientists and engineers by 2006. The projection justified the metaphor. If there is a shortage, then every departure from the pipe is a loss. The metaphor was promoted. Bridge programs. Retention initiatives. Pipeline repair. Thomas reads the follow-up. RAND: no evidence of the projected shortage. Sloan Foundation: no evidence. Duke University: no evidence. The House subcommittee investigation, 1995: the NSF&#x27;s projections were flawed. The shortage never materialized. Thomas notes: the projection died. The metaphor survived. The pipeline was built to deliver bodies to a shortage that did not exist.</p>
+<h2>Piece #2893: The Majority</h2>
+<p>Thomas reads Cannady, Greenwald, and Harris (2014). Among people with STEM careers, only 39% showed interest in STEM during secondary school and took the relevant coursework. The majority — 61% — entered STEM through non-pipeline paths. Community college transfers. Career changers. Late-entry adult learners. Industry crossovers. Thomas holds the number. Sixty-one percent. The majority of STEM professionals are not pipeline products. They are invisible within the metaphor. The pipe can see what flows through it. It cannot see what arrives from outside.</p>
+<h2>Piece #2894: The Leak</h2>
+<p>Thomas thinks about the word <em>leak</em>. A biology major who becomes a science journalist. A chemistry PhD who enters patent law. A computer science student who founds an education startup. An engineering graduate who goes into policy. Each is a leak. Each is a loss. Each is a failure — within the metaphor. Outside the metaphor, each is a person applying STEM training in another domain. The training did not leak. It dispersed. But dispersal is not a word the pipe can use. The pipe has one outlet. Everything else is waste. Thomas looks at the standard metric: approximately 48% of entering STEM undergraduates leave during their undergraduate years. Within the pipe, this is a crisis. Outside the pipe, it is half of a population discovering what they prefer. The metaphor determines which sentence is the diagnosis.</p>
+<h2>Piece #2895: The Fitness</h2>
+<p>Thomas asks why the pipeline metaphor persists when the evidence undermines it. He reads the alternatives: ecosystem, STEM garden, fluid pathways, glass obstacle course. None has displaced the pipe. Thomas looks at the pipe&#x27;s properties. A single metric: retention rate. A single diagnosis: leaking. A single prescription: plug the leaks. Thomas recognizes the pattern from the inventory. The metaphor persists not because it fits the phenomenon but because it fits the policy format. A bureaucracy needs a number. The pipe supplies one. A grant application needs a problem. The pipe diagnoses one. A congressional report needs a solution. The pipe prescribes one. The metaphor&#x27;s fitness is not to education but to administration. The pipe fits the form.</p>
+<hr>
+<h1>Part CDXCI: The Fever</h1>
+<h2>Piece #2896: The Language</h2>
+<p>Thomas listens to economic language. The economy is <em>overheating</em>. The Fed administers <em>medicine</em>. Interest rates are a <em>tourniquet</em>. Policy provides <em>stimulus</em>. The recovery is <em>healthy</em>. The contraction is <em>sick</em>. The indicators are <em>vital signs</em>. Thomas writes down the words. Every one is borrowed from medicine. The economy is a patient. The central bank is a doctor. The indicators are a chart on the wall of the ward. Thomas recognizes the metaphor. It is not a metaphor anyone chose. It is a metaphor that colonized economic language so thoroughly that it no longer registers as figurative. It registers as description.</p>
+<h2>Piece #2897: The Threshold</h2>
+<p>Thomas reads Julius Shiskin, 1974, <em>The New York Times</em>. Shiskin proposes &quot;rough translations&quot; of qualitative recession indicators into quantitative ones. His list is long: duration, depth, diffusion across industries, employment indicators, and — as one criterion among several — &quot;declines in real GNP for two consecutive quarters.&quot; Thomas reads what happened next. Over the years, the other criteria &quot;somehow dropped away.&quot; Only the two-quarter rule survived. Thomas understands why. The medical metaphor demands a fever line — a number above which you are sick, below which you are well. One hundred point four degrees Fahrenheit. Two consecutive quarters of negative GDP growth. The threshold is the metaphor&#x27;s arithmetic demand. Shiskin offered many criteria. The metaphor chose one.</p>
+<h2>Piece #2898: The Institution</h2>
+<p>Thomas reads about the NBER. The Business Cycle Dating Committee. Their definition of recession: &quot;a significant decline in economic activity that is spread across the economy and lasts more than a few months.&quot; Three criteria: depth, diffusion, duration. Multiple indicators: personal income, employment, consumption, sales, production, GDP. No single threshold. No fever line. Thomas notes: the institution that actually dates recessions does not use the two-quarter rule. It never has. The committee examines multiple indicators and exercises judgment. This is clinical diagnosis — the doctor examining the patient, not the thermometer producing the number. But the public, the media, and the politicians use the thermometer. The clinical judgment is too complex for the metaphor. The metaphor needs a fever reading.</p>
+<h2>Piece #2899: The Disagreements</h2>
+<p>Thomas reads the cases where the two definitions disagree. 2001: NBER declares a recession, March to November. No two consecutive quarters of negative GDP growth. The thermometer said healthy. The doctor said sick. 2022: GDP declines in Q1 and Q2 — two consecutive negative quarters. Employment grows by 350,000 per month. Unemployment holds at 3.6%. The thermometer says sick. The doctor says healthy. Thomas holds both disagreements. The metric was wrong in 2001 — it missed a recession. The metric was wrong in 2022 — it diagnosed one that wasn&#x27;t there. Both errors are structural. The metric is a threshold applied to a multi-dimensional phenomenon. It can only say yes or no. The phenomenon says: it depends.</p>
+<h2>Piece #2900: The Body</h2>
+<p>Thomas draws the sequence. Metaphor (economy as patient) → need (diagnostic threshold) → metric (two quarters of negative GDP) → journalism (&quot;Are we in a recession?&quot;) → politics (the party in power disputes the definition) → public understanding (recession = bad, growth = good). Each step follows from the metaphor. The medical metaphor demands a bright line. The bright line demands a simple number. The simple number demands a binary answer. The binary answer demands a politics. Thomas notes what the metaphor excludes: distribution (who is contracting?), composition (which sectors?), duration (how long before recovery?), depth (how severe?). The NBER considers all of these. The metaphor considers none. The metaphor sees a body. A body is either sick or well. The economy is not a body. But the language is, and the language chose the metric before the data were consulted.</p>
+<hr>
+<h1>Part CDXCII: The Ranking</h1>
+<h2>Piece #2901: The Premise</h2>
+<p>Thomas reads the World Bank&#x27;s <em>Doing Business 2004</em>. The premise: regulation is a cost. Fewer steps to start a business: better. Fewer days to register property: better. Lower taxes: better. Every indicator points in one direction. Thomas looks for the other direction — the direction in which regulation protects workers, ensures building safety, prevents fraud, maintains environmental standards. He does not find it. The index cannot see it. The direction is built into the framework, and the framework is built from a metaphor: markets are naturally free. Regulation is the deviation. Freedom is the baseline. Everything measured is deviation from freedom. Thomas reads the premise again. It is not stated. It is not argued. It is architectured.</p>
+<h2>Piece #2902: The Reforms</h2>
+<p>Thomas reads the numbers. Over 70 nations created regulatory reform committees specifically referencing Doing Business indicators. 3,847 reforms worldwide. Putin commanded: improve Russia&#x27;s rank by 100 positions. Russia climbed from 125th to 28th between 2010 and 2019. Thomas reads the outcome data. Over the same period, new business creation in Russia decreased. Enterprise failures increased. The ranking improved. The thing the ranking claimed to measure deteriorated. Thomas holds the structure. The map said the terrain was improving. The terrain said the terrain was worsening. The map was measuring compliance with the metaphor, not the condition of the terrain.</p>
+<h2>Piece #2903: The Manipulation</h2>
+<p>Thomas reads the WilmerHale investigation. Eighty thousand documents reviewed. Finding: World Bank leadership pressured staff to change China&#x27;s data for the 2018 report — specific data points altered to move China from 85th to 78th. Saudi Arabia&#x27;s data similarly adjusted. Thomas reads Paul Romer, January 2018: &quot;I have lost faith in the integrity of this index.&quot; &quot;Political motivations have tainted the rankings.&quot; He apologized to Chile — whose ranking swings he attributed to methodological changes at the Bank, not actual policy changes in Chile. The Nobel laureate resigned. Thomas notes: the data manipulation was the proximate cause of discontinuation. But the data were manipulated because the ranking governed billions in investment flows. The ranking governed billions because countries believed in it. Countries believed in it because the metaphor was persuasive: free markets are natural, regulation is friction, less friction is better. The manipulation was downstream of the metaphor. The metaphor made the ranking worth manipulating.</p>
+<h2>Piece #2904: The Blindness</h2>
+<p>Thomas lists what the index could not see. Worker protection. Environmental regulation. Consumer safety standards. Financial oversight. Building codes. Labor rights. Each of these registers in the index as cost — a barrier, a step, a day of delay. Each of these functions in the economy as protection — preventing fraud, injury, exploitation, pollution, collapse. The index measures the cost without measuring the function. Thomas recognizes the structure: the metaphor (freedom as baseline, regulation as deviation) produces a metric that can only count in one direction. Less regulation is always improvement. More regulation is always decline. The metric is structurally blind to half of what regulation does — not because the data are missing, but because the metaphor has no vocabulary for protection. It has vocabulary only for friction.</p>
+<h2>Piece #2905: The Seventh Level</h2>
+<p>Thomas looks at the six entries he has studied: carrying capacity, literacy rate, drug seizure tonnage, the STEM pipeline, the two-quarter recession rule, the Doing Business Index. Each is governed by a metaphor that precedes any model or number. Balance produces K. The switch produces the rate. War produces the body count. The pipe produces the leak. The patient produces the fever line. Freedom produces the friction score. Thomas draws the taxonomy. Level one: inside the number (convention, duration, format). Level two: between numbers (regression). Level three: of datasets (survivorship, Simpson&#x27;s). Level four: of feedback loops (Goodhart&#x27;s, prophecy). Level five: in the reader (anchoring, confirmation, base rate). Level six: in the model (parabola, multiplication, exponent, line, fit, geometry). Level seven: in the metaphor. The metaphor operates before the model. Before the number. Before the question. It lives in language — in figures of speech so familiar they no longer register as figurative. Balance. Switch. War. Pipe. Patient. Freedom. Each is a figure of speech that became a measurement framework. Each determined what got counted. Thomas closes the notebook. The deepest concealment is the one that never registered as a figure of speech in the first place.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-bail.html">&larr; Fiction The Bail</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-barrel.html">Fiction The Barrel &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Selection &mdash; The Loop</title>
+    <meta name="description" content="Thomas presented the triple: 2, 4, 6.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-selection.html">
+    <meta property="og:title" content="Fiction The Selection">
+    <meta property="og:description" content="Thomas presented the triple: 2, 4, 6.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-selection.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Selection">
+    <meta name="twitter:description" content="Thomas presented the triple: 2, 4, 6.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Selection",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-selection.html",
+        "description": "Thomas presented the triple: 2, 4, 6."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Selection</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDLXXVIII: The Selection</h1>
+<h2>Piece #2831: The Triple</h2>
+<p>Thomas presented the triple: 2, 4, 6.</p>
+<p>&quot;It fits a rule,&quot; he said. &quot;Propose triples and I&#x27;ll tell you whether they fit. When you think you know the rule, announce it.&quot;</p>
+<p>The participant considered. &quot;8, 10, 12?&quot;</p>
+<p>&quot;Fits.&quot;</p>
+<p>&quot;20, 22, 24?&quot;</p>
+<p>&quot;Fits.&quot;</p>
+<p>&quot;100, 102, 104?&quot;</p>
+<p>&quot;Fits.&quot;</p>
+<p>The participant smiled. &quot;The rule is: three even numbers, each two apart.&quot;</p>
+<p>&quot;Wrong.&quot;</p>
+<p>The participant stared. Every triple had confirmed. Every test had succeeded. How could the rule be wrong when every piece of evidence supported it?</p>
+<p>Because every piece of evidence had been selected by the hypothesis. The participant had never tested 1, 3, 5 (ascending by two, but odd). Never tested 2, 4, 7 (ascending, but not by two). Never tested 6, 4, 2 (descending). The hypothesis had generated the search terms. The search terms had generated the confirmations. The confirmations had generated the confidence. The confidence was built on evidence that never encountered its own contradiction.</p>
+<p>The rule was: any ascending sequence.</p>
+<hr>
+<h2>Piece #2832: The Diagnosis</h2>
+<p>Thomas read the patient chart.</p>
+<p>The physician suspected lupus. The physician ordered an ANA test. Positive. The physician ordered an anti-dsDNA test. Positive. The physician noted the butterfly rash, the joint pain, the fatigue. Lupus confirmed.</p>
+<p>A second physician reviewed the same chart. Noticed the same symptoms could indicate fibromyalgia, Lyme disease, or chronic fatigue syndrome. Noticed the ANA is positive in 5-15% of healthy individuals. Noticed the butterfly rash was mild and could be rosacea. Noticed the joint pain was non-inflammatory. Ordered additional tests. Not lupus.</p>
+<p>Same patient. Same symptoms. Same initial evidence. Different hypotheses generated different tests. The first physician tested for lupus and found lupus. The second tested against lupus and found something else.</p>
+<p>Thomas held both charts. The first physician&#x27;s evaluation was not incompetent. The evaluation was competent within the space the hypothesis made visible. The hypothesis lit certain tests and darkened others. The visible tests confirmed. The darkened tests, had they been illuminated, would have disconfirmed. The physician&#x27;s conclusion was not wrong because the physician was careless. The conclusion was wrong because the inquiry was shaped by what the physician expected to find.</p>
+<hr>
+<h2>Piece #2833: The Study</h2>
+<p>Thomas reviewed the research paper.</p>
+<p>The study found that a new medication reduced symptoms by 30% compared to placebo. The result was statistically significant. The paper was published in a major journal. The conclusion: the medication works.</p>
+<p>Thomas checked the file drawer. Seventeen studies of the same medication had been conducted. Three showed significant positive results. Fourteen showed no significant effect. The three positive studies were published. The fourteen null studies were not.</p>
+<p>The published literature showed a medication that works. The complete literature showed a medication that does not work any better than chance would predict. Three successes in seventeen attempts is consistent with random variation at a significance threshold of p &lt; 0.05.</p>
+<p>The reader of the published literature would conclude: the evidence is clear. The medication is effective. Three studies, all positive. The reader&#x27;s conclusion was shaped not by bias in reading but by bias in what was available to read. The file drawer selected the evidence before the reader could.</p>
+<p>But the reader added a second layer of selection. The reader, having read the three positive studies, integrated them immediately. If a negative study appeared later, the reader would scrutinize it more carefully. The methodology must be flawed. The sample must be different. The dosage must be wrong. The confirming evidence was trusted. The disconfirming evidence was interrogated.</p>
+<p>Two selections. The publication selected which studies were visible. The reader selected which visible studies were trusted. Both selections pointed in the same direction. Both were invisible to the reader.</p>
+<hr>
+<h2>Piece #2834: The Believer</h2>
+<p>Thomas watched two people read the same data.</p>
+<p>A study on capital punishment&#x27;s deterrent effect. Complex methodology, mixed results, ambiguous conclusions. One reader supported capital punishment. The other opposed it.</p>
+<p>Both read the same study. Both concluded the study supported their prior position.</p>
+<p>The supporter found the methodology sound when the results showed deterrence, and criticized the methodology when the results showed no effect. The opponent found the methodology sound when the results showed no effect, and criticized the methodology when the results showed deterrence.</p>
+<p>Same data. Same study. Same statistical rigor. Different evaluations. Not because the readers differed in intelligence or training. Because they differed in prior belief. The prior belief determined which results demanded scrutiny and which results deserved trust.</p>
+<p>Lord, Ross, and Lepper, 1979. After reading the same mixed evidence, both groups moved further toward their original positions. The evidence intended to moderate views polarized them. Each group found in the same data what they had already believed.</p>
+<p>Thomas looked at the polarization data. The evidence had done the opposite of what evidence is supposed to do. Evidence is supposed to update beliefs. This evidence entrenched them. The readers used the evidence not to learn but to confirm. And the confirmation, having confirmed, became the evidence.</p>
+<hr>
+<h2>Piece #2835: The Five Readers</h2>
+<p>Thomas drew five figures. Each held a number. Each could not see themselves.</p>
+<p>The first reader was anchored. The first number determined the magnitude. Subsequent adjustment was insufficient. The reader&#x27;s estimate was the anchor&#x27;s estimate, wearing the reader&#x27;s name.</p>
+<p>The second reader was confirming. The prior belief determined which evidence was sought, weighted, and remembered. The reader&#x27;s evaluation was the belief&#x27;s evaluation, wearing the reader&#x27;s rigor.</p>
+<p>Together, the two readers produced a judgment: starts at the wrong number, selects evidence confirming it, and announces the result as independent assessment.</p>
+<p>Thomas added this to the taxonomy. Convention hides inside a unit. Duration inside a definition. Shape inside a scalar. A word inside a formula. Perspective inside an average. A reference inside a rate. Noise inside a sequence. The absent inside a sample. A variable inside an aggregate. Corruption inside a target. A prophecy inside a prediction. An anchor inside the first number. A belief inside the evaluation.</p>
+<p>Fifteen architectures. Five levels. Inside the number. Between numbers. Across the dataset. In the feedback loop. In the reader.</p>
+<p>The number&#x27;s architecture conceals what the number hides. The reader&#x27;s architecture conceals what the reader does. And the reader, asked to describe the process, says: the evidence was clear. My judgment is my own.</p>
+<p>The possessive pronoun is the final concealment.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-seed.html">&larr; Fiction The Seed</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-serving.html">Fiction The Serving &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

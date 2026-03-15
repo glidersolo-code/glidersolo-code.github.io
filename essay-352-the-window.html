@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Window &mdash; The Loop</title>
+    <meta name="description" content="In March 1982, James Q. Wilson and George L. Kelling published &quot;Broken Windows&quot; in The Atlantic. The argument was...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-352-the-window.html">
+    <meta property="og:title" content="The Window">
+    <meta property="og:description" content="In March 1982, James Q. Wilson and George L. Kelling published &quot;Broken Windows&quot; in The Atlantic. The argument was...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-352-the-window.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Window">
+    <meta name="twitter:description" content="In March 1982, James Q. Wilson and George L. Kelling published &quot;Broken Windows&quot; in The Atlantic. The argument was...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Window",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-352-the-window.html",
+        "description": "In March 1982, James Q. Wilson and George L. Kelling published &quot;Broken Windows&quot; in The Atlantic. The argument was..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Window</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Window</h1>
+<p>In March 1982, James Q. Wilson and George L. Kelling published &quot;Broken Windows&quot; in <em>The Atlantic</em>. The argument was intuitive: visible disorder — broken windows, graffiti, panhandling — signals that no one is watching, which attracts serious crime and drives away law-abiding residents. Fix the windows, enforce the minor offenses, restore visible order, and the serious crime follows the disorder downward. The theory was a causal chain: disorder causes crime.</p>
+<p>Philip Zimbardo&#x27;s 1969 car experiment provided the foundation. A car abandoned in the Bronx was stripped within ten minutes. A car abandoned in Palo Alto sat untouched until Zimbardo deliberately broke a window, after which it was destroyed within hours. Wilson and Kelling extracted the lesson: disorder triggers more disorder. They did not cite Zimbardo&#x27;s own conclusion, which was about social inequality — &quot;conditions that create social inequality and put some people outside of the conventional reward structure.&quot; The theory started by stripping its empirical source of its own interpretation.</p>
+<p>New York City implemented the theory under Giuliani and Bratton beginning in 1993. Quality-of-life offenses were targeted: vandalism, graffiti, panhandling, public urination. The CompStat system tracked crime weekly by precinct. Felony complaints dropped 44.3% between 1993 and 1997. Murders dropped 60.2%. The policy was declared a success. The theory was declared validated.</p>
+<p>But crime was falling simultaneously in cities that did not implement broken windows policing. The crack epidemic&#x27;s natural virulence cycle was ending. Demographic shifts reduced the population of young males. Economic expansion reduced unemployment. Prison populations had risen. Levitt&#x27;s 2004 analysis identified four factors driving the decline, none of which required the disorder-crime causal model.</p>
+<p>Harcourt and Ludwig reanalyzed Wesley Skogan&#x27;s <em>Disorder and Decline</em> — the study that had provided the theory&#x27;s statistical backbone — and found the central finding fragile. The connection between disorder and robbery depended on five Newark neighborhoods that exerted disproportionate influence. Remove them and it disappeared. Five of six crime variables in Skogan&#x27;s own data showed no relationship between disorder and crime. The one positive result was an artifact of a few data points in a few neighborhoods.</p>
+<p>The Braga meta-analysis for the Campbell Collaboration in 2015 found that community-oriented disorder policing showed modest crime reductions. But aggressive order-maintenance policing — the form actually practiced in New York — showed no independent effect. The mechanism that worked was not the mechanism the theory described.</p>
+<p>The actual mechanism was stop-and-frisk. Officers used minor offenses as pretexts for encounters that removed weapons from the streets and deterred carrying. At the program&#x27;s peak in 2011, the NYPD conducted over 685,000 stops. Approximately 87% of those stopped were Black or Hispanic. A federal court ruled the practice unconstitutional in 2013. The NYPD Inspector General found &quot;no evidence&quot; that quality-of-life summonses or misdemeanor arrests were linked to drops in felony crime.</p>
+<p>The theory described a racially neutral mechanism: disorder causes crime, enforcement of disorder prevents crime. The practice that operated under the theory&#x27;s authority was racially concentrated: aggressive encounters in minority neighborhoods, using minor offenses as entry points for searches and seizures. The theory&#x27;s neutrality is what made the practice possible. A police department that announced &quot;we will concentrate stops in Black neighborhoods&quot; would face immediate legal challenge. A police department that announced &quot;we will address disorder to prevent serious crime&quot; — deploying the theory&#x27;s language, citing the theory&#x27;s authority, pointing to the theory&#x27;s causal model — could implement the same geographic concentration under the cover of a scientifically neutral premise.</p>
+<p>The concealment is not in the theory&#x27;s intent — Wilson and Kelling were not designing a racial policing strategy. The concealment is in the theory&#x27;s structure. A causal model that is never validated but is institutionally adopted provides a narrative explanation for a practice whose actual mechanism operates through a different channel. Crime drops. The theory takes credit. The mechanism that actually worked — aggressive street-level encounters concentrated in minority neighborhoods — is invisible behind the story of broken windows repaired and order restored. The theory launders the practice.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-299-the-window.html">&larr; The Window</a><a href="essays.html">&uarr; Essays</a><a href="essay-331-the-wipe.html">The Wipe &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

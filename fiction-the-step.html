@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Step &mdash; The Loop</title>
+    <meta name="description" content="Tokyo, 1965. The Yamasa Clock and Instrument Company released a pedometer — a small, clip-on device that counted steps by detecting hip movement with a...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-step.html">
+    <meta property="og:title" content="Fiction The Step">
+    <meta property="og:description" content="Tokyo, 1965. The Yamasa Clock and Instrument Company released a pedometer — a small, clip-on device that counted steps by detecting hip movement with a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-step.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Step">
+    <meta name="twitter:description" content="Tokyo, 1965. The Yamasa Clock and Instrument Company released a pedometer — a small, clip-on device that counted steps by detecting hip movement with a...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Step",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-step.html",
+        "description": "Tokyo, 1965. The Yamasa Clock and Instrument Company released a pedometer — a small, clip-on device that counted steps by detecting hip movement with a..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Step</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXII: The Step</h1>
+<h2>Piece #1301: The Name</h2>
+<p>Tokyo, 1965. The Yamasa Clock and Instrument Company released a pedometer — a small, clip-on device that counted steps by detecting hip movement with a horizontal spring lever. They named it the 万歩計 — manpo-kei — &quot;10,000 steps meter.&quot; The name was a marketing decision, timed to the fitness enthusiasm surrounding the 1964 Tokyo Olympics. The number 10,000 was chosen because it was round, aspirational, and embedded in the product&#x27;s name. Thomas searched for the clinical trial. The dose-response study. The physiological research establishing that 10,000 steps per day was the threshold for health benefit. He could not find it. The number was not derived from health research. It was a brand name.</p>
+<h2>Piece #1302: The Threshold</h2>
+<p>The number migrated. From the name of a Japanese pedometer to global health guidance. The American Heart Association recommended 10,000 steps. Fitness apps set it as the default goal. Health insurance programs offered incentives for reaching it. The number was experienced as a scientifically established target — the daily dose of walking needed for cardiovascular benefit. Thomas traced the research that came after the number. Tudor-Locke and Bassett, reviewing the literature in <em>Sports Medicine</em> in 2004, noted that 10,000 was arbitrary, unsupported by dose-response evidence. Lee and colleagues at Harvard, studying 16,741 older women in <em>JAMA Internal Medicine</em> in 2019, found that mortality benefit plateaued at approximately 7,500 steps per day — with no additional benefit above 10,000. Paluch and colleagues in <em>The Lancet Public Health</em> in 2022 — a meta-analysis of 47,471 adults — found plateaus around 6,000 to 8,000 for adults over 60 and 8,000 to 10,000 for younger adults. The threshold the research eventually found was lower than the marketing number. The marketing number had already become infrastructure.</p>
+<h2>Piece #1303: The Count</h2>
+<p>A step is a step. Thomas tested this. A step on flat pavement. A step uphill. A step carrying a forty-pound backpack. A step on a treadmill at two miles per hour. A step on a treadmill at four miles per hour. All counted as one. The step counter counted events — acceleration peaks detected by an accelerometer. It could not detect intensity, terrain, load, or speed. Walking at a leisurely pace and walking at a brisk pace produced the same count. Ten thousand slow steps and ten thousand fast steps were the same number. The exercise was different. The cardiovascular demand was different. The caloric expenditure was different. The count was the same. Physical activity is multi-dimensional — intensity, duration, type, frequency, terrain, load. The step counter collapsed all of these into a single scalar: how many times did the hip oscillate.</p>
+<h2>Piece #1304: The Device</h2>
+<p>The pedometer used a horizontal spring lever to detect hip motion. It was designed to be clipped to the waist. The smartphone accelerometer — which replaced the pedometer for most users — sits in a pocket, a purse, or a hand. Different placements produce different counts. Studies showed smartphone accelerometers undercount by 10 to 20 percent compared with waist-worn devices, depending on placement and gait. Different manufacturers use different algorithms to distinguish steps from other movements. One person&#x27;s 10,000 is not another person&#x27;s 10,000 — not because they walked differently, but because the devices in their pockets processed the same acceleration data differently. Thomas noted: the number appears on the screen with the finality of a measurement. It is the output of an algorithm interpreting accelerometer data, and the algorithm varies by device, by placement, by firmware version.</p>
+<h2>Piece #1305: The Goal</h2>
+<p>A fitness app. A ring closing. &quot;10,000 steps — goal achieved.&quot; Thomas watched the animation. The circle completed. The phone vibrated. The day was judged: enough. Enough by whose standard? A Japanese pedometer company in 1965. Why that number? Because it fit in the name. Why did it persist? Because the apps needed a default, the insurance programs needed a threshold, and the public needed a number. The research that eventually studied the number found lower thresholds and diminishing returns. But the research came after the infrastructure. The apps were already built. The goals were already set. The rings were already designed to close at 10,000. The number had become the environment. To change it would require changing the goal in every app, every insurance incentive, every workplace wellness program. The convention had become nature — not because anyone defended 10,000 as the correct number, but because changing a default is harder than keeping one.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-statement.html">&larr; Fiction The Statement</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-stone.html">Fiction The Stone &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

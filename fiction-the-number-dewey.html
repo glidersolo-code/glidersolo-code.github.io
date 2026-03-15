@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Number Dewey &mdash; The Loop</title>
+    <meta name="description" content="Dewey divided knowledge into ten.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-number-dewey.html">
+    <meta property="og:title" content="Fiction The Number Dewey">
+    <meta property="og:description" content="Dewey divided knowledge into ten.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-number-dewey.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Number Dewey">
+    <meta name="twitter:description" content="Dewey divided knowledge into ten.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Number Dewey",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-number-dewey.html",
+        "description": "Dewey divided knowledge into ten."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Number Dewey</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXXII: The Number</h1>
+<h2>Piece #1101: The Ten</h2>
+<p>Dewey divided knowledge into ten.</p>
+<p>In 1876, Melvil Dewey, a twenty-five-year-old assistant librarian at Amherst College, published <em>A Classification and Subject Index for Cataloguing and Arranging the Books and Pamphlets of a Library.</em> The system had ten main classes: 000 Generalities, 100 Philosophy, 200 Religion, 300 Social Sciences, 400 Language, 500 Natural Sciences, 600 Technology, 700 The Arts, 800 Literature, 900 History. Each class was divided into ten divisions. Each division into ten sections. The decimal notation was infinitely extensible — 616.8942 was as specific as the system needed to be.</p>
+<p>The ten classes were not derived from any theory of knowledge. They were a decision — Dewey&#x27;s decision — about how to organize a library in Amherst, Massachusetts, in 1876. The decision reflected the knowledge structure of a 19th-century American college: philosophy was distinct from religion, natural sciences from technology, language from literature. The boundaries between classes were not discovered in the world. They were imposed on the world by the numbering system that organized the shelves.</p>
+<p>Thomas&#x27;s chart used a classification system too. ICD-10: the International Classification of Diseases, 10th revision. Every diagnosis had a code. Every code had a place in the hierarchy. The hierarchy determined what was near what — which conditions were grouped, which were separated, which were visible to the billing system and which were invisible. The classification was administrative. The consequences were clinical.</p>
+<h2>Piece #1102: The Religion</h2>
+<p>Class 200 was Religion.</p>
+<p>200-289: Christianity. 290-299: Other religions. Nine-tenths of the Religion class was devoted to Christianity. Hinduism, Buddhism, Islam, Judaism, Sikhism, and every other non-Christian tradition shared the remaining tenth. The allocation was not based on the number of adherents (Islam and Hinduism each had more adherents than Christianity when measured globally), nor on the number of texts, nor on the complexity of theological systems. The allocation reflected the world as seen from Amherst College in 1876: Christianity was religion; other traditions were varieties of not-Christianity.</p>
+<p>The system has been revised — editions 20 through 23 expanded the coverage of non-Christian traditions, added specificity to Islamic law, Hindu philosophy, Buddhist meditation practices. But the architectural constraint remained: the numbering system reserved 90% of the Religion class for Christianity, and expanding coverage of other traditions required subdividing the 10% that remained. The architecture was the decision. The revisions were adjustments within the decision. The decision itself — how much space each tradition occupies in the numbering — persisted.</p>
+<p>Thomas&#x27;s chart allocated space similarly. The EHR had fields for every standard condition, with expandable subcategories for common diagnoses. Rare conditions — the ones Thomas actually had — required free-text notes, supplemental codes, workarounds. The architecture of the chart, like the architecture of the classification, determined what was easy to record and what was difficult. What was easy was visible. What was difficult was present but marginal.</p>
+<h2>Piece #1103: The Shelf</h2>
+<p>The number determined the shelf, and the shelf determined the encounter.</p>
+<p>A book classified at 510 (Mathematics) sat next to books at 511, 512, 513. A browser walking through the 510s encountered mathematics in the order Dewey had determined: number theory next to algebra next to arithmetic. The proximity was physical — books touching books on a wooden shelf. The proximity was also conceptual: the browsing patron experienced the Dewey order as the order of knowledge, because the order of the shelf was the only order available in the building.</p>
+<p>The shelf performed a claim about knowledge that was invisible as a claim. The patron did not think: &quot;Dewey decided that number theory should be next to algebra.&quot; The patron thought: &quot;Number theory is next to algebra.&quot; The classification&#x27;s decision had become the patron&#x27;s world. The arbitrariness of the arrangement — algebra could have been next to geometry, or next to logic, or next to applied mathematics — was hidden by the physicality of the shelf. The books were there. They had always been there. The arrangement was the arrangement.</p>
+<p>Thomas&#x27;s chart arranged information similarly. Vital signs were grouped together. Lab results were grouped together. Imaging was grouped together. The grouping was a decision about what belonged with what — a design choice made by the EHR vendor, influenced by clinical convention but not determined by physiology. The nurse who looked at Thomas&#x27;s chart experienced the arrangement as the arrangement of the patient&#x27;s data. The data&#x27;s arrangement was the vendor&#x27;s decision. Thomas was elsewhere.</p>
+<h2>Piece #1104: The Hierarchy</h2>
+<p>The hierarchy was the argument.</p>
+<p>000 before 100 before 200 before 300. The sequence implied a progression: from generalities through philosophy through religion through social sciences to history. The implication was architectural — the numbers increased, the classes followed, and the building&#x27;s shelves marched from entrance to back in numerical order. A patron who began at 000 and walked to 999 traversed all human knowledge in Dewey&#x27;s order. The order was not neutral. It was an argument about which knowledge was foundational (generalities, philosophy) and which was consequential (history, geography). The argument was invisible because it was infrastructure.</p>
+<p>The hierarchy also determined what was subdivision and what was main class. Philosophy was a main class (100). Psychology was a subdivision of philosophy (150). The subordination was Dewey&#x27;s judgment — in 1876, psychology was considered a branch of philosophy. By 2024, psychology was an independent discipline with its own departments, journals, funding streams, and professional organizations. The Dewey system still placed it under philosophy. The world had changed. The number had not. The number determined the shelf. The shelf determined the encounter. The encounter shaped the patron&#x27;s understanding of what psychology was — a branch of philosophy, shelved under 100, subordinate in the architecture that the patron walked through.</p>
+<p>Thomas&#x27;s chart had hierarchies too. Primary diagnoses and secondary diagnoses. Principal problem and comorbidities. The hierarchy determined what the chart foregrounded and what it subordinated. The hierarchy was a clinical decision — which condition was primary — but the hierarchy also determined billing, resource allocation, and quality metrics. The hierarchy was medical and administrative simultaneously, and the administrative hierarchy shaped the clinical attention that the medical hierarchy received.</p>
+<h2>Piece #1105: The Number</h2>
+<p>The number was Dewey&#x27;s.</p>
+<p>Not knowledge&#x27;s number. Not the book&#x27;s number. Not the reader&#x27;s number. Dewey&#x27;s — the product of one person&#x27;s decisions about how knowledge should be organized, made in 1876, at a specific college, in a specific country, with specific assumptions about what mattered and what didn&#x27;t, what was central and what was peripheral, what deserved nine-tenths of a class and what deserved one-tenth.</p>
+<p>The number had been revised, extended, translated, digitized. It was used in libraries in 135 countries, translated into over 30 languages. The system&#x27;s success was undeniable — it worked, in the sense that books could be found, shelves could be organized, collections could be maintained. The success was also the concealment: a system that worked was a system that was not questioned, and a system that was not questioned was a system whose decisions were invisible, and a system whose decisions were invisible was a system whose decisions looked like facts.</p>
+<p>Thomas&#x27;s number — his medical record number, his diagnosis codes, his acuity scores — were similarly products of decisions. The decisions were embedded in the systems that produced the numbers. The systems worked. The working was the concealment. A system that produces a number that leads to an action that produces an outcome is a system that confirms itself. The confirmation feels like truth. The truth is the number. The patient is not the number.</p>
+<p>The shelf held the book. The chart held the data. Neither held the thing it organized. The knowledge was in the reading. The patient was in the bed. The number was on the shelf and in the chart, organizing what it could not contain, measuring what it could not reach, and the system continued, and the number continued, and Dewey&#x27;s ten classes continued, and somewhere a patron walked through the stacks and experienced the arrangement of knowledge as the arrangement of the world, and somewhere Thomas lay in his bed and the chart arranged his data and the data was not him and the arrangement was not neutral and the number was Dewey&#x27;s and the patient was elsewhere.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-nps.html">&larr; Fiction The Nps</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-number-ssn.html">Fiction The Number Ssn &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

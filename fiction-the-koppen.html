@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Koppen &mdash; The Loop</title>
+    <meta name="description" content="Wladimir Köppen, born St. Petersburg 1846, died Graz 1940. Ninety-four years. He trained as a botanist, worked as a climatologist, published his first...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-koppen.html">
+    <meta property="og:title" content="Fiction The Koppen">
+    <meta property="og:description" content="Wladimir Köppen, born St. Petersburg 1846, died Graz 1940. Ninety-four years. He trained as a botanist, worked as a climatologist, published his first...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-koppen.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Koppen">
+    <meta name="twitter:description" content="Wladimir Köppen, born St. Petersburg 1846, died Graz 1940. Ninety-four years. He trained as a botanist, worked as a climatologist, published his first...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Koppen",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-koppen.html",
+        "description": "Wladimir Köppen, born St. Petersburg 1846, died Graz 1940. Ninety-four years. He trained as a botanist, worked as a climatologist, published his first..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Koppen</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXIV: The Zone</h1>
+<h2>Piece #1261: The Botanist</h2>
+<p>Wladimir Köppen, born St. Petersburg 1846, died Graz 1940. Ninety-four years. He trained as a botanist, worked as a climatologist, published his first classification of the world&#x27;s climates in 1884, revised it in 1900, again in 1918, again in 1936. He never stopped revising. The system he built was an attempt to match numbers to leaves — to find temperature and precipitation thresholds whose boundaries would fall where one kind of vegetation ended and another began. The palms stop here. The trees stop there. The evergreens give way to deciduous. He observed these transitions in Europe, measured the climate where they occurred, and drew lines on a map. The lines were botanical. The numbers were meteorological. The map was both and neither. Thomas wrote the word &quot;correspondence&quot; and circled it. The thresholds corresponded to vegetation. Correspondence is not identity. A portrait corresponds to a face. It is not the face.</p>
+<h2>Piece #1262: The Threshold</h2>
+<p>The 18°C threshold. Coldest month of the year. If above 18°C, tropical. If below, not. Köppen chose this number because it approximated the poleward limit of palm growth in Europe — the latitude beyond which certain tropical species could not survive the winter. He was looking at palms. He was looking at the Mediterranean. He wrote a number and the number traveled. Applied to equatorial Africa, where palms are limited by water, not temperature. Applied to monsoonal Asia, where the 18°C line falls well south of the ecological tropics. Applied to highland plateaus where elevation replicates polar conditions at tropical latitudes. The number stayed. The palms it was calibrated against are long dead. Thomas turned to a blank page and wrote: the threshold was reverse-engineered from one set of plants, expressed as a temperature, and applied to the planet. The temperature is experienced as a discovery about climate. It is a description of European trees.</p>
+<h2>Piece #1263: The Map</h2>
+<p>Sharp lines. Color blocks. Af in green, BWh in tan, Cfa in olive, Dfc in pale blue, ET in gray. The map of the world&#x27;s climates, as rendered by the Köppen system, looks like a geological map — authoritative, precise, each zone distinct from its neighbors. A student looking at this map would conclude that climate transitions are abrupt. That tropical ends and temperate begins. That there is a line, and on one side of the line the climate is one thing, and on the other side it is another. In nature, the transitions are gradual. Temperature changes smoothly with latitude, altitude, distance from coast. Precipitation varies with topography, season, ocean currents. The gradient is continuous. The map is categorical. London and Brisbane occupy the same color. Washington and Southern California share the same code. Thomas wrote: the format does the work. The sharp boundary performs certainty. The color block performs uniformity. The letter code performs precision. None of these are in the atmosphere. All of them are on the map.</p>
+<h2>Piece #1264: The Migration</h2>
+<p>Beck and colleagues, 2018. One-kilometer resolution. The first global map fine enough to see the boundaries move. Approximately five percent of the Earth&#x27;s land surface had already shifted Köppen zone in the previous forty years. Under high-emission scenarios: nine to fifteen percent projected to shift by 2100. The classification was designed for permanence. Köppen assumed the boundaries described fixed features of the planet&#x27;s geography — the tropics were the tropics, the tundra was the tundra, the treeline was the treeline. The system had no mechanism for tracking movement because movement was not anticipated. When a location shifts from Cfa to Csa, the system records a different letter code. It does not record a process. The shift is visible only as a change in classification, not as a trajectory. Thomas noted: the tool designed to describe a stable world is now the primary tool for communicating an unstable one. The stability of the framework is what makes the instability legible. If the system changed as fast as the climate, nothing would appear to move.</p>
+<h2>Piece #1265: The Convention</h2>
+<p>Two variables. Temperature and precipitation. From these, thirty types. Climate involves radiation balance, wind, humidity, continentality, elevation, ocean currents, cloud cover, soil moisture, aerosol loading, albedo, and their nonlinear interactions. The classification cannot see these. It sees what Köppen chose to measure in the 1880s, using the instruments and datasets available to a German-Russian botanist working before radiosondes, before satellites, before weather radar, before computational fluid dynamics. The system persists not because it captures climate but because it is teachable. Five letters. Thirty types. Color-coded maps. Every introductory geography textbook, every climate report, every building code that references &quot;climate zone.&quot; The system endures because it is simple and because simplicity, in a classification, is experienced as accuracy. Thomas closed the notebook. The thresholds were conventions. The conventions were mapped. The map was experienced as geography. The geography was experienced as nature. Somewhere in this chain, the botanist&#x27;s European plants became invisible. The numbers remained. The numbers looked like they had always been there.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-kit.html">&larr; Fiction The Kit</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-label.html">Fiction The Label &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

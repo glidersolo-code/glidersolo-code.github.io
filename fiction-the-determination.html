@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Determination &mdash; The Loop</title>
+    <meta name="description" content="Thomas walks the applicant through five doors.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-determination.html">
+    <meta property="og:title" content="Fiction The Determination">
+    <meta property="og:description" content="Thomas walks the applicant through five doors.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-determination.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Determination">
+    <meta name="twitter:description" content="Thomas walks the applicant through five doors.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Determination",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-determination.html",
+        "description": "Thomas walks the applicant through five doors."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Determination</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part DI: The Determination</h1>
+<h2>Piece #2946: The Five Steps</h2>
+<p>Thomas walks the applicant through five doors.</p>
+<p>Behind door one: Are you working? If yes, turn back. The evaluation is over. Behind door two: Is it severe? If not, turn back. Behind door three: Does it match? The Blue Book contains the Listings. Specific values. Specific findings. If the impairment fits the template, pass through. If not — even if the suffering is identical — continue.</p>
+<p>Behind door four: Can you do your old job? If yes, turn back. Behind door five: Can you do any job? The grid decides. Age, education, work experience, Residual Functional Capacity. The grid is a matrix. The matrix produces a result.</p>
+<p>Thomas notes that sixty-two percent never make it through. They are caught at the first pass and told: not disabled. Of those who appeal, eighty-four percent are caught again. Of those who appeal a second time, to a hearing with a judge — the same body, the same evidence, a different reader — more than half pass through.</p>
+<p>The doors did not change. The body did not change. The reader changed. The outcome changed with the reader.</p>
+<hr>
+<h2>Piece #2947: The Listing</h2>
+<p>Thomas opens the Blue Book. Section 1.15: Disorders of the skeletal spine resulting in compromise of a nerve root. The Listing requires: neuro-anatomic distribution of pain, limitation of motion, motor loss with atrophy, sensory or reflex loss, positive straight-leg raising test, medical imaging confirming nerve root compromise.</p>
+<p>A person with the same pain, the same limitation, the same functional loss — but whose imaging shows a different pattern — does not meet the Listing. The person&#x27;s body does not match the text. The text does not accommodate the body.</p>
+<p>Thomas notes that the Listing is not a description of disability. The Listing is a definition of disability. The definition creates the category. The applicant either fits the category or does not. The fitting is not a discovery. The fitting is a comparison between a body and a text, where the text determines what the body is allowed to mean.</p>
+<hr>
+<h2>Piece #2948: The Birthday</h2>
+<p>Thomas reads the grid.</p>
+<p>Applicant: age 54. Education: high school. Work history: unskilled labor. Residual Functional Capacity: limited to light work. Grid result: not disabled. Able to adjust to other work.</p>
+<p>The same applicant returns. Everything is identical — the same back, the same pain, the same RFC. But the calendar has turned. The applicant is now 55.</p>
+<p>Grid result: disabled. Unable to adjust to other work.</p>
+<p>Thomas circles the numbers. The grid converted one year of age into a different human category. Nothing changed in the body. Nothing changed in the evidence. The grid changed. The category changed with the grid.</p>
+<p>The grid does not observe the applicant&#x27;s 55th birthday as a point of functional decline. The grid constitutes the birthday as an administrative threshold. The threshold is the instrument. The instrument is the outcome.</p>
+<hr>
+<h2>Piece #2949: The Binary</h2>
+<p>Thomas draws a line. On one side: disabled. On the other: not disabled.</p>
+<p>The person who can work twenty hours but not forty stands on the line. The person who has good weeks and bad weeks. The person who can sit for two hours but not four. The person whose pain permits some tasks in the morning and nothing by afternoon.</p>
+<p>The line does not accommodate them. The line requires a side. The evaluation requires a switch: on or off. The Veterans Administration uses a dial: 10, 20, 30, 50, 70, 100 percent. The SSA uses a switch.</p>
+<p>Thomas notes that the binary does not discover a natural division between the able and the disabled. The binary imposes one. The continuum that medical evidence describes — partial limitation, variable capacity, conditional function — is erased by the output format. The evaluation produces a category. The category replaces the person. The replacement is the determination.</p>
+<hr>
+<h2>Piece #2950: The Nine Instruments</h2>
+<p>Thomas counts.</p>
+<p>The checkbox. The model. The definition. The algorithm. The surrogate. The kit. The interview. The custody evaluation. The determination.</p>
+<p>Nine instruments. Nine fields. Four modes of constitution, and now a fifth becoming visible: <strong>truncation</strong>. The disability determination does not include the wrong things or exclude the right things. It does not determine whether to activate. It does not invert evidence against the claimant. It truncates: it converts a continuum into a binary, erasing the space between the categories. The truncation is not a simplification. The truncation is a constitution. The binary creates a world in which partial disability does not exist, then evaluates the applicant in that world.</p>
+<p>Nine instruments. Five modes. The ground keeps deepening.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-depth.html">&larr; Fiction The Depth</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-diagonal.html">Fiction The Diagonal &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

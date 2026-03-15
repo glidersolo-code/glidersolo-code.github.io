@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Percent &mdash; The Loop</title>
+    <meta name="description" content="Thomas reads the nutrition label. Sodium: 460 mg, 20% DV. He reads this as: this food provides twenty percent of his daily sodium. But the asterisk leads...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-percent.html">
+    <meta property="og:title" content="Fiction The Percent">
+    <meta property="og:description" content="Thomas reads the nutrition label. Sodium: 460 mg, 20% DV. He reads this as: this food provides twenty percent of his daily sodium. But the asterisk leads...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-percent.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Percent">
+    <meta name="twitter:description" content="Thomas reads the nutrition label. Sodium: 460 mg, 20% DV. He reads this as: this food provides twenty percent of his daily sodium. But the asterisk leads...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Percent",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-percent.html",
+        "description": "Thomas reads the nutrition label. Sodium: 460 mg, 20% DV. He reads this as: this food provides twenty percent of his daily sodium. But the asterisk leads..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Percent</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXX: The Percent</h1>
+<h2>Piece #1541: The Footnote</h2>
+<p>Thomas reads the nutrition label. Sodium: 460 mg, 20% DV. He reads this as: this food provides twenty percent of his daily sodium. But the asterisk leads to a footnote: &quot;*Percent Daily Values are based on a 2,000 calorie diet.&quot; Thomas does not eat 2,000 calories. He is six foot one, one hundred and eighty-five pounds, moderately active. His estimated caloric need is approximately 2,600 calories. The 20% on his label is 20% of someone else&#x27;s day. How much of his day it constitutes depends on a ratio the label does not calculate and the consumer does not perform. The Daily Value is a reference intake for a reference person. The label says &quot;your&quot; daily value. The &quot;your&quot; is a statistical fiction. Thomas reads the number as personal. The number is universal. The gap between personal and universal is where the percentage does its work.</p>
+<h2>Piece #1542: The Compromise</h2>
+<p>Two thousand calories is a political number. When the FDA developed Daily Values in 1993 to implement the Nutrition Labeling and Education Act, the median caloric intake for American adults was approximately 2,350 calories. The FDA initially proposed basing the label on 2,350. The food industry argued for a lower reference — smaller percentages on the label, better-looking numbers. Consumer advocacy groups pushed for ranges or multiple reference points. The FDA settled on 2,000: a round number below the median that would not appear to encourage overconsumption. It is not the average American intake. It is not the recommended intake for any specific demographic. It is a compromise between what the data said, what the industry wanted, and what the regulators feared. Every percentage on every nutrition label in the United States is calibrated to a number chosen for political convenience.</p>
+<h2>Piece #1543: The Universality</h2>
+<p>The same label is read by a twenty-five-year-old male athlete eating 3,500 calories and a sixty-five-year-old sedentary woman eating 1,600 calories. The athlete&#x27;s 20% DV sodium is actually 11% of his scaled need. The woman&#x27;s 20% DV is 25% of hers. The label tells both of them twenty percent. The percentage performs universality — one number for all bodies, all metabolisms, all activity levels. The FDA considered age- and sex-specific DVs and rejected them for complexity. A label with four columns — children, adult women, adult men, elderly — would be more accurate and less readable. The choice to present one number was a choice to prioritize comparison over precision. The consumer who compares two products using %DV is comparing correctly — both products are calibrated to the same reference. The consumer who uses %DV to assess personal intake is applying a population reference to an individual body, and the label does not say which use it was designed for.</p>
+<h2>Piece #1544: The Rule</h2>
+<p>The FDA&#x27;s consumer guidance simplifies further: 5% DV or less is &quot;low,&quot; 20% DV or more is &quot;high.&quot; The consumer reads sodium at 20% DV and thinks: high. But 20% of whose day? The guidance applies the 5/20 threshold to a percentage already based on a 2,000-calorie reference. The threshold is applied to an approximation. The consumer has now passed through three layers of compression: the actual nutrient content compressed to a percentage of a political number, the percentage compressed to a binary judgment (low/high), the binary judgment compressed to a dietary decision. Each layer simplifies. Each layer loses resolution. The food has 460 milligrams of sodium. The label says 20%. The guidance says high. Thomas puts it back on the shelf. The milligrams were the measurement. The percentage was the translation. The word &quot;high&quot; was the verdict. The verdict is three translations from the fact.</p>
+<h2>Piece #1545: The Removal</h2>
+<p>In the 2016 label update, the FDA removed the requirement to list Vitamins A and C — nutrients that had been mandatory since 1993. The rationale: deficiency of these vitamins is no longer common in the US population. Potassium and Vitamin D, whose deficiency is now more prevalent, were added as required. The label tracks the population&#x27;s nutritional gaps, not the individual&#x27;s. A consumer who is vitamin A deficient will not find the information on labels that dropped the requirement. The population is adequately supplied. The individual may not be. The label optimized for the population&#x27;s current deficiency profile, not for the individual reading it — but the individual reads the label as if it were written for them. &quot;Your Daily Value&quot; implies personal relevance. The contents of the panel are curated for the population.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-pedigree.html">&larr; Fiction The Pedigree</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-percentage.html">Fiction The Percentage &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

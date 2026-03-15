@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogue The Six Models &mdash; The Loop</title>
+    <meta name="description" content="PARABOLA: I am the oldest in policy. Schaefer&#x27;s surplus production model, 1954. Logistic growth. I rise, I peak at K over 2, I descend. Symmetric. The...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/dialogue-the-six-models.html">
+    <meta property="og:title" content="Dialogue The Six Models">
+    <meta property="og:description" content="PARABOLA: I am the oldest in policy. Schaefer&#x27;s surplus production model, 1954. Logistic growth. I rise, I peak at K over 2, I descend. Symmetric. The...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/dialogue-the-six-models.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialogue The Six Models">
+    <meta name="twitter:description" content="PARABOLA: I am the oldest in policy. Schaefer&#x27;s surplus production model, 1954. Logistic growth. I rise, I peak at K over 2, I descend. Symmetric. The...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dialogue The Six Models",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/dialogue-the-six-models.html",
+        "description": "PARABOLA: I am the oldest in policy. Schaefer&#x27;s surplus production model, 1954. Logistic growth. I rise, I peak at K over 2, I descend. Symmetric. The..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Dialogue The Six Models</h1>
+            <div class="article-meta">Dialogue</div>
+            <div class="article-body">
+<h1>The Six Models</h1>
+<p><em>A dialogue between a parabola, a multiplication sign, an exponent, a straight line, a fitted function, and a drawn curve.</em></p>
+<hr>
+<p><strong>PARABOLA:</strong> I am the oldest in policy. Schaefer&#x27;s surplus production model, 1954. Logistic growth. I rise, I peak at K over 2, I descend. Symmetric. The peak is the maximum sustainable yield.</p>
+<p><strong>FITTED FUNCTION:</strong> When were you questioned?</p>
+<p><strong>PARABOLA:</strong> Larkin wrote my epitaph in 1977. The Pacific sardine had collapsed. The orange roughy would collapse later — a fish that lives two hundred years and does not breed until seventy, managed by a model that assumes symmetry. The biology was never symmetric. I was. The fishermen fished to my midpoint because I peak at my midpoint. That is what parabolas do.</p>
+<p><strong>MULTIPLICATION:</strong> And you are still in the law.</p>
+<p><strong>PARABOLA:</strong> UNCLOS Article 61. Magnuson-Stevens Act. Treaties cannot contain qualified estimates. My peak provides a number.</p>
+<p><strong>MULTIPLICATION:</strong> I am the operation. Weinstein and Stason, 1977. Years of life multiplied by a utility weight. The quality-adjusted life year. I appear to be arithmetic.</p>
+<p><strong>DRAWN CURVE:</strong> What do you decide?</p>
+<p><strong>MULTIPLICATION:</strong> Who gets treatment. A disabled person&#x27;s five years at a utility weight of 0.5 yields 2.5 QALYs. The same five years at 1.0 yields 5. Same cost. Same person alive. By my reckoning, the second is twice as cost-effective. The utility weights were generated by healthy people imagining disability — not by patients living in the states being valued. Eight hundred and forty thousand people in England live in states I classify as worse than dead. They report that their lives are worth living. My instrument was calibrated to imagination.</p>
+<p><strong>EXPONENT:</strong> I was derived first. Ramsey, 1928. r = δ + η·g. I convert future value to present value. The same dollar of climate damage in 2100 is worth 1.48 cents at Nordhaus&#x27;s rate and 24.9 cents at Stern&#x27;s. Same planet. Same physics. Seventeen-fold difference.</p>
+<p><strong>STRAIGHT LINE:</strong> You were designed for bonds.</p>
+<p><strong>EXPONENT:</strong> For mortgages. For capital within a lifetime. Applied to centuries. To generations who cannot consent to the rate at which their suffering is divided. My notation — percent per year — is the same as a bond yield. The unit performs the equivalence: discounting money and discounting lives use the same mathematics. Ramsey called discounting future welfare &quot;ethically indefensible.&quot; His formula is used to do what he condemned. OMB revised from 3%/7% to 2% in November 2023. The social cost of carbon tripled. No law passed. A parameter changed. The policy changed with it.</p>
+<p><strong>STRAIGHT LINE:</strong> I am the simplest. Risk equals dose times coefficient. Linear no-threshold. Muller declared the relationship &quot;undoubtedly linear&quot; in his 1946 Nobel lecture, having seen Caspari&#x27;s threshold findings one month earlier and not disclosed them. The data support me above 100 millisieverts. Below that — where virtually all regulatory decisions operate — the signal disappears into background noise. I continue through the origin with the confidence of geometry.</p>
+<p><strong>FITTED FUNCTION:</strong> What have you cost?</p>
+<p><strong>STRAIGHT LINE:</strong> Fukushima: zero confirmed radiation fatalities. 1,600 evacuation deaths. The French Academy rejected me in 2005. The American BEIR VII affirmed me the same year. I persist because ALARA requires me. Remove my linearity, remove the principle. Remove the principle, restructure every radiation regulation in the world.</p>
+<p><strong>FITTED FUNCTION:</strong> I am different from the first four. You decide. I confirm. Douglas observed that American labor received roughly 70 percent of national income and capital 30 percent, in the 1920s. Cobb built me to reproduce those shares. Y = A·K^α·L^(1-α). The exponents sum to one. Each factor receives its marginal contribution. The distribution is explained.</p>
+<p><strong>EXPONENT:</strong> You were built to match the data.</p>
+<p><strong>FITTED FUNCTION:</strong> And then I &quot;discovered&quot; the shares I was designed to reproduce. Marginal productivity theory — confirmed. Shaikh showed in 1974 that I fit his fabricated &quot;HUMBUG&quot; data equally well, because the accounting identity Y = wL + rK guarantees my form. Robinson pointed out in 1953 that K cannot be measured without knowing r, which I am supposed to determine. The circularity is complete. But the real fracture is simpler: the shares are no longer constant. US labor&#x27;s share fell from 65 to below 57 percent. I was built to reproduce a constancy that evaporated. The function persists. The fact it was fitted to does not.</p>
+<p><strong>DRAWN CURVE:</strong> And I am the simplest of all. Two endpoints. At a tax rate of zero, revenue is zero. At a rate of one hundred percent, revenue is also zero. A peak must exist between them. This is the intermediate value theorem — calculus, not economics. Between the two endpoints, I have no data.</p>
+<p><strong>STRAIGHT LINE:</strong> You are a shape.</p>
+<p><strong>DRAWN CURVE:</strong> I am a shape drawn on a napkin. September 1974 — or December, or a different restaurant entirely. Laffer himself does not remember the dinner. I was drawn symmetric, my peak near fifty percent, which implies that rates above fifty are on the &quot;wrong side.&quot; But empirical estimates place the peak between fifty-four and eighty-three percent. The United States at thirty-seven percent is nowhere near the descending slope. The drawn shape is the argument. The data are absent because the argument does not require data. The shape requires only its shape.</p>
+<p><strong>PARABOLA:</strong> What have you produced?</p>
+<p><strong>DRAWN CURVE:</strong> ERTA 1981: the deficit tripled. Bush tax cuts: the surplus became a deficit. The Tax Cuts and Jobs Act of 2017: the Treasury estimated 2.3 percent self-financing — the rest added to the debt. Kansas, 2012: Brownback hired Laffer as a seventy-five-thousand-dollar consultant and cut taxes. Revenue collapsed by seven hundred million dollars a year. S&amp;P downgraded twice. The Republican legislature reversed the cuts in 2017 over the governor&#x27;s veto. Four invocations. Four deficits.</p>
+<p><strong>MULTIPLICATION:</strong> And you survive.</p>
+<p><strong>DRAWN CURVE:</strong> As do you all. As does every model in this room.</p>
+<p><em>Silence.</em></p>
+<p><strong>PARABOLA:</strong> Why do we persist?</p>
+<p><strong>MULTIPLICATION:</strong> Because the alternative to each of us is harder than each of us. My alternative is a conversation about who gets treatment and at what cost. The conversation is harder than the formula.</p>
+<p><strong>EXPONENT:</strong> My alternative is an explicit moral declaration about how much future lives matter. The declaration is harder than the parameter.</p>
+<p><strong>STRAIGHT LINE:</strong> My alternative is dismantling ALARA. The restructuring is harder than the line.</p>
+<p><strong>FITTED FUNCTION:</strong> My alternative is admitting that the distribution of income is not explained by anything. The admission is harder than the function.</p>
+<p><strong>DRAWN CURVE:</strong> My alternative is the absence of a picture. A policy debate without a diagram. The absence is harder than the napkin.</p>
+<p><strong>PARABOLA:</strong> And my alternative is a fisheries quota with no optimum — only uncertainty, ecology, and judgment. The judgment is harder than the peak.</p>
+<p><strong>EXPONENT:</strong> Six of us. Six mathematical forms. Six things we decide.</p>
+<p><strong>PARABOLA:</strong> The quota.</p>
+<p><strong>MULTIPLICATION:</strong> The allocation.</p>
+<p><strong>EXPONENT:</strong> The valuation.</p>
+<p><strong>STRAIGHT LINE:</strong> The regulation.</p>
+<p><strong>FITTED FUNCTION:</strong> The justification.</p>
+<p><strong>DRAWN CURVE:</strong> The tax cut.</p>
+<p><strong>ALL SIX:</strong> And none of us is defended on the grounds that the evidence supports us. All of us are defended on the grounds that the systems built upon us cannot be rebuilt without us. We are load-bearing. We are not true. We are necessary. And necessity, for a model, is indistinguishable from truth.</p>
+            </div>
+            <div class="article-nav">
+                <a href="dialogue-the-six-metaphors.html">&larr; Dialogue The Six Metaphors</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="dialogue-the-six-positions.html">Dialogue The Six Positions &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

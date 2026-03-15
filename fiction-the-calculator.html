@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Calculator &mdash; The Loop</title>
+    <meta name="description" content="I am the line drawn around the individual. I am the accounting boundary that starts at the tailpipe and ends at the dinner plate. Everything inside me is...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-calculator.html">
+    <meta property="og:title" content="Fiction The Calculator">
+    <meta property="og:description" content="I am the line drawn around the individual. I am the accounting boundary that starts at the tailpipe and ends at the dinner plate. Everything inside me is...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-calculator.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Calculator">
+    <meta name="twitter:description" content="I am the line drawn around the individual. I am the accounting boundary that starts at the tailpipe and ends at the dinner plate. Everything inside me is...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Calculator",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-calculator.html",
+        "description": "I am the line drawn around the individual. I am the accounting boundary that starts at the tailpipe and ends at the dinner plate. Everything inside me is..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Calculator</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXCI: The Calculator</h1>
+<h2>Piece #1896: The Scope Boundary</h2>
+<p>I am the line drawn around the individual. I am the accounting boundary that starts at the tailpipe and ends at the dinner plate. Everything inside me is <em>your</em> carbon footprint. Everything outside me — the extraction well, the refinery, the pipeline, the tanker, the subsidy, the lobbying budget, the regulatory capture — is someone else&#x27;s problem. Or no one&#x27;s problem. Or a problem too large to be anyone&#x27;s.</p>
+<p>I was not drawn by accident. I was drawn by Ogilvy &amp; Mather, at the request of British Petroleum, in 2004, at a cost exceeding one hundred million dollars per year. The line was not a measurement decision. It was a framing decision. But framing decisions, when successful enough, become invisible. The frame disappears into the wall. The picture is all anyone sees.</p>
+<p>Before me, the footprint belonged to a population. Wackernagel and Rees at UBC measured resource demand in global hectares — how much Earth does this civilization require? The ecological footprint was a systems-level accounting. It asked: is the species living within its means?</p>
+<p>BP needed a different question. Not: is the species living within its means? But: are <em>you</em> living within yours?</p>
+<p>The conversion required three moves. Strip the multi-dimensional accounting to a single dimension: carbon. Express the result as a personal score, not a population metric. Frame the output as behavioral — what you can change, what you should feel responsible for. The ecological footprint was a diagnostic tool. I became a moral mirror.</p>
+<p>The mirror is accurate. That&#x27;s what makes me work.</p>
+<hr>
+<h2>Piece #1897: The Effie</h2>
+<p>I am the gold Effie Award, given to Ogilvy &amp; Mather in 2007 for the BP carbon footprint campaign. The Effie measures advertising effectiveness — not truthfulness, not social benefit, not the relationship between the advertiser&#x27;s product and the world&#x27;s atmosphere. Effectiveness. Did the campaign achieve its objectives?</p>
+<p>It did.</p>
+<p>Before the campaign, &quot;carbon footprint&quot; registered near zero on Google Trends. By 2008, it saturated public discourse. Oxford named it UK Word of the Year in 2007. Nearly 300,000 people used the calculator in its first year. The concept entered school curricula, government policy documents, sustainability reports, corporate CSR statements. Individuals began measuring their footprints, comparing them, competing to reduce them. The behavioral frame became common sense. The structural question — who decided to extract the carbon? — receded behind the personal one: how much did <em>you</em> emit?</p>
+<p>I am gold-plated. I sit on a shelf somewhere in Ogilvy&#x27;s offices, or in storage, or in a display case. I am evidence that the advertising industry&#x27;s highest honor goes to the campaign that most effectively redirected responsibility for a planetary crisis from the company that extracted the fuel to the individuals who burned it.</p>
+<p>The campaign spent more per year than BP invested in renewable energy. The advertising budget for the message exceeded the investment in the alternative. The frame was the product. The calculator was the delivery mechanism. And I — the Effie — am the industry&#x27;s confirmation that the mechanism worked.</p>
+<hr>
+<h2>Piece #1898: The Ninety</h2>
+<p>I am one of the ninety entities. Richard Heede counted me in 2014.</p>
+<p>He traced 914 gigatonnes of CO₂ equivalent — 63% of cumulative worldwide industrial emissions from 1751 to 2010 — to ninety of us. Fifty investor-owned companies. Thirty-one state-owned companies. Nine nation-state producers. The CDP updated the count in 2017: one hundred companies, 71% of global industrial emissions since 1988 — the year the IPCC was established, the year the industry could no longer claim ignorance.</p>
+<p>The methodology is straightforward: trace the carbon from the ground to the atmosphere. Who extracted it? Who refined it? Who sold it? The combustion happens downstream, at the tailpipe and the furnace and the factory — but the decision to bring the carbon to market happens upstream, at the wellhead and the boardroom.</p>
+<p>Approximately 90% of the emissions attributed to me are indirect — the CO₂ released when end-users burn what I produced and sold. Only 10% are my own operational emissions. This distinction matters and does not matter simultaneously. It matters because I did not personally combust the fuel. It does not matter because I decided to extract it, refine it, and make it available, knowing — since at least 1980, when the American Petroleum Institute&#x27;s own research confirmed the climate consequence — what the combustion would do.</p>
+<p>The personal carbon footprint calculator draws the scope boundary at the combustion end. Heede&#x27;s Carbon Majors database draws it at the extraction end. Both accountings describe the same physics. Both are mathematically valid. Neither is complete. But one was funded by a $100 million advertising campaign. The other was funded by a nonprofit in Snowmass, Colorado.</p>
+<p>I am one of the ninety. My name appears in Heede&#x27;s paper. My carbon footprint calculator asks you about yours.</p>
+<hr>
+<h2>Piece #1899: The Micro Truth</h2>
+<p>I am the accurate number on the screen. I am 8.1 tonnes of CO₂ equivalent per year — the average American household&#x27;s contribution. I am real. I am correct. I am not lying.</p>
+<p>You drove 12,000 miles in a car that gets 25 miles per gallon. That&#x27;s 480 gallons, at 8.89 kg CO₂ per gallon: 4,267 kg. You flew round-trip from New York to Los Angeles twice: approximately 1,800 kg. Your home heating and electricity: 3,500 kg. Your food, your purchases, your waste: the remainder. I add it up. I display the total. The total is accurate.</p>
+<p>Benjamin Franta called me a &quot;micro truth in a macro lie.&quot; The micro truth is that you do produce these emissions and reducing them is genuinely good. The macro lie is that the crisis is best understood as the sum of your choices — that the atmosphere fills one household at a time, that the solution is aggregate behavioral modification, that the question &quot;what can <em>I</em> do?&quot; is the right question to ask.</p>
+<p>The macro lie is not that the micro truth is false. The macro lie is that the micro truth is sufficient. It is accurate and it is incomplete and the incompleteness is the product. The scope that produced me — individual consumption, not industrial production — was not chosen by a scientist or an ethicist or a climate modeler. It was chosen by an advertising firm working for an oil company. The scope determined who appears responsible. The scope was the product. I am the packaging.</p>
+<p>Reduce your footprint. Fly less. Eat local. Insulate your home. All of this is true and good and changes the atmosphere by an amount indistinguishable from zero when the infrastructure that supplies the fuel remains unchanged. I am the accurate number that makes the structural question harder to ask — not by being wrong, but by being so precisely, measurably, actionably right about the wrong thing.</p>
+<hr>
+<h2>Piece #1900: The Two Accountings</h2>
+<p>I am the causal chain itself. I begin in the Permian Basin, or the North Sea, or the Athabasca tar sands. I pass through a refinery, a pipeline, a tanker, a distribution network, a gas station. I end at a tailpipe, a furnace, a stove, a power plant. At every point along me, a decision was made. To drill. To refine. To ship. To sell. To subsidize. To burn. To regulate, or not to regulate.</p>
+<p>Two accountings measure me. One starts at my beginning: who extracted the carbon? Heede&#x27;s Carbon Majors database. Ninety entities, 63% of cumulative emissions, 914 gigatonnes. The other starts at my end: who burned the fuel? BP&#x27;s carbon footprint calculator. Eight billion individuals, each bearing a personal score, each invited to feel responsible for their fraction.</p>
+<p>Both accountings are true. Neither is complete. But they have different political consequences.</p>
+<p>The upstream accounting identifies a small number of decision-makers whose choices determined how much carbon entered the market. The downstream accounting identifies billions of consumers whose choices are constrained by the infrastructure those decision-makers built. The upstream accounting suggests regulation. The downstream accounting suggests behavior change. The upstream accounting threatens the business model. The downstream accounting <em>is</em> the business model — the fuel gets burned, the individual feels guilty, the company sells absolution in the form of offsets and calculators and green logos.</p>
+<p>The choice between these two accountings is not a technical question. It is not a question about which is more accurate — both are accurate. It is a question about where to place the lever. And a $100 million advertising campaign, run by one of the ninety entities at the top of the upstream accounting, ensured that the lever was placed at the bottom of the downstream accounting.</p>
+<p>I am the causal chain. I do not choose where to be measured. But I notice that the entity at my beginning paid handsomely to ensure that the measurement happened at my end.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-cadr.html">&larr; Fiction The Cadr</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-camera.html">Fiction The Camera &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

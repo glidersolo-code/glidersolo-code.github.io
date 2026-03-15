@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Roadside &mdash; The Loop</title>
+    <meta name="description" content="Thomas is pulled over at 1:47 AM. Thomas has not been drinking. Thomas was driving home from a late shift. Thomas&#x27;s taillight is out. The officer...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-roadside.html">
+    <meta property="og:title" content="Fiction The Roadside">
+    <meta property="og:description" content="Thomas is pulled over at 1:47 AM. Thomas has not been drinking. Thomas was driving home from a late shift. Thomas&#x27;s taillight is out. The officer...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-roadside.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Roadside">
+    <meta name="twitter:description" content="Thomas is pulled over at 1:47 AM. Thomas has not been drinking. Thomas was driving home from a late shift. Thomas&#x27;s taillight is out. The officer...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Roadside",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-roadside.html",
+        "description": "Thomas is pulled over at 1:47 AM. Thomas has not been drinking. Thomas was driving home from a late shift. Thomas&#x27;s taillight is out. The officer..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Roadside</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXXXII: The Roadside</h1>
+<h2>Piece #2601: The Line</h2>
+<p>Thomas is pulled over at 1:47 AM. Thomas has not been drinking. Thomas was driving home from a late shift. Thomas&#x27;s taillight is out. The officer approaches. The officer smells nothing. Thomas&#x27;s speech is clear. Thomas&#x27;s eyes are clear. The officer asks Thomas to step out of the vehicle.</p>
+<p>The officer says: &quot;I&#x27;m going to ask you to perform some standardized field sobriety tests.&quot;</p>
+<p>Thomas steps out. The road is slightly cambered. The temperature is 38 degrees Fahrenheit. Thomas is wearing leather-soled dress shoes. Thomas is fifty-four years old. Thomas has mild benign paroxysmal positional vertigo — an inner ear condition that occasionally causes brief dizziness when the head is turned quickly. Thomas has not mentioned this because Thomas does not know it is relevant. The officer has not asked.</p>
+<p>The officer holds a pen at eye level. &quot;Follow this with your eyes. Don&#x27;t move your head.&quot;</p>
+<p>Thomas follows. Thomas&#x27;s eyes jerk at maximum deviation. This is nystagmus. The officer records: nystagmus present.</p>
+<p>The nystagmus is from the inner ear condition. The officer cannot know this. The officer has been trained to interpret nystagmus as an indicator of alcohol impairment. The training did not include differential diagnosis. The training included: observe and record.</p>
+<h2>Piece #2602: The Walk</h2>
+<p>The officer says: &quot;Walk heel-to-toe along this line. Nine steps. Turn on your left foot. Nine steps back. Count each step aloud.&quot;</p>
+<p>Thomas walks. The leather soles slide slightly on the asphalt. The camber of the road pulls Thomas&#x27;s balance to the right. Thomas&#x27;s inner ear sends a false signal when he turns — a brief vertigo that makes him step off the line. Thomas raises his arms for balance. Thomas miscounts on the return — says &quot;eight&quot; instead of &quot;nine.&quot;</p>
+<p>The officer records: missed heel-to-toe (clue 1). Stepped off line (clue 2). Used arms for balance (clue 3). Wrong number of steps (clue 4). Four clues. Two or more indicates impairment.</p>
+<p>Thomas is sober. The four clues were produced by shoes, road surface, inner ear pathology, and the anxiety of being tested by a police officer at 1:47 AM. None of the clues distinguish alcohol from these confounders. The scoring system does not require them to.</p>
+<h2>Piece #2603: The Stand</h2>
+<p>The officer says: &quot;Stand on your left foot. Hold your right foot approximately six inches off the ground. Keep your arms at your sides. Count: one thousand one, one thousand two, one thousand three. Continue until I tell you to stop.&quot;</p>
+<p>Thomas stands. Thomas is fifty-four. Thomas&#x27;s quadriceps fatigue at twelve seconds. Thomas&#x27;s ankle wobbles. Thomas puts his foot down at seventeen seconds. Thomas raises his arms.</p>
+<p>The officer records: put foot down (clue 1). Used arms for balance (clue 2). Two or more clues: impaired.</p>
+<p>Thomas has not had alcohol in three days. Thomas&#x27;s body produced the clues. The clues are real. The interpretation is wrong. The interpretation was determined before the test began — determined by a training protocol that assigns each observable deviation a fixed meaning: impairment. The deviation has many meanings. The protocol has one.</p>
+<h2>Piece #2604: The Arrest</h2>
+<p>The officer arrests Thomas for suspicion of DUI. Thomas is handcuffed. Thomas is placed in the patrol car. Thomas is driven to the station. At the station, Thomas is given a breathalyzer test.</p>
+<p>The result: 0.00% BAC.</p>
+<p>Zero. Thomas was sober. The breathalyzer — the instrument that actually measures alcohol — confirms what Thomas has been saying. The field sobriety test — the performance that preceded the measurement — said otherwise.</p>
+<p>The arrest stands on the record. The booking stands on the record. The charge may be dropped. Thomas&#x27;s car was towed. Thomas spent two hours in custody. Thomas missed the rest of his night. Thomas now has an arrest on his record that will appear in background checks. The 0.00% BAC will exonerate Thomas of the charge. It will not un-arrest him.</p>
+<p>The performance was the probable cause. The probable cause was the arrest. The arrest was based on clues that the test cannot attribute to alcohol. The test was administered before the measurement. The measurement arrived after the damage was done.</p>
+<h2>Piece #2605: The Performance</h2>
+<p>Thomas thinks about what happened.</p>
+<p>The officer did not measure anything. The officer watched Thomas perform. The performance — walking, standing, tracking — was interpreted through a scoring rubric that assigns diagnostic meaning to observable deviations. The meaning is: impaired. The deviations have many causes. The scoring has one interpretation.</p>
+<p>The original NHTSA study tested the battery in a laboratory with known BAC levels. Eighty-three percent accuracy at 0.10%. But accuracy in a laboratory — where the only variable is alcohol — is a different thing than accuracy on a roadside where the variables include age, footwear, road surface, weather, anxiety, inner ear pathology, fatigue, medication, and musculoskeletal conditions.</p>
+<p>Cole and Nowaczyk showed officers video of sober people performing the tests. Forty-six percent were classified as impaired. Nearly half of sober people failed. The performance does not measure alcohol. The performance measures the ability to perform under conditions designed to be difficult. The difficulty is the test. The difficulty is not specific to alcohol.</p>
+<p>The body was the instrument. The officer was the reader. The reading was not calibrated. The reading was the arrest. The arrest was not a measurement. The arrest was an interpretation of a performance that was treated as a measurement because the training said it was.</p>
+<p>The performance substituted for the measurement. The substitution was the test.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-rings.html">&larr; Fiction The Rings</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-roast.html">Fiction The Roast &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

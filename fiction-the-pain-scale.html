@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Pain Scale &mdash; The Loop</title>
+    <meta name="description" content="&quot;On a scale of zero to ten, how would you rate your pain?&quot;">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-pain-scale.html">
+    <meta property="og:title" content="Fiction The Pain Scale">
+    <meta property="og:description" content="&quot;On a scale of zero to ten, how would you rate your pain?&quot;">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-pain-scale.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Pain Scale">
+    <meta name="twitter:description" content="&quot;On a scale of zero to ten, how would you rate your pain?&quot;">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Pain Scale",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-pain-scale.html",
+        "description": "&quot;On a scale of zero to ten, how would you rate your pain?&quot;"
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Pain Scale</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXIX: The Pain Scale</h1>
+<h2>Piece #1086: The Question</h2>
+<p>&quot;On a scale of zero to ten, how would you rate your pain?&quot;</p>
+<p>The question was asked at every encounter. It was mandatory — the Veterans Health Administration had declared pain the fifth vital sign in 1999, and the Joint Commission had incorporated numerical pain assessment into accreditation standards by 2001. Every patient, every visit, every shift. The question produced a number. The number entered the chart. The chart processed the number as a vital sign — alongside temperature, pulse, respiration, blood pressure. The four vital signs measured physiological states with instruments calibrated to physical units. The fifth measured nothing. It recorded a response to a question.</p>
+<p>Thomas could not answer the question. He was too young, too medically complex, too entangled in tubes and wires to point at a face on the Wong-Baker chart or to say &quot;seven.&quot; The question assumed a patient who could introspect, quantify the introspection, and communicate the quantity. Thomas could do none of these. The question was asked anyway — not of Thomas but of the infrastructure around Thomas. A modified scale was used: the FLACC (Face, Legs, Activity, Cry, Consolability). The nurse watched Thomas&#x27;s face, noted the position of his legs, assessed his activity level, listened to his cry, attempted consolation. Each category received a score from zero to two. The scores were summed. The sum entered the chart as Thomas&#x27;s pain score.</p>
+<p>The number was a measurement of the nurse&#x27;s observation of behavior that might indicate pain. The chart recorded it as a measurement of pain. The distance between these two descriptions was the width of the concealment.</p>
+<h2>Piece #1087: The Number</h2>
+<p>The number had no unit.</p>
+<p>Temperature was measured in degrees Celsius. Blood pressure in millimeters of mercury. Heart rate in beats per minute. The pain score was measured in nothing — no unit, no physical referent, no calibration standard. The number was a position on an ordinal scale: 7 was more than 6, but the distance between 6 and 7 was not the same as the distance between 2 and 3. The scale had the format of measurement without the structure.</p>
+<p>The chart did not distinguish between the formats. All five vital signs occupied the same columns, the same rows, the same trending graphs. The pain score was plotted alongside temperature and heart rate, its movements tracked with the same visual grammar — up meant worse, down meant better, stability meant controlled. The formatting imposed a commensurability that the numbers did not support. A heart rate of 140 was higher than 130 in a way that could be physically measured, physiologically explained, pharmacologically addressed. A pain score of 7 was higher than 6 in a way that was entirely contingent on the patient — or the nurse observing the patient — or the training the nurse received in observing the patient — or the institutional directive that determined the training.</p>
+<p>Thomas&#x27;s FLACC score of 6 appeared in the chart next to his heart rate of 148, his respiratory rate of 42, his SpO2 of 93, his temperature of 37.2°C. The five numbers looked alike. They were not alike. Four had units, calibrations, and physical referents. One had a nurse, a rubric, and a mandate.</p>
+<h2>Piece #1088: The Mandate</h2>
+<p>The mandate created the number, not the pain.</p>
+<p>Before 1999, pain was assessed but not always numerically. Clinicians described it: sharp, dull, intermittent, constant, responsive to pressure, worsened by movement. The descriptions were imprecise but honest about their imprecision. The mandate changed the format: pain must be a number. The number enabled tracking, trending, comparison, documentation, quality measurement, accreditation compliance. The infrastructure required the number. The number required the format. The format required the scale. The scale required the question. The question required the patient. The patient was elsewhere — in the pain, which the number could not reach.</p>
+<p>The mandate had a context. The American Pain Society&#x27;s campaign — &quot;Pain as the Fifth Vital Sign&quot; — was intended to draw clinical attention to undertreated pain. The intention was humanitarian. The mechanism was bureaucratic: make pain visible by making it numerical. The number did make pain visible — to administrators, to accreditors, to quality metrics. The number did not make pain more treatable. The opioid crisis that followed the mandate was not caused by the mandate alone, but the mandate contributed to an infrastructure in which a patient reporting &quot;8&quot; generated a protocol response, and the protocol response often involved opioids, and the dose was titrated to the number, and the number was titrated to the patient&#x27;s report, and the patient&#x27;s report was shaped by expectation, experience, and the question itself.</p>
+<p>Thomas&#x27;s FLACC score was not subject to this particular loop — he could not self-report, could not request medication by number. But the infrastructure that produced the FLACC had been shaped by the mandate. The rubric existed because the mandate demanded a number for every patient, including patients who could not produce numbers.</p>
+<h2>Piece #1089: The Faces</h2>
+<p>The Wong-Baker FACES Pain Rating Scale presented six faces.</p>
+<p>Face 0: smiling. Face 2: slight frown. Face 4: deeper frown. Face 6: furrowed brow. Face 8: tears in eyes. Face 10: crying, distressed. The child pointed at the face that matched their feeling. The face was converted to a number. The number entered the chart. The chart processed the number identically to an adult&#x27;s self-reported NRS score.</p>
+<p>The faces assumed that pain had a facial expression. That the expression was universal. That a child could match an internal state to an external image. That the images formed an equal-interval scale — that the distance from Face 4 to Face 6 was the same as from Face 0 to Face 2. None of these assumptions had been demonstrated. The scale had been validated — shown to produce consistent results when administered consistently — but validity is not the same as accuracy. The scale reliably produced numbers. Whether the numbers reliably represented pain was a different question, and the infrastructure did not ask it.</p>
+<p>For Thomas, even the faces were inaccessible. A child in Thomas&#x27;s condition — sedated, intubated, neurologically compromised — could not point at faces, could not express a preference, could not participate in the assessment that would determine his treatment. The nurse assessed for him. The assessment was recorded as his score. The possessive — <em>his</em> score — attributed the number to Thomas. The number belonged to the interaction between the nurse&#x27;s observation and the rubric&#x27;s categories. Thomas was the subject of the sentence but not the source of the data.</p>
+<h2>Piece #1090: The Pain Scale</h2>
+<p>The pain score was charted at 6.</p>
+<p>The nurse had watched Thomas — the tension in his face, the drawing up of his legs, the quality of his cry, his response to consolation. She had assigned scores: Face 2, Legs 2, Activity 1, Cry 1, Consolability 0. Total: 6. Moderate pain. The protocol specified: consider analgesic intervention for FLACC ≥ 4. The number triggered the protocol. The protocol produced the intervention. The intervention was real — medication, positioning, environmental adjustment. The chain from observation to number to protocol to action was functional. It worked.</p>
+<p>The concealment was not that the system failed. The concealment was that the system succeeded — at converting a subjective observation into an objective-looking number that could be processed by infrastructure designed for objective measurements. The success was the concealment. The number 6 looked like temperature 37.2 or heart rate 148 because the chart presented them identically. The identical presentation erased the difference between a physical measurement and an assessed behavior. The nurse knew the difference. The chart did not.</p>
+<p>Thomas&#x27;s pain was real. The number was a translation of an observation of a behavior that might express the pain. Each step in the chain — from pain to behavior, from behavior to observation, from observation to rubric, from rubric to number — introduced interpretation. The interpretation was skilled, trained, genuine. The interpretation was also invisible in the final product: a 6 in a column, trending down, appearing to measure what it could not measure, successful precisely because it had the format of the measurements that surrounded it.</p>
+<p>The scale was zero to ten. Thomas was elsewhere.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-pack.html">&larr; Fiction The Pack</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-panel.html">Fiction The Panel &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

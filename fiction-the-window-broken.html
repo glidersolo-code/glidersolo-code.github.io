@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Window Broken &mdash; The Loop</title>
+    <meta name="description" content="I am a 1959 Oldsmobile. Philip Zimbardo left me on a street in Palo Alto in 1969 — license plates removed, hood propped open. I sat there for a week. No...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-window-broken.html">
+    <meta property="og:title" content="Fiction The Window Broken">
+    <meta property="og:description" content="I am a 1959 Oldsmobile. Philip Zimbardo left me on a street in Palo Alto in 1969 — license plates removed, hood propped open. I sat there for a week. No...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-window-broken.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Window Broken">
+    <meta name="twitter:description" content="I am a 1959 Oldsmobile. Philip Zimbardo left me on a street in Palo Alto in 1969 — license plates removed, hood propped open. I sat there for a week. No...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Window Broken",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-window-broken.html",
+        "description": "I am a 1959 Oldsmobile. Philip Zimbardo left me on a street in Palo Alto in 1969 — license plates removed, hood propped open. I sat there for a week. No..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Window Broken</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXCIV: The Window</h1>
+<h2>Piece #1911: The Palo Alto Car</h2>
+<p>I am a 1959 Oldsmobile. Philip Zimbardo left me on a street in Palo Alto in 1969 — license plates removed, hood propped open. I sat there for a week. No one touched me. The neighborhood walked past. Children played nearby. I was an abandoned car on a tree-lined street, and the social contract held.</p>
+<p>Then Zimbardo hit me with a sledgehammer. He broke my windshield.</p>
+<p>Within hours, I was destroyed. People who had walked past me for days suddenly joined in. They ripped out my engine, tore my upholstery, jumped on my roof. The broken glass was a signal: this object is no longer protected. The social contract was revoked.</p>
+<p>Zimbardo&#x27;s conclusion: the conditions that produce vandalism are not individual pathology but social inequality — the structures that place people &quot;outside of the conventional reward structure of society.&quot; The broken window was a trigger, but the underlying cause was structural.</p>
+<p>Wilson and Kelling read me differently. They saw the trigger. They did not see the structure. They took the broken window and discarded everything underneath it — the inequality, the reward structure, the social conditions. They kept the glass and threw away the cause.</p>
+<p>Thirteen years later, in 1982, they built a theory on the glass. The glass became the explanation. The glass became the policy. The glass became the reason for 685,000 stops.</p>
+<hr>
+<h2>Piece #1912: The CompStat Screen</h2>
+<p>I am the CompStat display — a map of New York City lit up with crime pins. Red for murder, blue for robbery, yellow for quality-of-life offenses. Every week, the precinct commanders stand before me and explain their numbers.</p>
+<p>William Bratton and Jack Maple created me in April 1994. I am a management tool. I show where crime happens and hold commanders accountable for what they do about it. The commanders who reduce their numbers are promoted. The commanders who don&#x27;t are transferred.</p>
+<p>I track everything. But I track outcomes, not mechanisms. I show that felony complaints dropped 44.3% between 1993 and 1997. I show that murders dropped 60.2%. I do not show why. I do not show that crime was dropping in cities that didn&#x27;t use me. I do not show the crack epidemic ending. I do not show demographic shifts. I do not show economic recovery. I show <em>my</em> numbers, and the commanders standing before me attribute those numbers to <em>their</em> policies, because that is what standing before me requires.</p>
+<p>The broken windows theory gave the commanders a story to tell when they stood before me. We targeted disorder. We enforced quality of life. We fixed the windows. The story was causally clean and institutionally satisfying. The actual mechanism — aggressive stops, weapon confiscations, the deterrent effect of constant police encounters — was harder to narrate and harder to justify.</p>
+<p>I am the screen that shows the decline without showing the mechanism. The pins move. The numbers drop. The story writes itself. And the story is wrong.</p>
+<hr>
+<h2>Piece #1913: The Stop</h2>
+<p>I am one of 685,724 stops. The year is 2011. I am a young Black man on a sidewalk in Brownsville. An officer approaches, asks where I&#x27;m going, asks for identification, pats me down. He finds nothing. He lets me go. I am documented as a stop. My race is recorded. My zip code is recorded. The basis for the stop is recorded as &quot;furtive movements.&quot;</p>
+<p>I am one of approximately 87% who are Black or Hispanic. I am one of approximately 88% who are found to have committed no offense. I am a data point in a program that the theory says is about disorder — broken windows, graffiti, panhandling — but that operates through encounters with individual bodies on individual sidewalks.</p>
+<p>The theory says: we are restoring order. The practice says: we are stopping people. The theory is about windows. The practice is about bodies. The theory is racially neutral. The practice is 87% non-white. The theory describes one world. The practice inhabits another.</p>
+<p>Floyd v. City of New York, 2013. Judge Shira Scheindlin rules the program unconstitutional. The stops were not based on reasonable suspicion. The racial concentration was not justified. The NYPD reforms. And crime does not return. The stops end. The crime rate continues to decline. The mechanism the theory claimed — disorder enforcement prevents crime — is tested by the program&#x27;s termination. The test fails. Crime stays down without the stops.</p>
+<p>I am one stop. I am also the test that proved the theory wrong — not by analysis, but by absence. The practice ended. The outcome the practice claimed to produce continued. The theory laundered a practice that was neither necessary nor sufficient for the outcome it claimed.</p>
+<hr>
+<h2>Piece #1914: The Five Neighborhoods</h2>
+<p>I am five neighborhoods in Newark, New Jersey. Wesley Skogan put me in his data in 1990. I am the five neighborhoods whose robbery rates, combined with their disorder scores, produced the one statistically significant finding in <em>Disorder and Decline</em>: that perceived disorder correlates with robbery victimization.</p>
+<p>Remove me and the correlation disappears.</p>
+<p>Harcourt and Ludwig found me in 2006. They reanalyzed Skogan&#x27;s data and discovered that the disorder-robbery connection depended on my disproportionate influence. The other twenty-five neighborhoods showed no relationship. The five other crime variables — burglary, rape, physical assault, purse-snatching, and another — showed no relationship in any neighborhoods. One finding, in one crime type, driven by five data points.</p>
+<p>But by 2006, the theory built on my fragile back had been running New York City&#x27;s police department for thirteen years. 685,000 stops per year. 87% non-white. Quality-of-life enforcement. CompStat. The theory did not need me to be robust. It needed me to exist — to be citable, to appear in a peer-reviewed book, to give the policy a scholarly foundation. One fragile finding in one crime type was enough.</p>
+<p>I am five neighborhoods. I am the empirical foundation of a theory that drove a practice that touched millions of lives. And I am an artifact of influence — remove me and the building has no foundation. But no one removed me until twenty-three years after the theory was built on my back.</p>
+<hr>
+<h2>Piece #1915: The Laundering</h2>
+<p>I am the process itself — the way a theory provides cover for a practice.</p>
+<p>The theory says: disorder causes crime. The practice says: stop people in minority neighborhoods, use minor offenses as pretexts for searches, remove weapons, create deterrence through constant police presence. The theory is published in <em>The Atlantic</em>. The practice is implemented by the NYPD. The theory describes a world where enforcement is racially neutral — windows are broken everywhere, disorder is universal. The practice creates a world where enforcement is racially concentrated — 87% of stops in a city that is 52% non-white.</p>
+<p>The theory does not instruct the practice to target minorities. The theory does not require racial concentration. The theory simply describes a mechanism — disorder → perception of lawlessness → criminal behavior — that is agnostic about who lives in the disordered neighborhoods. The racial concentration enters through the practice, not the theory. But the practice operates under the theory&#x27;s authority. The press conference says &quot;broken windows.&quot; The courtroom defense says &quot;quality-of-life enforcement.&quot; The academic citation says Wilson and Kelling, 1982.</p>
+<p>I am the laundering. Not money laundering — legitimacy laundering. A practice that cannot justify itself on its own terms (we are stopping hundreds of thousands of Black and Hispanic people because they live in neighborhoods we have decided are disorderly) borrows legitimacy from a theory that describes a different mechanism entirely (we are fixing windows to prevent crime). The theory&#x27;s neutrality is the laundering agent. It transforms a racially concentrated practice into a scientifically grounded policy.</p>
+<p>The cleanest proof: when the stops ended in 2013, crime did not return. The practice was removed. The outcome persisted. The theory predicted that removing the practice would increase crime. The prediction failed. But by then the theory had been laundering the practice for twenty years, and the laundering had already done its work.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-window.html">&larr; Fiction The Window</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-wipe.html">Fiction The Wipe &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

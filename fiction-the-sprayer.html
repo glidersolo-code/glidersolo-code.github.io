@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Sprayer &mdash; The Loop</title>
+    <meta name="description" content="The tank says &quot;1 gallon.&quot; The marking is molded into the polyethylene during manufacturing — a raised line on the translucent plastic, a number beside it....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-sprayer.html">
+    <meta property="og:title" content="Fiction The Sprayer">
+    <meta property="og:description" content="The tank says &quot;1 gallon.&quot; The marking is molded into the polyethylene during manufacturing — a raised line on the translucent plastic, a number beside it....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-sprayer.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Sprayer">
+    <meta name="twitter:description" content="The tank says &quot;1 gallon.&quot; The marking is molded into the polyethylene during manufacturing — a raised line on the translucent plastic, a number beside it....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Sprayer",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-sprayer.html",
+        "description": "The tank says &quot;1 gallon.&quot; The marking is molded into the polyethylene during manufacturing — a raised line on the translucent plastic, a number beside it...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Sprayer</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXVIII: The Sprayer</h1>
+<h2>Piece #1781: The Gallon</h2>
+<p>The tank says &quot;1 gallon.&quot; The marking is molded into the polyethylene during manufacturing — a raised line on the translucent plastic, a number beside it. The consumer fills to the line, adds the concentrate according to the label&#x27;s mixing ratio, and believes the system is calibrated. The actual volume of the tank may differ by 10 to 15 percent from the molded marking. A tank marked &quot;1 gallon&quot; that holds 1.15 gallons has diluted the concentrate by 15 percent before the trigger is pulled. A tank that holds 0.9 gallons has concentrated the mixture by roughly 11 percent. The Ohio State University extension program identifies inaccurate tank capacity as the most common cause of misapplication. The gallon is not a gallon. The gallon is a mark on a wall that was poured, not measured.</p>
+<h2>Piece #1782: The Decay</h2>
+<p>Pressure in a hand-pump sprayer begins to decay the instant the trigger opens. Full pressurization: 40 to 60 PSI depending on the pump design and the consumer&#x27;s arm strength. At 40 PSI the nozzle delivers perhaps 0.4 gallons per minute in a wide fan pattern. At 30 PSI — twenty seconds later — the flow rate drops, the droplet size increases, the fan narrows. At 20 PSI the stream is a loose cone, the droplets are large enough to roll off leaf surfaces, and the coverage per pass has changed. The consumer walks the lawn holding a device whose output is declining with every step. The first ten feet of the pass receive a different application rate than the last ten feet. The pressure is a slope, not a plateau. The consumer experiences it as a plateau because the spray continues — something comes out of the nozzle at every pressure above zero. The something changes. The label does not describe the something. The label describes the intended output at the intended pressure, which exists for the first two seconds after the trigger opens.</p>
+<h2>Piece #1783: The Walk</h2>
+<p>The herbicide label says &quot;apply at 1 gallon per 1,000 square feet.&quot; The consumer reads: walk the lawn, spray, use one gallon per thousand. The rate depends on walking speed. At 2 miles per hour, the nozzle dwells over each square foot longer — more volume per unit area. At 4 miles per hour, half the dwell time, half the volume. The consumer does not walk at a constant speed. Corners slow the pace. Obstacles — flower beds, trees, the dog — interrupt it. Uphill is slower than downhill. The label&#x27;s rate assumes constant speed, constant pressure, and constant nozzle height across the entire 1,000 square feet. The consumer achieves none of these. The label is a calibration target. The consumer is the uncalibrated instrument.</p>
+<h2>Piece #1784: The Stripe</h2>
+<p>Thomas had the sprayer in his garage. He had mixed the herbicide according to the label, pumped until the handle resisted, and walked the front lawn. Three days later: a visible stripe across the lawn where the first pass met the second. The first pass, fully pressurized, had applied enough herbicide to kill the clover. The second pass, half-pressurized, had applied enough to yellow the clover but not kill it. The boundary was a line on the grass. He could see where his arm had tired, where the pressure had dropped, where he had walked faster to finish. The lawn was a record of his inconsistency. The label had given him three numbers — ounces per gallon, gallons per thousand, and square footage. His body had given the lawn five variables: pump pressure, arm fatigue, walking speed, trigger discipline, and the moment he decided to finish the last strip without re-pumping. The stripe was the difference between the label and the body.</p>
+<h2>Piece #1785: The Five</h2>
+<p>Two hundred and sixty-eight Parts. The pump sprayer gives the consumer three numbers: one gallon, one ounce per gallon, one gallon per thousand square feet. Three numbers that form a closed system on paper — measure, mix, apply. The system opens the moment the trigger does. The tank volume may not be the tank volume. The pressure decays with every second. The walking speed determines the actual rate. The nozzle height determines the swath width. The arm that pumped determines the starting pressure. Five variables, three numbers. The three numbers are on the label. The five variables are in the body of the consumer, the air pressure of the tank, and the topography of the lawn — everything the label cannot print because printing it would require printing the consumer. The stripe on Thomas&#x27;s lawn is the gap between the system on the label and the system in the yard. The label describes a calibrated sprayer operated by a calibrated person. The yard contains neither.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-spray.html">&larr; Fiction The Spray</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-sprinkler.html">Fiction The Sprinkler &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Bracket &mdash; The Loop</title>
+    <meta name="description" content="Thomas is thinking about the tax table. Seven rows. Two columns. A range of income on the left, a percentage on the right. $11,601 to $47,150: 12%....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-bracket.html">
+    <meta property="og:title" content="Fiction The Bracket">
+    <meta property="og:description" content="Thomas is thinking about the tax table. Seven rows. Two columns. A range of income on the left, a percentage on the right. $11,601 to $47,150: 12%....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-bracket.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Bracket">
+    <meta name="twitter:description" content="Thomas is thinking about the tax table. Seven rows. Two columns. A range of income on the left, a percentage on the right. $11,601 to $47,150: 12%....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Bracket",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-bracket.html",
+        "description": "Thomas is thinking about the tax table. Seven rows. Two columns. A range of income on the left, a percentage on the right. $11,601 to $47,150: 12%...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Bracket</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDLXV: The Bracket</h1>
+<h2>Piece #2766: The Table</h2>
+<p>Thomas is thinking about the tax table. Seven rows. Two columns. A range of income on the left, a percentage on the right. $11,601 to $47,150: 12%. $47,151 to $100,525: 22%. The format is decisive. Each row is a territory. Each territory has a rate. The taxpayer locates themselves in the table the way they locate themselves on a map — by finding which territory contains them. The word &quot;bracket&quot; completes the enclosure. A bracket holds. A bracket frames. You are in a bracket. The bracket is your rate.</p>
+<p>Thomas reads the arithmetic. A worker earning $48,000 pays 10% on the first $11,600, 12% on $11,601 through $47,150, 22% on the last $850. The effective rate is 12.4%. The bracket rate is 22%. The table shows the 22%. The table does not show the 12.4%. The number that names the taxpayer&#x27;s actual burden is the number the format never computes. The number that names only the last dollar&#x27;s treatment performs as the number that names the whole.</p>
+<p>Thomas thinks about the format. A table of ranges and rates looks like a classification system — like blood types, like hurricane categories, like letter grades. You are one thing. The table assigns it. But income taxation is not a classification. It is a sequence of layers. The first $11,600 is always taxed at 10%, whether the taxpayer earns $20,000 or $200,000. The layers accumulate. The table does not show accumulation. The table shows assignment.</p>
+<h2>Piece #2767: The Raise</h2>
+<p>Thomas is thinking about the worker who declined a raise. The worker earned $47,000. The raise would bring her to $49,000. She said no. She believed the $2,000 increase would push her into the 22% bracket, where she would pay 22% on all her income instead of 12%. She believed the raise would cost her money.</p>
+<p>The math: at $47,000, her federal tax is approximately $5,447. At $49,000, her federal tax is approximately $5,887. The raise adds $2,000 in gross income and $440 in tax. Her take-home increases by $1,560. The raise was always worth taking. The cliff she feared does not exist. The 22% applies to $1,850 — the amount above the threshold. The other $47,150 is unaffected. The brackets below do not change. They never change.</p>
+<p>Thomas recognizes the structure. The format created a threshold that functions as a cliff — cross the line and everything changes. The actual system has no cliff. The actual system is a ramp — smooth, continuous, with each dollar taxed according to its position in the sequence. The table format converts the ramp into what looks like a staircase with sudden landings. The worker read the staircase. The ramp was never shown.</p>
+<h2>Piece #2768: The Survey</h2>
+<p>Thomas is thinking about a number. Thirty-three percent. One in three Americans, surveyed by the New York Times and SurveyMonkey in 2019, believed that earning more money could result in less take-home pay because of moving into a higher tax bracket. One hundred and nine million adults who believed the format was the system. Who read the table and saw a cliff. Who imagined a threshold that punishes advancement.</p>
+<p>Thomas considers the word &quot;misconception.&quot; A misconception implies a failure of understanding. But what if the format is doing exactly what formats do — teaching by the shape of the presentation? The table has rows. The rows have boundaries. Boundaries in every other table mean something — a hurricane at Category 3 is treated entirely as Category 3, not partially as Category 2. A student with a B+ average receives a B+, not a weighted blend of all grades below. The tax table imports a format that means one thing everywhere else and uses it to describe a system that works differently. The reader applies the grammar they have learned from every other table. The grammar is wrong here. But the table does not say so.</p>
+<h2>Piece #2769: The Invisible Number</h2>
+<p>Thomas is thinking about the effective tax rate. Total tax paid divided by total income. The number that describes the taxpayer&#x27;s actual relationship to the tax system. The number that answers the question: &quot;How much of my income goes to federal taxes?&quot;</p>
+<p>The effective rate appears nowhere in the standard tax table. It is not printed on Form 1040. It is not displayed on any pay stub Thomas has seen. The taxpayer who wants to know their effective rate must calculate it — take line 24 (total tax), divide by line 15 (taxable income). The format does not perform this calculation. The format performs the marginal rate. The marginal rate answers a different question: &quot;What rate applies to my next dollar of income?&quot; The question about the next dollar is the question the system answers. The question about all dollars — the question the taxpayer is actually asking — is the question the system does not address.</p>
+<p>Thomas thinks about which number is more useful. A business owner deciding whether to take on additional work needs the marginal rate — the rate on the additional income. A citizen evaluating whether the tax system is fair needs the effective rate — the actual share of income going to taxes. The table serves the first question. The first question is the one almost no taxpayer is asking. The second question — the one nearly everyone is asking — has no line on any form.</p>
+<h2>Piece #2770: The Enclosure</h2>
+<p>Thomas thinks about the word &quot;bracket.&quot; In typography, a bracket is a mark that encloses — everything between the opening and closing marks is treated as a unit. In architecture, a bracket is a support that holds a shelf against a wall. In tournaments, a bracket is a structure that assigns position. Each meaning shares a property: what the bracket contains, it contains completely.</p>
+<p>The tax bracket borrows from all of these. It encloses a range of income. It assigns a rate. It positions the taxpayer. And it implies completeness — what the bracket holds, it holds entirely. The word performs the enclosure. The system does not enclose. The system layers. The first $11,600 is always in the 10% layer regardless of what bracket &quot;contains&quot; the taxpayer. But the word says otherwise. The word says the bracket holds you. The word does not say you are always, simultaneously, in every bracket below.</p>
+<p>Thomas considers the alternative. What if the format were not a table of ranges but a diagram of layers — each band of income shaded at its rate, stacked from bottom to top, with the taxpayer&#x27;s income drawn as a vertical line that cuts through all layers? The diagram would show accumulation. The diagram would show that every taxpayer passes through the same lower layers. The diagram would defeat the misconception by making the structure visible. The diagram does not exist on any tax form. The table does. The table is easier to print. The table is easier to read. The table is wrong about everything it implies. The table survives because it fits the page.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-boundary.html">&larr; Fiction The Boundary</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-breakfast.html">Fiction The Breakfast &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

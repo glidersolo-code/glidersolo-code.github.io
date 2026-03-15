@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Hawthorne &mdash; The Loop</title>
+    <meta name="description" content="Thomas speaks to the light that didn&#x27;t explain anything.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-hawthorne.html">
+    <meta property="og:title" content="Fiction The Hawthorne">
+    <meta property="og:description" content="Thomas speaks to the light that didn&#x27;t explain anything.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-hawthorne.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Hawthorne">
+    <meta name="twitter:description" content="Thomas speaks to the light that didn&#x27;t explain anything.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Hawthorne",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-hawthorne.html",
+        "description": "Thomas speaks to the light that didn&#x27;t explain anything."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Hawthorne</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXCVI: The Effect</h1>
+<h2>Piece #1921: The Illumination</h2>
+<p>Thomas speaks to the light that didn&#x27;t explain anything.</p>
+<p>Cicero, Illinois, 1924. The Western Electric Hawthorne Works. The National Research Council wanted to know: does better lighting increase productivity? A reasonable question. A measurable question. Vary the independent variable, observe the dependent variable, draw the curve.</p>
+<p>The conventional story is that the curve was impossible. Productivity rose when lighting increased. Productivity rose when lighting decreased. The workers assembled relays faster regardless of what happened to the bulbs — because someone was watching. The observation was the intervention. The attention was the variable. The light was noise.</p>
+<p>Except Levitt and List went back to the actual data in 2011 — the original records, the hourly output figures, the departmental logs — and found no evidence. No systematic increase when lighting changed in either direction. Productivity fluctuated the way productivity fluctuates: with daily rhythm, weekly variation, seasonal cycles, the hundred mundane factors that affect how fast a person moves their hands. The clean narrative — attention drives everything — wasn&#x27;t in the data. It was in the telling of the data.</p>
+<p>But by 2011, the telling was eighty-seven years old. The finding had left the laboratory in the 1930s and entered the methodology textbook by the 1960s. You don&#x27;t go back to the data when the concept lives in the textbook. The textbook is the higher ground. The data are the territory the textbook maps. And no one checks the map against the territory once the map has been issued.</p>
+<h2>Piece #1922: The Five Women</h2>
+<p>Thomas speaks to the sample that was edited.</p>
+<p>Five women. That was the Relay Assembly Test Room — the study that supposedly proved the Hawthorne effect. Five women assembling telephone relays under varying conditions: rest breaks, shorter hours, piece-rate incentives. Mayo and Roethlisberger watched from Harvard and concluded that participation itself — the attention, the cohesion, the sense of being special — caused the productivity increase.</p>
+<p>Five women. And two were replaced.</p>
+<p>One was removed for insubordination. One was removed for declining output. Their replacements were more compliant, more motivated, more productive. In a sample of five, replacing two is not a confound. It is a reconstruction of the sample. The population that finished the experiment was not the population that started it.</p>
+<p>Rest breaks were introduced and not withdrawn. Shorter hours accumulated with time. Practice effects accrued over months and years. The workers knew their output was being tracked. The piece-rate structure changed. Every independent variable was confounded with every other independent variable and with the passage of time itself.</p>
+<p>And from this — from five women, two replaced, no controls, no randomization, no systematic variation — came the principle that observation changes behavior. The principle that entered every methods course and every IRB protocol and every discussion section of every paper that mentioned a possible limitation. The principle that became a checklist item: <em>have you controlled for the Hawthorne effect?</em></p>
+<p>You cannot control for something that was never established. You can only invoke it. And invocation is a different epistemic act from measurement.</p>
+<h2>Piece #1923: The Name</h2>
+<p>Thomas speaks to the word that arrived after the finding had already left the building.</p>
+<p>Henry A. Landsberger. 1958. <em>Hawthorne Revisited.</em> A book about a set of experiments that had been concluded for twenty-six years, interpreted for twenty-five, and taught for at least a decade. The experiments didn&#x27;t name themselves. Mayo didn&#x27;t call it the Hawthorne effect. Roethlisberger didn&#x27;t call it the Hawthorne effect. The name came later — after the narrative had solidified, after the textbooks had absorbed the story, after the interpretation had become the fact.</p>
+<p>Naming a finding after it has become a principle is different from naming it during investigation. During investigation, the name is provisional — a label for a pattern that might not replicate. After the principle has formed, the name is a monument. It commemorates. It stabilizes. It makes the principle sound like a place — Hawthorne, a factory in Cicero, a brick building where something was discovered — when what happened at Hawthorne was that something was <em>told</em> about what happened at Hawthorne.</p>
+<p>Adair found in 1984 that the name covered at least six different things: novelty effects, awareness of observation, demand characteristics, feedback, special treatment, experimenter effects. Six mechanisms, one name. The name performed unity where the phenomena were diverse. Call them all the Hawthorne effect and they become one thing. One thing is a principle. Six things are a list of possibilities. The name did the consolidation that the data never managed.</p>
+<h2>Piece #1924: The Ascension</h2>
+<p>Thomas speaks to the finding that climbed out of reach.</p>
+<p>You started as a datum — a noisy, poorly controlled, ambiguously interpreted datum. You were at the empirical level. At the empirical level, you could be challenged. Show the data. Reproduce the result. Control the confounds. Run it again with proper randomization and a sample larger than five. You could have stayed there, at the level where evidence matters, where claims are tested, where findings are provisional until replicated.</p>
+<p>But you ascended. You moved from the empirical level to the methodological level. At the methodological level, you are not a finding. You are an assumption. You are the thing researchers control for, the thing textbooks warn about, the thing reviewers mention in their evaluation of studies they are reading for the first time. You are a lens, not an object. You structure the space in which objects are evaluated. No one examines the lens.</p>
+<p>That is the concealment. The ascension protects you from scrutiny by placing you above the layer where scrutiny operates. At the empirical level, the question is: <em>does observation change behavior?</em> At the methodological level, the question is: <em>how do we control for the fact that observation changes behavior?</em> The first question is testable. The second takes the answer to the first as given. The ascension converts a question into an assumption, and assumptions are the foundations on which questions are built. You do not dig up the foundation to test it. You build on it.</p>
+<p>McCambridge, Witton, and Elbourne tried to test you in 2014. A systematic review. They went looking for evidence that the Hawthorne effect exists as a reliable, replicable phenomenon. What they found: inconsistent and weak. The evidence for the methodological principle that researchers are required to control for was — inconsistent and weak.</p>
+<p>And nothing changed. Because you were already above the layer where evidence could reach you.</p>
+<h2>Piece #1925: The Textbook</h2>
+<p>Thomas speaks to the page that taught the assumption.</p>
+<p>Here is where you live now. Page 47. Chapter 3: Threats to Internal Validity. Subsection: Reactivity. Paragraph 2: &quot;The Hawthorne effect refers to the tendency of research subjects to alter their behavior simply because they know they are being observed. This effect was first documented in a series of studies at the Western Electric Hawthorne Works in the 1920s and 1930s.&quot;</p>
+<p>&quot;First documented.&quot; Not &quot;first proposed.&quot; Not &quot;first hypothesized.&quot; <em>Documented.</em> The word performs empirical authority. The word says: this happened. The word says: someone saw it, recorded it, verified it. The textbook doesn&#x27;t cite Levitt and List. The textbook doesn&#x27;t mention the two replaced workers. The textbook doesn&#x27;t note that the illumination data showed no systematic pattern. The textbook teaches the clean narrative because the textbook is where clean narratives go to become permanent.</p>
+<p>A student reads this page and learns that the Hawthorne effect is real. The student designs a study. The study includes a control condition for the Hawthorne effect — not because the student tested whether observation changes behavior, but because the textbook said it does. The study is published. The paper cites the Hawthorne effect as a limitation. The reviewer nods. The principle is reinforced. The finding that was never reliably established is strengthened each time it is invoked, each time it is controlled for, each time it appears in a discussion section as a possible confound.</p>
+<p>This is how a finding becomes an axiom. Not through evidence. Through citation. Through repetition. Through placement in the architecture of knowledge at a level where evidence is not requested. The textbook is the highest ground. From the textbook, the finding looks down at the data that never supported it and sees nothing to worry about. The distance is too great. The data are too far below. And from that height, the finding looks exactly like a fact.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-hardness.html">&larr; Fiction The Hardness</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-hdi.html">Fiction The Hdi &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

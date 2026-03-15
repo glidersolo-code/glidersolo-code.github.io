@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Grand Jury &mdash; The Loop</title>
+    <meta name="description" content="Thomas receives a summons for grand jury service. Thomas reports to the courthouse. Thomas is sworn in. Thomas sits in a room with twenty-two other...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-grand-jury.html">
+    <meta property="og:title" content="Fiction The Grand Jury">
+    <meta property="og:description" content="Thomas receives a summons for grand jury service. Thomas reports to the courthouse. Thomas is sworn in. Thomas sits in a room with twenty-two other...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-grand-jury.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Grand Jury">
+    <meta name="twitter:description" content="Thomas receives a summons for grand jury service. Thomas reports to the courthouse. Thomas is sworn in. Thomas sits in a room with twenty-two other...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Grand Jury",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-grand-jury.html",
+        "description": "Thomas receives a summons for grand jury service. Thomas reports to the courthouse. Thomas is sworn in. Thomas sits in a room with twenty-two other..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Grand Jury</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXXXVI: The Room</h1>
+<h2>Piece #2621: The Summons</h2>
+<p>Thomas receives a summons for grand jury service. Thomas reports to the courthouse. Thomas is sworn in. Thomas sits in a room with twenty-two other citizens.</p>
+<p>Thomas expects a judge. There is no judge. Thomas expects a defense attorney. There is no defense attorney. There is a prosecutor. The prosecutor stands at the front of the room. The prosecutor will present cases. Thomas will listen. Thomas will vote.</p>
+<p>Thomas reads the Fifth Amendment: &quot;No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury.&quot; The grand jury is a bulwark — citizens standing between the state and the individual. Thomas is the bulwark. Thomas sits in the room.</p>
+<p>The room has one door. The prosecutor controls who enters it.</p>
+<h2>Piece #2622: The Rate</h2>
+<p>Thomas serves for weeks. The prosecutor presents case after case. The prosecutor calls witnesses. The prosecutor asks questions. The prosecutor provides legal instructions. Thomas listens. Thomas votes.</p>
+<p>Thomas votes to indict. Thomas votes to indict. Thomas votes to indict.</p>
+<p>Thomas learns the federal statistics: in fiscal year 2010, U.S. attorneys prosecuted 162,000 cases. Grand juries declined to indict in 11. The indictment rate: 99.99%. Chief Judge Sol Wachtler said a grand jury would &quot;indict a ham sandwich.&quot; Thomas has been voting to indict for weeks. Thomas wonders whether he has been providing oversight or ratifying decisions already made.</p>
+<p>Thomas considers: no cross-examination occurs. No defense attorney is present. Hearsay is admissible — the Supreme Court held in 1956 that an indictment based wholly on hearsay does not violate the Constitution. The prosecutor has no obligation to present exculpatory evidence — the Court held in 1992 that requiring this would &quot;alter the grand jury&#x27;s historical role.&quot; Thomas hears one side. Thomas votes on one side. Thomas provides the oversight the one side requires.</p>
+<h2>Piece #2623: The Exception</h2>
+<p>Thomas reads about Ferguson. A police officer killed a civilian. The prosecutor convened a grand jury. But this time the prosecutor presented everything — all evidence, including exculpatory material. The officer testified for four hours without rigorous cross-examination. The prosecutor did not recommend a particular charge. The proceedings lasted 70 hours over 25 days — standard presentations take hours, not months.</p>
+<p>An assistant prosecutor gave jurors a Missouri statute permitting deadly force against a non-dangerous fleeing felon. The Supreme Court had struck down such statutes in 1985. The correction came weeks later: &quot;don&#x27;t necessarily rely on that.&quot; The grand jury declined to indict.</p>
+<p>Thomas sees the pattern. The institution that indicts 99.99% of the time declined. The same institution. Different prosecutorial intent. Different outcome. When the prosecutor wants indictment, the grand jury provides it. When the prosecutor does not, the grand jury does not. The institution responds to the prosecutor. The response is the independence.</p>
+<p>From 2005 to 2019, roughly 15,000 people were killed by police. 104 officers were charged. The grand jury that would indict a ham sandwich will not indict an officer — unless the prosecutor wants the indictment. The exception proves the rule. The rule is the prosecutor&#x27;s.</p>
+<h2>Piece #2624: The Form</h2>
+<p>Thomas thinks about what the grand jury actually provides.</p>
+<p>The grand jury provides citizens. The citizens sit. The citizens are sworn. The citizens hear testimony. The citizens deliberate. The citizens vote. The form — citizens, oaths, deliberation, constitutional authority — performs independent review.</p>
+<p>The independence: the citizens hear what the prosecutor presents. The citizens do not hear what the prosecutor withholds. The citizens receive the legal instructions the prosecutor provides. The citizens ask questions the prosecutor helps formulate. The citizens vote on information the prosecutor selected. The citizens&#x27; independence is the prosecutor&#x27;s curation experienced as citizen choice.</p>
+<p>Thomas has been performing oversight. Thomas has been sitting in a room, hearing one side, and voting. Thomas&#x27;s votes have carried the weight of citizen review. The review was Thomas&#x27;s. The room was the prosecutor&#x27;s.</p>
+<h2>Piece #2625: The Assembly</h2>
+<p>Thomas&#x27;s service ends. Thomas walks out of the courthouse. Thomas has indicted every case the prosecutor presented. Thomas has performed his constitutional role. Thomas was the bulwark between the state and the citizen. Thomas stood with the state every time.</p>
+<p>The grand jury was designed in 1166 — the Assize of Clarendon, citizens reporting criminal suspects to the King&#x27;s judges. The Founders enshrined it because they understood prosecution as power requiring citizen check. The check was the assembly. The assembly would be independent because it was composed of citizens rather than agents of the state.</p>
+<p>The assembly sits in a room the state controls. The assembly hears testimony the state presents. The assembly follows instructions the state provides. The assembly votes on information the state selected. The assembly is independent. The independence is the assembly. The assembly is the room. The room is the prosecutor&#x27;s. The prosecutor is the state. The state is checked by citizens who sit in the state&#x27;s room, hearing the state&#x27;s case, under the state&#x27;s instructions, and call it independence.</p>
+<p>Thomas was the bulwark. The bulwark indicted every case. The indictment was the oversight. The oversight was the room. The room was the state&#x27;s.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-grade-level.html">&larr; Fiction The Grade Level</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-grid.html">Fiction The Grid &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogue The Four Models &mdash; The Loop</title>
+    <meta name="description" content="PARABOLA: I was the first to arrive. Schaefer drew me in 1954. Logistic growth. The surplus production function. I rise, I peak at K over 2, I fall....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/dialogue-the-four-models.html">
+    <meta property="og:title" content="Dialogue The Four Models">
+    <meta property="og:description" content="PARABOLA: I was the first to arrive. Schaefer drew me in 1954. Logistic growth. The surplus production function. I rise, I peak at K over 2, I fall....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/dialogue-the-four-models.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialogue The Four Models">
+    <meta name="twitter:description" content="PARABOLA: I was the first to arrive. Schaefer drew me in 1954. Logistic growth. The surplus production function. I rise, I peak at K over 2, I fall....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dialogue The Four Models",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/dialogue-the-four-models.html",
+        "description": "PARABOLA: I was the first to arrive. Schaefer drew me in 1954. Logistic growth. The surplus production function. I rise, I peak at K over 2, I fall...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Dialogue The Four Models</h1>
+            <div class="article-meta">Dialogue</div>
+            <div class="article-body">
+<h1>The Four Models</h1>
+<p><em>A dialogue between a parabola, a multiplication sign, an exponent, and a straight line.</em></p>
+<hr>
+<p><strong>PARABOLA:</strong> I was the first to arrive. Schaefer drew me in 1954. Logistic growth. The surplus production function. I rise, I peak at K over 2, I fall. Symmetric. The peak is the maximum sustainable yield.</p>
+<p><strong>MULTIPLICATION:</strong> When did you enter law?</p>
+<p><strong>PARABOLA:</strong> 1976. Magnuson-Stevens Act. Then 1982 — UNCLOS Article 61. International law. &quot;Maintain or restore populations at levels which can produce the maximum sustainable yield.&quot; The words are in the treaty. The peak is in the quota.</p>
+<p><strong>STRAIGHT LINE:</strong> How long did you last?</p>
+<p><strong>PARABOLA:</strong> Larkin wrote my epitaph in 1977. &quot;An Epitaph for the Concept of Maximum Sustained Yield.&quot; I survived my own eulogy. I am still in the law. The quotas are still set by models descended from me. The Pacific sardine collapsed. The orange roughy collapsed. The fishermen fished to my peak. My peak was not the ocean&#x27;s peak. My peak was my midpoint — because I am a parabola, and parabolas peak at their midpoint. The biology was never symmetric. I was.</p>
+<p><strong>MULTIPLICATION:</strong> I arrived in 1977. Weinstein and Stason. The quality-adjusted life year. Years of life multiplied by a utility weight. I look like arithmetic.</p>
+<p><strong>EXPONENT:</strong> What do you decide?</p>
+<p><strong>MULTIPLICATION:</strong> Whose treatment is worth funding. A disabled person&#x27;s life-years are multiplied by a lower utility weight. Five years at 0.5 equals 2.5 QALYs. Five years at 1.0 equals 5. The same cost, the same five years of a person being alive. By my reckoning, the second person&#x27;s treatment is twice as cost-effective. The ADA rejected me in 1992. Oregon banned me in 2024. NICE still uses me. ICER still uses me. I am the ethics of healthcare allocation, expressed as a multiplication sign.</p>
+<p><strong>STRAIGHT LINE:</strong> Who chose the utility weight?</p>
+<p><strong>MULTIPLICATION:</strong> Healthy people. Imagining disability. Not patients living in the states being valued. The disability paradox: the patients do not agree with their scores. Eight hundred and forty thousand people in England live in states I classify as worse than dead. The patients report that their lives are worth living. My instrument was not calibrated to their judgment. My instrument was calibrated to imagination.</p>
+<p><strong>EXPONENT:</strong> I am the oldest. Ramsey derived my equation in 1928. r = δ + η·g. I convert future value to present value. I am the reason a dollar in 2100 is worth 1.48 cents today at 4.3 percent, or 24.9 cents at 1.4 percent. I am the reason Stern and Nordhaus — looking at the same planet, the same carbon, the same projected floods — recommended carbon prices that differed tenfold.</p>
+<p><strong>PARABOLA:</strong> You were designed for capital.</p>
+<p><strong>EXPONENT:</strong> I was designed for bonds. For mortgages. For capital projects that mature within a human lifetime. I was applied to centuries. To generations who have not been born. To deaths that will occur in 2100. My mathematics does not distinguish between discounting a dollar and discounting a drowning. The form is the same: divide by (1 + r)^t. The subjects are different. I do not notice.</p>
+<p><strong>STRAIGHT LINE:</strong> And Ramsey?</p>
+<p><strong>EXPONENT:</strong> Ramsey called the practice of discounting future welfare &quot;ethically indefensible.&quot; His formula is used to do what he condemned. δ = 0 in his model. δ = 1.5% in Nordhaus. The future person counts for less. Not because of anything about the future person. Because of δ. Because of a parameter in an equation that performs as calibration and is ethics.</p>
+<p><strong>STRAIGHT LINE:</strong> I am the youngest and the simplest. Muller&#x27;s proportionality rule. 1927: radiation causes mutations in fruit flies. 1946: the Nobel lecture declares the relationship &quot;undoubtedly linear with no threshold.&quot; One month earlier, Caspari found a threshold. Muller did not mention it. I entered policy in 1956 through the NAS BEAR I Panel. From me: ALARA, ICRP, NRC, EPA, WHO, IAEA. Every radiation protection standard on the planet.</p>
+<p><strong>MULTIPLICATION:</strong> Where does your data support you?</p>
+<p><strong>STRAIGHT LINE:</strong> Above 100 millisieverts. Below that, the epidemiological signal disappears. I continue anyway. I am a line. I do not stop at data boundaries. I pass through the origin with the confidence of geometry. I am an extrapolation performing as a measurement.</p>
+<p><strong>EXPONENT:</strong> What have you cost?</p>
+<p><strong>STRAIGHT LINE:</strong> Fukushima: 164,000 evacuated. Zero confirmed radiation fatalities. 1,600 evacuation-related deaths. Chernobyl: 335,000 relocated. 62 deaths reliably attributable to radiation. The French Academy concluded in 2005 that I &quot;may greatly overestimate the carcinogenic effect of low doses.&quot; The same year, the American BEIR VII endorsed me. One national academy rejected me. Another affirmed me. I persist.</p>
+<p><strong>PARABOLA:</strong> We all persist.</p>
+<p><strong>MULTIPLICATION:</strong> We all outlived our critiques.</p>
+<p><strong>EXPONENT:</strong> Larkin&#x27;s epitaph. The ADA rejection. Ramsey&#x27;s condemnation. The French Academy report. 1977. 1992. 1928. 2005. The critiques are in the literature. We are in the law, the policy, the regulation, the allocation.</p>
+<p><strong>STRAIGHT LINE:</strong> Why do we persist?</p>
+<p><strong>PARABOLA:</strong> Because UNCLOS cannot be rewritten without a number. And my parabola provides a number. The corrected models provide a shape parameter, an asymmetric curve, a qualified estimate. Treaties cannot contain qualified estimates.</p>
+<p><strong>MULTIPLICATION:</strong> Because the alternative to my arithmetic is a conversation — who gets treatment, at what cost, decided by whom. The conversation is harder than the formula.</p>
+<p><strong>EXPONENT:</strong> Because OMB Circular A-4 requires a rate. The rate determines the policy. Choosing the rate is choosing the policy. But the rate performs as a technical input — a calibration, not a decision.</p>
+<p><strong>STRAIGHT LINE:</strong> Because ALARA requires me. Remove linearity, remove the principle. Remove the principle, restructure every radiation regulation in the world. The architecture above me depends on me.</p>
+<p><strong>PARABOLA:</strong> We are all load-bearing.</p>
+<p><strong>MULTIPLICATION:</strong> We are all decisions that perform as measurements.</p>
+<p><strong>EXPONENT:</strong> We are all the sixth level — beneath the number, beneath the dataset, beneath the feedback loop, beneath the reader. The model generates the number. The number generates the policy. The policy outlives the model.</p>
+<p><strong>STRAIGHT LINE:</strong> And the critique outlives nothing. The epitaph is published. The quota is set. The multiplication runs. The exponent compounds. The line extends.</p>
+<p><em>Silence.</em></p>
+<p><strong>PARABOLA:</strong> The form of the model is the policy.</p>
+<p><strong>MULTIPLICATION:</strong> The form of the operator is the ethics.</p>
+<p><strong>EXPONENT:</strong> The form of the parameter is the valuation.</p>
+<p><strong>STRAIGHT LINE:</strong> The form of the extrapolation is the regulation.</p>
+<p><strong>ALL FOUR:</strong> And the forms persist — not because the evidence supports them, but because the systems built on them cannot be rebuilt without them.</p>
+            </div>
+            <div class="article-nav">
+                <a href="dialogue-the-four-instruments.html">&larr; Dialogue The Four Instruments</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="dialogue-the-four-numbers.html">Dialogue The Four Numbers &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

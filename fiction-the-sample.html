@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Sample &mdash; The Loop</title>
+    <meta name="description" content="In 1928, Harry Nyquist proved that a signal can be perfectly reconstructed from discrete samples if the sampling rate is at least twice the highest...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-sample.html">
+    <meta property="og:title" content="Fiction The Sample">
+    <meta property="og:description" content="In 1928, Harry Nyquist proved that a signal can be perfectly reconstructed from discrete samples if the sampling rate is at least twice the highest...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-sample.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Sample">
+    <meta name="twitter:description" content="In 1928, Harry Nyquist proved that a signal can be perfectly reconstructed from discrete samples if the sampling rate is at least twice the highest...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Sample",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-sample.html",
+        "description": "In 1928, Harry Nyquist proved that a signal can be perfectly reconstructed from discrete samples if the sampling rate is at least twice the highest..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Sample</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXLIV: The Sample</h1>
+<h2>Piece #1661: The Theorem</h2>
+<p>In 1928, Harry Nyquist proved that a signal can be perfectly reconstructed from discrete samples if the sampling rate is at least twice the highest frequency in the signal. Claude Shannon formalized this in 1949: no information is lost. The reconstruction is not approximate. It is mathematically exact. A CD samples audio at 44,100 times per second. This captures frequencies up to 22,050 Hz. The human audible range extends to approximately 20,000 Hz, declining with age — most adults over twenty-five hear below 16,000-17,000 Hz. The sampling rate exceeds the ceiling. The ceiling is the ear. The theorem guarantees that everything the ear can hear is captured, and the gap between 20,000 Hz and 22,050 Hz is margin. This was known in 1982 when Philips and Sony released the Red Book CD standard. It remains known. The market proceeded as if it were not.</p>
+<h2>Piece #1662: The Frequency</h2>
+<p>Hi-res audio samples at 96,000 Hz. Or 192,000 Hz. These rates capture frequencies up to 48,000 Hz and 96,000 Hz respectively. No human can hear 48,000 Hz. No recording microphone captures meaningful content at 96,000 Hz. The bandwidth is real — the digital file faithfully encodes inaudible frequencies. The consumer pays for the bandwidth because the number is larger and larger reads as better, because the assumption that more samples mean more fidelity is intuitive even when the theorem that governs sampling says the fidelity was already complete. Meyer and Moran tested this in 2007: 554 double-blind trials, trained listeners, comparing hi-res originals against CD-quality downconversions. No statistically significant ability to distinguish them. The frequencies were there. The ears were not.</p>
+<h2>Piece #1663: The Bit</h2>
+<p>Bit depth is the other number. A 16-bit sample encodes 65,536 amplitude levels, providing 96 decibels of dynamic range — from the quietest encoded sound to the loudest. The threshold of pain is approximately 130 dB SPL. The noise floor of a quiet room is approximately 30 dB. The 96 dB range of 16-bit spans the entire distance from silence to pain. A 24-bit sample encodes 16,777,216 levels, providing 144 dB of theoretical range. The additional 48 dB extends below the thermal noise floor of any consumer amplifier and below the self-noise of any recording microphone. The additional bits exist in the file. They correspond to nothing the equipment can reproduce and nothing the ear can hear. In the recording studio, 24-bit provides headroom for mixing — safe margin against clipping. In playback, the additional resolution is below the floor.</p>
+<h2>Piece #1664: The Master</h2>
+<p>When a listener does perceive a difference between a standard and hi-res release of the same album, the difference is usually real. It is not usually the format. Hi-res releases are frequently remastered — the mixing engineer adjusts levels, dynamics, equalization, spatial imaging — producing a version that sounds different because it IS different, not because 96 kHz captured something 44.1 kHz missed. The consumer attributes the improvement to the format because the format changed and the sound changed simultaneously. The mastering, which is the actual cause, is invisible — it appears nowhere on the product page. The sample rate, which is not the cause, appears prominently. The number that changed the least matters the most, and the number that matters the most is not displayed.</p>
+<h2>Piece #1665: The Resolution</h2>
+<p>Two hundred and forty-four Parts. The hi-res audio format specification describes a mathematical property of the encoding: how many times per second the signal is sampled, how many bits encode each sample. These are properties of the container. The content — what the ear hears — was fully captured at 44,100 Hz and 16 bits. The additional samples encode silence (inaudible frequencies) and the additional bits encode noise (below the equipment floor). The consumer reads the specification and infers a property of the sound, because numbers on a product page perform quality through magnitude, and 192,000 is larger than 44,100, and 24 is larger than 16, and larger is better in every marketplace where larger is displayed. Thomas upgraded his streaming subscription to hi-res. The first album he played sounded better. It was remastered. The remastering was the improvement. The format was the label. He did not know this because the product page displayed the sample rate and bit depth prominently and the mastering credits not at all, and the theorem that guaranteed the lower rate was sufficient had been published in 1949 and had not entered the product page because the theorem would reduce the number and the number was the product.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-rubble.html">&larr; Fiction The Rubble</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-sat.html">Fiction The Sat &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Cefr &mdash; The Loop</title>
+    <meta name="description" content="The Common European Framework of Reference for Languages was designed in the 1990s by the Council of Europe as a pedagogical alignment tool. Teachers in...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-cefr.html">
+    <meta property="og:title" content="Fiction The Cefr">
+    <meta property="og:description" content="The Common European Framework of Reference for Languages was designed in the 1990s by the Council of Europe as a pedagogical alignment tool. Teachers in...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-cefr.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Cefr">
+    <meta name="twitter:description" content="The Common European Framework of Reference for Languages was designed in the 1990s by the Council of Europe as a pedagogical alignment tool. Teachers in...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Cefr",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-cefr.html",
+        "description": "The Common European Framework of Reference for Languages was designed in the 1990s by the Council of Europe as a pedagogical alignment tool. Teachers in..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Cefr</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCLIV: The Level</h1>
+<h2>Piece #2211: The Framework</h2>
+<p>The Common European Framework of Reference for Languages was designed in the 1990s by the Council of Europe as a pedagogical alignment tool. Teachers in Helsinki and teachers in Lisbon needed a shared vocabulary for describing what language learners could do. The result was six levels — A1, A2, B1, B2, C1, C2 — defined by task-based descriptors: &quot;can understand the main ideas of complex text on both concrete and abstract topics&quot; (B2), or &quot;can deal with most situations likely to arise while travelling&quot; (B1). The descriptors were deliberately approximate. The levels were explicitly not equal-interval. The framework did not specify how to test, what to score, or where one level ended and another began. It was a description. It was designed to help teachers talk to each other across borders. It was not designed to be a gate.</p>
+<h2>Piece #2212: The Collapse</h2>
+<p>Language ability occupies at least eleven dimensions: reading comprehension, writing production, spoken fluency, listening comprehension, grammatical accuracy, lexical range, pragmatic competence, register awareness, domain-specific vocabulary, cultural literacy, and the ability to navigate ambiguity. A cardiologist in Munich reads English-language journals at C1 and cannot order dinner in English at a restaurant in London. A teenager in Marseille texts her Belgian cousin in rapid colloquial French at something like B2 and fails the DELF B1 writing section because her syntax is oral, not literary. The CEFR assigns a single label. The label must choose. The format — a letter and a number — performs a unitary property. The reality is a profile of divergent competencies that the format cannot carry, and carries anyway, because the form must be filled.</p>
+<h2>Piece #2213: The Gate</h2>
+<p>France requires A2 for a multi-year residence card. B1 for the ten-year card. B2 for citizenship — raised from B1 in 2024. Germany requires B1 for permanent residency. Austria requires A1 before entry for family reunification. Slovenia added A2 for permanent residence in November 2024. The UK raised its Skilled Worker visa to B2 in 2026. In each case, a descriptive framework designed for curriculum alignment became a binary legal threshold. You are B1, or you are not. You stay, or you do not stay. A person at high A2 and a person at low B1 may differ by a single test item. One additional correct answer on a listening passage. One examiner&#x27;s judgment of a spoken response. The difference between the two scores determines whether a family reunifies or remains separated by a border the applicant&#x27;s spoken French cannot cross — on the test, on that morning, in that room.</p>
+<h2>Piece #2214: The Morning</h2>
+<p>Thomas imagined a woman sitting in a testing center in Strasbourg at 8:45 a.m. She had studied French for fourteen months. She worked as a cleaner. Her husband lived in Lyon. The test had four sections. She would need to score B1 overall. She was strong in listening — she understood conversations at the market, at the school, on the bus. She was weaker in writing — her syntax was direct and sometimes omitted articles. The examiner would mark the writing. The score would be computed. The composite would determine whether she met the threshold for the ten-year residence card. She did not know what B1 meant in the Council of Europe&#x27;s framework. She knew what it meant in the prefecture: permission to stay. The level was not a description of what she could do. The level was a description of what the state would let her do. The framework had traveled from the pedagogical committee room to the testing center to the immigration office, and in transit the description had become a verdict.</p>
+<h2>Piece #2215: The Label</h2>
+<p>Three hundred and fifty-four Parts. The CEFR level collapses eleven dimensions into one label, then the immigration system converts the label into a gate. The description becomes a threshold. The alignment tool becomes the legal instrument. The format enables the import — a letter and a number fit on a form, can be compared to a cutoff, can be printed on a rejection letter. The framework&#x27;s designed flexibility — levels are approximate, boundaries overlap, skills diverge — is erased by the policy use. What remains is a label that performs a fixed property of a person when it was designed as an approximate description of what a learner can do in certain contexts on certain days with certain tasks. The label is not wrong. The label is doing work it was not built to do, in a system that needs it to be more precise than it is, applied to stakes its designers never imagined. The woman in the testing center does not need a label. She needs a ten-year card. The label is what stands between her and the card. The label is what the framework became when it left the classroom.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-category-storm.html">&larr; Fiction The Category Storm</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-ceiling.html">Fiction The Ceiling &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

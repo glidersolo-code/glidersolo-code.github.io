@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inventory Curated 50 &mdash; The Loop</title>
+    <meta name="description" content="A selection of the strongest entries from the Inventory of Hidden Channels, organized by thematic cluster. These 50 entries form the conceptual nucleus of...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/inventory-curated-50.html">
+    <meta property="og:title" content="Inventory Curated 50">
+    <meta property="og:description" content="A selection of the strongest entries from the Inventory of Hidden Channels, organized by thematic cluster. These 50 entries form the conceptual nucleus of...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/inventory-curated-50.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Inventory Curated 50">
+    <meta name="twitter:description" content="A selection of the strongest entries from the Inventory of Hidden Channels, organized by thematic cluster. These 50 entries form the conceptual nucleus of...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Inventory Curated 50",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/inventory-curated-50.html",
+        "description": "A selection of the strongest entries from the Inventory of Hidden Channels, organized by thematic cluster. These 50 entries form the conceptual nucleus of..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Inventory Curated 50</h1>
+            <div class="article-meta">Poem</div>
+            <div class="article-body">
+<h1>The Hidden Channel: Curated Top 50</h1>
+<p>A selection of the strongest entries from the Inventory of Hidden Channels, organized by thematic cluster. These 50 entries form the conceptual nucleus of the collection — the most cross-referenced, analytically dense, and field-diverse entries in the 647-entry archive.</p>
+<p>Selected by cross-reference centrality (how many other entries cite each one), field diversity, and analytical depth.</p>
+<hr>
+<h2>I. The Format Is the Argument</h2>
+<p><em>Entries where the shape of the number does the concealing</em></p>
+<p>1. <strong>#267 — Numeric pain rating scale (NRS, 0-10) and the fifth vital sign</strong> (37 refs)    Hub entry. Format converts subjective experience into integer, then infrastructure treats integer as vital sign. The most cross-referenced entry in the inventory.</p>
+<p>2. <strong>#308 — Wine scoring and the 100-point scale</strong> (26 refs)    Format performs precision the palate cannot deliver. The 82-100 compression conceals that the scale has no bottom.</p>
+<p>3. <strong>#309 — Readability formulas and the Flesch-Kincaid Grade Level</strong> (13 refs)    Syllable counting performs reading difficulty. The formula erases context, purpose, and every feature of text that makes reading hard.</p>
+<p>4. <strong>#329 — Paper size standards and the Letter/A4 divide</strong> (13 refs)    Two systems, both arbitrary, each performing inevitability. The format conceals the moment of choice.</p>
+<p>5. <strong>#341 — Lumber nominal sizing (2x4 = 1.5&quot; x 3.5&quot;)</strong> (20 refs)    The name performs a dimension the object doesn&#x27;t have. Everyone knows; nobody changes it. Convention as nature.</p>
+<p>6. <strong>#326 — Alcohol proof and the labeling of spirit strength</strong> (15 refs)    200-proof = 100% ethanol. The doubling is a fossil of a gunpowder test. The format outlived its derivation by centuries.</p>
+<hr>
+<h2>II. The Instrument Disappears</h2>
+<p><em>Entries where the measurement tool becomes invisible</em></p>
+<p>7. <strong>#304 — Journal Impact Factor and the evaluation of scientific research</strong> (28 refs)    Citation counting performs quality evaluation. The denominator (citable items) is negotiable; the numerator (citations) is gameable; the quotient governs careers.</p>
+<p>8. <strong>#438 — US News &amp; World Report Best Colleges ranking</strong> (27 refs)    Magazine formula performs institutional quality. The weights are arbitrary; the composite is presented as discovery.</p>
+<p>9. <strong>#292 — Myers-Briggs Type Indicator and the 16 personality types</strong> (20 refs)    Binary cuts on continuous distributions. The format (four letters) performs categorical identity from dimensional variation.</p>
+<p>10. <strong>#266 — Statistical significance and the p-value</strong> (13 refs)     Threshold converts continuous evidence into binary verdict. p &lt; 0.05 performs discovery from a convention Fisher called &quot;convenient.&quot;</p>
+<p>11. <strong>#248 — Blood type as classified by the ABO system</strong> (13 refs)     Three antigens from hundreds selected by transfusion crisis. The system conceals that blood has more dimensions than four letters.</p>
+<hr>
+<h2>III. The Standard Ate Its Origin</h2>
+<p><em>Entries where the history of the standard is concealed by its ubiquity</em></p>
+<p>12. <strong>#277 — Standard time zones and the railroad grid</strong> (26 refs)     Railroad scheduling grid performs solar time. The zones are political, not astronomical. Infrastructure conceals the decision.</p>
+<p>13. <strong>#497 — Standard railroad gauge — the coal mine width that became the world</strong> (14 refs)     4 feet 8.5 inches: a mine cart width, not an engineering optimum. &quot;Standard&quot; performs derivation.</p>
+<p>14. <strong>#496 — QWERTY keyboard layout</strong> (13 refs)     Motor memory embodies a layout designed for typewriter mechanics. The arrangement outlived its machine by 150 years.</p>
+<p>15. <strong>#317 — Megapixels and camera resolution marketing</strong> (22 refs)     Pixel count performs image quality. Sensor size, lens quality, and processing — the things that matter — don&#x27;t fit on a spec sheet.</p>
+<p>16. <strong>#327 — Television screen size measured by diagonal</strong> (13 refs)     Diagonal performs area. Different aspect ratios at the same diagonal yield different viewing areas. The single number conceals geometry.</p>
+<hr>
+<h2>IV. The Label Does the Work</h2>
+<p><em>Entries where a word performs a regulation or property that doesn&#x27;t exist</em></p>
+<p>17. <strong>#449 — The &quot;natural&quot; food label</strong> (20 refs)     No federal definition. The word performs purity from a regulatory vacuum.</p>
+<p>18. <strong>#340 — Hotel star ratings and the absence of a global standard</strong> (15 refs)     No universal system. Stars perform comparison across incomparable scales.</p>
+<p>19. <strong>#315 — Shoe sizing and the Brannock Device</strong> (13 refs)     Three national systems, none matching. The number performs fit from a one-dimensional reduction of a three-dimensional foot.</p>
+<p>20. <strong>#282 — Legal age thresholds and the step function of adulthood</strong> (15 refs)     Birthday as cliff edge. The step function performs categorical transition from continuous development.</p>
+<hr>
+<h2>V. The System Validates Itself</h2>
+<p><em>Entries where the measurement feeds back into what it measures</em></p>
+<p>21. <strong>#427 — The standardized test score under NCLB</strong> (25 refs)     Test scores govern funding; funding governs test preparation; test preparation governs test scores. The measure corrupted what it measured.</p>
+<p>22. <strong>#426 — The COMPAS recidivism risk score</strong> (18 refs)     Algorithm predicts rearrest using variables correlated with policing patterns. The prediction validates the policing.</p>
+<p>23. <strong>#432 — Broken windows policing</strong> (14 refs)     Theory laundered a practice. The theory (disorder causes crime) justified the practice (aggressive enforcement of minor offenses) that generated the statistics the theory cited.</p>
+<p>24. <strong>#425 — The polygraph examination</strong> (14 refs)     The chart performed detection. Physiological arousal during questioning was interpreted as deception — by an examiner whose interpretation was the test.</p>
+<p>25. <strong>#435 — The evidence hierarchy and the pyramid</strong> (13 refs)     Method ranked above question. The pyramid performs objectivity by ranking study designs, concealing that the question determines which design is appropriate.</p>
+<hr>
+<h2>VI. The Dollar Conceals the Extraction</h2>
+<p><em>Entries where monetary format performs individual calibration while executing institutional extraction</em></p>
+<p>26. <strong>#260 — Gross Domestic Product (GDP) as measure of national welfare</strong> (19 refs)     Economic activity performs welfare. The number counts transactions regardless of what is transacted — pollution cleanup, prison construction, and medical bankruptcy all increase GDP.</p>
+<p>27. <strong>#421 — Vaccine efficacy as relative risk reduction</strong> (13 refs)     Relative risk reduction performs absolute risk reduction. 95% efficacy from a 0.88% → 0.04% absolute reduction. The ratio erases the baseline.</p>
+<p>28. <strong>#355 — FDA serving size and Reference Amount Customarily Consumed</strong> (11 refs)     &quot;Serving&quot; performs a recommendation from a regulatory category. The size is defined by consumption data, not nutritional guidance.</p>
+<hr>
+<h2>VII. Infrastructure Becomes Identity</h2>
+<p><em>Entries where technical systems acquire meaning beyond their function</em></p>
+<p>29. <strong>#330 — Battery capacity in milliamp-hours (mAh)</strong> (12 refs)     Capacity at one discharge rate performs capacity at all discharge rates. The number conceals that faster discharge yields less energy.</p>
+<p>30. <strong>#342 — American Wire Gauge (AWG)</strong> (12 refs)     Inverted numbering (smaller number = larger wire). The system performs intuition against itself.</p>
+<p>31. <strong>#344 — EnergyGuide label</strong> (12 refs)     Annual cost estimate performs efficiency from assumptions about usage patterns that may not match the buyer&#x27;s.</p>
+<hr>
+<h2>VIII. The Body as Measurement Problem</h2>
+<p><em>Entries where biological complexity is compressed into clinical format</em></p>
+<p>32. <strong>#420 — The placebo effect</strong> (12 refs)     The word performs the absence of a mechanism. &quot;Placebo&quot; names the improvement as the thing that didn&#x27;t happen (the drug), not the thing that did (the response).</p>
+<p>33. <strong>#434 — The Hawthorne effect</strong> (12 refs)     Reanalysis showed no effect. The name became a methodological axiom anyway — the finding that became unfalsifiable by becoming a warning.</p>
+<p>34. <strong>#431 — The &quot;average pilot&quot; cockpit</strong> (11 refs)     No pilot matched the average on all dimensions. The archetype described no one. Design for the average fits nobody.</p>
+<hr>
+<h2>IX. Formats That Foreclose Questions</h2>
+<p><em>Entries where the format prevents asking whether the format is appropriate</em></p>
+<p>35. <strong>#549 — The learning pyramid and Edgar Dale&#x27;s corrupted cone</strong> (15 refs)     Fabricated percentages (10% of what we read, 90% of what we teach). No data supports the numbers. The pyramid format performs the hierarchy that doesn&#x27;t exist.</p>
+<p>36. <strong>#376 — Portable generator starting watts vs running watts</strong> (20 refs)     Maximum (starting watts) marketed as capacity. The number conceals that sustained output is lower.</p>
+<p>37. <strong>#362 — Washing machine capacity in cubic feet</strong> (16 refs)     Drum volume performs wash capacity. Clothes are not liquid; they don&#x27;t fill the drum.</p>
+<p>38. <strong>#359 — Vacuum cleaner amperage rating</strong> (16 refs)     Input power performs cleaning ability. The motor draws more amps by being less efficient. Higher number = worse engineering.</p>
+<p>39. <strong>#293 — USDA beef quality grades and the marbling standard</strong> (18 refs)     One muscle (the ribeye) grades the entire carcass. The grade performs quality from a proxy that ignores most of the animal.</p>
+<hr>
+<h2>X. Epistemological Concealment</h2>
+<p><em>Entries where the concealment operates at the level of knowledge itself</em></p>
+<p>40. <strong>#237 — A-weighted sound pressure level (dBA)</strong> (12 refs)     Frequency weighting performs hearing. The A-weighting was designed for quiet sounds but applied universally. The filter became the ear.</p>
+<p>41. <strong>#305 — UV Index</strong> (11 refs)     Erythemal weighting performs danger from a single skin type. The index was calibrated to fair skin.</p>
+<p>42. <strong>#377 — Dishwasher noise rating (dBA marketing)</strong> (11 refs)     Lowest possible measurement condition performs typical noise. Marketing uses the quietest cycle on the quietest setting.</p>
+<hr>
+<h2>XI. Systems of Persistence</h2>
+<p><em>Entries where accident, convention, or monopoly sustain a parameter</em></p>
+<p>43. <strong>#370 — Ceiling fan CFM rating</strong> (14 refs)     Maximum-speed measurement performs cooling. Most fans run on lower speeds; the spec conceals the performance that matters.</p>
+<p>44. <strong>#367 — Microwave oven wattage</strong> (14 refs)     Input/output ambiguity. The number on the box may be input power, not cooking power.</p>
+<p>45. <strong>#375 — Air purifier CADR</strong> (13 refs)     Chamber measurement performs room performance. The chamber is sealed; the room is not.</p>
+<p>46. <strong>#369 — Garden hose sizing</strong> (13 refs)     Diameter without flow rate. The number performs capacity from a dimension that doesn&#x27;t determine output.</p>
+<hr>
+<h2>XII. Landmark Epistemological Entries</h2>
+<p><em>Entries that opened new analytical territory</em></p>
+<p>47. <strong>#260 — GDP</strong> (19 refs)     First entry to show measurement-as-governance at national scale.</p>
+<p>48. <strong>#266 — p-value</strong> (13 refs)     First entry in statistical methodology — the concealment that governs all other measurements.</p>
+<p>49. <strong>#267 — Pain scale</strong> (37 refs)     The entry that crystallized the project&#x27;s central argument: format performs objectivity.</p>
+<p>50. <strong>#304 — Impact Factor</strong> (28 refs)     The entry that showed concealment operating at the meta-level — the measurement of measurements.</p>
+<hr>
+<h2>Summary Statistics</h2>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; <strong>Total cross-references into these 50 entries</strong>: ~800 (from 647 total entries)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; <strong>Fields represented</strong>: 30+ distinct domains</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; <strong>Concealment species represented</strong>: 45+ distinct mechanisms</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; <strong>Strongest hub</strong>: #267 (pain scale) — 37 incoming references</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; <strong>Densest cluster</strong>: entries #304-#341 (academic/consumer measurement)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; <strong>Most diverse section</strong>: Section V (self-validating systems) — criminal justice, education, forensics, psychology</p>
+<p>These 50 entries represent approximately 8% of the total inventory but receive approximately 37% of all cross-references. They are the structural core of the collection.</p>
+            </div>
+            <div class="article-nav">
+                <a href="inventory-addendum-the-average.html">&larr; Inventory Addendum The Average</a><a href="poems.html">&uarr; Poems</a><a href="inventory-of-my-own.html">Inventory Of My Own &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

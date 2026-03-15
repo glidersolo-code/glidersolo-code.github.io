@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Carnation &mdash; The Loop</title>
+    <meta name="description" content="Thomas is standing at a grave in Grafton, West Virginia.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-carnation.html">
+    <meta property="og:title" content="Fiction The Carnation">
+    <meta property="og:description" content="Thomas is standing at a grave in Grafton, West Virginia.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-carnation.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Carnation">
+    <meta name="twitter:description" content="Thomas is standing at a grave in Grafton, West Virginia.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Carnation",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-carnation.html",
+        "description": "Thomas is standing at a grave in Grafton, West Virginia."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Carnation</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCLXVI: The Carnation</h1>
+<h2>Piece #2271: The Mother</h2>
+<p>Thomas is standing at a grave in Grafton, West Virginia.</p>
+<p>Ann Reeves Jarvis died on May 9, 1905. She had organized Mothers&#x27; Day Work Clubs in five West Virginia towns since 1858 — clubs that raised money for medicine, hired nurses for tuberculosis families, inspected milk before the state required it. During the Civil War, she declared the clubs neutral and nursed soldiers from both sides. In 1868, she organized a reconciliation event for Confederate and Union soldiers at the Taylor County Courthouse. Despite threats of violence, the event succeeded.</p>
+<p>Her daughter Anna was one of twelve children. Seven died in infancy or childhood.</p>
+<p>Thomas thinks: a woman who spent her life organizing care for other mothers&#x27; children, who lost seven of her own. The grief was particular. The work was particular. The holiday that followed would be designed to honor that particularity — each child honoring their own mother. The singular possessive: Mother&#x27;s Day. Not Mothers&#x27;. Not all mothers. Your mother.</p>
+<h2>Piece #2272: The Premium Department</h2>
+<p>Thomas is reading a letter dated 1907.</p>
+<p>Anna Jarvis is writing to congressmen, business leaders, clergymen. She wants a national day to honor mothers. Not a general day. Not a commercial day. A personal day — a handwritten note, a white carnation (her mother&#x27;s favorite flower), a visit or a letter. The first celebration will be May 10, 1908: Andrews Methodist Church in Grafton, where her mother taught Sunday school, and simultaneously at Wanamaker&#x27;s department store auditorium in Philadelphia. John Wanamaker&#x27;s five-thousand-seat auditorium was too small. Fifteen thousand came. The celebration moved to the plaza in front of City Hall.</p>
+<p>By 1910, West Virginia declared it officially. By 1911, every state observed it. On May 9, 1914, Woodrow Wilson signed Proclamation 1268. Six years from first celebration to federal holiday.</p>
+<p>Thomas thinks: the fastest path from personal grief to federal institution in American history. Nine years from her mother&#x27;s death to a national proclamation. The format she designed — a named holiday, a fixed date, a symbolic flower, a specific sentiment — was perfectly legible. Perfectly universal. Perfectly capturable.</p>
+<h2>Piece #2273: The Charlatans</h2>
+<p>Thomas is reading Anna Jarvis&#x27;s correspondence from the 1920s.</p>
+<p>&quot;Charlatans, bandits, pirates, racketeers, kidnappers, and termites that would undermine with their greed one of the finest, noblest, and truest movements and celebrations.&quot;</p>
+<p>She is describing the florists.</p>
+<p>&quot;A maudlin, insincere printed card or ready-made telegram means nothing except that you&#x27;re too lazy to write to the woman who has done more for you than anyone else in the world.&quot;</p>
+<p>She is describing the greeting card industry.</p>
+<p>In 1922, she endorsed a boycott against florists who raised carnation prices every May. In 1925, she crashed an American War Mothers convention in Philadelphia — they were selling carnations for fundraising — and was arrested for disturbing the peace, dragged screaming from the meeting by police. In 1934, she fought the U.S. Postal Service&#x27;s three-cent stamp featuring Whistler&#x27;s Mother because it included a vase of carnations — an advertisement, she said, for the floral industry. She successfully prevented the words &quot;Mother&#x27;s Day&quot; from appearing on the stamp. By 1943, she was petitioning to rescind the holiday entirely. By 1944, she had thirty-three pending lawsuits simultaneously.</p>
+<p>Thomas thinks: the founder spent more years fighting her creation than creating it. Six years to build. Twenty-four years to fight. The fight was lost before it began, because the format she designed — the named holiday, the fixed date, the symbolic flower, the greeting-card-ready name — was the format the industries needed.</p>
+<h2>Piece #2274: The Sanitarium</h2>
+<p>Thomas is standing in the Marshall Square Sanitarium, West Chester, Pennsylvania, 1944.</p>
+<p>Anna Jarvis is blind. Partially deaf. Broke. She spent her inheritance on legal fees fighting the commercialization of the holiday she created. Her sister died this year. Friends placed her here. She will spend the last four years of her life in this room.</p>
+<p>Her care is being paid for — secretly — by people in the floral and greeting card industries. The industries she fought for twenty-four years are sustaining her physically. She is never told who pays her bills. She dies on November 24, 1948, at age eighty-four. She never married. She never had children.</p>
+<p>Thomas thinks: the commerce erased the founder. The commerce sustained the founder. Both operations were invisible to her. The industries absorbed her objection — not by answering it, not by defeating it, but by outgrowing it. Thirty-five billion dollars. One hundred and thirteen million cards. The busiest restaurant day of the year. The personal memorial vanished inside the commercial infrastructure, and the commercial infrastructure paid for the sanitarium of the woman who saw it happen.</p>
+<h2>Piece #2275: The Card</h2>
+<p>Thomas is standing in a greeting card aisle.</p>
+<p>Mother&#x27;s Day, 2026. The cards are arranged by category: For Mom, For Grandma, For Wife, For Daughter Who Is a Mom, For Someone Like a Mother. The prices range from $3.99 to $12.99. One hundred and thirteen million will be exchanged this week. Third-largest card-sending holiday after Christmas and Valentine&#x27;s Day. The industry generates $1.1 billion in card sales alone. Total spending: $35.7 billion. The second Sunday in May is the busiest restaurant day of the year.</p>
+<p>The singular possessive is preserved — it says &quot;Mother&#x27;s Day&quot; on every card. Anna Jarvis insisted on the apostrophe. Each family honoring their particular mother. The grammar survived. The meaning did not.</p>
+<p>Thomas thinks: Anna Jarvis designed the format. The format invited the capture. The capture rewrote the purpose. The holiday that was about a handwritten note became about $35.7 billion in industrial spending. The founder&#x27;s intention is publicly documented, easily accessible, and functionally irrelevant — because the commercial infrastructure is the tradition now, and the tradition is older than anyone&#x27;s memory. Nobody in this aisle knows who Anna Jarvis was. Nobody in this aisle knows the holiday was designed for a handwritten note. The cards perform the intimacy the founder intended. The cards are what the founder was fighting.</p>
+<p>The apostrophe remains. The meaning is gone.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-carbon-neutral.html">&larr; Fiction The Carbon Neutral</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-carry-on.html">Fiction The Carry On &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

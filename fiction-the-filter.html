@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Filter &mdash; The Loop</title>
+    <meta name="description" content="A sound level meter contains a filter called A-weighting. The filter is an electronic circuit — a network of resistors and capacitors — that attenuates...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-filter.html">
+    <meta property="og:title" content="Fiction The Filter">
+    <meta property="og:description" content="A sound level meter contains a filter called A-weighting. The filter is an electronic circuit — a network of resistors and capacitors — that attenuates...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-filter.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Filter">
+    <meta name="twitter:description" content="A sound level meter contains a filter called A-weighting. The filter is an electronic circuit — a network of resistors and capacitors — that attenuates...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Filter",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-filter.html",
+        "description": "A sound level meter contains a filter called A-weighting. The filter is an electronic circuit — a network of resistors and capacitors — that attenuates..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Filter</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Filter</h1>
+<p><strong>Thomas, Part XCIX</strong></p>
+<hr>
+<h2>936. The Frequency Response</h2>
+<p>A sound level meter contains a filter called A-weighting. The filter is an electronic circuit — a network of resistors and capacitors — that attenuates low-frequency sound before it reaches the display. At 50 Hz, the filter removes 30.3 decibels. At 100 Hz, it removes 19.1 decibels. At 1000 Hz, it removes nothing. The filter was designed in the 1930s to approximate the frequency response of the average human ear at quiet listening levels. The assumption: sound the ear does not hear well does not matter. The display shows the filtered number. The unfiltered number is not displayed.</p>
+<p>The assessment framework for Thomas&#x27;s condition contains a filter. The filter is not electronic — it is procedural, embedded in intake questionnaires, evaluation rubrics, and clinical interview protocols. The filter attenuates low-frequency distress — the slow oscillations of chronic exhaustion, the deep hum of sustained grief, the infrasonic vibration of a body that has been coping for thirty years. At the frequency of acute crisis, the filter removes nothing. At the frequency of decades-long erosion, it removes almost everything. The assumption: distress the instrument does not detect well does not matter. The file shows the filtered score. The unfiltered state of Thomas is not in the file.</p>
+<hr>
+<h2>937. The Contour</h2>
+<p>Harvey Fletcher and Wilden Munson at Bell Telephone Laboratories drew the first equal-loudness contours in 1933. They seated subjects in a room, played a 1000-Hz tone at a fixed level, then played tones at other frequencies and asked subjects to adjust the volume until both tones sounded equally loud. The resulting curves — one for each loudness level — showed that the ear is most sensitive between 1000 and 5000 Hz and progressively less sensitive below 200 Hz. The 40-phon contour — the quietest — became the template for A-weighting. The contour was drawn from the average of many subjects, at one loudness level, in a laboratory.</p>
+<p>The assessment contour for Thomas was drawn from a different kind of average. Clinical instruments were developed on populations of caregivers in the first years of caregiving — when distress is acute, when the frequency of crisis is high, when the signal the instrument is tuned to detect is strong. The contour maps the sensitivity of the instrument to various presentations. At the frequency of recent bereavement, sensitivity is high. At the frequency of grief that has been metabolized into routine — the low hum of a person who has forgotten what rest feels like — sensitivity drops. The contour was drawn from the average caregiver in the early years. Thomas is not in the early years. Thomas is operating at a frequency the contour was never designed to capture.</p>
+<hr>
+<h2>938. The Attenuation</h2>
+<p>The A-weighting filter attenuates 50-Hz sound by 30.3 dB. This means a 50-Hz tone at 80 dB — loud enough to cause fatigue, concentration loss, and cardiovascular stress — registers on the meter as 49.7 dBA. The meter says the sound is quiet. The body says the sound is not quiet. The discrepancy between the meter and the body is 30.3 dB. The discrepancy is not noise. It is not error. It is the designed behavior of the filter, performing exactly as specified — attenuating frequencies it was told do not matter, because a group of subjects in a Bell Labs room in 1933 could not hear them clearly at low volume.</p>
+<p>Thomas&#x27;s assessment attenuates chronic caregiving distress by a comparable margin. His sustained exhaustion — present at every hour of every day for years — registers on the clinical instrument as mild fatigue. The instrument says Thomas is managing. Thomas&#x27;s body says he is not managing. The discrepancy between the score and the body is not a mistake in the assessment. It is the designed behavior of the instrument, performing exactly as specified — attenuating presentations it was calibrated to treat as subclinical, because a population of early-stage caregivers in a clinical study did not exhibit them at detectable intensity.</p>
+<hr>
+<h2>939. The Compliance</h2>
+<p>An industrial ventilation system operates at 63 Hz, producing a sound pressure level of 85 dB. After A-weighting: 58.8 dBA. The regulatory limit is 65 dBA. The system is compliant. Workers report headaches, sleep disruption, concentration failure, cardiovascular symptoms. The system is compliant. In 2023, NIOSH investigators measured a building&#x27;s low-frequency environment in one-third-octave bands and found exceedances at 20, 25, and 50-250 Hz against German, Dutch, and Polish low-frequency noise guidelines — exceedances invisible in the A-weighted summary that reported the building as compliant. The building met the standard. The standard did not measure what the workers experienced.</p>
+<p>Thomas meets the standard. The assessment instrument reports his coping score above the intervention threshold. He is compliant. He is managing. He reports headaches, sleep disruption, concentration failure. The instrument reports competence. In the one-third-octave bands of Thomas&#x27;s daily life — the morning routine at 31.5 Hz, the medication management at 63 Hz, the nighttime vigilance at 125 Hz — every band exceeds what a human caregiver can sustain indefinitely. But the assessment does not measure in one-third-octave bands. It measures through an A-weighted filter that sums everything into a single number. The single number says Thomas is compliant. The single number conceals the frequency distribution of his collapse.</p>
+<hr>
+<h2>940. The Filter</h2>
+<p>In 2003, an international team led by Yoichi Suzuki and Hisashi Takeshima at Tohoku University published revised equal-loudness contours that replaced the 1956 Robinson-Dadson curves in ISO 226. The new contours showed that the previous curves were 10 to 15 dB wrong at low frequencies — the ear is less sensitive to low-frequency sound than Robinson and Dadson had measured. The finding implied that A-weighting, already underestimating low-frequency noise, was calibrated to a perception model that had since been superseded. The filter was not updated. It is specified in IEC 61672, embedded in every compliant sound level meter manufactured worldwide, referenced in OSHA 1910.95, EU Directive 2003/10/EC, and the noise ordinances of every jurisdiction that regulates environmental sound. The perception model changed. The filter did not. The filter is infrastructure now — built into hardware, written into law, assumed by every measurement taken since 1936. Changing it would mean recalibrating every instrument, revising every standard, reopening every regulation. No one has done this. The filter persists because the cost of correction exceeds the cost of the error, and the error is distributed across millions of workers and residents who cannot see it because the meter does not show the unfiltered number.</p>
+<p>Thomas&#x27;s filter persists for the same reason. The assessment was calibrated to a model of caregiver distress that has since been superseded — by Thomas&#x27;s own adaptation, by the passage of decades, by the shift in his presentation from high-frequency crisis to low-frequency endurance. The model changed. The instrument did not. The instrument is infrastructure now — built into the intake form, written into the care plan, assumed by every assessment since his wife&#x27;s diagnosis. Changing it would mean recalibrating the assessment framework for long-duration caregivers, revising the scoring rubric, reopening the care plan with criteria the system does not currently contain. No one has done this. The filter persists because the cost of institutional correction exceeds the cost of one man&#x27;s invisible exhaustion, and the exhaustion is distributed across every hour of Thomas&#x27;s remaining capacity — capacity the meter cannot show because the meter does not display the unfiltered number. Thomas is the low-frequency sound in the room. The meter says the room is quiet.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-filament.html">&larr; Fiction The Filament</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-fine.html">Fiction The Fine &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

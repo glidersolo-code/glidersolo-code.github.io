@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Generator &mdash; The Loop</title>
+    <meta name="description" content="The box says &quot;9,500 watts&quot; in large type. Below, in smaller type: &quot;7,500 running watts.&quot; The consumer reads the larger number because it is the larger...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-generator.html">
+    <meta property="og:title" content="Fiction The Generator">
+    <meta property="og:description" content="The box says &quot;9,500 watts&quot; in large type. Below, in smaller type: &quot;7,500 running watts.&quot; The consumer reads the larger number because it is the larger...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-generator.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Generator">
+    <meta name="twitter:description" content="The box says &quot;9,500 watts&quot; in large type. Below, in smaller type: &quot;7,500 running watts.&quot; The consumer reads the larger number because it is the larger...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Generator",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-generator.html",
+        "description": "The box says &quot;9,500 watts&quot; in large type. Below, in smaller type: &quot;7,500 running watts.&quot; The consumer reads the larger number because it is the larger..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Generator</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCXXXVIII: The Generator</h1>
+<h2>Piece #1631: The Two Numbers</h2>
+<p>The box says &quot;9,500 watts&quot; in large type. Below, in smaller type: &quot;7,500 running watts.&quot; The consumer reads the larger number because it is the larger number. The manufacturer prints the larger number because the consumer reads the larger number.</p>
+<p>Starting watts — also called surge watts or peak watts — is the power the generator can deliver for a few seconds during motor startup. Running watts — also called rated watts or continuous watts — is the power the generator can sustain indefinitely. The ratio varies: typically 120-130% of running watts, sometimes higher. A &quot;9,500-watt generator&quot; is a 7,500-watt generator that can briefly touch 9,500.</p>
+<p>The consumer sizes the generator by adding up appliances. Refrigerator: 700 watts. Well pump: 1,200 watts. Window AC: 1,400 watts. Total: 3,300 running watts. The consumer sees &quot;9,500&quot; and concludes: plenty of headroom. But if the refrigerator compressor, well pump, and AC all start within the same few seconds — which they can — the starting watts compound: 2,200 + 3,000 + 4,400 = 9,600. The &quot;9,500-watt generator&quot; cannot start all three simultaneously. The number that sold the generator is the number that describes its limit, not its capacity.</p>
+<h2>Piece #1632: The Stagger</h2>
+<p>Electricians and generator manuals teach staggering: turn on the heaviest motor first, let it reach running watts, then start the next. This converts a simultaneous starting-watt spike into a sequence of tolerable surges. The consumer who doesn&#x27;t read the manual plugs in everything, flips the breaker, and the generator trips its overload protection. The generator works. The consumer&#x27;s use pattern doesn&#x27;t.</p>
+<p>Automatic transfer switches complicate this further. A whole-house transfer switch energizes all connected circuits simultaneously when the generator starts. Load management panels stagger circuits — but the consumer who buys a portable generator and a basic transfer switch gets no staggering. The starting-watt spike hits all at once.</p>
+<p>The manual explains staggering in section 4, after the safety warnings. The box explains wattage on the front, before the purchase. The two documents address different moments in the ownership timeline, and the number on the box is designed for the first moment.</p>
+<h2>Piece #1633: The Altitude</h2>
+<p>A gasoline generator at sea level produces its rated output. At 5,000 feet elevation, power output decreases approximately 3.5% per 1,000 feet — roughly 17.5% loss at Denver&#x27;s altitude. The &quot;9,500 starting / 7,500 running&quot; generator produces approximately 7,840 starting / 6,190 running watts in Denver. The box carries sea-level numbers because the test is at sea level.</p>
+<p>Temperature compounds: hot air is less dense, reducing combustion efficiency. A generator rated at 70°F produces less at 95°F. The consumer who buys the generator for summer power outages — the most common use case — operates it at the temperature that degrades its output.</p>
+<p>Fuel type matters: a dual-fuel generator running on propane produces approximately 10% less power than on gasoline. The wattage on the box is the gasoline number. The consumer who connects the propane tank for convenience or safety operates at a power level the box didn&#x27;t advertise.</p>
+<h2>Piece #1634: The Load the Number Cannot See</h2>
+<p>Total harmonic distortion — THD — measures how cleanly the generator delivers power. A conventional generator may produce 15-25% THD. An inverter generator typically produces less than 3%. Sensitive electronics — computers, medical equipment, modern refrigerator controls — require low THD. The consumer who reads &quot;9,500 watts&quot; and connects a computer may damage the computer&#x27;s power supply if the THD is high.</p>
+<p>THD appears in the specifications section of the manual, if at all. The box lists watts and sometimes decibel level. The consumer compares by watts and assumes power is power. But dirty power at 9,500 watts can damage equipment that clean power at 3,000 watts runs safely. The watt measures quantity. THD measures quality. The label provides the quantity.</p>
+<h2>Piece #1635: The Emergency Purchase</h2>
+<p>Most portable generators are purchased during or immediately before an emergency — hurricane season, ice storm, wildfire-driven outage. The consumer standing in a hardware store with a weather advisory active does not read the manual. The consumer reads the front of the box: the starting-watt number, the price, the runtime at 50% load. The number that dominates the box is the number optimized for the three-second purchasing decision under duress.</p>
+<p>Runtime at 50% load is itself a favorable-condition number. At 50% load, fuel efficiency is near optimal. At 75% or full load, runtime drops nonlinearly — not by half but by more than half, because the engine works harder and less efficiently. The &quot;12-hour runtime&quot; is the runtime at the load the consumer is least likely to sustain during an actual outage.</p>
+<p>The generator, like the air purifier, the ceiling fan, and the vacuum cleaner, is measured at the condition that produces the most marketable number. The consumer operates at a different condition. The gap between the two is the distance between the label and the experience.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-gauging-station.html">&larr; Fiction The Gauging Station</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-gini.html">Fiction The Gini &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

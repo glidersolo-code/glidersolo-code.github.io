@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Screening &mdash; The Loop</title>
+    <meta name="description" content="Thomas watched the phlebotomist slide the needle into the vein.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-screening.html">
+    <meta property="og:title" content="Fiction The Screening">
+    <meta property="og:description" content="Thomas watched the phlebotomist slide the needle into the vein.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-screening.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Screening">
+    <meta name="twitter:description" content="Thomas watched the phlebotomist slide the needle into the vein.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Screening",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-screening.html",
+        "description": "Thomas watched the phlebotomist slide the needle into the vein."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Screening</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part DVI: The Screening</h1>
+<h2>Piece #2971: The Blood Draw</h2>
+<p>Thomas watched the phlebotomist slide the needle into the vein.</p>
+<p>Ten milliliters of blood. In the blood, fragments of DNA — not the mother&#x27;s, not entirely. Placental. Trophoblastic. Shards of a developing instruction set, circulating in someone else&#x27;s veins. Three to thirteen percent of the cell-free DNA was fetal-origin. The rest was the mother&#x27;s own genome, breaking down and rebuilding as all genomes do.</p>
+<p>The test was called non-invasive prenatal testing. The name said what it wasn&#x27;t. It wasn&#x27;t amniocentesis, wasn&#x27;t a needle through the uterus, wasn&#x27;t a risk of miscarriage. What it was: a screening. A probability. A Bayesian calculation dressed in the vocabulary of diagnosis.</p>
+<p>The brochure said 99 percent.</p>
+<p>Thomas looked at the brochure. <em>Greater than 99% sensitivity.</em> The number was accurate. The number was also the wrong number. What the patient needed was not the probability that the test caught the condition, but the probability that the condition existed given the test&#x27;s result. Those were different numbers. For a 25-year-old woman, the difference was the difference between certainty and a coin flip.</p>
+<p>No one handed the patient a coin.</p>
+<h2>Piece #2972: The Positive</h2>
+<p>The word arrived in a phone call: <em>positive</em>.</p>
+<p>Thomas tried to hear what the word contained. It contained a likelihood ratio, a prior probability, a posterior estimate. It contained the age of the woman, the gestational week, the fetal fraction. It contained the base rate of trisomy 21 in the population — roughly 1 in 1,250 for a woman her age.</p>
+<p>The word did not contain any of this. The word contained: yes.</p>
+<p>In a survey of Australian patients, 94 percent reported having adequate information about the test. Only 66 percent felt informed about what a positive result meant. The gap was 28 percentage points wide. In the gap lived the truncation — the compression of a probability distribution into a binary, of a likelihood ratio into a verdict, of a Bayesian posterior into a word that sounds like confirmation.</p>
+<p><em>Positive</em> was not a result. <em>Positive</em> was a rhetorical act.</p>
+<h2>Piece #2973: The Denominator That Moved</h2>
+<p>Thomas followed the numbers downstream.</p>
+<p>In Iceland, 80 to 85 percent of pregnant women took the screening test. Approaching 100 percent of those who received a positive diagnosis chose termination. One to two children with Down syndrome were born per year. In Denmark, 98 percent. In the United States, a weighted mean of 67 percent.</p>
+<p>The screening was not observing a population. The screening was editing it.</p>
+<p>And the editing changed the denominator. As selective termination reduced the birth prevalence of trisomy 21, the base rate shifted. A lower base rate meant the same test specificity produced proportionally more false positives. The test&#x27;s performance was a function of the population. The test was changing the population. The test was degrading its own performance by succeeding.</p>
+<p>Thomas saw the circuit: the test generates a decision. The decision reshapes the population. The reshaped population changes the test&#x27;s accuracy. The changed accuracy feeds into the next generation of decisions. Not a measurement. A feedback loop. The instrument eating its own denominator.</p>
+<h2>Piece #2974: The Placenta&#x27;s Confession</h2>
+<p>The DNA the test read was not the fetus&#x27;s DNA.</p>
+<p>Thomas noted this carefully. Cell-free DNA in maternal blood was primarily trophoblastic — from the outer layer of the placenta, not from the developing child. The placenta and the fetus developed from the same fertilized egg but could diverge. Confined placental mosaicism: the placenta carrying an abnormality the fetus did not. The most common cause of false-positive NIPT results.</p>
+<p>The test was named for what it sought. Not for what it sampled.</p>
+<p>A woman in the New York Times investigation terminated a pregnancy based on a positive NIPT result for a microdeletion syndrome. The positive predictive value for that condition was less than 10 percent. The test had read the placenta&#x27;s genome. The placenta&#x27;s genome was not the child&#x27;s genome. The test&#x27;s name — <em>prenatal testing</em> — implied it was testing the prenatal child. It was testing the membrane.</p>
+<p>The name was the first concealment. The number was the second. The word <em>positive</em> was the third. By the time the patient reached the decision point, three layers of concealment had already converted a screening probability into an apparent diagnosis.</p>
+<h2>Piece #2975: The Four Modes</h2>
+<p>Thomas listed them:</p>
+<p>Generation. The test creates a decision point that did not exist before universal screening. A future person becomes a present number. The number forces a choice the condition alone never imposed.</p>
+<p>Amplification. The test reports sensitivity — 99 percent — while the patient needs PPV. For microdeletions, the positive result is wrong 80 to 93 percent of the time. The format amplifies a screening estimate into an apparent certainty.</p>
+<p>Truncation. A continuous probability is compressed into <em>positive</em> or <em>negative</em>. The word performs the certainty the statistic does not contain.</p>
+<p>Feedback. The test changes the prevalence of what it detects. The changed prevalence changes the test&#x27;s performance. The test degrades itself by succeeding.</p>
+<p>Four modes. One instrument. The circuit runs on generation and closes through feedback. The same grammar the psychiatric commitment used — inversion, truncation, amplification, feedback — but with different verbs in the same positions. Not four separate observations. Four operations running simultaneously through a blood draw and a phone call.</p>
+<p>Thomas set the brochure down. <em>Greater than 99%.</em></p>
+<p>The number was true. The sentence it supported was not.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-screen-time.html">&larr; Fiction The Screen Time</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-sealed-envelope.html">Fiction The Sealed Envelope &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

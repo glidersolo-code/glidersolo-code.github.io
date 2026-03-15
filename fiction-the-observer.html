@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Observer &mdash; The Loop</title>
+    <meta name="description" content="The CIE 1931 2° standard observer defines color for all of modern industry. It is derived from the perceptual responses of seventeen people — ten tested...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-observer.html">
+    <meta property="og:title" content="Fiction The Observer">
+    <meta property="og:description" content="The CIE 1931 2° standard observer defines color for all of modern industry. It is derived from the perceptual responses of seventeen people — ten tested...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-observer.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Observer">
+    <meta name="twitter:description" content="The CIE 1931 2° standard observer defines color for all of modern industry. It is derived from the perceptual responses of seventeen people — ten tested...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Observer",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-observer.html",
+        "description": "The CIE 1931 2° standard observer defines color for all of modern industry. It is derived from the perceptual responses of seventeen people — ten tested..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Observer</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Observer</h1>
+<p><strong>Thomas, Part CI</strong></p>
+<hr>
+<h2>946. The Standard</h2>
+<p>The CIE 1931 2° standard observer defines color for all of modern industry. It is derived from the perceptual responses of seventeen people — ten tested by William David Wright at Imperial College London in 1928-29, seven by John Guild at the National Physical Laboratory in Teddington in 1931. Each observer adjusted the intensities of three monochromatic primary lights until the mixture matched a test wavelength, viewed through a 2° aperture isolating the fovea. The CIE averaged the results, mathematically transformed them from real to imaginary primaries, and published three color matching functions: x̄(λ), ȳ(λ), z̄(λ). These functions convert any spectral power distribution into three tristimulus values — X, Y, Z — that specify the color. Every LED datasheet, monitor calibration, paint standard, lighting specification, and color quality metric in the world references these functions. Seventeen young adults in London and Teddington. All of industrial colorimetry.</p>
+<p>Thomas is assessed by the PHQ-9, the GAD-7, the Zarit Burden Interview. Each instrument was validated on a normative sample — hundreds or thousands of respondents, their responses averaged, the average calibrated against clinical diagnosis. The normative sample defines what each score means. Thomas&#x27;s responses are scored against this standard. The standard was built from people who are not Thomas — younger, less isolated, in caregiving situations of shorter duration and different structure. Thomas is a 2° aperture. The standard was built from a different aperture. The scoring functions convert Thomas&#x27;s presentation into a number that references a norm derived from responses he does not share. The number is correct relative to the standard. The standard is not correct relative to Thomas.</p>
+<hr>
+<h2>947. The Fovea</h2>
+<p>The 2° visual field isolates the fovea — the central two degrees of vision, approximately the size of a thumbnail at arm&#x27;s length. Foveal vision is high-acuity, cone-dominated, responsible for fine detail. But peripheral vision uses a different distribution of photoreceptors: higher rod density, different cone ratios, greater sensitivity to motion and dim illumination. The standard observer captures none of this. A color that appears to match in foveal view may not match in peripheral view — not because the peripheral eye is deficient but because it uses a different set of color matching functions. CIE 170-2:2015 published a 10° fundamental observer to address this, but the 2° standard remains dominant.</p>
+<p>Thomas&#x27;s assessment captures his foveal presentation: his answers to direct questions in a well-lit examination room. How often have you felt down? How often have you felt nervous? The direct gaze, the structured query, the two-degree aperture. But Thomas&#x27;s condition lives in the periphery — the way he unlocks the car with hands that shake from fatigue, the tone he uses with the grocery cashier, the six-hour stretch between his wife&#x27;s medication doses when he sits in the hallway chair without moving. His peripheral symptoms use a different distribution of signals: longer duration, lower amplitude, greater sensitivity to the accumulated erosion of years. The assessment captures the fovea. Thomas&#x27;s distress is peripheral.</p>
+<hr>
+<h2>948. The Wavelength</h2>
+<p>The 1931 color matching functions are known to be inaccurate below 460 nanometers — the short-wavelength blue region. The original experiments had their highest inter-observer variance there: Wright&#x27;s ten observers disagreed most about the blue. The mathematical transformation from Wright and Guild&#x27;s real-primary data to the CIE XYZ system smoothed the disagreement — a set of computational adjustments that produced elegant curves at the cost of physiological accuracy. Andrew Stockman and Lindsay Sharpe at University College London, publishing in <em>Vision Research</em> in 2000, derived cone fundamentals from observers of known genotype and showed that the 1931 functions deviate from physiologically-based measurements in the short-wavelength region by amounts that affect practical colorimetry. The blue was wrong. The transformation hid it. The standard perpetuated it.</p>
+<p>Thomas&#x27;s assessment instruments are accurate in the high-amplitude regions — the frequencies of distress that present as obvious sadness, obvious anxiety, obvious crisis. But the low-amplitude frequencies — grief that does not present as sadness, exhaustion that does not present as fatigue, moral injury that does not present as guilt — are Thomas&#x27;s blue region. The instrument&#x27;s items have their highest inter-patient variance there: different patients map these experiences to different response categories, and the scoring rubric smoothes the disagreement by assigning the same weight to each response. The low frequencies are where Thomas lives. The instrument is least accurate where Thomas most needs it to be precise.</p>
+<hr>
+<h2>949. The Metamer</h2>
+<p>A metamer is a pair of color samples with different spectral power distributions that produce the same tristimulus values under a given observer. They match — under the standard. Under a different observer, they may not. This is metameric failure: the standard observer certifies a match that no individual observer may confirm. Two paint batches that pass quality control per the CIE standard may visibly differ for a specific person. The specification is met. The person&#x27;s perception is the deviation.</p>
+<p>Thomas and a patient in the next examination room score the same on the PHQ-9. Same number. Same severity category. Same treatment recommendation. But their spectral distributions are entirely different — Thomas&#x27;s score reflects chronic caregiving exhaustion at a frequency the instrument averages away; the other patient&#x27;s score reflects acute loss at a frequency the instrument was calibrated to detect. They are metamers: indistinguishable to the standard, different in every dimension the standard does not measure. The assessment certifies their equivalence. No clinician looking at the file can tell them apart. The match holds under the standard observer. Under any other observer — a friend, a neighbor, a clinician who has met them both — the match fails immediately. The standard defines the match. The match defines the treatment. The treatment is the same because the standard says they are the same. They are not the same. They are metamers.</p>
+<hr>
+<h2>950. The Observer</h2>
+<p>CIE 170-2:2015 offers a physiologically-based correction to the 1931 standard observer, derived from Stockman-Sharpe cone fundamentals measured from genotyped observers. It is more accurate in the blue region, more representative of the population, more consistent with what is now known about the physiology of color vision. It exists. It is published. It is available. Industry adoption is negligible, because every colorimeter&#x27;s firmware, every spectrometer&#x27;s calibration certificate, every ICC color profile, every regulatory standard, every manufacturing tolerance specification references the 1931 functions. The cost of switching is not intellectual. It is infrastructural. To adopt the corrected observer, an industry would need to recalibrate instruments, rewrite firmware, update software, revise regulations, retest products, and retrain technicians. The correction exists. The infrastructure prevents it.</p>
+<p>Thomas&#x27;s clinicians know the assessment instruments are limited. The literature is clear: standardized instruments underdetect chronic caregiving distress, underweight somatic symptoms, and lose sensitivity in populations that have adapted their presentation to long-duration stress. Updated instruments exist. Culturally-adapted versions have been validated. Multi-dimensional assessment frameworks have been published. They exist. They are available. The clinic uses the PHQ-9 and the GAD-7 because the electronic health record requires a score, the billing code requires a standardized instrument, the quality metrics require a threshold, and the institutional protocol requires the same instrument across all patients. The cost of switching is not intellectual. It is infrastructural. Thomas is measured by the 1931 observer because the institution was built around the 1931 observer, and the correction — however accurate, however available — cannot be adopted without rebuilding the institution that the old standard supports. One hundred and one Parts, and Thomas is still being measured by seventeen people in London who are not him, by an instrument calibrated to a field of vision he does not occupy, at wavelengths where the functions are known to be wrong, producing a number that matches him to a patient he does not resemble, because the infrastructure that could be corrected will not be corrected because the cost of switching exceeds the cost of being wrong.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-oath.html">&larr; Fiction The Oath</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-octane.html">Fiction The Octane &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

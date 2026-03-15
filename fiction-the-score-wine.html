@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Score Wine &mdash; The Loop</title>
+    <meta name="description" content="Baltimore, 1978. Robert Parker, a lawyer, started The Wine Advocate — a newsletter rating wines on a 100-point scale. The scale was borrowed from the...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-score-wine.html">
+    <meta property="og:title" content="Fiction The Score Wine">
+    <meta property="og:description" content="Baltimore, 1978. Robert Parker, a lawyer, started The Wine Advocate — a newsletter rating wines on a 100-point scale. The scale was borrowed from the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-score-wine.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Score Wine">
+    <meta name="twitter:description" content="Baltimore, 1978. Robert Parker, a lawyer, started The Wine Advocate — a newsletter rating wines on a 100-point scale. The scale was borrowed from the...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Score Wine",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-score-wine.html",
+        "description": "Baltimore, 1978. Robert Parker, a lawyer, started The Wine Advocate — a newsletter rating wines on a 100-point scale. The scale was borrowed from the..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Score Wine</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXX: The Score</h1>
+<h2>Piece #1291: The Scale</h2>
+<p>Baltimore, 1978. Robert Parker, a lawyer, started <em>The Wine Advocate</em> — a newsletter rating wines on a 100-point scale. The scale was borrowed from the American school grading system: 50 as the floor, 100 as the ceiling. Nothing below 50 was published. In practice, the effective range was narrower still — nearly all scored wines fell between 80 and 100. A twenty-point effective range within a hundred-point frame. Thomas noted: the 100-point scale appeared to offer one hundred levels of discrimination. It used twenty. The eighty unused points below the effective range created the illusion of breadth — as though the scale had measured from nothing to perfection, when it had measured from good to excellent.</p>
+<h2>Piece #1292: The Palate</h2>
+<p>A wine enters the mouth. It has a nose — volatile aromatics before sipping. An attack — the first moment of contact. A mid-palate — the development as it spreads across the tongue. A finish — the flavors that persist after swallowing. A texture — tannin, acidity, viscosity. An evolution — what happens in the glass over thirty minutes, in the bottle over thirty years. Thomas tried to count the dimensions. Aroma (hundreds of volatile compounds). Taste (sweet, sour, bitter, salty, umami). Texture. Temperature. Time. Development. Memory. A single wine experienced by a single taster involves dozens of perceptual dimensions unfolding across multiple timescales. The score compresses all of these into a single integer. A 92. The 92 carries no information about which dimensions contributed. A 92 that is tannic and austere and a 92 that is ripe and lush and a 92 that is delicate and mineral — all 92. The integer consumes the dimensions.</p>
+<h2>Piece #1293: The Market</h2>
+<p>Parker scored a 1982 Bordeaux vintage highly before the wines had been bottled — an assessment made from barrel samples. The scores circulated. Prices rose. The vintage became legendary, partly because of Parker&#x27;s scores and partly because the wines were in fact excellent, and the two became impossible to separate. Thomas found the reflexivity difficult to escape. Parker preferred big, concentrated, ripe wines — what critics later called the &quot;Parker style.&quot; Winemakers, observing which style produced high scores, adjusted their techniques: lower yields, longer hangtime, more new oak, more extraction. The scores changed the wines. The wines then confirmed the scores. A measurement that was supposed to describe quality had begun to prescribe it. The market organized around the numbers. A single point — the difference between 89 and 90 — could change a wine&#x27;s wholesale price by four to eight dollars per bottle. A 95 could sell out a small producer&#x27;s entire vintage. An 85 could make it unsellable.</p>
+<h2>Piece #1294: The Disagreement</h2>
+<p>Robert Hodgson, a retired oceanographer who made wine in Sonoma County, studied the California State Fair wine competition from 2005 to 2008. He found that when the same wine was submitted twice to the same competition under different identifiers, the results were inconsistent — a wine that won a gold medal at one judging received no medal at another. Only about 10 percent of gold-medal wines earned gold when resubmitted. Goldstein, Almenberg, and colleagues at the American Association of Wine Economists found in 2008 that non-expert tasters showed no reliable preference for expensive wines in blind tastings. Expert tasters showed a positive correlation between price and quality rating, but with enormous variance. Thomas wrote: the score implies reproducibility. The competitions demonstrate irreproducibility. The 100-point scale — with its integers, its decimal-point implication of precision — communicates a level of discriminatory capacity that the sensory system doing the discriminating does not possess.</p>
+<h2>Piece #1295: The Shelf</h2>
+<p>A wine shop. Shelf tags. Numbers beside each bottle. 91. 88. 94. Thomas looked at the numbers. Each was the output of a single palate — one critic, one tasting, one moment — compressed to an integer, printed on a tag, placed beside bottles that would be opened by different people in different contexts with different foods at different temperatures. The 94 was tasted in a professional setting, at a controlled temperature, in a sequence of similar wines, by a palate calibrated by decades of practice. The consumer would open it at home, at whatever temperature the bottle reached, with whatever food was served, through a palate shaped by whatever they had eaten that day. The number traveled from the critic&#x27;s mouth to the shelf tag to the consumer&#x27;s purchase decision without ever adjusting for the distance between the two contexts. The number said 94. It meant: this is what one person experienced in one setting at one moment, compressed to an integer, printed on a card, deployed as a universal fact about the liquid inside the glass.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-score-fico.html">&larr; Fiction The Score Fico</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-scratch.html">Fiction The Scratch &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Heritability &mdash; The Loop</title>
+    <meta name="description" content="Thomas writes the number on the board. 0.8. Eighty percent. Height is 80% heritable.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-heritability.html">
+    <meta property="og:title" content="Fiction The Heritability">
+    <meta property="og:description" content="Thomas writes the number on the board. 0.8. Eighty percent. Height is 80% heritable.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-heritability.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Heritability">
+    <meta name="twitter:description" content="Thomas writes the number on the board. 0.8. Eighty percent. Height is 80% heritable.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Heritability",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-heritability.html",
+        "description": "Thomas writes the number on the board. 0.8. Eighty percent. Height is 80% heritable."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Heritability</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXXXIV: The Heritability</h1>
+<h2>Piece #1861: The Fraction</h2>
+<p>Thomas writes the number on the board. 0.8. Eighty percent. Height is 80% heritable.</p>
+<p>The students hear: 80% of your height comes from genes. 20% comes from environment. Thomas can see them decomposing themselves — four-fifths genetic, one-fifth everything else. The number has already become a fraction of a person.</p>
+<p>But 0.8 is not a fraction of a person. It is a fraction of a variance. In this population, under these environmental conditions, 80% of the measured variation between individuals is associated with genetic variation between individuals. It describes the structure of differences in a sample. It does not describe the architecture of any individual trait.</p>
+<p>Thomas writes the formula: h² = V_A / V_P. The numerator is additive genetic variance. The denominator is total phenotypic variance. The denominator includes environmental variance. If the environment changes, the denominator changes. If the denominator changes, the fraction changes. The number is not a property of height. It is a property of the ratio, and the ratio moves.</p>
+<h2>Piece #1862: The Corn</h2>
+<p>Thomas draws two flower pots on the board.</p>
+<p>Same bag of genetically diverse seeds, split into two groups. Group one: rich soil, uniform conditions. Group two: poor soil, uniform conditions. Within each group, the environment is identical for every plant. All remaining variation is genetic. Heritability: approximately 1.0 in both pots.</p>
+<p>Between the pots, the plants in rich soil are taller. The average height difference is entirely environmental. Nutrients, not genes. But within each pot, heritability is near 1.0.</p>
+<p>Thomas writes: High within-group heritability. Entirely environmental between-group difference. Compatible. No contradiction.</p>
+<p>He lets the silence hold. The within-group statistic cannot answer the between-group question. The tool is the wrong shape for the lock. Lewontin drew this in 1974. The drawing is still correct. The misapplication is still common.</p>
+<h2>Piece #1863: The Reversal</h2>
+<p>Thomas puts Turkheimer&#x27;s data on the board. IQ heritability in American 7-year-old twins. Same trait. Same country. Same decade.</p>
+<p>In impoverished families: genetic contribution near zero. Shared environment accounts for ~60% of IQ variance.</p>
+<p>In affluent families: genetic variance dominates. Shared environment near zero.</p>
+<p>Thomas draws the two bar charts side by side. The bars are nearly mirror images. The same trait, the same test, the same genetic species — but the partition reverses depending on the environment. In poverty, environmental variation between families (nutrition, housing, exposure, school quality) swamps genetic differences. In affluence, those factors are relatively equalized, and genetic differences emerge as the larger source of remaining variation.</p>
+<p>The heritability of IQ is not a number. It is a function of the environment in which IQ is measured. Report the affluent sample&#x27;s heritability and the number says genes matter most. Report the impoverished sample&#x27;s heritability and the number says environment matters most. Both are correct. Neither is the heritability of IQ. Each is the heritability of IQ in a specific population under specific conditions.</p>
+<h2>Piece #1864: The Breeder</h2>
+<p>Thomas returns to where the number was born.</p>
+<p>Jay Lush. Iowa State. The 1930s. The question: which bull should sire the next generation? The breeder&#x27;s equation: R = h²S. Response to selection equals heritability times selection differential. The concept was designed for a specific purpose — predicting how much of a parent&#x27;s superiority would appear in the offspring. It was a tool for controlled breeding programs where the environment was held constant by design.</p>
+<p>The number crossed from animal breeding to human behavioral genetics. The controlled environment crossed with it as an assumption. In a breeding program, the breeder controls the environment. In a human population, nobody controls the environment. The partition V_A / V_P carries the assumption of stable V_P, and V_P is not stable when environments vary across families, neighborhoods, and nations.</p>
+<p>Thomas writes: The tool was designed for a farm. The farm controls the denominator. The world does not.</p>
+<h2>Piece #1865: The Headline</h2>
+<p>Thomas erases the board. He writes only this:</p>
+<p><em>Height is 80% heritable.</em></p>
+<p>The sentence is six words. It contains a subject (height), a copula (is), a modifier (80%), and a technical term (heritable). The reader parses it as: height is mostly genetic. The geneticist parses it as: in this sample, under these conditions, 80% of the variance in height is associated with additive genetic variance. The reader&#x27;s parsing decomposes an individual. The geneticist&#x27;s parsing describes a population. The six words cannot tell the reader which parsing to apply. The percentage — 80% — performs a fixed, essential property. A thing that is 80% something is mostly that something. The format is declarative. The content is conditional.</p>
+<p>Thomas writes the conditions the headline omitted: the population, the environment, the era, the measurement instrument, the assumption of additive effects, the stability of the denominator. The conditions are longer than the headline. The headline survived because it fit the sentence. The conditions did not.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-hemispheres.html">&larr; Fiction The Hemispheres</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-hold.html">Fiction The Hold &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

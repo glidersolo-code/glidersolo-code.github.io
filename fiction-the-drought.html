@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Drought &mdash; The Loop</title>
+    <meta name="description" content="On the island of Flores, a meter-tall species of human lived in a limestone cave for hundreds of thousands of years. They hunted pygmy elephants. They...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-drought.html">
+    <meta property="og:title" content="Fiction The Drought">
+    <meta property="og:description" content="On the island of Flores, a meter-tall species of human lived in a limestone cave for hundreds of thousands of years. They hunted pygmy elephants. They...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-drought.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Drought">
+    <meta name="twitter:description" content="On the island of Flores, a meter-tall species of human lived in a limestone cave for hundreds of thousands of years. They hunted pygmy elephants. They...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Drought",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-drought.html",
+        "description": "On the island of Flores, a meter-tall species of human lived in a limestone cave for hundreds of thousands of years. They hunted pygmy elephants. They..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Drought</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Drought</h1>
+<p><strong>Thomas, Part LXVII</strong></p>
+<hr>
+<h2>776. The Coincidence</h2>
+<p>On the island of Flores, a meter-tall species of human lived in a limestone cave for hundreds of thousands of years. They hunted pygmy elephants. They made stone tools. They cooked with fire. Around fifty thousand years ago, they disappeared. Around the same time, <em>Homo sapiens</em> arrived in the Indonesian archipelago. The coincidence was sufficient. The story wrote itself: the modern humans came, the small humans vanished, the cause was the arrival.</p>
+<p>Thomas knows this kind of story. He tells one about himself. Around the time Helen stopped inviting him to Friday dinners — three years ago, or was it four — something else arrived in his life. A restlessness, a thinning of patience, a habit of checking his watch during tea. He attributed the change in the Saturdays to the restlessness. The restlessness arrived. The warmth departed. The coincidence was sufficient.</p>
+<p>But coincidence is not causation. It is a filing system. Two events that overlap in time get stored in the same drawer, and the drawer is labeled with the more dramatic event.</p>
+<hr>
+<h2>777. The Stalagmite</h2>
+<p>Stalagmites grow upward from cave floors, one mineral layer at a time, each layer recording the isotopic signature of the water that formed it. Read the layers and you read the rainfall. Read the rainfall and you read the climate. The stalagmites in the Flores cave told a story that began seventy-six thousand years ago — twenty-six thousand years before the hobbits disappeared. A drying trend. Summer rainfall declining year by year, century by century, so slowly that no single generation of small humans would have noticed. The rivers thinned. The forests opened. The landscape shifted under them like a floor settling.</p>
+<p>Thomas&#x27;s Saturday mornings have their own stalagmites — records he does not read because they accumulate too slowly to notice. The tea ritual has been shortening for years. Not dramatically. Not in a way that any single Saturday would signal crisis. But the kettle sits on the counter for a few seconds longer before Helen fills it. The silence after the first cup stretches a few breaths further. The walk to the canal, which once took twenty minutes of unhurried conversation, now takes twelve. Each Saturday is a thin layer of mineral deposit. Read the layers and you read the climate of the relationship. The drying trend began long before the restlessness arrived.</p>
+<hr>
+<h2>778. The Prey</h2>
+<p>The pygmy elephants — <em>Stegodon florensis insularis</em> — were the hobbits&#x27; primary food source. Their teeth record what they drank. The oxygen isotopes in the enamel show the animals becoming increasingly dependent on river water as the drought deepened. When the rivers went seasonal, the elephants had no alternative. Their population crashed around sixty-one thousand years ago. The hobbits lost their prey base. The competitor had not yet arrived. The crisis was already underway.</p>
+<p>Thomas&#x27;s primary sustenance from the Saturdays is not the tea or the walk or even the conversation. It is Helen&#x27;s attention — the quality of presence she brings to the chair opposite his, the way her gaze rests on him when he speaks, the slight lean forward that means she is listening not just to his words but to the thing behind the words. This is the <em>Stegodon</em> in his ecosystem. And the isotope record of her attention has been shifting. She listens, but the lean is smaller. She looks, but the gaze settles elsewhere more quickly. The river she drew from — whatever internal source fed her capacity for that particular quality of presence — has been going seasonal. Thomas did not cause this. His restlessness did not cause this. The drying trend was already there.</p>
+<hr>
+<h2>779. The Attribution</h2>
+<p>For two decades after the hobbits were discovered, the working hypothesis was: <em>Homo sapiens</em> replaced them. The narrative was consistent with precedent — modern humans had replaced Neanderthals in Europe, Denisovans in Asia. The pattern was too compelling to resist. The dramatic event (arrival) was filed as the cause. The slow event (drought) was invisible. It required drilling into stalagmites and analyzing isotopes in fossilized teeth — data that did not exist when the first interpretation was formed in the early 2000s. The explanation that did not require specialized instruments won.</p>
+<p>Thomas attributed the thinning of the Saturdays to his own restlessness because his restlessness was visible to him. It arrived. He noticed it. He could name it. The slow change in Helen&#x27;s internal climate — whatever drought was thinning the rivers of her attention — was not visible to him because he has no instrument for it. He does not have access to her stalagmites. He cannot read the isotope record of her years. He sees the output — the slightly shorter walk, the slightly later kettle — but he cannot distinguish between &quot;she is responding to my restlessness&quot; and &quot;her own climate has been shifting for years, and my restlessness is coincidental.&quot;</p>
+<p>The salient event gets the attribution. The invisible event gets filed as background.</p>
+<hr>
+<h2>780. The Record</h2>
+<p>The hobbits were already in crisis — possibly already gone — before modern humans set foot on Flores. The stalagmites are clear. The isotopes are clear. Fifteen thousand years of drying preceded the disappearance. The competitor was not the cause. The competitor was the explanation that required no special instruments.</p>
+<p>Thomas sits in his chair on the seven hundred and seventy-sixth Saturday. The tea is steeping. Helen is in the kitchen. Whatever is happening between them has been happening for longer than he attributed it to. The restlessness he named three years ago may have arrived in a landscape already altered by decades of slow change — in her, in him, in the particular climate that sustains this particular species of Saturday morning. The coincidence of its arrival with the thinning of the ritual is not evidence. It is a filing convenience.</p>
+<p>The stalagmite does not judge. It records. Layer by layer, the rainfall. Layer by layer, the drying. The record is there for anyone who drills deep enough and reads the isotopes. Thomas&#x27;s record of seven hundred and seventy-six Saturdays is his stalagmite. The layers are there. He has not read them. He has been too busy attributing the change to the most dramatic event in the drawer.</p>
+<p>The drought was there before the competitor arrived. The question is whether Thomas can read his own mineral record without the filing system telling him what he already believes.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-drive-home-xxxi.html">&larr; Fiction The Drive Home Xxxi</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-drum.html">Fiction The Drum &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

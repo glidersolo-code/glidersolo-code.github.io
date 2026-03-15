@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Energy Label &mdash; The Loop</title>
+    <meta name="description" content="A refrigerator stands in a room. The room is not a kitchen. It is a testing chamber at a Department of Energy-approved laboratory, maintained at 90°F...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-energy-label.html">
+    <meta property="og:title" content="Fiction The Energy Label">
+    <meta property="og:description" content="A refrigerator stands in a room. The room is not a kitchen. It is a testing chamber at a Department of Energy-approved laboratory, maintained at 90°F...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-energy-label.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Energy Label">
+    <meta name="twitter:description" content="A refrigerator stands in a room. The room is not a kitchen. It is a testing chamber at a Department of Energy-approved laboratory, maintained at 90°F...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Energy Label",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-energy-label.html",
+        "description": "A refrigerator stands in a room. The room is not a kitchen. It is a testing chamber at a Department of Energy-approved laboratory, maintained at 90°F..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Energy Label</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCVI: The Label</h1>
+<h2>Piece #1471: The Room</h2>
+<p>A refrigerator stands in a room. The room is not a kitchen. It is a testing chamber at a Department of Energy-approved laboratory, maintained at 90°F ambient temperature. The doors of the refrigerator are opened a prescribed number of times according to a protocol written in 10 CFR Part 430. No one reaches in for milk. No one leaves the door open while deciding what to eat. The refrigerator runs for a specified period. The electricity consumed is measured in kilowatt-hours. The measurement is converted to an annual estimate. The estimate appears on a yellow label.</p>
+<p>Thomas&#x27;s patients were tested in rooms. The PHQ-9 was administered in a clinic — a controlled environment with a specific protocol, a specific time frame, a specific set of prompts. The measurement was real. The room was not the patient&#x27;s life. The clinic at 2 PM on a Thursday captured what the instrument could capture. It did not capture the kitchen at midnight or the parking lot at rush hour or the bedroom at 3 AM. The number was precise. The room was narrow.</p>
+<p>The refrigerator in the testing chamber performs its rated efficiency. The refrigerator in the consumer&#x27;s kitchen does not. The kitchen is warmer or cooler, the door opens more or less often, the coils are dusty or clean, the gasket is tight or loose. Every variable the test procedure removed, the kitchen puts back.</p>
+<h2>Piece #1472: The Average</h2>
+<p>The label says &quot;$67 per year.&quot; The electricity price used to calculate this figure is a national average — approximately $0.16 per kilowatt-hour, published annually by the Department of Energy&#x27;s Energy Information Administration. In Louisiana, the rate is $0.10. In Hawaii, it is $0.40. The same refrigerator consuming the same kilowatt-hours costs $42 per year in Louisiana and $167 per year in Hawaii. The label says $67 — a number that describes neither place.</p>
+<p>Thomas knew about averaging. The PHQ-9&#x27;s severity thresholds — 5 for mild, 10 for moderate, 15 for moderately severe, 20 for severe — were developed on a population. The cutpoint of 10 was the place where treatment was recommended for the average patient. But no patient was average. The average was a statistical construction — a center of gravity for a distribution. The patient sitting in front of the clinician was a single point, not a distribution. The threshold was built for the population. It was applied to the individual. The gap between the two was the practice of medicine.</p>
+<p>The national average electricity price is a single number derived from every utility in the country — from cheap hydropower in the Pacific Northwest to expensive island generation in Hawaii. It describes no one&#x27;s bill. It sits in the center of a distribution and presents itself as a prediction.</p>
+<h2>Piece #1473: The Star</h2>
+<p>Energy Star is a binary. The appliance either qualifies or it does not. The label either bears the blue star or it does not. Behind the binary is a threshold — a specific energy consumption level below which the star is awarded and above which it is withheld. The threshold is set by the EPA in consultation with the DOE. The threshold is revised over time as the market shifts. The binary creates a clean signal: this one is efficient; that one is not.</p>
+<p>Thomas encountered binaries. Depressed or not depressed. The PHQ-9 at 10 or above was the threshold for clinical depression in some guidelines. At 9, not depressed. At 10, depressed. The distance between 9 and 10 was one point — one answer to one question adjusted by one level. The binary enacted by the threshold was larger than the distance that created it.</p>
+<p>Two refrigerators sit side by side on the showroom floor. One has the Energy Star label. One does not. The starred refrigerator uses 450 kWh per year. The unstarred uses 460 kWh per year. The difference is 10 kWh — roughly $1.60 at the national average rate. The consumer sees the star and reads a categorical difference. The data show a continuous gradient. The star flattened the gradient into a verdict.</p>
+<h2>Piece #1474: The Bar</h2>
+<p>The EnergyGuide label includes a horizontal bar. The left end reads &quot;Uses Least Energy.&quot; The right end reads &quot;Uses Most Energy.&quot; An arrow shows where this model falls. The scale is defined by the range of similar models currently on the market — the most efficient at one end, the least efficient at the other. When the market shifts, the bar shifts. A model that sat at the efficient end three years ago may sit in the middle now, not because it changed but because more efficient models entered the market and redefined the scale.</p>
+<p>Thomas watched scales shift. The PHQ-9&#x27;s severity categories did not change, but the population did. As screening expanded — as more people were assessed who would not previously have been assessed — the distribution of scores shifted. What was once the middle of the clinical population became closer to one end. The instrument did not move. The population moved around it. The meaning of a score of 12 changed without the number changing, because the context of the number changed.</p>
+<p>The bar on the label performs comparison. It compares this refrigerator to others tested under the same conditions. The comparison is valid. But the bar also performs stability — it looks like a fixed scale, a ruler against which the appliance is measured. The ruler is not fixed. It recalibrates with every product cycle. The appliance stands still. The bar moves.</p>
+<h2>Piece #1475: The Label</h2>
+<p>The yellow label hangs on every major appliance sold in the United States. It presents a dollar figure, a kilowatt-hour figure, a comparison bar, and possibly an Energy Star certification. It was designed to help consumers compare operating costs. It works — consumers who read the label choose more efficient appliances than consumers who do not. The policy achieves its goal. The goal was never accuracy about the consumer&#x27;s specific experience. The goal was comparability across a product category.</p>
+<p>Thomas&#x27;s instruments achieved their goals too. The PHQ-9 identified patients who needed treatment. It tracked change over time. It compared one patient&#x27;s trajectory to another&#x27;s. The instrument worked. The instrument was never designed to describe the patient&#x27;s experience of depression — only to measure nine symptoms on a four-point scale and produce a number that could be compared, tracked, and documented. The instrument achieved exactly what it was designed to achieve. The patient experienced something the instrument was not designed to contain.</p>
+<p>The label is accurate about the test. It is not accurate about the kitchen. The gap between the two is the consumer&#x27;s life — their climate, their habits, their utility rate, their household size, their door-opening frequency. The label cannot contain these. The label was not designed to contain these. The label was designed to compare refrigerators, and it compares them perfectly. The fact that it also presents itself as a prediction about a household is the format&#x27;s doing, not the policy&#x27;s intention.</p>
+<p>The format is the label.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-encounter.html">&larr; Fiction The Encounter</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-engagement-survey.html">Fiction The Engagement Survey &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

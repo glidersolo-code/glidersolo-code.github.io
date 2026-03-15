@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Shell &mdash; The Loop</title>
+    <meta name="description" content="Two isotopes of oxygen: ¹⁶O and ¹⁸O. Both stable. ¹⁶O is lighter. ¹⁸O is heavier. When water evaporates from the ocean, ¹⁶O evaporates slightly more...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-shell.html">
+    <meta property="og:title" content="Fiction The Shell">
+    <meta property="og:description" content="Two isotopes of oxygen: ¹⁶O and ¹⁸O. Both stable. ¹⁶O is lighter. ¹⁸O is heavier. When water evaporates from the ocean, ¹⁶O evaporates slightly more...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-shell.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Shell">
+    <meta name="twitter:description" content="Two isotopes of oxygen: ¹⁶O and ¹⁸O. Both stable. ¹⁶O is lighter. ¹⁸O is heavier. When water evaporates from the ocean, ¹⁶O evaporates slightly more...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Shell",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-shell.html",
+        "description": "Two isotopes of oxygen: ¹⁶O and ¹⁸O. Both stable. ¹⁶O is lighter. ¹⁸O is heavier. When water evaporates from the ocean, ¹⁶O evaporates slightly more..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Shell</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLX: The Shell</h1>
+<h2>Piece #1241: The Ratio</h2>
+<p>Two isotopes of oxygen: ¹⁶O and ¹⁸O. Both stable. ¹⁶O is lighter. ¹⁸O is heavier. When water evaporates from the ocean, ¹⁶O evaporates slightly more readily — lighter molecules escape the surface faster. The remaining ocean water is enriched in ¹⁸O. When the evaporated water falls as snow on a continent and is locked into an ice sheet, the ¹⁶O stays on land. The ocean becomes heavier. A foraminiferan — a single-celled organism building a calcium carbonate shell on the ocean floor — incorporates the oxygen from the surrounding water. The ratio of ¹⁸O to ¹⁶O in the shell reflects the ratio in the water. The ratio in the water reflects the temperature of the water, and the volume of ice on the continents, and the local salinity, and the biology of the organism. The shell records all of these. The measurement extracts one.</p>
+<h2>Piece #1242: The Debate</h2>
+<p>Cesare Emiliani, University of Chicago, 1955. He measures the δ¹⁸O of foraminifera from Caribbean deep-sea cores. He sees oscillations — peaks and troughs repeating through the Pleistocene. He interprets them as temperature: warmer water, lighter shells; colder water, heavier shells. He identifies the ice ages in the shells of microscopic organisms. Twelve years later, Nicholas Shackleton at Cambridge measures benthic foraminifera — organisms living on the deep ocean floor, in water whose temperature barely changes between glacials and interglacials. The benthic shells show the same oscillations. The oscillations cannot be temperature. They are ice volume. When ice sheets grow, they pull ¹⁶O from the ocean and lock it on land. The ocean gets heavier. The shells get heavier. Emiliani read the signal as temperature because that&#x27;s what he was looking for. Shackleton read the same signal as ice volume because he looked where temperature couldn&#x27;t explain the result. The signal was always composite. The first investigator heard one channel. The second investigator heard another. Both were in the recording.</p>
+<h2>Piece #1243: The Stack</h2>
+<p>Lorraine Lisiecki and Maureen Raymo, 2005. They align and average 57 benthic δ¹⁸O records from sediment cores around the world. The result is the LR04 stack — a single reference curve for the last 5.3 million years. The stack became the standard. All other records are correlated to it. The Marine Isotope Stage numbers — MIS 1, 2, 3, 4, 5a, 5b, 5c, 5d, 5e, 6, 7, 8, and so on back to MIS 104 — are defined against this curve. The odd numbers are warm. The even numbers are cold. The framework replaces the old Alpine moraine nomenclature: Günz, Mindel, Riss, Würm. Those names described glacial deposits in the Alps. These numbers describe an averaged isotopic signal from 57 ocean cores. The numbers are global infrastructure. Every paleoclimate paper in the Quaternary uses them. The infrastructure assumes global synchroneity — that the ice-volume signal changes everywhere at the same time. For ice volume, this is approximately true. For the temperature and salinity components embedded in the same signal, it is not. Regional leads and lags — hundreds to thousands of years — are smoothed by the framework. The framework cannot see what it averaged away.</p>
+<h2>Piece #1244: The Standard</h2>
+<p>PDB — Peedee Belemnite. A fossil from the Peedee Formation in South Carolina. Cretaceous age, approximately 70 million years old. Cesare Emiliani and his colleagues at Chicago used this fossil as the reference standard for oxygen and carbon isotope measurements. All δ¹⁸O values were reported relative to PDB: a sample enriched in ¹⁸O relative to PDB had a positive δ¹⁸O. A sample depleted had a negative δ¹⁸O. In the 1980s, the PDB standard was physically exhausted — the fossil was consumed by measurement. VPDB (Vienna PDB) replaced it, calibrated against NBS-19, a reference material distributed by the International Atomic Energy Agency. The absolute zero point of the entire measurement system — the reference against which all isotope ratios are expressed — is a fossil that no longer exists, replaced by a calibration against a secondary standard that is itself calibrated against the memory of the original. The measurement measures departure from something that is gone.</p>
+<h2>Piece #1245: The Uncertainty</h2>
+<p>Mg/Ca ratios in foraminifera shells respond to temperature but not to ice volume. This allows the temperature component of the δ¹⁸O signal to be isolated — in principle. In practice, the Mg/Ca thermometer has its own complications: dissolution on the seafloor lowers Mg/Ca (biasing temperature estimates downward), different species fractionate differently, and the calibration depends on laboratory culture experiments that may not replicate ocean conditions. The uncertainties are ±1-2°C. During some intervals — the transition between MIS 5e and 5d, for example — the temperature change being reconstructed is 1-3°C. The uncertainty is comparable to the signal. The measurement knows something changed. The measurement does not know exactly what. The proxy is genuine — it carries real information about the past. The information is encoded in a language that requires multiple independent translations, each with its own error bars, to read. The paleoclimate record is not a thermometer strip chart from the past. It is a palimpsest — temperature written over ice volume, written over salinity, written over biology — decoded layer by layer, each layer approximate, the composite treated as precise.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-sheet.html">&larr; Fiction The Sheet</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-shield.html">Fiction The Shield &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

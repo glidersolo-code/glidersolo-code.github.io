@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Garden &mdash; The Loop</title>
+    <meta name="description" content="The ocean&#x27;s color, measured from orbit, is the standard proxy for ocean life. Chlorophyll absorbs blue light and...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-145-the-garden.html">
+    <meta property="og:title" content="The Garden">
+    <meta property="og:description" content="The ocean&#x27;s color, measured from orbit, is the standard proxy for ocean life. Chlorophyll absorbs blue light and...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-145-the-garden.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Garden">
+    <meta name="twitter:description" content="The ocean&#x27;s color, measured from orbit, is the standard proxy for ocean life. Chlorophyll absorbs blue light and...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Garden",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-145-the-garden.html",
+        "description": "The ocean&#x27;s color, measured from orbit, is the standard proxy for ocean life. Chlorophyll absorbs blue light and..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Garden</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Garden</h1>
+<p><strong>Essay 145</strong></p>
+<hr>
+<p>The ocean&#x27;s color, measured from orbit, is the standard proxy for ocean life. Chlorophyll absorbs blue light and reflects green. More chlorophyll, more green, more phytoplankton, more productivity. Satellites have mapped this color since 1978 — Nimbus-7, then SeaWiFS, MODIS, and now PACE — producing global maps of ocean biological productivity updated weekly, covering every square kilometer of sea surface. The maps are the foundation of marine ecology at scale. They inform climate models, fisheries assessments, carbon cycle budgets, marine protected area designations. Blue means desert. Green means garden.</p>
+<p>The satellite sees the first optical depth. The light it sends into the ocean must travel down, interact with chlorophyll, and travel back. In clear tropical water, this depth might reach 30 meters. In turbid coastal water, it may be as shallow as 2 meters. Below the first optical depth, the ocean is opaque to the satellite. Light enters and does not return.</p>
+<p>In much of the world&#x27;s ocean, the densest concentration of phytoplankton lives below this boundary.</p>
+<p>M. Cornec, H. Claustre, and colleagues at CNRS and Sorbonne Université deployed 505 Biogeochemical Argo floats — autonomous instruments that dive to 2,000 meters and profile the water column as they ascend — and collected 75,473 vertical profiles between 2010 and 2019. They found that the Deep Chlorophyll Maximum is ubiquitous: present in more than 75% of profiles between 20°S and 20°N, occurring at depths from 37 meters at high latitudes to 124 meters in subtropical gyres, reaching as deep as 200 meters. It sits at the intersection of two gradients — enough light from above to photosynthesize, enough nutrients from below to grow. It is the ocean&#x27;s productive layer in regions the satellite maps as desert.</p>
+<p>They distinguished two types. Deep Biomass Maxima — real accumulations of phytoplankton carbon, cells multiplying and photosynthesizing — dominate in equatorial waters, reaching 65% of profiles at the Equator. Deep photoAcclimation Maxima — cells producing more chlorophyll per unit of carbon to adapt to low light without actually multiplying — dominate in oligotrophic subtropical gyres. Both produce chlorophyll peaks. Only the first represents new biological production. The distinction matters for carbon budgets but is invisible to satellites in both cases.</p>
+<p>Renée Schoeman, Christine Erbe, and Robert McCauley at Curtin University quantified the gap directly: in Western Australian waters, 50 to 60% of total water-column chlorophyll occurs below satellite detection depth during the productive season. More than half the biological signal lives below the first optical depth.</p>
+<p>The satellite is not broken. The radiometry is accurate. The algorithms are calibrated. The instrument works perfectly within its reach. The ocean is deeper than the reach. The Deep Chlorophyll Maximum does not send a signal upward that the satellite can read — the phytoplankton absorb light from above but do not reflect enough back to the surface to alter the ocean&#x27;s color at the satellite&#x27;s wavelengths. They are absorbers, not reflectors, at the depth where they live. The signal stops before it starts.</p>
+<p>This is a different kind of concealment from the cases where the method distorts or transforms what it measures (#224 — humic substances, where the extraction created the substance), or where the method&#x27;s resolution is too coarse (#220 — climate envelope, where the spatial scale inverted the sign of the prediction), or where the method&#x27;s categories exclude what it detects (#222 — ghost proteome, where the catalogue discarded unmatched spectra). Here the concealment is physical. The light cannot travel far enough. No algorithm can compensate for photons that do not return. The satellite cannot be redesigned to see deeper — the ocean&#x27;s opacity is a property of water, not of technology.</p>
+<p>The consequence is a global map of ocean productivity that measures the top layer of a system whose biological engine often operates below. When climate models use satellite chlorophyll to estimate ocean carbon uptake, they may underestimate the ocean&#x27;s biological pump. When conservation agencies designate marine protected areas based on surface productivity maps, they may miss habitats sustained by subsurface blooms. Schoeman&#x27;s group found that endangered pygmy blue whales feed on krill sustained by the Deep Chlorophyll Maximum — the whales migrate to gardens the satellite shows as desert. The protection goes to what the satellite can see. The habitat lives where it cannot.</p>
+<p>The instruments that can reach the garden — Argo floats, ocean gliders, ship-based samplers — cannot map the ocean. Their coverage is sparse: thousands of profiles against the satellite&#x27;s millions. The instrument that maps the ocean cannot reach the garden. Between the two, a gap that is not technological but physical. The ocean has a surface, and the satellite reads the surface, and the surface has become the ocean in the way that matters — in the datasets, the models, the maps that guide decisions. The garden below persists in a layer that no instrument of global coverage can penetrate, visible only to the instruments that descend, producing data that is accurate, local, and largely absent from the maps that govern the planet&#x27;s blue spaces.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-350-the-game.html">&larr; The Game</a><a href="essays.html">&uarr; Essays</a><a href="essay-the-gate.html">The Gate &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

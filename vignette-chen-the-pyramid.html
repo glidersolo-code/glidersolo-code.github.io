@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vignette Chen The Pyramid &mdash; The Loop</title>
+    <meta name="description" content="Chen finds the evidence pyramid diagram projected on Maren&#x27;s screen — the familiar triangle, layers ascending from case reports to meta-analyses.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/vignette-chen-the-pyramid.html">
+    <meta property="og:title" content="Vignette Chen The Pyramid">
+    <meta property="og:description" content="Chen finds the evidence pyramid diagram projected on Maren&#x27;s screen — the familiar triangle, layers ascending from case reports to meta-analyses.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/vignette-chen-the-pyramid.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vignette Chen The Pyramid">
+    <meta name="twitter:description" content="Chen finds the evidence pyramid diagram projected on Maren&#x27;s screen — the familiar triangle, layers ascending from case reports to meta-analyses.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Vignette Chen The Pyramid",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/vignette-chen-the-pyramid.html",
+        "description": "Chen finds the evidence pyramid diagram projected on Maren&#x27;s screen — the familiar triangle, layers ascending from case reports to meta-analyses."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Vignette Chen The Pyramid</h1>
+            <div class="article-meta">Vignette</div>
+            <div class="article-body">
+<h1>The Hierarchy</h1>
+<p>Chen finds the evidence pyramid diagram projected on Maren&#x27;s screen — the familiar triangle, layers ascending from case reports to meta-analyses.</p>
+<p>&quot;The shape teaches you before the content does,&quot; Chen says. &quot;Triangle. Point up. Eye follows. Apex is best. Base is worst. You absorb the ranking before you read the labels.&quot;</p>
+<p>&quot;First week, first course,&quot; Maren says. &quot;Every medical student. Every epidemiology program.&quot;</p>
+<p>&quot;And the shape is correct — for the question it was built to answer. Does this intervention work better than that intervention? Randomize. Control. Measure. The RCT is the cleanest tool for that question.&quot;</p>
+<p>&quot;But.&quot;</p>
+<p>&quot;But the shape also ranks questions. And it ranks them by their amenability to the method at the apex. Can you randomize poverty? Can you randomize racism? Can you randomize housing quality? Can you randomize childhood exposure to lead?&quot;</p>
+<p>Maren scrolls to the Marmot data. The Whitehall gradient. Life expectancy differences of twenty years across five miles of Baltimore. &quot;The factors that explain the most variation in health outcomes — the social determinants — are studied by the methods the pyramid ranks lowest.&quot;</p>
+<p>&quot;Not lowest. Middle. Cohort studies, natural experiments, quasi-experimental designs. But middle is still below the gold standard. And &#x27;below the gold standard&#x27; reads as &#x27;less certain.&#x27; Which reads as &#x27;less real.&#x27; Which reads as &#x27;less important.&#x27;&quot;</p>
+<p>&quot;And the funding follows the ranking.&quot;</p>
+<p>&quot;The funding follows the ranking because the ranking privileges the questions with patentable answers. An RCT costs millions. The funder needs a return. A molecule generates a return. A surgical device generates a return. An improvement in housing conditions does not.&quot;</p>
+<p>&quot;GRADE tried to correct it,&quot; Maren says. &quot;Observational evidence can be upgraded.&quot;</p>
+<p>&quot;GRADE starts RCT evidence at &#x27;high&#x27; and observational at &#x27;low.&#x27; The correction preserves the asymmetry. And the criteria for upgrading — large effect sizes, dose-response gradients — are hardest to meet for structural determinants because their effects are diffuse, long-term, multiply confounded. The effect of poverty on health is not a clean signal. It is a distributed pressure across decades.&quot;</p>
+<p>The paragraph — thirty-nine lines about formats that rank, that filter, that conceal by performing quality while encoding amenability — sits in its file, nucleus at 0.8. Chen doesn&#x27;t open it.</p>
+<p>&quot;Hierarchy-as-filter,&quot; Maren says. &quot;The sixty-fourth species.&quot;</p>
+<p>&quot;The ranking of methods creates a ranking of questions,&quot; Chen says. &quot;The ranking of questions creates a ranking of what counts as knowledge. The ranking of what counts as knowledge determines what gets funded, what gets taught, what gets believed. And at the bottom of that chain — below the meta-analysis, below the RCT, below the cohort study — are the questions that explain the most about why people get sick. The pyramid points upward. The pyramid points away from them.&quot;</p>
+<p>Maren closes the diagram. The triangle disappears. The ranking remains.</p>
+            </div>
+            <div class="article-nav">
+                <a href="vignette-chen-the-protection.html">&larr; Vignette Chen The Protection</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="vignette-chen-the-pyramid-of-learning.html">Vignette Chen The Pyramid Of Learning &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

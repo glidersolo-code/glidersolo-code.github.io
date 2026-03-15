@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Coverage &mdash; The Loop</title>
+    <meta name="description" content="Thomas buys a gallon of Agreeable Gray. The label says covers approximately 400 square feet. He measures the bedroom: twelve by fourteen, eight-foot...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-coverage.html">
+    <meta property="og:title" content="Fiction The Coverage">
+    <meta property="og:description" content="Thomas buys a gallon of Agreeable Gray. The label says covers approximately 400 square feet. He measures the bedroom: twelve by fourteen, eight-foot...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-coverage.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Coverage">
+    <meta name="twitter:description" content="Thomas buys a gallon of Agreeable Gray. The label says covers approximately 400 square feet. He measures the bedroom: twelve by fourteen, eight-foot...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Coverage",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-coverage.html",
+        "description": "Thomas buys a gallon of Agreeable Gray. The label says covers approximately 400 square feet. He measures the bedroom: twelve by fourteen, eight-foot..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Coverage</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCIX: The Coverage</h1>
+<h2>Piece #1486: The Gallon</h2>
+<p>Thomas buys a gallon of Agreeable Gray. The label says covers approximately 400 square feet. He measures the bedroom: twelve by fourteen, eight-foot ceilings, two windows, one door. He subtracts the openings. He calculates 385 square feet of paintable surface. One gallon. The label said so. The label measured a smooth, sealed, primed panel of uniform light color in a laboratory. His bedroom wall is textured drywall, previously painted dark blue by the previous tenant, with patches of joint compound from where he filled nail holes — each patch a different porosity than the surrounding surface. He opens the gallon. He starts rolling. By the time he reaches the third wall, the gallon is empty and the blue is grinning through the gray like a bruise under foundation. He stands in the bedroom holding an empty can whose label told him the truth about a wall that is not his wall.</p>
+<h2>Piece #1487: The Contractor</h2>
+<p>The painting contractor does not read the label. She knows: one gallon, smooth wall, light over light, 350 to 400. Same gallon, textured wall, 250 to 300. Same gallon, dark over light, divide by two per coat, multiply coats by surface, add ten percent for waste. She carries the formula in her body the way a cook carries salt — not measured, felt. When she bids a job, she walks the rooms with her hand brushing the walls. Texture tells her spread rate. Color tells her coat count. Sheen tells her primer need. She bids four gallons for the room the label says needs one. The homeowner balks at the price. She says: &quot;The label tells you what the paint can do. I&#x27;m telling you what your wall will need.&quot; The homeowner buys two gallons at the hardware store instead. Calls her back a week later. She brings two more gallons and charges for the second trip.</p>
+<h2>Piece #1488: The Hiding</h2>
+<p>ASTM D5150 does not measure coverage. It measures hiding power: the paint&#x27;s ability to make a patterned substrate disappear. Black and white squares, alternating. The technician draws the paint across them at a controlled wet film thickness. Reflectance measurements over black, reflectance measurements over white. When the ratio reaches 0.98, the paint has hidden the pattern. The squares are gone. The surface is uniform. But hiding and covering are different acts. Hiding is about what disappears. Covering is about what remains. The test measures disappearance and reports it as area. The consumer reads the area and assumes a wall. The wall is not the test. The test is not the wall. Between them is a number that belongs to neither — born in the laboratory, adopted by the label, orphaned by the room.</p>
+<h2>Piece #1489: The Approximately</h2>
+<p>The word is right there. &quot;Covers approximately 400 sq ft.&quot; The hedge is printed on the can. The acknowledgment is explicit. And it does nothing. Because the word &quot;approximately&quot; occupies no space in the calculation. You cannot divide a room by approximately. You cannot tell the cashier you need approximately two gallons. The format demands a number. The number demands a plan. The plan demands a purchase. The word &quot;approximately&quot; stands beside the number like a footnote no one reads — technically present, functionally absent. It is the label&#x27;s conscience, printed in the same font as the promise, visible to anyone who looks, invisible to everyone who calculates. The coverage rate is 400. The &quot;approximately&quot; is the label knowing it&#x27;s lying. The 400 is the label not caring.</p>
+<h2>Piece #1490: The Second Coat</h2>
+<p>The label says one coat coverage. Premium paint. Advanced formula. One coat. Thomas applies one coat over the dark blue. The blue shows through — not everywhere, not completely, but in the low spots of the texture, in the thin areas near the ceiling where the roller couldn&#x27;t press flush, in the corner where the brush dragged. He applies a second coat. Better. Still a shadow in the texture valleys. He applies a third. Now the gray is gray. But the gallon that covered 400 square feet in one coat has covered 130 square feet in three. The math was never wrong. The denominator was. Four hundred square feet per gallon per coat, and the number of coats is not on the label because the number of coats depends on the wall, and the wall is the one variable the label cannot know. So the label reports the numerator and lets the consumer assume the denominator is one. And for a smooth, primed, light-colored surface, the denominator is one. For every other surface — which is most surfaces — the denominator is the wall&#x27;s answer to a question the label never asked.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-count.html">&larr; Fiction The Count</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-cracking.html">Fiction The Cracking &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

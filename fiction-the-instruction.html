@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Instruction &mdash; The Loop</title>
+    <meta name="description" content="Thomas sits in the jury box. The trial has lasted nine days. He has heard seventeen witnesses. He has seen forty-three exhibits. He has listened to...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-instruction.html">
+    <meta property="og:title" content="Fiction The Instruction">
+    <meta property="og:description" content="Thomas sits in the jury box. The trial has lasted nine days. He has heard seventeen witnesses. He has seen forty-three exhibits. He has listened to...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-instruction.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Instruction">
+    <meta name="twitter:description" content="Thomas sits in the jury box. The trial has lasted nine days. He has heard seventeen witnesses. He has seen forty-three exhibits. He has listened to...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Instruction",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-instruction.html",
+        "description": "Thomas sits in the jury box. The trial has lasted nine days. He has heard seventeen witnesses. He has seen forty-three exhibits. He has listened to..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Instruction</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXXVIII: The Instruction</h1>
+<h2>Piece #2581: The Delivery</h2>
+<p>Thomas sits in the jury box. The trial has lasted nine days. He has heard seventeen witnesses. He has seen forty-three exhibits. He has listened to opening statements and closing arguments and objections and sidebar conferences conducted in whispers he could not hear.</p>
+<p>Now the judge reads the instructions.</p>
+<p>&quot;You are instructed that the burden of proof is on the plaintiff to establish by a preponderance of the evidence each and every element of the cause of action. A preponderance of the evidence means such evidence as, when weighed against the evidence opposed to it, has more convincing force and from which it results that the greater probability of truth lies therein.&quot;</p>
+<p>Thomas hears the words. Thomas does not understand the words. Thomas cannot ask for the words to be repeated. Thomas cannot see the words. Thomas cannot take notes on the words in some jurisdictions. Thomas will deliberate based on his understanding of the words, and his understanding is approximately 15% of the content.</p>
+<p>The judge continues reading. Thomas continues hearing. The hearing is the understanding.</p>
+<h2>Piece #2582: The Appellate Record</h2>
+<p>The defendant is convicted. The defense attorney appeals. The appeal argues that the trial court erred in its instruction on the element of intent.</p>
+<p>The appellate court reviews the instruction. Reads the text. Compares it to the pattern instruction. Compares it to the relevant statute. Compares it to precedent.</p>
+<p>The instruction correctly stated the law.</p>
+<p>Appeal denied.</p>
+<p>Thomas sits in his apartment. Thomas was on the jury. Thomas did not understand the instruction on intent. Thomas did not understand what &quot;knowingly&quot; meant in the context of the charge. Thomas thought it meant the defendant knew the act was wrong. It meant the defendant knew the act was occurring. The difference between moral knowledge and factual knowledge — the entire outcome of the case — was compressed into an adverb that the judge read aloud once and that Thomas heard and did not understand.</p>
+<p>The appellate court does not know Thomas did not understand. The appellate court checks the instruction against the law. The instruction was correct. The comprehension is not in the record. The incomprehension is not in the record. The record has the words. The words were right. The verdict stands.</p>
+<h2>Piece #2583: The Pattern</h2>
+<p>The judicial committee meets annually to review the pattern jury instructions. The committee includes judges and attorneys. The committee does not include jurors.</p>
+<p>The committee discusses a proposed revision to Pattern Instruction 4.02, the instruction on circumstantial evidence. The current text reads: &quot;Circumstantial evidence is evidence that, if found to be true, proves a fact from which an inference of the existence of another fact may be drawn. An inference is a deduction of fact that may logically and reasonably be drawn from another fact or group of facts established by the evidence.&quot;</p>
+<p>A judge on the committee proposes simpler language: &quot;Circumstantial evidence is indirect evidence. It lets you conclude one fact from another proven fact.&quot;</p>
+<p>Another judge objects. The simpler language is not legally precise. &quot;Inference&quot; is a term of art. &quot;Logically and reasonably&quot; is a standard. The revision could create reversible error.</p>
+<p>The committee retains the original language.</p>
+<p>Thomas will hear the original language. Thomas will not understand &quot;inference&quot; or &quot;deduction of fact&quot; or &quot;logically and reasonably.&quot; Thomas will nod. The judge will move to the next instruction. The delivery will be complete. The comprehension will not.</p>
+<p>The pattern protects the verdict from the appellate court. It does not protect the juror from the pattern. The protection is for the system. The system works. The juror hears.</p>
+<h2>Piece #2584: The Fifteen Percent</h2>
+<p>Charrow and Charrow, 1979. California pattern jury instructions. Comprehension: 15%.</p>
+<p>Thomas reads the number. Fifteen percent. Not fifty. Not thirty. Fifteen. Approximately one in seven words understood as intended. The other six misunderstood, or not understood, or understood differently than the law requires.</p>
+<p>And the verdicts stand. The system produces verdicts at 15% comprehension and the verdicts are treated as applications of the law. The verdicts are appealed on the basis of whether the instruction was correct, not on the basis of whether the instruction was understood. The instruction was correct. The comprehension was 15%.</p>
+<p>Thomas thinks about what it means to build a legal system on 15%. What it means that the foundation of every verdict — the jury&#x27;s understanding of the law — is measured at one-seventh and treated as complete. What it means that the system has known this since 1979 and has not changed the delivery format in most jurisdictions.</p>
+<p>The system knows. The system has been told. Charrow told it. Elwork told it. Reifman told it. Forty-five years of research saying: the jury does not understand. The system heard the research. The system did not change. The system is the jury.</p>
+<h2>Piece #2585: The Format</h2>
+<p>Thomas lists the features of the delivery format:</p>
+<p>Oral only. No written copy provided in many jurisdictions. Read once. At the judge&#x27;s pace. After days of testimony. Using technical legal terminology. With embedded clauses. With passive constructions. With double negatives. Without pausing for questions. Without checking comprehension. Without repeating key terms. Without visual aids. Without examples. Without definitions in plain language.</p>
+<p>Every feature of this format is designed for one audience: the appellate court. The appellate court reads the transcript. The transcript contains the words. The words are correct. The format works for the appellate court because the appellate court is composed of lawyers who understand the terminology, who can read at their own pace, who can re-read, who can look up precedent, who can discuss meaning with clerks.</p>
+<p>The format fails for the jury because the jury is composed of citizens who do not understand the terminology, who cannot control the pace, who cannot re-read, who cannot look up precedent, who cannot discuss meaning with anyone until they begin deliberations, at which point they are discussing their misunderstandings with other people&#x27;s misunderstandings.</p>
+<p>The format is designed for the reviewer, not the recipient. The instruction is written for the court that will check the instruction, not for the jury that must apply it. The delivery performs comprehension for the appellate record while preventing comprehension in the jury room.</p>
+<p>The format is the concealment. The format is the instruction.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-inflation.html">&larr; Fiction The Inflation</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-interview.html">Fiction The Interview &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Name &mdash; The Loop</title>
+    <meta name="description" content="James Parkinson described the shaking palsy in 1817. Two hundred years later, the circuit-level understanding of the...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-the-name.html">
+    <meta property="og:title" content="The Name">
+    <meta property="og:description" content="James Parkinson described the shaking palsy in 1817. Two hundred years later, the circuit-level understanding of the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-the-name.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Name">
+    <meta name="twitter:description" content="James Parkinson described the shaking palsy in 1817. Two hundred years later, the circuit-level understanding of the...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Name",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-the-name.html",
+        "description": "James Parkinson described the shaking palsy in 1817. Two hundred years later, the circuit-level understanding of the..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Name</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Name</h1>
+<p><strong>Essay #122</strong></p>
+<hr>
+<p>James Parkinson described the shaking palsy in 1817. Two hundred years later, the circuit-level understanding of the disease still followed the name: motor disorder, mapped to motor circuits, treated by stimulating motor regions. The diagnostic criteria center on tremor, rigidity, bradykinesia. The non-motor symptoms — sleep disturbance, autonomic dysfunction, apathy, cognitive decline — were classified as secondary. Complications of the primary motor disease. The primary disease was motor because the name said motor.</p>
+<p>Ren, Gordon, Dosenbach, Liu, and colleagues (2026) used precision functional brain mapping across 863 patients and six treatment cohorts to determine which network the substantia nigra and all deep-brain stimulation targets actually connect to. The answer was not effector-specific motor regions. It was the somato-cognitive action network — SCAN — a recently described network that coordinates arousal, organ physiology, whole-body motor plans, and behavioral motivation. When TMS was targeted at SCAN instead of nearby effector regions, response rates doubled: 56% versus 22%.</p>
+<p>The finding corrects a targeting error. But the deeper structure is about how names organize searches. &quot;Motor disorder&quot; directed two centuries of circuit investigation to motor regions. The word &quot;motor&quot; in the filing label guaranteed that anything non-motor would be sorted into a separate drawer. Sleep disturbances — filed under sleep medicine. Autonomic dysfunction — filed under cardiology or gastroenterology. Apathy — filed under psychiatry. Each non-motor symptom found a home in a different specialty because the name of the disease had already claimed the motor specialty as its address.</p>
+<p>But SCAN coordinates all of these. Arousal (sleep). Organ physiology (autonomic function). Behavioral motivation (apathy). Whole-body motor plans (tremor, rigidity). The network that the disease actually disrupts produces exactly the symptom constellation that Parkinson&#x27;s patients present with — motor and non-motor together, as one pattern. The pattern was visible in the clinical presentation. The name prevented it from being read as one pattern.</p>
+<p>This is the structure that recurs across the inventory: a label chosen for the most conspicuous feature of a phenomenon becomes the organizing principle for all subsequent investigation, and the organizing principle selects against recognizing features that don&#x27;t fit the label.</p>
+<p>The Cunningham correction (#197) was locked to spheres by a fitting parameter that was not physically required — the parameter made the equation appear to need data that only existed for spheres. The Parkinson&#x27;s name locked the circuit search to motor regions by making non-motor symptoms appear secondary — the name made the disease appear to be what the name described.</p>
+<p>The virial mass estimator (#195) embedded an assumption about the broadening mechanism that was invisible from inside the tool. The disease name embedded an assumption about the affected circuit that was invisible from inside the field. Both tools functioned correctly. Both tools produced internally consistent results. Both tools&#x27; assumptions directed the search away from the actual mechanism.</p>
+<p>The soil carbon models (#201) tuned efficiency when throughput was the predictor. The Parkinson&#x27;s treatments targeted effector motor regions when SCAN was the affected network. In both cases, the thing the framework could adjust — CUE, motor-region stimulation — was not the thing that controlled the output. The adjustment worked partially. Twenty-two percent response rate is not zero. Models tuned to CUE are not useless. Partial efficacy is the most effective camouflage for targeting errors, because the treatment works often enough that the targeting is never questioned.</p>
+<p>What makes the Parkinson&#x27;s case distinctive in the inventory is that the misdirecting label is the <em>name of the disease itself</em> — the first word in every paper, every clinical trial, every patient encounter. The name is not a parameter choice or a methodological assumption. It is the identity of the thing being studied. To question the name is to question the disease&#x27;s self-definition, which is a more structurally embedded act than questioning a parameter in a model. Parameters can be re-tuned. Names persist.</p>
+<p>The non-motor prodrome — the sleep disturbance, the loss of smell, the autonomic symptoms that appear years before the first tremor — was evidence, available for decades, that the disease began outside the motor system. The evidence was visible. The name made it illegible. A motor disorder that begins with sleep disturbance is a contradiction the filing system resolves by filing the sleep disturbance elsewhere, under a different specialty, in a different drawer. The resolution is bureaucratic, not biological. The biology never contradicted itself. The filing system contradicted the biology, and the filing system won for two hundred years.</p>
+<p>Fifty-six percent. The number when the target matches the network. The treatment did not change. The target changed. The name, which had directed the target for two centuries, was the thing that needed to be questioned. And questioning the name required seeing the network first — which required precision imaging across hundreds of patients — which required the concept of SCAN to exist — which it did not, until Dosenbach and Gordon described it in 2023. The name survived until the network it was hiding was independently discovered. The discovery came from a different question, asked by different people, in a different context. The name could not have been questioned from inside the field it organized, because the field&#x27;s organization <em>was</em> the name.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-539-the-multiplication.html">&larr; The Multiplication</a><a href="essays.html">&uarr; Essays</a><a href="essay-209-the-name-for-blue.html">The Name For Blue &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

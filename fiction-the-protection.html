@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Protection &mdash; The Loop</title>
+    <meta name="description" content="Franz Greiter, an Austrian chemist, is credited with developing the concept of the Sun Protection Factor in the 1960s, though the modern testing protocol...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-protection.html">
+    <meta property="og:title" content="Fiction The Protection">
+    <meta property="og:description" content="Franz Greiter, an Austrian chemist, is credited with developing the concept of the Sun Protection Factor in the 1960s, though the modern testing protocol...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-protection.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Protection">
+    <meta name="twitter:description" content="Franz Greiter, an Austrian chemist, is credited with developing the concept of the Sun Protection Factor in the 1960s, though the modern testing protocol...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Protection",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-protection.html",
+        "description": "Franz Greiter, an Austrian chemist, is credited with developing the concept of the Sun Protection Factor in the 1960s, though the modern testing protocol..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Protection</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXVIII: The Protection</h1>
+<h2>Piece #1331: The Ratio</h2>
+<p>Franz Greiter, an Austrian chemist, is credited with developing the concept of the Sun Protection Factor in the 1960s, though the modern testing protocol was formalized by the FDA. SPF is defined as a ratio: the dose of UV radiation required to produce minimal erythema on protected skin divided by the dose required on unprotected skin. If sunburning unprotected skin requires 200 joules per square meter and sunburning the same skin through the sunscreen requires 6,000 joules per square meter, the SPF is 30. The number describes a multiplier — how many times longer you can stay in the sun before burning. SPF 30 means you can stay thirty times as long. The number performs linearity: SPF 30 sounds like three times the protection of SPF 10.</p>
+<p>But protection is not linear with SPF. SPF 15 blocks approximately 93% of UVB radiation. SPF 30 blocks approximately 97%. SPF 50 blocks approximately 98%. SPF 100 blocks approximately 99%. The progression from SPF 30 to SPF 50 — which the number presents as a 67% improvement — is an improvement from 97% to 98% blocking, a reduction in transmitted UVB from 3.3% to 2%. The consumer reads the larger number and infers proportionally better protection. The proportional improvement is in the ratio. The absolute improvement is in the percentage transmitted. The number reports the ratio. The skin receives the percentage.</p>
+<p>Thomas&#x27;s clinical scales perform the same linearity. The PHQ-9 range from 10 to 20 looks like twice the severity. The clinical difference between 10 and 20 is not twice anything. The number performs a linearity the condition does not follow.</p>
+<h2>Piece #1332: The Thickness</h2>
+<p>The SPF on the label is measured under laboratory conditions specified by the FDA (21 CFR 201.327) and ISO 24444. The test requires applying the product at 2 mg/cm² — two milligrams per square centimeter of skin surface. This corresponds to approximately one ounce (30 mL) of sunscreen for an adult body, applied as a uniform film. Studies of consumer behavior — Diffey and Grice (<em>Photodermatology, Photoimmunology &amp; Photomedicine</em>, 1997), Autier et al. (<em>British Journal of Dermatology</em>, 2001) — consistently find that consumers apply 0.5 to 1.0 mg/cm², approximately 25 to 50 percent of the tested amount.</p>
+<p>The relationship between application thickness and SPF is not linear. At half the tested thickness, SPF 30 delivers approximately SPF 5-10. The number on the bottle was determined at a thickness the consumer does not apply. The protection on the skin is a function of the thickness, which the number cannot control. The label says 30. The skin receives something less. How much less depends on how the consumer applies the product — how thickly, how evenly, how often it is reapplied after swimming, sweating, or toweling. The number is fixed. The conditions are variable. The gap between them is the consumer&#x27;s behavior, which the number assumes and cannot ensure.</p>
+<p>Thomas&#x27;s treatment plans assume compliance at the tested level. The medication dosage was determined in clinical trials where patients took the prescribed amount under monitored conditions. In practice, medication adherence for chronic conditions averages 50%. The label says the dose. The body receives something else.</p>
+<h2>Piece #1333: The Spectrum</h2>
+<p>SPF measures UVB protection — radiation in the 290-320 nanometer range, primarily responsible for sunburn. It does not measure UVA protection. UVA radiation (320-400 nm) penetrates deeper into the skin, causes photoaging, contributes to immunosuppression, and plays a role in melanoma development. A sunscreen with high SPF and poor UVA protection blocks the burn signal while allowing the deeper damage to continue. The consumer does not burn and infers safety. The absence of erythema — the very endpoint the SPF measures against — becomes the concealment.</p>
+<p>The FDA introduced the &quot;Broad Spectrum&quot; designation in 2011, requiring UVA protection proportional to SPF. But the label provides no numeric UVA rating in the United States. In the European Union, the UVA protection factor must be at least one-third of the SPF, indicated by a UVA-in-circle logo. In Japan, the PA system rates UVA protection: PA+, PA++, PA+++, PA++++. The same sunscreen in three markets carries different information about the same spectral coverage. The American consumer sees SPF 50 and Broad Spectrum. The European consumer sees SPF 50 and UVA logo. The Japanese consumer sees SPF 50 and PA++++.</p>
+<p>Thomas&#x27;s condition has its own spectral gaps. The PHQ-9 measures the mood spectrum. It does not measure the functional spectrum. The patient scores low on the PHQ-9 and the clinician infers recovery. The absence of the measured signal becomes the concealment of the unmeasured damage.</p>
+<h2>Piece #1334: The Subject</h2>
+<p>The SPF test is performed on human subjects — in vivo testing. FDA protocol requires a panel of 10-20 subjects with Fitzpatrick skin types I through III — light to medium skin. The minimal erythemal dose is determined for each subject&#x27;s unprotected and protected skin. The SPF is the mean ratio across the panel.</p>
+<p>The test population is fair-skinned. The endpoint — erythema — is defined by visible reddening, easier to detect on lighter skin. For Fitzpatrick IV-VI, erythema is harder to observe visually, and the biological responses to UV differ. The SPF was designed around a light-skinned population&#x27;s visible response. It is marketed universally.</p>
+<p>Thomas&#x27;s instruments were validated on specific populations. The PHQ-9 was validated primarily in adult primary care patients in the United States. The population that defined the norms is invisible in the score applied universally.</p>
+<h2>Piece #1335: The Cap</h2>
+<p>Australia capped SPF labeling at 50+ in the 1990s. The European Commission followed. The logic: above SPF 50, the marginal improvement — from 98% to 99% UVB blocking — is so small that higher numbers mislead consumers into believing substantially more protection. Higher numbers also encourage behavioral compensation — longer sun exposure, less frequent reapplication — that may increase net UV damage. An FDA advisory committee proposed capping US labels at 50+ in 2011. The proposal was never finalized. American consumers can purchase SPF 100, SPF 110.</p>
+<p>The uncapped number performs protection it cannot deliver. SPF 100 blocks approximately 99% of UVB. SPF 50 blocks approximately 98%. The difference — 1 percentage point of transmitted UVB — is real but marginal. The consumer reads 100 and infers double the protection of 50. The inference is linear. The physics is asymptotic. The number approaches 100% and never reaches it. Each increment delivers less. The number continues. The protection has functionally stopped.</p>
+<p>One hundred and seventy-eight Parts. Thomas&#x27;s clinical system has its own uncapped numbers — scores that continue incrementing above the threshold where discrimination stops. Above 20, the PHQ-9 reports &quot;severe.&quot; A 22 and a 27 are both severe. The number continues. The discrimination has stopped. The number performs a precision the instrument cannot deliver, and the consumer — clinician, patient, insurer — reads the number and infers proportional change that the mathematics does not support.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-prophecy.html">&larr; Fiction The Prophecy</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-pyramid.html">Fiction The Pyramid &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

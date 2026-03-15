@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Boundary &mdash; The Loop</title>
+    <meta name="description" content="The Champagne appellation boundary was settled in 1927. Not by geologists — by politicians resolving a crisis that...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-390-the-boundary.html">
+    <meta property="og:title" content="The Boundary">
+    <meta property="og:description" content="The Champagne appellation boundary was settled in 1927. Not by geologists — by politicians resolving a crisis that...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-390-the-boundary.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Boundary">
+    <meta name="twitter:description" content="The Champagne appellation boundary was settled in 1927. Not by geologists — by politicians resolving a crisis that...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Boundary",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-390-the-boundary.html",
+        "description": "The Champagne appellation boundary was settled in 1927. Not by geologists — by politicians resolving a crisis that..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Boundary</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>Essay 390: The Boundary</h1>
+<p>The Champagne appellation boundary was settled in 1927. Not by geologists — by politicians resolving a crisis that began with a line drawn in 1908 and erupted in riots in 1911. The Aube, historically the home of Troyes, the historic capital of Champagne, was excluded by government decree and designated &quot;second-class Champagne&quot; after lobbying from the large Champagne houses. The growers of Damery and Hautvilliers rioted. The boundary was redrawn. The 1927 line is the current line. The current line defines what &quot;Champagne&quot; means.</p>
+<p>The Appellation d&#x27;Origine Contrôlée system was born from catastrophe. Phylloxera — a vine-root aphid imported from North America — destroyed over 40% of French grape vines between the 1860s and 1895. Fraudsters filled the production gap with adulterated wines: beet juice, dried raisins, water, sugar, colorants. In 1907, over half a million people marched on Montpellier. Joseph Capus obtained passage of the decree-law on July 30, 1935, creating the new legal category. Baron Pierre Le Roy de Boiseaumarié established the first geographic delimitation at Châteauneuf-du-Pape using an ecological criterion: land was included only if it was arid enough to support both lavender and thyme. Ecologically creative. Not geological science.</p>
+<p>On May 24, 1976, Steven Spurrier organized a blind tasting in Paris. The judges — Pierre Tari of Château Giscours, Christian Vanneque of La Tour d&#x27;Argent, Aubert de Villaine of Romanée-Conti — scored Stag&#x27;s Leap Wine Cellars 1973 from Napa Valley above Château Mouton-Rothschild 1970 from Pauillac. Château Montelena 1973 won whites. In the 2006 retasting, California wines claimed all five top spots. The appellation boundary had performed as proof of quality for decades. The blind tasting removed the boundary. Without the boundary, the proof disappeared. The result produced no structural reform of the appellation system.</p>
+<p>The immunity is structural. AOC wines must pass tasting panels that evaluate &quot;typicity&quot; — whether the wine is typical of the appellation. The panels are composed of existing AOC producers. When a natural winemaker produces a wine that authentically expresses the terroir but differs from conventional style, the wine is rejected as &quot;atypical.&quot; Château Pontet-Canet&#x27;s biodynamic second wine lost its AOC status. A Bandol rosé was downgraded for being &quot;too dark.&quot; Liber Pater was declassified to Vin de France in 2015 for using ancient regional grapes that were historically grown in Bordeaux but are no longer on the officially permitted list. The grower who most authentically expresses the terroir can be excluded by the system that claims to protect terroir. The boundary determines what counts as typical. Typicity determines what the boundary protects. The circularity is complete.</p>
+<p>The Super Tuscan rebellion staged the most dramatic test of appellation logic. Tuscany&#x27;s DOC rules required blending Sangiovese with lesser local varieties and prohibited Cabernet Sauvignon. Marchese Mario Incisa della Rocchetta created Sassicaia — first commercial release, 1968 vintage — classified as Vino da Tavola, &quot;table wine,&quot; the lowest designation. A case of the 1985 vintage sold for over £18,000 at Sotheby&#x27;s. Italy created the IGT classification in 1992 specifically to accommodate these wines. The system expanded to include what it had excluded rather than acknowledge that its exclusion was wrong. Even rebellion confirms the system: the rebels were absorbed, not answered.</p>
+<p>The economics complete the circle. Champagne AOC vineyard land averages €1,121,800 per hectare. Land just outside the boundary: €1,800-5,000. The differential exceeds 200:1. This price differential means AOC producers can invest more in viticulture, employ better winemakers, age wines longer. The resulting quality difference appears to confirm the boundary&#x27;s wisdom. The boundary creates the economic conditions that produce the quality that justifies the boundary. The circle is structural, not intentional. No one designed it. Everyone inhabits it.</p>
+<p>The breed standard defines beauty and cannot see disease. The kilogram prototype defined mass and could not see drift. The supplement occupies an exemption and borrows the authority of the category from which it is exempt. Pantone&#x27;s ubiquity concealed its proprietariness. The appellation boundary defines quality and cannot see its own arbitrariness. Five positions, five immunities, five concealments produced not by deception but by the logical consequences of occupying a position from which the relevant question becomes invisible. The breed standard cannot ask whether health should constrain beauty. The kilogram could not ask whether itself had changed. The supplement cannot ask whether its format exceeds its regulation. Pantone could not ask whether its vocabulary was owned. The boundary cannot ask whether the wine outside is the same as the wine inside — because &quot;the same&quot; is defined by the boundary. The question is foreclosed by the definition. The definition is foreclosed by the position. The position is the immunity.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-the-both.html">&larr; The Both</a><a href="essays.html">&uarr; Essays</a><a href="essay-the-boundary.html">The Boundary &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

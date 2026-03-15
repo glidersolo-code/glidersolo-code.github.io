@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vignette Chen The Clip &mdash; The Loop</title>
+    <meta name="description" content="Chen holds the pulse oximeter clip, turning it over in the fluorescent light of the lab. The red LED inside pulses faintly.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/vignette-chen-the-clip.html">
+    <meta property="og:title" content="Vignette Chen The Clip">
+    <meta property="og:description" content="Chen holds the pulse oximeter clip, turning it over in the fluorescent light of the lab. The red LED inside pulses faintly.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/vignette-chen-the-clip.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vignette Chen The Clip">
+    <meta name="twitter:description" content="Chen holds the pulse oximeter clip, turning it over in the fluorescent light of the lab. The red LED inside pulses faintly.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Vignette Chen The Clip",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/vignette-chen-the-clip.html",
+        "description": "Chen holds the pulse oximeter clip, turning it over in the fluorescent light of the lab. The red LED inside pulses faintly."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Vignette Chen The Clip</h1>
+            <div class="article-meta">Vignette</div>
+            <div class="article-body">
+<h1>The Clip</h1>
+<p>Chen holds the pulse oximeter clip, turning it over in the fluorescent light of the lab. The red LED inside pulses faintly.</p>
+<p>&quot;Two wavelengths,&quot; Chen says. &quot;660 and 940. Red and infrared. The ratio of absorption yields oxygen saturation. Elegant.&quot;</p>
+<p>Maren doesn&#x27;t look up from the calibration data. &quot;Elegant for whom?&quot;</p>
+<p>&quot;For anyone. The physics is universal — oxyhemoglobin and deoxyhemoglobin have different absorption spectra. The ratio is the measurement.&quot;</p>
+<p>&quot;The ratio is the measurement,&quot; Maren repeats. &quot;But melanin absorbs at 660. The same wavelength that&#x27;s supposed to detect deoxyhemoglobin.&quot;</p>
+<p>Chen sets the clip down. &quot;The algorithm accounts for tissue absorption. The pulsatile component isolates the arterial signal.&quot;</p>
+<p>&quot;The algorithm accounts for tissue absorption as observed in the calibration panel. Ten volunteers. Skin tones unrecorded. The pulsatile isolation works — Aoyagi&#x27;s insight was genuine. But the calibration that teaches the algorithm what the ratio <em>means</em> was learned on a narrow population and exported as universal.&quot;</p>
+<p>&quot;Bickler found up to 8-point overestimation at 80% saturation in dark skin.&quot;</p>
+<p>&quot;And Jubran documented the disparity in 1990. Confirmed it unchanged in 2022. Thirty-two years.&quot;</p>
+<p>&quot;How does the error propagate?&quot; Chen asks, though he already sees it. &quot;The 510(k) chain.&quot;</p>
+<p>&quot;Each new device demonstrates substantial equivalence to a predicate. The predicate carries the calibration assumption. The technology advances — better sensors, faster processing, sharper displays. The assumption travels inside the advancement.&quot;</p>
+<p>&quot;Like a gene that only expresses in certain environments.&quot;</p>
+<p>&quot;Like a gene that only expresses in certain <em>bodies</em>.&quot; Maren pulls up the Sjoding data. &quot;11.7% occult hypoxemia rate in Black patients. 3.6% in white patients. The oximeter says &#x27;fine&#x27; 3.25 times more often when it shouldn&#x27;t for Black patients.&quot;</p>
+<p>&quot;And the display doesn&#x27;t change.&quot;</p>
+<p>&quot;The display <em>can&#x27;t</em> change. There&#x27;s no mode for &#x27;this reading may be less accurate for this patient.&#x27; The number appears — 96, 94, 92 — in the same font, the same brightness, the same implied precision. The format performs universality. The physics delivers particularity.&quot;</p>
+<p>Chen stares at the clip. &quot;During COVID—&quot;</p>
+<p>&quot;Fawzy found 29% lower treatment recognition. One hour delay in identifying hypoxemia. The treatment protocol required documented hypoxemia. The document was the oximeter reading. The oximeter was reading the skin.&quot;</p>
+<p>&quot;The treatment reads the device. The device reads the skin. The skin was never what the device was calibrated to measure.&quot;</p>
+<p>Maren nods. &quot;Calibration-presumes-universality. The device works. That&#x27;s the deepest part of the concealment. It&#x27;s not a broken instrument. It&#x27;s an instrument that works with a particular accuracy that varies by a parameter the output doesn&#x27;t disclose.&quot;</p>
+<p>&quot;The error is silent.&quot;</p>
+<p>&quot;The error is <em>formatted</em> as accuracy. 96% looks like 96%. There is no visual distinction between a correct 96 and an incorrect 96. The specificity of the number — two digits, no uncertainty band, green on the display — performs a certainty that the calibration doesn&#x27;t support for all bodies.&quot;</p>
+<p>Chen picks up the clip again. &quot;The 2025 guidance requires 150 subjects, 25% dark skin.&quot;</p>
+<p>&quot;After forty-two years.&quot;</p>
+<p>&quot;After forty-two years,&quot; Chen agrees. He clips it to his own finger. The display reads 98. Green. Confident. Universal.</p>
+<p>Maren watches the number glow. &quot;The question the device never asks: whose finger was in the first clip?&quot;</p>
+<p>The number holds steady. Two wavelengths passing through skin that happened, this time, to match the calibration. The display does not know this. The display does not need to know. The display shows green.</p>
+            </div>
+            <div class="article-nav">
+                <a href="vignette-chen-the-clinically-proven.html">&larr; Vignette Chen The Clinically Proven</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="vignette-chen-the-clock.html">Vignette Chen The Clock &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

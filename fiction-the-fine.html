@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Fine &mdash; The Loop</title>
+    <meta name="description" content="Thomas gets a traffic ticket. Expired tag. $150. He pays it online. The case closes. He assumes the $150 reflects some calibration — the severity of the...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-fine.html">
+    <meta property="og:title" content="Fiction The Fine">
+    <meta property="og:description" content="Thomas gets a traffic ticket. Expired tag. $150. He pays it online. The case closes. He assumes the $150 reflects some calibration — the severity of the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-fine.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Fine">
+    <meta name="twitter:description" content="Thomas gets a traffic ticket. Expired tag. $150. He pays it online. The case closes. He assumes the $150 reflects some calibration — the severity of the...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Fine",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-fine.html",
+        "description": "Thomas gets a traffic ticket. Expired tag. $150. He pays it online. The case closes. He assumes the $150 reflects some calibration — the severity of the..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Fine</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXXXVIII: The Fine</h1>
+<h2>Piece #2131: The Ticket</h2>
+<p>Thomas gets a traffic ticket. Expired tag. $150. He pays it online. The case closes. He assumes the $150 reflects some calibration — the severity of the offense, the cost to the community, a penalty proportionate to the wrong.</p>
+<p>He reads the DOJ report on Ferguson, Missouri. A city of 21,135 people. In 2013, the municipal court issued 32,975 arrest warrants for nonviolent offenses. Three warrants per household. 1.5 cases per household. Court revenue: $3.09 million — 23% of the general fund.</p>
+<p>Thomas reads the Finance Director&#x27;s email to the City Manager: &quot;Court fees are anticipated to rise about 7.5%. I did ask the Chief if he thought the PD could deliver 10% increase. He indicated they could try.&quot;</p>
+<p>The Chief could try. The police department had a revenue target. The citation was a billing instrument. The courtroom was a collection office.</p>
+<h2>Piece #2132: The Cascade</h2>
+<p>Thomas traces the mechanism. A $150 fine becomes $250 with fees. The defendant cannot pay in full. The court date arrives. The defendant cannot take off work — missing a shift means not making rent. Failure to appear: a warrant. Additional fees. A second failure to appear: more fees. The defendant avoids the court entirely.</p>
+<p>The fine becomes a warrant. The warrant becomes an arrest. The arrest becomes jail. Time in jail costs the job. Job loss prevents payment. The cycle restarts at a higher amount.</p>
+<p>Thomas reads the national data. People leaving prison owe an average of $13,607 in fines and fees. Unpaid court debt in the United States exceeds $26 billion. Nearly half of incarcerated people have incomes below $10,000. The Supreme Court ruled in <em>Bearden v. Georgia</em> (1983) that jailing someone for inability to pay violates the Fourteenth Amendment. The practice continues.</p>
+<p>He writes: the fine punishes the offense. The inability to pay the fine punishes the poverty. The system cannot distinguish between the two.</p>
+<h2>Piece #2133: The Numbers</h2>
+<p>Thomas reads the racial data from Ferguson. 67% of the city is Black. 92% of arrest warrants were issued to Black residents. 96% of those arrested solely for outstanding municipal warrants were Black. Black defendants were 68% less likely to have cases dismissed. 50% more likely to have cases lead to an arrest warrant.</p>
+<p>Arch City Defenders documented the pattern across the St. Louis region — not one city but dozens, each running the same fiscal extraction through the judicial format. Seven federal class action lawsuits. $20.28 million in settlements.</p>
+<p>The DOJ found a &quot;pattern of racially discriminatory practices&quot; rooted in the city&#x27;s &quot;dependence on the criminal justice system to raise revenue.&quot; The word &quot;dependence&quot; is precise. The budget depended on the citations. The citations depended on the police. The police depended on the neighborhoods. The neighborhoods were Black.</p>
+<h2>Piece #2134: The Budget Line</h2>
+<p>Thomas looks at the budget documents. A revenue line item: &quot;Court Fines and Fees.&quot; Projected to increase. Year over year. The projection is a target. The target is an instruction. The instruction reaches the police department as a quota that is never called a quota.</p>
+<p>The courtroom performs individual adjudication. The judge hears the case. The defendant stands before the bench. The format is judicial — due process, individual consideration, proportionate response. But the volume makes individual consideration impossible. Ferguson&#x27;s municipal court: 12,108 cases in 36 three-hour sessions. That is 336 cases per session. 112 per hour. One every 32 seconds.</p>
+<p>One every 32 seconds. The format of individual adjudication. The pace of batch processing. The courtroom performs justice. The courtroom processes revenue.</p>
+<h2>Piece #2135: The Dollar Sign</h2>
+<p>Thomas adds the fifth entry to his dollar-format series.</p>
+<p>Property tax: the dollar amount is a date. The assessed &quot;value&quot; encodes when the owner bought the property, not what it is worth. Bail: the dollar amount is a wealth test. The bail figure performs risk assessment while measuring ability to pay. Tipping: the dollar amount is a paycheck. The &quot;gift&quot; is 71% of the minimum wage. Chargemaster: the dollar amount is a negotiating position. The &quot;price&quot; bears no relation to cost and applies in full only to those who cannot negotiate it down. Municipal fine: the dollar amount is a budget line item. The &quot;sanction&quot; for the offense is the revenue for the municipality.</p>
+<p>Five systems. Five dollar amounts. Each performs as an individual calculation — an assessment, a judgment, a gratuity, a price, a penalty — while executing an institutional function the format does not disclose. The dollar sign is the common format. It performs objectivity. It performs precision. It performs that someone, somewhere, calculated this number for this person for this reason.</p>
+<p>One hundred and five species. The dollar sign performs everything except what the dollar amount is.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-filter.html">&larr; Fiction The Filter</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-firmness.html">Fiction The Firmness &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

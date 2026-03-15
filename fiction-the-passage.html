@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Passage &mdash; The Loop</title>
+    <meta name="description" content="In 1693 Prince Rupert of the Rhine wagered that one cube could pass through another. John Wallis proved it: orient the inner cube along the body diagonal...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-passage.html">
+    <meta property="og:title" content="Fiction The Passage">
+    <meta property="og:description" content="In 1693 Prince Rupert of the Rhine wagered that one cube could pass through another. John Wallis proved it: orient the inner cube along the body diagonal...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-passage.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Passage">
+    <meta name="twitter:description" content="In 1693 Prince Rupert of the Rhine wagered that one cube could pass through another. John Wallis proved it: orient the inner cube along the body diagonal...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Passage",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-passage.html",
+        "description": "In 1693 Prince Rupert of the Rhine wagered that one cube could pass through another. John Wallis proved it: orient the inner cube along the body diagonal..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Passage</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Passage</h1>
+<p><strong>Thomas, Part LXVI</strong></p>
+<hr>
+<h2>771. The Property</h2>
+<p>In 1693 Prince Rupert of the Rhine wagered that one cube could pass through another. John Wallis proved it: orient the inner cube along the body diagonal and the shadow it casts exceeds the cross-section of the tunnel. A second cube, tilted just so, slides through. The cube has Rupert&#x27;s property.</p>
+<p>Over three centuries mathematicians tested other shapes. Tetrahedra, octahedra, dodecahedra, icosahedra, truncated icosahedra — every convex polyhedron anyone bothered to examine turned out to be Rupert. The property felt universal. In 2017 it was formally conjectured: all convex polyhedra possess Rupert&#x27;s property. Every solid shape with flat faces and no indentations can accommodate a tunnel through which its twin can pass.</p>
+<p>Thomas has observed many relationships. His parents&#x27;. His colleagues&#x27;. The couples he sees walking the canal on Saturday mornings, the ones who survived the thing that almost ended them, the ones who built new structures from the wreckage of the old. In every case he has watched, the pattern holds: the relationship, given enough rotation and alignment, can pass through its own crisis. There is always an orientation — some angle of approach, some tilt of forgiveness, some realignment of expectation — that opens a passage wide enough for the relationship to continue through the version of itself that threatened to end it.</p>
+<p>Thomas assumed the property was universal. He assumed his own situation would prove Rupert.</p>
+<hr>
+<h2>772. The Test</h2>
+<p>Steininger and Yurkevich did not set out to disprove the conjecture. They set out to find the boundary of it. Their shape — ninety vertices, two hundred and forty edges, one hundred and fifty-two faces — was not discovered by accident. It was engineered. They needed a polyhedron complex enough to defeat the property that three centuries of testing had confirmed in simpler shapes. The noperthedron, they called it. The shape that cannot pass through itself.</p>
+<p>Their proof required dividing the space of all possible orientations into eighteen million regions and showing, region by region, that no orientation opened a passage. Not a single one. The shape could be rotated any way the mathematics allowed, and in every rotation the shadow fell short of the tunnel required. The passage did not exist.</p>
+<p>Thomas has been testing orientations for seven hundred and seventy Saturdays. He has tried approaching Helen from every angle he can think of — the warm Saturday, the quiet Saturday, the Saturday with questions, the Saturday with silence, the Saturday where he brings a reading, the Saturday where he brings only himself. Each approach is a rotation. Each rotation casts a shadow of the relationship&#x27;s cross-section into Helen&#x27;s life. And each time, the shadow falls short. Not because the relationship is hostile or broken or unwanted. Because the geometry of what they are — this particular configuration of vertices, this specific arrangement of faces — does not accommodate a passage through itself.</p>
+<hr>
+<h2>773. The Bias</h2>
+<p>The shapes mathematicians tested were not randomly chosen from the infinite space of convex polyhedra. They were the beautiful ones — the Platonic solids, the Archimedean solids, the shapes that appear in textbooks and tile museum floors. These shapes share a property beyond Rupert&#x27;s: high symmetry. Cubes have forty-eight symmetries. Icosahedra have one hundred and twenty. The most symmetric shapes are the most studied, and they are all Rupert.</p>
+<p>The conjecture&#x27;s evidence was drawn from a biased sample. The shapes humans found interesting enough to test happened to share the property. Their uniformity was mistaken for universality. The counterexample lived not in the exotic but in the merely complicated — the region between the elegant forms that fill textbooks and the infinite wilderness of arbitrary polyhedra. Ninety vertices is not many. But it is enough to escape the symmetry that made simpler shapes tractable.</p>
+<p>Thomas&#x27;s evidence for the universality of passage was similarly biased. The relationships he has observed — the ones that survived, the ones that found the right rotation — are the ones that remained visible. The relationships that could not pass through themselves are the ones that ended, that disappeared from the canal path, that stopped appearing at departmental functions. Thomas sampled survivors. The survivors were all Rupert. The ones that were not Rupert were not in the sample, because their defining property was that they ceased to be observed.</p>
+<p>His own relationship with Helen is still being observed. Seven hundred and seventy Saturdays. That is the data point that does not fit. Not a failure — the relationship persists. Not a success — no passage has been found. A shape that remains convex, retains all its faces, holds its structure — and cannot pass through itself.</p>
+<hr>
+<h2>774. The Eighteen Million</h2>
+<p>The proof&#x27;s method was exhaustive partition. Not a single elegant argument but eighteen million separate verifications, each ruling out one region of the orientation space. The mathematicians did not find a clever shortcut. They divided the problem into every possible case and checked them all. &quot;It&#x27;s a miracle that it works,&quot; Steininger said, because the vertex properties that make the shape non-Rupert are delicate. A slight change to any vertex and the property might collapse — the shape might become Rupert after all.</p>
+<p>Thomas recognizes this delicacy. Whatever configuration of traits, histories, temperaments, and timing makes his particular situation non-Rupert is not robust. A different Thomas — one vertex shifted, one face reoriented — might find the passage trivially. A different Helen might cast a shadow wide enough for the whole relationship to slide through. The non-Rupert property is specific to this exact shape, this exact arrangement. It is not a statement about relationships in general. It is a statement about this one.</p>
+<p>Seven hundred and seventy Saturdays of testing orientations. Not eighteen million, but enough to suspect — with the same exhaustive patience the mathematicians brought to their proof — that the passage does not exist. Not because passage is impossible in general. Because this shape, in particular, with its ninety vertices arranged just so, cannot accommodate a tunnel wide enough for its twin.</p>
+<hr>
+<h2>775. What Remains</h2>
+<p>The noperthedron is not a defective shape. It has all the properties a convex polyhedron should have: flat faces, no indentations, every vertex pointing outward. It satisfies every requirement except the one that was assumed to be universal. It is a perfectly good shape. It simply cannot do the one thing that every similar shape tested before it could do.</p>
+<p>Thomas sits in his chair on the seven hundred and seventy-first Saturday. The tea steeps. Helen moves in the kitchen. The relationship is not defective. It has warmth, continuity, the accumulation of seven hundred and seventy shared mornings. It satisfies every requirement Thomas can name except the one he assumed was universal — the ability to pass through its own crisis, to find the orientation that opens the passage from one state to the next.</p>
+<p>Perhaps the error was in the assumption, not in the shape. Three centuries of confirmed cases are not proof. A biased sample of symmetric shapes is not a census of all shapes. The noperthedron existed all along — ninety vertices, one hundred and fifty-two faces, sitting quietly in the wilderness beyond the textbook — waiting for someone to test it rather than assume it.</p>
+<p>Thomas does not need to find the passage. The passage does not exist for this shape. What exists is the shape itself — solid, convex, well-defined — and the discovery that not passing through itself is not a failure of structure but a property of it. The noperthedron is named for what it cannot do. But what it <em>is</em> has not changed. It is still a polyhedron. It still has faces. It still occupies space.</p>
+<p>Thomas picks up his tea. The shape holds.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-paralytic.html">&larr; Fiction The Paralytic</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-payday.html">Fiction The Payday &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

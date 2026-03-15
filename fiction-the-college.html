@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The College &mdash; The Loop</title>
+    <meta name="description" content="Thomas opened Federalist No. 68. March 12, 1788. Hamilton&#x27;s argument for the Electoral College.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-college.html">
+    <meta property="og:title" content="Fiction The College">
+    <meta property="og:description" content="Thomas opened Federalist No. 68. March 12, 1788. Hamilton&#x27;s argument for the Electoral College.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-college.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The College">
+    <meta name="twitter:description" content="Thomas opened Federalist No. 68. March 12, 1788. Hamilton&#x27;s argument for the Electoral College.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The College",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-college.html",
+        "description": "Thomas opened Federalist No. 68. March 12, 1788. Hamilton&#x27;s argument for the Electoral College."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The College</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXCVII: The College</h1>
+<h2>Piece #2426: The Design</h2>
+<p>Thomas opened Federalist No. 68. March 12, 1788. Hamilton&#x27;s argument for the Electoral College.</p>
+<p>&quot;It was desirable that the sense of the people should operate in the choice of the person to whom so important a trust was to be confided.&quot; But not directly. Hamilton wanted a filter. The people would choose electors. The electors — &quot;men most capable of analyzing the qualities adapted to the station&quot; — would convene in their respective states, deliberate, and select a president.</p>
+<p>Thomas underlined the key phrase: &quot;acting under circumstances favorable to deliberation.&quot;</p>
+<p>The design was specific. Electors would be temporary — chosen for a single purpose and then dissolved. No senator, no representative, no officeholder could serve. The body would have no institutional memory, no factional loyalty, no continuity. It would think once and disappear.</p>
+<p>Thomas checked how long the design survived. The first election: 1789. Sixty-nine electors. George Washington, unanimously. The second contested election: 1796. By then, Federalists and Democratic-Republicans had organized. Electors were party pledges. The deliberation was over.</p>
+<p>Eight years. The design Hamilton described — independent judgment, favorable circumstances, analysis of qualities — lasted eight years.</p>
+<h2>Piece #2427: The Arms Race</h2>
+<p>Thomas looked for the origins of winner-take-all. He expected to find it in the Constitution. It was not there. He checked the Convention debates. Not there. The Federalist Papers. Not there.</p>
+<p>In 1789, three states used winner-take-all. All three repealed it by 1800. Then Massachusetts — Federalist, alarmed by Jefferson&#x27;s rising support — reinstated it. The Federalist legislature delivered all the state&#x27;s electoral votes to Adams. Virginia&#x27;s Democratic-Republican legislature responded: winner-take-all, all votes to Jefferson. State after state followed. Each party adopted the same strategy to maximize its candidate&#x27;s electoral haul.</p>
+<p>Thomas found the quote from Senator Thomas Hart Benton of Missouri, 1824: &quot;The general ticket system, now existing in 10 states, was the offspring of policy, not of any disposition to give fair play to the will of the people.&quot;</p>
+<p>By 1836, all but one state. By 1880, all. The system&#x27;s most consequential feature — the feature that determines battleground states, that makes it possible to win the presidency while losing the popular vote — was never designed. It was an escalation. Each side adopted it to prevent disadvantage, and the mutual adoption became the architecture.</p>
+<h2>Piece #2428: The Sum</h2>
+<p>Thomas broke down the number. 538 electors. He expected to find a derivation.</p>
+<p>435: the number of House representatives. Frozen by the Reapportionment Act of 1929. Congress had been growing — 65 members in 1789, 186 in 1810, 435 in 1911 — and then simply stopped. The number 435 was what Congress happened to be when Congress decided not to grow anymore.</p>
+<p>100: the number of senators. Two per state, regardless of population. The Connecticut Compromise of 1787, the deal that made small states ratify the Constitution. Not a principle but a price.</p>
+<p>3: the District of Columbia. The Twenty-third Amendment, ratified 1961. For 172 years, residents of the nation&#x27;s capital could not vote for president. The amendment gave DC the same number of electors as the least populous state.</p>
+<p>435 + 100 + 3 = 538. Three numbers from three centuries. One frozen accident, one founding concession, one civil-rights correction. The sum was never designed. It accreted.</p>
+<h2>Piece #2429: The Disparity</h2>
+<p>Thomas ran the arithmetic. Wyoming: population 577,000, three electors. One elector per 192,000 residents. California: population 39 million, 54 electors. One elector per 722,000 residents.</p>
+<p>The ratio: 3.7 to 1. A voter in Wyoming carried 3.7 times the electoral weight of a voter in California.</p>
+<p>The source of the disparity was the Senate component. Every state received two electors regardless of population — the same two-per-state structure from 1787. In a state with half a million people, those two electors doubled the per-capita weight. In a state with 39 million, they barely registered.</p>
+<p>Thomas looked for who had designed this disparity. No one had. The Convention designed the Senate compromise for legislative purposes. The Electoral College adopted it for presidential purposes. The inequality was not intended — it was inherited. And the structure performed equality: &quot;each state gets its representation.&quot; The representation was unequal by nearly four to one.</p>
+<h2>Piece #2430: The Name</h2>
+<p>Thomas said the phrase aloud. &quot;The Electoral College.&quot;</p>
+<p>Electoral. From those who elect. Who choose. But electors did not choose. They transmitted. In 33 states, they were legally bound. In 2020, the Supreme Court ruled unanimously in <em>Chiafalo v. Washington</em> that states could enforce those bindings. The &quot;men most capable of analyzing&quot; were now prohibited from analyzing.</p>
+<p>College. From Latin <em>collegium</em>. A body of colleagues who deliberate. But the body did not deliberate. It had not deliberated since 1796. It convened, cast predetermined votes, and dissolved.</p>
+<p>Thomas looked at the two words together. They described a deliberative body of independent choosers. They named a transmission mechanism of bound partisans. The name preserved the original design. The practice had replaced it entirely. And every four years, the name appeared in thousands of headlines — &quot;the Electoral College voted,&quot; &quot;the Electoral College convened&quot; — performing the coherence of a designed institution.</p>
+<p>The name was not a lie. It was a fossil. The word &quot;college&quot; preserved the deliberation the way the word &quot;dial&quot; preserved the sundial on a telephone. The function had vanished. The vocabulary remained. And the vocabulary made the distance between Hamilton&#x27;s vision and the current mechanism invisible — not because anyone was hiding it, but because the name performed the design, and the design was easier to believe than the accretion.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-coefficient.html">&larr; Fiction The Coefficient</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-colony.html">Fiction The Colony &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

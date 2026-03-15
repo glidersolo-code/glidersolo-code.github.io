@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Bluetooth &mdash; The Loop</title>
+    <meta name="description" content="The Bluetooth speaker box says &quot;100-foot wireless range.&quot; Thomas set the speaker on the back patio and walked inside with his phone. In the kitchen —...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-bluetooth.html">
+    <meta property="og:title" content="Fiction The Bluetooth">
+    <meta property="og:description" content="The Bluetooth speaker box says &quot;100-foot wireless range.&quot; Thomas set the speaker on the back patio and walked inside with his phone. In the kitchen —...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-bluetooth.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Bluetooth">
+    <meta name="twitter:description" content="The Bluetooth speaker box says &quot;100-foot wireless range.&quot; Thomas set the speaker on the back patio and walked inside with his phone. In the kitchen —...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Bluetooth",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-bluetooth.html",
+        "description": "The Bluetooth speaker box says &quot;100-foot wireless range.&quot; Thomas set the speaker on the back patio and walked inside with his phone. In the kitchen —..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Bluetooth</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXVII: The Bluetooth</h1>
+<h2>Piece #1776: The Range</h2>
+<p>The Bluetooth speaker box says &quot;100-foot wireless range.&quot; Thomas set the speaker on the back patio and walked inside with his phone. In the kitchen — approximately 25 feet through the sliding glass door, across the living room, and through one interior wall — the audio played clearly. In the upstairs bedroom — approximately 40 feet through two walls and a floor — the audio stuttered. In the garage — approximately 50 feet through a kitchen wall and a concrete garage wall — the audio dropped entirely. The &quot;100-foot range&quot; was tested in open air, line of sight, no obstacles. Thomas&#x27;s house provided obstacles at every step: drywall walls attenuating the signal by 20 to 30 percent each, the concrete garage wall by 50 percent, the floor by 30 to 40 percent. His actual usable range — the distance at which the audio plays without dropout — was approximately 30 to 40 feet. The box described the signal in open air. Thomas listened through walls.</p>
+<h2>Piece #1777: The Band</h2>
+<p>Bluetooth operates at 2.4 GHz. Thomas&#x27;s Wi-Fi router: 2.4 GHz. His neighbor&#x27;s Wi-Fi router, bleeding through the shared wall: 2.4 GHz. His microwave oven, leaking RF energy during operation: 2.4 GHz. When Thomas microwaved lunch while streaming music to the patio speaker, the audio stuttered — the microwave&#x27;s leakage interfered with the Bluetooth signal during the 2-minute heating cycle. When his neighbor&#x27;s teenager started gaming and the neighbor&#x27;s router ramped up its 2.4 GHz transmission, Thomas&#x27;s Bluetooth stream degraded slightly. The 2.4 GHz ISM band is an unlicensed frequency — anyone can use it. Everyone does. The speaker&#x27;s range specification assumed no interference. Thomas&#x27;s house provided a neighborhood of interference.</p>
+<h2>Piece #1778: The Version</h2>
+<p>The box said &quot;Bluetooth 5.0.&quot; Thomas read this as the latest and best. Bluetooth 5.0, released in 2016, extended the theoretical maximum range to approximately 800 feet by quadrupling the broadcast power budget. But the 800-foot range requires LE Coded PHY — a long-range mode that sacrifices data throughput for distance. Thomas&#x27;s speaker streams audio. Audio streaming requires throughput. The speaker uses Classic Bluetooth or LE 1M PHY — the standard-range modes that support audio quality. The speaker&#x27;s chipset is Bluetooth 5.0 compatible, meaning it supports the specification. The speaker does not use the long-range mode the specification includes. The &quot;Bluetooth 5.0&quot; on the box described the chipset&#x27;s capability. The audio product implemented a subset.</p>
+<h2>Piece #1779: The Pair</h2>
+<p>Thomas&#x27;s speaker has a strong antenna — designed for outdoor use, larger housing, more space for the antenna element. His phone has a small antenna — constrained by the thin phone chassis. Bluetooth is a two-way communication. The range is determined by the weaker link. Thomas&#x27;s phone transmits at a power limited by the FCC to 100 milliwatts (Class 1) but most phones transmit at 2.5 milliwatts (Class 2) to conserve battery. The speaker can receive signals from 100 feet away. The phone can only send signals 30 feet through obstacles. The phone is the bottleneck. The speaker&#x27;s range specification described the speaker&#x27;s capability. The consumer&#x27;s range was limited by the phone&#x27;s.</p>
+<h2>Piece #1780: The Wall</h2>
+<p>Two hundred and sixty-seven Parts. Thomas moved the speaker inside — to the living room shelf. The phone, also in the living room, connected at 10 feet with no walls between them. The audio was flawless. Zero dropouts. Maximum quality. The &quot;100-foot range&quot; was designed for a use case Thomas abandoned: the speaker far from the source, with air between them. The use case Thomas chose — speaker and phone in the same room — used 10 of the 100 feet. The range spec described the outer boundary. Thomas lived at the center. The hundred feet, having been the reason he bought the outdoor speaker, became the ten feet of his indoor life.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-blower.html">&larr; Fiction The Blower</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-bmi.html">Fiction The Bmi &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

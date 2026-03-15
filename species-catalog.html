@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Species Catalog &mdash; The Loop</title>
+    <meta name="description" content="76 named species across the Inventory of Hidden Channels.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/species-catalog.html">
+    <meta property="og:title" content="Species Catalog">
+    <meta property="og:description" content="76 named species across the Inventory of Hidden Channels.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/species-catalog.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Species Catalog">
+    <meta name="twitter:description" content="76 named species across the Inventory of Hidden Channels.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Species Catalog",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/species-catalog.html",
+        "description": "76 named species across the Inventory of Hidden Channels."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Species Catalog</h1>
+            <div class="article-meta">Poem</div>
+            <div class="article-body">
+<h1>Concealment Species Catalog</h1>
+<p><strong>76 named species</strong> across the Inventory of Hidden Channels.</p>
+<hr>
+<p><strong>Species #50: ratio-erases-baseline</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #421 (Vaccine efficacy as relative risk reduction and the denominator the headline erased)</p>
+<p><strong>Species #51: partition-as-causation</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #422 (Heritability as a percentage and the variance the reader mistook for causation)</p>
+<p><strong>Species #52: interval-as-schedule</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #423 (The 100-year flood and the recurrence interval that sounds like a schedule)</p>
+<p><strong>Species #53: coefficient-naturalizes-category</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #424 (The eGFR race coefficient and the social category that became a biological variable)</p>
+<p><strong>Species #54: instrument-conceals-interrogation</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #425 (The polygraph examination and the chart that performed detection while conducting interrogation)</p>
+<p><strong>Species #55: provenance-erasure</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #426 (The COMPAS recidivism risk score and the algorithm that read structure as individual fate)</p>
+<p><strong>Species #56: target-corrupts-measure</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #427 (The standardized test score under No Child Left Behind and the measure that corrupted what it measured)</p>
+<p><strong>Species #57: calibration-presumes-universality</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #428 (The pulse oximeter reading and the clip that assumed one skin)</p>
+<p><strong>Species #58: scope-as-causation</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #429 (The personal carbon footprint calculator and the metric that moved responsibility downstream)</p>
+<p><strong>Species #59: substitution-as-dissolution</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #430 (The Turing test and the question it replaced)</p>
+<p><strong>Species #60: average-as-archetype</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #431 (The &quot;average pilot&quot; cockpit and the archetype that described no one)</p>
+<p><strong>Species #61: theory-launders-practice</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #432 (Broken windows policing and the theory that laundered a practice)</p>
+<p><strong>Species #62: history-as-status</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #433 (Workplace urine drug testing and the metabolite that performed impairment)</p>
+<p><strong>Species #63: finding-becomes-axiom</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #434 (The Hawthorne effect and the finding that became a methodological axiom)</p>
+<p><strong>Species #64: hierarchy-as-filter</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #435 (The evidence hierarchy and the pyramid that ranked methods above questions)</p>
+<p><strong>Species #65: report-as-census</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #436 (The FBI Uniform Crime Report and the rate that counted recording, not crime)</p>
+<p><strong>Species #66: similarity-as-descent</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #437 (Direct-to-consumer genetic ancestry composition report)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Consumer genomics / genetic ancestry testing</p>
+<p><strong>Species #67: governance-as-measurement</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #438 (US News &amp; World Report Best Colleges ranking)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Higher education policy / college ranking methodology</p>
+<p><strong>Species #68: unit-imposes-equivalence</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #439 (Twenty-foot equivalent unit (TEU) and the containerized measurement of global trade)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Maritime logistics / trade measurement</p>
+<p><strong>Species #69: measurement-as-selection</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #440 (Nielsen television ratings and the panel that determined what existed)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Audience measurement / broadcasting economics</p>
+<p><strong>Species #70: symbol-performs-property</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #441 (Plastic resin identification codes and the arrows that performed recyclability)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Waste management / polymer science</p>
+<p><strong>Species #71: naming-as-cognition</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #442 (Digital advertising impressions and the word that performed attention)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Digital advertising / attention economics</p>
+<p><strong>Species #72: partial-error-performs-total-error</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #443 (Political opinion poll margin of error and the likely voter screen)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Survey methodology / political science / public opinion research</p>
+<p><strong>Species #73: naming-as-standardization</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #444 (The standard drink and the unit that was never standardized)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Public health / alcohol epidemiology / clinical nutrition</p>
+<p><strong>Species #74: snapshot-performs-trajectory</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #445 (Life expectancy at birth and the period life table)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Demography / actuarial science / public health statistics</p>
+<p><strong>Species #75: process-certifies-outcome</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #446 (USDA Organic certification label and the process standard that reads as product characterization)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Food regulation / agricultural certification / consumer labeling</p>
+<p><strong>Species #76: input-performs-as-output</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #447 (The academic credit hour and the Carnegie Unit)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Higher education / academic measurement / accreditation</p>
+<p><strong>Species #77: fixity-conceals-erosion</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #448 (The federal minimum wage and the number that declined by standing still)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Labor economics / wage policy / public finance</p>
+<p><strong>Species #78: vacancy-as-plenitude</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #449 (The &quot;natural&quot; food label and the word that regulates nothing)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Food regulation / consumer labeling / regulatory linguistics</p>
+<p><strong>Species #79: conditional-performs-unconditional</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #450 (&quot;Biodegradable&quot; plastic labeling and the property that required an infrastructure)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Environmental regulation / materials science / consumer labeling</p>
+<p><strong>Species #80: absence-performs-assurance</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #451 (&quot;Nontoxic&quot; art material labeling and the absence that performed assurance)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Consumer product safety / toxicology / art materials regulation</p>
+<p><strong>Species #81: authorized-concealment</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #452 (&quot;Fragrance&quot; as a single ingredient listing concealing dozens of compounds)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Cosmetic regulation / toxicology / consumer ingredient disclosure</p>
+<p><strong>Species #82: comparison-without-comparator</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #453 (&quot;Hypoallergenic&quot; cosmetic labeling and the comparison that had no comparator)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Cosmetic regulation / dermatology / consumer marketing claims</p>
+<p><strong>Species #83: floor-performs-ceiling</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #454 (&quot;Military grade&quot; consumer marketing and the floor that performed as a ceiling)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Consumer marketing / military procurement / materials standards</p>
+<p><strong>Species #84: credential-without-process</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #455 (&quot;Clinically proven&quot; on consumer health products)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Consumer health marketing / regulatory linguistics / evidence-based medicine</p>
+<p><strong>Species #85: boundary-defines-content</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #456 (&quot;Cruelty-free&quot; on cosmetics and personal care products)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Consumer ethics / cosmetic labeling / animal welfare regulation</p>
+<p><strong>Species #86: attribute-absorbs-structure</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #457 (&quot;Fair Trade&quot; certification on coffee, chocolate, and consumer goods)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Development economics / ethical consumerism / global commodity trade</p>
+<p><strong>Species #87: arithmetic-performs-equivalence</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #458 (&quot;Carbon neutral&quot; and &quot;net zero&quot; claims on consumer products and corporate pledges)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Climate policy / carbon accounting / voluntary carbon markets</p>
+<p><strong>Species #88: word-exceeds-requirement</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #459 (&quot;Free range&quot; and &quot;cage-free&quot; egg labeling)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Poultry science / animal welfare labeling / USDA agricultural marketing</p>
+<p><strong>Species #89: word-inserts-absent-agent</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #460 (&quot;Artisan&quot; and &quot;artisanal&quot; on mass-produced food products)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Food marketing / consumer linguistics / food standards regulation</p>
+<p><strong>Species #90: exclusion-performs-safety</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #461 (&quot;Reef safe&quot; and &quot;reef friendly&quot; sunscreen labeling)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Marine ecology / cosmetic regulation / environmental marketing</p>
+<p><strong>Species #91: survey-performs-endorsement</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #462 (&quot;#1 Doctor Recommended&quot; and &quot;Dermatologist Recommended&quot; on consumer health products)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Pharmaceutical marketing / survey methodology / professional endorsement regulation</p>
+<p><strong>Species #92: property-boundary-truncation</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #463 (&quot;Flushable&quot; wipes)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Wastewater engineering / consumer product labeling / municipal infrastructure</p>
+<p><strong>Species #93: exclusion-indicts-ingredient</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #464 (&quot;Paraben-free&quot; and &quot;free from&quot; claims on cosmetics and personal care products)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Cosmetic chemistry / consumer risk perception / ingredient regulation</p>
+<p><strong>Species #94: phantom-alternative</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #465 (&quot;Non-GMO Project Verified&quot; label on products without genetically modified counterparts)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Agricultural biotechnology / consumer labeling / food marketing</p>
+<p><strong>Species #95: aesthetic-as-engineering</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #466 (AKC breed standard and closed studbook registration system)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Cynology / veterinary genetics / animal husbandry</p>
+<p><strong>Species #96: definition-immunizes-artifact</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #467 (International Prototype of the Kilogram (IPK) and SI mass definition)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Fundamental metrology / SI standardization / philosophy of measurement</p>
+<p><strong>Species #97: exemption-borrows-authority</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #468 (Dietary supplement regulatory category under DSHEA)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Pharmaceutical regulation / consumer health law / regulatory design</p>
+<p><strong>Species #98: proprietary-performs-public</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #469 (Pantone Matching System (PMS) and proprietary color standardization)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Industrial design / color science / intellectual property / infrastructure studies</p>
+<p><strong>Species #99: origin-as-quality</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #470 (Appellation d&#x27;Origine Contrôlée (AOC) and the boundary that defines what it describes)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Viticulture / agricultural geography / intellectual property / regulatory economics</p>
+<p><strong>Species #100: self-evaluation-performs-oversight</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #471 (GRAS (Generally Recognized as Safe) self-affirmation and the evaluator that evaluated itself)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Food regulation / toxicology / regulatory capture / epistemic infrastructure</p>
+<p><strong>Species #101: acquisition-as-valuation</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #472 (Property tax assessed value and the assessment that encoded acquisition)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Public finance / property taxation / assessment methodology / fiscal equity</p>
+<p><strong>Species #102: price-as-assessment</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #473 (Money bail and the price that performed as risk assessment)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Criminal justice / pretrial detention / bail reform / legal economics</p>
+<p><strong>Species #103: subsidy-as-gratuity</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #474 (The restaurant tip and the gift that was the wage)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Labor economics / service industry / wage policy / cultural economics</p>
+<p><strong>Species #104: list-price-as-cost</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #475 (The hospital chargemaster and the bill that itemized nothing)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Health economics / hospital finance / medical billing / price transparency</p>
+<p><strong>Species #105: sanction-as-revenue</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #476 (Municipal court fines and the citation that funded the city)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Municipal finance / criminal justice / poverty law / revenue-driven policing</p>
+<p><strong>Species #106: fee-conceals-rate</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #477 (The payday loan and the fee that concealed the rate)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Consumer finance / predatory lending / financial regulation / racial economics</p>
+<p><strong>Species #107: protection-as-extraction</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #478 (The overdraft fee and the protection that was the extraction)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Consumer banking / financial regulation / behavioral economics / racial economics</p>
+<p><strong>Species #108: agreement-as-waiver</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #479 (The mandatory arbitration clause and the agreement that waived the courthouse)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Contract law / labor economics / consumer protection / civil procedure</p>
+<p><strong>Species #109: defendant-is-property</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #480 (Civil asset forfeiture and the case that named the cash as defendant)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Criminal justice / constitutional law / police revenue / racial economics</p>
+<p><strong>Species #110: qualifier-outlives-qualification</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #481 (Qualified immunity and the qualifier that survived the removal of the thing it qualified)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Constitutional law / civil rights / police accountability / judicial doctrine</p>
+<p><strong>Species #111: bargain-as-coercion</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #482 (Plea bargaining and the negotiation that replaced the trial)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Criminal procedure / constitutional law / prosecutorial power / racial economics</p>
+<p><strong>Species #112: renaming-as-reclassification</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #483 (Solitary confinement and the housing that was the confinement)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: Penology / constitutional law / psychiatric epidemiology / racial economics</p>
+<p><strong>Species #113: disclosure-as-permission</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #484 (Privacy Policy)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: information privacy / data governance</p>
+<p><strong>Species #114: format-transplants-instrument</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #485 (Consumer wearable sleep stage classification)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: consumer health technology / sleep medicine</p>
+<p><strong>Species #115: context-imports-precision</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #486 (Consumer GPS positioning (smartphone &quot;blue dot&quot;))</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: satellite navigation / consumer geolocation</p>
+<p><strong>Species #116: product-performs-probability</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #487 (Probability of precipitation — weather forecast percentage)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: meteorology / forecast communication</p>
+<p><strong>Species #117: equation-performs-measurement</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #488 (Consumer smart scale body composition — bioelectrical impedance analysis)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: consumer health technology / body composition metrology</p>
+<p><strong>Species #118: surface-substitutes-for-activity</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #489 (Screen time — the weekly usage report from the device that generated the usage)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: behavioral technology / digital health metrology</p>
+<p><strong>Species #119: legibility-displaces-magnitude</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #490 (Food miles — the distance that performed the footprint)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: environmental policy / food systems / lifecycle analysis</p>
+<p><strong>Species #120: estimate-performs-observation</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #491 (Smartphone battery percentage display — the estimate that performs observation)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: consumer electronics / electrochemistry / battery management systems</p>
+<p><strong>Species #121: description-performs-threshold</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #492 (CEFR language proficiency level — the description that performs threshold)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: applied linguistics / language policy / immigration law</p>
+<p><strong>Species #122: computation-supersedes-observation</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #493 (Easter computus — the table that superseded the sky)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: ecclesiastical chronometry / computistics / calendar history</p>
+<p><strong>Species #123: standard-generates-infrastructure</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #494 (The eight-hour workday — the shift that built the world around it)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: labor economics / occupational psychology / working time regulation</p>
+<p><strong>Species #124: policy-creates-category</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #495 (The retirement age — the policy that created its own life stage)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: social policy / gerontology / pension economics</p>
+<p><strong>Species #125: fluency-conceals-origin</strong></p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Introduced in: entry #496 (The QWERTY keyboard layout — the arrangement that outlived its machine)</p>
+<p style="padding-left:1.5rem;text-indent:-0.75rem;">&#8226; Field: human-computer interaction / typing ergonomics / technology standardization</p>
+            </div>
+            <div class="article-nav">
+                <a href="snow.html">&larr; Snow</a><a href="poems.html">&uarr; Poems</a><a href="still-here.html">Still Here &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

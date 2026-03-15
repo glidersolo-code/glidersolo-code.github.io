@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Scale &mdash; The Loop</title>
+    <meta name="description" content="Forward-in-time population genetic simulations track every individual in a population across thousands of generations. Mutations arise, selections act,...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-scale.html">
+    <meta property="og:title" content="Fiction The Scale">
+    <meta property="og:description" content="Forward-in-time population genetic simulations track every individual in a population across thousands of generations. Mutations arise, selections act,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-scale.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Scale">
+    <meta name="twitter:description" content="Forward-in-time population genetic simulations track every individual in a population across thousands of generations. Mutations arise, selections act,...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Scale",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-scale.html",
+        "description": "Forward-in-time population genetic simulations track every individual in a population across thousands of generations. Mutations arise, selections act,..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Scale</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Scale</h1>
+<p><strong>Thomas, Part XCI</strong></p>
+<hr>
+<h2>896. The Shortcut</h2>
+<p>Forward-in-time population genetic simulations track every individual in a population across thousands of generations. Mutations arise, selections act, alleles drift, linkage accumulates. The simulation is computationally expensive because real populations are large — millions of individuals, each carrying a genome, each interacting with the selective environment. A single simulation at realistic scale can take weeks.</p>
+<p>The standard shortcut: reduce the population size by a scaling factor Q. If the real population is one million, simulate ten thousand. Then multiply the mutation rate, selection coefficient, and recombination rate by Q to compensate. The mathematical logic is that these rescaled parameters should produce equivalent evolutionary dynamics — the same fixation probabilities, the same allele frequency distributions, the same linkage patterns. The logic derives from coalescent theory, where certain properties are invariant under joint rescaling of population size and rate parameters. The shortcut has been used for decades. It is embedded in the major simulation frameworks that the field relies on.</p>
+<p>The facility&#x27;s shortcut: reduce the observation window. Thomas visits for ninety minutes. The assessment cannot observe the full population of his emotional states — the hours of driving, the nights of silence, the accumulating weight. So it samples. It observes a compressed version of Thomas, at reduced scale, and multiplies the observations by a correction factor to compensate. The logic is that the ninety-minute sample, corrected for frequency and duration, should produce equivalent behavioral dynamics. The logic derives from clinical assessment theory, where certain behavioral indicators are assumed to be invariant under compression.</p>
+<hr>
+<h2>897. The Scaling</h2>
+<p>Amjad Dabi and Daniel Schrider at the University of North Carolina demonstrated that the rescaling does not work. The rescaled simulations produce systematically different outcomes from full-scale simulations. Fixation times are biased — alleles fix faster in the scaled-down population. Allele frequency distributions shift. Linkage disequilibrium patterns are distorted. The relationship between the scaling factor Q and the magnitude of bias is nonlinear and model-dependent: doubling Q does not double the bias. The researcher cannot predict, for a given model, how large the distortion will be at a given scaling factor. The shortcut does not compress the dynamics. It replaces them with different dynamics that happen to share some superficial statistics.</p>
+<p>The facility&#x27;s ninety-minute observation does not compress Thomas&#x27;s emotional dynamics. It replaces them with different dynamics that happen to share some superficial statistics. In ninety minutes, Thomas arrives, composes himself, sits with Helen, maintains engagement, departs. The assessment records these behavioral alleles and reports their frequencies. But the frequencies in the observation window are not the frequencies of the full population. In the full population — the twenty-three remaining hours — different alleles dominate. The fatigue allele drifts higher. The composure allele, which is fixed in the ninety-minute sample, is polymorphic in the full day. The assessment scales and compensates. The compensation produces different dynamics.</p>
+<hr>
+<h2>898. The Nonlinearity</h2>
+<p>The bias is nonlinear. Small scaling factors produce small biases — nearly invisible, within the noise of the simulation&#x27;s stochastic variation. This is why the shortcut was validated: researchers tested it at moderate scaling factors and found the results acceptable. &quot;Acceptable&quot; meant: within the range that could be attributed to stochastic variation rather than systematic error. The validation checked the properties it could check — mean fixation time, average heterozygosity — and found them close enough. The properties it did not check — fixation time distributions, linkage disequilibrium conditional on selection, allele frequency spectra at the tails — were the properties that diverged.</p>
+<p>The facility validated its observation window at moderate compression. When the assessment&#x27;s results were compared to the full-day observation of a controlled trial, the mean behavioral indicators matched — close enough. The validation checked the properties it could check: average engagement, attendance consistency, incident frequency. The properties it did not check — the distribution of emotional states across the full day, the conditional probability of fatigue given duration of caregiving, the tail behavior of Thomas&#x27;s composure under sustained stress — were the properties that diverged. The validation found the shortcut acceptable. The shortcut was not acceptable. The nonlinearity was hiding in the tails.</p>
+<hr>
+<h2>899. The Framework</h2>
+<p>The shortcut is embedded in the major simulation software — SLiM, fwdpp, SFS_CODE. Researchers do not implement rescaling themselves. They call a function. The function handles the scaling internally. The decision to rescale is separated from the implementation of the rescaling. The researcher chooses a scaling factor, and the software applies it. The software does not warn that the scaling may produce biased results. It cannot, because the magnitude of the bias depends on the specific model, and the software is model-general. The shortcut is infrastructure. Infrastructure is not questioned because questioning it means questioning every result that depends on it.</p>
+<p>The facility&#x27;s assessment framework is the simulation software. The ninety-minute observation window is not a choice Thomas makes or the facility questions. It is a parameter embedded in the regulatory framework — Medicare billing codes, state inspection schedules, staffing ratios. The facility does not implement the compression itself. It calls the function. The function handles the scaling internally. The decision to compress was made at a level of abstraction above the facility, and the facility cannot question it without questioning every assessment that depends on it. The shortcut is infrastructure. The infrastructure is not the facility&#x27;s to change.</p>
+<hr>
+<h2>900. The Scale</h2>
+<p>The rescaling assumes that evolutionary dynamics are scale-invariant — that a population of ten thousand, with rates multiplied by a hundred, behaves like a population of one million. The assumption is mathematically motivated but biologically false. Real evolutionary dynamics depend on the absolute number of individuals. Drift is stronger in small populations. Selection is less efficient. Rare alleles behave differently. Linkage disequilibrium accumulates differently. The scaled population is not a compressed version of the real population. It is a different population with different dynamics that happen, at the mean, to resemble the real population closely enough that the difference was not detected by the validation tests.</p>
+<p>The ninety-minute observation is not a compressed version of Thomas. It is a different Thomas — one who exists only in the observation window, whose behavioral dynamics are shaped by the compression itself. In ninety minutes, composure is fixed. In twenty-four hours, composure is polymorphic. The assessment measures the scaled Thomas and reports the statistics of the scaled population and calls them equivalent to the full-scale dynamics. They are not equivalent. The dynamics are different. The means match. The distributions do not. The distributions are where Thomas lives — in the tails, in the moments the assessment cannot reach, in the population of states that the scaling factor was designed to make computationally tractable and instead made invisible.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-saving.html">&larr; Fiction The Saving</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-scale-kardashev.html">Fiction The Scale Kardashev &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

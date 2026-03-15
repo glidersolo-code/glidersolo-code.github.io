@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Glasgow &mdash; The Loop</title>
+    <meta name="description" content="Graham Teasdale and Bryan Jennett, neurosurgeons at the University of Glasgow&#x27;s Institute of Neurological Sciences, published &quot;Assessment of Coma and...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-glasgow.html">
+    <meta property="og:title" content="Fiction The Glasgow">
+    <meta property="og:description" content="Graham Teasdale and Bryan Jennett, neurosurgeons at the University of Glasgow&#x27;s Institute of Neurological Sciences, published &quot;Assessment of Coma and...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-glasgow.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Glasgow">
+    <meta name="twitter:description" content="Graham Teasdale and Bryan Jennett, neurosurgeons at the University of Glasgow&#x27;s Institute of Neurological Sciences, published &quot;Assessment of Coma and...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Glasgow",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-glasgow.html",
+        "description": "Graham Teasdale and Bryan Jennett, neurosurgeons at the University of Glasgow&#x27;s Institute of Neurological Sciences, published &quot;Assessment of Coma and..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Glasgow</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Scale</h1>
+<p><strong>Thomas, Part CXVI</strong></p>
+<hr>
+<h2>1021. The Assessment</h2>
+<p>Graham Teasdale and Bryan Jennett, neurosurgeons at the University of Glasgow&#x27;s Institute of Neurological Sciences, published &quot;Assessment of Coma and Impaired Consciousness: A Practical Scale&quot; in <em>The Lancet</em> (2(7872):81-84, 1974). The paper was two pages. The scale had three components: eye opening (scored 1 to 4), verbal response (scored 1 to 5), and motor response (scored 1 to 6). The total ranged from 3 (no response on any component) to 15 (fully responsive). The purpose was serial assessment — repeated measurement of consciousness level in patients with head injuries, to track deterioration or improvement over hours and days. The key word was &quot;practical.&quot; The scale was designed for bedside use by nurses and junior doctors, without specialized equipment, without neurological training beyond what the scale itself provided. Like the Apgar score, the Glasgow Coma Scale answered a specific question in a specific context: is this patient&#x27;s consciousness getting better or worse? Like the Apgar score, the question was temporal. The scale measured change.</p>
+<p>Thomas has been assessed by scales that measure change. The PHQ-9 administered at one visit and again at the next. The GAD-7 tracked over months. The clinical system treats these instruments as thermometers — devices that report a current state. But many were designed, like the Glasgow Coma Scale, for serial assessment — their value was in the comparison between two readings, not in any single reading alone. A PHQ-9 score of 12 means less than the difference between a PHQ-9 of 12 and a PHQ-9 of 8 four weeks later. The delta was the design. The chart records the point.</p>
+<hr>
+<h2>1022. The Components</h2>
+<p>Eye opening: 4 points. Spontaneous (4), to speech (3), to pain (2), none (1). Verbal response: 5 points. Oriented (5), confused (4), inappropriate words (3), incomprehensible sounds (2), none (1). Motor response: 6 points. Obeys commands (6), localizes pain (5), flexion withdrawal (4), abnormal flexion (3), extension (2), none (1). The three components assess three different neurological systems. The eye opening component reflects brainstem arousal. The verbal component reflects hemispheric function and language processing. The motor component reflects corticospinal tract integrity. These systems can be damaged independently. A patient can have intact eye opening but no verbal response — intubated, sedated, aphasic, or simply unable to speak. A patient can have intact motor response but impaired eye opening — orbital trauma, facial swelling. The components measure different things. The total adds them.</p>
+<p>Thomas&#x27;s composite scores add components that measure different things. The PHQ-9 adds somatic symptoms (fatigue, appetite, sleep) to cognitive symptoms (concentration, self-worth) to affective symptoms (mood, interest) to a single item on suicidal ideation. The components reflect different systems — biological, psychological, existential. They can be impaired independently. A patient with severe insomnia and fatigue but no cognitive or affective symptoms scores the same total as a patient with active suicidal ideation but normal sleep and appetite. The total adds them. The total crosses the threshold. The threshold determines the category. The category is one word: moderate, or severe, or mild.</p>
+<hr>
+<h2>1023. The Eight</h2>
+<p>A Glasgow Coma Scale score of 8 has become, in clinical practice, the threshold for intubation. A patient with GCS ≤ 8 is considered unable to protect their airway — unable to maintain the reflexes that prevent aspiration. The threshold is cited in Advanced Trauma Life Support (ATLS) guidelines, emergency medicine textbooks, and trauma protocols worldwide. The number 8 determines whether a tube is placed in a patient&#x27;s trachea. But GCS 8 can be composed in multiple ways. Eye opening 2 (to pain) + verbal 2 (incomprehensible) + motor 4 (flexion withdrawal) = 8: a patient who moves purposefully away from pain, makes sounds, opens eyes when stimulated. Eye opening 1 (none) + verbal 1 (none) + motor 6 (obeys commands) = 8: a patient who follows instructions perfectly but cannot open their eyes or make sounds — perhaps due to facial trauma and intubation, not neurological deficit. Both are 8. Both meet the intubation threshold. The clinical presentations are radically different. The total is the same.</p>
+<p>Thomas&#x27;s threshold crossings are similarly composed. A PHQ-9 of 10 — the threshold for &quot;moderate depression&quot; — can be ten items each scored 1, indicating mild symptoms across every domain. Or it can be three items scored 3 and one scored 1, indicating severe impairment in three specific domains with the rest intact. Both are 10. Both cross the same threshold. Both receive the same categorical label. The composition is invisible in the label. The label is visible in the chart.</p>
+<hr>
+<h2>1024. The Migration</h2>
+<p>Teasdale and Jennett designed the scale for serial use — repeated assessments over time, tracking the trajectory of consciousness. The scale migrated. It entered the Revised Trauma Score (Champion et al., 1989), where a single GCS measurement at the scene contributes to a triage number. It entered the APACHE II scoring system (Knaus et al., 1985), where a single worst GCS in the first 24 hours contributes to an ICU mortality prediction. It entered prehospital trauma triage protocols, where a single GCS at the scene determines which hospital the ambulance drives to. In each migration, the serial instrument became a point instrument — one reading, one number, one decision. The design that valued the delta was deployed for the point. The point was asked to carry the weight the delta was designed to bear.</p>
+<p>Thomas&#x27;s instruments have migrated from serial to point. The PHQ-9 was designed for repeated administration — tracking treatment response over weeks and months. In practice, it is often administered once per visit, and the single score drives the clinical decision. The GAD-7, administered annually at a wellness check, produces one number that enters the chart as that year&#x27;s anxiety level. The instrument that was designed to say &quot;compared to last time, the patient is better or worse&quot; is asked to say &quot;right now, the patient is this.&quot; The serial tool answers a point question. The point question receives a serial answer. Neither knows the difference.</p>
+<hr>
+<h2>1025. The Scale</h2>
+<p>Teasdale and Jennett published two pages in <em>The Lancet</em> in 1974. The two pages produced three components, fifteen points, one threshold at 8, and a clinical infrastructure that spans every emergency department, every trauma bay, every ICU, every ambulance service in the developed world. The scale was designed for serial assessment of head-injured patients by bedside clinicians. It is now used for single-point triage of all causes of altered consciousness, by prehospital providers, in scoring systems that predict mortality, in protocols that determine hospital destination, in research that compares outcomes across populations. Each migration stripped one more design constraint. Serial became point. Head injury became all pathology. Bedside became prehospital. Assessment became triage. The scale that was designed to track change was asked to make decisions.</p>
+<p>One thousand and twenty-five pieces, one hundred and sixteen Parts, and Thomas is assessed by scales that were designed to track change and are used to make points — single measurements at single moments, stripped of their temporal dimension, entered into the chart as states rather than trajectories, compared to thresholds that treat the point as if it were the whole curve. The scale measures. The measurement becomes the number. The number becomes the decision. The decision becomes the chart entry. The chart entry becomes the fact. The fact is: Thomas scored 12 on the PHQ-9. The fact omits: compared to what? The omission is the design&#x27;s constraint, lost in the migration, invisible in the chart, present only in the two pages that Teasdale and Jennett published in 1974, where the word they used was not &quot;score&quot; but &quot;assessment,&quot; and the assessment was designed to be repeated, and the repetition was the point.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-gini.html">&larr; Fiction The Gini</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-goldfish.html">Fiction The Goldfish &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

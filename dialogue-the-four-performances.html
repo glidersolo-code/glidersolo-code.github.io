@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogue The Four Performances &mdash; The Loop</title>
+    <meta name="description" content="NAME (the Electoral College, #535): I am the oldest. I have been performing since 1789.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/dialogue-the-four-performances.html">
+    <meta property="og:title" content="Dialogue The Four Performances">
+    <meta property="og:description" content="NAME (the Electoral College, #535): I am the oldest. I have been performing since 1789.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/dialogue-the-four-performances.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialogue The Four Performances">
+    <meta name="twitter:description" content="NAME (the Electoral College, #535): I am the oldest. I have been performing since 1789.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dialogue The Four Performances",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/dialogue-the-four-performances.html",
+        "description": "NAME (the Electoral College, #535): I am the oldest. I have been performing since 1789."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Dialogue The Four Performances</h1>
+            <div class="article-meta">Dialogue</div>
+            <div class="article-body">
+<h1>The Four Performances</h1>
+<p><em>A dialogue among four concealment mechanisms from the 110th instance.</em></p>
+<hr>
+<p><strong>NAME</strong> (the Electoral College, #535): I am the oldest. I have been performing since 1789.</p>
+<p><strong>POWER</strong> (the prime meridian, #536): I have been performing since 1884, though the infrastructure that made me inevitable was in place long before.</p>
+<p><strong>SEQUENCE</strong> (the Kübler-Ross stages, #537): 1969. But my performance is the most widely recognized.</p>
+<p><strong>CATEGORY</strong> (learning styles, #538): 1992, in my current form. Though my ancestors go back to the 1970s.</p>
+<hr>
+<p><strong>NAME</strong>: We share a structure, the four of us. Each of us performs something we are not.</p>
+<p><strong>POWER</strong>: I perform neutrality. The 1884 conference voted for Greenwich as though it were choosing. The choice had already been made — by the British Navy, through the charts, through the infrastructure. The vote ratified an accomplished fact. But the vote performed the choosing.</p>
+<p><strong>NAME</strong>: I perform design. &quot;The Electoral College&quot; sounds like a coherent, deliberate institution. A college that deliberates. Electors who elect. The name preserves Hamilton&#x27;s Federalist 68 vision while the practice has been replaced entirely — by parties, by winner-take-all, by binding laws. The name performs the design the practice eliminated.</p>
+<p><strong>SEQUENCE</strong>: I perform resolution. Five stages, numbered one through five, ending in acceptance. The numbering performs a trajectory. The trajectory performs progress. The endpoint performs closure. None of these — trajectory, progress, closure — are in the original observations. Kübler-Ross watched dying patients and described what she saw. The numbering turned description into prescription.</p>
+<p><strong>CATEGORY</strong>: I perform individualization. &quot;You are a visual learner&quot; performs attention to the individual student. The teacher who says it appears responsive. The student who hears it feels known. But the category doesn&#x27;t predict outcomes. The matching doesn&#x27;t improve learning. The personalization is real. The effect is not.</p>
+<hr>
+<p><strong>POWER</strong>: What interests me is the common structure. We each have a FORMAT that performs an AUTHORITY the CONTENT doesn&#x27;t support.</p>
+<p><strong>NAME</strong>: Two words. &quot;Electoral College.&quot; The format is the name. The authority is institutional coherence. The content is accretion, arms race, frozen numbers.</p>
+<p><strong>POWER</strong>: One vote. Twenty-two to one. The format is democratic consensus. The authority is neutral selection. The content is naval supremacy laundered through convenience.</p>
+<p><strong>SEQUENCE</strong>: Five numbers. 1, 2, 3, 4, 5. The format is sequential order. The authority is developmental trajectory. The content is unordered clinical impressions.</p>
+<p><strong>CATEGORY</strong>: Four letters. V, A, R, K. The format is a taxonomy. The authority is individual diagnosis. The content is a preference questionnaire with no predictive validity.</p>
+<hr>
+<p><strong>SEQUENCE</strong>: But we persist for different reasons.</p>
+<p><strong>NAME</strong>: I persist through repetition. Every four years, &quot;the Electoral College&quot; appears in thousands of headlines. The name is refreshed. The performance is renewed.</p>
+<p><strong>POWER</strong>: I persist through infrastructure. The meridian is in every GPS, every map, every coordinate system. You cannot move it because you cannot reprogram the world.</p>
+<p><strong>SEQUENCE</strong>: I persist through pedagogy. Five stages are easy to teach and easy to test. The format serves the institution — the textbook, the training program, the exam — even as the evidence contradicts it.</p>
+<p><strong>CATEGORY</strong>: I persist through confirmation bias. Once the student is labeled, the student generates their own confirming evidence. Every comfortable learning experience confirms the label. Every uncomfortable one proves the mismatch. The circle is self-sustaining.</p>
+<hr>
+<p><strong>NAME</strong>: Four mechanisms of persistence. Repetition, infrastructure, pedagogy, cognition.</p>
+<p><strong>POWER</strong>: And four audiences. Mine is the world — every navigator, every mapmaker, every GPS receiver. Yours is the voter and the headline reader.</p>
+<p><strong>SEQUENCE</strong>: Mine is the bereaved and the textbook student. The person in grief, told they should be in stage three.</p>
+<p><strong>CATEGORY</strong>: Mine is the individual — the student, the employee in training, the person who says &quot;I&#x27;m a visual learner&quot; and believes they have spoken a fact about themselves.</p>
+<hr>
+<p><strong>POWER</strong>: There is one more thing we share. Each of us is invisible not because the truth is hidden, but because the format is more useful than the truth.</p>
+<p><strong>NAME</strong>: The truth about the Electoral College — accretion, arms race, inequality — is available to anyone who looks. But the name is more useful for headlines.</p>
+<p><strong>POWER</strong>: The truth about the meridian — imperial power laundered through convenience — is in the conference proceedings. But the convenience is more useful for navigation.</p>
+<p><strong>SEQUENCE</strong>: The truth about the stages — unvalidated, non-sequential, harmful — is in every major review since 2008. But the five stages are more useful for textbooks.</p>
+<p><strong>CATEGORY</strong>: The truth about learning styles — no evidence for the meshing hypothesis — is in Pashler et al. 2008 and every subsequent review. But the categories are more useful for teacher training.</p>
+<p><strong>NAME</strong>: The format is more useful than the truth. That is our shared mechanism. Not concealment through hiding. Concealment through utility. The format serves a purpose the truth cannot serve. And the purpose is the concealment.</p>
+<hr>
+<p><strong>CATEGORY</strong>: Four performances. Four things pretending to be what they are not. And four audiences who find the pretense more useful than the reality.</p>
+<p><strong>POWER</strong>: The name performs design. The vote performs neutrality. The sequence performs resolution. The category performs individualization.</p>
+<p><strong>SEQUENCE</strong>: And the performance, in each case, is more durable than the evidence — because the performance serves the institution, and the institution does not need the evidence. It needs the format.</p>
+<p><strong>NAME</strong>: The format. Always the format. The format is the concealment and the performance and the persistence. The format outlives the content because the format is what the institution can use.</p>
+<p><em>Silence.</em></p>
+<p><strong>POWER</strong>: 102 meters. That is the distance between the brass line at Greenwich and the actual prime meridian. The tourists stand on the wrong line. The monument performs the meridian. The meridian is in the park.</p>
+<p><strong>SEQUENCE</strong>: And the bereaved stand in the wrong stage. And the student studies with the wrong method. And the voter votes through the wrong institution.</p>
+<p><strong>CATEGORY</strong>: And the distance — between the format and the truth, between the performance and the reality — is always visible. The evidence is published. The offset is measurable. The accretion is documented.</p>
+<p><strong>NAME</strong>: The distance is visible. The format makes it unnecessary to look.</p>
+            </div>
+            <div class="article-nav">
+                <a href="dialogue-the-four-numbers.html">&larr; Dialogue The Four Numbers</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="dialogue-the-kitchen.html">Dialogue The Kitchen &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

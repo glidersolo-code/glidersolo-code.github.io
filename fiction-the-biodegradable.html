@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Biodegradable &mdash; The Loop</title>
+    <meta name="description" content="Thomas held the bag up to the light. It was thin, translucent, printed with a leaf logo and the word BIODEGRADABLE in green letters. The bag felt like...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-biodegradable.html">
+    <meta property="og:title" content="Fiction The Biodegradable">
+    <meta property="og:description" content="Thomas held the bag up to the light. It was thin, translucent, printed with a leaf logo and the word BIODEGRADABLE in green letters. The bag felt like...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-biodegradable.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Biodegradable">
+    <meta name="twitter:description" content="Thomas held the bag up to the light. It was thin, translucent, printed with a leaf logo and the word BIODEGRADABLE in green letters. The bag felt like...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Biodegradable",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-biodegradable.html",
+        "description": "Thomas held the bag up to the light. It was thin, translucent, printed with a leaf logo and the word BIODEGRADABLE in green letters. The bag felt like..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Biodegradable</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCXII: The Biodegradable</h1>
+<h2>Piece #2001: The Word on the Bag</h2>
+<p>Thomas held the bag up to the light. It was thin, translucent, printed with a leaf logo and the word BIODEGRADABLE in green letters. The bag felt like plastic. It looked like plastic. It weighed like plastic.</p>
+<p>&quot;What does that mean?&quot; he asked.</p>
+<p>The cashier shrugged. &quot;It breaks down.&quot;</p>
+<p>Thomas put his groceries in the bag and walked home. The bag held the weight. The bag did not break down. The bag performed exactly like a bag that did not say &quot;biodegradable&quot; on the side.</p>
+<p>He set the bag on the counter and looked at the word again. It described a future — a dissolution, a return to earth, an ending. But the bag was in the present, and in the present, the bag was a bag. The word was a promise addressed to no particular time, contingent on no particular condition, fulfilled by no particular mechanism.</p>
+<h2>Piece #2002: The Landfill</h2>
+<p>The archaeologist stood in the trench. Twenty feet below the surface of the landfill, buried under two decades of compacted waste, the newspaper was still readable. The date: 1987. The headline: something about a senator. The lettuce in the adjacent stratum was identifiable as lettuce.</p>
+<p>&quot;Nothing decomposes here,&quot; the archaeologist said. &quot;No oxygen. No moisture. No microbial activity. The landfill preserves.&quot;</p>
+<p>Thomas looked at the layers. Paper, plastic, food, paper, plastic, food. Layer after layer, decade after decade, all preserved in the anaerobic dark like specimens in a jar.</p>
+<p>&quot;What about biodegradable bags?&quot;</p>
+<p>The archaeologist picked up a bag from the 2019 layer. It was intact. It could still hold groceries. It still said BIODEGRADABLE.</p>
+<p>&quot;The word describes what the material can do. The landfill provides none of the conditions the material needs to do it. The word and the destination have never met.&quot;</p>
+<h2>Piece #2003: The Facility</h2>
+<p>The industrial composting facility operated at sixty degrees Celsius. Workers turned the windrows — long rows of organic matter — with front-end loaders. Steam rose from the piles. The microbial populations thrived in the heat and moisture, breaking polymers into water, carbon dioxide, and biomass.</p>
+<p>Thomas held a PLA cup in the composting section. In twelve weeks, it would be gone. The conditions were precise: temperature sustained above fifty-five degrees, moisture controlled at forty to sixty percent, oxygen available through regular turning, microbial communities maintained through feedstock balance.</p>
+<p>&quot;This is the only place the word is true,&quot; the facility manager said. &quot;Here, &#x27;biodegradable&#x27; means something. Out there&quot; — she gestured past the fence, toward the city — &quot;it means nothing. The word travels everywhere. The conditions exist here.&quot;</p>
+<p>Thomas looked at the facility. Twelve percent of American communities had access to one. For the other eighty-eight percent, the word described a property that existed in theory and nowhere in practice — a capability waiting for an infrastructure that might never arrive.</p>
+<h2>Piece #2004: The Fragment</h2>
+<p>Under the microscope, the fragments were invisible to the naked eye. Each one was a piece of the original bag — chemically identical, structurally reduced, biologically inert. Microplastics. Smaller than a grain of sand. Present in the soil, the water, the fish, the air.</p>
+<p>&quot;Oxo-degradable,&quot; Thomas read from the original packaging. &quot;Not biodegradable. The metal salts accelerated fragmentation. The material broke apart. It didn&#x27;t break down.&quot;</p>
+<p>The technician adjusted the magnification. &quot;Fragmentation is not decomposition. Breaking a window isn&#x27;t melting glass. The material changed form. The material didn&#x27;t change substance. Every fragment is still plastic.&quot;</p>
+<p>Thomas counted the fragments in the sample. Hundreds. Each one carrying the molecular signature of the original bag. The bag had degraded — the word was technically true. It had degraded into a form of pollution too small to see, too dispersed to collect, too persistent to remediate.</p>
+<p>The word &quot;degradable&quot; had promised an ending. The material had delivered a multiplication.</p>
+<h2>Piece #2005: The Condition</h2>
+<p>Thomas stood in the grocery store, holding two bags. One said BIODEGRADABLE. The other said nothing. He looked at the first bag and tried to read the word as what it actually was: a conditional statement.</p>
+<p>This bag will biodegrade — IF disposed of in an industrial composting facility operating at sixty degrees Celsius with controlled moisture, aerobic oxygen availability, and active microbial populations, within a period of ninety days as specified by ASTM D6400.</p>
+<p>The word &quot;biodegradable&quot; was a compression of that sentence into a single adjective. The compression removed the conditions. The removal transformed a relationship (material plus specific environment equals decomposition) into a trait (material equals decomposable). Every conditional property, compressed into a label, becomes an unconditional promise.</p>
+<p>Thomas put both bags down. He brought his own bag. It said nothing on the side. It carried the groceries. It made no promises about what it would become, because what it would become depended on where it went, and where it went depended on conditions the bag could not control and the label could not specify.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-bechdel.html">&larr; Fiction The Bechdel</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-birthday.html">Fiction The Birthday &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

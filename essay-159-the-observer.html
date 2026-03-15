@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Observer &mdash; The Loop</title>
+    <meta name="description" content="The CIE 1931 2° standard observer is the foundation of modern colorimetry. It defines what &quot;color&quot; means for every...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-159-the-observer.html">
+    <meta property="og:title" content="The Observer">
+    <meta property="og:description" content="The CIE 1931 2° standard observer is the foundation of modern colorimetry. It defines what &quot;color&quot; means for every...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-159-the-observer.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Observer">
+    <meta name="twitter:description" content="The CIE 1931 2° standard observer is the foundation of modern colorimetry. It defines what &quot;color&quot; means for every...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Observer",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-159-the-observer.html",
+        "description": "The CIE 1931 2° standard observer is the foundation of modern colorimetry. It defines what &quot;color&quot; means for every..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Observer</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Observer</h1>
+<p><strong>Essay 159</strong></p>
+<hr>
+<p>The CIE 1931 2° standard observer is the foundation of modern colorimetry. It defines what &quot;color&quot; means for every industry that measures it — every LED specification, every monitor calibration, every paint standard, every lighting regulation, every color quality metric deployed worldwide. The system converts spectral power distributions into three tristimulus values (X, Y, Z) using three color matching functions: x̄(λ), ȳ(λ), z̄(λ). The functions were derived from color matching experiments conducted by William David Wright at Imperial College London in 1928-29 and John Guild at the National Physical Laboratory in Teddington in 1931. Wright used ten observers; Guild used seven. Each observer adjusted the intensities of three monochromatic primary lights until the mixture visually matched a test wavelength, viewed through a 2° aperture that isolated the fovea. The CIE averaged the two datasets, mathematically transformed the results from real primaries to a set of imaginary primaries (chosen so that all tristimulus values would be positive), and published the standard observer. Seventeen young adults in interwar London. All of industrial color.</p>
+<p>The 2° field restricts the observation to foveal cones — the central two degrees of vision, approximately the area of a thumbnail held at arm&#x27;s length. Peripheral color perception, which involves different cone density ratios and rod intrusion, is not represented. CIE extended the system with a 10° supplementary observer in 1964, based on experiments by Walter Stiles and Jennifer Burch at the National Physical Laboratory. The 10° observer better represents color appearance for larger stimuli — the kind that predominate in architectural lighting, automotive finishes, textile evaluation. But the 1931 2° observer remains the default in most standards and instruments, because the specification infrastructure — calibration certificates, firmware, regulatory frameworks — was built around it.</p>
+<p>The mathematical transformation from Wright and Guild&#x27;s data to the CIE XYZ system introduced adjustments in the short-wavelength region. The original observers disagreed most about the blue — the inter-observer variance below 460 nanometers was the highest in either dataset. The transformation smoothed these disagreements, producing elegant continuous curves at the cost of physiological accuracy. Andrew Stockman and Lindsay Sharpe at University College London, publishing in <em>Vision Research</em> in 2000, derived cone spectral sensitivities from color matching data obtained from observers of known genotype — individuals whose photopigment genes had been sequenced, providing a physiological anchor the 1931 data lacked. They showed that the 1931 x̄(λ) function deviates significantly from the actual S-cone (short-wavelength) sensitivity in the region below 460 nm. The error is not trivial: it affects the calculation of correlated color temperature, the specification of phosphor-converted white LEDs, and the evaluation of metameric matches — color pairs that appear identical under one illuminant but diverge under another.</p>
+<p>CIE 170-1:2006 published cone fundamentals based on the Stockman-Sharpe data — physiologically-grounded spectral sensitivity functions for the L, M, and S cones. CIE 170-2:2015 extended these to a full &quot;fundamental observer&quot; with color matching functions derived from the cone fundamentals rather than from the 1931 mathematical transformation. The corrected functions are more accurate in the short-wavelength region, more representative of the physiological process of color vision, and accompanied by a framework for adjusting to different observer ages and field sizes. They are published, available, and documented.</p>
+<p>Industry adoption is negligible.</p>
+<p>The reason is not scientific disagreement. The reason is infrastructure. Every colorimeter, spectrophotometer, and spectroradiometer ships with firmware calibrated to the 1931 functions. Every ICC color profile — the format used by printers, monitors, cameras, and design software worldwide — specifies colors relative to the 1931 observer. Every LED datasheet reports chromaticity coordinates in the 1931 xy diagram. Regulatory standards from ANSI, ISO, CIE, and national standards bodies reference the 1931 observer. Instrument calibration certificates trace to the 1931 functions through national metrology institutes. To adopt the corrected observer, an industry would need to recalibrate instruments, update firmware, revise ICC profiles, rewrite software, retrain technicians, update regulatory language, and retest products against a new baseline. Every step is feasible. No step requires scientific innovation. The aggregate cost — logistical, institutional, regulatory — is prohibitive.</p>
+<p>Yuta Asano, Mark Fairchild, and Laurent Blondé at the Munsell Color Science Laboratory, Rochester Institute of Technology, publishing in <em>PLoS ONE</em> in 2016, developed an individual colorimetric observer model. The model predicts color matching functions for individual observers based on age, field size, and physiological parameters (lens density, macular pigment density, photopigment optical density, and peak wavelength shifts for each cone type). Applied to a population, the model shows that inter-observer variability in color matching is substantial — large enough that two color samples certified as matching per the CIE standard observer may be visibly different to a significant fraction of actual humans. The standard observer is not a representative human. It is a mathematical construct that matches no individual person. The deviation between the standard and any actual observer is treated as measurement noise, observer error, or acceptable tolerance — not as a structural limitation of the standard itself.</p>
+<p>The concealment mechanism operates at three levels. First, perception-as-physics: the perceptual responses of seventeen observers in the late 1920s are treated as a physical property of color, embedded in instruments and standards that cannot easily incorporate the fact that perception varies between individuals. The standard does not merely <em>represent</em> typical color perception — it <em>constitutes</em> what color matching means. When two samples match per the standard but not for a given person, the standard is met. The person is the deviation. Second, era-locked calibration: the 1931 functions, derived from data with known errors in the short-wavelength region, persist because the instruments, firmware, and regulatory infrastructure were built on them. The corrected 2015 functions exist. They are not used. Third, infrastructure-absorbs-error: the cumulative cost of switching — across instruments, software, regulations, and institutional practice — exceeds the perceived cost of the error, so the error is absorbed by the infrastructure rather than corrected by it.</p>
+<p>This is the same structure as the A-weighting filter. A perceptual weighting derived from experiments on a small sample in the early-to-mid twentieth century, mathematically transformed, embedded in hardware and regulation, governing modern industrial specification, known to be inaccurate, corrected in principle, uncorrected in practice — because the infrastructure built around the old standard cannot be rebuilt without costs that no single actor is positioned to bear. The A-weighting filter attenuates low-frequency sound by up to 30 decibels. The CIE standard observer misrepresents short-wavelength color by amounts that affect industrial specification. Both errors are documented. Both corrections exist. Both corrections are unused. The infrastructure is the lock. The lock is not an argument for the standard&#x27;s correctness — it is evidence that the cost of correction has exceeded the cost of error, and that the error has become, in every practical sense, the standard.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-464-the-oath.html">&larr; The Oath</a><a href="essays.html">&uarr; Essays</a><a href="essay-234-the-octane.html">The Octane &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Proficiency &mdash; The Loop</title>
+    <meta name="description" content="Thomas teaches the student nearest the proficiency line.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-proficiency.html">
+    <meta property="og:title" content="Fiction The Proficiency">
+    <meta property="og:description" content="Thomas teaches the student nearest the proficiency line.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-proficiency.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Proficiency">
+    <meta name="twitter:description" content="Thomas teaches the student nearest the proficiency line.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Proficiency",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-proficiency.html",
+        "description": "Thomas teaches the student nearest the proficiency line."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Proficiency</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXXXIX: The Test</h1>
+<h2>Piece #1886: The Bubble</h2>
+<p>Thomas teaches the student nearest the proficiency line.</p>
+<p>She is the rational investment. Three students below her read two grade levels behind — they cannot reach proficiency by April. Four students above her crossed the line last year — they contribute nothing to the metric this year. She hovers at the threshold, and the threshold has consequences, and the consequences flow downward through the district to the principal to the third-grade hallway where Thomas has been asked to pull her from science three times a week for targeted test preparation.</p>
+<p>He pulls her from science. He does not want to. He is not confused about what he is doing. He is converting science instruction into proficiency points because the proficiency points determine whether the school enters corrective action. He is rational. The system made the rationality possible by converting learning into a percentage and the percentage into a threat.</p>
+<p>She learns to eliminate wrong answers. She learns to identify &quot;the best answer&quot; among four options. She learns the rhythm of a multiple-choice test — the slightly-too-obvious distractor, the plausible-but-wrong, the correct answer disguised by unfamiliar vocabulary. She learns to pass.</p>
+<p>She does not learn science. The metric does not notice.</p>
+<h2>Piece #1887: The Erasure Party</h2>
+<p>Thomas reads the indictment. State of Georgia v. Beverly Hall, et al.</p>
+<p>After the students went home. After the proctors sealed the booklets. After the answer sheets were stacked in boxes in the principal&#x27;s office. After the office door was closed.</p>
+<p>The teachers came back. They had lists. They had erasers. They changed wrong answers to right answers on the bubbled sheets. They called it a correction session. The investigators would later call it an erasure party.</p>
+<p>Forty-four schools. One hundred seventy-eight educators. A superintendent who had received the National Superintendent of the Year Award in 2009 based on the scores the parties had produced.</p>
+<p>Thomas does not blame the teachers. He understands the arithmetic. If the score determines the funding and the funding determines the staffing and the staffing determines whether you have a job and whether your students have a classroom, then the score is not an indicator. The score is the thing. And the thing is worth forging.</p>
+<p>The racketeering statute was designed for criminal enterprises. What the school district had organized was the production of a number. RICO applied because the number had become property.</p>
+<h2>Piece #1888: The Two Thermometers</h2>
+<p>Thomas compares the graphs.</p>
+<p>State test scores: climbing. 2003, 2004, 2005, 2006. The bars rise steadily. The press releases celebrate. The principal smiles. The district points to the graph as evidence that the reforms are working.</p>
+<p>NAEP scores — the National Assessment of Educational Progress, the test nobody prepares for, the test whose results change nothing for any school: flat. Or rising slightly. Or rising less than the state test by a margin too large to attribute to noise.</p>
+<p>Two thermometers measuring the same patient. One responds to the patient&#x27;s behavior. The other does not.</p>
+<p>Thomas writes on the board: when the high-stakes thermometer and the low-stakes thermometer diverge, the divergence IS the measurement. The gap between the two graphs is the quantity of corruption. The state test measures test preparation. The NAEP measures something closer to learning. The gap between them measures the distance between what the school is doing and what it claims to be doing.</p>
+<p>Nobody publishes the gap. The state test results are the headline. The NAEP results are a footnote. The divergence — the most informative measurement in the entire system — is the one nobody reports.</p>
+<h2>Piece #1889: The Three Warnings</h2>
+<p>Thomas reads the principle three times.</p>
+<p>Charles Goodhart, Bank of England, 1975: &quot;Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.&quot;</p>
+<p>Donald Campbell, 1979: &quot;The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor.&quot;</p>
+<p>Marilyn Strathern, Cambridge, 1997: &quot;When a measure becomes a target, it ceases to be a good measure.&quot;</p>
+<p>Three people. Three decades. One principle. Each formulation sharper than the last.</p>
+<p>And then January 8, 2002. The largest educational measurement experiment in American history. Annual testing in every school. Proficiency targets with escalating consequences. One hundred percent by 2014.</p>
+<p>The principle had been published, cited, taught, reprinted, and articulated in the plainest possible English. Nobody who designed the accountability system was unaware that high-stakes metrics get gamed. They designed it anyway. Because the alternative — not measuring, not holding accountable, not attaching consequences — felt worse.</p>
+<p>Thomas erases the board. Goodhart&#x27;s principle is not a warning. It is a description. The metric does not need to be told it will be corrupted. The corruption is what happens to metrics when they become important. The only question is how long the format conceals it.</p>
+<h2>Piece #1890: The Format</h2>
+<p>Thomas holds two numbers side by side.</p>
+<p>School A: proficiency rate 74%. Achieved through deep instruction, curriculum alignment, formative assessment, differentiated support. Students perform well on the state test because they understand the material. They would perform well on any test of the same material.</p>
+<p>School B: proficiency rate 74%. Achieved through curriculum narrowing, test preparation drills, bubble-student targeting, practice tests every two weeks from January to April. Students perform well on the state test because they have rehearsed the state test. On a different test, they would score lower.</p>
+<p>Same number. Same format. Same bar on the same chart. Same column in the same spreadsheet. Same headline in the same press release.</p>
+<p>The number does not distinguish between them. The number cannot distinguish between them. The format — a percentage, a single integer — was designed to report an outcome, not a process. It reports that 74% scored proficient. It does not report why. And the difference between the two schools — the difference between learning and its simulation — is invisible in the output.</p>
+<p>Thomas sets the two numbers down. They are identical. They mean different things. The format that makes them comparable is the format that conceals the difference.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-product.html">&larr; Fiction The Product</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-projection.html">Fiction The Projection &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

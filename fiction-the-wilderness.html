@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Wilderness &mdash; The Loop</title>
+    <meta name="description" content="Thomas read the statute and stopped at the second sentence. &quot;A wilderness, in contrast with those areas where man and his own works dominate the...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-wilderness.html">
+    <meta property="og:title" content="Fiction The Wilderness">
+    <meta property="og:description" content="Thomas read the statute and stopped at the second sentence. &quot;A wilderness, in contrast with those areas where man and his own works dominate the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-wilderness.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Wilderness">
+    <meta name="twitter:description" content="Thomas read the statute and stopped at the second sentence. &quot;A wilderness, in contrast with those areas where man and his own works dominate the...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Wilderness",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-wilderness.html",
+        "description": "Thomas read the statute and stopped at the second sentence. &quot;A wilderness, in contrast with those areas where man and his own works dominate the..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Wilderness</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDVII: The Wilderness</h1>
+<h2>Piece #2476: The Definition</h2>
+<p>Thomas read the statute and stopped at the second sentence. &quot;A wilderness, in contrast with those areas where man and his own works dominate the landscape, is hereby recognized as an area where the earth and its community of life are untrammeled by man, where man himself is a visitor who does not remain.&quot; Recognized. Not created. Not designated. Recognized — as though the law were merely noticing what was already there. Howard Zahniser had written over sixty drafts. He chose &quot;untrammeled&quot; deliberately — unconfined, unrestricted, not &quot;untrampled.&quot; The precision of the word performed the naturalness of the condition. But Thomas noticed the grammar: the law &quot;recognized&quot; a condition that the law&#x27;s own enforcement would produce. The Ahwahneechee had lived in Yosemite Valley since the 14th century. The Mariposa Battalion expelled them in 1851. The last families were evicted in 1969. The law recognized an absence it had created.</p>
+<h2>Piece #2477: The Fire</h2>
+<p>The landscapes Muir rhapsodized were not wild. Thomas found the evidence in layers. California tribes had cleared desert springs, pruned and coppiced plants, diverted streams to irrigate dry areas. And above all: fire. Prescribed burns that maintained open forests, productive meadows, diverse understories. The &quot;pristine&quot; character that justified protection was the product of millennia of deliberate management. After the Great Fire of 1910, the federal government suppressed all fire — including the cultural burning that had shaped the land. In a century, the forests thickened. The meadows shrank. The understory choked. The fuel accumulated. The fires, when they came, were catastrophic. Thomas traced the sequence: Indigenous management produced the landscape; removal ended the management; the unmanaged landscape was called &quot;wild&quot;; the wildness degraded without the management that had produced it. The word preserved the appearance while destroying the condition.</p>
+<h2>Piece #2478: The Paradox</h2>
+<p>When ecologists proposed prescribed fire to restore these landscapes, wilderness policy classified human-ignited fire as &quot;trammeling&quot; — the same category as logging or road-building. Brodie and colleagues made the argument in 2024: over a century of fire exclusion was itself an act of trammeling. The suppression had been the intervention. The absence of fire was the human imposition. But the definition could not see this. &quot;Untrammeled by man&quot; drew a line: action on one side, inaction on the other. The line assumed that inaction preserved the natural state. In fire-adapted ecosystems, inaction destroyed it. The definition prevented the practice that would restore the condition the definition was written to protect. Thomas wrote: <em>The word is a lock. The key it requires is the key it forbids.</em></p>
+<h2>Piece #2479: The Invention</h2>
+<p>William Cronon, 1995: &quot;The removal of Indians to create an &#x27;uninhabited wilderness&#x27; — uninhabited as never before in the human history of the place — reminds us just how invented, just how constructed, the American wilderness really is.&quot; Thomas sat with the sentence. Uninhabited as never before. The condition the law protected had never existed until the law produced it. Mark David Spence documented the &quot;separate but symbiotic developments of the Indian reservation and recreational park systems, the former to corral Indians, the latter to sequester nature.&quot; Two complementary institutions, one producing the other. The reservation made the wilderness possible. The wilderness justified the reservation. Neither was natural. Both performed nature.</p>
+<h2>Piece #2480: The Word</h2>
+<p>Thomas counted: 111 million acres across 800 wilderness areas in forty-four states. The word governed more land than many nations contain. And the word worked because it named a fact — &quot;this land is wild&quot; — rather than an act — &quot;we made this land appear wild by removing the people who tended it.&quot; The factual grammar was the concealment. Every definition in the statute used the indicative mood: &quot;is recognized,&quot; &quot;is characterized,&quot; &quot;has been affected primarily by the forces of nature.&quot; Not &quot;was cleared,&quot; &quot;was seized,&quot; &quot;was redesignated after removal.&quot; The passive voice of nature replaced the active voice of policy. Thomas thought about his own definitions — the ones he carried without examining. How many of his certainties were recognitions of conditions that someone else&#x27;s removal had produced? The word &quot;wilderness&quot; did not describe the land. It described what remained after the people were gone. The description was the erasure&#x27;s final act.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-whole-suite.html">&larr; Fiction The Whole Suite</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-wind.html">Fiction The Wind &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Sidewall &mdash; The Loop</title>
+    <meta name="description" content="The tire says P225/45R17 91V. Fourteen characters encoding width, aspect ratio, construction type, rim diameter, load...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-253-the-sidewall.html">
+    <meta property="og:title" content="The Sidewall">
+    <meta property="og:description" content="The tire says P225/45R17 91V. Fourteen characters encoding width, aspect ratio, construction type, rim diameter, load...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-253-the-sidewall.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Sidewall">
+    <meta name="twitter:description" content="The tire says P225/45R17 91V. Fourteen characters encoding width, aspect ratio, construction type, rim diameter, load...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Sidewall",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-253-the-sidewall.html",
+        "description": "The tire says P225/45R17 91V. Fourteen characters encoding width, aspect ratio, construction type, rim diameter, load..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Sidewall</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>Essay 253: The Sidewall</h1>
+<p>The tire says P225/45R17 91V. Fourteen characters encoding width, aspect ratio, construction type, rim diameter, load capacity, and speed rating. The consumer reads a code. The code reads as engineering — precise, unified, authoritative. The precision is genuine. The unity is not.</p>
+<p>The 225 is millimeters. The section width of the tire — sidewall to sidewall at the widest point — stated in metric units. This is because European manufacturers, led by Michelin after patenting the radial tire on June 4, 1946, developed their designs using metric dimensions. When radial tires entered the American market in the late 1960s, the metric width came with them. The number is European.</p>
+<p>The 17 is inches. The rim diameter — the wheel the tire mounts on — stated in imperial units. This is because the Tire and Rim Association, founded in Cleveland in 1903 as the Clincher Tire Manufacturers&#x27; Association, had standardized American wheel sizes in inches. U.S. DOT regulations encoded this. Every existing wheel, every existing axle, every existing vehicle was specified in inches. The European manufacturers, wanting to sell into the American market, converted the single measurement American law demanded — rim diameter — into inches, and left everything else metric. The number is American.</p>
+<p>The 45 is neither. It is a dimensionless percentage — the sidewall height expressed as a fraction of the section width. In this case, 45% of 225mm, or 101.25mm. The aspect ratio is the only number in the designation that sidesteps the metric-imperial question entirely, because a percentage has no unit. This property was invisible until the 1960s. Early tires had aspect ratios near 100% — massive sidewalls, nearly circular cross-sections. Nobody stated the ratio because everybody assumed it. When Pirelli introduced the first 70-aspect-ratio tire in 1968, the number became worth naming. The visible number indexes the moment the property stopped being universal.</p>
+<p>The R is a letter. Radial construction — cords running perpendicular to the direction of travel. Before the R, there was D for diagonal and B for bias-belted. Virtually every modern passenger tire is radial. The letter persists not because it distinguishes — almost nothing is non-radial anymore — but because the format has a slot for it and the slot must be filled.</p>
+<p>The 91 is a lookup table. Load index 91 corresponds to 1,356 pounds per tire — a maximum load that the consumer almost never reads and the tire shop matches automatically. The V is another lookup table — a speed rating developed in 1960s Europe after Autobahn fatalities, where H sits out of alphabetical order because it was one of the original three ratings and couldn&#x27;t be moved, and X was excluded entirely because Michelin already used &quot;X&quot; as a brand name. The alphabetical sequence is not a sequence. It is a negotiation.</p>
+<p>Before P-Metric — the system introduced by TRA in 1976 — tires were sized in at least three other formats. The high-pressure era (pre-1927): overall diameter times width in inches, both imperial. The balloon era (1920s–1960s): width dash rim diameter, both imperial. The alpha-numeric era (1967–late 1970s): a load-capacity letter, an aspect ratio number, a dash, and a rim diameter in inches. Each system was coherent within itself. The modern system is coherent with none of them and partly coherent with each. It is not a design. It is a sediment.</p>
+<p>The UMTRI study in 2017 — Sivak and Schoettle surveying 618 American adults — found that consumers treat the tire designation as an opaque code. They can reproduce the string of numbers and letters. They do not know that 225 is millimeters or that 17 is inches or that the two units coexist on the same tire because of a mid-century commercial negotiation between European and American industrial interests. The code is matched, not read. The consumer brings the old tire to the shop. The shop matches the string. The string replaces understanding.</p>
+<p>Fourteen characters. Two unit systems. A percentage. Two letter codes. Two lookup tables. Four eras of standardization. The format presents a unified specification. It delivers a frozen negotiation — millimeters and inches soldered together because neither side could afford to convert, and both sides could afford to compromise.</p>
+<p>The format is the sidewall.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-323-the-shredder.html">&larr; The Shredder</a><a href="essays.html">&uarr; Essays</a><a href="essay-254-the-signal.html">The Signal &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

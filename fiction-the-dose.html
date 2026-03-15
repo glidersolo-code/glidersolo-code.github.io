@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Dose &mdash; The Loop</title>
+    <meta name="description" content="John William Trevan, a pharmacologist at the Wellcome Physiological Research Laboratories in London, published &quot;The Error of Determination of Toxicity&quot; in...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-dose.html">
+    <meta property="og:title" content="Fiction The Dose">
+    <meta property="og:description" content="John William Trevan, a pharmacologist at the Wellcome Physiological Research Laboratories in London, published &quot;The Error of Determination of Toxicity&quot; in...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-dose.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Dose">
+    <meta name="twitter:description" content="John William Trevan, a pharmacologist at the Wellcome Physiological Research Laboratories in London, published &quot;The Error of Determination of Toxicity&quot; in...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Dose",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-dose.html",
+        "description": "John William Trevan, a pharmacologist at the Wellcome Physiological Research Laboratories in London, published &quot;The Error of Determination of Toxicity&quot; in..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Dose</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLXXV: The Dose</h1>
+<h2>Piece #1316: The Median</h2>
+<p>John William Trevan, a pharmacologist at the Wellcome Physiological Research Laboratories in London, published &quot;The Error of Determination of Toxicity&quot; in the <em>Proceedings of the Royal Society B</em> in 1927. He proposed the &quot;median lethal dose&quot; — the dose of a substance that kills 50% of a test population. The concept was statistical: because individual organisms varied in their susceptibility, a single lethal dose could not be specified. The dose that killed the first animal was different from the dose that killed the last. Trevan&#x27;s solution was to find the middle — the dose at which the population splits evenly between living and dead.</p>
+<p>The LD50 became the standard metric for acute toxicity. Safety data sheets, regulatory filings, poison control databases — all report LD50 values. Aspirin: LD50 (oral, rat) = 200 mg/kg. Caffeine: LD50 (oral, rat) = 192 mg/kg. Table salt: LD50 (oral, rat) = 3,000 mg/kg. The numbers are printed on material safety data sheets used in laboratories, factories, and hospitals worldwide. Each number describes the outcome for a population of approximately 30 to 100 inbred laboratory rats under controlled conditions. The number on the sheet is experienced as a property of the substance.</p>
+<p>Thomas&#x27;s clinical assessments are medians. The PHQ-9 threshold of 10 — the cutpoint for moderate depression — was determined by finding the score at which the population of validation subjects split between cases and non-cases. The threshold describes where a sample of subjects divided. It is printed on clinical guidelines as a property of the score.</p>
+<h2>Piece #1317: The Species</h2>
+<p>The LD50 for a given substance varies by species. Dioxin (TCDD): LD50 (oral, guinea pig) = 0.6 μg/kg. LD50 (oral, hamster) = 1,157 μg/kg. Nearly 2,000-fold difference between two rodents for the same molecule. Thalidomide: non-teratogenic in rats, catastrophically teratogenic in humans and rabbits. Penicillin: therapeutic in humans, lethal in guinea pigs. The substance is the same. The number changes by orders of magnitude depending on which organism metabolizes it.</p>
+<p>The LD50 reported on a safety data sheet specifies the species — usually &quot;rat&quot; or &quot;mouse.&quot; The extrapolation to humans is implicit. Regulatory agencies use allometric scaling — adjusting by body surface area rather than body weight — to estimate equivalent human doses. The FDA&#x27;s guidance for converting animal doses to human equivalent doses uses fixed scaling factors: rat to human = 6.2, mouse to human = 12.3. These factors assume that metabolism scales predictably with body surface area. For many compounds, it does not. The number on the sheet says &quot;rat.&quot; The reader sees &quot;danger to me.&quot; The species gap between the data and the inference is invisible in the number.</p>
+<p>Thomas&#x27;s clinical instruments were validated on specific populations. The PHQ-9 was developed and validated primarily in adult primary care patients in the United States. The scaling factors for applying it to adolescents, elderly, non-English speakers, patients with chronic medical conditions — each requires its own allometric adjustment. The adjustments are not printed on the form.</p>
+<h2>Piece #1318: The Route</h2>
+<p>LD50 depends on the route of exposure: oral, dermal, inhalation, intravenous, intraperitoneal. The same substance has different LD50 values by different routes because absorption, distribution, and first-pass metabolism differ. Nicotine: LD50 (oral, rat) = 50 mg/kg. LD50 (dermal, rat) = 140 mg/kg. LD50 (intravenous, rat) = 0.3 mg/kg. A 167-fold difference between intravenous and dermal for the same compound in the same species. The route determines the number as much as the compound does.</p>
+<p>Material safety data sheets typically report multiple routes. Regulatory classifications — the Globally Harmonized System categories — assign hazard labels based on the most sensitive route. A substance that is relatively safe dermally but highly toxic by inhalation receives the inhalation-based classification. The label travels to the shipping container, the warehouse, the workbench. The label says &quot;toxic.&quot; It does not say &quot;by inhalation at concentrations you will not encounter in this use.&quot;</p>
+<p>Thomas&#x27;s severity depends on the route of assessment. A self-report questionnaire measures what the patient is willing to disclose on paper. A clinical interview measures what the patient reveals in conversation. An observer-rated scale measures what the clinician sees in the room. The same condition assessed by different routes produces different numbers — not because the condition differs but because the absorption of clinical information depends on the pathway.</p>
+<h2>Piece #1319: The Acute</h2>
+<p>The LD50 measures acute toxicity — the lethal dose from a single exposure or from exposures within a 24-hour period. It says nothing about chronic toxicity, sublethal effects, endocrine disruption, carcinogenicity, teratogenicity, neurotoxicity, or immunotoxicity. A substance with a high LD50 — difficult to kill with in a single dose — may be devastating over years of exposure. Asbestos has a very high acute LD50; it kills by decades of fiber accumulation in lung tissue. Lead has a moderate LD50; its primary danger is chronic neurodevelopmental impairment at exposures far below acutely toxic levels.</p>
+<p>The LD50 was designed for pharmacology — to standardize drug preparations, to compare the potency of different formulations. It was adopted by toxicology because it was quantifiable and reproducible. It became the regulatory metric because it was already the standard. The metric selected for one purpose — comparing drug potency — was applied to another purpose — protecting human health from environmental exposures — without adjusting for the shift. A number designed to describe the acute lethality of a pharmacological preparation, presented as though it described the danger of a substance to a human being over a lifetime of exposure.</p>
+<p>Thomas&#x27;s acute assessments — the PHQ-9 score today, the GAD-7 score this month — capture the snapshot. They do not capture the chronic load: years of disrupted sleep, years of hypervigilance, years of suppressed career development. The number describes the moment. The condition is the accumulation. The metric was designed for acute clinical encounters and is applied to chronic situations without adjustment.</p>
+<h2>Piece #1320: The Fifty</h2>
+<p>Why fifty percent? Trevan chose the median because it was the most statistically stable point on the dose-response curve — the steepest part of the sigmoid, where small changes in dose produce the largest changes in response. The LD50 is the most precisely determinable point on the curve. It is also, by definition, the dose at which half the test population survives. The metric optimizes for statistical precision, not for safety. The LD1 — the dose lethal to 1% — would be more relevant to human safety, but it falls on the shallow tail of the curve where measurement uncertainty is large. The LD50 is reported because it can be measured precisely, not because it describes the dose that matters to anyone trying not to die.</p>
+<p>The choice of fifty — the statistical convenience, the precision of the midpoint — is invisible in the published number. The safety data sheet prints &quot;LD50 = 200 mg/kg&quot; and the reader infers a boundary: below 200, safe; at 200, dangerous. The number is neither. It is the dose at which the population splits. It does not describe the dose at which the first animal died, or the tenth, or the hundredth. It describes the dose at which the statistician achieved the smallest confidence interval.</p>
+<p>Thomas&#x27;s thresholds optimize for psychometric precision. The PHQ-9 cutpoint of 10 maximizes combined sensitivity and specificity — the point on the ROC curve nearest the upper-left corner. This is the most statistically reliable threshold. It is not necessarily the clinically optimal one. A threshold of 8 might catch more true cases at the cost of more false positives. A threshold of 12 might reduce false positives at the cost of missing true cases. The threshold of 10 was chosen for the same reason Trevan chose 50: it is where the measurement is most precise. The precision determines the threshold. The threshold determines who is treated. One hundred and seventy-five Parts, and the number still optimizes for the statistician, not for the patient, and the optimization is invisible in the number that reaches the chart.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-dog-year.html">&larr; Fiction The Dog Year</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-dot.html">Fiction The Dot &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

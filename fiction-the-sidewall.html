@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Sidewall &mdash; The Loop</title>
+    <meta name="description" content="A tire says P225/45R17. Fourteen characters. Two unit systems — millimeters and inches — soldered together because European manufacturers developed radial...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-sidewall.html">
+    <meta property="og:title" content="Fiction The Sidewall">
+    <meta property="og:description" content="A tire says P225/45R17. Fourteen characters. Two unit systems — millimeters and inches — soldered together because European manufacturers developed radial...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-sidewall.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Sidewall">
+    <meta name="twitter:description" content="A tire says P225/45R17. Fourteen characters. Two unit systems — millimeters and inches — soldered together because European manufacturers developed radial...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Sidewall",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-sidewall.html",
+        "description": "A tire says P225/45R17. Fourteen characters. Two unit systems — millimeters and inches — soldered together because European manufacturers developed radial..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Sidewall</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXCV: The Sidewall</h1>
+<h2>Piece #1416: The Palimpsest</h2>
+<p>A tire says P225/45R17. Fourteen characters. Two unit systems — millimeters and inches — soldered together because European manufacturers developed radial tires in metric and American regulations required rim diameters in imperial. A percentage — the aspect ratio, invisible until the 1960s because all tires shared the same proportions. A letter — R for radial, filling a format slot that no longer distinguishes anything because virtually all tires are radial. The designation is not a specification. It is a palimpsest — four eras of standardization layered on top of each other, each visible if you know where to look.</p>
+<p>Thomas&#x27;s diagnostic codes were palimpsests. The DSM-5 code for Major Depressive Disorder, 296.20, carried its ICD-9 ancestry in its numbering. When ICD-10 replaced ICD-9, the code became F32.0 — a different string encoding the same condition, or approximately the same condition, since the diagnostic criteria had shifted between versions. The patient&#x27;s suffering had not changed. The address for the suffering had been reassigned.</p>
+<p>The old code persisted in clinical conversation long after the system changed, the way &quot;G78-15&quot; persisted in tire enthusiast forums decades after alpha-numeric sizing was replaced. Infrastructure does not update in unison. The format updates. The vocabulary lags.</p>
+<h2>Piece #1417: The Invisible Dimension</h2>
+<p>Before the 1960s, no tire designation included the aspect ratio. All tires had ratios near 90–100% — tall sidewalls, nearly circular cross-sections. The property went unnamed because it went unvaried. When Pirelli introduced the first 70-aspect-ratio tire in 1968, the number appeared because it had become worth distinguishing. The visible number indexed the moment the property stopped being universal.</p>
+<p>Thomas found the same pattern in depression screening. The PHQ-9 did not include a question about sleep quality until sleep disturbance was recognized as a dimension worth separating from fatigue. Before that recognition, the two were collapsed together — not measured separately because the distinction was not yet valued. The instrument did not ask because the field had not yet learned to see.</p>
+<p>Every measurement system begins with invisible dimensions — properties so uniform they are not named. The naming happens not when the property becomes real but when it becomes variable. The dimension was always there. The number arrives when the variation does.</p>
+<h2>Piece #1418: The Lookup Table</h2>
+<p>After the tire size comes &quot;91V.&quot; The 91 is not a measurement — it is an index. Load index 91 corresponds to 1,356 pounds, but the number 91 does not contain the weight. It points to a table. Without the table, the number is meaningless. The V is a speed rating — 149 mph — from an alphabetical scale where H sits out of order because it was one of the original three ratings and could not be moved, and X was excluded because Michelin had already claimed the letter as a brand name.</p>
+<p>Thomas&#x27;s PHQ-9 scores were lookup tables. A score of 15 pointed to a severity category: &quot;moderately severe.&quot; The number 15 did not contain the severity. It pointed to a classification scheme. Without the scheme, the number was nine answers to nine questions summed to an integer. The clinical meaning was not in the number but in the table the number indexed.</p>
+<p>The difference between a measurement and an index: a measurement contains its meaning. An index points to where the meaning is stored. The consumer cannot tell the difference from the format. Both look like numbers.</p>
+<h2>Piece #1419: The Negotiation</h2>
+<p>The tire mixes millimeters and inches because neither the European nor the American standards body could afford to convert, and both could afford to compromise. The Tire and Rim Association, founded in Cleveland in 1903, had standardized rim diameters in inches. Michelin and ETRTO, established in 1964, had standardized widths in millimeters. The hybrid format — metric width, imperial rim — is a frozen negotiation, a ceasefire line that became a border.</p>
+<p>Thomas saw frozen negotiations in clinical practice. The PHQ-9 (self-report, 9 items, 0-27 range) and the Hamilton Depression Rating Scale (clinician-administered, 17-21 items, 0-52 range) coexisted because neither could replace the other. The PHQ-9 was easier to deploy. The Hamilton was more granular. Research used the Hamilton. Primary care used the PHQ-9. Both measured depression. Neither measured the same depression.</p>
+<p>The coexistence was not a design. It was a settlement. Two instruments with different origins, different scales, different administrations, occupying the same clinical territory because neither side could afford to yield. The format of the settlement — two systems sharing the same patient — looked like pluralism. It was exhaustion.</p>
+<h2>Piece #1420: The Match</h2>
+<p>A consumer walks into a tire shop and says: &quot;I need 225/45R17.&quot; The shop matches the string. The consumer does not know that 225 is millimeters or that 17 is inches or that the two units coexist because of a mid-century commercial negotiation. The string is matched, not read. The code replaces understanding.</p>
+<p>Thomas watched patients match their scores. &quot;My PHQ-9 is 12.&quot; They could state the number. They could not state what the number measured — which nine questions, weighted how, calibrated against which population, validated for which conditions. The number was an address. The patient lived at the address without knowing what the building contained.</p>
+<p>Matching is faster than reading. A tire shop that required customers to understand section width in millimeters and rim diameter in inches and aspect ratio as a percentage would sell fewer tires. A clinic that required patients to understand what the PHQ-9 measures before reporting a score would see fewer patients. The systems are designed for matching, not comprehension. The format enables the match. The match replaces the meaning.</p>
+<p>The format is the sidewall.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-shredder.html">&larr; Fiction The Shredder</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-signal.html">Fiction The Signal &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

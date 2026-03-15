@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Capsule &mdash; The Loop</title>
+    <meta name="description" content="In 1994, Congress created a regulatory category by subtraction. Take a pharmaceutical drug. Remove the requirement for...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-388-the-capsule.html">
+    <meta property="og:title" content="The Capsule">
+    <meta property="og:description" content="In 1994, Congress created a regulatory category by subtraction. Take a pharmaceutical drug. Remove the requirement for...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-388-the-capsule.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Capsule">
+    <meta name="twitter:description" content="In 1994, Congress created a regulatory category by subtraction. Take a pharmaceutical drug. Remove the requirement for...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Capsule",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-388-the-capsule.html",
+        "description": "In 1994, Congress created a regulatory category by subtraction. Take a pharmaceutical drug. Remove the requirement for..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Capsule</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>Essay 388: The Capsule</h1>
+<p>In 1994, Congress created a regulatory category by subtraction. Take a pharmaceutical drug. Remove the requirement for pre-market approval. Remove the requirement for demonstrated efficacy. Reverse the burden of proof — instead of the manufacturer proving the product safe, require the FDA to prove it unsafe. Add a disclosure disclaimer. Call the result a dietary supplement. The Dietary Supplement Health and Education Act made this subtraction law.</p>
+<p>What remained looked like a drug. Capsules. Milligram dosing. &quot;Supplement Facts&quot; panels modeled on the Drug Facts panel — same fonts, same layout, same governmental authority performed through format. Dosage instructions: &quot;Take two capsules daily with food.&quot; Pharmacy placement: supplements sit on shelves adjacent to FDA-approved medications, borrowing proximity as authority. Therapeutic language: &quot;supports immune health,&quot; &quot;promotes joint function,&quot; &quot;maintains cardiovascular wellness&quot; — structure/function claims calibrated to approach the border of disease claims without crossing it. The consumer reads the capsule and infers the clinical trial. The clinical trial does not exist.</p>
+<p>The market this subtraction created exceeds sixty billion dollars annually. Approximately 80,000 products occupy it. The FDA&#x27;s enforcement budget for dietary supplements is approximately nine million dollars — 0.18 percent of the agency&#x27;s total budget. The ratio of regulatory ambition to regulatory capacity is the story the label does not tell.</p>
+<p>The Supplement Facts panel is the borrowing made visible. The Nutrition Facts panel was mandated by the Nutrition Labeling and Education Act of 1990. The Drug Facts panel was standardized by the FDA in 1999. Both carry the authority of federal regulation — their format was designed by the government, their contents are reviewed by the government, their presence on a product signals governmental oversight. The Supplement Facts panel borrows this authority. Its format is identical. Its governmental oversight is not. The consumer has been trained by thirty years of nutrition labeling to read the panel as a guarantee. The panel guarantees nothing except that someone filled in the template.</p>
+<p>What the template contains may not correspond to what the capsule contains. Newmaster and colleagues, testing 44 herbal supplements from 12 companies by DNA barcoding, found fifty-nine percent contained plant species not listed on the label. Product substitution was detected in a third of tested products. A capsule labeled St. John&#x27;s Wort contained only Senna alexandrina — the consumer who bought an antidepressant herb received a laxative. The label performed the identity the contents did not possess.</p>
+<p>The required disclaimer performs transparency: &quot;This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.&quot; Forty-three words, back of the bottle, regulatory font size, formulaic across 80,000 products. The disclaimer&#x27;s ubiquity is its camouflage. The eye reads past it the way the ear stops hearing a persistent hum. The disclosure is present. The disclosure is unread. The format that performs transparency — the fine print, the legalistic language, the mandatory placement — is the same format that ensures the transparency is never consumed.</p>
+<p>The supplement occupies a space created by DSHEA that is neither food nor drug but borrows from both. From food, it takes the regulatory lightness: no pre-market approval, no efficacy requirement, no dose-response validation. From drug, it takes the presentation: capsule form, milligram precision, dosage instructions, health claims, pharmacy placement. The consumer sees the drug. The law sees the food. Both are looking at the same capsule. The capsule is the joint between two regulatory worlds, and the joint is where the meaning shifts.</p>
+<p>The concealment is not in the product. The concealment is in the category. DSHEA created a legal space where the format of pharmaceutical authority could be deployed without the process of pharmaceutical validation. The exemption is the fact. The borrowed presentation is the experience. The consumer lives in the experience. The regulator lives in the exemption. The capsule sits between them, performing one thing to each, the same object meaning two entirely different things depending on which side of the counter the reader stands.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-146-the-candle.html">&larr; The Candle</a><a href="essays.html">&uarr; Essays</a><a href="essay-424-the-carnation.html">The Carnation &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Air &mdash; The Loop</title>
+    <meta name="description" content="The Air Quality Index converted the concentrations of six substances — particulate matter (PM2.5 and PM10), ground-level ozone, nitrogen dioxide, sulfur...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-air.html">
+    <meta property="og:title" content="Fiction The Air">
+    <meta property="og:description" content="The Air Quality Index converted the concentrations of six substances — particulate matter (PM2.5 and PM10), ground-level ozone, nitrogen dioxide, sulfur...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-air.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Air">
+    <meta name="twitter:description" content="The Air Quality Index converted the concentrations of six substances — particulate matter (PM2.5 and PM10), ground-level ozone, nitrogen dioxide, sulfur...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Air",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-air.html",
+        "description": "The Air Quality Index converted the concentrations of six substances — particulate matter (PM2.5 and PM10), ground-level ozone, nitrogen dioxide, sulfur..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Air</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXXIII: The Air</h1>
+<h2>Piece #1106: The Six</h2>
+<p>Six pollutants, one number.</p>
+<p>The Air Quality Index converted the concentrations of six substances — particulate matter (PM2.5 and PM10), ground-level ozone, nitrogen dioxide, sulfur dioxide, and carbon monoxide — into a single integer between 0 and 500. The conversion used breakpoint tables: for each pollutant, concentration ranges mapped to index values. The overall AQI was the maximum of the six individual indices. One number. One color. Green, yellow, orange, red, purple, maroon. The color told the public what to do: go outside, be cautious, limit exertion, stay indoors.</p>
+<p>The six pollutants had different sources, different chemistry, different health effects, different spatial distributions, different temporal patterns. PM2.5 — fine particulate matter, 2.5 micrometers or smaller — penetrated deep into lung tissue, crossed into the bloodstream, caused cardiovascular and respiratory damage over hours and years. Ozone — formed when nitrogen oxides and volatile organic compounds reacted in sunlight — irritated airways, reduced lung function, peaked on hot sunny afternoons. The health effects were different. The protective actions were different. The number was the same.</p>
+<p>Thomas&#x27;s monitors measured six vital signs and more: heart rate, respiratory rate, blood pressure, temperature, oxygen saturation, pain score. Each measured a different system, indicated different pathologies, required different responses. The acuity score collapsed them into one number. The number determined staffing. The staffing determined the nurse-to-patient ratio. The ratio determined how much attention Thomas received. The attention was determined by a number that could not tell the nurse what was wrong.</p>
+<h2>Piece #1107: The Maximum</h2>
+<p>The worst pollutant won.</p>
+<p>If PM2.5 produced an index of 150 and ozone produced an index of 80, the AQI was 150. The ozone was invisible — present in the air, contributing to exposure, but absent from the number that the public received. The maximum operation selected one pollutant and discarded the rest. The discarding was by design: the AQI was meant to communicate the most urgent hazard. The design assumed that the public needed simplicity more than completeness. The assumption was probably correct for mass communication. The assumption destroyed information that individuals needed for specific decisions.</p>
+<p>A runner deciding whether to train outdoors needed to know about ozone (respiratory irritation during exertion), not just PM2.5 (which affected everyone equally). An asthmatic needed to know the specific pollutant because different pollutants triggered different responses. An elderly person with cardiovascular disease needed PM2.5 data specifically. The AQI gave all of them the same number. The number was the maximum. The maximum was a political decision about communication, not a physical property of the air.</p>
+<p>Thomas&#x27;s acuity score performed the same operation. The worst parameter determined the score. If respiratory status was critical and neurological status was stable, the acuity score reflected the respiratory crisis. The neurological stability was invisible in the number. The nurse received the score and knew: this patient needs attention. The nurse did not know from the score alone which system needed the attention. The score communicated urgency. It did not communicate specificity.</p>
+<h2>Piece #1108: The Color</h2>
+<p>The color simplified the number.</p>
+<p>Green (0-50): good. Yellow (51-100): moderate. Orange (101-150): unhealthy for sensitive groups. Red (151-200): unhealthy. Purple (201-300): very unhealthy. Maroon (301-500): hazardous. The continuous index was binned into six categories, and the categories were assigned colors, and the colors became the primary communication. The evening news showed a colored map. The weather app showed a colored dot. The color replaced the number, which had replaced the concentration, which had replaced the air.</p>
+<p>The binning destroyed information within categories. AQI 51 (barely moderate) and AQI 100 (upper moderate) were both yellow. The difference — nearly double the index value — was invisible in the color. The boundary between categories was the same arbitrary-threshold phenomenon that appeared throughout measurement systems: AQI 100 was yellow, AQI 101 was orange. The step from moderate to unhealthy-for-sensitive-groups was a step in the color system, not a step in the air.</p>
+<p>Thomas&#x27;s chart used color-coded alerts. Green, yellow, red — within normal limits, borderline, critical. The colors were thresholds imposed on continuous vital signs. The nurse saw green and moved on. The nurse saw red and responded. The borderline yellow — the space where clinical judgment mattered most, where the numbers were ambiguous and the patient could tip either way — was the color that communicated the least. Yellow meant: not green, not red. It meant: the system does not know. The system assigned a color to its own uncertainty.</p>
+<h2>Piece #1109: The Breakpoint</h2>
+<p>The breakpoints were not thresholds of harm.</p>
+<p>The AQI breakpoint tables mapped pollutant concentrations to index values. For PM2.5: 0.0-12.0 µg/m³ mapped to AQI 0-50 (good). 12.1-35.4 µg/m³ mapped to AQI 51-100 (moderate). 35.5-55.4 µg/m³ mapped to AQI 101-150 (unhealthy for sensitive groups). The breakpoints were set by the EPA based on health studies, air quality standards, and regulatory judgment. They were evidence-informed but not evidence-determined — the specific numbers were the product of a process that weighed scientific evidence, economic impact, technical feasibility, and political negotiation.</p>
+<p>The breakpoints were revised: 2006 tightened the PM2.5 standard, 2024 tightened it further from 12.0 to 9.0 µg/m³ for the annual standard. Each revision changed what &quot;good&quot; meant. Air that was &quot;good&quot; in 2005 could be &quot;moderate&quot; in 2024 — not because the air had changed but because the standard had. The revision acknowledged that the previous standard was insufficiently protective, which meant that the previous &quot;good&quot; had included air that was harmful. The revision was correct. The implication was uncomfortable: the standard&#x27;s previous assessment — &quot;this air is safe&quot; — had been wrong, and the people who breathed it had done so under a number that told them they were fine.</p>
+<p>Thomas&#x27;s clinical thresholds were similarly revised. Normal ranges for neonatal lab values had changed over decades as studies refined the evidence. A bilirubin level that was &quot;watch and wait&quot; in 1990 might be &quot;intervene&quot; in 2020. The threshold moved. The bilirubin did not. The patient who was &quot;fine&quot; under the old threshold and &quot;at risk&quot; under the new one had not changed. The number that assessed them had.</p>
+<h2>Piece #1110: The Air</h2>
+<p>The air did not have an index.</p>
+<p>The air had particles — millions of sizes, compositions, sources. Combustion products from diesel engines, secondary aerosols formed in atmospheric chemistry, dust from construction, pollen from trees, sea salt from ocean spray. The particles varied by hour, by block, by elevation. A sensor on a rooftop measured a different air than a child breathed at ground level. The PM2.5 concentration was a spatial average, a temporal average, a mass average — the total mass of particles smaller than 2.5 micrometers per cubic meter, averaged over a measurement period, at a fixed location. The average was the measurement. The air the child breathed was not the average.</p>
+<p>The index was a number about the average. The average was a number about the air. The air was not a number. The distance from the air to the index was three abstractions: from specific particles to mass concentration, from mass concentration to pollutant sub-index, from sub-index to maximum-across-pollutants. Each abstraction lost information. Each abstraction was necessary for communication. The loss and the necessity coexisted.</p>
+<p>Thomas breathed hospital air — filtered, conditioned, monitored. The air in Thomas&#x27;s room had no AQI. It had a HEPA filter, a positive pressure system, a temperature and humidity range. The air was engineered. The engineering was invisible to the chart, which tracked what was inside Thomas — oxygen saturation, carbon dioxide levels, respiratory rate — and not what surrounded him. The air that Thomas breathed and the body that breathed it were the same system. The chart measured half of it.</p>
+<p>The air continued. The index continued. The number continued to reduce six pollutants to one integer and the integer to one color and the color to one action, and somewhere a child breathed air that the sensor on the rooftop had averaged and the index had simplified and the color had communicated, and the air was not the number and the child was not the color and the measurement continued.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-aggregate.html">&larr; Fiction The Aggregate</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-alarm.html">Fiction The Alarm &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

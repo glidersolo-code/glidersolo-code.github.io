@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Cup &mdash; The Loop</title>
+    <meta name="description" content="Three cups sit on a shelf. The US customary cup holds 236.588 milliliters. The metric cup holds 250 milliliters. The imperial cup holds 284.131...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-cup.html">
+    <meta property="og:title" content="Fiction The Cup">
+    <meta property="og:description" content="Three cups sit on a shelf. The US customary cup holds 236.588 milliliters. The metric cup holds 250 milliliters. The imperial cup holds 284.131...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-cup.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Cup">
+    <meta name="twitter:description" content="Three cups sit on a shelf. The US customary cup holds 236.588 milliliters. The metric cup holds 250 milliliters. The imperial cup holds 284.131...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Cup",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-cup.html",
+        "description": "Three cups sit on a shelf. The US customary cup holds 236.588 milliliters. The metric cup holds 250 milliliters. The imperial cup holds 284.131..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Cup</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCVIII: The Cup</h1>
+<h2>Piece #1481: The Three</h2>
+<p>Three cups sit on a shelf. The US customary cup holds 236.588 milliliters. The metric cup holds 250 milliliters. The imperial cup holds 284.131 milliliters. All three are called &quot;one cup.&quot; All three are used in recipes that say &quot;one cup.&quot; The word is the same. The volumes are not.</p>
+<p>Thomas had three instruments for depression. The PHQ-9, the Hamilton, the BDI-II. All three measured &quot;depression.&quot; All three produced a number. The numbers were not interchangeable — a PHQ-9 of 15 was not the same severity as a Hamilton of 15 or a BDI-II of 15. Each instrument held a different volume of the same named thing. The clinician who said &quot;the patient scored 15&quot; was using a word — &quot;scored&quot; — that contained three different meanings, and the listener had to know which cup was in the drawer.</p>
+<p>The US cup, the metric cup, and the imperial cup differ by as much as 20%. Three instruments called &quot;cup,&quot; measuring the same material, producing different quantities. The recipe does not specify which.</p>
+<h2>Piece #1482: The Ounce</h2>
+<p>The US fluid ounce is 29.5735 milliliters. The imperial fluid ounce is 28.4131 milliliters. The imperial ounce is smaller. But the imperial cup contains ten of them, while the US cup contains eight. Ten smaller ounces make a larger cup. Eight larger ounces make a smaller cup. The arithmetic is counterintuitive: more of less produces more.</p>
+<p>Thomas noticed similar inversions. The PHQ-9 had nine items scored 0-3. The Hamilton had 17 items, some scored 0-4, others 0-2. The Hamilton&#x27;s items were smaller — finer-grained — but there were more of them. The result was a higher ceiling: the Hamilton reached 52 where the PHQ-9 reached 27. More of a smaller unit produced a larger range. The consumer of the score — the clinician reading the number — had to know whether they were reading nine large items or seventeen small ones.</p>
+<p>The word &quot;ounce&quot; names two volumes. The word &quot;cup&quot; names three. Each word performs singularity while encoding plurality.</p>
+<h2>Piece #1483: The Inheritance</h2>
+<p>A grandmother in Surrey writes a recipe for scones. Two cups flour, one cup cream, one tablespoon sugar. She uses imperial cups — 284 mL each. Her granddaughter in Ohio reproduces the recipe with US cups — 237 mL each. The flour is 17% less. The cream is 17% less. The scones are drier. The granddaughter follows the recipe exactly. The recipe did not translate.</p>
+<p>Thomas saw inherited instruments. A clinician trained at one institution used the PHQ-9. A clinician trained at another used the Hamilton. When both entered the same health system, their assessment styles did not merge. They used the cup in their drawer. The patient who saw one clinician got one measurement. The patient who saw the other got another measurement. The depression was the same. The cup was different.</p>
+<p>The recipe card is the infrastructure. Written in one system, read in another, producing something that resembles the original but differs by exactly the gap between the two cups. The granddaughter does not know the recipe has changed. The recipe has not changed. The cup has.</p>
+<h2>Piece #1484: The Milliliter</h2>
+<p>The metric system offers a solution: abandon the cup. Use milliliters. Two hundred and fifty milliliters is the same volume in every kitchen in the world. No conversion, no national inheritance, no ambiguity. The measurement is universal. The measurement is also cold — precise but disconnected from the gesture of scooping, from the physical cup in the drawer, from the language of cooking.</p>
+<p>Thomas imagined a universal instrument — one that measured depression the same way everywhere, in every language, in every culture, with no local variation. Such an instrument would be precise. It would also be cold — disconnected from the clinical relationship, from the patient&#x27;s language, from the local understanding of what suffering looks like. The universal measurement would sacrifice the particular. The particular was where the medicine happened.</p>
+<p>The milliliter is correct. The cup is familiar. The cook reaches for the cup. The cup is in the drawer. The milliliter is on a scale they do not own. Precision loses to infrastructure.</p>
+<h2>Piece #1485: The Cup</h2>
+<p>A recipe says &quot;one cup.&quot; The cook opens the drawer and finds a US measuring cup. The cook fills it to the line. The cook has measured one cup — 236.588 milliliters, a volume defined by NIST Handbook 44, derived from the US customary system, inherited from the English wine gallon of 1707, itself derived from the ale gallon of 1266. The lineage is invisible. The cup is just a cup. The number on the side is just a number. The cook pours and moves on.</p>
+<p>Thomas&#x27;s patients were measured with cups. The PHQ-9 was a cup — it held a specific volume of clinical information. The patient poured their suffering in. The cup caught what it could. What it could not catch spilled over the sides and was not counted. The score was the volume the cup held. The suffering was the volume the patient poured. The two were never the same, because no cup holds everything.</p>
+<p>The cup in the drawer is the measurement. The cup in the drawer is national. The cup in the drawer is inherited. The word &quot;cup&quot; names the object and the system simultaneously — the physical thing and the history that sized it. The cook does not see the history. The cook sees a line and fills to it. The line is the format.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-cuff.html">&larr; Fiction The Cuff</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-custody-evaluation.html">Fiction The Custody Evaluation &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

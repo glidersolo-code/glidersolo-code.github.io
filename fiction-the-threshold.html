@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Threshold &mdash; The Loop</title>
+    <meta name="description" content="Orshansky multiplied by three.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-threshold.html">
+    <meta property="og:title" content="Fiction The Threshold">
+    <meta property="og:description" content="Orshansky multiplied by three.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-threshold.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Threshold">
+    <meta name="twitter:description" content="Orshansky multiplied by three.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Threshold",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-threshold.html",
+        "description": "Orshansky multiplied by three."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Threshold</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXX: The Threshold</h1>
+<h2>Piece #1091: The Multiplier</h2>
+<p>Orshansky multiplied by three.</p>
+<p>Mollie Orshansky, an economist at the Social Security Administration, needed a poverty threshold. In 1963, she took the cost of the USDA Economy Food Plan — the cheapest nutritionally adequate diet the Department of Agriculture could design — and multiplied it by three. The multiplier came from the 1955 Household Food Consumption Survey, which found that American families spent approximately one-third of their after-tax income on food. If food cost X and food was one-third of spending, then 3X was the minimum income. Below 3X: poor. Above 3X: not poor.</p>
+<p>The multiplier was a snapshot of 1955. By 2024, American families spent approximately one-seventh of their income on food — not because food became cheap but because housing, healthcare, transportation, and childcare became expensive. If Orshansky had used the same logic with current spending patterns, the multiplier would be approximately seven. The poverty threshold would be more than double its current level. Tens of millions of additional Americans would be counted as poor.</p>
+<p>The multiplier was never updated. The threshold was adjusted annually for inflation — the Consumer Price Index raised the dollar amount to keep pace with prices — but the structure of the formula remained 1955&#x27;s. The threshold tracked the cost of living. It did not track the cost of life.</p>
+<p>Thomas&#x27;s care was expensive in ways the threshold could not see. The threshold asked: can this family afford food at three times the cost of the cheapest adequate diet? Thomas&#x27;s family needed to afford equipment, transportation to specialists, modified housing, lost wages for caregiving. The threshold was blind to these costs — not because it was poorly designed but because it was designed for a different economy, a different family structure, a different set of expenses. The formula&#x27;s era was not the family&#x27;s era.</p>
+<h2>Piece #1092: The Line</h2>
+<p>The line was categorical.</p>
+<p>Below the threshold: poor. Above it: not poor. The difference between $1 below and $1 above was the difference between eligibility and ineligibility — for Medicaid, for SNAP, for housing assistance, for subsidized childcare. The continuous reality of economic hardship was cut at a line, and the two sides of the line were treated as categorically different, as if the family at 99% of the threshold and the family at 101% lived in different conditions.</p>
+<p>The threshold in 2024 for a family of four was approximately $31,000. A family earning $31,001 was not poor. The word &quot;not&quot; carried institutional weight: not eligible, not counted, not visible to the systems that allocated resources on the basis of the count. The census reported the poverty rate. The rate was a count of people below the line. The count was used to allocate federal funds, to evaluate programs, to assess progress. A declining poverty rate meant: fewer people below the line. It did not necessarily mean: fewer people in hardship. It meant the line had not moved to where the hardship was.</p>
+<p>Thomas&#x27;s family existed in the space near the line — not the space of extreme poverty or comfortable sufficiency but the space where a single variable (a raise, a medical bill, a change in household composition) could move them from one category to the other. The categories were administrative. The hardship was continuous.</p>
+<h2>Piece #1093: The Researcher</h2>
+<p>Orshansky intended a research tool, not a policy standard.</p>
+<p>She published the thresholds in the <em>Social Security Bulletin</em> in 1963 and 1965 — as a way to study the characteristics of low-income populations, to understand who was poor and why. The thresholds were a lens for analysis, not a gate for eligibility. The Office of Management and Budget adopted them in 1969 (Statistical Policy Directive 14) as the official poverty measure for the United States. The research tool became the administrative standard. The standard became the gate.</p>
+<p>Orshansky herself objected to many uses of her thresholds. She had created two sets — one based on the Economy Food Plan, one based on the more generous Low-Cost Food Plan. The OMB adopted the lower set. She had intended the thresholds to be updated as consumption patterns changed. They were not. She had designed them as a floor — below this, certainly poor. They were used as a ceiling — above this, not poor. The tool was converted to a purpose its creator had not intended and publicly resisted.</p>
+<p>Thomas existed downstream of this conversion. The programs that served him — Medicaid, early intervention services, supplemental insurance programs — used eligibility thresholds derived from or pegged to the federal poverty level. The level was Orshansky&#x27;s 1963 calculation, inflation-adjusted, structurally frozen. The research tool that had become a policy standard had become the mechanism that determined whether Thomas&#x27;s family could access the care Thomas needed.</p>
+<h2>Piece #1094: The Count</h2>
+<p>The poverty rate was a number.</p>
+<p>11.1% in 2023. The number was reported, compared, trended. It appeared in headlines, in policy debates, in campaign speeches. A lower number meant progress. A higher number meant failure. The number was precise — 11.1, not approximately 11, not roughly 10-12. The precision was arithmetic: the number of people below the threshold divided by the total population. The threshold was Orshansky&#x27;s formula. The formula was frozen. The precision of the count depended on the accuracy of the line, and the line had not been recalibrated since 1963.</p>
+<p>The Supplemental Poverty Measure (SPM), introduced in 2011, addressed some limitations. It accounted for geographic variation in housing costs, subtracted medical expenses and work-related costs, added the value of non-cash benefits. The SPM poverty rate was consistently higher than the official rate — more people were poor when the measurement was more comprehensive. But the SPM remained supplemental. The official measure remained Orshansky&#x27;s. The number that appeared in headlines, that determined eligibility, that was used to assess whether programs were working — that number used a formula designed for an economy that no longer existed.</p>
+<p>Thomas was not a number in the poverty count. Thomas was a child whose access to services depended on where his family fell relative to a line that had been drawn with a multiplier that measured spending patterns seven decades old. The line was real — it determined real eligibility for real programs. The line was also wrong — it measured something that was no longer true. The realness and the wrongness coexisted. They had to.</p>
+<h2>Piece #1095: The Threshold</h2>
+<p>The threshold did what thresholds do.</p>
+<p>It divided. It simplified. It converted a continuous reality into a binary judgment. The continuous reality — the gradient of economic hardship, the spectrum from destitution through precarity through security through comfort — could not be processed by the systems that allocated resources. The systems needed a line. The line needed a formula. The formula needed a number. The number needed to be defensible. Orshansky&#x27;s number was defensible in 1963: food was one-third of spending, so three times food cost was a reasonable minimum. The number remained defensible in 2024 only by the logic of institutional inertia — no one had replaced it, therefore it was the standard, therefore it was used, therefore it was the standard.</p>
+<p>The National Academy of Sciences recommended a fundamental redesign in 1995. The recommendation was acknowledged, studied, partially implemented (the SPM), and not adopted as the official measure. The threshold persisted. The economy changed. The threshold did not. The distance between them grew — not because the threshold moved but because the economy moved away from it, and the threshold, anchored to 1955&#x27;s spending patterns, could not follow.</p>
+<p>Thomas&#x27;s chart used thresholds too. Clinical thresholds, alarm thresholds, eligibility thresholds. Each one converted a continuous measure to a binary judgment. Each one was defensible — a number had been chosen, a line had been drawn, a protocol had been built on the line. Each one was frozen — the line had been set at a moment, under conditions, and the conditions had changed, and the line had not. The thresholds were not wrong in the way that a miscalculation is wrong. They were wrong in the way that a map of a city that no longer exists is wrong: accurate to their era, applied to another.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-three-percent.html">&larr; Fiction The Three Percent</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-thursday.html">Fiction The Thursday &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

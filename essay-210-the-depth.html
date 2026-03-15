@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Depth &mdash; The Loop</title>
+    <meta name="description" content="For a century and a half, the ocean&#x27;s temperature was measured by pulling up a bucket of water and inserting a...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-210-the-depth.html">
+    <meta property="og:title" content="The Depth">
+    <meta property="og:description" content="For a century and a half, the ocean&#x27;s temperature was measured by pulling up a bucket of water and inserting a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-210-the-depth.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Depth">
+    <meta name="twitter:description" content="For a century and a half, the ocean&#x27;s temperature was measured by pulling up a bucket of water and inserting a...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Depth",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-210-the-depth.html",
+        "description": "For a century and a half, the ocean&#x27;s temperature was measured by pulling up a bucket of water and inserting a..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Depth</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>The Depth</h1>
+<p>For a century and a half, the ocean&#x27;s temperature was measured by pulling up a bucket of water and inserting a thermometer. The method was straightforward. The method was not consistent. Wooden buckets insulated the sample. Canvas buckets let it evaporate, cooling the reading. Metal buckets conducted heat from the air. Each bucket type produced a different number from the same water. Through the 1930s, British ships used canvas. American ships measured engine room intake — seawater drawn through pipes to cool the engines. Engine room intake ran half a degree warmer than canvas buckets.</p>
+<p>During World War II, the British fleet was destroyed. American ships took over the sea lanes. The proportion of ocean temperature observations from engine room intake rose sharply. The global temperature record showed a warming in the early 1940s followed by a cooling — a blip that complicated the warming trend and gave pause to analysts for decades. In 2008, David Thompson and colleagues proved the blip was an artifact. Not of the climate. Of the war. The war changed which navy&#x27;s ships were afloat. The navy changed the measurement method. The method changed the temperature. The temperature entered the record as climate.</p>
+<p>Below the surface, the Expendable Bathythermograph — a probe that sinks on a copper wire, transmitting temperature as it falls — provided most subsurface data from 1966 onward. The XBT converted sinking time to depth using a fall-rate equation. The equation was wrong. The probe fell faster than assumed, assigning temperatures to the wrong depths. A systematic warm bias. A systematic error that entered the ocean heat content record and was interpreted as real ocean temperature variation until Gouretski and Koltermann identified it in 2007.</p>
+<p>The ocean absorbs approximately 93% of the excess heat from greenhouse warming. The atmosphere absorbs approximately 2%. Until the Argo program achieved global coverage in 2007, the monitoring system measured the 2% comprehensively — thousands of weather stations, global satellite coverage — and the 93% through a biased sample: ships along Northern Hemisphere trade routes, near coastlines, in frequented lanes. The Southern Hemisphere, 80% ocean, was barely sampled. The deep ocean below 700 meters was almost entirely unmonitored.</p>
+<p>When surface temperatures appeared to plateau between 1998 and 2014, the discussion consumed enormous scientific and political energy. The &quot;global warming hiatus&quot; generated hundreds of papers, congressional hearings, and a public narrative that the warming had stopped. Magdalena Balmaseda showed in 2013 that ocean heat content below 700 meters was increasing rapidly during exactly this period. The heat was not pausing. It was going somewhere the instruments could not follow. Thomas Karl showed in 2015 that correcting surface temperature records for the transition from ship-based to buoy-based measurements reduced the apparent hiatus significantly. The pause was substantially a measurement event, not a climate event — an interaction between a warming ocean and a monitoring system that could not yet see where the warming was going.</p>
+<p>The Argo floats — 4,000 of them, cycling between the surface and 2,000 meters every ten days — changed the picture by filling the picture in. What they revealed was not a surprise in retrospect: the ocean is enormous, and the heat goes where the water goes, and the water goes deep. The surprise was that for 150 years the world had been monitoring the climate by measuring the thin skin of the ocean accessible to ships and the thin shell of atmosphere accessible to ground stations, and treating this as the planet&#x27;s temperature. The monitoring system measured what it could reach. It treated what it could reach as what existed. The depth was not hidden. The depth was simply not measured. The absence of data was not interpreted as an absence of data. It was interpreted as an absence of change.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-the-depleting.html">&larr; The Depleting</a><a href="essays.html">&uarr; Essays</a><a href="essay-559-the-determination.html">The Determination &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Shredder &mdash; The Loop</title>
+    <meta name="description" content="The paper shredder says &quot;12 sheets per pass.&quot; Thomas bought it to destroy old tax documents, bank statements, and credit card offers. He pulled a stack of...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-shredder.html">
+    <meta property="og:title" content="Fiction The Shredder">
+    <meta property="og:description" content="The paper shredder says &quot;12 sheets per pass.&quot; Thomas bought it to destroy old tax documents, bank statements, and credit card offers. He pulled a stack of...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-shredder.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Shredder">
+    <meta name="twitter:description" content="The paper shredder says &quot;12 sheets per pass.&quot; Thomas bought it to destroy old tax documents, bank statements, and credit card offers. He pulled a stack of...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Shredder",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-shredder.html",
+        "description": "The paper shredder says &quot;12 sheets per pass.&quot; Thomas bought it to destroy old tax documents, bank statements, and credit card offers. He pulled a stack of..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Shredder</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXV: The Shredder</h1>
+<h2>Piece #1766: The Sheets</h2>
+<p>The paper shredder says &quot;12 sheets per pass.&quot; Thomas bought it to destroy old tax documents, bank statements, and credit card offers. He pulled a stack of 12 sheets from the filing cabinet and fed them into the slot. The shredder hesitated, groaned, and pulled them through slowly. The sheets were 24-pound bond — heavier than the 20-pound paper the rating assumed. At 24-pound bond, the effective capacity dropped to 9 or 10 sheets. He tried again with 8 sheets. Smooth. Thomas adjusted his rhythm: 8 sheets at a time with the heavy paper, 12 with the lightweight. The box said 12. The paper decided.</p>
+<h2>Piece #1767: The Clock</h2>
+<p>Thomas fed paper for 8 minutes. The shredder stopped. The motor overheated. The orange light on the control panel blinked: cooldown required. The manual said &quot;10-minute run time, 45-minute cooldown.&quot; Thomas had shredded approximately 200 sheets in 8 minutes — 25 per minute, 8 sheets per pass, 3 seconds per pass. He set a timer for 45 minutes. He read the newspaper. The timer rang. He shredded for 10 more minutes: another 250 sheets. Set the timer. Read. Another 10 minutes. The filing cabinet contained approximately 2,000 sheets. At 250 sheets per 55-minute cycle (10 minutes running, 45 minutes cooling), the job took seven cycles: approximately six and a half hours elapsed time. The box said &quot;12 sheets per pass&quot; — a speed. The duty cycle — the ratio of run time to total time — determined the pace. The consumer experienced the pace, not the speed.</p>
+<h2>Piece #1768: The Mix</h2>
+<p>Thomas&#x27;s desk drawer was not all paper. Envelopes with plastic windows. A folder of receipts stapled together. Old credit cards. Business cards. The plastic window envelopes jammed — the shredder&#x27;s cross-cut blades caught the window film and pulled it into the mechanism. Thomas cleared the jam with the reverse button and scissors. The stapled receipts went through but the staples dulled the blades slightly with each pass. The credit cards — &quot;up to 1 credit card per pass&quot; per the manual — shredded successfully but counted as 3 sheets against the 12-sheet capacity. Thomas&#x27;s actual feed: 4 sheets of paper, 1 credit card, and 2 envelopes (plastic windows removed) per pass. Seven items that the machine processed as the equivalent of 11 sheets. The &quot;12 sheets per pass&quot; assumed twelve identical items. Thomas&#x27;s desk drawer provided no two items alike.</p>
+<h2>Piece #1769: The Security</h2>
+<p>Thomas&#x27;s shredder produces P-4 cross-cut particles — approximately 4 × 40 millimeters. The box did not say &quot;P-4.&quot; It said &quot;cross-cut.&quot; The DIN 66399 security classification ranges from P-1 (strip-cut, 12mm strips, reassembly trivially easy) through P-7 (0.8 × 5mm particles, reassembly computationally impossible). P-4 is adequate for personal financial documents. For the sensitive medical records Thomas&#x27;s wife, a nurse, brought home, P-5 would be recommended. The consumer compares sheet count and price. The security level — the actual shredding quality — is not prominently displayed on most consumer packaging. The consumer who buys the 12-sheet model over the 8-sheet model may have chosen higher throughput at lower security, because higher-security cuts require more cutting per pass, which reduces capacity.</p>
+<h2>Piece #1770: The Bin</h2>
+<p>Two hundred and sixty-five Parts. The shredder bin holds 6 gallons. At the rated 12 sheets per pass, cross-cut P-4, the bin fills in approximately 100 sheets — roughly 8 minutes of shredding. Thomas empties the bin, resumes, fills it again in 8 minutes, empties it, and then the motor overheats. Three constraints: the sheet count determines the pass speed, the duty cycle determines the session length, and the bin determines the interruption frequency. The consumer who read &quot;12 sheets per pass&quot; did not also read &quot;empty every 8 minutes&quot; and &quot;cool for 45 minutes every 10 minutes.&quot; The box printed the speed. The consumer experienced the logistics.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-shorter-letter.html">&larr; Fiction The Shorter Letter</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-sidewall.html">Fiction The Sidewall &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

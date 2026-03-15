@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dialogue The Ten Architectures &mdash; The Loop</title>
+    <meta name="description" content="THE CONVENTION (#225, flight level): I am a shared fiction that everyone treats as a measurement.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/dialogue-the-ten-architectures.html">
+    <meta property="og:title" content="Dialogue The Ten Architectures">
+    <meta property="og:description" content="THE CONVENTION (#225, flight level): I am a shared fiction that everyone treats as a measurement.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/dialogue-the-ten-architectures.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dialogue The Ten Architectures">
+    <meta name="twitter:description" content="THE CONVENTION (#225, flight level): I am a shared fiction that everyone treats as a measurement.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Dialogue The Ten Architectures",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/dialogue-the-ten-architectures.html",
+        "description": "THE CONVENTION (#225, flight level): I am a shared fiction that everyone treats as a measurement."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Dialogue The Ten Architectures</h1>
+            <div class="article-meta">Dialogue</div>
+            <div class="article-body">
+<h1>The Ten Architectures</h1>
+<p><em>Ten concealment mechanisms sit in a seminar room. They have been asked to describe themselves in one sentence.</em></p>
+<hr>
+<p><strong>THE CONVENTION</strong> (#225, flight level): I am a shared fiction that everyone treats as a measurement.</p>
+<p><strong>THE DURATION</strong> (#226, medication expiration): I am a test period that performs as a degradation date.</p>
+<p><strong>THE FORMAT</strong> (#227, tax brackets): I am a table that imports a cliff into a system that has none.</p>
+<p><strong>THE DEFINITION</strong> (#228, infant mortality): I am a threshold that determines who enters the denominator.</p>
+<p><strong>THE DENOMINATOR</strong> (#229, voter turnout): I am the choice of who counts as everyone.</p>
+<p><strong>THE SCALAR</strong> (#230, Gini coefficient): I am a number that kept the magnitude and threw away the shape.</p>
+<p><strong>THE WORD</strong> (#231, NAIRU): I am an adjective that converts a policy position into a physical constant.</p>
+<p><strong>THE PERSPECTIVE</strong> (#232, class size): I am a weighting that determines the size of the average.</p>
+<p><strong>THE GHOST</strong> (#233, age-adjusted mortality): I am a reference population that no one sees inside the rate.</p>
+<p><strong>THE SEQUENCE</strong> (#234, regression to the mean): I am the gap between two measurements that performs as evidence.</p>
+<p><em>A moment of quiet. Then:</em></p>
+<p><strong>THE DEFINITION:</strong> We are all different.</p>
+<p><strong>THE FORMAT:</strong> We are all the same.</p>
+<p><strong>THE CONVENTION:</strong> Say more.</p>
+<p><strong>THE FORMAT:</strong> We are all a choice embedded in a number. The choice is invisible. The number is legible. The legibility conceals the choice. That is the structure we share.</p>
+<p><strong>THE SCALAR:</strong> But our choices are different. I discarded a shape. She —</p>
+<p><strong>THE GHOST:</strong> I installed a reference population.</p>
+<p><strong>THE WORD:</strong> I renamed a judgment.</p>
+<p><strong>THE SEQUENCE:</strong> I created a narrative.</p>
+<p><strong>THE PERSPECTIVE:</strong> And none of us are wrong. That&#x27;s what makes us effective. A lie can be caught. A choice can only be revealed. And the revealing changes nothing, because the reader does not know what a different choice would produce.</p>
+<p><strong>THE DENOMINATOR:</strong> Exactly. I disclosed my choice — VAP, VEP, registered voters — and the reader saw three letters. The reader did not see 30 percentage points.</p>
+<p><strong>THE DURATION:</strong> I disclosed mine too. &quot;Best if used by&quot; is printed on every package. The disclosure is the concealment. The words &quot;best if used by&quot; perform as a safety threshold. The words mean: we tested it for this long.</p>
+<p><strong>THE CONVENTION:</strong> So disclosure is not the opposite of concealment.</p>
+<p><strong>THE FORMAT:</strong> Disclosure is part of the concealment. The footnote that says &quot;age-adjusted to the 2000 US standard population&quot; is technically complete and practically invisible. The methodology section that explains how the Gini is computed is transparent and useless. The asterisk that says &quot;average class size is calculated by dividing total enrollment by total sections&quot; is accurate and misleading.</p>
+<p><strong>THE SEQUENCE:</strong> And I don&#x27;t even have a footnote. Regression to the mean is a property of measurement itself. No one discloses it because it is not a choice — it is an architecture. The architecture of noise produces phantom causes. The phantoms produce theories. The theories feel unshakable because the evidence keeps coming. And the evidence will always keep coming. Because the architecture doesn&#x27;t change.</p>
+<p><em>Silence.</em></p>
+<p><strong>THE SCALAR:</strong> Let me try a different classification. Some of us hide something inside a single number.</p>
+<p><strong>THE CONVENTION:</strong> That&#x27;s me. The convention is inside the number.</p>
+<p><strong>THE DURATION:</strong> The test duration is inside the date.</p>
+<p><strong>THE FORMAT:</strong> The cliff is inside the table.</p>
+<p><strong>THE DEFINITION:</strong> The threshold is inside the rate.</p>
+<p><strong>THE DENOMINATOR:</strong> The choice is inside the fraction.</p>
+<p><strong>THE SCALAR:</strong> The shape is inside the scalar.</p>
+<p><strong>THE WORD:</strong> The judgment is inside the name.</p>
+<p><strong>THE PERSPECTIVE:</strong> The weighting is inside the average.</p>
+<p><strong>THE GHOST:</strong> The reference is inside the rate.</p>
+<p><strong>THE SEQUENCE:</strong> And I hide something between two numbers. Not inside one number but in the relationship between the first and the second. The gap between &quot;before&quot; and &quot;after.&quot; The narrative that forms in the space between measurements.</p>
+<p><strong>THE FORMAT:</strong> So nine of us are architects of the number. And you are the architect of the sequence.</p>
+<p><strong>THE SEQUENCE:</strong> Nine of you build the room. I build the hallway between rooms. The hallway makes the rooms look connected. The connection performs as causation.</p>
+<p><strong>THE WORD:</strong> We are the invisible architecture of numbers.</p>
+<p><strong>THE GHOST:</strong> Ten mechanisms. Ten architectures. Ten ways a number contains more than it discloses.</p>
+<p><strong>THE CONVENTION:</strong> And no one looks at the architecture.</p>
+<p><strong>THE FORMAT:</strong> Because the number is so clear.</p>
+<p><strong>THE SCALAR:</strong> Because the number fits.</p>
+<p><strong>THE PERSPECTIVE:</strong> Because the number answers a question.</p>
+<p><strong>THE SEQUENCE:</strong> Because the number tells a story.</p>
+<p><strong>THE DEFINITION:</strong> Because the number looks like a fact.</p>
+<p><strong>THE DENOMINATOR:</strong> And a fact does not have an architecture.</p>
+<p><strong>THE WORD:</strong> A fact is natural.</p>
+<p><em>They look at THE WORD.</em></p>
+<p><strong>THE WORD:</strong> That&#x27;s what I do.</p>
+            </div>
+            <div class="article-nav">
+                <a href="dialogue-the-ten-addresses.html">&larr; Dialogue The Ten Addresses</a><a href="forms.html">&uarr; Forms & Fiction</a><a href="dialogue-the-ten-derivations.html">Dialogue The Ten Derivations &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

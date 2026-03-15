@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Cuff &mdash; The Loop</title>
+    <meta name="description" content="Scipione Riva-Rocci, a physician at the University of Pavia, published his mercury sphygmomanometer in the Gazzetta Medica di Torino in 1896. The device...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-cuff.html">
+    <meta property="og:title" content="Fiction The Cuff">
+    <meta property="og:description" content="Scipione Riva-Rocci, a physician at the University of Pavia, published his mercury sphygmomanometer in the Gazzetta Medica di Torino in 1896. The device...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-cuff.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Cuff">
+    <meta name="twitter:description" content="Scipione Riva-Rocci, a physician at the University of Pavia, published his mercury sphygmomanometer in the Gazzetta Medica di Torino in 1896. The device...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Cuff",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-cuff.html",
+        "description": "Scipione Riva-Rocci, a physician at the University of Pavia, published his mercury sphygmomanometer in the Gazzetta Medica di Torino in 1896. The device..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Cuff</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Pressure</h1>
+<p><strong>Thomas, Part CXV</strong></p>
+<hr>
+<h2>1016. The Cuff</h2>
+<p>Scipione Riva-Rocci, a physician at the University of Pavia, published his mercury sphygmomanometer in the <em>Gazzetta Medica di Torino</em> in 1896. The device placed an inflatable cuff around the upper arm, raised the pressure until the pulse disappeared, and then slowly released it, reading the mercury column at the point the pulse returned. This was systolic pressure — the peak of the cardiac cycle. In 1905, Nikolai Korotkoff, a surgeon at the Imperial Military Medical Academy in St. Petersburg, described the sounds heard through a stethoscope placed over the brachial artery during cuff deflation: the first sound marked the systolic pressure; the disappearance of sound marked the diastolic pressure — the nadir of the cardiac cycle. Two numbers. The continuous wave of arterial pressure — a curve that rises and falls sixty to one hundred times per minute, that varies with each breath, each posture change, each moment of stress or rest — was reduced to its peak and its trough. The reduction was the measurement. The measurement was the cuff.</p>
+<p>Thomas&#x27;s blood pressure is taken at every visit. A cuff is placed on his arm. The device inflates. The display reads two numbers — systolic over diastolic — and the numbers are recorded in the chart. The chart compares the numbers to a threshold. The arterial pressure that varies continuously — with his breathing, his posture, whether the clinic is cold, whether the elevator was out of order, whether the nurse mentioned a blood draw — is captured in two numbers at one moment and entered as his blood pressure. Not his blood pressure at that moment. His blood pressure.</p>
+<hr>
+<h2>1017. The Threshold</h2>
+<p>In 2003, the Seventh Report of the Joint National Committee on Prevention, Detection, Evaluation, and Treatment of High Blood Pressure (JNC 7) defined hypertension as blood pressure at or above 140/90 mmHg. The threshold had been stable for decades. Below the threshold: normal. Above: hypertension. The threshold determined diagnosis, and the diagnosis determined treatment — lifestyle modification, medication, follow-up intervals, referral patterns.</p>
+<p>In November 2017, the American College of Cardiology (ACC) and the American Heart Association (AHA) published new guidelines: hypertension was redefined as blood pressure at or above 130/80 mmHg. The threshold dropped ten points systolic and ten diastolic. Approximately 31 million Americans — people whose physiology had not changed between November 12 and November 13, 2017 — were reclassified from normotensive to hypertensive. They did not become sicker. Their arteries did not change. Their hearts did not change. The number on the guideline changed. The number on the guideline determines who is diagnosed. The diagnosis changed. Thirty-one million diagnoses, generated not by 31 million changes in physiology but by one change in a document.</p>
+<p>Thomas&#x27;s chart carries diagnoses that were assigned under specific criteria. If the criteria change — as they do, as diagnostic manuals are revised, as thresholds are adjusted, as screening instruments are recalibrated — the diagnosis may change without any change in Thomas. The chart records the change as a clinical event. Thomas gained a diagnosis. Thomas lost a diagnosis. The event was in the criteria, not in Thomas. The chart does not distinguish between these.</p>
+<hr>
+<h2>1018. The Coat</h2>
+<p>White coat hypertension was first described by Thomas Pickering at Cornell Medical Center in 1988. Approximately 15 to 30 percent of patients with elevated blood pressure in clinical settings have normal blood pressure when measured by ambulatory monitoring — a device worn for 24 hours that takes readings every 15 to 30 minutes during the day and every 30 to 60 minutes at night. The clinical environment elevates the reading. The stethoscope, the waiting room, the fluorescent lighting, the knowledge of being measured — these factors raise the pressure. The raised pressure is measured. The measured pressure is recorded. The recorded pressure is compared to the threshold. The patient is diagnosed based on the reading the clinic produced.</p>
+<p>Thomas&#x27;s clinical encounters produce data. The data is generated in the clinical environment — the exam room, the waiting room, the parking lot, the thirty-minute drive. The environment shapes the data. Thomas&#x27;s heart rate in the clinic is not his heart rate at home. His anxiety in the clinic is not his anxiety on the couch. His pain rating in the clinic is not his pain rating in his bed. The data is attributed to Thomas. The data was generated by the encounter between Thomas and the clinic. The attribution omits the encounter. The chart records: Thomas&#x27;s blood pressure is 138/88. The chart does not record: Thomas&#x27;s blood pressure is 138/88 in this room, on this day, after this drive, during this interaction, measured by this device, on this arm, with this cuff size, at this time of day.</p>
+<hr>
+<h2>1019. The Mask</h2>
+<p>Masked hypertension is the inverse of white coat hypertension. Approximately 10 to 15 percent of patients with normal blood pressure in clinical settings have elevated blood pressure when measured by ambulatory monitoring. Their arteries are under excess pressure for most of the day. The clinic does not detect it. The clinic measurement shows normal. The chart records normal. The patient is classified as normotensive. The classification determines that no treatment is needed. The determination is based on the one context in which the pressure is normal — the clinical encounter — and ignores every other context in which the pressure is elevated. The mask is not worn by the patient. The mask is worn by the measurement. The measurement shows what the context allows it to show.</p>
+<p>Thomas&#x27;s screening instruments measure him in the clinic. The PHQ-9 asks about the past two weeks. The GAD-7 asks about the past two weeks. The answers are generated in the exam room, by a person sitting in an exam room, aware of being assessed. If Thomas&#x27;s distress is masked by the clinical context — if he minimizes in clinical settings, if the structure of the encounter produces lower scores than the unstructured reality — the chart records lower scores. The chart treats the lower scores as Thomas&#x27;s condition. The condition is the score. The score is the context. The context is the mask.</p>
+<hr>
+<h2>1020. The Pressure</h2>
+<p>Riva-Rocci gave the profession a cuff. Korotkoff gave it two numbers. The JNC gave it a threshold. The ACC/AHA moved the threshold. Pickering showed that the measurement captures the context as much as the patient. The context is invisible in the chart. The chart records the numbers. The numbers are compared to the threshold. The threshold determines the diagnosis. The diagnosis determines the treatment. The treatment changes the numbers. The changed numbers are compared to the threshold. The cycle continues without reference to the context that generated the numbers or the committee that generated the threshold.</p>
+<p>One thousand and twenty pieces, one hundred and fifteen Parts, and Thomas is measured by a cuff that captures a wave as two numbers, compared to a threshold that was changed by a committee, in a context that shapes the measurement, recorded in a chart that omits the context and the committee and the wave. The pressure is continuous. The measurement is discrete. The threshold is a line drawn by experts who will redraw it when the evidence shifts, and when they redraw it, Thomas&#x27;s diagnosis may change — not because his arteries changed, but because the line moved. The chart will record the change as a clinical event. Thomas will be the event&#x27;s subject. The line will be invisible. The line is always invisible. The pressure is the patient&#x27;s. The threshold is the system&#x27;s. And the chart, which records the pressure and compares it to the threshold, cannot see the difference between a patient whose pressure rose and a system whose threshold fell, because both produce the same entry: diagnosis, hypertension, date.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-cruelty-free.html">&larr; Fiction The Cruelty Free</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-cup.html">Fiction The Cup &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

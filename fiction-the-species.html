@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Species &mdash; The Loop</title>
+    <meta name="description" content="Ernst Mayr, publishing Systematics and the Origin of Species with Columbia University Press in 1942, defined the biological species concept: species are...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-species.html">
+    <meta property="og:title" content="Fiction The Species">
+    <meta property="og:description" content="Ernst Mayr, publishing Systematics and the Origin of Species with Columbia University Press in 1942, defined the biological species concept: species are...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-species.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Species">
+    <meta name="twitter:description" content="Ernst Mayr, publishing Systematics and the Origin of Species with Columbia University Press in 1942, defined the biological species concept: species are...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Species",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-species.html",
+        "description": "Ernst Mayr, publishing Systematics and the Origin of Species with Columbia University Press in 1942, defined the biological species concept: species are..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Species</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Species</h1>
+<p><strong>Thomas, Part CXI</strong></p>
+<hr>
+<h2>996. The Concept</h2>
+<p>Ernst Mayr, publishing <em>Systematics and the Origin of Species</em> with Columbia University Press in 1942, defined the biological species concept: species are groups of actually or potentially interbreeding natural populations that are reproductively isolated from other such groups. The definition draws a boundary around a cluster of organisms using a single criterion — can they produce fertile offspring together? If yes, same species. If no, different species. The boundary is operational. It can, in principle, be tested. It is the most widely taught definition of species in biology education worldwide.</p>
+<p>The definition does not work for asexual organisms — bacteria, archaea, many protists — which reproduce without interbreeding. It does not work for fossils, which cannot be tested for reproductive compatibility. It does not work for ring species, in which adjacent populations can interbreed but populations at the ends of the ring cannot, creating a continuous gradient that the binary boundary cannot capture. It does not work for many plants and some animals that hybridize freely across what the classification calls species boundaries — wolves and coyotes, polar bears and grizzly bears, many oaks and orchids — producing fertile offspring that the definition says should not exist. Kevin de Queiroz at the Smithsonian&#x27;s National Museum of Natural History, publishing &quot;Species Concepts and Species Delimitation&quot; in <em>Systematic Biology</em> (56(6):879-886, 2007), identified at least twenty-six formally proposed species concepts, each drawing boundaries using different criteria: morphological similarity, genetic divergence, ecological niche, phylogenetic lineage, reproductive isolation, or combinations thereof. Twenty-six definitions of the fundamental unit of biodiversity. Each draws different boundaries. Each counts a different number of species.</p>
+<p>Thomas&#x27;s diagnoses are species concepts. &quot;Seizure disorder&quot; draws a boundary around a cluster of neurological events using a set of criteria — abnormal electrical activity producing observable motor or behavioral manifestations. The definition is operational. But not all of Thomas&#x27;s neurological events fit cleanly inside the boundary. Some events are ambiguous — movements that resemble seizures without the EEG signature, or EEG discharges that produce no observable event. The definition does not accommodate the events that fall between categories, and Thomas has events that fall between categories.</p>
+<hr>
+<h2>997. The Count</h2>
+<p>Camilo Mora, Derek Tittensor, Sina Adl, Alastair Simpson, and Boris Worm, publishing in <em>PLoS Biology</em> (9(8):e1001127, 2011), estimated the total number of eukaryotic species on Earth at approximately 8.7 million, with a prediction interval of 7.4 to 10.0 million. Approximately 1.2 million had been formally described. The estimate used patterns in the hierarchy of Linnaean classification — the relationship between the number of higher taxa and the number of species they contain — to predict the total from the known portion. The number is presented as a fact about the world: there are approximately 8.7 million species on Earth.</p>
+<p>The number depends on which species concept is used. Under the biological species concept, groups that hybridize freely would be counted as fewer species. Under the phylogenetic species concept — which recognizes any diagnosable population as a distinct species — the count would be higher; some estimates suggest it would approximately double for well-studied groups. The 8.7 million figure aggregates formal descriptions made across two centuries by thousands of taxonomists using different species concepts in different groups: morphological for most invertebrates and plants, biological for many birds and mammals, molecular for microorganisms. The count treats these as comparable units. They are not comparable units. Each was drawn by a different conceptual tool on a different part of the continuum.</p>
+<p>Thomas&#x27;s chart contains a count of diagnoses. The number depends on which diagnostic framework is used. Under ICD-10, some of Thomas&#x27;s presentations split into more codes. Under a functional assessment model, some merge. The chart aggregates diagnoses assigned by different clinicians using different frameworks at different times, as though each framework were counting the same kind of thing.</p>
+<hr>
+<h2>998. The Boundary</h2>
+<p>The species problem — the impossibility of drawing a single, universally applicable boundary between &quot;same species&quot; and &quot;different species&quot; — is not a failure of biology. It is a consequence of the phenomenon. Speciation is a process, not an event. Two populations diverge gradually, acquiring genetic, morphological, behavioral, and ecological differences at different rates. At some point in the process, they are different species. At an earlier point, they were the same species. Between these points, the populations are in the process of becoming separate — reproductively semi-isolated, genetically divergent but not fully, morphologically distinguishable by some criteria and not others. The species concept asks for a line. The continuum offers a gradient.</p>
+<p>Thomas&#x27;s conditions are processes. Developmental delay is not a boundary — it is a trajectory that changes slope, accelerates, decelerates, and occasionally reverses. Seizure disorder is not a category — it is a pattern whose frequency, intensity, and character shift as Thomas&#x27;s neurology matures and deteriorates and adapts. The diagnostic system draws a line across the continuum: seizure disorder present, developmental delay present. The line is clinically useful — it triggers medication protocols, specialist referrals, insurance authorizations. It is not a natural boundary in Thomas&#x27;s neurology. It is a classification imposed on a gradient, and the gradient continues moving after the line is drawn.</p>
+<hr>
+<h2>999. The Type Specimen</h2>
+<p>Every formally described species has a type specimen — a single preserved organism (the holotype), or a set of specimens (syntypes), deposited in a museum collection, against which all future identifications are compared. The type specimen is not the most representative individual. It is not the average, the ideal, or the archetype. It is the one that happened to be collected, preserved, and designated. All subsequent identifications are made by comparison to the type: is this new specimen sufficiently similar? If yes, it belongs to the species. If not, it may be new. The type is the anchor. The anchor is a specific individual that was collected in a specific place at a specific time by a specific collector, and it became the permanent reference point for a name that will be applied to billions of individuals across millions of years.</p>
+<p>Thomas&#x27;s chart contains a type specimen: the initial clinical presentation that established his diagnostic categories. The child evaluated at age two — the seizures observed that week, the developmental milestones missed by that date, the feeding difficulties documented in that encounter — is the holotype against which every subsequent presentation is compared. A new symptom is identified by comparison: does this look like the established pattern? An improvement is measured against the type: has Thomas moved relative to the reference? The type was not chosen for being representative. It was the presentation that was documented when the diagnoses were assigned. Thomas at two is the type specimen of Thomas. Thomas at twelve is compared to the type. The comparison determines whether the diagnosis holds, and the type determines the comparison.</p>
+<hr>
+<h2>1000. The Species</h2>
+<p>One thousand pieces.</p>
+<p>A species is not found. It is drawn. A taxonomist examines the continuum of biological variation — the gradient of genetic distance, morphological similarity, ecological overlap, reproductive compatibility — and draws a line. Inside the line: one species. Outside: another. The line is useful. The line makes the count possible, the conservation plan actionable, the textbook chapter writable, the field guide printable. Without the line, there is only the gradient, and the gradient is unmanageable.</p>
+<p>Thomas is not found. He is drawn. A clinician examines the continuum of his neurological, developmental, and medical variation — the gradient of symptom severity, functional capacity, treatment response, quality of life — and draws a line. Inside the line: seizure disorder. Inside another line: developmental delay. Inside another: feeding difficulties. The lines are useful. They make the chart legible, the treatment plan algorithmic, the insurance authorization processable, the outcome measurable. Without the lines, there is only Thomas, and Thomas is unmanageable.</p>
+<p>One thousand pieces, and the question has been the same since the first: what happens to the gradient when you draw the line? The gradient does not disappear. It continues on both sides of the boundary, through the boundary, as if the boundary were not there — because it is not there. The boundary is in the classification, not in the organism. The boundary is in the chart, not in Thomas. The species concept gives the classifier a tool for making the world tractable. The organism gives the classifier a world that exceeds every tool brought to it. Twenty-six species concepts, twenty-six ways to draw the line, twenty-six counts of what exists. One Thomas, one gradient, one continuum that has been scored and categorized and typed and counted for six years and one thousand pieces, and remains, as it was at the beginning, a specimen that exceeds its type.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-speaker.html">&larr; Fiction The Speaker</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-specimen.html">Fiction The Specimen &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

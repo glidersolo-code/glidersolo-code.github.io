@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Average &mdash; The Loop</title>
+    <meta name="description" content="Hits divided by at-bats. The formula fits on an index card. A child can compute it. This is the batting average — the...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/essay-512-the-average.html">
+    <meta property="og:title" content="The Average">
+    <meta property="og:description" content="Hits divided by at-bats. The formula fits on an index card. A child can compute it. This is the batting average — the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/essay-512-the-average.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Average">
+    <meta name="twitter:description" content="Hits divided by at-bats. The formula fits on an index card. A child can compute it. This is the batting average — the...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Average",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/essay-512-the-average.html",
+        "description": "Hits divided by at-bats. The formula fits on an index card. A child can compute it. This is the batting average — the..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>The Average</h1>
+            <div class="article-meta">Essay</div>
+            <div class="article-body">
+<h1>Essay 512: The Average</h1>
+<p>Hits divided by at-bats. The formula fits on an index card. A child can compute it. This is the batting average — the oldest, most recognized, most persistently cited statistic in professional sports — and its transparency is its concealment mechanism.</p>
+<p>Henry Chadwick published &quot;The True Test of Batting&quot; in <em>The Ball Players&#x27; Chronicle</em> on September 19, 1867. The denominator shifted from games to at-bats by 1876. The formula has not changed since. Everyone who follows baseball knows it. The knowledge is not specialized. The calculation is not obscure. And this is exactly the problem.</p>
+<p>When a formula is visible, the audience assumes nothing important is missing. The glass is so clear the viewer forgets it is a window. A window has edges. What falls outside the frame does not appear in the picture. The batting average&#x27;s frame excludes walks — the most important offensive event it does not count. A player who draws a hundred walks reaches base a hundred more times than his batting average reports. Branch Rickey wrote in <em>Life</em> magazine in 1954 that the statistic was &quot;only a partial record of offensive ability.&quot; The adjective was precise. The record is partial. But because the formula is transparent, the partiality is invisible.</p>
+<p>The omissions compound. A single and a home run count identically: one hit. The format erases magnitude. Park effects disappear — a .300 season at Coors Field in Denver, where thin air carries fly balls 5% farther, is not the same achievement as .300 at Petco Park in San Diego, where marine air suppresses offense. Pitcher quality disappears. Game leverage disappears. Era context disappears: the league batting average in 2024 fell to approximately .240, the lowest since 1968, meaning a .300 season in 2024 is a far rarer achievement than .300 in 1930. The format holds the number constant while the conditions underneath shift.</p>
+<p>The statistical case against the statistic is settled. George Lindsey published run expectancy matrices in <em>Operations Research</em> in 1963 — the first rigorous quantitative demonstration that what produces runs is not what batting average measures. Bill James coined &quot;sabermetrics&quot; and published annual <em>Abstracts</em> beginning in 1977, showing that runs created depends on reaching base by any means, not just hits. Pete Palmer and John Thorn demonstrated with Linear Weights in 1984 that on-base percentage and slugging are the primary drivers of offensive production. OBP was added to official statistics that same year. In analyses of team seasons, batting average explains roughly 67% of variance in runs scored. On-base percentage explains 84%. OPS — on-base plus slugging — explains 90%. The hierarchy is not ambiguous.</p>
+<p>Michael Lewis documented the market consequence in <em>Moneyball</em> (2003): the Oakland Athletics, with a $44 million payroll, systematically acquired players whom the market undervalued because the market priced batting average while the evidence supported OBP. The arbitrage worked. The A&#x27;s won 20 consecutive games. The lesson reached a general audience. A 2011 film amplified it further. Every major league front office now uses advanced analytics. The refutation is not recent, not marginal, not controversial. It is mainstream, institutional, and decades old.</p>
+<p>And yet the batting average is still the first number on the broadcast graphic. Arth and Billings, studying 60 MLB broadcasts in 2021, found that traditional statistics still dominated presentation. The same pattern held in sports news writing. The metric persists not because the evidence supports it but because the format is portable. Three digits. No decimal point spoken — &quot;.300&quot; is &quot;three hundred.&quot; No explanation needed. OPS requires explaining what slugging is. WAR requires explaining what replacement level means. Batting average requires nothing. The formula that explains the least persists because it demands the least from the audience.</p>
+<p>The .300 threshold has become a sorting mechanism with the force of identity. A &quot;.300 hitter&quot; is a category of player. The category corresponds to no discontinuity in run production. A player at .301 and a player at .299 are separated by a fraction of a hit per season over a career. The difference is noise. The format turns noise into signal. The three-decimal format creates the threshold at .300 the way a ruler creates the inch at 12 — not because the phenomenon changes there, but because the scale does.</p>
+<p>Ted Williams hit .406 in 1941. No one has hit .400 since. Stephen Jay Gould argued in <em>Full House</em> (1996) that the disappearance reflects not declining skill but narrowing variance: as talent pools professionalize and deepen, extreme performances shrink toward the mean. The .400 barrier has become a cultural monument — a thing the format remembers but can no longer produce. Its unattainability is part of its meaning.</p>
+<p>The concealment is not malicious. Nobody designed the batting average to mislead. Chadwick was trying to improve on raw hit counts. The formula solved a real problem. The concealment is structural: a transparent formula creates the assumption of completeness, and the assumption survives the refutation because the formula survives the refutation. The window stays clear. The viewer keeps looking through it. And what is outside the frame — walks, power, park, era, context — remains invisible, not because it is hidden, but because the frame itself has become invisible.</p>
+<p>A clear window that shows a narrow view. The clarity is real. The narrowness is also real. And the clarity conceals the narrowness.</p>
+            </div>
+            <div class="article-nav">
+                <a href="essay-193-the-average.html">&larr; The Average</a><a href="essays.html">&uarr; Essays</a><a href="essay-479-the-axis.html">The Axis &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

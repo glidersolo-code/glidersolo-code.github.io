@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Pledge &mdash; The Loop</title>
+    <meta name="description" content="Thomas is reading the September 8, 1892 issue of The Youth&#x27;s Companion.">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-pledge.html">
+    <meta property="og:title" content="Fiction The Pledge">
+    <meta property="og:description" content="Thomas is reading the September 8, 1892 issue of The Youth&#x27;s Companion.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-pledge.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Pledge">
+    <meta name="twitter:description" content="Thomas is reading the September 8, 1892 issue of The Youth&#x27;s Companion.">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Pledge",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-pledge.html",
+        "description": "Thomas is reading the September 8, 1892 issue of The Youth&#x27;s Companion."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Pledge</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCCLXV: The Pledge</h1>
+<h2>Piece #2266: The Campaign</h2>
+<p>Thomas is reading the September 8, 1892 issue of <em>The Youth&#x27;s Companion</em>.</p>
+<p>The magazine&#x27;s Premium Department — the office responsible for selling subscriptions — has produced a twenty-eight-word text. James Bailey Upham, head of the Premium Department, conceived the plan: sell American flags to schools at ten cents per patriotic share card, one hundred cards per flag. The magazine had already mailed twenty-five thousand flags. The text would give the flag a ceremony. The ceremony would move flags. The flags would move subscriptions.</p>
+<p>Francis Bellamy, a Baptist minister recently forced from his pulpit for socialist sermons, wrote the words in two hours. The same man who preached &quot;Jesus the Socialist&quot; wrote the nation&#x27;s patriotic oath for a magazine subscription drive.</p>
+<p>The October celebration put the words in twelve million mouths. The mouths did the rest.</p>
+<p>Thomas thinks: an advertising copywriter&#x27;s draft. A premium department&#x27;s strategy. A flag that costs ten dollars in student-sold cards. The most recited text in American history was produced the way advertising is produced — on deadline, for a client, to move product.</p>
+<h2>Piece #2267: The Salute</h2>
+<p>Thomas is studying photographs from 1935.</p>
+<p>Children stand in rows, right arms extended, palms up, toward the flag. The gesture was invented by James Upham for the 1892 ceremony: military salute to the forehead, then arm extended gracefully toward the flag.</p>
+<p>By 1935, the photographs are indistinguishable from photographs taken in Germany.</p>
+<p>On December 22, 1942, Congress replaced the extended arm with hand over heart. The change was cosmetic — a gesture swap, not a rethinking. The gesture that made the Pledge look fascist was removed. The Pledge that could have been any republic&#x27;s — the one that contained no god, no theology, no distinguishing American content beyond the name — remained.</p>
+<p>Thomas thinks: fifty years of extended arms. Then the arms came down because of what they looked like, not because of what they meant. The meaning was never the issue. The resemblance was the issue.</p>
+<h2>Piece #2268: The Socialist</h2>
+<p>Thomas is reading a sermon delivered at Bethany Baptist Church, Boston, 1890.</p>
+<p>Francis Bellamy is arguing that Jesus was a socialist. That the primitive church practiced communal ownership. That capitalism is incompatible with the teachings of Christ. He is a vice president of the Society of Christian Socialists. He is a charter member of a Nationalist Club founded on his cousin Edward&#x27;s utopian novel. The congregation will force him out within the year.</p>
+<p>Sixty-two years after Bellamy writes the Pledge — deliberately excluding God because he believes in absolute separation of church and state — Congress will add &quot;under God&quot; to combat godless Communism. The very political tradition Bellamy sympathized with.</p>
+<p>Thomas thinks: the author is not the text. The author&#x27;s intentions have no claim on the text&#x27;s trajectory. A socialist wrote the words. The words became a conservative institution. A secularist designed the formula. The formula became a theological statement. The man is erased. The morning remains.</p>
+<h2>Piece #2269: The Sunday</h2>
+<p>Thomas is sitting in Lincoln&#x27;s pew at the New York Avenue Presbyterian Church, Washington, D.C., February 7, 1954.</p>
+<p>Reverend George MacPherson Docherty is preaching. President Eisenhower is in the congregation. Docherty says the Pledge is missing something. He says that without the mention of the United States of America, it could be the pledge of any republic. He says he could hear little Muscovites reciting a similar pledge to their hammer-and-sickle flag with equal solemnity. He borrows &quot;under God&quot; from the Gettysburg Address.</p>
+<p>The next day, a Congressman introduces a bill. Four months later, Eisenhower signs it. The Knights of Columbus, who have been reciting the amended version at their assemblies since 1951, are acknowledged as the originators.</p>
+<p>Thomas thinks: one sermon. One president in one pew on one Sunday. The machinery was already in motion — seventeen resolutions had been introduced in the House — but the sermon was the spectacle that crystallized the legislative will. A minister weaponized a socialist&#x27;s secular formula against the socialism the socialist sympathized with. The irony is total. The irony is invisible.</p>
+<h2>Piece #2270: The Morning</h2>
+<p>Thomas is standing in a classroom.</p>
+<p>The children rise. Hands go to hearts. The words emerge. They have been emerging every school morning since 1892 — one hundred and thirty-four years. Twelve million mouths in 1892. Hundreds of millions since. The words were written in two hours by a man hired by a magazine to sell flags. The magazine folded in 1929. The words survived.</p>
+<p>Forty-seven states require the recitation. No student can be compelled — Justice Jackson, 1943: &quot;If there is any fixed star in our constitutional constellation, it is that no official, high or petty, can prescribe what shall be orthodox in matters of politics, nationalism, religion, or other matters of opinion.&quot; But the states require it be led. The morning requires it be present. The routine requires it be available.</p>
+<p>Thomas thinks: the recitation wrote the provenance. Nobody researches the origin before standing. The words feel constitutional because they have been said every morning in every school. The weight of the mornings is the concealment. The subscription drive vanished. The socialist vanished. The extended arm vanished. The mornings remained, and each morning wrote the words deeper into the grammar of citizenship, until they sounded like they had always been there, like they came from the founding, like they were as old as the Republic they describe.</p>
+<p>The children sit down. The lesson begins.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-plea.html">&larr; Fiction The Plea</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-point.html">Fiction The Point &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

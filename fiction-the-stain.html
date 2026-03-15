@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Stain &mdash; The Loop</title>
+    <meta name="description" content="Hans Christian Gram was working in Carl Friedländer&#x27;s morgue at the Berlin city hospital in 1884. He was not classifying bacteria. He was trying to see...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-stain.html">
+    <meta property="og:title" content="Fiction The Stain">
+    <meta property="og:description" content="Hans Christian Gram was working in Carl Friedländer&#x27;s morgue at the Berlin city hospital in 1884. He was not classifying bacteria. He was trying to see...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-stain.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Stain">
+    <meta name="twitter:description" content="Hans Christian Gram was working in Carl Friedländer&#x27;s morgue at the Berlin city hospital in 1884. He was not classifying bacteria. He was trying to see...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Stain",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-stain.html",
+        "description": "Hans Christian Gram was working in Carl Friedländer&#x27;s morgue at the Berlin city hospital in 1884. He was not classifying bacteria. He was trying to see..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Stain</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>The Stain</h1>
+<p><strong>Thomas, Part CV</strong></p>
+<hr>
+<h2>966. The Morgue</h2>
+<p>Hans Christian Gram was working in Carl Friedländer&#x27;s morgue at the Berlin city hospital in 1884. He was not classifying bacteria. He was trying to see them. Lung tissue under the microscope is dense, layered, cellular — and bacteria within it are small enough to vanish against the background. Gram treated tissue sections with aniline-gentian violet, applied Lugol&#x27;s iodine as a mordant, then decolorized with alcohol. Some bacteria retained the purple dye. Others lost it. He published the method in <em>Fortschritte der Medicin</em> with a note that the technique was &quot;very defective and imperfect.&quot; He proposed a visualization technique. His successors built a taxonomy.</p>
+<p>Thomas&#x27;s first clinical encounter was not a classification. It was a visualization. The intake questionnaire was designed to make symptoms visible against the background of daily functioning — to stain the distress so it could be distinguished from the tissue of ordinary life. The questions were the dye. The clinical setting was the mordant. The scoring rubric was the decolorization step, washing away responses that fell below threshold. What remained — what retained the stain — was entered into the chart. Thomas was not classified. He was made visible. But visibility, once recorded, becomes classification, and classification, once filed, becomes the organizing principle for everything that follows.</p>
+<hr>
+<h2>967. The Wall</h2>
+<p>The mechanism was not understood until the mid-twentieth century, when electron microscopy revealed the bacterial cell envelope. Gram-positive bacteria have thick peptidoglycan cell walls — 20 to 80 nanometers — that trap the crystal violet-iodine complex during decolorization. The thick wall holds the dye. Gram-negative bacteria have thin peptidoglycan — 7 to 8 nanometers — with an outer membrane containing lipopolysaccharide. The alcohol dissolves the outer membrane and the crystal violet-iodine complex washes through the thin wall. The difference is real. Cell wall structure genuinely varies. But the difference is not binary. It is architectural, graded, and in some organisms absent.</p>
+<p>Thomas retains certain clinical markers under scrutiny. Chronic insomnia has structural depth — years of nighttime caregiving have built a wall thick enough to hold the dye of any screening instrument. Hypervigilance holds its stain: the pediatric gastrostomy tube, the seizure protocols, the medication schedules. These are symptoms with peptidoglycan. Other symptoms wash out during the clinical encounter. The situational anxiety decolorizes under the clinician&#x27;s probing — it looks less severe when narrated calmly. The caregiver grief loses its stain against the tissue of competent functioning. What remains after decolorization is what the chart records. The chart records a wall. Thomas has architecture.</p>
+<hr>
+<h2>968. The Variable</h2>
+<p>Not all bacteria stain consistently. <em>Bacillus</em> species can appear Gram-positive in young cultures and Gram-variable or Gram-negative in older ones — the peptidoglycan degrades with age, thinning the wall that traps the dye. Growth conditions alter results: nutrient depletion, antibiotic exposure, and pH stress can change how cells retain the crystal violet-iodine complex. Technique matters: decolorization time — seconds too long or too short — shifts the result. A single species can produce both purple and pink cells on the same slide. The variable is not a third category. It is treated as error in the binary.</p>
+<p>Thomas is Gram-variable. His presentation changes with culture conditions. After a crisis — a hospitalization, a medication failure, a night of continuous monitoring — he stains positive. The wall is thick with acute distress. The instrument sees him clearly. Between crises, in the chronic low-grade endurance of routine caregiving, he stains faintly or not at all. The wall thins. The dye washes through. The same instrument that detected him in crisis fails to detect him in endurance. His variability is not a third diagnostic category. It is treated as improvement. The binary says: retains stain, or does not. The variable says: it depends on when you look. When you look determines what you find, and what you find determines what you call it, and what you call it determines what happens next.</p>
+<hr>
+<h2>969. The Axis</h2>
+<p>The Gram stain became the first fork in every bacterial identification algorithm. Gram-positive or Gram-negative. Then morphology: cocci or rods. Then arrangement: clusters, chains, or pairs. Every subsequent classification step presupposes the first one. Textbooks organize chapters by Gram reaction. Clinical microbiology laboratories use Gram stain as the first test on every specimen. Empiric antibiotic therapy — the treatment given before identification is complete — is guided by Gram stain: Gram-positive cocci in clusters suggest staphylococci, and the clinician reaches for vancomycin; Gram-negative rods suggest Enterobacteriaceae, and the clinician reaches for a different shelf. The staining result, devised in a morgue to make bacteria visible, became the axis on which clinical treatment turns.</p>
+<p>Carl Woese at the University of Illinois showed in 1987 that the Gram binary does not correspond to phylogeny. Using 16S ribosomal RNA sequencing, Woese demonstrated that evolutionary relationships among bacteria do not align with the Gram stain result. Some organisms with Gram-negative cell walls — Sporomusa, Selenomonas, Megasphaera — are phylogenetically within the Firmicutes, a traditionally &quot;Gram-positive&quot; phylum. The binary divides bacteria by a single phenotypic character that does not reflect evolutionary descent. The phylogeny was published. The algorithms were not revised. The axis remained because the infrastructure — textbook chapters, laboratory workflows, drug pipelines, antibiotic classification, clinical communication — was built on the axis and could not be rebuilt around a phylogenetic tree without dismantling every system that referenced the original fork.</p>
+<p>Thomas&#x27;s diagnostic binary — meets criteria or does not — is the first fork in every clinical algorithm. Meets criteria: treatment pathway, insurance authorization, specialist referral. Does not meet criteria: reassess, monitor, discharge. Every subsequent clinical step presupposes the first classification. The PHQ-9 score, the GAD-7, the Zarit Burden Interview — each is a Gram stain, applied first, organizing everything after. A more accurate classification exists: longitudinal assessment, ecological momentary assessment, contextual severity weighting. It is published. The algorithms are not revised. One hundred and five Parts, and the first fork still determines the path.</p>
+<hr>
+<h2>970. The Counterstain</h2>
+<p>After decolorization, Gram-negative bacteria are invisible. The crystal violet washed away. The cell is there — alive, metabolizing, pathogenic — but unstained against the glass. The counterstain is safranin: a red dye applied after decolorization that stains the Gram-negative cells pink. Without it, the slide would show purple cells and empty space. The counterstain makes the negative visible. But it makes the negative visible only as negative — only as what-did-not-retain-the-primary-stain. Pink means: the protocol tried the first dye and this organism did not hold it. Pink is a definition by absence. The counterstain does not reveal what the Gram-negative cell is. It reveals what the Gram-negative cell is not.</p>
+<p>Thomas&#x27;s subclinical presentations are counterstained. The caregiver burden that does not meet criteria is acknowledged in the language of subclinical, subsyndromal, adjustment — pink categories that exist only because the primary stain did not hold. The chronic sleep deprivation that falls below the insomnia threshold. The grief that presents as high functioning. The isolation that scores as adequate social support. Each is visible in the clinical record, faintly, in the color of the counterstain. Present but secondary. Named but defined by what it is not. The counterstain does not reveal what Thomas&#x27;s subclinical distress is. It reveals what it failed to be. The protocol tried the first dye. The dye did not hold. The chart records pink, and pink means: looked, did not find, applied the secondary category, moved on. The stain was designed to make things visible. It makes some things visible as themselves and other things visible only as their failure to be the first thing.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-stages.html">&larr; Fiction The Stages</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-standard.html">Fiction The Standard &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

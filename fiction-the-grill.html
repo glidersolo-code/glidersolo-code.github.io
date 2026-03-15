@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Grill &mdash; The Loop</title>
+    <meta name="description" content="Thomas stood in the outdoor cooking aisle reading boxes. One said 60,000 BTU. The next said 48,000 BTU. The 60,000 cost more. The 48,000 cost less. The...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-grill.html">
+    <meta property="og:title" content="Fiction The Grill">
+    <meta property="og:description" content="Thomas stood in the outdoor cooking aisle reading boxes. One said 60,000 BTU. The next said 48,000 BTU. The 60,000 cost more. The 48,000 cost less. The...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-grill.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Grill">
+    <meta name="twitter:description" content="Thomas stood in the outdoor cooking aisle reading boxes. One said 60,000 BTU. The next said 48,000 BTU. The 60,000 cost more. The 48,000 cost less. The...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Grill",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-grill.html",
+        "description": "Thomas stood in the outdoor cooking aisle reading boxes. One said 60,000 BTU. The next said 48,000 BTU. The 60,000 cost more. The 48,000 cost less. The..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Grill</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CCLXXVI: The Grill</h1>
+<h2>Piece #1821: The Box</h2>
+<p>Thomas stood in the outdoor cooking aisle reading boxes. One said 60,000 BTU. The next said 48,000 BTU. The 60,000 cost more. The 48,000 cost less. The math was obvious. The math was wrong.</p>
+<p>He turned the 60,000 box to its side panel. Main burners: 40,000 BTU. Side burner: 12,000 BTU. Sear station: 8,000 BTU. Three burner systems added to one number on the front. The side burner warmed a pot of beans. The sear station was a six-inch strip most owners used twice. The number that faced the aisle included every flame the grill could produce, whether or not that flame touched the steak.</p>
+<p>The 48,000 box: main burners: 48,000 BTU. No side burner. No sear station. Every BTU on the label was a BTU aimed at the cooking surface.</p>
+<p>Forty thousand aimed at the food versus forty-eight thousand aimed at the food. The lower-labeled grill had more cooking heat. Thomas wrote the numbers on his phone and kept reading.</p>
+<h2>Piece #1822: The Flux</h2>
+<p>The 60,000 BTU grill had 660 square inches of primary cooking area. Forty thousand divided by 660: 60.6 BTU per square inch.</p>
+<p>The 48,000 BTU grill had 480 square inches. Forty-eight thousand divided by 480: 100 BTU per square inch.</p>
+<p>Thomas looked at both boxes again. The smaller grill with the smaller number would sear a steak harder than the larger grill with the larger number. Heat flux — BTU per square inch — was the cooking metric. Total BTU was the fuel bill metric. The box printed the fuel bill. The consumer wanted the sear.</p>
+<p>A sales associate walked past. Thomas stopped him. &quot;Does the 60,000 BTU grill get hotter than the 48,000?&quot;</p>
+<p>&quot;Absolutely. Twenty percent more BTU.&quot;</p>
+<p>&quot;Twenty percent more fuel consumption,&quot; Thomas said. &quot;Not twenty percent more heat at the grate.&quot;</p>
+<p>The associate paused. &quot;It&#x27;s what the manufacturer rates them at.&quot;</p>
+<p>&quot;They rate them at fuel input. Not heat output. Not heat density. The grill doesn&#x27;t know its own BTU rating. Only the gas line does.&quot;</p>
+<h2>Piece #1823: The Wall</h2>
+<p>Thomas found the display models in the back. Two grills, lids open. The 60,000 was wide and shallow, thin stamped steel, single-wall construction. He pressed the side panel. It flexed. Every BTU that entered this firebox had two choices: heat the grate or heat the neighborhood. The thin walls chose the neighborhood.</p>
+<p>The 48,000 was narrower, double-walled, with a porcelain-enameled firebox and stainless steel heat plates above the burners. He pressed the side panel. It didn&#x27;t flex. The BTU that entered this firebox hit metal that held it, plates that distributed it, walls that reflected it back toward the food.</p>
+<p>The cheap grill needed more BTU because it wasted more BTU. The expensive grill needed fewer because it kept them. The BTU rating on the box measured the input to the system, not the efficiency of the system, not the output of the system. A well-insulated grill with 35,000 BTU could outcook a thin-walled grill with 60,000. The number said nothing about the walls.</p>
+<p>Thomas closed the lid on the 48,000 and watched the built-in thermometer climb. Three hundred degrees in four minutes. The 60,000 would take longer. More fuel, less retention, slower recovery. More BTU, less cooking.</p>
+<h2>Piece #1824: The Wind</h2>
+<p>He wheeled the display 60,000 to the edge of the outdoor section where the loading dock breeze came through. The thermometer dropped. Thin walls, open vents, no wind baffling. Sixty thousand BTU against a ten-mile-per-hour breeze. The BTU rating assumed still air. The backyard didn&#x27;t.</p>
+<p>Every grill test was conducted indoors. No wind. No ambient temperature variation. No lid opening for sauce brushing. The BTU rating described the grill in a room the grill would never occupy. The consumer cooked in weather the spec sheet never acknowledged.</p>
+<p>Thomas thought about the shop vacuum rated at 6.5 peak horsepower for twelve milliseconds. The grill was rated at 60,000 BTU under conditions the backyard voided. The vacuum measured power during startup. The grill measured fuel consumption indoors. Both numbers were technically accurate at a moment and location the consumer would never replicate.</p>
+<p>He wheeled the display back. The price tag still said 60,000 BTU. The breeze still came through.</p>
+<h2>Piece #1825: The Steak</h2>
+<p>Thomas bought the 48,000. He assembled it that Saturday, connected the propane, and lit the main burners. The built-in thermometer hit 550 degrees in six minutes. He placed a ribeye on the center grate. The sear was immediate — hard lines, rendered fat, the Maillard reaction running at heat flux, not total BTU.</p>
+<p>His neighbor grilled on the 60,000, bought the same weekend on the same sale. The neighbor had complained it took forever to get hot. Thomas walked over. The side burner was on, heating nothing. The sear station was on, empty. Three burner systems consuming fuel simultaneously while the steaks sat on the main grate at 61 BTU per square inch.</p>
+<p>&quot;How do you like yours?&quot; the neighbor asked.</p>
+<p>&quot;It&#x27;s a 48,000,&quot; Thomas said.</p>
+<p>&quot;Mine&#x27;s 60,000.&quot;</p>
+<p>Thomas looked at both steaks. His had grill marks. The neighbor&#x27;s had color but no sear. Sixty thousand BTU, spread across 660 square inches of thin-walled firebox in a crosswind, delivered less cooking heat than forty-eight thousand focused on 480 square inches of double-walled porcelain.</p>
+<p>Thomas walked back to his grill and flipped the ribeye. The number on the box was already in the recycling. The heat on the grate was on the steak.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-grid.html">&larr; Fiction The Grid</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-grit.html">Fiction The Grit &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The One Fifty &mdash; The Loop</title>
+    <meta name="description" content="Thirty-eight primate species. For each: the ratio of neocortex volume to the rest of the brain, and the mean size of the social group. Plot one against...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-one-fifty.html">
+    <meta property="og:title" content="Fiction The One Fifty">
+    <meta property="og:description" content="Thirty-eight primate species. For each: the ratio of neocortex volume to the rest of the brain, and the mean size of the social group. Plot one against...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-one-fifty.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The One Fifty">
+    <meta name="twitter:description" content="Thirty-eight primate species. For each: the ratio of neocortex volume to the rest of the brain, and the mean size of the social group. Plot one against...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The One Fifty",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-one-fifty.html",
+        "description": "Thirty-eight primate species. For each: the ratio of neocortex volume to the rest of the brain, and the mean size of the social group. Plot one against..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The One Fifty</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CLIII: The Number</h1>
+<h2>Piece #1206: The Regression</h2>
+<p>Thirty-eight primate species. For each: the ratio of neocortex volume to the rest of the brain, and the mean size of the social group. Plot one against the other. Fit a line. The line rises: bigger neocortex, bigger group. The r² is 0.764. The relationship is real. Now find humans on the x-axis — large neocortex ratio, the largest in the sample. Follow the line. It intersects the y-axis at approximately 148. Round to 150. Call it a number. Give it a name. The name sticks. The regression fades. The number is cited ten thousand times. The confidence interval is cited almost never.</p>
+<h2>Piece #1207: The Pattern</h2>
+<p>Hutterite communities split at roughly 150. Roman centuries had roughly 80. Company-sized military units are roughly 150. Gore-Tex organizes factories around 150 employees. Christmas card lists average roughly 150 recipients. The patterns are there. The patterns confirm the number. But patterns are everywhere. Military platoons are roughly 30. Dunbar does not claim 30 as a brain-size prediction. Baseball teams are 26. Juries are 12. A symphony orchestra is 90. The brain does not explain 26 or 12 or 90. But the brain is invoked to explain 150 because 150 is the prediction. The prediction selects the evidence. The evidence confirms the prediction. The circle is complete.</p>
+<h2>Piece #1208: The Interval</h2>
+<p>In 2021, three researchers in Stockholm re-ran the regression. Bayesian methods, phylogenetic correction, sensitivity analysis. The 95% prediction interval for human group size: approximately 2 to 520. Two. To five hundred and twenty. A married couple. A mid-sized company. The interval contains Dunbar&#x27;s 150 the way the ocean contains a particular wave — technically, but not usefully. The interval says: the regression detects a real relationship between brain size and sociality, and that relationship cannot tell you whether human group size maxes out at 50 or 400. The interval was published in <em>Biology Letters.</em> The number had been published in management textbooks. The number did not need the interval. The interval needed the number — without it, there was nothing to correct.</p>
+<h2>Piece #1209: The Design</h2>
+<p>Facebook&#x27;s data scientists analyzed friendship networks and found concentric layers: 5 intimate, 15 close, 50 good, 150 casual. The layers matched Dunbar&#x27;s prediction. The match was treated as validation. But the platform&#x27;s architecture — friend limits, news feed algorithms, notification systems — had been designed with Dunbar&#x27;s layers in mind. The design created the measurement conditions. The measurement confirmed the design. The Swedish tax authority reorganized teams around 150. The teams worked. The working was cited as evidence for the number. The number had become the reason for the structure. The structure had become the evidence for the number.</p>
+<h2>Piece #1210: The Error Bars</h2>
+<p>The error bars contain the critique. The number is 150. The error bars say: or 50, or 300, or 15, or 500. The error bars say: the regression works across species but cannot resolve a single species&#x27; group size to a useful precision. The error bars say: this is what the data actually show. The number says: this is what you can use. The error bars are in the paper. The number is in the TED talk. The error bars require the audience to hold uncertainty. The number requires the audience only to remember three digits. The error bars are honest. The number is useful. In every context where the number is cited — corporate strategy, military organization, social media design, urban planning — the error bars would make the citation impossible. So the error bars are not cited. The certainty is downstream. The uncertainty is upstream. And nobody looks upstream.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-octane.html">&larr; Fiction The Octane</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-opinion.html">Fiction The Opinion &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

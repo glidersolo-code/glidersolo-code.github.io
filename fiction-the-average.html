@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Average &mdash; The Loop</title>
+    <meta name="description" content="Every measurement in his chart was a conversion — a translation from one form to another, a process that preserved some information and lost some...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-average.html">
+    <meta property="og:title" content="Fiction The Average">
+    <meta property="og:description" content="Every measurement in his chart was a conversion — a translation from one form to another, a process that preserved some information and lost some...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-average.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Average">
+    <meta name="twitter:description" content="Every measurement in his chart was a conversion — a translation from one form to another, a process that preserved some information and lost some...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Average",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-average.html",
+        "description": "Every measurement in his chart was a conversion — a translation from one form to another, a process that preserved some information and lost some..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Average</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXV: The Average</h1>
+<h2>Piece #1066: The Conversion</h2>
+<p>Thomas&#x27;s chart converted.</p>
+<p>Every measurement in his chart was a conversion — a translation from one form to another, a process that preserved some information and lost some information and treated the preserved information as the whole. The raw data entered the system in one form and emerged in another, and the form it emerged in was the form the infrastructure could process, and the form the infrastructure could process was not always the form the patient existed in.</p>
+<p>The grade point average performed the same operation on students.</p>
+<p>The GPA converted qualitative judgments into ordinal grades — A, B, C, D, F — and ordinal grades into interval numbers — 4.0, 3.0, 2.0, 1.0, 0.0 — and averaged those numbers into a single figure that represented a student&#x27;s academic performance. Each step was a conversion. Each conversion lost information. The qualitative judgment (an essay&#x27;s originality, a lab report&#x27;s rigor, a student&#x27;s intellectual growth over a semester) was reduced to a letter. The letter was translated to a number. The numbers were averaged. The average was filed.</p>
+<p>The conversions assumed things. The letter grades assumed that student performance fell into five categories — not six, not a continuum, not a bimodal distribution, but five. The numerical conversion assumed equal spacing — that the distance from A to B equaled the distance from B to C. The averaging assumed commensurability — that a 4.0 in organic chemistry and a 4.0 in creative writing measured the same thing and could be meaningfully combined.</p>
+<p>Thomas&#x27;s chart assumed commensurability too. A heart rate of 120 and a temperature of 38.5°C and an oxygen saturation of 94% — three numbers from three different measurement systems, combined in an acuity score, averaged in a risk calculation, filed in a chart that treated them as components of a single patient state. The components were not commensurable. The chart treated them as if they were.</p>
+<hr>
+<h2>Piece #1067: The Inflation</h2>
+<p>The grades inflated.</p>
+<p>Stuart Rojstaczer and Christopher Healy documented the pattern in 2012: the average GPA at American colleges and universities had risen approximately 0.1 points per decade since the 1960s. At private institutions, the average GPA in 1960 was approximately 2.5. By 2010, it was approximately 3.3. The scale had not changed. The students&#x27; grades had risen. What the grades measured — or what they were assumed to measure — had shifted without the scale&#x27;s adjustment.</p>
+<p>The inflation was the Flynn Effect of education. IQ scores rose ~3 points per decade, requiring periodic renorming. GPAs rose ~0.1 points per decade, without renorming. A 3.5 in 1960 and a 3.5 in 2020 were the same number on the same scale representing different levels of relative performance. The number carried no timestamp. The transcript displayed a GPA to two decimal places and did not record when the grades were earned — or rather, it recorded the dates but the GPA calculation discarded them, treating a grade from 1960 and a grade from 2020 as interchangeable inputs to the same average.</p>
+<p>Thomas&#x27;s reference ranges had their own inflation — or rather, their own drift. Normal body temperature had declined from 98.6°F to approximately 98.2°F over a century. The reference range for blood pressure had been tightened from 140/90 to 130/80. The norms shifted. The chart&#x27;s reference lines shifted with them. Thomas&#x27;s position relative to the reference changed not because Thomas changed but because the reference changed.</p>
+<p>The GPA did not adjust. The 4.0 scale remained. The grades within it rose. The rising was visible in aggregate data and invisible in individual transcripts. The individual transcript showed a number. The number did not show its era.</p>
+<hr>
+<h2>Piece #1068: The Weight</h2>
+<p>Not all courses were weighted equally.</p>
+<p>A 4-credit course counted more than a 3-credit course in the GPA calculation. The weighting was by credit hours — a measure of classroom time, not of intellectual difficulty, conceptual depth, or transformative impact. A 4-credit introductory survey course in which a student memorized facts weighted more heavily than a 3-credit advanced seminar in which the student restructured her understanding of an entire field. The weighting system measured seat time and applied it as a proxy for academic significance.</p>
+<p>The weighting was the acre-foot of education — a unit defined by one dimension (time in classroom) used to measure something else (academic achievement). The unit was precise. What it measured was not what it was used to represent.</p>
+<p>Thomas&#x27;s chart had weights too. Some lab values were flagged in red (critical). Some were flagged in yellow (abnormal). Some were not flagged at all (within range). The flagging system weighted certain measurements — assigning urgency, demanding attention, triggering protocols. The weighting was by threshold distance, not by clinical significance. A potassium of 6.1 (critical high) triggered an immediate alert. A developmental milestone missed by six months triggered nothing — no flag, no alert, no red text. The system weighted what it was designed to weight, and what it was designed to weight was not always what mattered.</p>
+<hr>
+<h2>Piece #1069: The Decimal</h2>
+<p>The GPA was reported to two decimal places.</p>
+<p>3.47. The decimal places suggested precision — a measurement accurate to the hundredths. A 3.47 and a 3.48 were distinguishable. The difference was 0.01 — the consequence of one additional point on one assignment in one course out of forty. The decimal distinguished students at thresholds: a 3.50 qualified for the dean&#x27;s list; a 3.49 did not. A 3.00 maintained a scholarship; a 2.99 lost it.</p>
+<p>The precision was real — the arithmetic was correct. The precision was also misleading — it implied that the underlying measurements (grades on assignments) were accurate to a level that would justify hundredths-place distinctions. They were not. A grade on an essay — the original measurement, the raw data — was a holistic judgment by a single instructor, subject to fatigue, bias, rubric interpretation, and time pressure. The measurement uncertainty of a single grade was far larger than the 0.01 that separated a 3.49 from a 3.50.</p>
+<p>Thomas&#x27;s chart had the same precision problem. His weight was reported to the gram — 2,847 grams. The scale measured to the gram. But Thomas moved, breathed, wore a diaper of varying weight, was weighed at different times relative to feeding. The measurement uncertainty was ±20-50 grams. The chart recorded 2,847. The growth curve plotted 2,847. The percentile calculation used 2,847. The precision of the display exceeded the precision of the measurement.</p>
+<p>The decimal was the infrastructure of false precision — a formatting choice that became a decision rule. Two decimal places in the GPA. One decimal place in the temperature. Zero decimal places in the Apgar score. Each choice determined how finely the system could distinguish between patients, between students, between the categories that the system created by distinguishing.</p>
+<hr>
+<h2>Piece #1070: The Average</h2>
+<p>The average was the concealment.</p>
+<p>Not the grades — the grades were judgments, imperfect and acknowledged as such. Not the conversion — the conversion was a procedure, documented and followable. The average was the operation that transformed a collection of disparate judgments into a single number, and the single number was the concealment.</p>
+<p>The average assumed that the components it averaged were independent — that a grade in chemistry and a grade in literature could be meaningfully combined. The average assumed that the components were measured on the same scale — that an A in one course and an A in another represented the same level of achievement. The average assumed that the arithmetic mean was the appropriate summary — not the median, not the mode, not the distribution.</p>
+<p>Each assumption was a decision. Each decision was made by the system&#x27;s designers. Each designer&#x27;s decision was invisible in the output — the single number, 3.47, that appeared on the transcript and was used by graduate admissions committees, scholarship boards, and employers as a measurement of the student&#x27;s academic quality.</p>
+<p>Thomas was an average too. His acuity scores averaged measurements. His risk calculations averaged inputs. His developmental trajectory was an average of assessments administered at different ages by different clinicians using different instruments. The average appeared as a single line on a chart. The line concealed the variance — the spread of the data points around it, the disagreements between instruments, the differences between assessors. The line was smooth. The patient was not.</p>
+<p>The average was 1070 pieces long. The average was a single number. The distance between the pieces and the number — between the collection and the summary — was the distance at which the average operated: reducing, combining, concealing the variance in the name of the summary, presenting the summary as the measurement, and filing the measurement in a system that could not process the pieces and could only process the average.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-at-sign.html">&larr; Fiction The At Sign</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-average-batting.html">Fiction The Average Batting &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

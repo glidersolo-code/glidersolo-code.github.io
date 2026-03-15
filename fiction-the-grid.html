@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Grid &mdash; The Loop</title>
+    <meta name="description" content="Offense level: 23. Criminal history category: II. The Federal Sentencing Guidelines converted every crime and every offender into these two coordinates....">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-grid.html">
+    <meta property="og:title" content="Fiction The Grid">
+    <meta property="og:description" content="Offense level: 23. Criminal history category: II. The Federal Sentencing Guidelines converted every crime and every offender into these two coordinates....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-grid.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Grid">
+    <meta name="twitter:description" content="Offense level: 23. Criminal history category: II. The Federal Sentencing Guidelines converted every crime and every offender into these two coordinates....">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Grid",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-grid.html",
+        "description": "Offense level: 23. Criminal history category: II. The Federal Sentencing Guidelines converted every crime and every offender into these two coordinates...."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Grid</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CXXXIV: The Grid</h1>
+<h2>Piece #1111: The Two Axes</h2>
+<p>The crime became two numbers.</p>
+<p>Offense level: 23. Criminal history category: II. The Federal Sentencing Guidelines converted every crime and every offender into these two coordinates. The offense level was calculated: a base level for the type of crime (drug trafficking, fraud, assault), plus specific offense characteristics (quantity of drugs, amount of loss, use of a weapon, bodily harm), plus adjustments (role in the offense, obstruction of justice, acceptance of responsibility). Each factor added or subtracted levels. The calculation was precise — a table of additions and subtractions that produced a single number between 1 and 43.</p>
+<p>The criminal history category was simpler: count the prior convictions, assign points by severity and recency, sum the points, look up the category (I through VI). The counting was mechanical. A prior felony with a sentence over thirteen months was worth three points. A prior misdemeanor was worth one. The points summed without distinction between the nature of the crimes, the circumstances of the offenses, the person who committed them, or the decades that had passed since.</p>
+<p>Thomas&#x27;s chart performed the same reduction. The child — medically complex, neurologically developing, environmentally sensitive — became two axes in the acuity scoring system: severity of illness and dependency of care. The intersection of the two axes determined the staffing ratio. The staffing ratio determined the nurse&#x27;s assignment. The nurse&#x27;s assignment determined the attention Thomas received. The chain from child to chart to score to grid to staffing to attention was functional and concealing: it worked, and the working was the concealment, and the concealment was invisible because the grid was the grid.</p>
+<h2>Piece #1112: The Grid</h2>
+<p>The Sentencing Table was a 258-cell grid.</p>
+<p>Offense level on the vertical axis, criminal history on the horizontal. Each cell contained a range: &quot;46-57 months,&quot; &quot;151-188 months,&quot; &quot;life.&quot; The ranges were narrow at the low end and wide at the high end. The ranges gave the judge a bounded space — not a single number but a range within which discretion operated. The range was the compromise between the old system (judicial discretion with no limits) and a mandatory system (no discretion at all). The Sentencing Reform Act of 1984 had responded to documented disparities: similar offenders receiving vastly different sentences for similar crimes, with race, geography, and the individual judge as the strongest predictors of sentence length.</p>
+<p>The grid was designed to eliminate disparity. It did reduce some forms of disparity — judges had less room to impose wildly different sentences for identical offense-history combinations. It introduced other forms: the grid&#x27;s two axes encoded particular decisions about what mattered (quantity of drugs, dollar amount of loss) and what didn&#x27;t (motivation, context, the human being). The decisions were political — the Sentencing Commission weighed congressional intent, empirical data, and policy judgment. The grid presented the decisions as arithmetic.</p>
+<p>Thomas&#x27;s clinical protocols operated similarly. The protocol specified: for this diagnosis plus this severity level, administer this intervention at this dose. The protocol reduced disparity — different nurses treating the same condition would follow the same steps. The protocol also reduced discretion — the nurse who perceived something the protocol didn&#x27;t capture had to work within or around the grid&#x27;s structure. The protocol was the grid. The grid was the care.</p>
+<h2>Piece #1113: The Enhancement</h2>
+<p>The enhancements determined the sentence before the judge spoke.</p>
+<p>Specific offense characteristics added levels. Drug quantity: each step up the quantity table added two levels. Use of a firearm: plus two to plus seven levels depending on the circumstances. Amount of financial loss: a sliding scale from plus two (more than $6,500) to plus thirty (more than $550 million). The enhancements were where the real sentencing happened — the base offense level was often moderate, and the enhancements pushed it up the grid, often dramatically. A drug courier carrying a small quantity might have a base level of 12. The quantity enhancement could push it to 26. A leadership role enhancement could add four more. Suddenly the grid pointed to 63-78 months.</p>
+<p>The enhancements were categorical: specific facts about the offense were converted to specific level increases. The conversion was predetermined — the table was published, the factors were defined, the arithmetic was clear. The sentencing hearing was often a dispute about which enhancements applied: did the defendant have a leadership role? Was the firearm used or merely present? Each enhancement carried months. The arguments were about facts, but the consequences were about the grid.</p>
+<p>Thomas&#x27;s chart had enhancements too — complicating factors that elevated the acuity score. A central line added complexity points. Mechanical ventilation added more. Each factor was a categorical addition to the score. The additions were predetermined — the acuity system&#x27;s designers had decided which factors added how many points. The decisions were clinical but the structure was the same: the grid was built in advance, the patient entered it, and the patient&#x27;s position on the grid determined the resources the patient received.</p>
+<h2>Piece #1114: The Departure</h2>
+<p>The grid could be departed from.</p>
+<p>The Guidelines authorized departures — sentences above or below the grid range — for factors &quot;not adequately taken into consideration&quot; by the Commission. After <em>United States v. Booker</em> (2005), the Supreme Court made the Guidelines advisory, and judges were required to consider them but not bound by them. The departure rate increased. The variance increased. The disparities that the grid had been designed to reduce began to reappear, now measured against the grid rather than against each other.</p>
+<p>The grid had created its own metric of fairness. Before the Guidelines, fairness was undefined — no standard existed against which to measure disparity. After the Guidelines, fairness was the grid. A sentence within the range was fair. A departure was an exception requiring justification. The grid had become the definition of the thing it was designed to approximate. The measurement had become the standard.</p>
+<p>Thomas&#x27;s protocols could be departed from too. The physician could override the protocol, the nurse could exercise clinical judgment, the team could deviate based on the patient&#x27;s response. The departure required documentation — the chart demanded a reason for every deviation. The protocol, like the grid, had become the default. Adherence was normal. Deviation was the exception. The protocol had defined the care it was designed to approximate.</p>
+<h2>Piece #1115: The Grid</h2>
+<p>The person entered the grid and the grid produced months.</p>
+<p>The person was irreducible — a history, a set of circumstances, a network of relationships, a moment in a life, a capacity for change, a set of conditions that produced the crime and were changed by the crime and would continue to change after the sentence. The grid received none of this. The grid received two numbers: what the person did (offense level) and what the person had done before (criminal history category). The intersection of the two numbers was a range. The range was the person&#x27;s future — 46 to 57 months, or 151 to 188 months, or life.</p>
+<p>The grid was not wrong. The grid addressed a real problem (sentencing disparity) with a functional mechanism (structured ranges). The grid was incomplete — it measured what it was designed to measure (offense severity, criminal history) and was silent about what it was not designed to measure (context, motivation, the person). The silence was the concealment. The grid&#x27;s precision — the specific ranges, the calculated levels, the arithmetic certainty of the output — made the silence invisible. A system that produces &quot;46-57 months&quot; appears to know something about the person. It knows something about the offense and the record. The person is elsewhere.</p>
+<p>Thomas lay in his bed while the grid — the acuity grid, the protocol grid, the staffing grid — produced numbers about him. The numbers determined what happened to him. The numbers were derived from what could be measured. What could not be measured — the quality of his awareness, the arc of his development, the texture of his experience — was absent from the grid, present in the room, and invisible to the system that decided his care. The grid continued. The person continued. They were not the same continuity.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-grand-jury.html">&larr; Fiction The Grand Jury</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-grill.html">Fiction The Grill &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>

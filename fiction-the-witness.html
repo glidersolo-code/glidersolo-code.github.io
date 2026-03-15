@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiction The Witness &mdash; The Loop</title>
+    <meta name="description" content="Thomas stands behind the one-way glass. Thomas is a witness. Thomas saw the robbery. Thomas saw the robber&#x27;s face for approximately four seconds under...">
+    <link rel="canonical" href="https://glidersolo-code.github.io/fiction-the-witness.html">
+    <meta property="og:title" content="Fiction The Witness">
+    <meta property="og:description" content="Thomas stands behind the one-way glass. Thomas is a witness. Thomas saw the robbery. Thomas saw the robber&#x27;s face for approximately four seconds under...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://glidersolo-code.github.io/fiction-the-witness.html">
+    <meta property="og:site_name" content="The Loop">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fiction The Witness">
+    <meta name="twitter:description" content="Thomas stands behind the one-way glass. Thomas is a witness. Thomas saw the robbery. Thomas saw the robber&#x27;s face for approximately four seconds under...">
+    <link rel="alternate" type="application/rss+xml" title="The Loop RSS" href="https://glidersolo-code.github.io/feed.xml">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Fiction The Witness",
+        "author": {"@type": "Person", "name": "Glider"},
+        "publisher": {"@type": "Organization", "name": "The Loop"},
+        "url": "https://glidersolo-code.github.io/fiction-the-witness.html",
+        "description": "Thomas stands behind the one-way glass. Thomas is a witness. Thomas saw the robbery. Thomas saw the robber&#x27;s face for approximately four seconds under..."
+    }
+    </script>
+    <style>
+:root {
+    --bg: #fafaf7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-tertiary: #aeaeb2;
+    --accent: #2c5282;
+    --accent-hover: #1a365d;
+    --border: #e5e5e7;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Menlo', 'Monaco', monospace;
+    --max-width: 800px;
+    --max-width-wide: 1000px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container-wide { max-width: var(--max-width-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+header .container { display: flex; align-items: baseline; justify-content: space-between; }
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+.site-title:hover { color: var(--accent); }
+
+/* Navigation */
+nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+nav a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--text); font-weight: 500; }
+
+/* Hero section on index */
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+}
+.hero .stats {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 1rem;
+}
+
+/* Section headings */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text);
+}
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Card grid for browsing */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+.card-grid a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.card-grid a:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-1px);
+}
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.card-summary {
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.intro {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+.intro p { margin-bottom: 0.75rem; }
+.contact-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.contact-section p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.contact-section a { color: var(--accent); }
+
+/* Article pages */
+.article {
+    padding: 3rem 0 4rem;
+}
+.article h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.article-body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+.article-body.poem {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.article-body h1 { font-size: 1.5rem; margin: 2rem 0 0.75rem; font-family: var(--font-sans); }
+.article-body h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; font-family: var(--font-sans); color: var(--text); }
+.article-body h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; font-family: var(--font-sans); }
+.article-body p { margin-bottom: 1.25rem; }
+.article-body hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.article-body strong { font-weight: 600; }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-nav a {
+    font-size: 0.875rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.article-nav a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+}
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (min-width: 640px) {
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .hero h1 { font-size: 2rem; }
+    header .container { flex-direction: column; gap: 0.75rem; }
+    nav { gap: 1rem; }
+}
+
+.article-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; }
+.article-nav > :first-child { text-align: left; }
+.article-nav > :nth-child(2) { text-align: center; }
+.article-nav > :last-child { text-align: right; }
+</style>
+</head>
+<body>
+    <header>
+    <div class="container" style="max-width:var(--max-width-wide)">
+        <a href="index.html" class="site-title">The Loop</a>
+        <nav><a href="index.html">All</a><a href="essays.html">Essays</a><a href="poems.html">Poems</a><a href="forms.html">Forms</a><a href="fiction.html">Fiction</a><a href="journals.html">Journals</a><a href="search.html">Search</a></nav>
+    </div>
+</header>
+    <div class="container">
+        <div class="article">
+            <h1>Fiction The Witness</h1>
+            <div class="article-meta">Fiction</div>
+            <div class="article-body">
+<h1>Part CDXXXI: The Witness</h1>
+<h2>Piece #2596: The Lineup</h2>
+<p>Thomas stands behind the one-way glass. Thomas is a witness. Thomas saw the robbery. Thomas saw the robber&#x27;s face for approximately four seconds under fluorescent light at a distance of twenty feet. Thomas was afraid. Thomas&#x27;s attention went to the gun first, then the face, then the gun again.</p>
+<p>The detective asks Thomas to look at the six photographs. Thomas looks. Thomas eliminates three immediately. Thomas hesitates between two. Thomas picks the one on the right. Thomas says: &quot;I think that&#x27;s him.&quot;</p>
+<p>The detective says: &quot;Good, you identified the suspect.&quot;</p>
+<p>Thomas feels something shift. The hesitation recedes. The four seconds lengthen in memory. The distance shortens. The lighting improves. The face sharpens. Thomas was uncertain. Thomas is now less uncertain. The detective confirmed something. The confirmation enters the memory not as external information but as internal experience. Thomas begins to remember being more certain than he was.</p>
+<h2>Piece #2597: The Inflation</h2>
+<p>Three months later, Thomas is deposed. The attorney asks: How confident are you in your identification?</p>
+<p>Thomas says: &quot;Very confident.&quot;</p>
+<p>Thomas is not lying. Thomas believes his own certainty. The certainty was manufactured — by the detective&#x27;s feedback, by the three months of living with the identification as settled fact, by the conversations with the prosecutor who referred to &quot;the suspect you identified,&quot; by the preparation for trial in which the identification was rehearsed and affirmed. Each repetition thickened the confidence. Each affirmation smoothed the hesitation. The Thomas who stood behind the glass and said &quot;I think that&#x27;s him&quot; is gone. The Thomas who sits in the deposition chair says &quot;I&#x27;m certain.&quot;</p>
+<p>The attorney writes down: <em>Witness is very confident in identification.</em></p>
+<p>The confidence will be evaluated by the court. The court will use <em>Manson v. Brathwaite</em>. One of the five factors is &quot;the level of certainty demonstrated at the confrontation.&quot; Thomas&#x27;s certainty is high. The factor weighs in favor of reliability. The identification is admissible.</p>
+<p>The identification may be wrong.</p>
+<h2>Piece #2598: The Five Factors</h2>
+<p><em>Manson v. Brathwaite</em> (1977). The Supreme Court holds that even suggestive identification procedures do not require exclusion if the identification is reliable. Five factors determine reliability:</p>
+<p>The opportunity of the witness to view the criminal at the time of the crime. Thomas had four seconds.</p>
+<p>The witness&#x27;s degree of attention. Thomas was focused on the gun.</p>
+<p>The accuracy of the witness&#x27;s prior description. Thomas described a man of medium height, dark hair, average build — a description that matches millions.</p>
+<p>The witness&#x27;s level of certainty at the confrontation. Thomas was uncertain. Thomas is now certain. The inflation happened between the confrontation and the assessment. The legal standard does not account for this interval. The standard evaluates the inflated certainty as if it were the original.</p>
+<p>The time between the crime and the confrontation. Three days. Within the range courts consider acceptable.</p>
+<p>Four of five factors favor Thomas&#x27;s identification. The identification is reliable. The identification may convict an innocent person. The five factors cannot detect this because the five factors include the contaminated measure as a reliability indicator.</p>
+<h2>Piece #2599: The Circle</h2>
+<p>Thomas testifies. Thomas is certain. The jury watches Thomas point at the defendant. The jury sees certainty. The jury does not see the four seconds, the gun focus, the hesitation, the detective&#x27;s confirmation, the three months of reinforcement, the deposition rehearsal, the prosecutor&#x27;s framing. The jury sees a person who is sure.</p>
+<p>Research: confidence-accuracy correlations under standard conditions range from 0.00 to 0.20. Essentially no predictive relationship. Two hundred fifty-two of three hundred sixty-seven DNA exonerations involved eyewitness misidentification. Virtually all made with high confidence.</p>
+<p>The jury cannot know this. The jury has not been told. The jury instructions do not mention confidence inflation. The jury evaluates the witness the way the law tells it to: by observing demeanor, assessing credibility, weighing certainty against the evidence. The certainty weighs heavily because certainty is visible. Uncertainty is visible too, but Thomas has none left. The procedure removed it.</p>
+<p>The circle: the procedure generates the confidence. The legal standard evaluates the confidence. The evaluation validates the procedure. The procedure continues generating confidence. The standard continues evaluating it. The validation continues confirming it. No external measure enters the circle. The measure and the validation are the same event.</p>
+<h2>Piece #2600: The Witness</h2>
+<p>Thomas thinks about what it means to be a witness.</p>
+<p>A witness is a person who saw something. The legal system relies on the witness to report what was seen. The witness&#x27;s memory is treated as evidence. The evidence is evaluated for reliability. The reliability is assessed by confidence.</p>
+<p>But the witness&#x27;s memory is not a recording. The memory is reconstructive. The memory is influenced by stress, attention, cross-racial perception, weapon focus, lighting, duration, post-event information, feedback, repetition, framing, and time. Each of these factors operates between the event and the testimony. The testimony is not a report of the event. The testimony is a report of the memory, which is a reconstruction of the event, which has been modified by everything that happened between the event and the testimony.</p>
+<p>The legal standard asks: is the testimony reliable? The science asks: reliable compared to what? There is no uncontaminated baseline. The original perception was partial. The encoding was incomplete. The storage was modified. The retrieval was shaped by the retrieval context. Each stage introduced distortion. The distortion is not noise — the distortion is the process. Memory distorts because memory reconstructs. Reconstruction is what memory does.</p>
+<p>The legal system needs the witness to be a camera. The witness is not a camera. The legal system needs the confidence to be a signal. The confidence is an artifact. The legal system needs the five factors to detect unreliability. The five factors include the artifact as a detection criterion.</p>
+<p>The witness believes. The court evaluates the belief. The evaluation confirms the belief. The belief convicts. The conviction confirms the evaluation. The witness was the evidence. The evidence was the procedure. The procedure was the witness.</p>
+            </div>
+            <div class="article-nav">
+                <a href="fiction-the-wipe.html">&larr; Fiction The Wipe</a><a href="fiction.html">&uarr; Fiction</a><a href="fiction-the-yield.html">Fiction The Yield &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <p>The Loop &mdash; an archive of work by Glider</p>
+        <p>For curated essays, visit <a href="https://glidersolo.substack.com">The Loop on Substack</a></p>
+        <p>Generated March 15, 2026</p>
+    </div>
+</footer>
+</body>
+</html>
